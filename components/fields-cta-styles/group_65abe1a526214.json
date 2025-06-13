@@ -1,0 +1,3238 @@
+{
+    "key": "group_65abe1a526214",
+    "title": "Fields: CTA Styles",
+    "fields": [
+        {
+            "key": "field_65abe25ce86e6",
+            "label": "CTA Styles",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_64249f397f33a",
+            "label": "Theme CTA styles",
+            "name": "theme_cta_styles",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "user_roles": [
+                "administrator"
+            ],
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 20,
+            "collapsed": "",
+            "button_label": "Add CTA",
+            "rows_per_page": 20,
+            "acfe_repeater_stylised_button": 0,
+            "sub_fields": [
+                {
+                    "key": "field_64351bea45b3d",
+                    "label": "CTA descriptive name",
+                    "name": "cta_descriptive_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This name will get used to refer to this cta style in the cta style dropdown in the editor.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64249f397f33a"
+                },
+                {
+                    "key": "field_64351ca82a982",
+                    "label": "CTA settings",
+                    "name": "cta_settings",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "75",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "parent_repeater": "field_64249f397f33a",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "sub_fields": [
+                        {
+                            "key": "field_6424a39846333",
+                            "label": "Colours",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a",
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_6424a676f8ab6",
+                            "label": "Default",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_65241d4e8b9e7",
+                            "label": "Colour type",
+                            "name": "colour_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "choices": {
+                                "__colour-picker": "Colour picker",
+                                "__post-colour": "Post colour",
+                                "__post-text-colour-style": "Post text colour style",
+                                "__theme-primary-text-colour": "Theme primary text colour",
+                                "__theme-secondary-text-colour": "Theme secondary text colour",
+                                "__theme-tertiary-text-colour": "Theme tertiary text colour",
+                                "__theme-primary-accent-colour": "Theme primary accent colour",
+                                "__theme-secondary-accent-colour": "Theme secondary accent colour",
+                                "__theme-tertiary-accent-colour": "Theme tertiary accent colour"
+                            },
+                            "default_value": "__colour-picker",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_6424a00a7f33b",
+                            "label": "Colour",
+                            "name": "colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65241d4e8b9e7",
+                                        "operator": "==",
+                                        "value": "__colour-picker"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_66ac8fc918ec1",
+                            "label": "Background Colour type",
+                            "name": "background_colour_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "choices": {
+                                "__colour-picker": "Colour picker",
+                                "__post-colour": "Post colour",
+                                "__post-text-colour-style": "Post text colour style",
+                                "__theme-primary-background-colour": "Theme primary background colour",
+                                "__theme-secondary-background-colour": "Theme secondary background colour",
+                                "__theme-tertiary-background-colour": "Theme tertiary background colour",
+                                "__theme-primary-accent-colour": "Theme primary accent colour",
+                                "__theme-secondary-accent-colour": "Theme secondary accent colour",
+                                "__theme-tertiary-accent-colour": "Theme tertiary accent colour"
+                            },
+                            "default_value": "__colour-picker",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_6424a0257f33c",
+                            "label": "Background colour",
+                            "name": "background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66ac8fc918ec1",
+                                        "operator": "==",
+                                        "value": "__colour-picker"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": [],
+                            "acfe_settings": "",
+                            "acfe_validate": ""
+                        },
+                        {
+                            "key": "field_65081e4aecd00",
+                            "label": "Border colour",
+                            "name": "border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_65081dedeccfe",
+                            "label": "Mobile colour",
+                            "name": "mobile_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65081b4ce0bc1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_65081e0beccff",
+                            "label": "Mobile background colour",
+                            "name": "mobile_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65081b4ce0bc1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_6424a0457f33d",
+                            "label": "Mobile border colour",
+                            "name": "mobile_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65081b4ce0bc1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_6424a688f8ab7",
+                            "label": "Default  end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a697f8ab8",
+                            "label": "Hover",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_668bbd74cebba",
+                            "label": "Hover colour type",
+                            "name": "hover_colour_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "choices": {
+                                "__colour-picker": "Colour picker",
+                                "__post-colour": "Post colour",
+                                "__post-text-colour-style": "Post text colour style",
+                                "__theme-primary-text-colour": "Theme primary text colour",
+                                "__theme-secondary-text-colour": "Theme secondary text colour",
+                                "__theme-tertiary-text-colour": "Theme tertiary text colour",
+                                "__theme-primary-accent-colour": "Theme primary accent colour",
+                                "__theme-secondary-accent-colour": "Theme secondary accent colour",
+                                "__theme-tertiary-accent-colour": "Theme tertiary accent colour"
+                            },
+                            "default_value": "__colour-picker",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_6424a0587f33e",
+                            "label": "Hover colour",
+                            "name": "hover_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668bbd74cebba",
+                                        "operator": "==",
+                                        "value": "__colour-picker"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": [],
+                            "acfe_settings": "",
+                            "acfe_validate": ""
+                        },
+                        {
+                            "key": "field_66ac907d102ab",
+                            "label": "Hover background Colour type",
+                            "name": "hover_background_colour_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "choices": {
+                                "__colour-picker": "Colour picker",
+                                "__post-colour": "Post colour",
+                                "__post-text-colour-style": "Post text colour style",
+                                "__theme-primary-background-colour": "Theme primary background colour",
+                                "__theme-secondary-background-colour": "Theme secondary background colour",
+                                "__theme-tertiary-text-colour": "Theme tertiary background colour",
+                                "__theme-primary-accent-colour": "Theme primary accent colour",
+                                "__theme-secondary-accent-colour": "Theme secondary accent colour",
+                                "__theme-tertiary-accent-colour": "Theme tertiary accent colour"
+                            },
+                            "default_value": "__colour-picker",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_6424a0757f33f",
+                            "label": "Hover background colour",
+                            "name": "hover_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66ac907d102ab",
+                                        "operator": "==",
+                                        "value": "__colour-picker"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": [],
+                            "acfe_settings": "",
+                            "acfe_validate": ""
+                        },
+                        {
+                            "key": "field_6424a0997f340",
+                            "label": "Hover border colour",
+                            "name": "hover_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "parent_repeater": "field_64249f397f33a",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_650821438c5dc",
+                            "label": "Mobile hover colour",
+                            "name": "mobile_hover_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65081b4ce0bc1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_650821558c5dd",
+                            "label": "Mobile hover background colour",
+                            "name": "mobile_hover_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65081b4ce0bc1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_6508216a8c5de",
+                            "label": "Mobile hover border colour",
+                            "name": "mobile_hover_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65081b4ce0bc1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_6424a6abf8ab9",
+                            "label": "Hover end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_64c7b8da33052",
+                            "label": "Active",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_64c7b8fa33054",
+                            "label": "Active colour",
+                            "name": "active_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64c7b90033055",
+                            "label": "Active background colour",
+                            "name": "active_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64c7b90433056",
+                            "label": "Active border colour",
+                            "name": "active_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64c7b8e733053",
+                            "label": "Active end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1
+                        },
+                        {
+                            "key": "field_64e1048b7c0df",
+                            "label": "Inactive",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "This also applies to when the button has the 'disabled' attribute.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_64e1049d7c0e0",
+                            "label": "Inactive colour",
+                            "name": "inactive_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64e104ae7c0e1",
+                            "label": "Inactive background colour",
+                            "name": "inactive_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64e104be7c0e2",
+                            "label": "Inactive border colour",
+                            "name": "inactive_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64e104cd7c0e3",
+                            "label": "Inactive end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1
+                        },
+                        {
+                            "key": "field_64fef8c2c681c",
+                            "label": "Focus",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_64fef8ccc681d",
+                            "label": "Focus colour",
+                            "name": "focus_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64fef8d0c681e",
+                            "label": "Focus background colour",
+                            "name": "focus_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64fef8d3c681f",
+                            "label": "Focus border colour",
+                            "name": "focus_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64fef94bc6826",
+                            "label": "Focus end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1
+                        },
+                        {
+                            "key": "field_64e0ffa575566",
+                            "label": "Selected",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "Eg. The state of the button when showing an active category filter...",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_64e0ffb675567",
+                            "label": "Selected colour",
+                            "name": "selected_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64e0ffc875568",
+                            "label": "Selected background colour",
+                            "name": "selected_background_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64e0ffe875569",
+                            "label": "Selected border colour",
+                            "name": "selected_border_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64e0fff77556a",
+                            "label": "Selected end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1
+                        },
+                        {
+                            "key": "field_6424a1c9e3120",
+                            "label": "Dimensions",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a",
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_6424a53d9ee08",
+                            "label": "Desktop",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a1dce3121",
+                            "label": "Min width desktop",
+                            "name": "min_width_desktop",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a206e3122",
+                            "label": "Font size desktop",
+                            "name": "font_size_desktop",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 16,
+                            "min": 1,
+                            "max": 50,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a22ae3123",
+                            "label": "Padding inline desktop",
+                            "name": "padding_inline_desktop",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 20,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a24ce3124",
+                            "label": "Padding block desktop",
+                            "name": "padding_block_desktop",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 10,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a54c9ee09",
+                            "label": "Desktop end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a5669ee0a",
+                            "label": "Landscape",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a5739ee0b",
+                            "label": "Min width landscape",
+                            "name": "min_width_landscape",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a58a9ee0d",
+                            "label": "Font size landscape",
+                            "name": "font_size_landscape",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 16,
+                            "min": 1,
+                            "max": 50,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a57f9ee0c",
+                            "label": "Padding inline landscape",
+                            "name": "padding_inline_landscape",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 20,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a5939ee0e",
+                            "label": "Padding block landscape",
+                            "name": "padding_block_landscape",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 10,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a59d9ee0f",
+                            "label": "Landscape end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a5dd9ee10",
+                            "label": "Portrait",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a5ef9ee11",
+                            "label": "Min width portrait",
+                            "name": "min_width_portrait",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a6099ee13",
+                            "label": "Font size portrait",
+                            "name": "font_size_portrait",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 16,
+                            "min": 1,
+                            "max": 50,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a6189ee14",
+                            "label": "Padding inline portrait",
+                            "name": "padding_inline_portrait",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 20,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a62a9ee15",
+                            "label": "Padding block portrait",
+                            "name": "padding_block_portrait",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 10,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a63f9ee16",
+                            "label": "Landscape end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a71a0291c",
+                            "label": "Mobile",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a7290291d",
+                            "label": "Min width mobile",
+                            "name": "min_width_mobile",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a74c0291f",
+                            "label": "Font size mobile",
+                            "name": "font_size_mobile",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 16,
+                            "min": 1,
+                            "max": 50,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a75f02920",
+                            "label": "Padding inline mobile",
+                            "name": "padding_inline_mobile",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 20,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a76e02921",
+                            "label": "Padding block mobile",
+                            "name": "padding_block_mobile",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 10,
+                            "min": 0,
+                            "max": 100,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a78302923",
+                            "label": "Mobile end",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "open": 0,
+                            "multi_expand": 0,
+                            "endpoint": 1,
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a79802924",
+                            "label": "General",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "parent_repeater": "field_64249f397f33a",
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_6424a0d87f342",
+                            "label": "Border radius",
+                            "name": "border_radius",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "0px",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_644b7b4070e3a",
+                            "label": "Border width",
+                            "name": "border_width",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 1,
+                            "min": 0,
+                            "max": 50,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a185f1423",
+                            "label": "Font weight",
+                            "name": "font_weight",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 400,
+                            "min": 100,
+                            "max": 900,
+                            "placeholder": "",
+                            "step": 100,
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64249f397f33a"
+                        },
+                        {
+                            "key": "field_6424a7dcd1e54",
+                            "label": "Font family",
+                            "name": "font_family",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__var(--primary-font-family)": "Primary",
+                                "__var(--secondary-font-family)": "Secondary",
+                                "__var(--tertiary-font-family)": "Tertiary",
+                                "__var(--quaternary-font-family)": "Quaternary"
+                            },
+                            "default_value": "__var(--primary-font-family)",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_64529c8c7b582",
+                            "label": "Letter spacing (in ems)",
+                            "name": "letter_spacing",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "0.01",
+                            "min": 0,
+                            "max": 5,
+                            "placeholder": "",
+                            "step": "0.01",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_64a9262a4cdb3",
+                            "label": "Line height (in %)",
+                            "name": "line_height",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 100,
+                            "min": 0,
+                            "max": 300,
+                            "placeholder": "",
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6424a92095b02",
+                            "label": "Text transform",
+                            "name": "text_transform",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__normal": "Normal",
+                                "__capitalize": "Capitalize",
+                                "__uppercase": "Uppercase"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_64249f397f33a",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_65535392f45dd",
+                            "label": "Font style",
+                            "name": "font_style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__normal": "Normal",
+                                "__italic": "Italic"
+                            },
+                            "default_value": "__normal",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 1,
+                            "ajax": 1,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_6458b84ab67e9",
+                            "label": "Text alignment",
+                            "name": "text_alignment",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__left": "Left",
+                                "__center": "Center",
+                                "__right": "Right"
+                            },
+                            "default_value": "__center",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_64ec741d14a0d",
+                            "label": "Content vertical alignment",
+                            "name": "content_vertical_alignment",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "(flex column justify content)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__flex-start": "Top",
+                                "__center": "Center",
+                                "__flex-end": "Bottom"
+                            },
+                            "default_value": "__center",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_64a2f144ef949",
+                            "label": "Cta decoration style",
+                            "name": "cta_decoration_style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__none": "None",
+                                "__underline": "Underline"
+                            },
+                            "default_value": "__none",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_64ea138fa05fa",
+                            "label": "Cta decoration colour",
+                            "name": "cta_decoration_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_64a2f24d9a3c2",
+                            "label": "Cta decoration style hover",
+                            "name": "cta_decoration_style_hover",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__none": "None",
+                                "__underline": "Underline"
+                            },
+                            "default_value": "__none",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_64ea14ae5cf51",
+                            "label": "Cta decoration colour hover",
+                            "name": "cta_decoration_colour_hover",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_65081b4ce0bc1",
+                            "label": "Enable mobile style",
+                            "name": "enable_mobile_style",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "style": ""
+                        },
+                        {
+                            "key": "field_6566276ed78e8",
+                            "label": "CTA Icon",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_6566278dd78e9",
+                            "label": "Include CTA Icon",
+                            "name": "include_cta_icon",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "style": ""
+                        },
+                        {
+                            "key": "field_65662bad53766",
+                            "label": "Icon gap",
+                            "name": "icon_gap",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6566278dd78e9",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": 1,
+                            "min": "0.05",
+                            "max": 1,
+                            "placeholder": 1,
+                            "step": "0.01",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_655e29e0453f3",
+                            "label": "CTA Animation",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_655e2af6453f5",
+                            "label": "Enable CTA Animation",
+                            "name": "enable_cta_animation",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "style": ""
+                        },
+                        {
+                            "key": "field_655e2a60453f4",
+                            "label": "CTA Animation style",
+                            "name": "cta_animation_style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_655e2af6453f5",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "1": "style 1"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "field_65afcb187ebe7",
+                            "label": "CTA Shadow",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_65afcb297ebe8",
+                            "label": "CTA Enable Shadow",
+                            "name": "cta_enable_shadow",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "style": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_65afcb4c7ebe9",
+                            "label": "CTA shadow offset horizontal",
+                            "name": "cta_shadow_offset_x",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65afcb297ebe8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": -50,
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65afcb777ebea",
+                            "label": "CTA shadow offset vertical",
+                            "name": "cta_shadow_offset_y",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65afcb297ebe8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": -50,
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65afcc137ebeb",
+                            "label": "CTA Shadow Blur Radius",
+                            "name": "cta_shadow_blur_radius",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65afcb297ebe8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": "",
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65afcc437ebec",
+                            "label": "CTA Shadow Spread Radius",
+                            "name": "cta_shadow_spread_radius",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65afcb297ebe8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": -50,
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65afcc807ebed",
+                            "label": "CTA Shadow Colour",
+                            "name": "cta_shadow_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65afcb297ebe8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": [],
+                            "acfe_settings": "",
+                            "acfe_validate": ""
+                        },
+                        {
+                            "key": "field_66910f2d5e8de",
+                            "label": "Box Shadow Position",
+                            "name": "box_shadow_position",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_65afcb297ebe8",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "style": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "ui_on_text": "Inside",
+                            "ui_off_text": "Outside",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_668d3c47fc167",
+                            "label": "CTA Enable Hover Shadow",
+                            "name": "cta_enable_hover_shadow",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "style": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_668d3caffc168",
+                            "label": "CTA shadow offset hover horizontal",
+                            "name": "cta_shadow_offset_hover_x",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668d3c47fc167",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": -50,
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_668d3cc1fc169",
+                            "label": "CTA shadow offset hover vertical",
+                            "name": "cta_shadow_offset_hover_y",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668d3c47fc167",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": -50,
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_668d3cd7fc16a",
+                            "label": "CTA Shadow Hover Blur Radius",
+                            "name": "cta_shadow_hover_blur_radius",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668d3c47fc167",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": "",
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_668d3cf9fc16b",
+                            "label": "CTA Shadow Hover Spread Radius",
+                            "name": "cta_shadow_hover_spread_radius",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668d3c47fc167",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min": -50,
+                            "max": 50,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_668d3d14fc16c",
+                            "label": "CTA Shadow Hover Colour",
+                            "name": "cta_shadow_hover_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668d3c47fc167",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": [],
+                            "acfe_settings": "",
+                            "acfe_validate": ""
+                        },
+                        {
+                            "key": "field_66911ec7866ee",
+                            "label": "Box Shadow Hover Position",
+                            "name": "box_shadow_hover_position",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_668d3c47fc167",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "style": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "ui_on_text": "Inside",
+                            "ui_off_text": "Outside",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_6685506367298",
+                            "label": "Image Background",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_66855107eab24",
+                            "label": "Enable Image-background",
+                            "name": "enable_image_background",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "style": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_66855121eab25",
+                            "label": "Image Background",
+                            "name": "image_background",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66855107eab24",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "uploader": "",
+                            "return_format": "array",
+                            "upload_folder": "",
+                            "acfe_thumbnail": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_668be19edb531",
+                            "label": "Image Background Size",
+                            "name": "image_background_size",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66855107eab24",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "choices": {
+                                "__cover": "Cover",
+                                "__contain": "Contain"
+                            },
+                            "default_value": "__cover",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_668be1d6db532",
+                            "label": "Image Background Repeat",
+                            "name": "image_background_repeat",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66855107eab24",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "choices": {
+                                "__no-repeat": "No-repeat",
+                                "__repeat": "Repeat"
+                            },
+                            "default_value": "__no-repeat",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "min": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "cta-styles"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "translation",
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": [
+        "administrator"
+    ],
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1736366550
+}

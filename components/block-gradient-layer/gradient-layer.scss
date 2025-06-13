@@ -1,0 +1,11 @@
+// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/gradient-overlay/gradient-overlay';
+@use 'Assets/scss/blocks/gradient-layer/gradient-layer-extra';
+.gradient-layer {
+	display: grid;
+	grid-template: 'main' / 1fr;
+	@include gradient-overlay.gradientOverlay();
+	@include gradient-layer-extra.additionalStyles();
+}

@@ -1,0 +1,5 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block }, with_context = false) %}
+{% set elementStyles = gridLayoutElement %}
+<div class="{{blockClassName}}__spacer-container {{blockClassName}}__info-item" style="{{elementStyles}}">
+	{{ include( 'blocks/spacer-v2.twig', {fields : field, block, blockClassName}, with_context = false) }}
+</div>

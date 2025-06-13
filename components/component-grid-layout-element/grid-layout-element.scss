@@ -1,0 +1,27 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+
+@mixin gridLayoutElement() {
+	display: grid;
+	grid-row: var(--grid-row-start-mobile) / span var(--grid-row-span-mobile);
+	grid-column: var(--grid-column-start-mobile) / span
+		var(--grid-column-span-mobile);
+	place-self: var(--grid-vertical-placement-mobile)
+		var(--grid-horizontal-placement-mobile);
+	@include core-mixins.device(breakpoints.$tabPortrait) {
+		grid-row: var(--grid-row-start-portrait) / span
+			var(--grid-row-span-portrait);
+		grid-column: var(--grid-column-start-portrait) / span
+			var(--grid-column-span-portrait);
+		place-self: var(--grid-vertical-placement-portrait)
+			var(--grid-horizontal-placement-portrait);
+	}
+	@include core-mixins.device(breakpoints.$tabLandscape) {
+		grid-row: var(--grid-row-start) / span var(--grid-row-span);
+		grid-column: var(--grid-column-start) / span var(--grid-column-span);
+		place-self: var(--grid-vertical-placement-desktop)
+			var(--grid-horizontal-placement-desktop);
+	}
+}

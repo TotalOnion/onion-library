@@ -1,0 +1,101 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-root-variables/core-root-variables';
+@use 'Assets/scss/modules/library-modules/core-css-sizing-vars/core-css-sizing-vars';
+@use 'Assets/scss/modules/library-modules/core-css-modules/core-css-modules';
+@use 'Assets/scss/modules/dynamicBlocksPreview';
+
+@use 'Assets/scss/theme/font-face';
+@use 'Assets/scss/theme/variables';
+
+@use 'NodeModules/swiper/swiper-bundle';
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+.editor-styles-wrapper {
+}
+.block-editor-block-list__layout .wp-block {
+	@include core-mixins.fontSecondary();
+	border: 1px solid #0000002e;
+	background: var(--theme-primary-background-colour);
+	color: var(--theme-primary-text-colour);
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+//This is to correct a horrible, horrible bit of Wordpress admin css!! :0
+html :where([style*='border-width'][data-assetkey]) {
+	border-style: initial;
+}
+
+.acf-block-component.acf-block-body .acf-block-preview {
+	@import 'NodeModules/swiper/swiper.min.css';
+	@import 'Assets/scss/modules/library-modules/core-typography/core-typography';
+	@import 'Assets/scss/modules/library-modules/core-css-modules/core-css-modules';
+	@import 'Assets/scss/modules/dynamicBlocksPreview';
+	@import 'Assets/scss/theme/typography';
+
+	.swiper {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 9;
+		}
+	}
+
+	.swiper-wrapper {
+		height: auto;
+	}
+
+	section {
+		width: 100%;
+		pointer-events: all;
+
+		a {
+			pointer-events: none;
+		}
+	}
+
+	// Theme generic
+	.lazy,
+	.lazy-fade {
+		opacity: 1;
+	}
+	.js-enabled-hide {
+		display: none;
+	}
+
+	.loading-spinner {
+		margin-top: unset;
+		margin-bottom: unset;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 99;
+		display: grid;
+		place-items: center;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 1;
+		display: none;
+	}
+
+	&.loaded {
+		.loading-spinner {
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+	}
+}

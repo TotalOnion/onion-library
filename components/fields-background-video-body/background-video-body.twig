@@ -1,0 +1,14 @@
+{% set backgroundVideo = false %}
+{% set bgVideoName = false %}
+{% if options.body_container_background_video %}
+	{% set backgroundVideo = options.body_container_background_video.url %}
+	{% set bgVideoName = 'body-container-background-video' %}
+{% endif %}
+
+{% if currentPost.page_background_video %}
+	{% set backgroundVideo = function('wp_get_attachment_url', currentPost.page_background_video) %}
+	{% set bgVideoName = 'body-container-background-video' %}
+{% endif %}
+{% if backgroundVideo %}
+	<video muted autoplay loop class="{{bgVideoName}}" src="{{backgroundVideo}}"></video>
+{% endif %}

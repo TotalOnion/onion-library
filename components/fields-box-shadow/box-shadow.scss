@@ -1,0 +1,9 @@
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+
+@mixin boxShadow() {
+	box-shadow: core-functions.fluidSize(var(--box-shadow-offset-x), 'static')
+		core-functions.fluidSize(var(--box-shadow-offset-y), 'static')
+		core-functions.fluidSize(var(--box-shadow-blur), 'static')
+		core-functions.fluidSize(var(--box-shadow-spread), 'static')
+		var(--box-shadow-colour);
+}

@@ -1,0 +1,10 @@
+@mixin codeBlock() {
+	&__code-block-container {
+		width: 100%;
+		overflow: scroll;
+		display: flex;
+	}
+	&__code-block__code {
+		display: block;
+	}
+}

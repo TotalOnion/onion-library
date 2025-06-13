@@ -1,0 +1,144 @@
+{% set blockClassName = "classic-nav-items-center" %}
+{% set headerLayout = 2 %}
+
+{% set navFontFamily = '--nav-font-family: ' ~ fields.classic_nav_items_center.nav_font_family|ru ~ ';' %}
+{% set navLinkColourMobile = '--nav-link-colour-mobile: ' ~ fields.classic_nav_items_center.nav_link_colour_mobile ~ ';' %}
+{% set navLinkColourDesktop = '--nav-link-colour-desktop: ' ~ fields.classic_nav_items_center.nav_link_colour_desktop ~ ';' %}
+{% set navLinkColourHover = '--nav-link-colour-hover: ' ~ fields.classic_nav_items_center.nav_link_colour_hover ~ ';' %}
+{% set navBgColourMobile = '--nav-bg-colour-mobile: ' ~ fields.classic_nav_items_center.nav_bg_colour_mobile ~ ';' %}
+{% set navBgColourDesktop = '--nav-bg-colour-desktop: ' ~ fields.classic_nav_items_center.nav_bg_colour_desktop ~ ';' %}
+{% set navMenuToggleColourMobile = '--nav-menu-toggle-colour-mobile: ' ~ fields.classic_nav_items_center.nav_menu_toggle_colour_mobile ~ ';' %}
+{% set navSlideInBgColourMobile = '--nav-slide-in-bg-colour-mobile: ' ~ fields.classic_nav_items_center.nav_slide_in_bg_colour_mobile ~ ';' %}
+
+{% set headerStyles = navFontFamily ~ navLinkColourMobile ~ navLinkColourDesktop ~ navLinkColourHover ~ navBgColourMobile ~ navBgColourDesktop ~ navMenuToggleColourMobile ~ navSlideInBgColourMobile %}
+
+
+<header class="{{blockClassName}} {{headerBackgroundImgDesktopClass}}" style="{{headerStyles}}">
+	{% if options.enable_header_banner %}
+		<div class="{{blockClassName}}__header-banner">
+			{{options.header_banner_text|striptags('<a>')}}
+		</div>
+	{% endif %}
+	{% set siteLogo = get_image(options.header_logo_desktop) %}
+	{% set siteLogoMobile = get_image(options.header_logo_mobile) %}
+
+	{% if siteLogo.src or siteLogoMobile.src %}
+		<a href="{{site.url}}/" class="header-logo">
+
+			{% if siteLogo.src %}
+				<img src="{{ siteLogo.src }}" scrset="{{ siteLogo.srcset }}" height="{{siteLogo.height}}" width="{{siteLogo.width}}" alt="site logo" class="header-logo__image header-logo__image--desktop"/>
+			{% endif %}
+			{% if siteLogoMobile.src %}
+				<img src="{{ siteLogoMobile.src }}" scrset="{{ siteLogoMobile.srcset }}" height="{{ siteLogoMobile.height }}" width="{{ siteLogoMobile.width }}" alt="site logo" class="header-logo__image header-logo__image--mobile"/>
+			{% endif %}
+		</a>
+	{% endif %}
+	{% if options.site_title or options.site_subtitle %}
+		<div class="{{blockClassName}}__title-container">
+			{% if options.site_title %}
+				<a class="{{blockClassName}}__site-title" href="/" title="{{options.site_title}}">{{options.site_title}}</a>
+			{% endif %}
+			{% if options.site_subtitle %}
+				<p class="{{blockClassName}}__site-subtitle">{{options.site_subtitle}}</p>
+			{% endif %}
+		</div>
+	{% endif %}
+	<div class="header-interactions">
+		{% if options.enable_header_favourite %}
+			<div class="header-interactions__favourite" data-better-reviews-personal-likes>
+				<a class="header-interactions__favourite-link" href="{{ options.favourites_listing_page.guid }}">{% include "/assets/images/icon/heart-outline-1.svg" with {'colour': 'white' }%}</a>
+				<span class="header-interactions__favourite-count better-reviews__personal-likes__count" data-better-reviews-personal-likes-total></span>
+			</div>
+		{% endif %}
+
+		{% if options.enable_header_cart %}
+			<div class="header-interactions__cart">
+				<img src="{{options.cart_icon.url}}" alt="{{options.cart_icon.alt}}" width="{{options.cart_icon.width}}" height="{{options.cart_icon.height}}">
+			</div>
+		{% endif %}
+		<div class="header-interactions__hamburger-wrapper" id="header-test">
+			<div class="header-interactions__hamburger">
+				<div class="header-interactions__hamburger-bar a"></div>
+				<div class="header-interactions__hamburger-bar b"></div>
+				<div class="header-interactions__hamburger-bar c"></div>
+			</div>
+		</div>
+	</div>
+	<div class="{{blockClassName}}__nav-wrapper {{headerBackgroundImgMobileClass}}">
+		{% if nav_menus.primary_menu is defined and nav_menus.primary_menu is not null %}
+			<nav class="header-nav header-nav--primary">
+				{% if nav_menus.primary_menu.items is defined and nav_menus.primary_menu.items is not empty %}
+					<ul class="header-nav__container">
+						{% for item in nav_menus.primary_menu.items %}
+							<li class="{{ item.class }} header-nav__item">
+								<a class="{{ item.class }} header-nav__item-link" href="{{ item.link }}">{{ item.title }}</a>
+								{% if item.children is defined and item.children is not empty %}
+									<div class="header-nav__sub-nav">
+										<ul class="header-nav__sub-nav-container">
+											{% for child in item.children %}
+												<li class="{{ child.class }} header-nav__item header-nav__sub-nav-item">
+													<a class="header-nav__link header-nav__sub-nav-link" href="{{ child.url }}">
+														{% if fn('get_field', 'product_thumbnail', child.object_id) is not empty %}
+															{% set image = fn('get_field', 'product_thumbnail', child.object_id) %}
+															{% if image is defined %}
+																{% set imageSizes = '(min-width: 768px) 10vw, (min-width: 500px) 10vw, 50vw' %}
+																{% set imageFields = [] %}
+																{% set imageFields = imageFields|merge({'enable_image' : true}) %}
+																{% set imageFields = imageFields|merge({'desktop_image' : image}) %}
+																{% set imageClassname = blockClassName ~ '__subnav-picture' %}
+																{{ include('components/responsive-image.twig', {fields : imageFields, block : block, blockClassName : imageClassname, desktopSizes: imageSizes}, with_context = false) }}
+															{% endif %}
+														{% endif %}
+
+														<p>
+															{{ child.name }}
+															{% if child.custom.subtitle is defined and child.custom.subtitle is not empty %}
+																<span>{{ child.custom.subtitle }}</span>
+															{% endif %}
+														</p>
+
+													</a>
+												</li>
+											{% endfor %}
+											{% if item.custom.subnavigation_bottom_link is defined and item.custom.subnavigation_bottom_link is not empty %}
+												<li class="header-nav__item header-nav__item--viewall">
+													<a href="{{item.custom.subnavigation_bottom_link.url}}" class="header-nav__item-link">{{item.custom.subnavigation_bottom_link.title}}</a>
+												</li>
+											{% endif %}
+										</ul>
+									</div>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				<div class="header-additionalnav">
+					<ul class="header-additionalnav__container">
+						{% if options.enable_header_cart %}
+							<li class="header-nav__item header-additionalnav__cart">
+								<a href="" class="header-nav__item-link">{% include "/assets/images/icon/cart.svg" %}
+									Cart</a>
+							</li>
+						{% endif %}
+						{% if options.enable_header_favourite %}
+							<li class="header-nav__item header-additionalnav__favourites">
+								<a href="" class="header-nav__item-link">{% include "/assets/images/icon/heart-outline-1.svg" with {'colour': 'white' }%}
+									Favourıtes</a>
+							</li>
+						{% endif %}
+					</ul>
+				</div>
+				<div class="header-social">
+					{% for social in options.social_accounts %}
+						{% if social.enabled %}
+							<a target="{{social.social_link.target}}" href="{{social.social_link.url}}" title="{{social.social_link.title}}" aria-label="{{social.social_newtork}}" class="{{blockClassName}}__social__link">
+								<img loading="lazy" class="{{blockClassName}}__social-icon" srcset="{{get_image(social.social_icon).srcset}}" width="{{social.social_icon.width}}" height="{{social.social_icon.height}}" src="{{get_image(social.social_icon).src}}" sizes="" alt="{{get_image(social.social_icon).alt}}">
+							</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+				{# <div class="header-market-selector">																																																																																																																																																																																																																																										</div> #}
+			</nav>
+		{% endif %}
+	</div>
+</header>

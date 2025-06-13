@@ -1,0 +1,40 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+
+{% set postColour = '--post-colour: ' ~ post.post_colour|ru ~ ';' %}
+{% set postTextColourStyle = '--post-text-colour-style: ' ~ post.post_text_colour_style|ru ~ ';' %}
+
+{% set ctaStyle = field.cta_style|ru %}
+
+{% if field.cta_style_select|ru == 'post-colour' %}
+	{% set ctaStyle = 'post-colour' %}
+{% endif %}
+
+{% if field.cta_style_select|ru == 'post-text-colour-style' %}
+	{% set ctaStyle = 'post-text-colour-style' %}
+{% endif %}
+
+{% if field.cta_style|ru matches '/^\\d+$/' %}
+	{% set ctaData = attribute(cta_styles['theme_cta_styles'], field.cta_style|ru - 1) %}
+	{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
+	{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
+{% endif %}
+
+{% set widgetStyles = gridLayoutElement ~ postColour ~ postTextColourStyle %}
+
+{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
+
+<a href="{{post.link}}" data-pattern-post-info="link" class="{{blockClassName}}__post-link {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{blockClassName|default('default-class')}}__cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : ''}}" style="{{widgetStyles}}">
+	<span class="{{blockClassName|default('default-class')}}__cta-span">{{field.post_link_text}}</span>
+	{% set icon = enableCtaIcon %}
+
+	{% if icon %}
+		{% set iconType = cta.cta_link.target == '_blank' ? options.theme_cta_icons.cta_external_link_icon : options.theme_cta_icons.cta_link_icon %}
+
+		{% set iconImage = get_image(iconType) %}
+
+		{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
+		<span class="{{ blockClassName|default('default-class') ~ '__icon-link ' ~ blockClassName|default('default-class') ~ '__cta-icon cmpl-cta-icon'}}">
+			{{ isSVG ? get_raw_svg(iconImage.id) : '<img class="" src="' ~ iconImage.src ~ '">'}}
+		</span>
+	{% endif %}
+</a>

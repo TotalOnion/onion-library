@@ -1,0 +1,14 @@
+{% set colour = field.text_style.text_colour|ru == 'post_colour' ? post.post_colour : field.text_style.text_colour|ru %}
+
+{% set textAlign = '--text-align:' ~ field.text_style.text_align|ru ~ ';' %}
+{% if field.text_style.text_font_weight|ru is not empty %}
+	{% set fontWeight = '--font-weight:'~ field.text_style.text_font_weight|ru ~ ';' %}
+{% endif %}
+
+{% set textColour = '--text-colour:' ~  colour ~ ';' %}
+{% set textTransform = '--text-transform:' ~  field.text_style.text_transform|ru ~ ';' %}
+{% set fontStyle = '--font-style:' ~ field.text_style.font_style|ru ~ ';' %}
+
+{% set textStyle = textAlign ~ fontWeight ~ textColour ~ textTransform ~ fontStyle %}
+
+{{textStyle}}

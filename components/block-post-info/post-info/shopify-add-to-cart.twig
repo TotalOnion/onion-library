@@ -1,0 +1,31 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set icon = field.enable_cta_icon %}
+
+{% set postColour = '--post-colour: ' ~ post.post_colour|ru ~ ';' %}
+{% set postTextColourStyle = '--post-text-colour-style: ' ~ post.post_text_colour_style|ru ~ ';' %}
+
+{% set ctaStyle = field.cta_style|ru %}
+
+{% if field.cta_style_select|ru == 'post-colour' %}
+	{% set ctaStyle = 'post-colour' %}
+{% endif %}
+
+{% if field.cta_style_select|ru == 'post-text-colour-style' %}
+	{% set ctaStyle = 'post-text-colour-style' %}
+{% endif %}
+
+
+{% set widgetStyles = gridLayoutElement ~ postColour ~ postTextColourStyle %}
+
+{% set productType = field.product_type|ru %}
+
+{% if productType == 'standard' %}
+	{% set productId = post.meta('shopify_pim_id') %}
+	<div class="{{blockClassName|default('default-class')}} {{blockClassName|default('default-class')}}__info-item shopify-add-to-cart shopify-wrapper shopify-integration has-shop shop-shopify" data-pim="{{ productId }}" data-label="{{field.shopify_text}}" data-shopifya2cbtnstyle="cmpl-cta-style-{{field.cta_style|default('1')}}" style="{{widgetStyles}}"></div>
+
+{% endif %}
+{% if productType == 'engraved' %}
+	{% set productEngravedId = post.meta('shopify_engraved_pim_id') %}
+	<div class="{{blockClassName|default('default-class')}} {{blockClassName|default('default-class')}}__info-item shopify-add-to-cart shopify-wrapper shopify-integration has-shop shop-shopify engraved" data-pim="{{ productEngravedId }}" data-label="{{field.shopify_text}}" data-shopifya2cbtnstyle="cmpl-cta-style-{{field.cta_style|default('1')}}" style="{{widgetStyles}}"></div>
+
+{% endif %}

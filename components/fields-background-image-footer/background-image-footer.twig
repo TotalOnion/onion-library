@@ -1,0 +1,8 @@
+{% if options.footer_background_image %}
+	{% set backgroundImage = options.footer_background_image %}
+	{% set imageFields = [] %}
+	{% set bgImageName = 'site-footer-background-image' %}
+	{% set imageFields = imageFields|merge({'enable_image' : true}) %}
+	{% set imageFields = imageFields|merge({'desktop_image' : backgroundImage}) %}
+	{{ include('components/responsive-image.twig', {fields : imageFields, block : block, blockClassName : bgImageName}, with_context = false) }}
+{% endif %}

@@ -1,0 +1,26 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/iframe-container/iframe-container-extra';
+
+.iframe-container {
+	@include iframe-container-extra.additionalStyles();
+	background-color: var(--background-colour);
+
+	&__iframe {
+		width: 100%;
+		border: none;
+		height: core-functions.fluidSize(var(--iframe-height-mobile), 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			height: core-functions.fluidSize(
+				var(--iframe-height-tablet),
+				'portrait'
+			);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			height: core-functions.fluidSize(var(--iframe-height), 'desktop');
+		}
+	}
+}

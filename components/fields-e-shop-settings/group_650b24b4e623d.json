@@ -1,0 +1,702 @@
+{
+    "key": "group_650b24b4e623d",
+    "title": "Options: E-Shop settings",
+    "fields": [
+        {
+            "key": "field_65e9bbb1bd53f",
+            "label": "E-Shop Settings",
+            "name": "e-shop_settings",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "**Note: Some payment needs your domain to be whitelisted(including local domain), so it may not fully functional without it.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "wpml_cf_preferences": 1,
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_settings": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
+            "sub_fields": [
+                {
+                    "key": "field_66911c761fbea",
+                    "label": "Where to buy(WTB)",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "selected": 0
+                },
+                {
+                    "key": "field_650b252b25c32",
+                    "label": "Enable Debrain Where to buy",
+                    "name": "enable_debrain_wtb",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "style": ""
+                },
+                {
+                    "key": "field_650b24b525c31",
+                    "label": "Debrain WTB dloc satellite id",
+                    "name": "debrain_wtb_dloc_satellite_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_650b252b25c32",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_650b259125c33",
+                    "label": "Debrain Where To Buy script",
+                    "name": "debrain_wtb_script",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_650b252b25c32",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_66447c4ed29d1",
+                    "label": "Brand ID",
+                    "name": "brand_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This is required for Debrain WTB v2. This brand ID will be loaded in this script as\r\n&lt;script async src=\"https:\/\/wtb.buyspiritsnow.com\/js\/sdk.js\" brand=“BRAND_ID\"&gt;&lt;\/script&gt;",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_650b252b25c32",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "instruction_placement": "field",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_66911cb11fbeb",
+                    "label": "Click to buy(CTB)",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "selected": 0
+                },
+                {
+                    "key": "field_658470a102d31",
+                    "label": "Enable Click to buy",
+                    "name": "enable_click_to_buy",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "style": ""
+                },
+                {
+                    "key": "field_65982b94022d2",
+                    "label": "Click to buy API key",
+                    "name": "ctb_api_key",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_658470a102d31",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65982bda022d3",
+                    "label": "Click to buy API Endpoint",
+                    "name": "ctb_api_endpoint",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_658470a102d31",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_66911d061fbec",
+                    "label": "MikMak",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "selected": 0
+                },
+                {
+                    "key": "field_66469e7425bfe",
+                    "label": "Enable Mikmak",
+                    "name": "enable_mikmak",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "style": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
+                    "key": "field_66469fd525bff",
+                    "label": "Mikmak Brand ID",
+                    "name": "mikmak_brand_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Please enter the Brand \/ App ID.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66469e7425bfe",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "instruction_placement": "field",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6658c3b8550a3",
+                    "label": "Mikmak CTB Drawer Widget ID",
+                    "name": "mikmak_ctb_drawer_widget_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Please enter the Widget ID for the MikMak CTB Drawer.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66469e7425bfe",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "acfe_permissions": "",
+                    "instruction_placement": "field",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6646a06825c00",
+                    "label": "Mikmak global default product",
+                    "name": "mikmak_global_default_product",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "This product will be the default selected on the main site, and the related products will be displayed from that selected product(if exists).",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66469e7425bfe",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "post_type": [
+                        "product"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "return_format": "object",
+                    "multiple": 0,
+                    "max": "",
+                    "save_custom": 0,
+                    "save_post_status": "publish",
+                    "acfe_add_post": 0,
+                    "acfe_edit_post": 0,
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "allow_null": 0,
+                    "instruction_placement": "field",
+                    "acfe_permissions": "",
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "save_post_type": "",
+                    "min": ""
+                },
+                {
+                    "key": "field_66911d101fbed",
+                    "label": "PriceSpider",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "selected": 0
+                },
+                {
+                    "key": "field_668c073db64da",
+                    "label": "Enable PriceSpider",
+                    "name": "enable_pricespider",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "style": ""
+                },
+                {
+                    "key": "field_668c192588d43",
+                    "label": "PriceSpider key",
+                    "name": "pricespider_key",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "PriceSpider key will be in the format: XXXX-XXXXXXXXXXXXXXXXXXXXXXXX, where first 4 characters will be a numeric values, and rest all alphanumerics.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_668c073db64da",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "maxlength": "",
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_668c1b6b88d44",
+                    "label": "Enable PriceSpider Universal Tracking",
+                    "name": "enable_pricespider_universal_tracking",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "If this is enabled, it will add the script to the header: &lt;script type=\"text\/javascript\" src=\"\/\/cdn.pricespider.com\/1\/xxxx\/ps-uAd.js\" async&gt;&lt;\/script&gt; where xxxx is the first 4 integers from the key.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_668c073db64da",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "acfe_permissions": "",
+                    "instruction_placement": "",
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "style": ""
+                },
+                {
+                    "key": "field_670cf362151c7",
+                    "label": "Shopify",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "selected": 0
+                },
+                {
+                    "key": "field_670cf384151c8",
+                    "label": "Enable Shopify",
+                    "name": "enable_shopify",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_field": "",
+                    "hide_label": "",
+                    "hide_instructions": "",
+                    "hide_required": "",
+                    "wpml_cf_preferences": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "acfe_settings": "",
+                    "acfe_validate": "",
+                    "instruction_placement": "",
+                    "acfe_permissions": "",
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "style": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "market-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "translation",
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746891770
+}

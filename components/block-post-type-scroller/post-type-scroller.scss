@@ -1,0 +1,4 @@
+@use 'Assets/scss/blocks/post-type-scroller/post-type-scroller-extra';
+.post-type-scroller {
+	@include post-type-scroller-extra.additionalStyles();
+}

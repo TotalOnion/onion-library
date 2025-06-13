@@ -1,0 +1,128 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use './social-media-share-extra';
+@use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
+
+@mixin social-media-share() {
+	.social-media-share-popup {
+		@include grid-layout-element.gridLayoutElement();
+		.social-media-page-content {
+			display: grid;
+			grid-template-areas: ' left right ';
+			grid-template-columns: fit-content(100%) fit-content(100%);
+			grid-gap: var(--social-media-share-grid-gap);
+			place-content: var(--social-media-share-horizontal-align);
+			align-items: center;
+
+			.social-media-share-text {
+				grid-area: var(--social-media-share-col1);
+				color: var(--theme-primary-text-colour);
+				text-decoration-line: underline;
+				font-size: core-functions.fontSize(16, 'static');
+				cursor: pointer;
+			}
+
+			.social-media-share-icon {
+				grid-area: var(--social-media-share-col2);
+				padding-top: core-functions.fluidSize(9, 'static');
+
+				.share-icon-img {
+					transform: rotate(var(--social-share-icon-rotate));
+					cursor: pointer;
+				}
+			}
+		}
+
+		dialog::backdrop {
+			backdrop-filter: blur(10px);
+		}
+
+		dialog {
+			min-width: core-functions.fluidSize(334, 'static');
+			width: calc(100% - 30px);
+			max-width: core-functions.fluidSize(330, 'static');
+			overflow: visible;
+			box-shadow: var(--social-share-popup-shadow);
+			background-color: var(--social-share-popup-background-colour);
+			border-radius: core-functions.fluidSize(20, 'static');
+			border: none;
+			padding: core-functions.fluidSize(40, 'static') core-functions.fluidSize(20, 'static');
+			height: -moz-fit-content;
+			height: fit-content;
+			font-size: core-functions.fontSize(50, 'static');
+			line-height: 1em;
+			text-transform: uppercase;
+
+			.icon-close {
+				background-color: white;
+				width: core-functions.fluidSize(48, 'static');
+				height: core-functions.fluidSize(48, 'static');
+				border-radius: 50%;
+				position: absolute;
+				top: core-functions.fluidSize(-25, 'static');
+				right: core-functions.fluidSize(20, 'static');
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+			}
+
+			.dialog-actions {
+				text-align: center;
+
+				h3 {
+					font-size: core-functions.fontSize(50, 'static');
+					font-family: var(--primary-font-family);
+					color: var(--social-share-popup-font-colour);
+				}
+
+				.wrapper-content-icons {
+					display: flex;
+					justify-content: center;
+					column-gap: 1rem;
+					padding-top: core-functions.fluidSize(20, 'static');
+
+					a {
+						background-color: #ffffff;
+						border-radius: 50%;
+						height: core-functions.fluidSize(var(--social-media-share-a-size, 40),
+								'static'
+							);
+
+						svg {
+							display: block;
+						}
+
+						svg:hover {
+							fill: purple;
+						}
+
+						svg:hover rect {
+							fill: purple;
+						}
+
+						svg:hover path {
+							fill: purple;
+						}
+					}
+
+					a:focus-visible {
+						outline: unset;
+					}
+				}
+
+				.social-media-message {
+					display: none;
+					color: white;
+					font-size: core-functions.fontSize(16, 'static');
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+
+		@include social-media-share-extra.additionalStyles();
+	}
+}

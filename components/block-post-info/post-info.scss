@@ -1,0 +1,174 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/post-info/post-info-extra';
+@use 'Assets/scss/modules/library-modules/grid-layout-container/grid-layout-container';
+@use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
+@use 'Assets/scss/modules/library-modules/element-positioning/element-positioning';
+@use 'Assets/scss/modules/library-modules/gradient-overlay/gradient-overlay';
+@use 'Assets/scss/modules/library-modules/social-media-share/social-media-share';
+@use 'Assets/scss/modules/library-modules/better-reviews/better-reviews';
+
+.post-info {
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template: 'main' / 1fr;
+	@include grid-layout-container.gridLayoutContainer();
+	@include social-media-share.social-media-share();
+	@include better-reviews.better-reviews();
+	&__post-cover-link {
+		grid-area: unset;
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+		opacity: 0;
+	}
+	&__info-item {
+		@include grid-layout-element.gridLayoutElement();
+		width: 100%;
+		position: relative;
+		&:not(.post-info__cta) {
+			@include core-mixins.textStyle();
+			@include core-mixins.defaultThemeTextColours();
+		}
+	}
+	&__better-reviews {
+		@include grid-layout-element.gridLayoutElement();
+	}
+	&__cta-selection-container {
+		@include grid-layout-element.gridLayoutElement();
+	}
+	&__cta {
+		display: flex;
+	}
+	&__cta-style-post-colour,
+	&__cta-style-post-text-colour-style {
+		padding-block: core-functions.fluidSize(10, 'mobile');
+		padding-inline: core-functions.fluidSize(20, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			padding-block: core-functions.fluidSize(10, 'portrait');
+			padding-inline: core-functions.fluidSize(20, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding-block: core-functions.fluidSize(10, 'desktop');
+			padding-inline: core-functions.fluidSize(20, 'desktop');
+		}
+	}
+	&__cta-style-post-colour {
+		color: var(--post-colour);
+		border: 1px solid var(--post-colour);
+	}
+	&__cta-style-post-text-colour-style {
+		color: var(--post-text-colour-style);
+		border: 1px solid var(--post-text-colour-style);
+	}
+	&__post-link,
+	&__better-reviews {
+		max-width: max-content;
+	}
+	&__gradient-overlay {
+		height: 100%;
+		@include gradient-overlay.gradientOverlay();
+	}
+
+	&__post-tags {
+		pointer-events: none;
+		display: flex;
+		width: auto;
+		@include grid-layout-element.gridLayoutElement();
+	}
+
+	&__post-image-container {
+		display: grid;
+		grid-template: 'main' / 1fr;
+		&--image-accent {
+			position: relative;
+			img,
+			svg {
+				margin: unset;
+				@include element-positioning.elementPositioning();
+			}
+		}
+	}
+
+	&__post__image {
+		display: flex;
+		justify-content: center;
+		margin-inline: auto;
+		grid-area: main;
+		height: auto;
+		aspect-ratio: var(
+			--image-aspect-ratio-mobile,
+			var(--image-aspect-ratio-desktop)
+		);
+		@include grid-layout-element.gridLayoutElement();
+		width: var(--post-image-width-mobile);
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			aspect-ratio: var(--image-aspect-ratio-portrait);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			width: var(--post-image-width-desktop);
+			aspect-ratio: var(--image-aspect-ratio-desktop);
+		}
+	}
+
+	&__post__image {
+		object-fit: var(--image-fit-style);
+		margin: auto;
+	}
+
+	&__global-image {
+		z-index: var(--global-image-zindex);
+		max-width: var(--global-image-max-width);
+		min-height: 100%;
+	}
+	&__global-image__picture {
+		width: var(--global-image-width);
+		display: flex;
+		position: var(--global-image-position);
+		inset: 0;
+	}
+	&__global-image__image {
+		object-fit: var(--global-image-fit-style);
+	}
+
+	&__product-logo {
+		max-width: core-functions.fluidSize(
+			var(--logo-max-width-mobile),
+			'mobile'
+		);
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			max-width: core-functions.fluidSize(
+				var(--logo-max-width-desktop),
+				'desktop'
+			);
+		}
+	}
+	&__person-rating {
+		display: flex;
+		gap: 1em;
+	}
+	&__person-rating-star {
+		--rating-star-colour: gold;
+		width: core-functions.fluidSize(20, 'static');
+	}
+	&__person-questionaire-list {
+		list-style-type: none;
+	}
+	&__person-email {
+		display: flex;
+		gap: 1em;
+	}
+	&__person-email-icon {
+		width: 1em;
+	}
+	&__post-text-alternative-style {
+		width: auto;
+		@include grid-layout-element.gridLayoutElement();
+	}
+
+	@include post-info-extra.additionalStyles();
+}

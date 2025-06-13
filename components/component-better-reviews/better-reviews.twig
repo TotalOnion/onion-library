@@ -1,0 +1,6 @@
+{% set horizontalAlignment = '--horizontal-alignment: ' ~ fields.horizontal_alignment|ru ~ ';' %}
+{% set elementStyles = horizontalAlignment %}
+
+<div class="{{blockClassName}}__better-reviews {{blockClassName}}__info-item" style="{{elementStyles}}">
+	{{function( 'do_shortcode', '[better-reviews post_id=' ~ fields.better_reviews_post ~ ' display="stars,review_count,review_cta"]' )|raw}}
+</div>

@@ -1,0 +1,15 @@
+@mixin additionalStyles() {
+	&__holder {
+		background: #fff;
+	}
+	&__content {
+		p {
+			color: #0c195f;
+		}
+	}
+	&__date,
+	&__time,
+	&__price {
+		font-family: var(--secondary-font-family);
+	}
+}

@@ -1,0 +1,95 @@
+{% set navToggleColour = '--nav-toggle-colour: ' ~ fields.nav_menu_slide_in_panel.nav_menu_toggle_colour|default('black') ~ ';' %}
+{% set navTogglePadding = '--nav-toggle-padding: ' ~ fields.nav_menu_slide_in_panel.nav_menu_toggle_padding|default('20') ~ ';' %}
+{% set navBackgroundColourMobile = '--nav-background-colour-mobile: ' ~ fields.nav_menu_slide_in_panel.panel_background_colour|default('white') ~ ';' %}
+{% set navBackgroundColourDesktop = '--nav-background-colour-desktop: ' ~ fields.nav_menu_slide_in_panel.panel_background_colour|default('white') ~ ';' %}
+{% set headerLogo = get_image(options.header_logo_desktop.id) %}
+{% set panelLogo = fields.nav_menu_slide_in_panel.enable_panel_site_logo %}
+
+{% set menu = attribute(nav_menus, fields.nav_menu_slide_in_panel.menu|ru|replace({'-':'_'})) %}
+
+{% set componentStyles = navToggleColour ~ navTogglePadding ~ navBackgroundColourMobile ~ navBackgroundColourDesktop %}
+
+<div class="nav-menu-slide-in-panel" style="{{componentStyles}}" data-componentkey="nav-menu-slide-in-panel">
+
+	<div class="nav-menu-slide-in-panel__hamburger-wrapper">
+		<div class="nav-menu-slide-in-panel__hamburger">
+			<div class="nav-menu-slide-in-panel__hamburger-bar a"></div>
+			<div class="nav-menu-slide-in-panel__hamburger-bar b"></div>
+			<div class="nav-menu-slide-in-panel__hamburger-bar c"></div>
+		</div>
+	</div>
+
+	<div class="nav-menu-slide-in-panel__nav-wrapper">
+		{% if nav_menus is defined and nav_menus is not empty %}
+			<nav class="nav-menu-slide-in-panel__nav">
+				{% if headerLogo is defined and panelLogo %}
+					<a href="/{{ market_slug }}/" class="nav-menu-slide-in-panel__panel-site-logo-link">
+						<img class="nav-menu-slide-in-panel__panel-site-logo style-svg" src="{{headerLogo.src}}" alt="{{headerLogo.alt|default('site-logo-panel')}}" width="{{headerLogo.width|default(200)}}" height="{{headerLogo.height|default(100)}}">
+
+					</a>
+				{% endif %}
+
+				<div class="nav-menu-slide-in-panel__nav-interactions">
+					<div class="nav-menu-slide-in-panel__nav-interactions-cross">
+						<div class="nav-menu-slide-in-panel__nav-interactions-cross-bar a"></div>
+						<div class="nav-menu-slide-in-panel__nav-interactions-cross-bar b"></div>
+					</div>
+				</div>
+
+				{% if menu.items is defined and menu.items is not empty %}
+					<ul class="nav-menu-slide-in-panel__nav-container">
+						{% for item in menu.items %}
+							<li class="{{ item.class }} nav-menu-slide-in-panel__nav-item">
+								<div class="{{ item.class }} nav-menu-slide-in-panel__nav-item-main">
+									<a class="{{ item.class }} nav-menu-slide-in-panel__nav-item-link" href="{{ item.link }}">
+										<span class="nav-menu-slide-in-panel__nav-item-text">{{ item.title }}</span>
+									</a>
+									{% if item.children is defined and item.children is not empty %}
+										<div class="{{ item.class }} nav-menu-slide-in-panel__nav-item-drop-down"></div>
+									{% endif %}
+								</div>
+
+								{% if item.children is defined and item.children is not empty %}
+									<div class="nav-menu-slide-in-panel__sub-nav">
+										<ul class="nav-menu-slide-in-panel__sub-nav-container">
+											{% for child in item.children %}
+												<li class="{{ child.class }} nav-menu-slide-in-panel__nav-item nav-menu-slide-in-panel__sub-nav-item">
+													<div class="{{ item.class }} nav-menu-slide-in-panel__sub-nav-item-main">
+														<a class="nav-menu-slide-in-panel__link nav-menu-slide-in-panel__sub-nav-link" href="{{ child.url }}">
+															<span class="nav-menu-slide-in-panel__sub-nav-item-text">{{ child.name }}</span>
+														</a>
+														{% if child.children is defined and child.children is not empty %}
+															<div class="{{ item.class }} nav-menu-slide-in-panel__nav-item-drop-down-small"></div>
+														{% endif %}
+													</div>
+
+													{% if child.children is defined and child.children is not empty %}
+														<div class="nav-menu-slide-in-panel__sub-sub-nav">
+															<ul class="nav-menu-slide-in-panel__sub-sub-nav-container">
+																{% for sub_child in child.children %}
+																	<li class="{{ sub_child.class }} nav-menu-slide-in-panel__item nav-menu-slide-in-panel__sub-sub-nav-item">
+																		<a class="nav-menu-slide-in-panel__link nav-menu-slide-in-panel__sub-sub-nav-link" href="{{ sub_child.url }}">
+																			<span class="nav-menu-slide-in-panel__sub-sub-nav-item-text">{{ sub_child.name }}</span>
+																		</a>
+																	</li>
+																{% endfor %}
+															</ul>
+														</div>
+													{% endif %}
+
+												</li>
+											{% endfor %}
+										</ul>
+									</div>
+								{% endif %}
+							</li>
+						{% endfor %}
+						<li class="{{ item.class }} nav-menu-slide-in-panel__nav-item nav-menu-slide-in-panel__nav-item-cta">
+						{{ include('components/cta-selection.twig', { fields: fields.nav_menu_slide_in_panel, block, blockClassName: 'nav-menu-slide-in-panel', buttonStyle: playBtnStyle }, with_context = false) }}
+						</li>
+					</ul>
+				{% endif %}
+			</nav>
+		{% endif %}
+	</div>
+</div>

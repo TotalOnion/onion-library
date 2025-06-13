@@ -1,0 +1,7 @@
+{% if fields.code_block %}
+	<div class="{{blockClassName}}__code-block-container">
+		<pre>
+            <code class="{{blockClassName}}__code-block-code">{{fields.code_block|e}}</code>
+        </pre>
+	</div>
+{% endif %}

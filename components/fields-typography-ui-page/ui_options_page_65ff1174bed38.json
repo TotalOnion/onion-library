@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_65ff1174bed38",
+    "title": "Typography",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Typography",
+    "menu_slug": "typography",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Typography",
+    "position": "",
+    "redirect": 0,
+    "description": "Typography",
+    "update_button": "Update Typography",
+    "updated_message": "Typography Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1711215035
+}

@@ -1,0 +1,18 @@
+{% for item in options.global_preload_options.dns_prefetch_items %}
+	{% if item.url is not empty %}
+		<link rel="dns-prefetch" href="{{item.url}}" crossorigin/>
+	{% endif %}
+{% endfor %}
+
+{% for item in options.global_preload_options.preconnect_items %}
+	{% if item.url is not empty %}
+		<link rel="preconnect" href="{{item.url}}"/>
+	{% endif %}
+{% endfor %}
+
+{% for item in options.global_preload_options.preload_items %}
+	{% if item.url is not empty %}
+	{% set type = item.type|ru %}
+		<link rel="preload" href="{{item.url}}" as={{type}} {{type == 'font' or type == 'fetch' ? 'crossorigin' : null}}/>
+	{% endif %}
+{% endfor %}

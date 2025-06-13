@@ -1,0 +1,7 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set textStyle = include('components/text-style.twig', {field, post}) %}
+{% set elementStyles = gridLayoutElement ~ textStyle %}
+
+
+<{{field.text_style.text_element_type|ru}} class="{{blockClassName}}__info-item {{blockClassName}}__product-whisky-type {{field.text_style.typography_style|ru}}" style="{{elementStyles}}">
+	{{field.enable_label ? '<span class="' ~ blockClassName ~ '__product-whisky-type-label">' ~ field.label ~ ' </span>'}}<span data-pattern-post-info="product_whisky_type">{{post.product_whisky_type}}</span></{{field.text_style.text_element_type|ru}}>

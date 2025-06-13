@@ -1,0 +1,38 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+
+.section-separator {
+	@include core-mixins.responsiveShowHide(grid);
+
+	&__separator-image {
+		width: 100%;
+		position: absolute;
+		display: block;
+		translate: 0 -50%;
+		height: auto;
+		top: 0;
+	}
+
+	&__secondary-image {
+		position: absolute;
+		place-self: center var(--horizontal-position);
+		translate: var(--horizontal-offset) var(--vertical-offset);
+		top: 0;
+		max-width: core-functions.fluidSize(var(--max-width-mobile), 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			max-width: core-functions.fluidSize(
+				var(--max-width-portrait),
+				'portrait'
+			);
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				max-width: core-functions.fluidSize(
+					var(--max-width-desktop),
+					'desktop'
+				);
+			}
+		}
+	}
+}

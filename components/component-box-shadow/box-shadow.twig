@@ -1,0 +1,7 @@
+{% set boxShadowStyle = "--box-shadow-offset-x:" ~ 0 ~ "; --box-shadow-offset-y: " ~ 0 ~ "; --box-shadow-blur: " ~ 0 ~ ";" ~ "--box-shadow-spread: " ~ 0 ~ ";" ~ "--box-shadow-colour: " ~ unset ~ ";" %}
+
+{% if fields.enable_box_shadow %}
+	{% set boxShadowStyle = "--box-shadow-offset-x:" ~ (fields.box_shadow_horizontal_offset|default(0)) ~ "; --box-shadow-offset-y: " ~ (fields.box_shadow_vertical_offset|default(0)) ~ "; --box-shadow-blur: " ~ (fields.box_shadow_blur|default(0)) ~ ";" ~ "--box-shadow-spread: " ~ (fields.box_shadow_spread|default(0)) ~ ";" ~ "--box-shadow-colour: " ~ (fields.box_shadow_colour|default("#000000")) ~ ";" %}
+{% endif %}
+
+{{boxShadowStyle}}

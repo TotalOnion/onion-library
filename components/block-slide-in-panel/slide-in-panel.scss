@@ -1,0 +1,40 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/theme/buttons';
+
+.slide-in-panel {
+	display: grid;
+	&.loaded {
+		display: contents;
+	}
+	.slide-in-panel__trigger {
+		position: fixed;
+		right: 0;
+		bottom: 5%;
+		z-index: 20;
+		transition: 0.3s ease-in-out;
+		transform: translateX(0);
+		&--hidden {
+			transform: translateX(100%);
+		}
+	}
+	&__panel {
+		z-index: 20;
+		background-color: var(--panel-background-colour);
+		position: fixed;
+		right: 0;
+		bottom: 5%;
+		transition: 0.3s ease-in-out;
+		transform: translateX(100%);
+		&--visible {
+			transform: translateX(0);
+		}
+	}
+	&__close-button {
+		@include buttons.closeButton();
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(0%, -50%);
+	}
+}

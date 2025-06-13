@@ -1,0 +1,83 @@
+{
+    "key": "group_6511f390d8357",
+    "title": "Component: Typography style select",
+    "fields": [
+        {
+            "key": "field_6511f39151c13",
+            "label": "Typography style",
+            "name": "typography_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__h1-l-sizing": "X Large",
+                "__h1-sizing": "Large",
+                "__h2-sizing": "Medium",
+                "__h3-sizing": "Small",
+                "__h4-sizing": "X Small",
+                "__h5-sizing": "XX Small",
+                "__h6-sizing": "XXX Small",
+                "__sh1-sizing": "Sub-heading Large",
+                "__sh2-sizing": "Sub-heading Medium",
+                "__sh3-sizing": "Sub-heading Small",
+                "__sh4-sizing": "Sub-heading X Small",
+                "__sh5-sizing": "Sub-heading XX Small",
+                "__sh6-sizing": "Sub-heading XXX Small",
+                "__p-l-sizing": "Paragraph L",
+                "__p-sizing": "Paragraph",
+                "__p-s-sizing": "Paragraph S",
+                "__p-xs-sizing": "Paragraph XS",
+                "__p-xxs-sizing": "Paragraph XXS",
+                "__p-xxxs-sizing": "Paragraph XXXS"
+            },
+            "default_value": "__p-sizing",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "localization",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746891446
+}

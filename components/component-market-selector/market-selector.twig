@@ -1,0 +1,16 @@
+{% set marketCode = site.language|lower|replace({"_" : "-"}) %}
+
+<div class="site-footer__market-selector market-selector">
+	<div class="site-footer__market-selector market-selector">
+		<button class="market current markets-menu markets-menu-toggle site-footer cmpl-cta-style-{{ fields.cta_style|ru }}" data-lang="{{languages[site.language].language_code}}">
+			{% set icon = options.theme_cta_icons.cta_market_selector_icon %}
+			{{icon ? '<span class="' ~ blockClassName|default('default-class') ~ '__icon-market-selector"><img src="' ~ icon ~ '"></span>' : ''}}
+			<span class="market__name">
+				{{languages[marketCode].native_name|default('Market Selector')}}
+			</span>
+			{% if languages[marketCode].country_flag_url %}
+				<img class="market__flag" loading="lazy" src="{{languages[marketCode].country_flag_url}}" alt="{{languages.0.translated_name}}-flag" width="21" height="15">
+			{% endif %}
+		</button>
+	</div>
+</div>

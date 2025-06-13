@@ -1,0 +1,887 @@
+{
+    "key": "group_6258a8ba5e629",
+    "title": "Component: Video standard - Library",
+    "fields": [
+        {
+            "key": "field_6258a8d23dbcf",
+            "label": "Enable video",
+            "name": "enable_video",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "style": ""
+        },
+        {
+            "key": "field_6258a8f13dbd0",
+            "label": "Video Type",
+            "name": "video_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "__upload": "Wordpress Upload",
+                "__youtube": "Youtube",
+                "__vimeo": "Vimeo"
+            },
+            "default_value": "__upload",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_6258a92c3dbd1",
+            "label": "Desktop video",
+            "name": "video_desktop",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "uploader": "",
+            "preview_style": "default",
+            "placeholder": "Select",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "stylised_button": 0,
+            "file_count": 0,
+            "multiple": 0,
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_6258a9521febf",
+            "label": "Mobile video",
+            "name": "video_mobile",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "uploader": "",
+            "preview_style": "default",
+            "placeholder": "Select",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "stylised_button": 0,
+            "file_count": 0,
+            "multiple": 0,
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_6258a9681fec0",
+            "label": "Youtube",
+            "name": "youtube_embed",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__youtube"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_66ffc05c53321",
+            "label": "Youtube Mobile",
+            "name": "youtube_mobile",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__youtube"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_6258a9851fec1",
+            "label": "Vimeo",
+            "name": "vimeo_embed",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "The Vimeo url should look like: https:\/\/vimeo.com\/XXXXXXX (video ID)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_661e59ae3614b",
+            "label": "Vimeo Mobile",
+            "name": "vimeo_mobile",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Leave blank if not needed.\r\nJust Vimeo Video ID",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_626bfd57aa1be",
+            "label": "Tips:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "- Autoplay is only available if muted = yes.\r\n- Autoplay, fullscreen and play in pop up are exclusive and cannot be enabled at the same time.\r\n- Fullscreen and pop up modal will only work on the front end. In the admin they will play in the preview box as usual.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_63a06c9941176",
+            "label": "Play button alignment",
+            "name": "play_button_alignment",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__youtube"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "__flex-start": "Left",
+                "__center": "Cnt",
+                "__flex-end": "Right"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_63a06c99411b9",
+            "label": "Play button style",
+            "name": "play_button_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__youtube"
+                    },
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "__primary": "Primary",
+                "__secondary": "Secondary",
+                "__tertiary": "Tertiary"
+            },
+            "default_value": "__primary",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_6258a9df297cb",
+            "label": "Controls",
+            "name": "controls",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__youtube"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6258a9f3297cc",
+            "label": "Loop",
+            "name": "loop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "style": ""
+        },
+        {
+            "key": "field_6258aa2a297ce",
+            "label": "Muted",
+            "name": "muted",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__youtube"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6258a9c62cb31",
+            "label": "Desktop Autoplay",
+            "name": "autoplay",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258aa2a297ce",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258a99c1fec2",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258aa0c297cd",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_66fe70bf92e6c",
+            "label": "Mobile Autoplay",
+            "name": "mobile_autoplay",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258aa2a297ce",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6258a99c1fec2",
+            "label": "Play in pop up modal",
+            "name": "modal",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258aa0c297cd",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258a9c62cb31",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "style": ""
+        },
+        {
+            "key": "field_62cecfc8d1214",
+            "label": "Lock video aspect to image",
+            "name": "lock_video_aspect_to_image",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This will make the video fill the space created by the image to avoid the block changing shape when you play the video. Only enable this if you have added an image to the block.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "style": ""
+        },
+        {
+            "key": "field_62cedc9dad10d",
+            "label": "Set video to cover",
+            "name": "set_video_to_cover",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This will zoom the video so that it covers any black space. You will lose some video content from the sides but it can look more seamless.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_62cecfc8d1214",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_65ce30f36b90b",
+            "label": "Enable Text",
+            "name": "enable_text",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_65ce2f2e15ff0",
+            "label": "Play Button Text",
+            "name": "play_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65ce30f36b90b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_670b8c611d00d",
+            "label": "Child patterns",
+            "name": "child_patterns",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_670b7ac92563c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "localization",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746891449
+}

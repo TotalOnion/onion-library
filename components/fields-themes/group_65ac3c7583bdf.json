@@ -1,0 +1,1086 @@
+{
+    "key": "group_65ac3c7583bdf",
+    "title": "Options: Themes",
+    "fields": [
+        {
+            "key": "field_6395d5ce27744",
+            "label": "Themes",
+            "name": "themes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_repeater_stylised_button": 1,
+            "user_roles": [
+                "administrator"
+            ],
+            "layout": "block",
+            "pagination": 0,
+            "required_message": "",
+            "min": 1,
+            "max": 30,
+            "collapsed": "",
+            "button_label": "Add New Theme",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66102a0f948dc",
+                    "label": "Name",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "parent_repeater": "field_6395d5ce27744",
+                    "selected": 0
+                },
+                {
+                    "key": "field_6395d71027747",
+                    "label": "Theme name",
+                    "name": "theme_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This name will appear in the page theme select dropdown",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "default_value": "Default theme name",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_661029c657911",
+                    "label": "Colours",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "parent_repeater": "field_6395d5ce27744",
+                    "selected": 0
+                },
+                {
+                    "key": "field_64cccc09bb41a",
+                    "label": "Text colours",
+                    "name": "text_colours",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "These are the colour options available in the WYSIWYG text editor (eg in Standard Content)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_repeater_stylised_button": 0,
+                    "layout": "table",
+                    "min": 1,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Text Colour",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_6395d5ce27744",
+                    "sub_fields": [
+                        {
+                            "key": "field_64cccc09bb41b",
+                            "label": "Name",
+                            "name": "name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_64cccc09bb41a"
+                        },
+                        {
+                            "key": "field_64cccc09bb41c",
+                            "label": "Colour",
+                            "name": "colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "#000000",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "parent_repeater": "field_64cccc09bb41a",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        }
+                    ]
+                },
+                {
+                    "key": "field_640636d2fd5d9",
+                    "label": "Theme colours",
+                    "name": "theme_colours",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "These colours are used for all other non text situations, eg. block background colours",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_repeater_stylised_button": 0,
+                    "layout": "table",
+                    "min": 1,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add theme colour",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_6395d5ce27744",
+                    "sub_fields": [
+                        {
+                            "key": "field_640637431894c",
+                            "label": "Name",
+                            "name": "name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_640636d2fd5d9"
+                        },
+                        {
+                            "key": "field_6406374b1894d",
+                            "label": "Theme colour",
+                            "name": "theme_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": 1,
+                            "return_format": "string",
+                            "parent_repeater": "field_640636d2fd5d9",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": true,
+                            "absolute": false,
+                            "input": true,
+                            "allow_null": true,
+                            "theme_colors": false,
+                            "colors": []
+                        }
+                    ]
+                },
+                {
+                    "key": "field_64e2023259f95",
+                    "label": "Theme primary text colour",
+                    "name": "theme_primary_text_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This will be the default text colour in the theme",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#000000",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_64ee01bff0dc5",
+                    "label": "Theme secondary text colour",
+                    "name": "theme_secondary_text_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#000000",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_66102b1a334c9",
+                    "label": "Theme tertiary text colour",
+                    "name": "theme_tertiary_text_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#000000",
+                    "enable_opacity": 0,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_6644bbe7fe96a",
+                    "label": "Theme primary background type",
+                    "name": "theme_primary_background_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "choices": {
+                        "__solid-colour": "Solid Colour",
+                        "__gradient": "Gradient"
+                    },
+                    "default_value": "__solid-colour",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "min": "",
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_64dbe88a43dc1",
+                    "label": "Theme primary background colour",
+                    "name": "theme_primary_background_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This is the default page (body) background colour in the theme",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6644bbe7fe96a",
+                                "operator": "==",
+                                "value": "__solid-colour"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_6644c08fe87c3",
+                    "label": "Theme primary background gradient",
+                    "name": "theme_primary_background_gradient",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "You can use: https:\/\/cssgradient.io\/",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6644bbe7fe96a",
+                                "operator": "==",
+                                "value": "__gradient"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_64ee01cff0dc6",
+                    "label": "Theme secondary background colour",
+                    "name": "theme_secondary_background_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This is the default page (body) background colour in the theme",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_66102b28334ca",
+                    "label": "Theme tertiary background colour",
+                    "name": "theme_tertiary_background_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This is the default page (body) background colour in the theme",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_66b1d0b26b2d4",
+                    "label": "Theme primary accent colour",
+                    "name": "theme_primary_accent_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This is the default page (body) background colour in the theme",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6644bbe7fe96a",
+                                "operator": "==",
+                                "value": "__solid-colour"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_66b1d0c96b2d5",
+                    "label": "Theme secondary accent colour",
+                    "name": "theme_secondary_accent_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This is the default page (body) background colour in the theme",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6644bbe7fe96a",
+                                "operator": "==",
+                                "value": "__solid-colour"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_66b1d0d36b2d6",
+                    "label": "Theme tertiary accent colour",
+                    "name": "theme_tertiary_accent_colour",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "This is the default page (body) background colour in the theme",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6644bbe7fe96a",
+                                "operator": "==",
+                                "value": "__solid-colour"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "default_value": "#FFFFFF",
+                    "enable_opacity": 1,
+                    "return_format": "string",
+                    "display": "default",
+                    "button_label": "Select Color",
+                    "color_picker": 1,
+                    "absolute": 0,
+                    "input": 1,
+                    "allow_null": 1,
+                    "theme_colors": 0,
+                    "colors": [],
+                    "parent_repeater": "field_6395d5ce27744"
+                },
+                {
+                    "key": "field_661029b757910",
+                    "label": "Fonts",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "user_roles": [
+                        "all"
+                    ],
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "parent_repeater": "field_6395d5ce27744",
+                    "selected": 0
+                },
+                {
+                    "key": "field_64e70e65081a9",
+                    "label": "Theme primary font",
+                    "name": "theme_primary_font",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "This font will be assigned to heading elements (h1-h6)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "parent_repeater": "field_6395d5ce27744",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecafce04b6e",
+                            "label": "Font",
+                            "name": "font",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "clone": [
+                                "group_64e627319dd51"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_64ecadc004b01",
+                    "label": "Theme secondary font",
+                    "name": "theme_secondary_font",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "This font will be assigned to paragraph elements (p) as well as the fallback body font",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "parent_repeater": "field_6395d5ce27744",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecaf4bb8fac",
+                            "label": "Primary font select",
+                            "name": "primary_font_select",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "clone": [
+                                "group_64e627319dd51"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_64ecadcb04b02",
+                    "label": "Theme tertiary font",
+                    "name": "theme_tertiary_font",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "This font will be available use in the wysiwyg editor from the formats dropdown menu",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "parent_repeater": "field_6395d5ce27744",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecb0101faf0",
+                            "label": "Font",
+                            "name": "font",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "clone": [
+                                "group_64e627319dd51"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_64ecb0251faf1",
+                    "label": "Theme quaternary font",
+                    "name": "theme_quaternary_font",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "This font will be available use in the wysiwyg editor from the formats dropdown menu",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "parent_repeater": "field_6395d5ce27744",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecb0251faf3",
+                            "label": "Font",
+                            "name": "font",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "clone": [
+                                "group_64e627319dd51"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_65aac767a5986",
+                    "label": "Links",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "parent_repeater": "field_6395d5ce27744",
+                    "selected": 0
+                },
+                {
+                    "key": "field_638e379b13d05",
+                    "label": "Links",
+                    "name": "links",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "layout": "block",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "parent_repeater": "field_6395d5ce27744",
+                    "sub_fields": [
+                        {
+                            "key": "field_638e380a13d09",
+                            "label": "Link colour",
+                            "name": "link_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_638e3a10674f9",
+                            "label": "Link colour hover",
+                            "name": "link_colour_hover",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_638e37ec13d08",
+                            "label": "Link decoration style",
+                            "name": "link_decoration_style",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__none": "None",
+                                "__underline": "underline"
+                            },
+                            "default_value": "__none",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "allow_null": 0,
+                            "ui": 1,
+                            "ajax": 1,
+                            "placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_64e7950e5a584",
+                            "label": "Link decoration colour",
+                            "name": "link_decoration_colour",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "Clear this value if you want to inherit the link colour",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": []
+                        },
+                        {
+                            "key": "field_638e3a1a674fa",
+                            "label": "Link decoration style hover",
+                            "name": "link_decoration_style_hover",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "choices": {
+                                "__none": "None",
+                                "__underline": "underline"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "max": "",
+                            "allow_null": 0,
+                            "ui": 1,
+                            "ajax": 1,
+                            "placeholder": "",
+                            "min": ""
+                        },
+                        {
+                            "key": "field_64e7952e5a585",
+                            "label": "Link decoration colour hover",
+                            "name": "link_decoration_colour_hover",
+                            "aria-label": "",
+                            "type": "color_picker",
+                            "instructions": "Clear this value if you want to inherit the link hover colour",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 1,
+                            "absolute": 0,
+                            "input": 1,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "themes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "translation",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746891792
+}

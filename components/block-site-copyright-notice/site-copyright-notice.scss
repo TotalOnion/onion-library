@@ -1,0 +1,32 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/site-copyright-notice/site-copyright-notice-extra';
+
+.site-copyright-notice {
+	display: grid;
+	grid-template: 'main' /1fr;
+	place-items: center;
+	text-align: center;
+	&__title {
+		font-family: var(--site-copyright-font-family);
+		font-weight: bold;
+		font-size: core-functions.fontSize(
+			var(--site-copyright-font-size-mobile)
+		);
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fontSize(
+				var(--site-copyright-font-size-portrait)
+			);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fontSize(
+				var(--site-copyright-font-size-desktop)
+			);
+		}
+		p {
+			line-height: 135%;
+		}
+	}
+	@include site-copyright-notice-extra.additionalStyles();
+}

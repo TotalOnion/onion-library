@@ -1,0 +1,117 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+
+@mixin animations() {
+	.cmpl-block-animations {
+		--slide-distance-default: 50;
+		@keyframes rotate {
+			from {
+				opacity: 1;
+				rotate: 0deg;
+			}
+			to {
+				opacity: 1;
+				rotate: 360deg;
+			}
+		}
+		@keyframes fade-in {
+			from {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		@keyframes fade-in-left {
+			from {
+				transform: translateX(
+					calc(
+						core-functions.fluidSize(
+							calc(
+								var(
+										--slide-distance,
+										var(--slide-distance-default)
+									) * -1
+							)
+						)
+					)
+				);
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0%);
+				opacity: 1;
+			}
+		}
+		@keyframes fade-in-right {
+			from {
+				transform: translateX(
+					calc(
+						core-functions.fluidSize(
+							var(--slide-distance, var(--slide-distance-default))
+						)
+					)
+				);
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0%);
+				opacity: 1;
+			}
+		}
+		@keyframes fade-in-up {
+			from {
+				transform: translateY(
+					calc(
+						core-functions.fluidSize(
+							var(--slide-distance, var(--slide-distance-default))
+						)
+					)
+				);
+				opacity: 0;
+			}
+			100% {
+				transform: translateY(0%);
+				opacity: 1;
+			}
+		}
+		@keyframes fade-in-down {
+			from {
+				transform: translateY(
+					calc(
+						core-functions.fluidSize(
+							calc(
+								var(
+										--slide-distance,
+										var(--slide-distance-default)
+									) * -1
+							)
+						)
+					)
+				);
+				opacity: 0;
+			}
+			100% {
+				transform: translateY(0%);
+				opacity: 1;
+			}
+		}
+		@keyframes scale-in {
+			from {
+				opacity: 1;
+				scale: 0;
+			}
+			100% {
+				opacity: 1;
+				scale: 1;
+			}
+		}
+	
+		&.loaded {
+			animation: var(--animation-name) var(--animation-duration)
+				var(--animation-delay) var(--animation-easing)
+				var(--animation-repeat) var(--animation-fill-mode)
+				var(--animation-direction);
+		}
+	}
+}

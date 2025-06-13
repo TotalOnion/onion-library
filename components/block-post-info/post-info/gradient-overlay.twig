@@ -1,0 +1,6 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+
+{% set gradientVars =  include('components/gradient-overlay.twig', {fields: field}, with_context="false")  %}
+
+{% set elementStyles = gridLayoutElement %}
+<div class="{{blockClassName}}__info-item {{blockClassName}}__gradient-overlay" style="{{ elementStyles }} {{gradientVars}}"></div>

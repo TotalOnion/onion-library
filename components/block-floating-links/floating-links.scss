@@ -1,0 +1,73 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/floating-links/floating-links-extra';
+
+.floating-links {
+	display: grid;
+	gap: core-functions.fluidSize(18, 'static');
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	width: core-functions.fluidSize(80, 'static');
+	z-index: 9999;
+
+	.wp-admin & {
+		position: static;
+		transform: translateY(0);
+	}
+
+	&--left {
+		left: 0;
+	}
+
+	&--right {
+		right: 0;
+	}
+
+	&__link {
+		background-color: rgba(#f1cbb7, 0.2);
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		color: #fff;
+		display: block;
+		font-size: core-functions.fontSize(14, 'mobile');
+		height: initial;
+		padding: core-functions.fluidSize(19, 'static') core-functions.fluidSize(14, 'static') core-functions.fluidSize(9, 'static');
+		text-align: center;
+		text-transform: none;
+		transition: background-color 0.3s, color 0.3s;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fontSize(14, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fontSize(14, 'desktop');
+		}
+
+		img {
+			filter: invert(0%);
+			transition: filter 0.3s;
+		}
+
+		&:hover {
+			background-color: #f1cbb7;
+			color: #232b68;
+			text-decoration: none;
+
+			img {
+				filter: invert(100%);
+			}
+		}
+	}
+
+	&__icon {
+		height: core-functions.fluidSize(23, 'static');
+		gap: core-functions.fluidSize(8, 'static');
+		margin: 0 0 core-functions.fluidSize(8, 'static');
+	}
+
+	@include floating-links-extra.additionalStyles();
+}

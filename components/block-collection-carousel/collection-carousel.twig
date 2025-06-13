@@ -1,0 +1,87 @@
+{% set blockClassName = "collection-carousel" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+
+
+{% set sectionStyles =  styleEntryPoint %}
+{% set collection = fields.collection %}
+
+
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+
+
+	<div class="swiper-container {{blockClassName}}__left-container">
+		<p class="{{blockClassName}}__inner-text">{{fields.block_description|striptags}}</p>
+
+		<div class="swiper-wrapper {{blockClassName}}__left-wrapper">
+			{% for product in collection %}
+				{% set product = get_post(product) %}
+
+				<div class="swiper-slide {{blockClassName}}__left-slide">
+					<h3 class="{{blockClassName}}__product-title-info">{{product.post_title}}</h3>
+					<p class="{{blockClassName}}__left-text">{{product.post_info_description}}</p>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="{{blockClassName}}__pagination swiper-pagination"></div>
+	</div>
+
+	<div class="swiper-container {{blockClassName}}__right-container">
+		<div class="swiper-wrapper {{blockClassName}}__right-wrapper">
+			{% for product in collection %}
+				{% set product = get_post(product) %}
+
+				{% set productImage = get_image(product.product_image) %}
+				<div class="swiper-slide {{blockClassName}}__right-slide">
+					<div class="{{blockClassName}}__right-inner" style="--slide-product-colour: {{product.product_colour}}">
+						<a href="{{product.link}}" class="{{blockClassName}}__right-slide--link-wrapper collection-item" data-shop="{{product.buy_now_cta|ru}}">
+							<h3 class="{{blockClassName}}__product-title-main">{{product.post_title}}</h3>
+							<img src="{{productImage.src}}" class="{{blockClassName}}__product-image" alt="{{productImage.alt}}">
+						</a>
+
+						{% if product.buy_now_cta is defined and product.buy_now_cta|ru == 'prctb' %}
+							{% if product.product_details.id is defined and product.product_details.id is not empty %}
+								<div class="{{blockClassName}}__buybutton">
+									{% apply shortcodes %}
+									[clicktobuy variant="{{product.product_details.id}}" class="" lang="{{ product.buy_now_ctb_language|slice(2)|default('') }}" 																																																																																																																																																																																																																																											customQueryString="{{ product.buy_now_ctb_custom_query_string }}"]
+									<span>
+										{{ __( 'Where to buy', 'Chivas Theme' ) }}
+									</span>
+									[/clicktobuy]
+									{% endapply %}
+								</div>
+							{% endif %}
+						{% elseif product.buy_now_cta is defined and product.buy_now_cta|ru == 'shopify' %}
+							<div class="{{blockClassName}}__buybutton">
+								{% if product.buy_now_shopify_pim is defined %}
+									<div class="shopify-wrapper shopify-integration has-shop shop-shopify" data-pim="{{ product.buy_now_shopify_pim }}" data-label="{{ __( 'ADD TO CART', 'Global Theme' ) }}"></div>
+								{% endif %}
+								{% if product.buy_now_shopify_engraved_bottle == true and product.buy_now_shopify__engraved_pim is not empty %}
+									<div class="shopify-wrapper shopify-integration has-shop shop-shopify has-price engraved" data-pim="{{ product.buy_now_shopify__engraved_pim }}" data-engraved="true" data-label="{{ __( 'Engraved', 'Global Theme' ) }}"></div>
+								{% endif %}
+							</div>
+						{% elseif product.buy_now_cta is defined and product.buy_now_cta|ru == 'direct_link' %}
+							<div class="{{blockClassName}}__buybutton">
+								{% if product[0].direct_link_url is defined and product[0].direct_link_url is not empty %}
+									<a href={{product[0].direct_link_url}} class="direct-link" {% if product[0].open_in_a_new_tab is defined and product[0].open_in_a_new_tab|ru == 'true' %} target="_blank" {% endif %}>
+										<span class="text-modifier">{{ __( 'Where to buy', 'Chivas Theme' ) }}</span>
+									</a>
+								{% endif %}
+							</div>
+						{% endif %}
+					</div>
+
+
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="{{blockClassName}}__button-next swiper-button-next">
+			{% include "/assets/images/icon/arrow-back.svg" %}
+		</div>
+	</div>
+
+	{{htmlEntryPoint}}</section>

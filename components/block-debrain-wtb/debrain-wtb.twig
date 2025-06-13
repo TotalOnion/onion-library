@@ -1,0 +1,18 @@
+{% set blockClassName = "debrain-wtb" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+
+{% set sectionStyles =  styleEntryPoint %}
+
+{% set post = get_post(fields.debrain_product) %}
+{% set productDebrainSkuId = post.meta('debrain_sku_id') %}
+
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+
+	<wtb-main sku="{{productDebrainSkuId}}"></wtb-main>
+
+	{{htmlEntryPoint}}
+</section>

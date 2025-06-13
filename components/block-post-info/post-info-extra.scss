@@ -1,0 +1,14 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
+@use 'Assets/scss/theme/breakpoints';
+
+@mixin additionalStyles {
+	&:has(.post-info__post-cover-link.post-cover-link-hover-effect) {
+		&:hover {
+			.post-info__info-item {
+				color: red;
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{% set blockClassName = "bambuser-display" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set autoPlay = fields.autoplay|ru %}
+{% set gridMode = fields.mode|ru %}
+{% set workspaceLocation = fields.workspace_location|ru %}
+{% set focusMode = fields.focus_mode|ru %}
+{% set playerFit = fields.player_fit|ru %}
+{% set zoomOnHover = fields.zoom_on_hover|ru %}
+{% set softLimit = fields.soft_limit|ru %}
+
+
+{% set sectionStyles =  styleEntryPoint %}
+{% set playerCornerRadius =  "--bam-player-corner-radius:" ~ fields.player_corner_radius|default('0') ~ "px;" %}
+{% set playlistGap =  "--bam-playlist-gap:" ~ fields.playlist_gap|default('25') ~ "px;" %}
+{% set playerWidth =  "--bam-player-width:" ~ fields.player_width|default('auto') ~ "px;" %}
+{% set playerHeight =  "--bam-player-height:" ~ fields.player_height|default('auto') ~ "px;" %}
+{% set playerOverlayFontFamily =  "--bam-player-overlay-font-family:" ~ fields.player_overlay_font_family|ru|default('sans-serif') ~ ";" %}
+{% set playerOverlayFontWeight =  "--bam-player-overlay-font-weight:" ~ fields.player_overlay_font_weight|default('400') ~ ";" %}
+{% set playerThumbnailSize =  "--bam-player-thumbnail-size:" ~ fields.player_thumbnail_size|default('68') ~ "px;" %}
+{% set playlistCarouselCornerRadius =  "--bam-playlist-carousel-corner-radius:" ~ fields.playlist_carousel_corner_radius|default('0') ~ "px;" %}
+{% set playerPlaceholederColor =  "--bam-player-placeholder-color:" ~ fields.player_placeholder_color|default('#EEE')~ ";" %}
+{% set bambuserStyles = playerCornerRadius ~ playerWidth ~ playerHeight ~ playerOverlayFontFamily ~ playerOverlayFontWeight ~ playerThumbnailSize ~ playlistCarouselCornerRadius ~ playerPlaceholederColor ~ playlistGap %}
+
+{{previewEntryPoint}}
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		/* {{sectionStyles}} */
+		{{bambuserStyles}}
+	}
+</style>
+
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-location="{{workspaceLocation}}" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}" style="{{sectionStyles}}">
+
+
+	<bam-playlist org-id="{{fields.org_id}}" autoplay="{{autoPlay}}" mode="{{gridMode}}" focusmode="{{focusMode}}" playerfit="{{playerFit}}" zoomonhover="{{zoomOnHover}}" softlimit="{{softLimit}}"></bam-playlist>
+
+
+	{{htmlEntryPoint}}
+</section>

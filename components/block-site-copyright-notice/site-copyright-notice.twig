@@ -1,0 +1,26 @@
+{% set blockClassName = "site-copyright-notice" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+
+{% set siteCopyrightFontSizeDesktop = '--site-copyright-font-size-desktop: ' ~ fields.site_copyright_font_size_desktop ~ ';' %}
+{% set siteCopyrightFontSizePortrait = '--site-copyright-font-size-portrait: ' ~ fields.site_copyright_font_size_portrait ~ ';'%}
+{% set siteCopyrightFontSizeMobile = '--site-copyright-font-size-mobile: ' ~ fields.site_copyright_font_size_mobile ~ ';' %}
+
+
+{% set sectionStyles =  styleEntryPoint ~ siteCopyrightFontSizeDesktop ~ siteCopyrightFontSizePortrait ~ siteCopyrightFontSizeMobile %}
+
+
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+	{% if fields.enable_site_copyright_notice %}
+		<div class="{{blockClassName}}__title">
+			{{market_settings.site_copyright_notice|default('Pernod Ricard 2024')}}</div>
+	{% endif %}
+	{{htmlEntryPoint}}
+</section>

@@ -1,0 +1,114 @@
+{% if fields.accent_image_v2.enable_accent_image_v2 %}
+    {% for image in fields.accent_image_v2.accent_images %}
+        {% set accentImage = get_image(image.accent_image_v2_image) %}
+        {% set rotationDesktop = image.desktop_positioning.image_rotation_desktop|default(0) %}
+        {% set rotationMobile = image.mobile_positioning.image_rotation_mobile|default(rotationDesktop) %}
+        {% set opacity = image.accent_image_opacity|default(1) %}
+        {% set borderRadius = image.accent_image_border_radius|default('0px') %}
+        {% set zIndex = image.accent_z_index %}
+        {% set mobileSettings = image.mobile_positioning %}
+        {% set oneHundredWidth = image.set_width_and_height_to_100 %}
+        {% set imageFitStyle = image.image_fit_style|ru %}
+        {% if image.use_desktop_positioning_for_mobile %}
+            {% set mobileSettings = image.desktop_positioning %}
+        {% endif %}
+        {% set mobilePositioning = mobileSettings.horizontal_offset ~ '% ' ~ mobileSettings.vertical_offset ~ '%' %}
+        {% set desktopPositioning = image.desktop_positioning.horizontal_offset ~ '% ' ~ image.desktop_positioning.vertical_offset ~ '%' %}
+        {% set desktopWidth = 'calc(' ~ image.desktop_accent_image_width ~ '/ var(--desktop-design-reference) * var(--screen-width-desktop))' %}
+        {% set mobileWidth = 'calc(' ~ image.mobile_accent_image_width ~ '/ var(--mobile-design-reference) * var(--screen-width-mobile))' %}
+        {% if oneHundredWidth %}
+            {% set desktopWidth = '100%' %}
+            {% set mobileWidth = '100%' %}
+        {% endif %}
+        {% set accentImageContainerElement = 'div' %}
+        {% set accentImageCtaType = image.accent_image_cta_type|ru %}
+        {% if image.enable_accent_image_cta %}
+            {% if image.accent_image_cta_type|ru == 'link' %}
+                {% set accentImageContainerElement = 'a' %}
+            {% endif %}
+        {% endif %}
+		{% set suffix = block.id ~ '-' ~ loop.index %}
+		{% if image.animations.enable_animations %}
+			{{include('components/animations-style.twig', { fields: image, suffix }, with_context = false)}}
+		{% endif %}
+		
+        <style>
+		.loaded .{{block.id}}-{{loop.index}}.{{blockClassName}}__accent-image {
+			{{include('components/animations.twig', { fields: image, block: block, blockClassName: blockClassName, suffix }, with_context = false)}}
+			/* animation: var(--animation-name) var(--animation-duration)
+				var(--animation-delay) var(--animation-easing)
+				var(--animation-repeat) var(--animation-fill-mode)
+				var(--animation-direction); */
+		}
+		.{{block.id}}-{{loop.index}}.{{blockClassName}}__accent-image {
+			z-index: {{zIndex}};
+			grid-area: main;
+			pointer-events: {{image.enable_accent_image_cta ? 'all' : 'none'}};
+			position: absolute;
+			place-self: {{mobileSettings.vertical_snap|ru}}
+			{{mobileSettings.horizontal_snap|ru}};
+			width: {{mobileWidth}};
+			height: {{mobileWidth}};
+			translate: {{mobilePositioning}};
+		}
+	
+		.{{block.id}}-{{loop.index}}.{{blockClassName}}__accent-image .{{blockClassName}}__image-element.element {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			object-fit: {{imageFitStyle}};
+			border-radius: {{borderRadius}};
+			border: 0 solid transparent;
+			opacity: {{opacity}};
+			rotate: {{rotationMobile ~ 'deg'}};
+		}
+
+		.{{blockClassName}}__image-number {
+			z-index: 99;
+			position: absolute;
+			font-size: 40px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-shadow: 1px 1px 1px blue;
+		}
+
+		@media screen and (min-width: 768px) {
+			.{{block.id}}-{{loop.index}}.{{blockClassName}}__accent-image {
+				place-self: {{image.desktop_positioning.vertical_snap|ru}}
+				{{image.desktop_positioning.horizontal_snap|ru}};
+				width: {{desktopWidth}};
+				height: {{desktopWidth}};
+				translate: {{desktopPositioning}};
+			}
+			.{{block.id}}-{{loop.index}}.{{blockClassName}}__accent-image .{{blockClassName}}__image-element.element {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				object-fit: {{imageFitStyle}};
+				border-radius: {{borderRadius}};
+				border: 0 solid transparent;
+				opacity: {{opacity}};
+				rotate: {{rotationDesktop ~ 'deg'}};
+			}
+		}
+		</style>
+			<{{accentImageContainerElement}}
+			{{accentImageCtaType == 'link' ? 'href="' ~ image.accent_image_link.url ~ '" ' ~ 'target="' ~ image.accent_image_link.target ~ '" ' : ''}}
+            class="{{block.id}}-{{ loop.index }} {{blockClassName}}__accent-image">
+            <img
+                class="{{block.id}}-{{ loop.index }} {{blockClassName}}__image-element element"
+                src="{{ accentImage.src }}"
+                width="{{ accentImage.width }}"
+                height="{{ accentImage.height }}"
+                alt="{{ accentImage.alt }}"
+				loading="lazy"
+            />
+			{% if fields.accent_image_v2.show_image_number and is_preview%}
+				<div class="{{blockClassName}}__image-number">{{ loop.index }}</div>
+			{% endif %}
+
+        </{{accentImageContainerElement}}>
+    {% endfor %}
+{% endif %}

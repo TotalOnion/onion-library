@@ -1,0 +1,8 @@
+{% set mainBgImage = options.main_container_background_image %}
+{% if mainBgImage %}
+	{% set pageBgImageName = 'main-container-background-image' %}
+	{% set imageFields = [] %}
+	{% set imageFields = imageFields|merge({'enable_image' : true}) %}
+	{% set imageFields = imageFields|merge({'desktop_image' : mainBgImage}) %}
+	{{ include('components/responsive-image.twig', {fields : imageFields, block : block, blockClassName : pageBgImageName}, with_context = false) }}
+{% endif %}

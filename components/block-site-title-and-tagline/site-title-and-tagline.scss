@@ -1,0 +1,19 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/block-settings/block-settings';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/site-title-and-tagline/site-title-and-tagline-extra';
+
+.site-title-and-tagline {
+	display: grid;
+	grid-template: 'main' /1fr;
+	place-items: center;
+	text-align: center;
+	&__title {
+		font-weight: bold;
+	}
+	&__tagline {
+		font-weight: bold;
+	}
+	@include site-title-and-tagline-extra.additionalStyles();
+}

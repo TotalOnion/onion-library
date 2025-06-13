@@ -1,0 +1,216 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/event-details-banner/event-details-banner-extra';
+
+.event-details-banner {
+	margin-block: core-functions.fluidSize(25, 'mobile');
+
+	@include core-mixins.device(breakpoints.$tabPortrait) {
+		margin-block: core-functions.fluidSize(25, 'portrait');
+	}
+
+	@include core-mixins.device(breakpoints.$tabLandscape) {
+		margin-block: core-functions.fluidSize(25, 'desktop');
+	}
+
+	&__holder {
+		background: var(--background-colour);
+		border-radius: 6px;
+		overflow: hidden;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			display: flex;
+		}
+	}
+
+	&__image {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		border-radius: 6px;
+		height: core-functions.fluidSize(200, 'mobile');
+		width: auto;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			border-top-left-radius: 6px;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 0;
+			height: auto;
+			width: 30%;
+		}
+
+		&--spacing {
+			border-radius: 6px;
+			margin: core-functions.fluidSize(15, 'mobile');
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				margin: core-functions.fluidSize(15, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				margin: core-functions.fluidSize(15, 'desktop');
+			}
+		}
+	}
+
+	&__content {
+		padding: core-functions.fluidSize(30, 'mobile');
+		width: 100%;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			padding: core-functions.fluidSize(50, 'portrait');
+			width: 70%;
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding: core-functions.fluidSize(50, 'desktop');
+		}
+
+		p {
+			font-size: core-functions.fontSize(17, 'mobile');
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				font-size: core-functions.fontSize(17, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				font-size: core-functions.fontSize(17, 'desktop');
+			}
+		}
+	}
+
+	&__title {
+		color: var(--font-colour);
+		font-size: core-functions.fontSize(34, 'mobile');
+		margin-bottom: core-functions.fluidSize(35, 'mobile');
+		text-transform: uppercase;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fontSize(34, 'portrait');
+			margin-bottom: core-functions.fluidSize(35, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fontSize(34, 'desktop');
+			margin-bottom: core-functions.fluidSize(35, 'desktop');
+		}
+	}
+
+	&__subtitle {
+		color: var(--font-colour);
+		font-size: core-functions.fontSize(14, 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fontSize(14, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fontSize(14, 'desktop');
+		}
+	}
+
+	&__meta {
+		display: flex;
+		flex-wrap: wrap;
+		grid-row: 1;
+		gap: core-functions.fluidSize(10, 'mobile');
+		margin-top: core-functions.fluidSize(35, 'mobile');
+		justify-content: flex-start;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			gap: core-functions.fluidSize(35, 'portrait');
+			margin-top: core-functions.fluidSize(35, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			gap: core-functions.fluidSize(35, 'desktop');
+			margin-top: core-functions.fluidSize(35, 'desktop');
+		}
+	}
+
+	&__date,
+	&__time,
+	&__price {
+		align-items: center;
+		color: var(--font-colour);
+		display: flex;
+		font-size: core-functions.fontSize(14, 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fontSize(25, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fontSize(25, 'desktop');
+		}
+
+		svg {
+			margin-right: core-functions.fluidSize(12, 'mobile');
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				margin-right: core-functions.fluidSize(12, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				margin-right: core-functions.fluidSize(12, 'desktop');
+			}
+
+			g {
+				fill: var(--button-background-colour);
+			}
+		}
+	}
+
+	&__button {
+		display: flex;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			margin: 0 0 0 auto;
+		}
+	}
+
+	&__link {
+		background: var(--button-background-colour);
+		color: var(--button-text-colour);
+		margin: 0 auto 0 0;
+		min-width: max-content;
+		border-radius: 12px;
+		padding: core-functions.fluidSize(15, 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			padding: core-functions.fluidSize(20, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding: core-functions.fluidSize(20, 'desktop');
+		}
+
+		text-transform: uppercase;
+
+		&:hover {
+			color: var(--button-text-colour);
+			text-decoration: none;
+		}
+
+		svg {
+			margin-left: core-functions.fluidSize(15, 'mobile');
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				margin-left: core-functions.fluidSize(70, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				margin-left: core-functions.fluidSize(70, 'desktop');
+			}
+
+			path {
+				fill: var(--button-text-colour);
+			}
+		}
+	}
+
+	@include event-details-banner-extra.additionalStyles();
+}

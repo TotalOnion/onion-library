@@ -1,0 +1,13 @@
+// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/nav-menu-slide-in-panel/nav-menu-slide-in-panel';
+@use 'Assets/scss/blocks/nav-menu-container/nav-menu-container-extra';
+@use 'Assets/scss/modules/library-modules/classic-nav-items-center/classic-nav-items-center';
+
+.nav-menu-container {
+	pointer-events: all;
+	@include nav-menu-slide-in-panel.navMenuSlideInPanel();
+	@include nav-menu-container-extra.additionalStyles();
+	@include classic-nav-items-center.classicNavItemsCenter();
+}

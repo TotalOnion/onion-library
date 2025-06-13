@@ -1,0 +1,5 @@
+<style>
+{% if fields.animations.animation_name|ru == 'custom' %}
+	{{'@keyframes custom-' ~ suffix ~ ' ' ~ fields.animations.custom_animation|striptags()}}
+{% endif %}
+</style>

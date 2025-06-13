@@ -1,0 +1,24 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set elementStyles = gridLayoutElement %}
+
+<div class="{{blockClassName}}__person-rating {{blockClassName}}__info-item" style="{{elementStyles}}">
+	{% if post.star_rating > 0  %}
+
+		{% for star in 0..post.star_rating -1  %}
+			<div class="{{blockClassName}}__person-rating-star">
+				<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 19.02">
+					<defs>
+						<style>
+							.d {
+								fill: var(--rating-star-colour);
+							}
+						</style>
+					</defs><g id="a"/><g id="b">
+						<g id="c"><polygon class="d" points="10 15.77 3.82 19.02 5 12.14 0 7.27 6.91 6.26 10 0 13.09 6.26 20 7.27 15 12.14 16.18 19.02 10 15.77"/></g>
+					</g>
+				</svg>
+			</div>
+		{% endfor %}
+	{% endif %}
+
+</div>

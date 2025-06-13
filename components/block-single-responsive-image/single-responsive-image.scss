@@ -1,0 +1,9 @@
+@use 'Assets/scss/modules/library-modules/responsive-image/responsive-image';
+@use 'Assets/scss/blocks/single-responsive-image/single-responsive-image-extra';
+@use 'Assets/scss/modules/library-modules/cover-link/cover-link';
+
+.single-responsive-image {
+	@include responsive-image.responsiveImage();
+	@include cover-link.coverLink();
+	@include single-responsive-image-extra.additionalStyles();
+}

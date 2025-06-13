@@ -1,0 +1,76 @@
+{% set enableScrollingPosts = fields.scrolling_posts.enable_scrolling_posts %}
+{% if enableScrollingPosts %}
+
+	{% set bannerSpeed = 'data-speed=' ~ fields.scrolling_posts.scrolling_posts_speed ~ ' ' %}
+	{% set scrollingDirection = 'data-direction=' ~ fields.scrolling_posts.scrolling_direction|ru ~ ' ' %}
+	{% set scrollingPostsPerPage = '--scrolling-posts-per-page: ' ~ fields.posts_per_page %}
+
+	{% set startPositionLeftToRight = '--start-position-left-to-right: ' ~  (fields.scrolling_posts.scrolling_direction|ru == 'left-to-right' ?  '-100%' : 'unset') ~ ';' %}
+	{% set startPositionRightToLeft = '--start-position-right-to-left: ' ~  (fields.scrolling_posts.scrolling_direction|ru == 'left-to-right' ?  'unset' : '-100%') ~ ';' %}
+
+	{% set imageObjectFit = '--image-object-fit: ' ~ fields.scrolling_posts.object_fit|ru ~ ';' %}
+	{% set imageAspectRatio = '--image-aspect-ratio: ' ~ fields.scrolling_posts.aspect_ratio ~ ';' %}
+	{% set scrollingPostsSpeed = '--scrolling_posts_speed: ' ~ fields.scrolling_posts.scrolling_posts_speed ~ 's;' %}
+	{% if fields.scrolling_posts.image_width_type|ru == 'auto' %}
+		{% set imageWdithValueDesktop = 'auto' %}
+		{% set imageWdithValueMobile = 'auto' %}
+	{% else %}
+		{% set imageWdithValueDesktop = fields.scrolling_posts.image_width_desktop %}
+		{% set imageWdithValueMobile = fields.scrolling_posts.image_width_mobile %}
+	{% endif %}
+
+	{% set imageWidthMobile = '--image-width-mobile: ' ~ imageWdithValueMobile ~ ';' %}
+	{% set imageWidthDesktop = '--image-width-desktop: ' ~ imageWdithValueDesktop ~ ';' %}
+
+	{% set imageWidth = '--image-aspect-ratio: ' ~ fields.scrolling_posts.aspect_ratio ~ ';' %}
+	{% set itemGapDesktop = '--item-gap-desktop:' ~ fields.scrolling_posts.scrolling_posts_gap_desktop ~ ';' %}
+	{% set itemGapMobile = '--item-gap-mobile:' ~ fields.scrolling_posts.scrolling_posts_gap_mobile ~ ';' %}
+	{% set scrollerStyles =  imageObjectFit ~ imageAspectRatio ~ scrollingPostsSpeed ~ itemGapDesktop ~ itemGapMobile ~ startPositionLeftToRight ~ startPositionRightToLeft ~ imageWidthMobile ~ imageWidthDesktop %}
+
+
+	{% set scrollerAttributes =  bannerSpeed ~ scrollingDirection ~ scrollingPostsPerPage %}
+
+	{% set postType = fields.post_type %}
+	{% set postsPerPage = fields.posts_per_page %}
+	{% set postOrder = fields.post_order %}
+
+	{% set postItems = 
+	get_posts({
+	'post_type' : postType,
+	'posts_per_page' : postsPerPage,
+	'post_status' : 'publish',
+	'order' : postOrder,
+	'lang' : site.language,
+	'suppress_filters' : false,
+	'meta_value' : fields.social_account,
+	})
+
+	%}
+	
+	{% set positionVars = include('components/element-positioning.twig', { fields: fields, block: block, blockClassName, is_preview: is_preview }, with_context = false) %}
+
+	<div class="scrolling-posts" {{ scrollerAttributes }} style="{{scrollerStyles}}">
+		<div class="scrolling-posts__container scrolling-posts{{ fields.scrolling_posts.scrolling_direction }}">
+			{% if postType %}
+				{% for post in postItems %}
+					{% set imageSizes = '(min-width: 1440px) 50vw, (min-width: 768px) 50vw, (min-width: 500px) 50vw, 100vw' %}
+					{% set imageFields = [] %}
+					{% set imageFields = imageFields|merge({'enable_image' : true}) %}
+					{% set imageClassname = 'scrolling-posts' %}
+					{% if postType == 'pr_social_media_item' %}
+						{% set image = post.thumbnail %}
+					{% else %}
+						{% set image = post.meta.post_image %}
+					{% endif %}
+					{% set imageFields = imageFields|merge({'image' : image}) %}
+
+					{{ include('components/single-image.twig', {fields : imageFields, block : block, blockClassName : imageClassname, desktopSizes: imageSizes}, with_context = false) }}
+					{% if postType == 'product' %}
+						<div class="scrolling-posts__age-statement">{{post.meta.product_age_statement}}</div>
+						<div class="scrolling-posts__product-title">{{post.post_title}}</div>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+{% endif %}

@@ -1,0 +1,65 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/social-networks/social-networks-extra';
+
+@mixin socialNetworks() {
+	.social-networks {
+		display: flex;
+		width: 100%;
+		justify-content: var(--alignment-mobile);
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			justify-content: var(--alignment-portrait);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			justify-content: var(--alignment-desktop);
+		}
+		&__inner-container {
+			display: flex;
+			width: max-content;
+			gap: core-functions.fluidSize(var(--gap-mobile), 'mobile');
+			flex-direction: var(--direction-mobile);
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				gap: core-functions.fluidSize(var(--gap-portrait), 'portrait');
+				flex-direction: var(--direction-portrait);
+			}
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				gap: core-functions.fluidSize(var(--gap-desktop), 'desktop');
+				flex-direction: var(--direction-desktop);
+			}
+		}
+
+		&__image {
+			display: block;
+			width: core-functions.fluidSize(var(--width-mobile), 'mobile');
+			height: core-functions.fluidSize(var(--width-mobile), 'mobile');
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				width: core-functions.fluidSize(
+					var(--width-portrait),
+					'portrait'
+				);
+				height: core-functions.fluidSize(
+					var(--width-portrait),
+					'portrait'
+				);
+			}
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				width: core-functions.fluidSize(
+					var(--width-desktop),
+					'desktop'
+				);
+				height: core-functions.fluidSize(
+					var(--width-desktop),
+					'desktop'
+				);
+			}
+		}
+		&__link-container {
+			display: flex;
+			align-items: center;
+			gap: core-functions.fluidSize(15);
+		}
+		@include social-networks-extra.additionalStyles();
+	}
+}

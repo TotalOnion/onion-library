@@ -1,0 +1,132 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-cta/core-cta';
+@use 'Assets/scss/theme/breakpoints';
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+}
+
+.lazy-fade {
+	opacity: 0;
+}
+.loaded:not(.cmpl-block-animations) {
+	opacity: 1;
+}
+
+.js-enabled-hide {
+	display: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	margin: 0; //reset default margin
+	padding: 0; //reset default padding
+	height: auto;
+	min-height: 100vh;
+	position: relative;
+	@include core-mixins.fontSecondary();
+	background: var(--body-background-colour);
+	--default-text-colour-mobile: var(--theme-primary-text-colour);
+	color: var(--default-text-colour-mobile);
+
+	@include core-mixins.device(breakpoints.$tabLandscape) {
+		--default-text-colour-desktop: var(--theme-primary-text-colour);
+		color: var(--default-text-colour-desktop);
+	}
+
+	&.lock-position {
+		@include core-mixins.lockPosition();
+	}
+
+	&.hide-nav {
+		.site-header {
+			display: none;
+		}
+	}
+}
+
+.body-container-background-image,
+.page-container-background-image {
+	&__picture {
+		height: 100%;
+		position: var(--body-background-image-position-type);
+		inset: 0;
+	}
+
+	&__image {
+		height: 100%;
+		object-fit: var(--body-background-image-fit);
+		object-position: var(--body-background-image-position);
+	}
+}
+
+.body-container-background-video {
+	position: fixed;
+	object-fit: cover;
+	inset: 0;
+	width: 100%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+main {
+	height: auto;
+	width: 100%;
+	max-width: var(--global-content-max-width-main);
+	margin-inline: auto;
+	background-image: var(--main-container-background-image);
+	background-repeat: repeat;
+}
+
+header,
+footer,
+section {
+	width: 100%;
+	max-width: 100%;
+}
+.site-footer-block {
+	margin-top: auto;
+}
+.grecaptcha-badge {
+	z-index: 50;
+	bottom: 0 !important;
+}
+
+.evidon-consent-button,
+.evidon-prefdiag-overlay,
+.evidon-banner {
+	color: var(--black);
+	img {
+		width: auto;
+	}
+
+	a {
+		text-decoration: underline;
+		font-size: unset;
+	}
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

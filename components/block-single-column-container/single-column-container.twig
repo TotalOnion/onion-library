@@ -1,0 +1,31 @@
+{% set blockClassName = "single-column-container" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields: fields, block: block, displaytype: displaytype, is_preview: is_preview }, with_context = false) %}
+
+{% set backgroundColour = '--section-background-colour: ' ~ fields.background_colour ~ ';' %}
+
+{% set sectionStyles =  styleEntryPoint ~  backgroundColour %}
+
+{{previewEntryPoint}}
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+
+	<div class="{{blockClassName}}__block-container">
+		{% for section in fields.sections %}
+			{% if block %}
+				{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ loop.index }) %}
+			{% endif %}
+			{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, cta_styles, block, is_preview, current }, with_context = false, ignore_missing = true) }}
+
+		{% endfor %}
+	</div>
+	{{htmlEntryPoint}}
+</section>

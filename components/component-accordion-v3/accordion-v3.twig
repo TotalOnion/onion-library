@@ -1,0 +1,39 @@
+{% set titleColor = '--title-color: ' ~ fields.accordion_title.title_color ~ ';' %}
+{% set textColor = '--text-color: ' ~ fields.accordion_text.text_color ~ ';' %}
+{% set backgroundColor = '--background-color: ' ~ fields.accordion_title.background_color ~ ';' %}
+{% set iconBackgroundColor = '--icon-background-color: ' ~ fields.accordion_title.icon_background_color ~ ';' %}
+{% set textPaddingHorizontal = '--text-padding-horizontal: ' ~ fields.accordion_text.text_padding_horizontal ~ ';' %}
+{% set titleGap = '--title-gap: ' ~ fields.accordion_title.title_gap ~ ';' %}
+{% set enableCustomIcon = fields.accordion_title.enable_custom_icon %}
+{% set imageIcon = get_image(fields.accordion_title.image_icon) %}
+{% set imageIconSize = '--image-icon-size: ' ~ fields.accordion_title.imge_icon_size ~ ';' %}
+{% set imageIconRotationDeg = '--image-icon-rotation-deg: ' ~ fields.accordion_title.image_icon_rotation_deg ~ 'deg;' %}
+
+{% set sectionStyles = titleColor ~ textColor ~ backgroundColor ~ iconBackgroundColor ~ textPaddingHorizontal ~ titleGap ~ imageIconSize ~ imageIconRotationDeg %}
+
+<div {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{ blockClassName }}__accordion-v3" style="{{sectionStyles}}">
+
+	{% for accordion in fields.accordion_content %}
+		<div class="{{ blockClassName }}__accordion-wrapper">
+			<div class="{{ blockClassName }}__accordion-content">
+				<h3 class="{{ blockClassName }}__accordion-question-wrapper">
+					<button class="{{ blockClassName }}__accordion-question {{ fields.accordion_title.title_element_style | ru }} {{ blockClassName }}__accordion-question--{{ fields.icon_horizontal_align|ru }} ">{{ accordion.accordion_title }}
+						{% if enableCustomIcon %}
+							<div class="{{ blockClassName }}__accordion-image-wrapper">
+								<img class="{{ blockClassName }}__accordion-image-icon" src="{{imageIcon.src}}" alt="{{imageIcon.alt}}" width="{{imageIcon.width}}" height="{{imageIcon.height}}">
+							</div>
+						{% else %}
+							<div class="{{ blockClassName }}__accordion-icon">
+								<div class="{{ blockClassName }}__accordion-animation"></div>
+							</div>
+						{% endif %}
+						<div class="{{ blockClassName }}__accordion-answer-wrapper" aria-hidden="true">
+							{{ accordion.accordion_text }}
+						</div>
+
+					</button>
+				</h3>
+			</div>
+		</div>
+	{% endfor %}
+</div>

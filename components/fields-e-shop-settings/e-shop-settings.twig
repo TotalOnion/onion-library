@@ -1,0 +1,69 @@
+{% set eshopSettings = attribute(market_settings, 'e-shop_settings') %}
+{% if eshopSettings.enable_debrain_wtb %}
+    {% if eshopSettings.debrain_wtb_dloc_satellite_id %}
+        <script defer src="{{eshopSettings.debrain_wtb_script}}" data-dloc-satellite-id="{{eshopSettings.debrain_wtb_dloc_satellite_id}}"></script>
+        <script type="text/javascript">
+            (function(){
+                const wtbuyConfig = { debrain_script:"{{eshopSettings.debrain_wtb_script}}", data_dloc_satellite_id:"{{eshopSettings.debrain_wtb_dloc_satellite_id}}"};
+                //localStorage.setItem("wtbuyConfig", JSON.stringify(wtbuyConfig));
+            })();
+        </script>
+    {% endif %}
+    {% if eshopSettings.brand_id is not empty %}
+        <script async src="https://wtb.buyspiritsnow.com/js/sdk.js" brand="{{eshopSettings.brand_id}}"></script>
+    {% endif %}
+
+{% endif %}
+
+{% if eshopSettings.enable_click_to_buy %}
+    <script type="text/javascript">
+        var ctbuyConfig = {"api":"{{eshopSettings.ctb_api_key}}","root":"https:\/\/api.pernod-ricard.io\/v2\/clicktobuy\/"};
+    </script>
+{% endif %}
+
+{% if eshopSettings.enable_shopify %}
+    <script type="text/javascript">
+        var enableShopify = true;
+        localStorage.setItem("enableShopify", JSON.stringify(enableShopify));
+    </script>
+    <div id="cart-strings" class="hide" data-empty-title="Cart is empty" data-shopping-bag-vector="{{ asset('images/icon/shopping-bag.svg') }}" data-close-vector="{{ asset('images/icon/close.svg') }}" data-engraving-heading="{{ __( 'ADD YOUR PERSONALISED ENGRAVING MESSAGE(S):', 'Aberlour Theme' ) }}" data-engraving-instructions="{{__('Please specify the exact wording you would like for your engraved bottle (maximum 30 characters allowed). If you have ordered more than 1 engraved bottle, please list the name of the product + the engraving text for each.', 'Aberlour Theme')}}" data-cart-title="{{ __( 'Shopping bag', 'Aberlour Theme' ) }}" data-total="{{ __( 'Subtotal', 'Aberlour Theme' ) }}" data-notice="{{ __( 'Shipping and discount codes to be added at checkout. Maximum 6 bottles per person per product.', 'Aberlour Theme' ) }}" data-checkout="{{ __( 'Checkout', 'Aberlour Theme' ) }}"></div>
+{% else %}
+    <script type="text/javascript">
+        var enableShopify = false;
+        localStorage.setItem("enableShopify", JSON.stringify(enableShopify));
+    </script>
+{% endif %}
+
+
+{% if eshopSettings.enable_mikmak and eshopSettings.mikmak_brand_id is not empty %}
+    <script>
+    /* Start of Swaven tag */
+    (function(e,d){try{var a=window.swnDataLayer=window.swnDataLayer||{};a.appId=e||a.appId,a.eventBuffer=a.eventBuffer||[],a.loadBuffer=a.loadBuffer||[],a.push=a.push||function(e){a.eventBuffer.push(e)},a.load=a.load||function(e){a.loadBuffer.push(e)},a.dnt=a.dnt!=null?a.dnt:d;var t=document.getElementsByTagName("script")[0],n=document.createElement("script");n.async=!0,n.src="//wtb-tag.mikmak.ai/scripts/"+a.appId+"/tag.min.js",t.parentNode.insertBefore(n,t)}catch(e){console.log(e)}}("{{eshopSettings.mikmak_brand_id}}", false));
+    /* End of Swaven tag */
+    </script>
+
+    {% set product = get_post(eshopSettings.mikmak_global_default_product) %}
+    {% set productEANs = product.meta('mikmak_ean_ids') %}
+    {% set relatedProducts = product.meta('related_products') %}
+    {% set defaultProductEAN = productEANs|split(',') %}
+
+    {% set relatedProductEANs = '' %}
+    {% for post in relatedProducts %}
+        {% set relatedProduct = get_post(post) %}
+        {% set relatedProductEANs = relatedProductEANs ~ ',' ~ relatedProduct.meta('mikmak_ean_ids')|trim(',') %}
+    {% endfor %}
+    {% set relatedProductEANs = relatedProductEANs|trim(',') %}
+
+    {% if productEANs is not empty %}
+        {% set relatedProductEANs = productEANs ~ (relatedProductEANs is not empty ? ',' ~ relatedProductEANs : '') %}
+    {% endif %}
+
+    <template data-mm-wtbid="{{eshopSettings.mikmak_ctb_drawer_widget_id}}" data-mm-ids="{{relatedProductEANs}}"></template>
+{% endif %}
+{% if eshopSettings.enable_pricespider and eshopSettings.pricespider_key is not empty %}
+		<script type="text/javascript" src="//cdn.pricespider.com/1/lib/ps-widget.js" async></script>
+        {% set psKey = eshopSettings.pricespider_key|split('-') %}
+        {% if eshopSettings.enable_pricespider_universal_tracking and psKey[0] is not empty %}
+		    <script type="text/javascript" src="//cdn.pricespider.com/1/{{psKey[0]}}/ps-uAd.js" async></script>
+        {% endif %}
+{% endif %}

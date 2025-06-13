@@ -1,0 +1,25 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/betterreviews-display/betterreviews-display-extra';
+
+@include betterreviews-display-extra.additionalStyles();
+
+.betterreviews-display {
+	background-color: var(--background-colour);
+
+	&__content {
+		background-color: var(--betterreviews-background-colour);
+	}
+	.betterreviews-display-content-title {
+		margin-bottom: core-functions.fluidSize(30, 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			margin-bottom: core-functions.fluidSize(40, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			margin-bottom: core-functions.fluidSize(40, 'desktop');
+		}
+	}
+}

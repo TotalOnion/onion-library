@@ -1,0 +1,811 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+
+@mixin classicNavItemsCenter() {
+	.classic-nav-items-center {
+		grid-area: siteheader;
+		display: grid;
+		grid-template:
+			'banner banner'
+			'title title'
+			'logo interactions' min-content
+			'navigation navigation' / auto auto;
+		z-index: 999;
+		top: 0;
+		width: 100%;
+		max-width: 100%;
+		font-family: var(--nav-font-family);
+		background-color: var(--nav-bg-colour-mobile);
+		padding-inline: var(--global-inline-spacing);
+		justify-content: space-between;
+		padding-top: calc(var(--global-inline-spacing) / 4);
+		padding-inline: calc(var(--global-inline-spacing) / 2);
+		align-items: center;
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			background-color: var(--nav-bg-colour-desktop);
+			grid-template:
+				'banner banner banner'
+				'... logo ...'
+				'... title ...'
+				'... subtitle ...'
+				'... ... interactions'
+				'navigation navigation navigation' / 1fr 1fr 1fr;
+
+			&--layout-2 {
+				grid-template:
+					'banner banner banner'
+					'... ... interactions'
+					'logo navigation navigation' / 1fr 1fr 1fr;
+			}
+			&--header-background-image-desktop {
+				background-color: var(--nav-bg-colour-desktop);
+				background-position: center center;
+				background-size: 100% 100%;
+			}
+		}
+
+		&__header-banner {
+			text-align: center;
+
+			background-color: var(--header-banner-bg-colour);
+
+			color: var(--header-banner-text-colour);
+			width: 100%;
+			grid-area: banner;
+
+			padding: core-functions.fluidSize(5, 'mobile');
+
+			a {
+				color: var(--header-banner-link-colour);
+			}
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				padding: core-functions.fluidSize(5, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				padding: core-functions.fluidSize(5, 'desktop');
+			}
+		}
+
+		&__title-container {
+			grid-area: title;
+			justify-content: center;
+			flex-direction: column;
+			display: flex;
+			width: 100%;
+		}
+
+		&__site-title {
+			color: var(--site-title-colour);
+			text-align: center;
+			width: 100%;
+			margin-bottom: 0;
+
+			font-size: core-functions.fontSize(
+				var(--site-title-font-size-mobile),
+				'mobile'
+			);
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				font-size: core-functions.fontSize(
+					var(--site-title-font-size-portrait),
+					'portrait'
+				);
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				font-size: core-functions.fontSize(
+					var(--site-title-font-size-landscape),
+					'landscape'
+				);
+			}
+
+			@include core-mixins.device(breakpoints.$desktop) {
+				font-size: core-functions.fontSize(
+					var(--site-title-font-size-desktop),
+					'desktop'
+				);
+			}
+
+			&:hover {
+				color: var(--site-title-colour);
+				text-decoration: none;
+			}
+		}
+
+		&__site-subtitle {
+			color: var(--site-subtitle-colour);
+			text-align: center;
+			width: 100%;
+			margin-bottom: 0;
+
+			font-size: core-functions.fontSize(
+				var(--site-subtitle-font-size-mobile),
+				'mobile'
+			);
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				font-size: core-functions.fontSize(
+					var(--site-subtitle-font-size-portrait),
+					'portrait'
+				);
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				font-size: core-functions.fontSize(
+					var(--site-subtitle-font-size-landscape),
+					'landscape'
+				);
+			}
+
+			@include core-mixins.device(breakpoints.$desktop) {
+				font-size: core-functions.fontSize(
+					var(--site-subtitle-font-size-desktop),
+					'desktop'
+				);
+			}
+		}
+
+		&__nav-wrapper {
+			position: absolute;
+			top: 100%;
+			min-height: calc(100vh - core-functions.fluidSize(90, 'mobile'));
+			width: 100%;
+			right: 0;
+			overflow: hidden;
+			pointer-events: none;
+
+			.mobile-menu-active & {
+				overflow: scroll;
+			}
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				min-height: calc(
+					100vh - core-functions.fluidSize(90, 'portrait')
+				);
+
+				&--background-image-mobile {
+					background-size: 100% 100%;
+				}
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				padding-inline: calc(var(--global-inline-spacing) * 2);
+				min-height: unset;
+				top: 0%;
+				grid-area: navigation;
+				overflow: unset;
+				position: relative;
+				height: auto;
+
+				.classic-nav-items-center--layout-2 & {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	.header-logo {
+		grid-area: logo;
+		position: relative;
+		display: var(--header-logo-display, flex);
+		display: none;
+		justify-content: center;
+		flex-direction: row;
+		z-index: 1;
+		padding-top: 0;
+		place-self: center;
+		max-width: core-functions.fluidSize(
+			var(--header-logo-width-mobile),
+			'static'
+		);
+		margin-block: calc(var(--global-block-spacing) / 4);
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			max-width: core-functions.fluidSize(
+				var(--header-logo-width-portrait),
+				'static'
+			);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			max-width: core-functions.fluidSize(
+				var(--header-logo-width-desktop),
+				'static'
+			);
+
+			&:after {
+				content: '';
+				width: 100%;
+				display: block;
+				position: absolute;
+				height: 1px;
+				bottom: 0;
+			}
+
+			.classic-nav-items-center--layout-1 & {
+				justify-content: flex-start;
+				justify-self: center;
+			}
+
+			display: var(--header-logo-display, flex);
+			display: none;
+
+			.scrolling & {
+				display: var(--header-logo-display-scroll);
+				display: none;
+			}
+		}
+
+		&__image {
+			object-fit: contain;
+
+			&--desktop {
+				display: none;
+
+				@include core-mixins.device(breakpoints.$tabLandscape) {
+					display: flex;
+				}
+			}
+
+			&--mobile {
+				@include core-mixins.device(breakpoints.$tabLandscape) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.header-interactions {
+		grid-area: interactions;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		z-index: 1;
+		padding: var(--global-inline-spacing);
+		padding-top: 0;
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding-bottom: 0;
+		}
+
+		@include core-mixins.device(breakpoints.$desktop) {
+		}
+
+		&__cart,
+		&__favourite {
+			display: flex;
+
+			.mobile-menu-active & {
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			margin-right: core-functions.fluidSize(25, 'mobile');
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				margin-right: core-functions.fluidSize(25, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				.mobile-menu-active & {
+					display: inline-block;
+				}
+
+				margin-right: core-functions.fluidSize(30, 'desktop');
+			}
+		}
+
+		&__cart {
+			svg {
+				width: core-functions.fluidSize(22, 'static');
+				height: core-functions.fluidSize(21, 'static');
+				color: var(--nav-link-colour);
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				margin-right: 0;
+			}
+		}
+
+		&__favourite {
+			position: relative;
+
+			svg {
+				width: core-functions.fluidSize(20, 'static');
+				height: core-functions.fluidSize(18, 'static');
+			}
+
+			&-count {
+				font-size: core-functions.fontSize(8, 'static');
+				font-weight: 400;
+				line-height: 1;
+				display: flex;
+				position: absolute;
+				vertical-align: middle;
+
+				background: var(--white);
+				width: core-functions.fluidSize(16, 'static');
+				height: core-functions.fluidSize(16, 'static');
+
+				color: var(--brand-primary);
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				top: core-functions.fluidSize(-13, 'static');
+				right: core-functions.fluidSize(-13, 'static');
+			}
+		}
+
+		&__favourite-link {
+			display: flex;
+		}
+
+		&__hamburger-wrapper {
+			padding: core-functions.fluidSize(5, 'static');
+
+			@include core-mixins.device(breakpoints.$desktop) {
+				display: none;
+			}
+		}
+
+		&__hamburger {
+			display: flex;
+			flex-direction: column;
+
+			&-bar {
+				width: 18px;
+				height: 2px;
+				background-color: var(--nav-menu-toggle-colour-mobile);
+				margin-bottom: 3px;
+				border-radius: 1px;
+				transition: all 0.3s;
+
+				&.active {
+					&.a {
+						transform: rotate(135deg);
+					}
+
+					&.b {
+						width: 0;
+					}
+
+					&.c {
+						transform: rotate(-135deg);
+						margin-top: -10px;
+					}
+				}
+
+				&:last-child {
+					margin-bottom: unset;
+				}
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				background-color: var(--nav-menu-toggle-colour);
+				display: none;
+			}
+		}
+	}
+
+	.header-nav {
+		position: absolute;
+		width: 100%;
+		min-height: 100%;
+		transition: translate 0.3s;
+		translate: 100% 0;
+		z-index: 0;
+		overflow: scroll;
+		display: flex;
+		flex-direction: column;
+		pointer-events: all;
+
+		.mobile-menu-active & {
+			translate: 0;
+		}
+
+		&--primary {
+			grid-area: navigation;
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			translate: 0;
+			position: static;
+			min-height: unset;
+			height: auto;
+			flex-direction: row;
+			justify-content: center;
+			width: 100%;
+			overflow: unset;
+
+			.classic-nav-items-center--layout-2 & {
+				justify-content: flex-end;
+			}
+		}
+
+		&__container {
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			position: static;
+			gap: core-functions.fluidSize(30, 'mobile');
+			padding: calc(var(--global-inline-spacing) * 2);
+			background: var(--nav-slide-in-bg-colour-mobile);
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				gap: core-functions.fluidSize(40, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				gap: core-functions.fluidSize(50, 'desktop');
+				background: var(--nav-bg-colour-desktop);
+				padding: 0;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		&__item {
+			opacity: 0;
+			transition: opacity 0.3s;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0;
+
+			.mobile-menu-active & {
+				opacity: 1;
+				transition: opacity 0.3s 0.3s;
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				opacity: 1;
+				position: static;
+				display: flex;
+				align-items: center;
+			}
+
+			&--viewall {
+				display: none;
+
+				@include core-mixins.device(breakpoints.$tabLandscape) {
+					position: absolute;
+					display: inline-block;
+					right: 0;
+					bottom: core-functions.fluidSize(-10, 'desktop');
+
+					.header-nav__link {
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+
+		&__item-link {
+			text-decoration: none;
+			text-transform: capitalize;
+			position: relative;
+			display: flex;
+			width: 100%;
+			letter-spacing: 0.1em;
+			line-height: 100%;
+			font-family: var(--nav-link-font-family);
+			color: var(--nav-link-colour-mobile);
+
+			font-size: core-functions.fontSize(
+				var(--nav-link-font-size-mobile),
+				'mobile'
+			);
+
+			padding: calc(var(--global-inline-spacing) / 4);
+
+			&:hover {
+				color: var(--nav-link-hover-colour-mobile);
+			}
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				font-size: core-functions.fontSize(
+					var(--nav-link-font-size-portrait),
+					'portrait'
+				);
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				color: var(--nav-link-colour-desktop);
+
+				&:hover {
+					color: var(--nav-link-colour-hover);
+				}
+
+				width: auto;
+
+				font-size: core-functions.fontSize(
+					var(--nav-link-font-size-desktop),
+					'static'
+				);
+			}
+
+			&.menu-item-has-children {
+				&:after {
+					content: '';
+					width: core-functions.fluidSize(8, 'static');
+					height: 0.9em;
+					right: 0;
+					display: block;
+					position: relative;
+					margin-left: auto;
+
+					background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 13L7 7L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+					background-position: right center;
+					background-repeat: no-repeat;
+					transition: transform 0.5s;
+					top: 0;
+
+					@include core-mixins.device(breakpoints.$tabLandscape) {
+						background-size: core-functions.fluidSize(3, 'desktop')
+							core-functions.fluidSize(6, 'desktop');
+						margin-left: core-functions.fluidSize(9, 'desktop');
+					}
+
+					.active &,
+					.header-nav__item.menu-item-has-children:hover & {
+						transform: rotate(90deg) translateX(-40%);
+					}
+				}
+			}
+		}
+
+		&__sub-nav {
+			display: flex;
+			height: auto;
+			position: relative;
+			opacity: 0;
+			pointer-events: none;
+			max-height: 0;
+			transition: opacity 0s;
+
+			background-color: var(--sub-nav-background-colour-mobile);
+			border: 1px solid white;
+			border-top: none;
+
+			.active & {
+				transition: opacity 0.3s 0.1s;
+				max-height: max-content;
+				opacity: 1;
+				pointer-events: all;
+			}
+
+			.header-nav__item.menu-item-has-children:hover &,
+			.header-nav__item.menu-item-has-children.active & {
+				@include core-mixins.device(breakpoints.$tabLandscape) {
+					transition: opacity 0.3s;
+					opacity: 1;
+					pointer-events: all;
+					max-height: max-content;
+				}
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				background-color: var(--sub-nav-background-colour);
+				transition: opacity 0.3s 0.3s;
+				max-height: unset;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+
+				padding: calc(var(--global-inline-spacing) / 4)
+					calc(var(--global-inline-spacing) / 2);
+
+				.classic-nav-items-center--layout-2 & {
+					width: auto;
+					left: unset;
+					right: 0;
+				}
+			}
+		}
+
+		&__sub-nav-container {
+			position: relative;
+
+			padding: var(--global-inline-spacing);
+			padding-bottom: 0;
+			gap: core-functions.fluidSize(20, 'mobile');
+			display: flex;
+			flex-direction: column;
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				gap: core-functions.fluidSize(20, 'portrait');
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				width: auto;
+				display: grid;
+				padding: 0;
+				grid-template-columns: 1fr;
+				row-gap: core-functions.fluidSize(30, 'desktop');
+				column-gap: core-functions.fluidSize(20, 'desktop');
+			}
+		}
+
+		&__sub-nav-item {
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				margin: 0;
+				opacity: 0;
+				transition: opacity 0.3s;
+
+				.header-nav__item.menu-item-has-children:hover &,
+				.header-nav__item.menu-item-has-children.active & {
+					transition: opacity 0.3s 0.3s;
+					opacity: 1;
+				}
+			}
+		}
+
+		&__sub-nav-link {
+			color: var(--sub-nav-link-colour-mobile);
+
+			font-family: var(--sub-nav-link-font-family);
+
+			&:hover {
+				color: var(--sub-nav-link-hover-colour-mobile);
+			}
+
+			font-size: core-functions.fontSize(
+				var(--sub-nav-link-font-size-mobile),
+				'mobile'
+			);
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				font-size: core-functions.fontSize(
+					var(--sub-nav-link-font-size-portrait),
+					'portrait'
+				);
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				font-size: core-functions.fontSize(
+					var(--sub-nav-link-font-size-desktop),
+					'desktop'
+				);
+
+				&:hover {
+					color: var(--sub-nav-link-hover-colour);
+				}
+
+				color: var(--sub-nav-link-colour);
+				display: flex;
+				gap: core-functions.fluidSize(20, 'desktop');
+				padding: unset;
+			}
+
+			picture,
+			span {
+				display: none;
+
+				@include core-mixins.device(breakpoints.$tabLandscape) {
+					display: block;
+				}
+			}
+
+			picture {
+				img {
+					width: core-functions.fluidSize(100, 'desktop');
+					height: core-functions.fluidSize(100, 'desktop');
+					object-fit: cover;
+					max-width: unset;
+				}
+			}
+
+			span {
+				@include core-mixins.p-xxs();
+
+				font-family: var(--primary-font-family);
+				text-transform: none;
+				margin-top: core-functions.fluidSize(12, 'desktop');
+			}
+
+			p {
+				font-size: core-functions.fontSize(
+					var(--sub-nav-link-font-size-mobile),
+					'mobile'
+				);
+
+				@include core-mixins.device(breakpoints.$tabPortrait) {
+					font-size: core-functions.fontSize(
+						var(--sub-nav-link-font-size-portrait),
+						'portrait'
+					);
+				}
+
+				@include core-mixins.device(breakpoints.$tabLandscape) {
+					font-size: core-functions.fontSize(
+						var(--sub-nav-link-font-size-desktop),
+						'desktop'
+					);
+				}
+			}
+		}
+	}
+
+	.header-additionalnav {
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			display: none;
+		}
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			gap: core-functions.fluidSize(30, 'mobile');
+
+			padding: var(--global-block-spacing)
+				calc(var(--global-inline-spacing) * 2);
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				padding: unset;
+			}
+		}
+
+		svg {
+			margin-right: core-functions.fluidSize(15, 'static');
+		}
+
+		&__favourites {
+			svg {
+				width: core-functions.fluidSize(22, 'static');
+				height: core-functions.fluidSize(21, 'static');
+			}
+		}
+
+		&__cart {
+			svg {
+				width: core-functions.fluidSize(20, 'static');
+				height: core-functions.fluidSize(18, 'static');
+			}
+		}
+	}
+
+	.header-social {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--global-block-spacing);
+
+		a {
+			margin: 0 core-functions.fluidSize(10, 'static');
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				margin: 0 core-functions.fluidSize(20, 'static') 0 0;
+			}
+		}
+
+		img {
+			width: core-functions.fluidSize(30, 'static');
+			height: auto;
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			display: none;
+		}
+	}
+
+	.header-market-selector {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--global-block-spacing);
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			display: none;
+		}
+	}
+}

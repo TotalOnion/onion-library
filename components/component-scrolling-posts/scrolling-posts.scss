@@ -1,0 +1,52 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+
+.scrolling-posts {
+	$count: 7; /* Number of images */
+	// Ideally would use this var, but compiling issues var(--scrolling-posts-per-page)
+    $duration: var(--scrolling_posts_speed); /* Duration */
+
+    &__image{
+        max-width: unset;
+    }
+
+    &__container{
+        --duration: #{$duration};
+        display: grid;
+        grid-template-columns: repeat($count, core-functions.fluidSize(var(--image-width-mobile), 'static'));
+        overflow: hidden;
+
+        @include core-mixins.device(breakpoints.$tabLandscape) {
+            grid-template-columns: repeat($count, core-functions.fluidSize(var(--image-width-desktop), 'static'));
+        }
+        > img{
+            grid-area: 1/1;
+            width: 100%;
+            aspect-ratio: var(--image-aspect-ratio);
+            object-fit: var(--image-object-fit);
+            animation: scrolling-posts $duration linear infinite;
+        }
+    }
+
+    &__left-to-right > img {
+        animation-direction: reverse;
+    }
+
+    @for $i from 2 to ($count + 1) {
+        &__right-to-left > img:nth-child(#{$i}),
+        &__left-to-right > img:nth-child(#{$i}) {
+          animation-delay: calc(#{(1 - $i) / $count} * var(--duration));
+        }
+    }
+
+    @keyframes scrolling-posts {
+        #{100/$count}% {
+          transform: translateX(-100%);
+        }
+        #{100/$count + .01}% {
+          transform: translateX(($count - 1) * 100%);
+        }
+    }
+}

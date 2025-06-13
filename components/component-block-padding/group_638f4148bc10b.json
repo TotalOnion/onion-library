@@ -1,0 +1,889 @@
+{
+    "key": "group_638f4148bc10b",
+    "title": "Component: Block padding - Library",
+    "fields": [
+        {
+            "key": "field_639e382d055c3",
+            "label": "Enable block padding",
+            "name": "enable_block_padding",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_645bcd3e1585a",
+            "label": "Enable advanced block padding controls",
+            "name": "enable_advanced_block_padding_controls",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "sss",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_638f419dd1c56",
+            "label": "Block vertical padding desktop",
+            "name": "block_vertical_padding_desktop",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "0.5",
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638f4160d1c55",
+            "label": "Block horizontal padding desktop",
+            "name": "block_horizontal_padding_desktop",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638f41b8d1c58",
+            "label": "Block vertical padding portrait",
+            "name": "block_vertical_padding_portrait",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "0.5",
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638f41acd1c57",
+            "label": "Block horizontal padding portrait",
+            "name": "block_horizontal_padding_portrait",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638f41d2d1c5a",
+            "label": "Block vertical padding mobile",
+            "name": "block_vertical_padding_mobile",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "0.5",
+            "min": "",
+            "max": 8,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638f41c4d1c59",
+            "label": "Block horizontal padding mobile",
+            "name": "block_horizontal_padding_mobile",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": "",
+            "max": 8,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f8b30e45660",
+            "label": "Desktop control:",
+            "name": "desktop_control",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "layout": "block",
+            "sub_fields": [],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_64f87869701dc",
+            "label": "Block vertical padding desktop top",
+            "name": "block_vertical_padding_desktop_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f878ae701de",
+            "label": "Block vertical padding desktop bottom",
+            "name": "block_vertical_padding_desktop_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645bceacfde7d",
+            "label": "Block horizontal padding desktop left",
+            "name": "block_horizontal_padding_desktop_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645bcdab4d80b",
+            "label": "Block horizontal padding desktop right",
+            "name": "block_horizontal_padding_desktop_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f8aa4503cd5",
+            "label": "Portrait control:",
+            "name": "portrait_control",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "layout": "block",
+            "sub_fields": [],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_64f8a324b1dbc",
+            "label": "Block vertical padding portrait top",
+            "name": "block_vertical_padding_portrait_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f8a365d1859",
+            "label": "Block vertical padding portrait bottom",
+            "name": "block_vertical_padding_portrait_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645bd123d26c7",
+            "label": "Block horizontal padding portrait left",
+            "name": "block_horizontal_padding_portrait_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 10,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645bd147d26c8",
+            "label": "Block horizontal padding portrait right",
+            "name": "block_horizontal_padding_portrait_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 8,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f8b2ef4565f",
+            "label": "Mobile control:",
+            "name": "mobile_control",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "layout": "block",
+            "sub_fields": [],
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_64f8ae99394c5",
+            "label": "Block vertical padding mobile top",
+            "name": "block_vertical_padding_mobile_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64f8aeba5ae01",
+            "label": "Block vertical padding mobile bottom",
+            "name": "block_vertical_padding_mobile_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": 0,
+            "max": 12,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645bd116d26c6",
+            "label": "Block horizontal padding mobile left",
+            "name": "block_horizontal_padding_mobile_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": "",
+            "max": 8,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_645bcd6f1585b",
+            "label": "Block horizontal padding mobile right",
+            "name": "block_horizontal_padding_mobile_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_639e382d055c3",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_645bcd3e1585a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 1,
+            "min": "",
+            "max": 8,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "localization",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746891251
+}

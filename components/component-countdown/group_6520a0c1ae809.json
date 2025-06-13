@@ -1,0 +1,334 @@
+{
+    "key": "group_6520a0c1ae809",
+    "title": "Component: Countdown",
+    "fields": [
+        {
+            "key": "field_6520a10f5b5a2",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6520a140c1eb4",
+            "label": "Date Time Pick",
+            "name": "date_time_pick",
+            "aria-label": "",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "display_format": "d\/m\/Y g:i a",
+            "return_format": "F j, Y g:i a",
+            "first_day": 1,
+            "placeholder": "",
+            "min_date": "",
+            "max_date": "",
+            "min_time": "",
+            "max_time": "",
+            "no_weekends": "",
+            "min_hour": "",
+            "max_hour": "",
+            "min_min": "",
+            "max_min": "",
+            "min_sec": "",
+            "max_sec": ""
+        },
+        {
+            "key": "field_6523d7babb6a2",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_65241e46ab6a4",
+            "label": "Enable Days",
+            "name": "enable_days",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_65241e6911314",
+            "label": "Enable Hours",
+            "name": "enable_hours",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_65248c2f18c1e",
+            "label": "Text colour",
+            "name": "text_colour",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65241e46ab6a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65241e6911314",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "display": "default",
+            "button_label": "Select Color",
+            "color_picker": true,
+            "absolute": false,
+            "input": true,
+            "allow_null": true,
+            "theme_colors": false,
+            "colors": []
+        },
+        {
+            "key": "field_652b39db0a4e0",
+            "label": "Text style",
+            "name": "text_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65241e46ab6a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_65241e6911314",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "__h1-l-sizing": "H1 large",
+                "__h1-sizing": "H1",
+                "__h2-sizing": "H2",
+                "__h3-sizing": "H3",
+                "__h4-sizing": "H4",
+                "__h5-sizing": "H5",
+                "__h6-sizing": "H6",
+                "__sh1-sizing": "SH1",
+                "__sh2-sizing": "SH2",
+                "__sh3-sizing": "SH3",
+                "__sh4-sizing": "SH4",
+                "__sh5-sizing": "SH5",
+                "__sh6-sizing": "SH6",
+                "__p-l-sizing": "Paragraph L",
+                "__p-sizing": "Paragraph",
+                "__p-s-sizing": "Paragraph S",
+                "__p-xs-sizing": "Paragraph XS",
+                "__p-xxs-sizing": "Paragraph XXS",
+                "__p-xxxs-sizing": "Paragraph XXS"
+            },
+            "default_value": "__p-sizing",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_653b8cb317f2a",
+            "label": "Days Text Info",
+            "name": "days_text_info",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "text for 2 days or more",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65241e46ab6a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_653b8d1e17f2b",
+            "label": "Day Text Info",
+            "name": "day_text_info",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "text for 1 day left",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65241e46ab6a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "localization",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1746891298
+}

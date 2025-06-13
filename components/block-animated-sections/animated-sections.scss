@@ -1,0 +1,470 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/theme/buttons';
+@use 'Assets/scss/blocks/animated-sections/animated-sections-extra';
+
+// Full screen lock, No scrolling functionality.
+body.animated-sections-fullscreen {
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+}
+
+// Scroll lock, Stops the block in its track whilst class is active.
+body.animated-sections-scroll-lock {
+	overflow: hidden;
+	touch-action: none;
+}
+
+.animated-sections {
+	--timeline-nav-opacity: 1;
+
+	position: relative;
+	overflow: hidden;
+	background-color: var(--section-background-colour);
+	background-image: var(--section-background-url);
+
+	max-height: 100vh;
+
+	&__canvas {
+		&--fullscreen-lock {
+			width: 100vw;
+			height: 100vh;
+		}
+	}
+	&__canvas-inner {
+		&--fullscreen-lock {
+			height: 100vh;
+			-webkit-backface-visibility: hidden;
+		}
+
+		&--fullscreen-unlocked {
+			position: relative;
+			overflow: hidden;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			height: core-functions.fluidSize(
+				var(--figma-mobile-height),
+				'mobile'
+			);
+
+			//custom styles for tgl
+			border-top: solid core-functions.fluidSize(2, 'mobile') #e5cc9f;
+			border-bottom: solid core-functions.fluidSize(2, 'mobile') #e5cc9f;
+			//custom styles for tgl
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				//custom styles for tgl
+				border-top: solid core-functions.fluidSize(2, 'portrait')
+					#e5cc9f;
+				border-bottom: solid core-functions.fluidSize(2, 'portrait')
+					#e5cc9f;
+
+				//custom styles for tgl
+
+				height: core-functions.fluidSize(
+					var(--figma-mobile-height),
+					'portrait'
+				);
+			}
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				//custom styles for tgl
+				//custom styles for tgl
+				border-top: solid core-functions.fluidSize(2, 'desktop') #e5cc9f;
+				border-bottom: solid core-functions.fluidSize(2, 'desktop')
+					#e5cc9f;
+				//custom styles for tgl
+
+				height: core-functions.fluidSize(
+					var(--figma-desktop-height),
+					'desktop'
+				);
+			}
+		}
+	}
+
+	// Moving elements.
+	&__background-element,
+	&__foreground-element {
+		position: absolute;
+		transform-origin: center;
+		opacity: 0;
+
+		-webkit-transform: perspective(1000px);
+		-webkit-backface-visibility: hidden;
+
+		&--top-left {
+			transform-origin: top left;
+		}
+	}
+
+	// Overlay Content
+	&__content-wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+	}
+	&__content-element {
+		position: relative;
+		display: block;
+		z-index: 9;
+
+		height: auto;
+		width: 100%;
+
+		transition: all 2s;
+		opacity: 0;
+
+		transform: translate(-200vw, 0);
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			position: absolute;
+			display: flex;
+			height: 100%;
+		}
+
+		&--from-right {
+			right: unset;
+			transform: translate(200vw, 0);
+			height: 0;
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				max-width: core-functions.fluidSize(429, 'desktop');
+				padding: 0 core-functions.fluidSize(80, 'desktop') 0 0;
+				place-content: center;
+				height: 100%;
+				place-content: end;
+				top: 0;
+				right: 0;
+				bottom: unset;
+				place-content: center;
+			}
+		}
+
+		&.active {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+	}
+	&__content-overlay {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+	}
+	&__content-inner {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+
+	//Swiper Content
+	&__swiper-content-wrapper {
+		z-index: 5;
+		overflow: hidden;
+		position: absolute;
+		transition: all 2s;
+		background: var(--white);
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 100%;
+		height: 50%;
+		transform: translate(200vw, 0);
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			width: 100%;
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			width: core-functions.fluidSize(570, 'desktop');
+			height: 100%;
+		}
+
+		&.active {
+			transform: translate(0, 0);
+		}
+	}
+	&__swiper-container {
+		width: 100%;
+		height: unset;
+	}
+	&__swiper-slide {
+		text-align: left;
+	}
+
+	//UI Elements
+	&__ui-element-down-arrow {
+		position: absolute;
+		left: 50%;
+		transform: translate(0px, -50%);
+		z-index: 99;
+
+		cursor: pointer;
+
+		bottom: core-functions.fluidSize(20, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			bottom: core-functions.fluidSize(20, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			bottom: core-functions.fluidSize(20, 'desktop');
+		}
+
+		&::before {
+			content: '';
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 7px;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			transition: 1s;
+		}
+
+		&:hover {
+			&::before {
+				margin-top: 5px;
+				transition: 1s;
+			}
+		}
+	}
+	&__ui-element-back-button {
+		position: absolute;
+		right: 0px;
+		padding-right: var(--global-inline-spacing);
+		font-family: var(--secondary-font-family-bold);
+
+		z-index: 99;
+		cursor: pointer;
+
+		transition: 1s;
+
+		top: core-functions.fluidSize(200, 'mobile');
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			top: core-functions.fluidSize(200, 'portrait');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			top: core-functions.fluidSize(200, 'desktop');
+		}
+
+		&::before {
+			content: '';
+			border: solid var(--gold);
+			display: inline-block;
+			transform: rotate(135deg);
+			-webkit-transform: rotate(135deg);
+
+			border-width: 0 core-functions.fluidSize(3, 'mobile')
+				core-functions.fluidSize(3, 'mobile') 0;
+			padding: core-functions.fluidSize(3, 'mobile');
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				border-width: 0 core-functions.fluidSize(3, 'portrait')
+					core-functions.fluidSize(3, 'portrait') 0;
+				padding: core-functions.fluidSize(3, 'portrait');
+			}
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				border-width: 0 core-functions.fluidSize(3, 'desktop')
+					core-functions.fluidSize(3, 'desktop') 0;
+				padding: core-functions.fluidSize(3, 'desktop');
+			}
+		}
+	}
+	&__ui-element-timeline-nav-wrapper {
+		position: absolute;
+		top: 50%;
+		right: var(--global-inline-spacing);
+		transform: translateY(-50%);
+		z-index: 9;
+		transition: all 1s;
+	}
+	&__ui-element-timeline-nav {
+		display: grid;
+		grid-template: 'item dot' 1fr / 1fr;
+		grid-gap: core-functions.fluidSize(12, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			grid-gap: core-functions.fluidSize(12, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			grid-gap: core-functions.fluidSize(12, 'desktop');
+		}
+	}
+	&__ui-element-timeline-dots-container {
+		position: relative;
+		grid-area: dot;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: fit-content;
+		align-self: center;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+
+			border-left: solid var(--white)
+				core-functions.fluidSize(1, 'mobile');
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				border-left: solid var(--white)
+					core-functions.fluidSize(1, 'portrait');
+			}
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				border-left: solid var(--white)
+					core-functions.fluidSize(1, 'desktop');
+			}
+		}
+	}
+	&__ui-element-timeline-names-container {
+		grid-area: item;
+		flex-direction: column;
+		justify-content: center;
+
+		display: none;
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			display: flex;
+		}
+	}
+	&__ui-element-timeline-dot {
+		transform: rotate(45deg);
+		background-color: var(--black);
+		border: solid 1px var(--white);
+		cursor: pointer;
+
+		transition-delay: 2s;
+
+		width: core-functions.fluidSize(9.5, 'mobile');
+		height: core-functions.fluidSize(9.5, 'mobile');
+		margin-bottom: core-functions.fluidSize(34, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			width: core-functions.fluidSize(9.5, 'portrait');
+			height: core-functions.fluidSize(9.5, 'portrait');
+			margin-bottom: core-functions.fluidSize(34, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			width: core-functions.fluidSize(9.5, 'desktop');
+			height: core-functions.fluidSize(9.5, 'desktop');
+			margin-bottom: core-functions.fluidSize(34, 'desktop');
+		}
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		&.active {
+			background-color: var(--white);
+		}
+	}
+	&__ui-element-timeline-name {
+		display: none;
+		flex-direction: row;
+		font-family: var(--font-secondary);
+		align-items: center;
+		opacity: 0.5;
+		transition: opacity 0.75s ease-in-out;
+
+		margin-bottom: core-functions.fluidSize(5, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			margin-bottom: core-functions.fluidSize(5, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			margin-bottom: core-functions.fluidSize(5, 'desktop');
+		}
+
+		&.selected {
+			opacity: 1;
+			color: var(--white);
+		}
+
+		&.hide_from_timeline_navigation {
+			visibility: hidden;
+		}
+	}
+
+	&__progress-inner {
+		position: absolute;
+		z-index: 99;
+		background: transparent;
+
+		right: 0;
+		display: none;
+
+		background: var(--black);
+
+		height: 100vh;
+		width: core-functions.fluidSize(8, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			width: core-functions.fluidSize(8, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			width: core-functions.fluidSize(8, 'desktop');
+		}
+
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			display: block;
+		}
+	}
+
+	&__progress-bar {
+		position: absolute;
+		background: var(--white);
+		height: 0%;
+		width: core-functions.fluidSize(8, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			width: core-functions.fluidSize(8, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			width: core-functions.fluidSize(8, 'desktop');
+		}
+	}
+
+	&__transition-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		transition: all 2s;
+
+		z-index: -1;
+		&.active {
+			opacity: 1;
+			transition: all 0.5s;
+			z-index: 10;
+		}
+	}
+
+	@include animated-sections-extra.additionalStyles();
+}
+
+@keyframes blinkingBackground {
+	0% {
+		background-color: transparent;
+	}
+	50% {
+		background-color: #e5cc9f;
+	}
+	100% {
+		background-color: transparent;
+	}
+}

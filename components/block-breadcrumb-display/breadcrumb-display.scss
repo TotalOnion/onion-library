@@ -1,0 +1,17 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/breadcrumb-display/breadcrumb-display-extra';
+
+.breadcrumb-display {
+	&__text {
+		color: var(--text-colour);
+		a {
+			color: var(--text-colour);
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	@include breadcrumb-display-extra.additionalStyles();
+}
