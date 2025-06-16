@@ -1,5 +1,5 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use '../fields-core-functions/core-functions';
 
 @mixin animations() {
 	.cmpl-block-animations {

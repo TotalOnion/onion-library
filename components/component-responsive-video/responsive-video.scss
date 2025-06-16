@@ -1,7 +1,7 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+// @use '../fields-core-mixins/core-mixins';
+// @use '../fields-core-functions/core-functions';
 @use 'NodeModules/@pernod-ricard-global-cms/cblvideocontroller/vc-styles';
-// @use 'Assets/scss/theme/breakpoints';
+// @use '../component-breakpoints/breakpoints';
 
 @mixin responsiveVideo() {
 	@include vc-styles.basic();

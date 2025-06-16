@@ -1,6 +1,6 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins/core-mixins';
+@use '../fields-core-functions/core-functions';
+@use '../component-breakpoints/breakpoints';
 @use 'Assets/scss/blocks/site-copyright-notice/site-copyright-notice-extra';
 
 .site-copyright-notice {

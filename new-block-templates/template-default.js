@@ -12,18 +12,18 @@ module.exports = {
 }`;
 	},
 	defaultscss: function (newBlockName) {
-		return `// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
-// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-// @use 'Assets/scss/theme/breakpoints';
+		return `// @use '../fields-core-mixins/core-mixins'; 
+// @use '../fields-core-functions/core-functions';
+// @use '../component-breakpoints/breakpoints';
 @use 'Assets/scss/blocks/${newBlockName}/${newBlockName}-extra';
 .${newBlockName} {
 	@include ${newBlockName}-extra.additionalStyles();
 }`;
 	},
 	defaultextrascss: function (newBlockName) {
-		return `@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+		return `@use '../fields-core-mixins/core-mixins'; 
+@use '../fields-core-functions/core-functions';
+@use '../component-breakpoints/breakpoints';
 @mixin additionalStyles() {
 	
 }`;

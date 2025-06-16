@@ -1,7 +1,7 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use '../fields-core-mixins/core-mixins';
+@use '../fields-core-functions/core-functions';
 @use 'Assets/scss/modules/library-modules/block-settings/block-settings';
-@use 'Assets/scss/theme/breakpoints';
+@use '../component-breakpoints/breakpoints';
 @use 'Assets/scss/blocks/site-title-and-tagline/site-title-and-tagline-extra';
 
 .site-title-and-tagline {

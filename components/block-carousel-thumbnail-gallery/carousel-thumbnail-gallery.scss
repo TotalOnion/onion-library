@@ -1,8 +1,8 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use '../fields-core-mixins/core-mixins';
+@use '../fields-core-functions/core-functions';
 @use 'Assets/scss/blocks/carousel-thumbnail-gallery/carousel-thumbnail-gallery-extra';
-@use 'Assets/scss/theme/breakpoints';
+@use '../component-breakpoints/breakpoints';
 
 .carousel-thumbnail-gallery {
 	display: grid;

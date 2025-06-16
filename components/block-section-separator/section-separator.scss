@@ -1,7 +1,7 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins/core-mixins';
+@use '../fields-core-functions/core-functions';
+@use '../component-breakpoints/breakpoints';
 
 .section-separator {
 	@include core-mixins.responsiveShowHide(grid);

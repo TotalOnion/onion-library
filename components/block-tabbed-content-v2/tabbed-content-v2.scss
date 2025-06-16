@@ -1,8 +1,8 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use '../fields-core-mixins/core-mixins';
+@use '../fields-core-functions/core-functions';
 @use 'Assets/scss/theme/buttons';
-@use 'Assets/scss/theme/breakpoints';
+@use '../component-breakpoints/breakpoints';
 @use 'Assets/scss/blocks/tabbed-content-v2/tabbed-content-v2-extra';
 @use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
 

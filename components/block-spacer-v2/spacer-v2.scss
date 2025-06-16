@@ -1,6 +1,6 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins/core-mixins';
+@use '../component-breakpoints/breakpoints';
 
 .spacer-v2 {
 	width: 100%;

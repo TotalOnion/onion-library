@@ -1,7 +1,7 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-functions/core-functions';
+@use '../fields-core-mixins/core-mixins';
+@use '../component-breakpoints/breakpoints';
 
 @mixin ctaButtonStyles() {
 	[class*='cmpl-cta-style-'] {

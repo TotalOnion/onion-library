@@ -1,6 +1,6 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 @use 'Assets/scss/blocks/standard-content-v2/standard-content-v2-extra';
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use '../fields-core-mixins/core-mixins';
 @use 'Assets/scss/modules/library-modules/cover-link/cover-link';
 @use 'Assets/scss/modules/library-modules/lottie-animations/lottie-animations';
 @use 'NodeModules/@pernod-ricard-global-cms/cblvideocontroller/vc-styles';

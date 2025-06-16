@@ -1,6 +1,6 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-functions/core-functions';
+@use '../component-breakpoints/breakpoints';
 @use 'Assets/scss/blocks/sticky-link/sticky-link-extra';
 
 .sticky-link {
