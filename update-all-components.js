@@ -3,7 +3,7 @@ const getComponentsList = () => {
 	const glob = require('glob');
 	const fs = require('fs');
 	const libraryPath =
-		'./node_modules/@pernod-ricard-global-cms/cbl-component-library';
+		'./node_modules/@total_onion/onion-library';
 
 	let finalList = [];
 
