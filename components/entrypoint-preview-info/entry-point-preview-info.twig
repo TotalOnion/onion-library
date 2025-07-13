@@ -1,7 +1,0 @@
-{% if is_preview and block.className is not empty %}
-	<div class="{{blockClassName}}__layout-name" style="position:absolute; top: 0; left: 0; background-color: black; padding: 3px; font-size: 14px; z-index: 999; transform: translateY(-50%);color: white; background-color: black; text-shadow: 1px 1px 1px red; border: 1px dashed red; border-radius: 5px;">
-		<span>layout:
-			<strong>{{block.className|replace({'-': ' '})|capitalize}}</strong>
-		</span>
-	</div>
-{% endif %}

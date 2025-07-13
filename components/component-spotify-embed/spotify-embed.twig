@@ -1,4 +1,0 @@
-{% set desktopHeight = fields.desktop_height|default(352) %}
-{% set tabletHeight = fields.tablet_height|default(352) %}
-{% set mobileHeight = fields.mobile_height|default(350) %}
-<iframe style="border-radius:12px; --desktop-height: {{desktopHeight}}px;--tablet-height: {{tabletHeight}}px;--mobile-height: {{mobileHeight}}px" src="{{fields.embed_url}}" class="spotify-embed" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" ></iframe>

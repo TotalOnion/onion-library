@@ -1,7 +1,0 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
-{% set textStyle = include('components/text-style.twig', {field, post}) %}
-{% set elementStyles = gridLayoutElement ~ textStyle %}
-
-{% set drink_desc = post.meta('drink_description') %}
-
-<{{field.text_style.text_element_type|ru}} class="{{blockClassName}}__drink-description {{blockClassName}}__info-item {{field.text_style.typography_style|ru}}" style="{{elementStyles}}">{{drink_desc}}</{{field.text_style.text_element_type|ru}}>

@@ -1,8 +1,0 @@
-{% set loop = fields.lottie_animations.loop %}
-{% set autoplay = fields.lottie_animations.autoplay %}
-{% set lottieFile = fields.lottie_animations.lottie_file %}
-{% set zIndex = '--lottie-z-index: ' ~ fields.lottie_animations.z_index ~ ';' %}
-{% set position = '--lottie-position: ' ~ fields.lottie_animations.position|ru ~ ';' %}
-{% set styleString = zIndex ~ position %}
-
-<div id="lottie" class="{{blockClassName}}__lottie-animations lottie-animations" data-lottiefile="{{gt_lottie_filepath(lottieFile)}}" data-loop="{{loop}}" data-position="{{position}}" data-autoplay="{{autoplay}}" style="{{styleString}}"></div>

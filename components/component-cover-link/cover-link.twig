@@ -1,4 +1,0 @@
-{% if fields.enable_cover_link %}
-	{% set coverlinkHover = fields.enable_cover_link_hover_effect ? 'cover-link-hover-effect' : '' %}
-	<a href="{{ fields.cover_link.url }}" target="{{fields.cover_link.target}}" class="{{blockClassName}}__cover-link {{coverlinkHover}}" aria-label="{{ fields.cover_link.title|default('post represented by image')}}"></a>
-{% endif %}

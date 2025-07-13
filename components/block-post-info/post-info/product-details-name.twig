@@ -1,5 +1,0 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
-{% set textStyle = include('components/text-style.twig', {field, post}) %}
-{% set elementStyles = gridLayoutElement ~ textStyle %}
-
-<{{field.text_style.text_element_type|ru}} data-pattern-post-info="product_details.productName" class="{{blockClassName}}__product-details-name {{blockClassName}}__info-item {{field.text_style.typography_style|ru}}" style="{{elementStyles}}">{{post.product_details.productName}}</{{field.text_style.text_element_type|ru}}>

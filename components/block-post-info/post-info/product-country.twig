@@ -1,7 +1,0 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
-{% set textStyle = include('components/text-style.twig', {field, post}) %}
-{% set elementStyles = gridLayoutElement ~ textStyle %}
-
-
-<{{field.text_style.text_element_type|ru}} class="{{blockClassName}}__info-item {{blockClassName}}__product-country {{field.text_style.typography_style|ru}}" style="{{elementStyles}}">
-	{{field.enable_label ? '<span class="' ~ blockClassName ~ '__product-country-label">' ~ field.label ~ ' </span>'}}{{post.product_country}}</{{field.text_style.text_element_type|ru}}>
