@@ -8,7 +8,7 @@ const componentOptions = args._;
 const entryPointName = componentOptions[0];
 const themePath = process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 const srcPathEntryPoint = `${themePath}/views/entry-points`;
-const destPathEntryPoints = path.join(__dirname, `../../../../../../../../cbl-component-library/components/entrypoint-${entryPointName}`);
+const destPathEntryPoints = path.join(__dirname, `../../../../../../../../onion-library/components/entrypoint-${entryPointName}`);
 
 const bColors = {
 	HEADER: '\033[95m',

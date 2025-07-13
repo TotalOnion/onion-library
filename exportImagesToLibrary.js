@@ -5,7 +5,7 @@ const path = require('path');
 const themePath = process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 
 const srcPathImages = path.join(themePath, 'assets/images/icon/library-images');
-const destPath = '../../../../../cbl-component-library/components/fields-library-images';
+const destPath = '../../../../../onion-library/components/fields-library-images';
 
 const bColors = {
     HEADER: '\033[95m',

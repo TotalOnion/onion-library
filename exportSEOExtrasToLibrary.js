@@ -47,7 +47,7 @@ function getSeoExtraFiles(){
 const seoFileList = getSeoExtraFiles()
 
 seoFileList.forEach(seoFile => {
-  const destPathSeoExtraFiles = path.join(__dirname, `../../../../../../../../cbl-component-library/components/seo-${seoFile}`);
+  const destPathSeoExtraFiles = path.join(__dirname, `../../../../../../../../onion-library/components/seo-${seoFile}`);
   const seoExtraSrcFile = path.join(srcPathSeoExtras, `${seoFile}.php`);
   const seoExtraDestFile = path.join(destPathSeoExtraFiles, `${seoFile}.php`);
   copySeoExtraFile(seoExtraSrcFile, seoExtraDestFile, seoFile, destPathSeoExtraFiles)

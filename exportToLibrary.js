@@ -38,7 +38,7 @@ const srcPathPhpSeopress = `${themePath}/inc/seo-extras`;
 
 const destPath = path.join(
     __dirname,
-    '../../../../../../../../cbl-component-library/components/'
+    '../../../../../../../../onion-library/components/'
 );
 
 const bColors = {

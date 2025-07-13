@@ -47,7 +47,7 @@ function getCustomCacheFiles(){
 const customCacheList = getCustomCacheFiles()
 
 customCacheList.forEach(customCache => {
-  const destPathCustomCaches = path.join(__dirname, `../../../../../../../../cbl-component-library/components/${customCache}`);
+  const destPathCustomCaches = path.join(__dirname, `../../../../../../../../onion-library/components/${customCache}`);
   const customCacheSrcFile = path.join(srcPathCustomCaches, `${customCache}.php`);
   const customCacheDestFile = path.join(destPathCustomCaches, `${customCache}.php`);
   copyCustomCache(customCacheSrcFile, customCacheDestFile, customCache, destPathCustomCaches)
