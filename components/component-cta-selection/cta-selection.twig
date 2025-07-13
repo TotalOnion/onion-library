@@ -126,7 +126,7 @@
 				{% if buyNowOptionSelect|ru == 'mikmak' %}
 					{% set productEANs = product.meta('mikmak_ean_ids') %}
 					{% set relatedProducts = product.meta('related_products') %}
-					{% set drawer_widget_id = attribute(options['e-shop_settings'], 'mikmak_ctb_drawer_widget_id') %}
+					{% set drawer_widget_id = attribute(market_settings['e-shop_settings'], 'mikmak_ctb_drawer_widget_id') %}
 
 					{% set relatedProductEANs = '' %}
 					{% for post in relatedProducts %}

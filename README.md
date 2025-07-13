@@ -1,4 +1,4 @@
-# onion-component-library
+# cbl-component-library
 
 Front end components for gcms sites
 
@@ -6,13 +6,13 @@ Front end components for gcms sites
 
 Install with npm or yarn..
 
-`npm install --save-dev @total_onion/onion-library`
+`npm install --save-dev @pernod-ricard-global-cms/cbl-component-library`
 
-`yarn add -D @total_onion/onion-library`
+`yarn add -D @pernod-ricard-global-cms/cbl-component-library`
 
 If you don't have the scripts already in your package.json you can add these and use them to install and update components.
 
-`"install-component": "node ./node_modules/@total_onion/onion-library/install-component.js", "upgrade-component": "node ./node_modules/@total_onion/onion-library/upgrade-component.js", "list-components": "node ./node_modules/@total_onion/onion-library/list-components.js",`
+`"install-component": "node ./node_modules/@pernod-ricard-global-cms/cbl-component-library/install-component.js", "upgrade-component": "node ./node_modules/@pernod-ricard-global-cms/cbl-component-library/upgrade-component.js", "list-components": "node ./node_modules/@pernod-ricard-global-cms/cbl-component-library/list-components.js",`
 
 eg you can list the available components with
 
@@ -28,6 +28,6 @@ Go to the folder
 
 `yarn install`
 
-then, to run unit tests,
+then, to run unit tests, 
 
 `yarn test`

@@ -1,8 +1,8 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../fields-core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
 @use 'Assets/scss/blocks/carousel-multi-layout-v2/carousel-multi-layout-v2-extra';
-@use '../fields-core-functions/core-functions';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/modules/library-modules/element-positioning/element-positioning';
 
 .carousel-multi-layout-v2 {

@@ -45,7 +45,9 @@
 	{% endfor %}
 	{% if fields.enable_post_cover_link %}
 		{% set coverlinkHover = fields.enable_post_cover_link_hover_effect ? 'post-cover-link-hover-effect' : '' %}
-		<a data-pattern-post-info="link" href="{{ post.link }}" target="_self" class="{{blockClassName}}__post-cover-link {{coverlinkHover}}" aria-label="{{post.title}}"></a>
+		<a data-pattern-post-info="link" href="{{ post.link }}" target="_self" class="{{blockClassName}}__post-cover-link {{coverlinkHover}}" aria-label="{{post.title}}">
+			<span class="{{blockClassName}}__post-cover-label">{{post.title}}</span>
+		</a>
 	{% endif %}
 	{{htmlEntryPoint}}
 </section>

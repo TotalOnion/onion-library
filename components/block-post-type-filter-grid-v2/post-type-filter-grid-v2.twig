@@ -12,6 +12,7 @@
 {{ dump(options) }}
 
 </pre> #}
+
 {% if fields.enable_featured_post and fields.featured_post is not empty %}
 	{% set featuredPost = {} %}
 	{% set featuredPostData = get_post(fields.featured_post) %}
@@ -71,6 +72,7 @@
 
 {# Debug Dumps #}
 {# <pre>
+{{ dump('test', updatedPosts.testVariable) }}
 {{ dump('post type', updatedPosts.postType) }}
 {{ dump('all-products', updatedPosts.allProducts) }}
 {{ dump('sorting', updatedPosts.sorting) }}
@@ -87,8 +89,8 @@
 {{ dump('posts per page', updatedPosts.postsPerPage) }}
 {{ dump('categories', updatedPosts.categories) }}
 {{ dump(updatedPosts.allPosts|slice(1,12)) }}
-{{ dump(updatedPosts.posts) }}
-</pre> #}
+{{ dump('updatedposts', updatedPosts.posts) }}
+</pre>  #}
 
 {% set blockBackgroundColour = '--block-background-colour: ' ~ fields.block_background_colour ~ ';' %}
 {% set gridBackgroundColour = '--grid-background-colour: ' ~ fields.grid_background_colour ~ ';' %}

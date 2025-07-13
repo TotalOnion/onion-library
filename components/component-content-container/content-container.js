@@ -4,8 +4,12 @@ export default function contentContainerJs(block) {
 	if (!block) {
 		return;
 	}
+
 	const blockClassName = block.dataset.assetkey;
 	const formContainerElement = block.querySelector('.form-container');
+	const modalFormContainerElement = block.querySelector(
+		'.form-container__modal'
+	);
 	const countdownElement = block.querySelector('.countdowndate');
 	const socialMediaElement = block.querySelector('.social-media-share-popup');
 	const accordionV2Element = block.querySelector(
@@ -20,7 +24,7 @@ export default function contentContainerJs(block) {
 	// 	'.standard-content-v2__accordion-v3'
 	// );
 
-	if (formContainerElement) {
+	if (formContainerElement || modalFormContainerElement) {
 		import(
 			'Assets/js/modules/library-modules/form-selection/form-selection.js'
 		).then((module) => {

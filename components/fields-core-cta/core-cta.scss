@@ -1,7 +1,7 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../fields-core-functions/core-functions';
-@use '../fields-core-mixins/core-mixins';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/theme/breakpoints';
 
 @mixin ctaButtonStyles() {
 	[class*='cmpl-cta-style-'] {
@@ -87,6 +87,40 @@
 					var(--cta-style-#{$i}-padding-inline-mobile),
 					'mobile'
 				);
+			// shadow
+			--box-shadow-offset-x: var(--cta-style-#{$i}-shadow-offset-x, 0);
+			--box-shadow-offset-y: var(--cta-style-#{$i}-shadow-offset-y, 0);
+			--box-shadow-blur: var(--cta-style-#{$i}-shadow-blur, 0);
+			--box-shadow-spread: var(--cta-style-#{$i}-shadow-radius, 0);
+			--box-shadow-colour: var(--cta-style-#{$i}-shadow-colour, 0);
+			--box-shadow-position: var(--cta-style-#{$i}-shadow-position, 0);
+
+			// hover shadow
+			--box-shadow-hover-offset-x: var(
+				--cta-style-#{$i}-shadow-offset-hover-x,
+				0
+			);
+			--box-shadow-hover-offset-y: var(
+				--cta-style-#{$i}-shadow-offset-hover-y,
+				0
+			);
+			--box-shadow-hover-blur: var(
+				--cta-style-#{$i}-shadow-hover-blur,
+				0
+			);
+			--box-shadow-hover-spread: var(
+				--cta-style-#{$i}-shadow-hover-radius,
+				0
+			);
+			--box-shadow-hover-colour: var(
+				--cta-style-#{$i}-shadow-hover-colour,
+				0
+			);
+			--box-shadow-hover-position: var(
+				--cta-style-#{$i}-shadow-hover-position,
+				0
+			);
+			@include core-mixins.boxShadow();
 
 			@include core-mixins.device(breakpoints.$tabPortrait) {
 				font-size: clamp(
@@ -236,41 +270,6 @@
 					solid
 					var(--cta-style-#{$i}-selected-border-colour);
 			}
-
-			// shadow
-			--box-shadow-offset-x: var(--cta-style-#{$i}-shadow-offset-x, 0);
-			--box-shadow-offset-y: var(--cta-style-#{$i}-shadow-offset-y, 0);
-			--box-shadow-blur: var(--cta-style-#{$i}-shadow-blur, 0);
-			--box-shadow-spread: var(--cta-style-#{$i}-shado-radius, 0);
-			--box-shadow-colour: var(--cta-style-#{$i}-shadow-colour, 0);
-			--box-shadow-position: var(--cta-style-#{$i}-shadow-position, 0);
-
-			// hover shadow
-			--box-shadow-hover-offset-x: var(
-				--cta-style-#{$i}-shadow-offset-hover-x,
-				0
-			);
-			--box-shadow-hover-offset-y: var(
-				--cta-style-#{$i}-shadow-offset-hover-y,
-				0
-			);
-			--box-shadow-hover-blur: var(
-				--cta-style-#{$i}-shadow-hover-blur,
-				0
-			);
-			--box-shadow-hover-spread: var(
-				--cta-style-#{$i}-shadow-hover-radius,
-				0
-			);
-			--box-shadow-hover-colour: var(
-				--cta-style-#{$i}-shadow-hover-colour,
-				0
-			);
-			--box-shadow-hover-position: var(
-				--cta-style-#{$i}-shadow-hover-position,
-				0
-			);
-			@include core-mixins.boxShadow();
 		}
 	}
 }

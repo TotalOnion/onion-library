@@ -12,19 +12,19 @@ function core_typography()
                 $output = '
             <style id="core-typography-vars">
             :root {
-                --paragraph-block-spacing-mobile:' . ($options['paragraph_spacing_mobile'] ?? 0) . 'em;
-                --paragraph-block-spacing-portrait:' . ($options['paragraph_spacing_portrait'] ?? 0) . 'em;
-                --paragraph-block-spacing-desktop:' . ($options['paragraph_spacing_desktop'] ?? 0) . 'em;
-                --heading-block-spacing-mobile:' . ($options['heading_spacing_mobile'] ?? 0) . 'em;
-                --heading-block-spacing-portrait:' . ($options['heading_spacing_portrait'] ?? 0) . 'em;
-                --heading-block-spacing-desktop:' . ($options['heading_spacing_desktop'] ?? 0) . 'em;
+                --paragraph-block-spacing-mobile:' . ($options['paragraph_spacing_mobile'] ?? 0) . 'px;
+                --paragraph-block-spacing-portrait:' . ($options['paragraph_spacing_portrait'] ?? 0) . 'px;
+                --paragraph-block-spacing-desktop:' . ($options['paragraph_spacing_desktop'] ?? 0) . 'px;
+                --heading-block-spacing-mobile:' . ($options['heading_spacing_mobile'] ?? 0) . 'px;
+                --heading-block-spacing-portrait:' . ($options['heading_spacing_portrait'] ?? 0) . 'px;
+                --heading-block-spacing-desktop:' . ($options['heading_spacing_desktop'] ?? 0) . 'px;
 
                 --list-item-line-height:' . ($options['list_item_line_height'] ?? 0) . '%;
                 --list-item-letter-spacing:' . ($options['list_item_letter_spacing'] ?? 0) . 'em;
-                --list-item-block-spacing-mobile:' . ($options['list_item_block_spacing_mobile'] ?? 0) . 'em;
-                --list-item-block-spacing-portrait:' . ($options['list_item_block_spacing_portrait'] ?? 0) . 'em;
-                --list-item-block-spacing-landscape:' . ($options['list_item_block_spacing_landscape'] ?? 0) . 'em;
-                --list-item-block-spacing-desktop:' . ($options['list_item_block_spacing_desktop'] ?? 0) . 'em;
+                --list-item-block-spacing-mobile:' . ($options['list_item_block_spacing_mobile'] ?? 0) . 'px;
+                --list-item-block-spacing-portrait:' . ($options['list_item_block_spacing_portrait'] ?? 0) . 'px;
+                --list-item-block-spacing-landscape:' . ($options['list_item_block_spacing_landscape'] ?? 0) . 'px;
+                --list-item-block-spacing-desktop:' . ($options['list_item_block_spacing_desktop'] ?? 0) . 'px;
 
                 --h1-l-font-family:' . (remove_underscore($options['headings']['h1_l_font_family'] ?? 'arial')) . ';
                 --h1-font-family:' . (remove_underscore($options['headings']['h1_font_family'] ?? 'arial')) . ';

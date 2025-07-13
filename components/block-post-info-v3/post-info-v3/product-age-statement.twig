@@ -1,0 +1,12 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set textStyle = include('components/text-style.twig', {field, post}) %}
+{% set elementStyles = gridLayoutElement ~ textStyle %}
+<style>
+	.{{blockClassName}}__age-statement.{{block.id}} {
+		{{elementStyles}}
+	}
+</style>
+{% if field.enable_age_statement_label|ru %}
+	<div class="{{blockClassName}}__age-statement-label">{{field.age_statement_label}}</div>
+{% endif %}
+<{{field.text_style.text_element_type|ru}} class="{{blockClassName}}__age-statement {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}">{{post.product_age_statement}}</{{field.text_style.text_element_type|ru}}>

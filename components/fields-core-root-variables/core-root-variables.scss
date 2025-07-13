@@ -1,16 +1,15 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../fields-core-mixins/core-mixins';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/theme/breakpoints';
 
 //Global native CSS variables
-:root {
+body {
 	// When you are in the WP preview - the screen width var now now needs to match the width of the WP editor preview box.
-	&.wp-toolbar {
+	.wp-toolbar & {
 		--screen-width-mobile: 360px;
 		--font-reference-mobile: 360px;
 		--screen-width: 360px;
 		--font-reference: 360px;
-
 		@include core-mixins.device(breakpoints.$tabPortrait) {
 			--screen-width-portrait: 768px;
 			--screen-width-landscape: 768px;
@@ -42,7 +41,6 @@
 	--weight-bold: 700;
 	--weight-extra-bold: 800;
 	--weight-extra-bold-plus: 900;
-
 	--default-text-colour-mobile: var(--theme-primary-text-colour);
 	--default-text-colour-desktop: var(--theme-primary-text-colour);
 }

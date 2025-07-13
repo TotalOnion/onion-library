@@ -1,0 +1,9 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set image = get_image(post.product_logo) %}
+{% set elementStyles = gridLayoutElement %}
+<style>
+	.{{blockClassName}}__product-logo.{{block.id}} {
+		{{elementStyles}}; --logo-max-width-desktop: {{field.logo_max_width_desktop}}; --logo-max-width-mobile: {{field.logo_max_width_mobile}}
+	}
+</style>
+<img src="{{image.src}}" srcset="{{image.srcset}}" width="{{image.width}}" height="{{image.height}}" alt="{{image.alt}}" class="{{blockClassName}}__product-logo {{blockClassName}}__info-item pattern-product_logo {{block.id}}">

@@ -36,29 +36,47 @@
 
 
 {% if eshopSettings.enable_mikmak and eshopSettings.mikmak_brand_id is not empty %}
-    <script>
-    /* Start of Swaven tag */
-    (function(e,d){try{var a=window.swnDataLayer=window.swnDataLayer||{};a.appId=e||a.appId,a.eventBuffer=a.eventBuffer||[],a.loadBuffer=a.loadBuffer||[],a.push=a.push||function(e){a.eventBuffer.push(e)},a.load=a.load||function(e){a.loadBuffer.push(e)},a.dnt=a.dnt!=null?a.dnt:d;var t=document.getElementsByTagName("script")[0],n=document.createElement("script");n.async=!0,n.src="//wtb-tag.mikmak.ai/scripts/"+a.appId+"/tag.min.js",t.parentNode.insertBefore(n,t)}catch(e){console.log(e)}}("{{eshopSettings.mikmak_brand_id}}", false));
-    /* End of Swaven tag */
-    </script>
+    {% if current_post.id not in eshopSettings.exclude_page_mikmak %}
+        <script>
+        /* Start of Swaven tag */
+        (function(e,d){try{var a=window.swnDataLayer=window.swnDataLayer||{};a.appId=e||a.appId,a.eventBuffer=a.eventBuffer||[],a.loadBuffer=a.loadBuffer||[],a.push=a.push||function(e){a.eventBuffer.push(e)},a.load=a.load||function(e){a.loadBuffer.push(e)},a.dnt=a.dnt!=null?a.dnt:d;var t=document.getElementsByTagName("script")[0],n=document.createElement("script");n.async=!0,n.src="//wtb-tag.mikmak.ai/scripts/"+a.appId+"/tag.min.js",t.parentNode.insertBefore(n,t)}catch(e){console.log(e)}}("{{eshopSettings.mikmak_brand_id}}", false));
+        /* End of Swaven tag */
+        </script>
 
-    {% set product = get_post(eshopSettings.mikmak_global_default_product) %}
-    {% set productEANs = product.meta('mikmak_ean_ids') %}
-    {% set relatedProducts = product.meta('related_products') %}
-    {% set defaultProductEAN = productEANs|split(',') %}
+        {% set product = get_post(eshopSettings.mikmak_global_default_product) %}
+        {% set productEANs = product.meta('mikmak_ean_ids') %}
+        {% set relatedProducts = product.meta('related_products') %}
+        {# set defaultGlobalProductEAN = productEANs|split(',') #}
+        {% set defaultProductEAN = '' %}
 
-    {% set relatedProductEANs = '' %}
-    {% for post in relatedProducts %}
-        {% set relatedProduct = get_post(post) %}
-        {% set relatedProductEANs = relatedProductEANs ~ ',' ~ relatedProduct.meta('mikmak_ean_ids')|trim(',') %}
-    {% endfor %}
-    {% set relatedProductEANs = relatedProductEANs|trim(',') %}
+        {% if post.post_type == 'product' %}
+            {% set defaultProductEAN = post.meta('mikmak_ean_ids') %}
+        {% endif %}
+        {% if post.post_type == 'cocktail' %}
+            {% set cocktailFlavourProductID = post.meta('flavoured_product') %}
+            {% if cocktailFlavourProductID is not empty %}
+                {% set flavourProduct = get_post(cocktailFlavourProductID) %}
+                {% set defaultProductEAN = flavourProduct.meta('mikmak_ean_ids') %}
+            {% endif %}
+        {% endif %}
 
-    {% if productEANs is not empty %}
-        {% set relatedProductEANs = productEANs ~ (relatedProductEANs is not empty ? ',' ~ relatedProductEANs : '') %}
+        {% set relatedProductEANs = '' %}
+        {% for post in relatedProducts %}
+            {% set relatedProduct = get_post(post) %}
+            {% set relatedProductEANs = relatedProductEANs ~ ',' ~ relatedProduct.meta('mikmak_ean_ids')|trim(',') %}
+        {% endfor %}
+        {% set relatedProductEANs = relatedProductEANs|trim(',') %}
+
+        {% if productEANs is not empty %}
+            {% set relatedProductEANs = productEANs ~ (relatedProductEANs is not empty ? ',' ~ relatedProductEANs : '') %}
+        {% endif %}
+
+        {% if defaultProductEAN is not empty %}
+            {% set relatedProductEANs = defaultProductEAN ~ ',' ~ relatedProductEANs %}
+        {% endif %}
+
+        <template data-mm-wtbid="{{eshopSettings.mikmak_ctb_drawer_widget_id}}" data-mm-ids="{{relatedProductEANs}}"></template>
     {% endif %}
-
-    <template data-mm-wtbid="{{eshopSettings.mikmak_ctb_drawer_widget_id}}" data-mm-ids="{{relatedProductEANs}}"></template>
 {% endif %}
 {% if eshopSettings.enable_pricespider and eshopSettings.pricespider_key is not empty %}
 		<script type="text/javascript" src="//cdn.pricespider.com/1/lib/ps-widget.js" async></script>

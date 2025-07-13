@@ -11,7 +11,9 @@ const themePath =
 
 const yamlData = yaml.load(fs.readFileSync('../../../../.lando.yml', 'utf8'));
 const siteName = yamlData.config.site;
-const parentURL = process.env.DESIGN_MULTIDEV ? `${process.env.DESIGN_MULTIDEV}/wp-admin/admin-ajax.php` : `http://${siteName}.lndo.site/wp-admin/admin-ajax.php`;
+const parentURL = process.env.DESIGN_MULTIDEV
+	? `${process.env.DESIGN_MULTIDEV}/wp-admin/admin-ajax.php`
+	: `http://${siteName}.lndo.site/wp-admin/admin-ajax.php`;
 
 let projectName = 'Global Theme';
 const projectJson = JSON.parse(fs.readFileSync('./package.json'));
@@ -64,7 +66,14 @@ let data = new FormData();
 data.append('action', 'get_pattern_block');
 data.append('postID', patternID);
 
-axios.post(parentURL, data).then(function (response) {
+const headers = {
+	headers: {
+		'user-agent':
+			'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+	}
+};
+
+axios.post(parentURL, data, headers).then(function (response) {
 	fs.writeFileSync(
 		`${themePath}/views/blocks/${newBlockName}.twig`,
 		response.data.html

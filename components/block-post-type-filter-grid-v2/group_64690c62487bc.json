@@ -2124,6 +2124,27 @@
             "append": ""
         },
         {
+            "key": "field_68593035220eb",
+            "label": "Filter categories title text",
+            "name": "categories_title_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "Filter",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64e4c3970fc92",
             "label": "Top level category button style",
             "name": "top_level_category_button_style",
@@ -4355,5 +4376,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1747646812
+    "modified": 1750675690
 }

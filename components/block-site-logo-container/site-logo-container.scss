@@ -1,6 +1,6 @@
-@use '../fields-core-mixins/core-mixins';
-@use '../fields-core-functions/core-functions';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/site-logo-container/site-logo-container-extra';
 .site-logo-container {
 	&__site-logo {

@@ -21,7 +21,7 @@
 					filterLayout == 5
 				" :class="`${blockClassName}__filter-categories`" :data-layout="filterLayout">
 					<div v-if="filterLayout == 4" :class="`${blockClassName}__filter-categories-label`">
-						Filter
+						{{categoriesTitleText}}
 						<button @click="modalOpen = !modalOpen"></button>
 					</div>
 					<div v-for="(topCategory, index) in computedCategories.topLevelCategories" :class="`${blockClassName}__filter-category ${blockClassName}__cta cmpl-cta-style-${showTopLevelFilters ? topLevelCategoryButtonStyle : 'none'
@@ -269,6 +269,7 @@ const topLevelFiltersActiveOnLoad = fields.top_level_filters_active_on_load;
 const singleActiveTopLevelCategory = fields.single_active_top_level_category;
 const singleActiveFilter = ref(fields.single_active_filter);
 const limitPostsToCategories = fields.limit_posts_to_selected_categories;
+const categoriesTitleText = fields.categories_title_text;
 const loadMoreText = fields.load_more_button_text;
 const showAllText = fields.show_all_button_text;
 const showAllPosts = fields.show_all_posts;
@@ -370,6 +371,8 @@ const computedLoadMore = computed(() => {
 			return false;
 		}
 	}
+	console.log("🚀 ~ computedLoadMore ~ totalPosts:", totalPosts)
+	console.log("🚀 ~ computedLoadMore ~ page.value * postsPerPage < totalPosts:", page.value * postsPerPage < totalPosts)
 	if (
 		page.value * postsPerPage < totalPosts
 	) {
@@ -525,7 +528,7 @@ const sortPosts = (posts) => {
 			return posts.sort((a, b) => new Date(b.post_data.post_date) - new Date(a.post_data.post_date)); // Newest first
 		case "date-asc":
 			return posts.sort((a, b) => new Date(a.post_data.post_date) - new Date(b.post_data.post_date)); // Oldest first
-		case "post-order":
+		case "postorder":
 			return posts; // Respect post type order plugin 
 		default:
 			return posts;
@@ -771,6 +774,8 @@ const getCategoryIds = () => {
 };
 
 const loadMorePosts = async (currentCategoryId = null) => {
+	console.log('trying to load more posts');
+	
 	if (currentCategoryId && loadedCategories.includes(currentCategoryId)) {
 		console.log('category already loaded');
 		return;

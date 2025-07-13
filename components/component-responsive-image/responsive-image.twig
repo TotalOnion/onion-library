@@ -49,7 +49,7 @@
 		{% set isSVG = desktopImage.post_mime_type == 'image/svg+xml' %}
 		{% set selectedAspectRatioDesktop = null %}
 		{% set mainImageSrc = isSVG ? desktopImage.src : gt_image_mainsrc(desktopImage) %}
-		{% set desktopSrcset = isSVG ? desktopImage.srcset : gt_image_srcset(desktopImage) %}
+		{% set desktopSrcset = isSVG ? desktopImage.src : gt_image_srcset(desktopImage) %}
 	{% elseif selectedAspectRatioDesktop == 'custom_aspect_ratio' %}
 		{% set isSVG = desktopImage.post_mime_type == 'image/svg+xml' %}
 		{% set customAspectRatio = fields.desktop_custom_aspect_ratio %}

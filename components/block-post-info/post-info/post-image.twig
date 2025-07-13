@@ -3,45 +3,40 @@
 {% if imageSelect == 'image_accent' %}
 	{% set positionVars = include('components/element-positioning.twig', {fields : field.post_image_positioning, block : block, blockClassName : imageClassname}, with_context = false) %}
 {% endif %}
-
 {% set imageWidthPercentMobile = '--post-image-width-mobile: ' ~ field.post_image_width ~ '%;' %}
 {% set imageWidthPercentDesktop = '--post-image-width-desktop: ' ~ field.post_image_width ~ '%;' %}
-
 {% if imageSelect == 'image_accent' %}
 	{% set imageWidthPercentMobile = '--post-image-width-mobile: calc(' ~ field.post_image_width_mobile_px ~ ' / var(--mobile-design-reference) * var(--screen-width-mobile));' %}
 	{% set imageWidthPercentDesktop = '--post-image-width-desktop: calc(' ~ field.post_image_width_desktop_px ~ ' / var(--desktop-design-reference) * var(--screen-width-desktop));' %}
 {% endif %}
-
 {% set imageAspectRatioDesktop = '--image-aspect-ratio-desktop:' ~ field.image_aspect_ratio_desktop ~ ';' %}
 {% set imageAspectRatioPortrait = '--image-aspect-ratio-portrait:' ~ field.image_aspect_ratio_portrait ~ ';' %}
 {% set imageAspectRatioMobile = '--image-aspect-ratio-mobile:' ~ field.image_aspect_ratio_mobile ~ ';' %}
-
 {% set imageFitStyle = '--image-fit-style:' ~ (field.image_fit_style|ru|default('contain')) ~ ';' %}
-
 {% set styleVars = imageWidthPercentDesktop ~ imageWidthPercentMobile ~ imageWidthPercentMobilePx ~ imageWidthPercentDesktopPx ~ imageAspectRatioDesktop ~ imageAspectRatioPortrait ~ imageAspectRatioMobile ~ imageFitStyle %}
-
-
-<a href="{{post.link}}" data-pattern-post-info="link" class="{{blockClassName}}__post-image-container {{blockClassName}}__info-item {{blockClassName}}__info-item--{{postType}} {{blockClassName}}__post-image-container--{{imageSelect|replace({'_':'-'})}}" style="{{styleVars}} {{gridLayoutElement}} {{positionVars}}">
-
+<style>
+	.{{blockClassName}}__post-image-container.{{block.id}}{
+		{{styleVars}}
+		{{gridLayoutElement}}
+		{{positionVars}}
+	}
+</style>
+<a href="{{post.link}}" data-pattern-post-info="link" data-image-select="{{ imageSelect }}" class="{{blockClassName}}__post-image-container {{blockClassName}}__info-item {{blockClassName}}__info-item--{{postType}} {{blockClassName}}__post-image-container--{{imageSelect|replace({'_':'-'})}} {{block.id}}">
 	{% set imageSizes = imageSizes|default('(min-width: 1440px) 50vw, (min-width: 768px) 50vw, (min-width: 500px) 50vw, 100vw') %}
 	{% set imageFields = [] %}
 	{% set imageFields = imageFields|merge({'enable_image' : true}) %}
 	{% set imageClassname = 'post-info__post' %}
-
 	{% if attribute(post, 'post_' ~ imageSelect) %}
-{% set imageFields = imageFields|merge({'image' : attribute(post, 'post_' ~ imageSelect)}) %}
-
+		{% set imageFields = imageFields|merge({'image' : attribute(post, 'post_' ~ imageSelect)}) %}
 	{% elseif attribute(post, postType ~ '_' ~ imageSelect) %}
 		{% set imageFields = imageFields|merge({'image' : attribute(post, postType ~ '_' ~ imageSelect)}) %}
-{% elseif attribute(post, 'post_image') %}
-{% set imageFields = imageFields|merge({'image' : attribute(post, 'post_image')}) %}{% endif %}
-
-
-{{ include('components/single-image.twig', {
+		{# {% elseif attribute(post, 'post_image') %}
+						{% set imageFields = imageFields|merge({'image' : attribute(post, 'post_image')}) %} #}
+	{% endif %}
+	{{ include('components/single-image.twig', {
 		fields: imageFields,
 		block: block,
 		blockClassName: imageClassname,
 		imageSizes: imageSizes
 	}, with_context = false) }}
-
 </a>

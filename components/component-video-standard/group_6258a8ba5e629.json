@@ -829,6 +829,161 @@
             "append": ""
         },
         {
+            "key": "field_6854077f50a88",
+            "label": "Enable Captions",
+            "name": "enable_captions",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6854084950a89",
+            "label": "Captions",
+            "name": "captions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6854077f50a88",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258a8d23dbcf",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6258a8f13dbd0",
+                        "operator": "==",
+                        "value": "__upload"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6854085850a8a",
+                    "label": "Captions File",
+                    "name": "captions_file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "Must be in VTT (Video Text Track)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "uploader": "",
+                    "return_format": "array",
+                    "preview_style": "default",
+                    "library": "all",
+                    "upload_folder": "",
+                    "button_label": "Add File",
+                    "file_count": 0,
+                    "multiple": 0,
+                    "max": "",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "placeholder": "Select",
+                    "stylised_button": 0,
+                    "min": "",
+                    "parent_repeater": "field_6854084950a89"
+                },
+                {
+                    "key": "field_685408bf50a8b",
+                    "label": "Language Code",
+                    "name": "language_code",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "For example: en, fr, es",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6854084950a89"
+                },
+                {
+                    "key": "field_6854092150a8c",
+                    "label": "Caption Label",
+                    "name": "caption_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "For example \"English Captions\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6854084950a89"
+                }
+            ]
+        },
+        {
             "key": "field_670b8c611d00d",
             "label": "Child patterns",
             "name": "child_patterns",
@@ -883,5 +1038,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1746891449
+    "modified": 1750410376
 }

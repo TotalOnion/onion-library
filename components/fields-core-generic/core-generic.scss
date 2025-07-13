@@ -1,7 +1,7 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../fields-core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
 @use 'Assets/scss/modules/library-modules/core-cta/core-cta';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/theme/breakpoints';
 
 /* Box sizing rules */
 *,
@@ -12,6 +12,7 @@
 
 html {
 	min-height: 100%;
+	container-type: inline-size;
 }
 
 .lazy-fade {
@@ -91,6 +92,7 @@ main {
 	margin-inline: auto;
 	background-image: var(--main-container-background-image);
 	background-repeat: repeat;
+	container-type: inline-size;
 }
 
 header,
@@ -98,6 +100,9 @@ footer,
 section {
 	width: 100%;
 	max-width: 100%;
+}
+section[data-assetkey] {
+	// container-type: inline-size;
 }
 .site-footer-block {
 	margin-top: auto;

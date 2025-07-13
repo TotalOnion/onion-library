@@ -1,6 +1,6 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../component-breakpoints/breakpoints';
-@use '../fields-core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
 @use 'sass:math';
 
 @mixin textStyle() {
@@ -11,6 +11,9 @@
 }
 
 @mixin device($size: '768px', $type: 'min-width') {
+	// @container (min-width: #{$size}) {
+	// 	@content;
+	// }
 	@media screen and (#{$type}: #{$size}) {
 		@content;
 	}

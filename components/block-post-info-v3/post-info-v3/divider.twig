@@ -1,0 +1,8 @@
+<style>
+	.{{blockClassName}}__divider-container.{{block.id}} {
+		--post-divider-column-start: {{field.post_divider_column_start}}; --post-divider-column-span: {{field.post_divider_column_span}}
+	}
+</style>
+<div class="{{blockClassName}}__divider-container {{blockClassName}}__info-item {{block.id}}">
+	{{ include( 'blocks/divider.twig', {fields : field, block : block, blockClassName : blockClassName}, with_context = false) }}
+</div>

@@ -1,9 +1,12 @@
 {% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
 {% set textStyle = include('components/text-style.twig', {field, post}) %}
 {% set elementStyles = gridLayoutElement ~ textStyle %}
-
-
-<div class="{{blockClassName}}__bazaarvoice {{blockClassName}}__info-item {{field.text_style.typography_style|ru}}" style="{{elementStyles}}">
+<style>
+	.{{blockClassName}}__bazaarvoice.{{block.id}} {
+		{{elementStyles}}
+	}
+</style>
+<div class="{{blockClassName}}__bazaarvoice {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}">
     {% if post.product_bazaarvoice is defined and post.product_bazaarvoice is not empty %}
         {{function( 'do_shortcode', '[bazaarvoice bazaarvoice_product_id=' ~ post.product_bazaarvoice ~ ' type="inline_rating"]' )|raw}}
     {% endif %}

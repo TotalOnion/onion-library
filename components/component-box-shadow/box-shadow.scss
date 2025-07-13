@@ -1,4 +1,4 @@
-@use '../fields-core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
 
 @mixin boxShadow() {
 	box-shadow: core-functions.fluidSize(var(--box-shadow-offset-x), 'static')

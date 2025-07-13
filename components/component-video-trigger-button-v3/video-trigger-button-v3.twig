@@ -1,0 +1,14 @@
+{% set videoId = block.videoIdPrefix|default(block.id) ~ fields.video_trigger_id %}
+{% set alignmentVertical = '--playbutton-vertical-alignment: ' ~ fields.play_button_alignment_vertical|ru ~ ';'%}
+{% set alignmentHorizontal = '--playbutton-horizontal-alignment: ' ~ fields.play_button_alignment|ru ~ ';'%}
+{% set videoButtonStyles = alignmentHorizontal ~ alignmentVertical %}
+<style>
+	.{{blockClassName}}__video-play-button {
+		{{videoButtonStyles}}
+	}
+</style>
+<button aria-label="video controller play button" data-triggerid="{{videoId}}" class="{{blockClassName}}__video-play-button {{blockClassName}}__video-play-button--{{buttonStyle}} cblvc-video-container__trigger-button" tabindex="0"> 
+	{% if fields.enable_text %}
+		{{fields.play_button_text}}
+	{% endif %}
+</button>

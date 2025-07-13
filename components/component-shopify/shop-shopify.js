@@ -129,7 +129,7 @@ const cartOptions = {
 	events: {
 		openCheckout(cart) {
 			if (
-				cart.model.attrs.webUrl.value &&
+				cart?.model?.attrs?.webUrl?.value &&
 				typeof ga !== 'undefined' && // extra check, in case browsers are blocking tracking
 				typeof ga.getAll === 'function' &&
 				typeof ga.getAll()[0] !== 'undefined'
@@ -247,7 +247,13 @@ const ShopifyBuyInit = (options) => {
 							options: false
 						},
 						templates: {
-							button: '<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper"><button {{#data.buttonDisabled}}disabled{{/data.buttonDisabled}} class="{{data.classes.product.button}} price-button {{^data.selectedVariant.available}}shopify-cta--not-available{{/data.selectedVariant.available}} {{data.text.buttonStyle}}" data-element="product.button"><div class="shopify-cta__title price-button__title"><span class="text-modifier">{{data.buttonText}}</span></div></button></div>'
+							button: `<div class="{{data.classes.product.buttonWrapper}}" data-element="product.buttonWrapper">
+										<button {{#data.buttonDisabled}}disabled{{/data.buttonDisabled}} class="{{data.classes.product.button}} price-button {{^data.selectedVariant.available}}shopify-cta--not-available{{/data.selectedVariant.available}} {{data.text.buttonStyle}}" data-element="product.button">
+											<div class="shopify-cta__title price-button__title">
+												<span class="text-modifier">{{data.text.button}} {{data.formattedPrice}}</span>
+											</div>
+										</button>
+									</div>`
 						},
 						classes: {
 							button:
@@ -257,7 +263,7 @@ const ShopifyBuyInit = (options) => {
 											shopifyButton.dataset.engraved
 												? ' shopify-cta--engraved'
 												: ''
-										}`
+									  }`
 						},
 						text: {
 							button: shopifyButton.dataset.label,

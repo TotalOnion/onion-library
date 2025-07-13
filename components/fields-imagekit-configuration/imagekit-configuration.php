@@ -19,6 +19,9 @@ if (function_exists('get_fields') && defined('GLOBAL_SETTINGS')) {
 } else {
 	define('IMAGEKIT_CONFIG', ["use_imagekit_images" => false, "srcset_sizes" => []]);
 }
+if (!defined('GLOBAL_SETTINGS') || !is_array(GLOBAL_SETTINGS)) {
+	define('GLOBAL_SETTINGS', []);
+}
 if (array_key_exists('image_management', GLOBAL_SETTINGS)) {
 	define('IMAGEKIT_ENDPOINT', GLOBAL_SETTINGS['image_management']["imagekit_endpoint"] ?? null);
 } else {
@@ -41,6 +44,10 @@ function gt_ik_srcset($image, $options = ['aspect_ratio' => false, 'quality' => 
 {
 	if (!$image) {
 		return false;
+	}
+
+	if(is_string($image)) {
+		$image = (object)array("src" => $image, "width" => '' );
 	}
 
 	if (IMAGEKIT_CONFIG['use_imagekit_images'] === false) {
@@ -68,13 +75,17 @@ function gt_ik_srcset($image, $options = ['aspect_ratio' => false, 'quality' => 
 			$srcset .= IMAGEKIT_ENDPOINT . $sanitized_path . "?" . $ikOptions . $dimensions . " " . $srcsetValue . "w, ";
 		}
 	}
-	return rtrim($srcset, ", ");
+	return $srcset;
 }
 
 function gt_ik_mainsrc($image, $options = ['aspect_ratio' => false, 'quality' => 80])
 {
 	if (!$image) {
 		return false;
+	}
+
+	if(is_string($image)) {
+		$image = (object)array("src" => $image, "width" => '' );
 	}
 
 	if (IMAGEKIT_CONFIG['use_imagekit_images'] === false) {

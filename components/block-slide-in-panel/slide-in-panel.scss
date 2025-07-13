@@ -1,5 +1,5 @@
-@use '../fields-core-mixins/core-mixins';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/theme/buttons';
 
 .slide-in-panel {

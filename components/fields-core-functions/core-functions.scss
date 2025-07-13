@@ -1,5 +1,5 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/theme/breakpoints';
 @use 'sass:math';
 
 // @function fontSizeOld($size-px, $screen: 'mobile') {

@@ -1,11 +1,10 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use '../fields-core-mixins/core-mixins';
-@use '../fields-core-functions/core-functions';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/iframe-container/iframe-container-extra';
 
 .iframe-container {
-	@include iframe-container-extra.additionalStyles();
 	background-color: var(--background-colour);
 
 	&__iframe {
@@ -22,5 +21,9 @@
 		@include core-mixins.device(breakpoints.$tabLandscape) {
 			height: core-functions.fluidSize(var(--iframe-height), 'desktop');
 		}
+		.wp-admin & {
+			pointer-events: none;
+		}
 	}
+	@include iframe-container-extra.additionalStyles();
 }

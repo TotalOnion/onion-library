@@ -1219,8 +1219,8 @@
             ]
         },
         {
-            "key": "field_65ab952a3ed96",
-            "label": "General",
+            "key": "field_6862d7b459081",
+            "label": "Cocktail Skill",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -1239,9 +1239,9 @@
             "selected": 0
         },
         {
-            "key": "field_65098900f6988",
-            "label": "Tasting notes",
-            "name": "cocktail_tasting_notes",
+            "key": "field_680907b344c7f",
+            "label": "Cocktail Taste",
+            "name": "cocktail_taste",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1253,9 +1253,6 @@
                 "id": ""
             },
             "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -1288,7 +1285,7 @@
             "label": "Cocktail Skill Level",
             "name": "cocktail_skill_level",
             "aria-label": "",
-            "type": "text",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -1298,58 +1295,29 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67b5d0be4db7c",
-            "label": "Cocktail Skill Level",
-            "name": "cocktail_skill_level",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
+            "choices": {
+                "easy": "Easy",
+                "medium": "Medium",
+                "advanced": "Advanced"
             },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
         },
         {
-            "key": "field_67b5d0cb4db7d",
-            "label": "Cocktail Glass Type",
-            "name": "cocktail_glass_type",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67b5d0cb4db7d",
-            "label": "Cocktail Glass Type",
-            "name": "cocktail_glass_type",
+            "key": "field_6809081d5a685",
+            "label": "Cocktail Prep Time",
+            "name": "cocktail_prep_time",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1389,9 +1357,29 @@
             "append": ""
         },
         {
-            "key": "field_67b5d0be4db7c",
-            "label": "Cocktail Skill Level",
-            "name": "cocktail_skill_level",
+            "key": "field_65ab952a3ed96",
+            "label": "General",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_65098900f6988",
+            "label": "Tasting notes",
+            "name": "cocktail_tasting_notes",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1403,6 +1391,9 @@
                 "id": ""
             },
             "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -1457,5 +1448,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1746891721
+    "modified": 1751362005
 }

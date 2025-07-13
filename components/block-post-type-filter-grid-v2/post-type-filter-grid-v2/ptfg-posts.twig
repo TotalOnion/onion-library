@@ -13,8 +13,8 @@
 {% endif %}
 
 {% if sorting|ru == 'postorder' or sorting == 'postorder' %}
-	{% set order = '' %}
-	{% set orderby = '' %}
+	{% set order = 'ASC' %}
+	{% set orderby = 'menu_order' %}
 {% endif %}
 
 {% set showAllPosts = showAllPosts|default(fields.show_all_posts) %}
@@ -40,6 +40,8 @@
 	{% endif %}
 {% endif %}
 
+{% set currentMarket = currentMarket|default(fn('apply_filters', 'wpml_current_language', NULL)) %}
+
 {% if ( pageNum <= 0 ) %}
 
 	{% set allPostsTotal = 0 %}
@@ -51,8 +53,18 @@
 		'order' : order,
 		'lang': currentMarket,
 		'suppress_filters': false,
-		'has_password' : false
 	} %}
+
+	{% if postType == 'media' %}
+		{% set allPostIdArgs =  {
+		'post_type': 'attachment',
+		'posts_per_page' : -1,
+		'post_status': 'inherit',
+		'post_mime_type': 'image',
+		'lang': currentMarket,
+		'suppress_filters': false
+	} %}
+	{% endif %}
 
 	{% if limitPostsToSelectedCategories and limitPostsToSelectedCategories != 'false' %}
 		{% if postType == 'product' or postType == 'cocktail' or postType == 'treat' or postType == 'drink' %}
@@ -87,12 +99,10 @@
 		'order' : order,
 		'lang' : currentMarket,
 		'fields' : 'ids',
-		'suppress_filters' : false,
-		'has_password' : false})
+		'suppress_filters' : false})
 	%}
 	{% endif %}
 {% endif %}
-
 
 {% set postsArgs = {
 		'post_type': postType,
@@ -102,7 +112,6 @@
 		'order' : order,
 		'lang': currentMarket,
 		'suppress_filters': false,
-		'has_password' : false
 	} %}
 
 {% if ( pageNum > 0 ) %}
@@ -110,6 +119,17 @@
 	{% set postsArgs =  postsArgs|merge({
 		'offset' : offset,
 	}) %}
+	{% if postType == 'media' %}
+		{% set postsArgs =  {
+		'post_type': 'attachment',
+		'posts_per_page' : -1,
+		'offset' : offset,
+		'post_status': 'inherit',
+		'post_mime_type': 'image',
+		'lang': 'en',
+		'suppress_filters': false
+	} %}
+	{% endif %}
 	{% if limitPostsToSelectedCategories and limitPostsToSelectedCategories != 'false' %}
 		{% if postType == 'product' or postType == 'cocktail' or postType == 'treat' or postType == 'drink' %}
 			{% set postsArgs =  postsArgs|merge( {
@@ -119,6 +139,16 @@
 					'include_children' : false,
 					'operator' : 'IN'}],
 				} ) %}
+		{% elseif postType == 'media' %}
+			{% set postsArgs =  {
+				'post_type': 'attachment',
+				'posts_per_page' : -1,
+				'offset' : offset,
+				'post_status': 'inherit',
+				'post_mime_type': 'image',
+				'lang': 'en',
+				'suppress_filters': false
+			} %}
 		{% else %}
 			{% set postsArgs =  postsArgs|merge( {
 					'tax_query' : [{'taxonomy' : 'category',
@@ -126,7 +156,7 @@
 					'terms' : defaultCategory,
 					'include_children' : false,
 					'operator' : 'IN'}],
-				} ) %}
+			} ) %}
 		{% endif %}
 	{% endif %}
 	{% set posts = get_posts(postsArgs) %}
@@ -136,6 +166,17 @@
 		'orderby' : orderby,
 		'order' : order,
 	}) %}
+	{% if postType == 'media' %}
+		{% set postsArgs =  {
+		'post_type': 'attachment',
+		'posts_per_page' : initialPostsPerPage,
+		'post_status': 'inherit',
+		'post_mime_type': 'image',
+		'lang': 'en',
+		'suppress_filters': false
+	} %}
+	{% set testVariable = postsArgs %}
+	{% endif %}
 	{% if limitPostsToSelectedCategories and limitPostsToSelectedCategories != 'false' %}
 		{% if postType == 'product' or postType == 'cocktail' or postType == 'treat' or postType == 'drink' %}
 			{% set postsArgs =  postsArgs|merge( {
@@ -153,12 +194,43 @@
 					'include_children' : false,
 					'operator' : 'IN'}],
 				} ) %}
+				{% if postType == 'media' %}
+					{% set postsArgs =  postsArgs|merge( {
+							'tax_query' : [{'taxonomy' : 'category',
+							'field' : 'term_id', 
+							'terms' : defaultCategory,
+							'include_children' : false,
+							post_mime_type: 'image',
+							'operator' : 'IN'}],
+						} ) %}
+				{% endif %}
 		{% endif %}
 	{% endif %}
 	{% set posts = get_posts(postsArgs) %}
 {% endif %}
 
 {% set updatedPosts = [] %}
+
+{% if postType == 'media' %}
+	{% for mediaItem in posts %}
+		{% set updatedPost = {} %}
+		{% set post_images = {} %}
+		{% set post_image = get_image(mediaItem) %}
+		{% set post_images = post_images|merge({'post_image_src' : gt_image_mainsrc(post_image)}) %}
+		{% set post_images = post_images|merge({'post_image_srcset' : gt_image_srcset(post_image)}) %}
+		{% set post_images = post_images|merge({'post_image_width' : post_image.width}) %}
+		{% set post_images = post_images|merge({'post_image_height' : post_image.height}) %}
+		{% set post_images = post_images|merge({'post_image_alt_text' : post_image.alt}) %}
+		{% set post_data = {'slug' : post_image.guid, 'post_type' : postType} %}
+		{% set post_images = post_images|merge({'post_image' : post_image}) %}
+		{% set updatedPost = updatedPost|merge({'post_images' : post_images}) %}
+		{% set updatedPost = updatedPost|merge({'post_data' : post_data}) %}
+		{% set updatedPost = updatedPost|merge({'categories' : post_image.terms}) %}
+		{% set updatedPost = updatedPost|merge({'id' : post_image.id}) %}
+		{% set updatedPost = updatedPost|merge({'link' : post_image.link}) %}
+		{% set updatedPosts = updatedPosts|merge([updatedPost]) %}
+	{% endfor %}
+{% endif %}
 
 {% if postType == 'pr_social_media_item' %}
 	{% set pr_social_media_item = get_posts({
@@ -190,35 +262,7 @@
 	{% endfor %}
 {% endif %}
 
-{% if postType == 'media' %}
-	{% set media = get_posts({
-					'post_type' : 'attachment',
-					'posts_per_page' : -1,
-                    'orderby' : orderby,
-                    'order' : order,
-					'lang' : currentMarket,
-					'suppress_filters' : false,
-					'has_password' : false})
-%}
-	{% set posts = [] %}
-	{% for mediaItem in media %}
-		{% set updatedPost = {} %}
-		{% set post_images = {} %}
-		{% set post_image = get_image(mediaItem) %}
-		{% set post_images = post_images|merge({'post_image_src' : gt_image_mainsrc(post_image)}) %}
-		{% set post_images = post_images|merge({'post_image_srcset' : gt_image_srcset(post_image)}) %}
-		{% set post_images = post_images|merge({'post_image_width' : post_image.width}) %}
-		{% set post_images = post_images|merge({'post_image_height' : post_image.height}) %}
-		{% set post_images = post_images|merge({'post_image_alt_text' : post_image.alt}) %}
-		{% set post_data = {'slug' : post_image.guid, 'post_type' : postType} %}
-		{% set post_images = post_images|merge({'post_image' : post_image}) %}
-		{% set updatedPost = updatedPost|merge({'post_images' : post_images}) %}
-		{% set updatedPost = updatedPost|merge({'post_data' : post_data}) %}
-		{% set updatedPost = updatedPost|merge({'categories' : post_image.terms}) %}
-		{% set updatedPost = updatedPost|merge({'link' : post_image.link}) %}
-		{% set updatedPosts = updatedPosts|merge([updatedPost]) %}
-	{% endfor %}
-{% endif %}
+
 
 {# Post Data Processing #}
 {% if (postType != 'pr_social_media_item') and (postType != 'media')%}
@@ -329,7 +373,7 @@
 			{% set post_images = post_images|merge({'post_image_alt_text' : post_image.alt}) %}
 		{% endif %}
 
-		{% set post_image_alt_id =  post.meta['post_image_alt'] %}
+			{% set post_image_alt_id =  post.meta['post_image_alt'] %}
 		{% if post_image_alt_id != null %}
 			{% set post_image_alt =  get_image(post.meta['post_image_alt']) %}
 			{% set post_images = post_images|merge({'post_image_alt' : post_image_alt}) %}
@@ -379,6 +423,7 @@
 {% endif %}
 
 {% set returnedPosts = {
+	'testVariable' : media,
 	'postType' : postType,
 	'pageNum' : pageNum,
 	'order' : order,

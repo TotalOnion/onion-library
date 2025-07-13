@@ -1,0 +1,23 @@
+{% set contentContainerStyles =  include('components/content-box-settings-v3.twig', { fields, block, blockClassName }, with_context = false) %}
+<style>
+	.{{blockClassName}}__inner-container.{{block.id}}{
+		{{contentContainerStyles}}
+	}
+</style>
+{% set currentBlockId = block.id %}
+<div class="{{blockClassName}}__inner-container {{block.id}} XX">
+	{% for item in fields.content_sections %}
+		{% if block %}
+			{% set block = block|merge({'anchor' : ''}) %}
+			{% set block = block|merge({'id' : block.id ~ '-' ~ loop.index}) %}
+			{% set block = block|merge({'className' : ''}) %}
+		{% endif %}
+		{% set path = '' %}
+		{% if item.acf_fc_layout == 'spacer_v3' or item.acf_fc_layout == 'divider_v3' or item.acf_fc_layout == 'breadcrumb_display' %}
+			{% set path = 'blocks' %}
+		{% else %}
+			{% set path = 'components' %}
+		{% endif %}
+		{{ include(path ~ '/' ~ (item.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: item, block, contentImageSizes, blockClassName, options, nav_menus, market_settings, cta_styles, current_post, languages}, with_context = false, ignore_missing = true) }}
+	{% endfor %}
+</div>

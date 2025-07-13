@@ -1,0 +1,36 @@
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, post: post }, with_context = false) %}
+{% set textStyle = include('components/text-style.twig', {field, post}) %}
+
+{% if post.use_default_values == true %}
+	{% set moreButton = __('Read More', 'Global Theme') %}
+	{% set lessButton = __('Read Less', 'Global Theme')  %}
+{% else %}
+	{% set moreButton = post.more_button %}
+	{% set lessButton = post.less_button %}		
+{% endif %}
+
+{% set previewText = field|merge({standard_content_box_text_content : post.preview_text, enable_standard_content_box: true}) %}
+
+{% set mainText = field|merge({standard_content_box_text_content : post.main_text, enable_standard_content_box: true}) %}	
+
+{% if post.desktop_default_text_colour %}
+	{% set defaultTextColourDesktop = '--default-text-colour-desktop: ' ~ post.desktop_default_text_colour|ru ~ ';' %}
+{% endif %}
+{% if post.portrait_default_text_colour %}
+	{% set defaultTextColourPortrait = '--default-text-colour-portrait: ' ~ post.portrait_default_text_colour|ru ~ ';' %}
+{% endif %}
+{% if post.mobile_default_text_colour %}
+	{% set defaultTextColourMobile = '--default-text-colour-mobile: ' ~ post.mobile_default_text_colour|ru ~ ';' %}
+{% endif %}
+
+{% set moreLessFontSizeMultiplier = '--more-less-font-size-multiplier: ' ~ post.moreless_font_size_multiplier|ru ~ '%;' %}
+{% set elementStyles = gridLayoutElement ~ textStyle %}
+<div class="truncated-text {{blockClassName}}__truncated-text {{blockClassName}}__info-item" style="{{elementStyles}}">
+	<div class="truncated-text__preview">
+		{{ include('components/standard-content-box.twig', {fields : previewText, block : block, blockClassName : blockClassName}, with_context = false) }}
+	</div>
+	<div class="truncated-text__remainder-text">
+		{{ include('components/standard-content-box.twig', {fields : mainText, block : block, blockClassName : blockClassName}, with_context = false) }}
+	</div>
+	<div class="truncated-text__toggle {{field.moreless_font_size|ru|default('p-sizing') }}" data-open="{{lessButton}}" data-close="{{moreButton}}" style="{{defaultTextColourDesktop ~ defaultTextColourPortrait ~ defaultTextColourMobile ~ moreLessFontSizeMultiplier }}"></div>
+</div>

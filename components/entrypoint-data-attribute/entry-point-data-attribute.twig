@@ -1,6 +1,5 @@
 {% if fields.eager_loading %}
 	{{ include('components/eager-loading.twig', {fields, block}, with_context = false, ignore_missing = true) }}
 {% endif %}
-
 {% set dataEnables = include('components/data-enables.twig', {fields, block}, with_context = false, ignore_missing = true) %}
 {{dataEnables}}

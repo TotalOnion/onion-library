@@ -1,6 +1,6 @@
-@use '../fields-core-mixins/core-mixins';
-@use '../fields-core-functions/core-functions';
-@use '../component-breakpoints/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
 @use './post-author-extra';
 
 @mixin postauthorinfo() {
@@ -28,14 +28,12 @@
                 padding: core-functions.fluidSize(5, 'static');
             }
         }
-
         &--content {
             flex: 1;
             font-size: core-functions.fontSize(20, 'static');
             color: white;
             font-weight: bold;
             font-family: var(--secondary-font-family);
-
             .content-tooltip-wrapper {
                 display: inline-block;
                 position: relative;
