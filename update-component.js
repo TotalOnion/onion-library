@@ -3,7 +3,8 @@ const themePath =
 const fs = require('fs')
 const path = require('path')
 const libraryPath =
-	'./node_modules/@pernod-ricard-global-cms/cbl-component-library'
+  './node_modules/@total_onion/onion-library'
+
 
 // Get extension of filename
 const getExtension = (filename) => {
