@@ -4,7 +4,7 @@ const yargs = require('yargs');
 
 let projectName = 'Global Theme';
 const libraryPath =
-	'./node_modules/@pernod-ricard-global-cms/cbl-component-library';
+  './node_modules/@total_onion/onion-library'
 const projectJson = JSON.parse(fs.readFileSync('./package.json'));
 if (projectJson) {
 	projectName = projectJson.name;

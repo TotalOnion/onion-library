@@ -1,6 +1,6 @@
 const glob = require('glob');
 const libraryPath =
-	'./node_modules/@pernod-ricard-global-cms/cbl-component-library';
+  './node_modules/@total_onion/onion-library'
 
 const componentsList = glob.sync(`${libraryPath}/components/*`).map((path) => {
 	const assetKey = path.replace(`${libraryPath}/components/`, '');

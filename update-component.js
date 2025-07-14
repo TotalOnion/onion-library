@@ -473,8 +473,7 @@ const copySeopressComponent = (componentName) => {
 
 
 const updateComponent = () => {
-  const libraryPath =
-		'./node_modules/@pernod-ricard-global-cms/cbl-component-library'
+
 
   projectName = getProjectName()
 
