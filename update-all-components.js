@@ -72,7 +72,7 @@ const updateAllComponents = () => {
 		}
 
 		const component = componentsList[currentIndex++];
-		exec(`yarn update-component ${component}`, (error, stdout, stderr) => {
+		exec(`yarn update-onion-component ${component}`, (error, stdout, stderr) => {
 			if (error) {
 			  console.error(`Error: ${error.message}`);
 			}
