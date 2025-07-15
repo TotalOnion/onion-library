@@ -8,10 +8,10 @@
 
 {% set sectionStyles =  styleEntryPoint %}
 
+{% set renderDynamic = fields.render_dynamic|default(0) %}
+
 {{previewEntryPoint}}
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
-	
-	
-	
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-renderdynamic="{{renderDynamic}}" data-pattern-gradient-overlay data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+
 	{{htmlEntryPoint}}
 </section>
