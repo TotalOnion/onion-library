@@ -14,7 +14,7 @@
 {% set gridLayoutContainer = include('components/grid-layout-container.twig') %}
 {% set gridGapMults = include('components/grid-gap-mults.twig') %}
 {% set blockElementType = fields.block_element_type|default('section')|ru %}
-{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_columns_desktop)|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_columns_desktop)|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_columns_portrait)|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_columns_mobile)|round ~ 'vw, 100vw' %}
+{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_columns_portrait|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_columns_mobile|default(1))|round ~ 'vw, 100vw' %}
 
 {% set sectionStyles =  styleEntryPoint ~ fallbackBackgroundColour ~ gridGapMults ~ gridLayoutContainer ~ containerOverflowType ~ blockPosition %}
 

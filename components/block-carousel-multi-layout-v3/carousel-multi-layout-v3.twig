@@ -93,7 +93,7 @@
 {% set tabletSlides = 'data-tabletslides="' ~ fields.carousel_number_of_slides_tablet ~ '"' %}
 {% set desktopSlides = 'data-desktopslides="' ~ fields.carousel_number_of_slides_desktop ~ '"' %}
 
-{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.carousel_number_of_slides_desktop)|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.carousel_number_of_slides_desktop)|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.carousel_number_of_slides_tablet)|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.carousel_number_of_slides_mobile)|round ~ 'vw, 100vw' %}
+{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.carousel_number_of_slides_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.carousel_number_of_slides_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.carousel_number_of_slides_tablet|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.carousel_number_of_slides_mobile|default(1))|round ~ 'vw, 100vw' %}
 
 
 {% set sectionDataAttributes = dataAttributeEntryPoint ~ centerInsufficientSlidesDesktop ~ centerInsufficientSlidesPortrait ~ centerInsufficientSlidesMobile ~ autoplay ~ freeMode ~ mouseWheel ~ transitionDelay ~ transitionSpeed ~ transitionStyle ~ fractionStyle ~ fractionString ~ mobileSlides ~ tabletSlides ~ desktopSlides %}
@@ -115,8 +115,6 @@
 					{% endif %}
 					<div class="swiper-slide {{ blockClassName }}__slide" data-pattern-repeater-child="1">
 						{{ include("blocks/" ~ slide.acf_fc_layout|replace({"_" : "-"}) ~ ".twig", {fields: slide, block, options, nav_menus, cta_styles, market_slug, imageSizes }, with_context = false, ignore_missing = true) }}
-
-
 					</div>
 				{% endfor %}
 			</div>
