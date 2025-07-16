@@ -3,7 +3,6 @@
 {% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus, imageSizes }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
-{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields: fields, block: block, displaytype: displaytype, is_preview: is_preview }, with_context = false) %}
 {% set sectionStyles =  styleEntryPoint %}
 {{previewEntryPoint}}
