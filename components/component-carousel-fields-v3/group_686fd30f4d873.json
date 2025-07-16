@@ -165,18 +165,18 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "default_value": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "min": 1,
             "max": 15,
-            "step": ""
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_686fd30f63f6f",
@@ -188,7 +188,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -211,7 +211,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -234,14 +234,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 0,
             "min": 0,
             "max": 50,
@@ -260,14 +257,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 0,
             "min": 0,
             "max": 50,
@@ -286,14 +280,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 0,
             "min": 0,
             "max": 50,
@@ -326,7 +317,7 @@
         },
         {
             "key": "field_6876139023a51",
-            "label": "Carousel Nav Arrows",
+            "label": "Nav Arrows",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -511,7 +502,7 @@
         },
         {
             "key": "field_687610bd11475",
-            "label": "Carousel arrows end",
+            "label": "Nav arrows end",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -1079,14 +1070,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -1104,14 +1092,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -1129,14 +1114,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -1198,7 +1180,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1220,14 +1202,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -1245,14 +1224,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -1314,14 +1290,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 1,
             "min": 0,
             "max": 1,
@@ -1339,14 +1312,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 1,
             "min": 0,
             "max": 1,
@@ -1364,14 +1334,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 1,
             "min": 0,
             "max": 1,
@@ -1433,14 +1400,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 1000,
             "min": "",
             "max": 10000,
@@ -1458,14 +1422,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "default_value": 4000,
             "min": 0,
             "max": 10000,
@@ -1483,7 +1444,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1495,18 +1456,18 @@
                 "__creative": "Creative"
             },
             "default_value": "__default",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 1,
             "return_format": "value",
-            "placeholder": "",
+            "multiple": 0,
+            "max": "",
             "allow_custom": 0,
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": ""
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": "",
+            "min": ""
         },
         {
             "key": "field_686fd30f6a111",
@@ -1567,7 +1528,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1597,7 +1558,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1627,7 +1588,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -1721,7 +1682,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -1743,7 +1704,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -1765,7 +1726,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -1807,7 +1768,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -1829,7 +1790,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -1851,7 +1812,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -2773,7 +2734,7 @@
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "This feature is being evaluted and may be removed",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -2782,9 +2743,6 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "open": 0,
             "multi_expand": 0,
             "endpoint": 0
@@ -2913,5 +2871,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752654889
+    "modified": 1752655403
 }
