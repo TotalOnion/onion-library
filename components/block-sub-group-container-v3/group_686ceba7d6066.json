@@ -100,8 +100,6 @@
                 "layout"
             ],
             "acfe_flexible_add_actions": [
-                "title",
-                "toggle",
                 "copy",
                 "close"
             ],
@@ -1366,5 +1364,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752275871
+    "modified": 1752661541
 }
