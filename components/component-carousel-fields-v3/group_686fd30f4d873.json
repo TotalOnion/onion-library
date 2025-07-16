@@ -527,24 +527,13 @@
             "type": "accordion",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686fd30f5f920",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "open": 0,
             "multi_expand": 0,
             "endpoint": 0
@@ -1011,29 +1000,13 @@
             "type": "accordion",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686fd30f5fd08",
-                        "operator": "!=",
-                        "value": "__fraction"
-                    },
-                    {
-                        "field": "field_686fd30f5f920",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "open": 0,
             "multi_expand": 0,
             "endpoint": 1
@@ -2871,5 +2844,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752655403
+    "modified": 1752700193
 }
