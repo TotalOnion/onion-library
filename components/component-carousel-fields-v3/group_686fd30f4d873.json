@@ -131,7 +131,7 @@
             "wpml_cf_preferences": 3,
             "open": 0,
             "multi_expand": 0,
-            "endpoint": 0
+            "endpoint": 1
         },
         {
             "key": "field_686fd30f6379f",
@@ -2913,5 +2913,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752654712
+    "modified": 1752654889
 }
