@@ -3,11 +3,11 @@
     "title": "Component: Carousel Fields v3",
     "fields": [
         {
-            "key": "field_686fd30f5dd41",
-            "label": "Autoslide",
-            "name": "carousel_autoslide",
+            "key": "field_68776360148bb",
+            "label": "General",
+            "name": "",
             "aria-label": "",
-            "type": "true_false",
+            "type": "accordion",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,11 +17,30 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_686fd30f5dd41",
+            "label": "Autoslide",
+            "name": "carousel_autoslide",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": "",
+            "ui": 1,
             "style": ""
         },
         {
@@ -34,7 +53,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -44,19 +63,63 @@
             "return_format": "string",
             "display": "default",
             "button_label": "Select Color",
-            "color_picker": true,
-            "absolute": false,
-            "input": true,
-            "allow_null": true,
-            "theme_colors": false,
+            "color_picker": 1,
+            "absolute": 0,
+            "input": 1,
+            "allow_null": 1,
+            "theme_colors": 0,
             "colors": []
         },
         {
-            "key": "field_686fd30f5e5a0",
-            "label": "Carousel nav arrows",
-            "name": "carousel_nav_arrows",
+            "key": "field_686fd30f608ba",
+            "label": "Enable FreeMode",
+            "name": "enable_freemode",
             "aria-label": "",
             "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_686fd30f60cad",
+            "label": "Enable Mousewheel",
+            "name": "enable_mousewheel",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6877636e148bc",
+            "label": "General end",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -66,32 +129,231 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "style": ""
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
         },
         {
-            "key": "field_686fd30f5e984",
-            "label": "Enable custom arrows",
-            "name": "enable_custom_arrows",
+            "key": "field_686fd30f6379f",
+            "label": "Layout",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_686fd30f63b8a",
+            "label": "Number of slides on desktop",
+            "name": "carousel_number_of_slides_desktop",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 15,
+            "step": ""
+        },
+        {
+            "key": "field_686fd30f63f6f",
+            "label": "Number of slides on tablet",
+            "name": "carousel_number_of_slides_tablet",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 1,
+            "min": 1,
+            "max": 15,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686fd30f64357",
+            "label": "Number of slides on mobile",
+            "name": "carousel_number_of_slides_mobile",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 1,
+            "min": 1,
+            "max": 15,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686fd30f6474b",
+            "label": "Space between slides desktop",
+            "name": "carousel_space_between_slides_desktop",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": 0,
+            "min": 0,
+            "max": 50,
+            "placeholder": "",
+            "step": 10,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686fd30f64b27",
+            "label": "Space between slides tablet",
+            "name": "carousel_space_between_slides_tablet",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": 0,
+            "min": 0,
+            "max": 50,
+            "placeholder": "",
+            "step": 10,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686fd30f64f14",
+            "label": "Space between slides mobile",
+            "name": "carousel_space_between_slides_mobile",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": 0,
+            "min": 0,
+            "max": 50,
+            "placeholder": "",
+            "step": 10,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686fd30f652f8",
+            "label": "Layout end",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_6876139023a51",
+            "label": "Carousel Nav Arrows",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_686fd30f5e5a0",
+            "label": "Enable carousel nav arrows",
+            "name": "enable_carousel_nav_arrows",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686fd30f5e5a0",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -126,7 +388,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -142,6 +404,36 @@
             "allow_null": 1,
             "theme_colors": 0,
             "colors": []
+        },
+        {
+            "key": "field_686fd30f5e984",
+            "label": "Enable custom arrows",
+            "name": "enable_custom_arrows",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686fd30f5e5a0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
         },
         {
             "key": "field_686fd30f5f152",
@@ -161,13 +453,14 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "uploader": "",
             "return_format": "array",
+            "library": "all",
             "upload_folder": "",
             "acfe_thumbnail": 0,
             "min_width": "",
@@ -177,8 +470,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium",
-            "library": "all"
+            "preview_size": "medium"
         },
         {
             "key": "field_686fd30f5f539",
@@ -198,13 +490,14 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "uploader": "",
             "return_format": "array",
+            "library": "all",
             "upload_folder": "",
             "acfe_thumbnail": 0,
             "min_width": "",
@@ -214,8 +507,56 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium",
-            "library": "all"
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_687610bd11475",
+            "label": "Carousel arrows end",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_686fd30f6108d",
+            "label": "Pagination settings",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686fd30f5f920",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
         },
         {
             "key": "field_686fd30f5f920",
@@ -360,83 +701,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_686fd30f608ba",
-            "label": "Enable FreeMode",
-            "name": "enable_freemode",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1,
-            "style": ""
-        },
-        {
-            "key": "field_686fd30f60cad",
-            "label": "Enable Mousewheel",
-            "name": "enable_mousewheel",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1,
-            "style": ""
-        },
-        {
-            "key": "field_686fd30f6108d",
-            "label": "Pagination settings",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686fd30f5f920",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
         },
         {
             "key": "field_686fd30f61477",
@@ -770,197 +1034,6 @@
                     }
                 ]
             ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
-        },
-        {
-            "key": "field_686fd30f6379f",
-            "label": "Layout",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_686fd30f63b8a",
-            "label": "Number of slides on desktop",
-            "name": "carousel_number_of_slides_desktop",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": 1,
-            "max": 15,
-            "step": ""
-        },
-        {
-            "key": "field_686fd30f63f6f",
-            "label": "Number of slides on tablet",
-            "name": "carousel_number_of_slides_tablet",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 1,
-            "min": 1,
-            "max": 15,
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686fd30f64357",
-            "label": "Number of slides on mobile",
-            "name": "carousel_number_of_slides_mobile",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 1,
-            "min": 1,
-            "max": 15,
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686fd30f6474b",
-            "label": "Space between slides desktop",
-            "name": "carousel_space_between_slides_desktop",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": 0,
-            "min": 0,
-            "max": 50,
-            "placeholder": "",
-            "step": 10,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686fd30f64b27",
-            "label": "Space between slides tablet",
-            "name": "carousel_space_between_slides_tablet",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": 0,
-            "min": 0,
-            "max": 50,
-            "placeholder": "",
-            "step": 10,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686fd30f64f14",
-            "label": "Space between slides mobile",
-            "name": "carousel_space_between_slides_mobile",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": 0,
-            "min": 0,
-            "max": 50,
-            "placeholder": "",
-            "step": 10,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686fd30f652f8",
-            "label": "Layout end",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -2840,5 +2913,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752159085
+    "modified": 1752654712
 }
