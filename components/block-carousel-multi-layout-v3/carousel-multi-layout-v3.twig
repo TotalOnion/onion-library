@@ -124,10 +124,10 @@
 		{% if fields.carousel_pagination %}
 			<div class="swiper-pagination" style="{{positionVars}}"></div>
 		{% endif %}
-		{% if fields.carousel_nav_arrows and fields.enable_custom_arrows == false %}
+		{% if fields.enable_carousel_nav_arrows and fields.enable_custom_arrows == false %}
 			<div class="{{ blockClassName }}__button-prev swiper-button-prev"></div>
 			<div class="{{ blockClassName }}__button-next swiper-button-next"></div>
-		{% elseif fields.carousel_nav_arrows and fields.enable_custom_arrows %}
+		{% elseif fields.enable_carousel_nav_arrows and fields.enable_custom_arrows %}
 			<img class="swiper-button-prev custom_arrow" src="{{customArrowImageLeft.src}}" alt="{{customArrowImageLeft.alt}}">
 			<img class="swiper-button-next custom_arrow" src="{{customArrowImageRight.src}}" alt="{{customArrowImageRight.alt}}">
 		{% endif %}
