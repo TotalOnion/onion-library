@@ -78,8 +78,8 @@
             "layouts": {
                 "layout_658063d590f0f": {
                     "key": "layout_658063d590f0f",
-                    "name": "wysiwyg_editor",
-                    "label": "Wysiwyg Editor",
+                    "name": "wysiwyg_editor_v3",
+                    "label": "Wysiwyg Editor v3",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -458,5 +458,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752313326
+    "modified": 1752847298
 }
