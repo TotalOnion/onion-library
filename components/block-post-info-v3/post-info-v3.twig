@@ -26,7 +26,7 @@
 		{% if field.acf_fc_layout == 'cta_selection' or field.acf_fc_layout == 'social_media_share' %}
 			{{include('components/' ~ field.acf_fc_layout|replace({'_': '-'}) ~ '.twig', {fields: field, field, post, block, blockClassName, postType, options, cta_styles, imageSizes}, with_context = false, ignore_missing = true)}}
 		{% else %}
-			{{include('blocks/post-info/' ~ field.acf_fc_layout|replace({'_': '-'}) ~ '.twig', {field, post, block, blockClassName, postType, options, cta_styles, imageSizes}, with_context = false, ignore_missing = true)}}
+			{{include('blocks/post-info-v3/' ~ field.acf_fc_layout|replace({'_': '-'}) ~ '.twig', {field, post, block, blockClassName, postType, options, cta_styles, imageSizes}, with_context = false, ignore_missing = true)}}
 		{% endif %}
 	{% endfor %}
 	{% if fields.enable_post_cover_link %}
