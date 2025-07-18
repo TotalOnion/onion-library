@@ -33,9 +33,8 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_686642953db2e",
-                        "operator": "==",
-                        "value": "__post"
+                        "field": "field_686642953fa84",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -45,26 +44,30 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "post_type": [
-                "post"
+                "post",
+                "page",
+                "product",
+                "cocktail"
             ],
             "post_status": "",
             "taxonomy": "",
             "return_format": "id",
             "multiple": 0,
-            "allow_null": 0,
-            "ui": 1,
-            "bidirectional_target": [],
+            "max": "",
             "save_custom": 0,
-            "save_post_type": "",
-            "save_post_status": "",
+            "save_post_status": "publish",
             "acfe_add_post": 0,
             "acfe_edit_post": 0,
-            "min": "",
-            "max": ""
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": [],
+            "save_post_type": "",
+            "min": ""
         },
         {
             "key": "field_686642953fa84",
@@ -1966,5 +1969,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1751532942
+    "modified": 1752860070
 }
