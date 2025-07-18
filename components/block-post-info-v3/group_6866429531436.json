@@ -70,21 +70,7 @@
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686642953df36",
-                        "operator": "==",
-                        "value": "__post"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_686642953df36",
-                        "operator": "==empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -1962,5 +1948,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752869485
+    "modified": 1752877913
 }
