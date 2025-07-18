@@ -1,0 +1,57 @@
+@use 'Assets/scss/modules/library-modules/content-image-v2/content-image-v2';
+@use 'Assets/scss/modules/library-modules/nav-menu/nav-menu';
+@use 'Assets/scss/modules/library-modules/code-block/code-block';
+@use 'Assets/scss/modules/library-modules/countdown/countdown';
+@use 'Assets/scss/modules/library-modules/bazaarvoice-review/bazaarvoice-review';
+@use 'Assets/scss/modules/library-modules/post-author/post-author';
+@use 'Assets/scss/modules/library-modules/content-tooltip/content-tooltip';
+
+@use 'Assets/scss/modules/library-modules/accent-text/accent-text';
+@use 'Assets/scss/modules/library-modules/content-container-settings/content-container-settings';
+@use 'Assets/scss/modules/library-modules/better-reviews/better-reviews';
+@use 'Assets/scss/modules/library-modules/blockquote/blockquote';
+@use 'Assets/scss/modules/library-modules/social-media-share/social-media-share';
+@use 'Assets/scss/modules/library-modules/accordion-v2/accordion-v2';
+// @use 'Assets/scss/modules/library-modules/accordion-v3/accordion-v3';
+@use 'Assets/scss/modules/library-modules/market-selector/market-selector';
+@use 'Assets/scss/modules/library-modules/truncated-text/truncated-text';
+@use 'Assets/scss/modules/library-modules/spotify-embed/spotify-embed';
+@use 'Assets/scss/theme/buttons';
+
+@mixin contentContainer() {
+	@include nav-menu.navMenu();
+	@include code-block.codeBlock();
+	@include countdown.countdown();
+	@include bazaarvoice-review.bazaarvoice-review();
+	@include post-author.postauthorinfo();
+	@include content-tooltip.content-tooltip();
+	@include spotify-embed.spotify-embed();
+	// @include market-selector.market-selector();
+	@include accent-text.accent-text();
+	@include content-container-settings.contentContainerSettings();
+	@include better-reviews.better-reviews();
+	@include blockquote.blockquote();
+	@include social-media-share.social-media-share();
+	@include accordion-v2.accordion-v2();
+	// @include accordion-v3.accordion-v3();
+	@include buttons.shareIconStyles();
+	@include buttons.playButtonStyles();
+	@include truncated-text.truncated-text();
+
+	&__video-play-button-container {
+		display: grid;
+		width: 100%;
+		pointer-events: all;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__video-play-button {
+		grid-area: unset;
+		place-self: var(--playbutton-vertical-alignment, center)
+			var(--playbutton-horizontal-alignment, center);
+	}
+	&__content-image {
+		@include content-image-v2.contentImage();
+	}
+}
