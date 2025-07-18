@@ -1,79 +1,77 @@
 {
-    "key": "group_68752075dd831",
-    "title": "Block: Market Selector v3",
-    "fields": [
-        {
-            "key": "field_687531fa51664",
-            "label": "Selector Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 0,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6875207709d8d",
-            "label": "Selector Type",
-            "name": "selector_type",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__pop-up": "Pop Up",
-                "__inline": "Inline"
-            },
-            "default_value": "__pop-up : Pop Up",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "left",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 0,
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfml_field_group_mode": "localization",
-    "acfe_form": 0,
-    "acfe_display_title": "",
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1752510991
+	"key": "group_68752075dd831",
+	"title": "Block: Market Selector v3",
+	"fields": [
+		{
+			"key": "field_687531fa51664",
+			"label": "Selector Settings",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 0,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_6875207709d8d",
+			"label": "Selector Type",
+			"name": "selector_type",
+			"aria-label": "",
+			"type": "radio",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"choices": {
+				"__pop-up": "Pop Up",
+				"__inline": "Inline"
+			},
+			"default_value": "__pop-up : Pop Up",
+			"return_format": "value",
+			"allow_null": 0,
+			"other_choice": 0,
+			"layout": "vertical",
+			"save_other_choice": 0
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "post"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "left",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"acfe_autosync": ["json"],
+	"acfml_field_group_mode": "localization",
+	"acfe_form": 0,
+	"acfe_display_title": "",
+	"acfe_meta": "",
+	"acfe_note": "",
+	"modified": 1752510991
 }

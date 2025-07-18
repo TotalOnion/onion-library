@@ -1,7 +1,128 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
-// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/market-selector-v3/market-selector-v3-extra';
 .market-selector-v3 {
 	@include market-selector-v3-extra.additionalStyles();
+	pointer-events: all;
+	&__modal-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+	}
+	&__modal {
+		display: grid;
+		background: #f6f6f0;
+		width: 75%;
+		height: 75%;
+		grid-template:
+			'header'
+			'markets'
+			'markets'
+			'logo' / 1fr;
+	}
+	&__modal-header-container {
+		grid-area: header;
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
+		height: min-content;
+		padding: core-functions.fluidSize(15, 'mobile')
+			core-functions.fluidSize(20, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			padding: core-functions.fluidSize(30, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding: core-functions.fluidSize(30, 'desktop');
+		}
+		border-bottom: solid 2px #00968f;
+	}
+	&__modal-heading {
+		color: #00968f;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: core-functions.fluidSize(20, 'mobile');
+		line-height: core-functions.fluidSize(20, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fluidSize(20, 'portrait');
+			line-height: core-functions.fluidSize(20, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fluidSize(24, 'desktop');
+			line-height: core-functions.fluidSize(24, 'desktop');
+		}
+	}
+	.market-selector-v3__modal-close-button {
+		justify-self: flex-end;
+		background-image: url('Assets/images/icon/close-modal-teal.svg');
+		background-size: cover;
+		background-color: transparent;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		border: unset;
+		padding: unset;
+		transition: transform 0.2s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	&__modal-markets-container {
+		grid-area: markets;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+		place-items: center;
+		text-transform: uppercase;
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			grid-auto-flow: column;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(4, 1fr);
+		}
+	}
+	a.market-selector-v3__market-link,
+	a.market-selector-v3__market-link--active {
+		text-decoration: none;
+		color: #2d2926;
+		font-weight: 400;
+		line-height: core-functions.fluidSize(20, 'mobile');
+		font-size: core-functions.fluidSize(12, 'mobile');
+		border-bottom: 2px solid transparent;
+		transition: border 0.3s ease-out;
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			font-size: core-functions.fluidSize(16, 'portrait');
+			line-height: core-functions.fluidSize(16, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			font-size: core-functions.fluidSize(20, 'desktop');
+			line-height: core-functions.fluidSize(16, 'desktop');
+		}
+
+		&:hover {
+			border-bottom: 2px solid #00968f;
+		}
+	}
+	a.market-selector-v3__market-link--active {
+		color: #00968f;
+		font-weight: 700;
+	}
+	&__modal-logo-container {
+		grid-area: logo;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+	&__modal-logo {
+		img {
+			width: auto;
+		}
+	}
 }
