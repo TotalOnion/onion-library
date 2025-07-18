@@ -6,15 +6,10 @@
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set gridGapMults = include('components/grid-gap-mults.twig', { fields: fields, block: block }, with_context = false) %}
-{% set blockBackgroundColour = '--block-background-colour: ' ~ fields.block_background_colour ~ ';' %}
-{% if fields.use_post_background_colour_as_background_colour %}
-	{% set blockBackgroundColour = '--block-background-colour: ' ~ product.post_colour ~';' %}
-{% endif %}
 {% set gridLayoutContainer = include('components/grid-layout-container.twig') %}
-{% set sectionStyles =  styleEntryPoint ~ blockBackgroundColour ~ gridGapMults ~ gridLayoutContainer %}
-{% set postType = fields.post_type|ru %}
-{% set post = get_post(fields[postType]) %}
-{% set postTypeFields = fields[postType ~ '_fields'] %}
+{% set sectionStyles =  styleEntryPoint ~ gridGapMults ~ gridLayoutContainer %}
+{% set post = get_post(fields.post) %}
+{% set postTypeFields = fields.post_fields %}
 {% set layout = fields.layout|ru %}
 {% set imageSizes = imageSizes %}
 {{previewEntryPoint}}
@@ -29,8 +24,8 @@
 			{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ '-' ~ loop.index }) %}
 		{% endif %}
 		{% if field.acf_fc_layout == 'cta_selection' or field.acf_fc_layout == 'social_media_share' %}
-				{{include('components/' ~ field.acf_fc_layout|replace({'_': '-'}) ~ '.twig', {fields: field, field, post, block, blockClassName, postType, options, cta_styles, imageSizes}, with_context = false, ignore_missing = true)}}
-			{% else %}
+			{{include('components/' ~ field.acf_fc_layout|replace({'_': '-'}) ~ '.twig', {fields: field, field, post, block, blockClassName, postType, options, cta_styles, imageSizes}, with_context = false, ignore_missing = true)}}
+		{% else %}
 			{{include('blocks/post-info/' ~ field.acf_fc_layout|replace({'_': '-'}) ~ '.twig', {field, post, block, blockClassName, postType, options, cta_styles, imageSizes}, with_context = false, ignore_missing = true)}}
 		{% endif %}
 	{% endfor %}
