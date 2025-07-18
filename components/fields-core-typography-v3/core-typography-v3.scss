@@ -1,4 +1,4 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 @use 'sass:math';
 
 /* Box sizing rules */
@@ -10,7 +10,7 @@
 
 //***** TYPOGRAPHY *****\\
 body {
-	@include core-mixins.fontSecondary();
+	@include core-mixins-v3.fontSecondary();
 }
 
 h1,
@@ -21,7 +21,7 @@ h5,
 h6 {
 	margin: 0; //reset default margin
 	font-weight: unset; //reset default font weight
-	@include core-mixins.fontPrimary();
+	@include core-mixins-v3.fontPrimary();
 	margin-top: unset;
 }
 .override-element-styles {
@@ -58,7 +58,7 @@ h6 {
 }
 
 h1 {
-	@include core-mixins.h1();
+	@include core-mixins-v3.h1();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -69,7 +69,7 @@ h1 {
 }
 
 h2 {
-	@include core-mixins.h2();
+	@include core-mixins-v3.h2();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -80,7 +80,7 @@ h2 {
 }
 
 h3 {
-	@include core-mixins.h3();
+	@include core-mixins-v3.h3();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -91,7 +91,7 @@ h3 {
 }
 
 h4 {
-	@include core-mixins.h4();
+	@include core-mixins-v3.h4();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -102,7 +102,7 @@ h4 {
 }
 
 h5 {
-	@include core-mixins.h5();
+	@include core-mixins-v3.h5();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -113,7 +113,7 @@ h5 {
 }
 
 h6 {
-	@include core-mixins.h6();
+	@include core-mixins-v3.h6();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -124,7 +124,7 @@ h6 {
 }
 
 .sh1-sizing {
-	@include core-mixins.sh1();
+	@include core-mixins-v3.sh1();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -135,7 +135,7 @@ h6 {
 }
 
 .sh2-sizing {
-	@include core-mixins.sh2();
+	@include core-mixins-v3.sh2();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -146,7 +146,7 @@ h6 {
 }
 
 .sh3-sizing {
-	@include core-mixins.sh3();
+	@include core-mixins-v3.sh3();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -157,7 +157,7 @@ h6 {
 }
 
 .sh4-sizing {
-	@include core-mixins.sh4();
+	@include core-mixins-v3.sh4();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -168,7 +168,7 @@ h6 {
 }
 
 .sh5-sizing {
-	@include core-mixins.sh5();
+	@include core-mixins-v3.sh5();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -179,7 +179,7 @@ h6 {
 }
 
 .sh6-sizing {
-	@include core-mixins.sh6();
+	@include core-mixins-v3.sh6();
 
 	&:has(.font-tertiary) {
 		line-height: calc(
@@ -191,7 +191,7 @@ h6 {
 
 p {
 	margin: 0; //reset default margin
-	@include core-mixins.p();
+	@include core-mixins-v3.p();
 }
 
 a:not([class*='cmpl-cta-style-']) {
@@ -258,7 +258,7 @@ ul {
 	list-style-type: disc;
 }
 li {
-	@include core-mixins.p();
+	@include core-mixins-v3.p-medium();
 }
 ol {
 	padding: 0; //reset default padding
@@ -280,105 +280,104 @@ ol {
 }
 
 .font-primary {
-	@include core-mixins.fontPrimary();
+	@include core-mixins-v3.fontPrimary();
 }
 
 .font-secondary {
-	@include core-mixins.fontSecondary();
+	@include core-mixins-v3.fontSecondary();
 }
 
 .font-tertiary {
-	@include core-mixins.fontTertiary();
+	@include core-mixins-v3.fontTertiary();
 }
 
 .font-quaternary {
-	@include core-mixins.fontQuaternary();
+	@include core-mixins-v3.fontQuaternary();
 }
 .h1-l-sizing,
 .h-extra-large {
-	@include core-mixins.h1-l();
+	@include core-mixins-v3.h-x-large();
 }
 
 .h1-sizing,
 .h-large {
-	@include core-mixins.h1();
+	@include core-mixins-v3.h-large();
 }
 
 .h2-sizing,
 .h-medium {
-	@include core-mixins.h2();
+	@include core-mixins-v3.h-medium();
+	&-mobile {
+	}
 }
 
 .h3-sizing,
 .h-small {
-	@include core-mixins.h3();
+	@include core-mixins-v3.h-small();
 }
 
 .h4-sizing,
 .h-xsmall {
-	@include core-mixins.h4();
+	@include core-mixins-v3.h-x-small();
 }
 
 .h5-sizing,
 .h-xxsmall {
-	@include core-mixins.h5();
+	@include core-mixins-v3.h-xx-small();
 }
 
 .h6-sizing,
 .h-xxxsmall {
-	@include core-mixins.h6();
+	@include core-mixins-v3.h-xxx-small();
 }
 
 .sh1-sizing,
 .sh-extra-large {
-	@include core-mixins.sh1();
+	@include core-mixins-v3.sh-x-large();
 }
 
 .sh2-sizing,
 .sh-large {
-	@include core-mixins.sh2();
+	@include core-mixins-v3.sh-large();
 }
 
 .sh3-sizing,
 .sh-medium {
-	@include core-mixins.sh3();
+	@include core-mixins-v3.sh-medium();
 }
 
 .sh4-sizing,
 .sh-small {
-	@include core-mixins.sh4();
+	@include core-mixins-v3.sh-small();
 }
 
 .sh5-sizing,
 .sh-xsmall {
-	@include core-mixins.sh5();
+	@include core-mixins-v3.sh-x-small();
 }
 
 .sh6-sizing,
 .sh-xxsmall {
-	@include core-mixins.sh6();
-}
-
-.p-sizing {
-	@include core-mixins.p();
+	@include core-mixins-v3.sh-xx-small();
 }
 
 .p-l-sizing {
-	@include core-mixins.p-l();
+	@include core-mixins-v3.p-large();
 }
-
+.p-sizing {
+	@include core-mixins-v3.p-medium();
+}
 .p-s-sizing {
-	@include core-mixins.p-s();
+	@include core-mixins-v3.p-small();
 }
-
 .p-xs-sizing {
-	@include core-mixins.p-xs();
+	@include core-mixins-v3.p-x-small();
 }
 
 .p-xxs-sizing {
-	@include core-mixins.p-xxs();
+	@include core-mixins-v3.p-xxs();
 }
 
 .p-xxxs-sizing {
-	@include core-mixins.p-xxxs();
+	@include core-mixins-v3.p-xxxs();
 }

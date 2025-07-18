@@ -57,6 +57,12 @@
 	{% set textStrokeWidth = '--text-stroke-width: ' ~ fields.text_outline_width ~ ';' %}
 	{% set textStrokeColour = '--text-stroke-colour: ' ~ fields.text_outline_colour ~ ';' %}
 {% endif %}
+{% set elementType = fields.element_type|ru %}
+{% set typographicStyle = fields.typographic_style|ru %}
+{% set typographicStyleDesktop = fields.typographic_style_desktop|ru %}
+{% set typographicStylePortrait = fields.typographic_style_portrait|ru %}
+{% set typographicStyleMobile = fields.typographic_style_mobile|ru %}
+
 {% set wysiwygMaxWidth = '--wysiwyg-max-width: ' ~ fields.wysiwyg_max_width ~ '%;' %}
 {% set wysiwygMaxWidthPortrait = '--wysiwyg-max-width-portrait: ' ~ fields.wysiwyg_max_width_portrait ~ '%;' %}
 {% set wysiwygMaxWidthMobile = '--wysiwyg-max-width-mobile: ' ~ fields.wysiwyg_max_width_mobile ~ '%;' %}
@@ -69,9 +75,9 @@
 {% if fields.wysiwyg_editor %}
 	<div class="{{blockClassName|default('default-class')}}__content-container {{textShadowClass}} {{blockClassName|default('default-class')}}__{{wysiwygDecorationStyle}} standard-content-box-wysiwyg-editor {{block.id}}">
 		{% if fields.wysiwyg_editor is not empty %}
-			<{{fields.element_type|ru}} class="{{fields.typographic_style|ru}}">
+			<{{elementType}} class="{{typographicStyle}} {{typographicStyleDesktop}} {{typographicStylePortrait}} {{typographicStyleMobile}}">
 				{{fields.wysiwyg_editor|striptags('<br>, <a>, <em>, <i>, <span>, <strong>')|raw}}
-			</{{fields.element_type|ru}}>
+			</{{elementType}}>
 		{% endif %}
 	</div>
 {% endif %}
