@@ -43,10 +43,6 @@
 		@include grid-layout-element.gridLayoutElement();
 		width: 100%;
 		position: relative;
-
-		&:not(.post-info-v3__cta) {
-			@include core-mixins-v3.textStyle();
-		}
 	}
 	&__content-container {
 		width: 100%;
