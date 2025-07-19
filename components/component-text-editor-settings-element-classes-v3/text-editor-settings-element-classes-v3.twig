@@ -1,0 +1,6 @@
+{% set typographicStyle = fields.typographic_style|ru %}
+{% set typographicStyleDesktop = fields.typographic_style_desktop|ru %}
+{% set typographicStylePortrait = fields.typographic_style_portrait|ru %}
+{% set typographicStyleMobile = fields.typographic_style_mobile|ru %}
+{% set styleClasses = typographicStyle  ~ ' ' ~ typographicStyleDesktop  ~ ' ' ~ typographicStylePortrait  ~ ' ' ~ typographicStyleMobile  ~ ' ' ~ textShadowClass %}
+{{styleClasses}}

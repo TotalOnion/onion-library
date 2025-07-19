@@ -1,0 +1,55 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+
+@mixin blockquoteV3() {
+	&__blockquote {
+		display: flex;
+		flex-direction: column;
+		font-weight: unset;
+		gap: core-functions.fluidSize(20, 'static');
+		&::before {
+			content: unset;
+		}
+		&::after {
+			content: unset;
+		}
+		&-quote-text {
+			font-weight: var(--default-font-weight-mobile);
+			text-transform: var(--default-text-transform-mobile);
+			text-align: var(--default-text-align-mobile);
+			color: var(--default-text-colour-mobile);
+			-webkit-text-stroke: core-functions.fontSize(
+					var(--text-stroke-width),
+					'static'
+				)
+				var(--text-stroke-colour);
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				font-weight: var(--default-font-weight-desktop);
+				text-transform: var(--default-text-transform-desktop);
+				text-align: var(--default-text-align-desktop);
+				color: var(--default-text-colour-desktop);
+			}
+			&:before {
+				position: absolute;
+				left: -0.6em;
+				font-size: var(--quotes-size);
+			}
+			&:after {
+				content: var(--hide-close-quote);
+				position: absolute;
+				bottom: calc(var(--quotes-size) * -0.04);
+				font-size: var(--quotes-size);
+			}
+		}
+	}
+	footer {
+		align-self: var(--footer-align);
+		color: var(--default-text-colour-mobile);
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			color: var(--default-text-colour-desktop);
+		}
+	}
+}

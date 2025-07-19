@@ -1,0 +1,44 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+
+@mixin navMenuV3() {
+	&__nav-menu {
+		display: flex;
+		width: 100%;
+		justify-content: var(--alignment-mobile);
+		align-items: var(--alignment-mobile);
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			justify-content: var(--alignment-portrait);
+			align-items: var(--alignment-portrait);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			justify-content: var(--alignment-desktop);
+		}
+	}
+	&__nav-menu-list {
+		list-style: none;
+		width: auto;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: unset;
+		flex-direction: var(--menu-direction-mobile);
+		align-items: var(--alignment-mobile);
+		gap: calc(var(--global-inline-spacing) * var(--gap-mobile));
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			gap: calc(var(--global-inline-spacing) * var(--gap-portrait));
+			flex-direction: var(--menu-direction-portrait);
+			align-items: var(--alignment-portrait);
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			align-items: var(--alignment-desktop);
+			gap: calc(var(--global-inline-spacing) * var(--gap-desktop));
+			flex-direction: var(--menu-direction);
+		}
+	}
+	&__nav-menu-list-item {
+		margin-bottom: unset;
+		line-height: unset;
+		letter-spacing: unset;
+	}
+}

@@ -1,0 +1,31 @@
+@use 'Assets/scss/modules/library-modules/content-container-settings-v3/content-container-settings-v3';
+@use 'Assets/scss/modules/library-modules/content-image-v3/content-image-v3';
+@use 'Assets/scss/modules/library-modules/accent-text-v3/accent-text-v3';
+@use 'Assets/scss/modules/library-modules/nav-menu-v3/nav-menu-v3';
+@use 'Assets/scss/modules/library-modules/blockquote-v3/blockquote-v3';
+@use 'Assets/scss/theme/buttons';
+
+@mixin contentContainerV3() {
+	@include content-container-settings-v3.contentContainerSettingsV3();
+	@include nav-menu-v3.navMenuV3();
+	@include blockquote-v3.blockquoteV3();
+	@include accent-text-v3.accentTextV3();
+	@include buttons.shareIconStyles();
+	@include buttons.playButtonStyles();
+	&__video-play-button-container {
+		display: grid;
+		width: 100%;
+		pointer-events: all;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__video-play-button {
+		grid-area: unset;
+		place-self: var(--playbutton-vertical-alignment, center)
+			var(--playbutton-horizontal-alignment, center);
+	}
+	&__content-image {
+		@include content-image-v3.contentImageV3();
+	}
+}

@@ -1,0 +1,8 @@
+{% if fields.enable_wysiwyg_decoration %}
+	{% set wysiwygDecorationStyle = blockClassName ~ '__' ~ fields.wysiwyg_decoration_style|ru %}
+{% endif %}
+{% if fields.enable_text_shadow %}
+	{% set textShadowClass = blockClassName ~ "--text-shadow" %}
+{% endif %}
+{% set styleClasses = wysiwygDecorationStyle  ~ ' ' ~ textShadowClass %}
+{{styleClasses}}
