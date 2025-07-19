@@ -677,10 +677,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "choices": {
+                "__200": "Light",
                 "__default": "Default",
                 "__bold": "Bold"
             },
@@ -944,22 +942,23 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
+                "__200": "Light",
                 "__default": "Default",
                 "__bold": "Bold"
             },
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
-            "allow_null": 1,
-            "ui": 1,
-            "ajax": 0,
-            "placeholder": "",
+            "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": ""
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "min": ""
         },
         {
             "key": "field_687a4e2346957",
@@ -1209,26 +1208,24 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "choices": {
+                "__200": "Light",
                 "__default": "Default",
                 "__bold": "Bold"
             },
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
-            "allow_null": 1,
-            "ui": 1,
-            "ajax": 0,
-            "placeholder": "",
+            "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": ""
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "min": ""
         },
         {
             "key": "field_687a4e23484af",
@@ -1385,5 +1382,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752851122
+    "modified": 1752931819
 }
