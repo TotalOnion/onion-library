@@ -24,7 +24,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="group-container-v3">
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="group-container-v3">
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
 	{% endif %}
