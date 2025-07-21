@@ -278,19 +278,15 @@ ol {
 		}
 	}
 }
-
 .font-primary {
 	@include core-mixins-v3.fontPrimary();
 }
-
 .font-secondary {
 	@include core-mixins-v3.fontSecondary();
 }
-
 .font-tertiary {
 	@include core-mixins-v3.fontTertiary();
 }
-
 .font-quaternary {
 	@include core-mixins-v3.fontQuaternary();
 }
@@ -298,7 +294,6 @@ ol {
 .h-extra-large {
 	@include core-mixins-v3.h-x-large();
 }
-
 .h1-sizing,
 .h-large {
 	@include core-mixins-v3.h-large();
@@ -310,27 +305,22 @@ ol {
 	&-mobile {
 	}
 }
-
 .h3-sizing,
 .h-small {
 	@include core-mixins-v3.h-small();
 }
-
 .h4-sizing,
 .h-xsmall {
 	@include core-mixins-v3.h-x-small();
 }
-
 .h5-sizing,
 .h-xxsmall {
 	@include core-mixins-v3.h-xx-small();
 }
-
 .h6-sizing,
 .h-xxxsmall {
 	@include core-mixins-v3.h-xxx-small();
 }
-
 .sh1-sizing,
 .sh-extra-large {
 	@include core-mixins-v3.sh-x-large();
