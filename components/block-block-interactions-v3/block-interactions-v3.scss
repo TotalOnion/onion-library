@@ -1,0 +1,25 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/block-interactions-v3/block-interactions-v3-extra';
+.block-interactions-v3 {
+	@include block-interactions-v3-extra.additionalStyles();
+
+	&__block-close-button {
+		cursor: pointer;
+		border: unset;
+		background: unset;
+	}
+	&__block-close-button-icon {
+		width: core-functions.fluidSize(20, 'mobile');
+		height: core-functions.fluidSize(20, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			width: core-functions.fluidSize(30, 'portrait');
+			height: core-functions.fluidSize(30, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			width: core-functions.fluidSize(40, 'desktop');
+			height: core-functions.fluidSize(40, 'desktop');
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{% set blockClassName = "block-interactions-v3" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set sectionStyles =  styleEntryPoint %}
+{{previewEntryPoint}}
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
+
+	{% set blockInteractionsEnabled = fields.enable_block_interactions %}
+	{% set enableInteractionsButton = fields.enable_interactions_button %}
+	{% set interactionsButtonType = fields.interactions_button_type %}
+
+	{% if blockInteractionsEnabled %}
+
+
+		{% if enableInteractionsButton %}
+			{% if (interactionsButtonType|ru == 'close-block') %}
+				{% set closeButtonIcon = get_image(fields.upload_close_icon) %}
+				{% set closeButtonCookie = fields.enable_closed_cookie %}
+
+				<button class="block-interactions-v3__block-close-button" data-store-cookie="{{closeButtonCookie ? 'true' : 'false' }}">
+					<img class="block-interactions-v3__block-close-button-icon" src="{{closeButtonIcon.src}}">
+				</button>
+			{% endif %}
+		{% endif %}
+
+
+	{% endif %}
+
+	{{htmlEntryPoint}}
+</section>
