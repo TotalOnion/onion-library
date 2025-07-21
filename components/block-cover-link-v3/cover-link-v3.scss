@@ -1,6 +1,3 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
-// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-// @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/cover-link-v3/cover-link-v3-extra';
 .cover-link-v3 {
 	@include cover-link-v3-extra.additionalStyles();

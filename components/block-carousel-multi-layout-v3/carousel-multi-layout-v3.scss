@@ -1,9 +1,9 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @use 'Assets/scss/modules/library-modules/element-positioning/element-positioning';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra';
 
 .carousel-multi-layout-v3 {
 	display: grid;
@@ -39,19 +39,19 @@
 
 	.swiper-button-prev {
 		left: var(--left-arrow-horizontally-mobile);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			left: var(--left-arrow-horizontally-portrait);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			left: var(--left-arrow-horizontally-desktop);
 		}
 	}
 	.swiper-button-next {
 		right: var(--right-arrow-horizontally-mobile);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			right: var(--right-arrow-horizontally-portrait);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			right: var(--right-arrow-horizontally-desktop);
 		}
 	}
@@ -59,25 +59,25 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		top: var(--arrows-position-vertically-mobile);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			top: var(--arrows-position-vertically-portrait);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			top: var(--arrows-position-vertically-desktop);
 		}
 		&::after {
-			--swiper-navigation-size: #{core-functions.fluidSize(
+			--swiper-navigation-size: #{core-functions-v3.fluidSize(
 					var(--arrows-size-mobile),
 					'mobile'
 				)};
-			@include core-mixins.device(breakpoints.$tabPortrait) {
-				--swiper-navigation-size: #{core-functions.fluidSize(
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				--swiper-navigation-size: #{core-functions-v3.fluidSize(
 						var(--arrows-size-portrait),
 						'portrait'
 					)};
 			}
-			@include core-mixins.device(breakpoints.$tabLandscape) {
-				--swiper-navigation-size: #{core-functions.fluidSize(
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				--swiper-navigation-size: #{core-functions-v3.fluidSize(
 						var(--arrows-size-desktop),
 						'desktop'
 					)};
@@ -89,18 +89,18 @@
 
 	.custom_arrow {
 		height: auto;
-		width: core-functions.fluidSize(
+		width: core-functions-v3.fluidSize(
 			var(--custom-arrows-size-mobile),
 			'mobile'
 		);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			width: core-functions.fluidSize(
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			width: core-functions-v3.fluidSize(
 				var(--custom-arrows-size-portrait),
 				'portrait'
 			);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			width: core-functions.fluidSize(
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			width: core-functions-v3.fluidSize(
 				var(--custom-arrows-size-desktop),
 				'desktop'
 			);
@@ -127,11 +127,11 @@
 	.swiper-slide {
 		opacity: var(--next-and-prev-slide-opacity-mobile);
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			opacity: var(--next-and-prev-slide-opacity-portrait);
 		}
 
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			opacity: var(--next-and-prev-slide-opacity-desktop);
 		}
 	}
@@ -143,10 +143,10 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		display: var(--display-arrows-mobile);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			display: var(--display-arrows-portrait);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			display: var(--display-arrows-desktop);
 		}
 	}
