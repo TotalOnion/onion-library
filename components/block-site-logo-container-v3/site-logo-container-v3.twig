@@ -16,24 +16,20 @@
 	}
 </style>
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
-
 	<a class="{{blockClassName}}__site-logo-link" href="/{{ market_slug ? market_slug ~ '/' : '' }}" aria-label="site-logo-link">
 		{% if fields.logo_type|ru == 'site-header' %}
 			{% set siteLogo = get_image(options.header_logo_desktop) %}
 		{% endif %}
 		{% if fields.logo_type|ru == 'site-footer' %}
 			{% set siteLogo = get_image(options.footer_logo) %}
-
 		{% endif %}
 		{% if fields.logo_type|ru == 'site-logo-alt' %}
 			{% set siteLogo = get_image(options.site_logo_alt) %}
 		{% endif %}
-
 		{% set isSVG = siteLogo.post_mime_type == 'image/svg+xml' %}
-		{% set mainImageSrc = isSVG ? siteLogo.src : gt_image_mainsrc(siteLogo) %}
-
+		{% set siteLogo = isSVG ? siteLogo.src : gt_image_mainsrc(siteLogo) %}
 		{% if isSVG %}
-			{{get_raw_svg(siteLogo.id, 'site-logo-container__site-logo style-svg')}}
+			{{get_raw_svg(siteLogo.id, 'site-logo-container__site-logo')}}
 		{% else %}
 			<img src="{{gt_image_mainsrc(siteLogo)}}" srcset="{{gt_image_srcset(siteLogo)}}" width="{{siteLogo.width}}" height="{{siteLogo.height}}" alt="{{siteLogo.alt|default('site-logo')}}" class="{{blockClassName}}__site-logo style-svg"/>
 		{% endif %}
