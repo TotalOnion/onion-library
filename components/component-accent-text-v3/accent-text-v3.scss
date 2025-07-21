@@ -13,21 +13,21 @@
 		letter-spacing: 0.8em;
 		text-transform: uppercase;
 
-		gap: core-functions.fluidSize(10);
-		margin-inline: core-functions.fluidSize(5, 'mobile');
-		font-size: core-functions.fontSize(10, 'mobile');
+		gap: core-functions-v3.fluidSize(10);
+		margin-inline: core-functions-v3.fluidSize(5, 'mobile');
+		font-size: core-functions-v3.fontSize(10, 'mobile');
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			font-size: core-functions.fontSize(10, 'portrait');
-			margin-inline: core-functions.fluidSize(5, 'portrait');
-			gap: core-functions.fluidSize(20, 'portrait');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			font-size: core-functions-v3.fontSize(10, 'portrait');
+			margin-inline: core-functions-v3.fluidSize(5, 'portrait');
+			gap: core-functions-v3.fluidSize(20, 'portrait');
 		}
 
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			color: var(--accent-text-colour);
-			font-size: core-functions.fontSize(10, 'desktop');
-			margin-inline: core-functions.fluidSize(5, 'desktop');
-			gap: core-functions.fluidSize(20, 'desktop');
+			font-size: core-functions-v3.fontSize(10, 'desktop');
+			margin-inline: core-functions-v3.fluidSize(5, 'desktop');
+			gap: core-functions-v3.fluidSize(20, 'desktop');
 		}
 
 		&::before,
@@ -37,21 +37,21 @@
 				--accent-text-colour-mobile,
 				var(--default-text-colour-mobile)
 			);
-			width: core-functions.fluidSize(20, 'mobile');
-			height: core-functions.fluidSize(2, 'mobile');
+			width: core-functions-v3.fluidSize(20, 'mobile');
+			height: core-functions-v3.fluidSize(2, 'mobile');
 
-			@include core-mixins.device(breakpoints.$tabPortrait) {
-				width: core-functions.fluidSize(40, 'portrait');
-				height: core-functions.fluidSize(2, 'portrait');
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				width: core-functions-v3.fluidSize(40, 'portrait');
+				height: core-functions-v3.fluidSize(2, 'portrait');
 			}
 
-			@include core-mixins.device(breakpoints.$tabLandscape) {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 				background-color: var(
 					--accent-text-colour,
 					var(--default-text-colour-desktop)
 				);
-				width: core-functions.fluidSize(80, 'desktop');
-				height: core-functions.fluidSize(2, 'desktop');
+				width: core-functions-v3.fluidSize(80, 'desktop');
+				height: core-functions-v3.fluidSize(2, 'desktop');
 			}
 		}
 

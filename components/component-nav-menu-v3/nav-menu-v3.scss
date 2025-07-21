@@ -1,5 +1,4 @@
 @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
-@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 
 @mixin navMenuV3() {
@@ -8,11 +7,11 @@
 		width: 100%;
 		justify-content: var(--alignment-mobile);
 		align-items: var(--alignment-mobile);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			justify-content: var(--alignment-portrait);
 			align-items: var(--alignment-portrait);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			justify-content: var(--alignment-desktop);
 		}
 	}
@@ -25,12 +24,12 @@
 		flex-direction: var(--menu-direction-mobile);
 		align-items: var(--alignment-mobile);
 		gap: calc(var(--global-inline-spacing) * var(--gap-mobile));
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			gap: calc(var(--global-inline-spacing) * var(--gap-portrait));
 			flex-direction: var(--menu-direction-portrait);
 			align-items: var(--alignment-portrait);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			align-items: var(--alignment-desktop);
 			gap: calc(var(--global-inline-spacing) * var(--gap-desktop));
 			flex-direction: var(--menu-direction);
