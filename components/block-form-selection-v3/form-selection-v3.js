@@ -1,17 +1,14 @@
-export default function formselectionv3Js(options = {}) {
+export default function formselectionv3Js ( options = {} ) {
 	try {
-		const {block} = options;
+		const { block } = options;
 
 		// modal logic
-		const formContainer = block.querySelector(
-			'.form-selection-v3__container-modal'
-		);
+		const formContainer = block.querySelector('.form-selection-v3__container-modal');
 		const openModal = block.querySelector('.form-selection-v3__modal-open');
-		const closeModal = block.querySelector(
-			'.form-selection-v3__modal-close'
-		);
+		const closeModal = block.querySelector('.form-selection-v3__modal-close');
+		
 
-		if (formContainer && openModal) {
+		if (formContainer && openModal ) {
 			openModal.addEventListener('click', function (e) {
 				e.preventDefault();
 				document.documentElement.classList.add('lock-position');
@@ -33,9 +30,7 @@ export default function formselectionv3Js(options = {}) {
 			);
 
 			inputs.forEach((input) => {
-				const wrapper = input.closest(
-					'.cdb_form_field, .cdb_form_gdpr_information, .cdb_form_privacypolicy_information'
-				);
+				const wrapper = input.closest('.cdb_form_field, .cdb_form_gdpr_information, .cdb_form_privacypolicy_information');
 
 				if (!wrapper) return;
 
@@ -67,14 +62,17 @@ export default function formselectionv3Js(options = {}) {
 			});
 		}
 
-		const submit = block.querySelector('.cdb-submit');
+		const submit = block.querySelector(
+			'.cdb-submit'
+		);
 
 		submit.classList.add('cmpl-cta-style-11', 'cmpl-cta-animation-style-1');
 
 		submit.addEventListener('click', (e) => {
 			validateFormFields(block);
 		});
-	} catch (error) {
-		console.error(error);
+
+	} catch ( error ) {
+		console.error( error );
 	}
 }

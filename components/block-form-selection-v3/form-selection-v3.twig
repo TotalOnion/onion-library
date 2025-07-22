@@ -8,9 +8,10 @@
 {% set sectionStyles =  styleEntryPoint %}
 
 {% set displaySelector = fields.selector_type|ru %}
+{% set renderDynamic = fields.render_dynamic|default(0) %}
 
 {{previewEntryPoint}}
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-pattern-form-selection data-renderdynamic={{renderDynamic}} data-formid="{{fields.form}}" data-assetkey="{{blockClassName}}">
 	{% if displaySelector == 'modal' %}
 		<div class="{{ blockClassName }}__container-modal">
 			<div class="{{ blockClassName }}__inner">
@@ -18,7 +19,9 @@
 					{% if fields.title %}
 						{{ fields.title }}
 					{% endif %}
+					<!-- inline-form -->
 					{{function('do_shortcode', '[cdbform id=' ~ fields.form ~ ']')}}
+					<!-- end-inline-form -->
 					<button class="{{ blockClassName }}__modal-close"></button>
 				</div>
 			</div>
@@ -31,7 +34,9 @@
 					{% if fields.title %}
 						{{ fields.title }}
 					{% endif %}
+					<!-- inline-form -->
 					{{function('do_shortcode', '[cdbform id=' ~ fields.form ~ ']')}}
+					<!-- end-inline-form -->
 				</div>
 			</div>
 		</div>

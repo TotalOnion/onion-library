@@ -1,16 +1,16 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
 @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/form-selection-v3/form-selection-v3-extra';
 
 .form-selection-v3 {
 	pointer-events: all;
-
+	
 	&__container-modal {
 		display: none;
 		position: fixed;
 		left: 0;
-		// top: var(--global-site-header-height);
+    	// top: var(--global-site-header-height);
 		top: 74px;
 		width: 100vw;
 		height: calc(100vh - 103px);
