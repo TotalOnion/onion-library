@@ -1,21 +1,25 @@
 {% set blockClassName = "market-selector-v3" %}
-{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
-{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
-{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, cta_styles, environment, market_settings, is_preview, nav_menus, imageSizes }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+
 
 {% set sectionStyles =  styleEntryPoint %}
 {% set selectorType = fields.selector_type|ru %}
 
 {{previewEntryPoint}}
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
 
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 	<a class="{{blockClassName}}__cta {{selectorType}}">
-
-
 		{% set iconType = options.theme_cta_icons.cta_market_selector_icon %}
-
 		{% set iconImage = get_image(iconType) %}
 		{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
 		<span class="{{blockClassName}}__icon">
@@ -24,18 +28,12 @@
 	</a>
 
 	<div class="{{blockClassName}}__modal-overlay">
-
 		<div class="{{blockClassName}}__modal">
-
 			<div class="{{blockClassName}}__modal-header-container">
 				<h5 class="{{blockClassName}}__modal-heading">{{fields.heading_text}}</h5>
-
-
 				<button class="{{blockClassName}}__modal-close-button"></button>
-
 			</div>
 			<div class="{{blockClassName}}__modal-markets-container">
-
 				{% for language in languages %}
 					<a class="{{blockClassName}}__market-link {{language['active'] ? "market-selector-v3__market-link--active" : ""}}" href=" {{ language[ 'url' ] }} " data-lang=" {{ language[ 'language_code' ] }} " aria-label=" view this page on the {{language[ 'native_name' ]}} market">{{ language[ 'native_name' ] }}</a>
 				{% endfor %}
@@ -47,11 +45,9 @@
 				<span class="{{blockClassName}}__modal-logo">
 					{{ isSVG ? get_raw_svg(logoImage.id) : '<img class="" src="' ~ logoImage.src ~ '">'}}
 				</span>
-
 			</div>
-
 		</div>
 	</div>
 
-
-	{{htmlEntryPoint}}</section>
+	{{htmlEntryPoint}}
+</section>
