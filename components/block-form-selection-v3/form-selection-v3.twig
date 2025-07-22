@@ -1,6 +1,6 @@
 {% set blockClassName = "form-selection-v3" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
@@ -11,6 +11,27 @@
 {% set renderDynamic = fields.render_dynamic|default(0) %}
 
 {{previewEntryPoint}}
+
+{% set ctaContent = '' %}
+{% set ctaClasses = blockClassName  ~ '__modal-open--icon' %}
+
+{% if fields.cta_type|ru == 'icon' %}
+	{% set iconType = options.theme_cta_icons.cta_signup_icon %}
+	{% set iconImage = get_image(iconType) %}
+	{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
+	{% set ctaContent =  isSVG ? '<img class="" src="' ~ iconImage.src ~ '">' : '<img class="" src="' ~ gt_image_mainsrc(iconImage) ~ '">' %}
+{% endif %}
+{% if fields.cta_type|ru == 'cta' %}
+	{% set ctaContent = fields.cta_text %}
+	{% if cta.cta_style|ru matches '/^\\d+$/' %}
+		{% set ctaData = attribute(cta_styles['theme_cta_styles'], fields.cta_style|ru - 1) %}
+		{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
+		{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
+		{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
+		{% set ctaClasses = 'cmpl-cta-style-' ~ (fields.cta_style|ru) ~ ' ' ~ 'cmpl-cta-animation-style-' ~ (enableCtaAnimation ? ctaAnimationStyle : '') %}
+	{% endif %}
+{% endif %}
+
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-pattern-form-selection data-renderdynamic={{renderDynamic}} data-formid="{{fields.form}}" data-assetkey="{{blockClassName}}">
 	{% if displaySelector == 'modal' %}
 		<div class="{{ blockClassName }}__container-modal">
@@ -26,7 +47,8 @@
 				</div>
 			</div>
 		</div>
-		<button class="{{ blockClassName }}__modal-open cmpl-cta-style-{{fields.cta_style|ru}} cmpl-cta-animation-style-2">{{fields.cta_text}}</button>
+		<button class="{{ blockClassName }}__modal-open {{ctaClasses}}">{{ctaContent}}</button>
+
 	{% elseif displaySelector == 'inline' %}
 		<div class="{{ blockClassName }}__container-inline">
 			<div class="{{ blockClassName }}__inner">
