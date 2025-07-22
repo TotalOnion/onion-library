@@ -1,0 +1,39 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/form-selection-v3/form-selection-v3-extra';
+
+.form-selection-v3 {
+	pointer-events: all;
+
+	&__container-modal {
+		display: none;
+		position: fixed;
+		left: 0;
+		// top: var(--global-site-header-height);
+		top: 74px;
+		width: 100vw;
+		height: calc(100vh - 103px);
+		z-index: 9998;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			top: 103px;
+		}
+	}
+
+	&__inner {
+		overflow-y: scroll;
+		width: 100vw;
+		z-index: 9999;
+		height: 100%;
+	}
+
+	&__modal-close {
+		position: absolute;
+		top: core-functions.fluidSize(20);
+		right: core-functions.fluidSize(20);
+	}
+
+	@include form-selection-v3-extra.additionalStyles();
+}
