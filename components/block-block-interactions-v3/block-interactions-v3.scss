@@ -8,16 +8,16 @@
 		border: unset;
 		background: unset;
 	}
-	&__block-close-button-icon {
+	svg {
 		width: core-functions-v3.fluidSize(20, 'mobile');
 		height: core-functions-v3.fluidSize(20, 'mobile');
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			width: core-functions-v3.fluidSize(30, 'portrait');
-			height: core-functions-v3.fluidSize(30, 'portrait');
+			width: core-functions-v3.fluidSize(20, 'portrait');
+			height: core-functions-v3.fluidSize(20, 'portrait');
 		}
 		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			width: core-functions-v3.fluidSize(40, 'desktop');
-			height: core-functions-v3.fluidSize(40, 'desktop');
+			width: core-functions-v3.fluidSize(20, 'desktop');
+			height: core-functions-v3.fluidSize(20, 'desktop');
 		}
 	}
 	@include block-interactions-v3-extra.additionalStyles();

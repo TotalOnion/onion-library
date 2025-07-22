@@ -30,12 +30,10 @@ export default function blockinteractionsv3Js(options = {}) {
 				setTimeout(() => {
 					wrappingSection.style.display = 'none';
 				}, e.currentTarget.dataset.animationduration * 1000);
-
 				if (shouldStoreCookie) {
 					setCookie(cookieKey, 'true', 7);
 				}
 			});
-
 		});
 
 
