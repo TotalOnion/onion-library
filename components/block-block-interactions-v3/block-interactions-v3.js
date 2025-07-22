@@ -1,7 +1,7 @@
 export default function blockinteractionsv3Js(options = {}) {
 	try {
 		const { block } = options;
-		
+
 		const blockId = block.dataset.blockid;
 		const parentBlockId = block.dataset.parentblockid;
 
@@ -14,14 +14,23 @@ export default function blockinteractionsv3Js(options = {}) {
 			const shouldStoreCookie = button?.dataset?.storeCookie === 'true';
 			const cookieKey = `blockClosed_${parentBlockId}`;
 			const wrappingSection = document.querySelector(`[data-blockid="${parentBlockId}"]`);
-			
+
 			if (getCookie(cookieKey) === 'true') {
-				wrappingSection.remove();
+				wrappingSection.style.animation = 'none';
+				wrappingSection.style.display = 'none';
 				return;
 			}
 
-			button.addEventListener('click', () => {
-				wrappingSection.remove();
+			button.addEventListener('click', (e) => {
+				console.log(e.currentTarget.dataset);
+				wrappingSection.style.animation = 'none';
+				wrappingSection.offsetHeight; // trigger reflow
+				wrappingSection.style.animation = `${e.currentTarget.dataset.animationname} ${e.currentTarget.dataset.animationduration}s forwards reverse`;
+
+				setTimeout(() => {
+					wrappingSection.style.display = 'none';
+				}, e.currentTarget.dataset.animationduration * 1000);
+
 				if (shouldStoreCookie) {
 					setCookie(cookieKey, 'true', 7);
 				}

@@ -16,6 +16,8 @@
 	{% set blockInteractionsEnabled = fields.enable_block_interactions %}
 	{% set enableInteractionsButton = fields.enable_interactions_button %}
 	{% set interactionsButtonType = fields.interactions_button_type %}
+	{% set animationName = fields.animation_name|ru %}
+	{% set animationDuration = fields.animation_duration|ru %}
 
 	{% if blockInteractionsEnabled %}
 
@@ -25,7 +27,7 @@
 				{% set closeButtonIcon = get_image(fields.upload_close_icon) %}
 				{% set closeButtonCookie = fields.enable_closed_cookie %}
 
-				<button class="block-interactions-v3__block-close-button" data-store-cookie="{{closeButtonCookie ? 'true' : 'false' }}">
+				<button class="block-interactions-v3__block-close-button" data-animationname="{{animationName}}" data-animationduration="{{animationDuration}}" data-store-cookie="{{closeButtonCookie ? 'true' : 'false' }}">
 					<img class="block-interactions-v3__block-close-button-icon" src="{{closeButtonIcon.src}}">
 				</button>
 			{% endif %}
