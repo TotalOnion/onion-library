@@ -55,15 +55,15 @@
 	}
 	&__cta-style-post-colour,
 	&__cta-style-post-text-colour-style {
-		padding-block: core-functions.fluidSize(10, 'mobile');
-		padding-inline: core-functions.fluidSize(20, 'mobile');
+		padding-block: core-functions-v3.fluidSize(10, 'mobile');
+		padding-inline: core-functions-v3.fluidSize(20, 'mobile');
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			padding-block: core-functions.fluidSize(10, 'portrait');
-			padding-inline: core-functions.fluidSize(20, 'portrait');
+			padding-block: core-functions-v3.fluidSize(10, 'portrait');
+			padding-inline: core-functions-v3.fluidSize(20, 'portrait');
 		}
 		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			padding-block: core-functions.fluidSize(10, 'desktop');
-			padding-inline: core-functions.fluidSize(20, 'desktop');
+			padding-block: core-functions-v3.fluidSize(10, 'desktop');
+			padding-inline: core-functions-v3.fluidSize(20, 'desktop');
 		}
 	}
 	&__cta-style-post-colour {
@@ -140,12 +140,12 @@
 		object-fit: var(--global-image-fit-style);
 	}
 	&__product-logo {
-		max-width: core-functions.fluidSize(
+		max-width: core-functions-v3.fluidSize(
 			var(--logo-max-width-mobile),
 			'mobile'
 		);
 		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			max-width: core-functions.fluidSize(
+			max-width: core-functions-v3.fluidSize(
 				var(--logo-max-width-desktop),
 				'desktop'
 			);
@@ -157,7 +157,7 @@
 	}
 	&__person-rating-star {
 		--rating-star-colour: gold;
-		width: core-functions.fluidSize(20, 'static');
+		width: core-functions-v3.fluidSize(20, 'static');
 	}
 	&__person-questionaire-list {
 		list-style-type: none;
