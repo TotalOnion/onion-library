@@ -15,7 +15,7 @@
 {% set imageFitStyle = '--image-fit-style:' ~ (field.image_fit_style|ru|default('contain')) ~ ';' %}
 {% set styleVars = imageWidthPercentDesktop ~ imageWidthPercentMobile ~ imageWidthPercentMobilePx ~ imageWidthPercentDesktopPx ~ imageAspectRatioDesktop ~ imageAspectRatioPortrait ~ imageAspectRatioMobile ~ imageFitStyle %}
 <style>
-	.{{blockClassName}}__post-image-container.{{block.id}} {
+	.{{blockClassName}}__post-image-container.{{block.id}}{
 		{{styleVars}}
 		{{gridLayoutElement}}
 		{{positionVars}}
@@ -25,7 +25,7 @@
 	{% set imageSizes = imageSizes|default('(min-width: 1440px) 50vw, (min-width: 768px) 50vw, (min-width: 500px) 50vw, 100vw') %}
 	{% set imageFields = [] %}
 	{% set imageFields = imageFields|merge({'enable_image' : true}) %}
-	{% set imageClassname = 'post-info__post' %}
+	{% set imageClassname = 'post-info-v3__post' %}
 	{% if attribute(post, 'post_' ~ imageSelect) %}
 		{% set imageFields = imageFields|merge({'image' : attribute(post, 'post_' ~ imageSelect)}) %}
 	{% elseif attribute(post, postType ~ '_' ~ imageSelect) %}
