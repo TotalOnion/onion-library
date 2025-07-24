@@ -10,15 +10,10 @@
 		display: none;
 		position: fixed;
 		left: 0;
-		top: var(--global-site-header-height);
-		// top: 74px;
 		width: 100vw;
 		height: calc(100vh - 103px);
 		z-index: 9998;
 		background-color: rgba(0, 0, 0, 0.4);
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			top: 103px;
-		}
 	}
 
 	&__inner {
@@ -29,6 +24,7 @@
 	}
 
 	&__modal-open {
+		cursor: pointer;
 		&--icon {
 			appearance: none;
 			border: none;

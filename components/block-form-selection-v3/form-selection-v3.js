@@ -1,20 +1,34 @@
-export default function formselectionv3Js ( options = {} ) {
+export default function formselectionv3Js(options = {}) {
 	try {
 		const { block } = options;
 
 		// modal logic
+		const siteHeader = document.querySelector('.site-header-block');
+
 		const formContainer = block.querySelector('.form-selection-v3__container-modal');
 		const openModal = block.querySelector('.form-selection-v3__modal-open');
 		const closeModal = block.querySelector('.form-selection-v3__modal-close');
-		
 
-		if (formContainer && openModal ) {
+
+		document.body.appendChild(formContainer);
+
+
+		const headerHeight = () => {
+			const headerHeight = siteHeader.offsetHeight;
+			return headerHeight;
+		}
+
+		if (formContainer && openModal) {
 			openModal.addEventListener('click', function (e) {
 				e.preventDefault();
+				headerHeight();
 				document.documentElement.classList.add('lock-position');
 				formContainer.style.display = 'block';
+				formContainer.style.top = headerHeight() + 'px';
+				siteHeader.style.pointerEvents = 'none'
 			});
 			closeModal.addEventListener('click', function (e) {
+				siteHeader.style.pointerEvents = 'all'
 				document.documentElement.classList.remove('lock-position');
 				e.preventDefault();
 				formContainer.style.display = 'none';
@@ -72,7 +86,7 @@ export default function formselectionv3Js ( options = {} ) {
 			validateFormFields(block);
 		});
 
-	} catch ( error ) {
-		console.error( error );
+	} catch (error) {
+		console.error(error);
 	}
 }
