@@ -24,11 +24,13 @@
 
 		{% if enableInteractionsButton %}
 			{% if (interactionsButtonType|ru == 'close-block') %}
-				{% set closeButtonIcon = get_image(fields.upload_close_icon) %}
 				{% set closeButtonCookie = fields.enable_closed_cookie %}
 
 				<button class="block-interactions-v3__block-close-button" data-animationname="{{animationName}}" data-animationduration="{{animationDuration}}" data-store-cookie="{{closeButtonCookie ? 'true' : 'false' }}">
-					<img class="block-interactions-v3__block-close-button-icon" src="{{closeButtonIcon.src}}">
+					{% set iconType = options.theme_cta_icons.cta_close_icon %}
+					{% set iconImage = get_image(iconType) %}
+					{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
+					{{ isSVG ? get_raw_svg(iconImage.id) : '<img class="" src="' ~ iconImage.src ~ '">'}}
 				</button>
 			{% endif %}
 		{% endif %}
