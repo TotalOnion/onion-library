@@ -1,0 +1,279 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/theme/breakpoints';
+
+@mixin ctaButtonStyles() {
+	[class*='cmpl-cta-style-'] {
+		border: unset;
+		line-height: 100%;
+		position: relative;
+		display: flex;
+		gap: 1em;
+		justify-content: center;
+		align-items: center;
+		text-decoration-line: unset;
+		text-align: center;
+		transition:
+			background-color 0.1s,
+			border-colour 0.1s;
+
+		&:hover,
+		&:active,
+		&:focus {
+			cursor: pointer;
+		}
+
+		&[disabled] {
+			cursor: not-allowed;
+		}
+		margin-bottom: 0;
+		overflow: hidden;
+	}
+
+	.cmpl-cta-span {
+		width: 100%;
+	}
+
+	.cmpl-cta-icon {
+		width: 1em;
+	}
+
+	@for $i from 1 through 20 {
+		.cmpl-cta-style-#{$i} {
+			justify-self: var(--cta-alignment);
+			justify-content: var(
+				--cta-style-#{$i}-content-vertical-alignment,
+				center
+			);
+			background-image: var(--cta-style#{$i}-image-background);
+			background-size: var(--cta-style#{$i}-image-background-size);
+			background-repeat: var(--cta-style#{$i}-image-background-repeat);
+			background-color: var(--cta-style-#{$i}-mobile-background-colour);
+			color: var(--cta-style-#{$i}-mobile-colour);
+			svg * {
+				fill: currentColor;
+				stroke: currentColor;
+			}
+			border: var(--cta-style-#{$i}-border-width)
+				solid
+				var(--cta-style-#{$i}-mobile-border-colour);
+			border-radius: var(--cta-style-#{$i}-border-radius);
+			font-weight: var(--cta-style-#{$i}-font-weight);
+			letter-spacing: var(--cta-style-#{$i}-letter-spacing);
+			line-height: var(--cta-style-#{$i}-line-height);
+			font-family: var(--cta-style-#{$i}-font-family);
+			text-transform: var(--cta-style-#{$i}-text-transform);
+			font-style: var(--cta-style-#{$i}-font-style);
+			text-align: var(--cta-style-#{$i}-text-align);
+			text-decoration: var(--cta-style-#{$i}-decoration-style);
+			text-decoration-color: var(--cta-style-#{$i}-decoration-colour);
+
+			font-size: clamp(
+				var(--cta-style-font-size-min-mobile, 10px),
+				core-functions.fontSize(
+					var(--cta-style-#{$i}-font-size-mobile),
+					'mobile'
+				),
+				var(--cta-style-font-size-max-mobile, 180px)
+			);
+
+			min-width: var(--cta-style-#{$i}-min-width-mobile);
+			padding: core-functions.fluidSize(
+					var(--cta-style-#{$i}-padding-block-mobile),
+					'mobile'
+				)
+				core-functions.fluidSize(
+					var(--cta-style-#{$i}-padding-inline-mobile),
+					'mobile'
+				);
+			// shadow
+			--box-shadow-offset-x: var(--cta-style-#{$i}-shadow-offset-x, 0);
+			--box-shadow-offset-y: var(--cta-style-#{$i}-shadow-offset-y, 0);
+			--box-shadow-blur: var(--cta-style-#{$i}-shadow-blur, 0);
+			--box-shadow-spread: var(--cta-style-#{$i}-shadow-radius, 0);
+			--box-shadow-colour: var(--cta-style-#{$i}-shadow-colour, 0);
+			--box-shadow-position: var(--cta-style-#{$i}-shadow-position, 0);
+
+			// hover shadow
+			--box-shadow-hover-offset-x: var(
+				--cta-style-#{$i}-shadow-offset-hover-x,
+				0
+			);
+			--box-shadow-hover-offset-y: var(
+				--cta-style-#{$i}-shadow-offset-hover-y,
+				0
+			);
+			--box-shadow-hover-blur: var(
+				--cta-style-#{$i}-shadow-hover-blur,
+				0
+			);
+			--box-shadow-hover-spread: var(
+				--cta-style-#{$i}-shadow-hover-radius,
+				0
+			);
+			--box-shadow-hover-colour: var(
+				--cta-style-#{$i}-shadow-hover-colour,
+				0
+			);
+			--box-shadow-hover-position: var(
+				--cta-style-#{$i}-shadow-hover-position,
+				0
+			);
+			@include core-mixins.boxShadow();
+
+			@include core-mixins.device(breakpoints.$tabPortrait) {
+				font-size: clamp(
+					var(--cta-style-font-size-min-mobile, 10px),
+					core-functions.fontSize(
+						var(--cta-style-#{$i}-font-size-portrait),
+						'portrait'
+					),
+					var(--cta-style-font-size-max-mobile, 180px)
+				);
+				min-width: var(--cta-style-#{$i}-min-width-portrait);
+				padding: core-functions.fluidSize(
+						var(--cta-style-#{$i}-padding-block-portrait),
+						'portrait'
+					)
+					core-functions.fluidSize(
+						var(--cta-style-#{$i}-padding-inline-portrait),
+						'portrait'
+					);
+				background-color: var(--cta-style-#{$i}-background-colour);
+				border: var(--cta-style-#{$i}-border-width) solid
+					var(--cta-style-#{$i}-border-colour);
+				color: var(--cta-style-#{$i}-colour);
+				svg * {
+					fill: currentColor;
+					stroke: currentColor;
+				}
+			}
+
+			@include core-mixins.device(breakpoints.$tabLandscape) {
+				font-size: clamp(
+					var(--cta-style-font-size-min-desktop, 10px),
+					core-functions.fontSize(
+						var(--cta-style-#{$i}-font-size-landscape),
+						'landscape'
+					),
+					var(--cta-style-font-size-max-desktop, 180px)
+				);
+				min-width: var(--cta-style-#{$i}-min-width-landscape);
+				padding: core-functions.fluidSize(
+						var(--cta-style-#{$i}-padding-block-landscape),
+						'landscape'
+					)
+					core-functions.fluidSize(
+						var(--cta-style-#{$i}-padding-inline-landscape),
+						'landscape'
+					);
+			}
+
+			@include core-mixins.device(breakpoints.$desktop) {
+				font-size: clamp(
+					var(--cta-style-font-size-min-desktop, 10px),
+					core-functions.fontSize(
+						var(--cta-style-#{$i}-font-size-desktop),
+						'desktop'
+					),
+					var(--cta-style-font-size-max-desktop, 180px)
+				);
+				min-width: var(--cta-style-#{$i}-min-width-desktop);
+				padding: core-functions.fluidSize(
+						var(--cta-style-#{$i}-padding-block-desktop),
+						'desktop'
+					)
+					core-functions.fluidSize(
+						var(--cta-style-#{$i}-padding-inline-desktop),
+						'desktop'
+					);
+			}
+
+			// this makes hover effect available only on desktops, avoiding the hover effect to stuck on mobile after click
+			@media (hover: hover) {
+				&:hover {
+					text-decoration: var(
+						--cta-style-#{$i}-decoration-style-hover
+					);
+					text-decoration-color: var(
+						--cta-style-#{$i}-decoration-colour-hover
+					);
+					border: var(--cta-style-#{$i}-border-width) solid
+						var(--cta-style-#{$i}-mobile-hover-border-colour);
+					background-color: var(
+						--cta-style-#{$i}-mobile-hover-background-colour
+					);
+					color: var(--cta-style-#{$i}-mobile-hover-colour);
+					svg * {
+						fill: currentColor;
+						stroke: currentColor;
+					}
+
+					// for touch devices fix hover state
+					@media (hover: none) {
+						background-color: var(
+							--cta-style-#{$i}-mobile-background-colour
+						);
+					}
+
+					@include core-mixins.device(breakpoints.$tabPortrait) {
+						background-color: var(
+							--cta-style-#{$i}-hover-background-colour
+						);
+						border: var(--cta-style-#{$i}-border-width) solid
+							var(--cta-style-#{$i}-hover-border-colour);
+						color: var(--cta-style-#{$i}-hover-colour);
+						svg * {
+							fill: currentColor;
+							stroke: currentColor;
+						}
+					}
+				}
+			}
+
+			&:active {
+				color: var(--cta-style-#{$i}-active-colour);
+				background-color: var(
+					--cta-style-#{$i}-active-background-colour
+				);
+				border: var(--cta-style-#{$i}-border-width)
+					solid
+					var(--cta-style-#{$i}-active-border-colour);
+			}
+
+			// &:focus {
+			// 	color: var(--cta-style-#{$i}-focus-colour);
+			// 	background-color: var(--cta-style-#{$i}-focus-background-colour);
+			// 	border: var(--cta-style-#{$i}-border-width) solid var(--cta-style-#{$i}-focus-border-colour);
+			// }
+
+			&--inactive,
+			&.cta-style-inactive,
+			&[disabled] {
+				color: var(--cta-style-#{$i}-inactive-colour);
+				background-color: var(
+					--cta-style-#{$i}-inactive-background-colour
+				);
+				border: var(--cta-style-#{$i}-border-width)
+					solid
+					var(--cta-style-#{$i}-inactive-border-colour);
+			}
+
+			&--selected,
+			&.cta-style-selected {
+				color: var(--cta-style-#{$i}-selected-colour);
+				background-color: var(
+					--cta-style-#{$i}-selected-background-colour
+				);
+				border: var(--cta-style-#{$i}-border-width)
+					solid
+					var(--cta-style-#{$i}-selected-border-colour);
+			}
+		}
+	}
+}
+
+@mixin core-cta() {
+	@include ctaButtonStyles();
+}

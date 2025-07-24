@@ -1,0 +1,21 @@
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+
+@mixin elementPositioning() {
+	position: var(--element-position, relative);
+	z-index: var(--element-z-index);
+	place-self: var(--mobile-vertical-placement)
+		var(--mobile-horizontal-placement);
+	translate: var(--element-horizontal-offset-mobile, 0)
+		var(--element-vertical-offset-mobile, 0);
+	rotate: var(--element-rotation-mobile, 0deg);
+
+	@include core-mixins.device(breakpoints.$tabLandscape) {
+		place-self: var(--desktop-vertical-placement)
+			var(--desktop-horizontal-placement);
+		translate: var(--element-horizontal-offset-desktop, 0)
+			var(--element-vertical-offset-desktop, 0);
+		rotate: var(--element-rotation-desktop, 0deg);
+	}
+}
