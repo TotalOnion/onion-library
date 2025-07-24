@@ -1,14 +1,14 @@
 {% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
-{% set elementStyles = gridLayoutElement ~ textStyle %}
 {% set textEditorStyleVars = include('components/text-editor-settings-variables-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set elementType = field.element_type|ru %}
 <style>
-.{{blockClassName}}__post-info-description.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
-	{{textEditorStyleVars}}
-}
+	.{{blockClassName}}__post-info-description.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
+		{{textEditorStyleVars}}
+	}
 </style>
-	<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}}"> <{{elementType}} data-pattern-post-info="post_info_description" class="{{blockClassName}}__post-info-description {{blockClassName}}__info-item {{textEditorElementClasses}} {{block.id}}">
-		{{post.post_info_description}}</{{elementType}}>
+<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}}">
+	<{{elementType|default('p')}} data-pattern-post-info="post_info_description" class="{{blockClassName}}__post-info-description {{blockClassName}}__info-item {{textEditorElementClasses}} {{block.id}}">
+		{{post.post_info_description}}</{{elementType|default('p')}}>
 </div>

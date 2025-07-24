@@ -1,8 +1,12 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields:field, block }, with_context = false) %}
-{% set sectionStyles = gridLayoutElement %}
+{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set textEditorStyleVars = include('components/text-editor-settings-variables-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set elementType = field.element_type|ru %}
+
 <style>
-	.{{blockClassName}}__post-tags.{{block.id}} {
-		{{sectionStyles}}
+	.{{blockClassName}}__post-tags.{{block.id}}{
+		{{textEditorStyleVars}}
 	}
 </style>
 <div class="{{blockClassName}}__post-tags {{blockClassName}}__info-item {{block.id}}">
