@@ -22,9 +22,10 @@
 	{% set ctaContent =  isSVG ? '<img class="" src="' ~ iconImage.src ~ '">' : '<img class="" src="' ~ gt_image_mainsrc(iconImage) ~ '">' %}
 {% endif %}
 {% if fields.cta_type|ru == 'cta' %}
+	{% set cta_styles = options.theme_cta_styles %}
 	{% set ctaContent = fields.cta_text %}
-	{% if cta.cta_style|ru matches '/^\\d+$/' %}
-		{% set ctaData = attribute(cta_styles['theme_cta_styles'], fields.cta_style|ru - 1) %}
+	{% if fields.cta_style|ru matches '/^\\d+$/' %}
+		{% set ctaData = attribute(cta_styles, fields.cta_style|ru - 1) %}
 		{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
 		{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
 		{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
