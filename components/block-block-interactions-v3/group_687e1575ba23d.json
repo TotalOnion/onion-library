@@ -160,9 +160,7 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         },
         {
             "key": "field_687e40dc485e6",
@@ -534,5 +532,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753190749
+    "modified": 1753106703
 }
