@@ -12,11 +12,13 @@ export default function marketselectorv3Js(options = {}) {
 		if (marketSelectorPopupBtn) {
 			marketSelectorPopupBtn.addEventListener('click', (e) => {
 				marketSelectorModal.style.display = 'flex';
+				document.documentElement.classList.add('lock-position');
 			});
 		}
 		if (marketSelectorModalClose) {
 			marketSelectorModalClose.addEventListener('click', (e) => {
 				marketSelectorModal.style.display = 'none';
+				document.documentElement.classList.remove('lock-position');
 			});
 		}
 	} catch (error) {
