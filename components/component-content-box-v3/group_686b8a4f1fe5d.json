@@ -18,11 +18,11 @@
             },
             "wpml_cf_preferences": 3,
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1,
-            "style": "alt_rounded"
+            "style": "alt"
         },
         {
             "key": "field_6865575686460",
@@ -456,5 +456,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753290857
+    "modified": 1753351964
 }

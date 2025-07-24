@@ -54,7 +54,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -90,7 +90,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 0,
+            "ajax": 1,
             "placeholder": "",
             "min": ""
         },
@@ -104,14 +104,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "choices": {
                 "__h1": "H1",
                 "__h2": "H2",
@@ -124,16 +121,16 @@
             "default_value": "__p",
             "return_format": "value",
             "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": ""
+            "min": ""
         },
         {
             "key": "field_687a4e2341369",
@@ -146,21 +143,18 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_657305391a42a",
+                        "field": "field_687a4e2340b94",
                         "operator": "==",
-                        "value": ""
+                        "value": "__h1-l-sizing"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -179,9 +173,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_657305391a42a",
+                        "field": "field_687a4e2340b94",
                         "operator": "==",
-                        "value": ""
+                        "value": "__h1-l-sizing"
                     },
                     {
                         "field": "field_687a4e2341369",
@@ -191,14 +185,11 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "default_value": 1,
             "min": 0,
             "max": 10,
@@ -217,9 +208,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_657305391a42a",
+                        "field": "field_687a4e2340b94",
                         "operator": "==",
-                        "value": ""
+                        "value": "__h1-l-sizing"
                     },
                     {
                         "field": "field_687a4e2341369",
@@ -229,24 +220,21 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string",
             "display": "default",
             "button_label": "Select Color",
-            "color_picker": true,
-            "absolute": false,
-            "input": true,
-            "allow_null": true,
-            "theme_colors": false,
+            "color_picker": 1,
+            "absolute": 0,
+            "input": 1,
+            "allow_null": 1,
+            "theme_colors": 0,
             "colors": []
         },
         {
@@ -260,21 +248,18 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_657305391a42a",
+                        "field": "field_687a4e2340b94",
                         "operator": "==",
-                        "value": ""
+                        "value": "__h1-l-sizing"
                     }
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -300,14 +285,11 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "default_value": 0,
             "min": -40,
             "max": 40,
@@ -333,14 +315,11 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "default_value": 0,
             "min": -40,
             "max": 40,
@@ -426,14 +405,11 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "message": "",
             "default_value": 0,
             "ui_on_text": "",
@@ -459,14 +435,11 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "choices": {
                 "__wysiwyg-decoration-1": "Decoration style 1"
             },
@@ -514,7 +487,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -551,7 +524,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 0,
+            "ajax": 1,
             "placeholder": "",
             "min": ""
         },
@@ -784,7 +757,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -821,7 +794,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 0,
+            "ajax": 1,
             "placeholder": "",
             "min": ""
         },
@@ -1045,7 +1018,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -1082,7 +1055,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 0,
+            "ajax": 1,
             "placeholder": "",
             "min": ""
         },
@@ -1382,5 +1355,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753290730
+    "modified": 1753351990
 }
