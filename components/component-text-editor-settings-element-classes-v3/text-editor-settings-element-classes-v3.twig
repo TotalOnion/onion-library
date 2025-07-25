@@ -1,6 +1,9 @@
-{% set typographicStyle = fields.typographic_style|ru %}
+{% set typographicStyle = '' %}
 {% set typographicStyleDesktop = fields.typographic_style_desktop|ru %}
 {% set typographicStylePortrait = fields.typographic_style_portrait|ru %}
 {% set typographicStyleMobile = fields.typographic_style_mobile|ru %}
+{% if typographicStyleDesktop is empty and typographicStylePortrait is empty and typographicStyleMobile is empty %}
+	{% set typographicStyle = fields.typographic_style|ru %}
+{% endif %}
 {% set styleClasses = typographicStyle  ~ ' ' ~ typographicStyleDesktop  ~ ' ' ~ typographicStylePortrait  ~ ' ' ~ typographicStyleMobile  ~ ' ' ~ textShadowClass %}
 {{styleClasses}}

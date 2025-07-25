@@ -1,0 +1,988 @@
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
+
+@mixin h-xl-size {
+	font-size: clamp(
+		var(--h-xl-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-xl-desktop)),
+		var(--h-xl-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-xl {
+	letter-spacing: var(--h1-l-letter-spacing);
+	line-height: var(--h1-l-line-height);
+	font-family: var(--h1-l-font-family);
+	--default-font-weight: var(--h1-l-default-font-weight);
+	font-weight: var(--default-font-weight);
+	strong,
+	b {
+		font-weight: var(--h1-l-bold-font-weight);
+	}
+	font-size: clamp(
+		var(--h-xl-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-xl-mobile), 'mobile'),
+		var(--h-xl-font-size-max-mobile, 180px)
+	);
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-xl-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h-xl-portrait), 'portrait'),
+			var(--h-xl-font-size-max-mobile, 180px)
+		);
+	}
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-xl-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h-xl-landscape), 'landscape'),
+			var(--h-xl-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-xl-size();
+	}
+}
+@mixin h-l-size {
+	font-size: clamp(
+		var(--h-l-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-l-desktop)),
+		var(--h-l-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-l {
+	letter-spacing: var(--h1-letter-spacing);
+	line-height: var(--h1-line-height);
+	font-family: var(--h1-font-family);
+	--default-font-weight: var(--h1-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--h1-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--h-l-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-l-mobile), 'mobile'),
+		var(--h-l-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-l-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h-l-portrait), 'portrait'),
+			var(--h-l-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-l-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h-l-landscape), 'landscape'),
+			var(--h-l-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-l-size();
+	}
+}
+@mixin h-m-size {
+	font-size: clamp(
+		var(--h-m-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-m-desktop)),
+		var(--h-m-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-m {
+	letter-spacing: var(--h2-letter-spacing);
+	line-height: var(--h2-line-height);
+	font-family: var(--h2-font-family);
+	--default-font-weight: var(--h2-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--h2-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--h-m-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-m-mobile)),
+		var(--h-m-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-m-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h-m-portrait)),
+			var(--h-m-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-m-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h-m-landscape)),
+			var(--h-m-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-m-size();
+	}
+}
+@mixin h-s-size {
+	font-size: clamp(
+		var(--h-s-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-s-desktop)),
+		var(--h-s-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-s {
+	letter-spacing: var(--h3-letter-spacing);
+	line-height: var(--h3-line-height);
+	font-family: var(--h3-font-family);
+	--default-font-weight: var(--h3-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--h3-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--h-s-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-s-mobile), 'mobile'),
+		var(--h-s-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-s-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h-s-portrait), 'portrait'),
+			var(--h-s-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-s-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h-s-landscape), 'landscape'),
+			var(--h-s-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-s-size();
+	}
+}
+@mixin h-xs-size {
+	font-size: clamp(
+		var(--h-xs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-xs-desktop)),
+		var(--h-xs-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-xs {
+	letter-spacing: var(--h4-letter-spacing);
+	line-height: var(--h4-line-height);
+	font-family: var(--h4-font-family);
+	--default-font-weight: var(--h4-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--h4-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--h-xs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-xs-mobile), 'mobile'),
+		var(--h-xs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-xs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h-xs-portrait), 'portrait'),
+			var(--h-xs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-xs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h-xs-landscape), 'landscape'),
+			var(--h-xs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-xs-size();
+	}
+}
+@mixin h-xxs-size {
+	font-size: clamp(
+		var(--h-xxs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-xxs-desktop)),
+		var(--h-xxs-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-xxs {
+	letter-spacing: var(--h5-letter-spacing);
+	line-height: var(--h5-line-height);
+	font-family: var(--h5-font-family);
+	--default-font-weight: var(--h5-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--h5-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--h-xxs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-xxs-mobile), 'mobile'),
+		var(--h-xxs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-xxs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h5-portrait), 'portrait'),
+			var(--h-xxs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-xxs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h5-landscape), 'landscape'),
+			var(--h-xxs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-xxs-size();
+	}
+}
+@mixin h-xxxs-size {
+	font-size: clamp(
+		var(--h-xxxs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--h-xxxs-desktop)),
+		var(--h-xxxs-font-size-max-desktop, 180px)
+	);
+}
+@mixin h-xxxs {
+	letter-spacing: var(--h6-letter-spacing);
+	line-height: var(--h6-line-height);
+	font-family: var(--h6-font-family);
+	--default-font-weight: var(--h6-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--h6-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--h-xxxs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--h-xxxs-mobile), 'mobile'),
+		var(--h-xxxs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--h-xxxs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--h-xxxs-portrait), 'portrait'),
+			var(--h-xxxs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--h-xxxs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--h-xxxs-landscape), 'landscape'),
+			var(--h-xxxs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include h-xxxs-size();
+	}
+}
+@mixin sh-xl-size {
+	font-size: clamp(
+		var(--sh-xl-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--sh-xl-desktop)),
+		var(--sh-xl-font-size-max-desktop, 180px)
+	);
+}
+@mixin sh-xl {
+	letter-spacing: var(--sh1-letter-spacing);
+	line-height: var(--sh1-line-height);
+	font-family: var(--sh1-font-family);
+	--default-font-weight: var(--sh1-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--sh1-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--sh-xl-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--sh-xl-mobile)),
+		var(--sh-xl-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--sh-xl-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--sh-xl-portrait), 'portrait'),
+			var(--sh-xl-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--sh-xl-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--sh-xl-landscape), 'landscape'),
+			var(--sh-xl-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include sh-xl-size();
+	}
+}
+@mixin sh-l-size {
+	font-size: clamp(
+		var(--sh-l-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--sh-l-desktop)),
+		var(--sh-l-font-size-max-desktop, 180px)
+	);
+}
+@mixin sh-l {
+	letter-spacing: var(--sh2-letter-spacing);
+	line-height: var(--sh2-line-height);
+	font-family: var(--sh2-font-family);
+	--default-font-weight: var(--sh2-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--sh2-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--sh-l-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--sh-l-mobile)),
+		var(--sh-l-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--sh-l-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--sh-l-portrait)),
+			var(--sh-l-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--sh-l-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--sh-l-landscape)),
+			var(--sh-l-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include sh-l-size();
+	}
+}
+@mixin sh-m-size {
+	font-size: clamp(
+		var(--sh-m-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--sh-m-desktop)),
+		var(--sh-m-font-size-max-desktop, 180px)
+	);
+}
+@mixin sh-m {
+	letter-spacing: var(--sh3-letter-spacing);
+	line-height: var(--sh3-line-height);
+	font-family: var(--sh3-font-family);
+	--default-font-weight: var(--sh3-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--sh3-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--sh-m-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--sh-m-mobile)),
+		var(--sh-m-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--sh-m-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--sh-m-portrait)),
+			var(--sh-m-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--sh-m-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--sh-m-landscape)),
+			var(--sh-m-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include sh-m-size();
+	}
+}
+@mixin sh-s-size {
+	font-size: clamp(
+		var(--sh-s-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--sh-s-desktop)),
+		var(--sh-s-font-size-max-desktop, 180px)
+	);
+}
+@mixin sh-s {
+	letter-spacing: var(--sh4-letter-spacing);
+	line-height: var(--sh4-line-height);
+	font-family: var(--sh4-font-family);
+	--default-font-weight: var(--sh4-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--sh4-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--sh-s-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--sh-s-mobile)),
+		var(--sh-s-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--sh-s-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--sh-s-portrait)),
+			var(--sh-s-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--sh-s-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--sh-s-landscape)),
+			var(--sh-s-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include sh-s-size();
+	}
+}
+@mixin sh-xs-size {
+	font-size: clamp(
+		var(--sh-xs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--sh-xs-desktop)),
+		var(--sh-xs-font-size-max-desktop, 180px)
+	);
+}
+@mixin sh-xs {
+	letter-spacing: var(--sh5-letter-spacing);
+	line-height: var(--sh5-line-height);
+	font-family: var(--sh5-font-family);
+	--default-font-weight: var(--sh5-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--sh5-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--sh-xs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--sh-xs-mobile)),
+		var(--sh-xs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--sh-xs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--sh-xs-portrait)),
+			var(--sh-xs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--sh-xs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--sh-xs-landscape)),
+			var(--sh-xs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include sh-xs-size();
+	}
+}
+@mixin sh-xxs-size {
+	font-size: clamp(
+		var(--sh-xxs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--sh-xxs-desktop)),
+		var(--sh-xxs-font-size-max-desktop, 180px)
+	);
+}
+@mixin sh-xxs {
+	letter-spacing: var(--sh6-letter-spacing);
+	line-height: var(--sh6-line-height);
+	font-family: var(--sh6-font-family);
+	--default-font-weight: var(--sh6-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--sh6-bold-font-weight);
+	}
+
+	font-size: clamp(
+		var(--sh-xxs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--sh-xxs-mobile)),
+		var(--sh-xxs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--sh-xxs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--sh-xxs-portrait)),
+			var(--sh-xxs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--sh-xxs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--sh-xxs-landscape)),
+			var(--sh-xxs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include sh-xxs-size();
+	}
+}
+@mixin p-l-size {
+	font-size: clamp(
+		var(--p-l-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-l-desktop)),
+		var(--p-l-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-l {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-l-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-l-mobile), 'mobile'),
+		var(--p-l-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-l-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-l-portrait), 'portrait'),
+			var(--p-l-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-l-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-l-landscape), 'landscape'),
+			var(--p-l-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-l-size();
+	}
+}
+@mixin p-size {
+	font-size: clamp(
+		var(--p-m-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-m-desktop)),
+		var(--p-m-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-size {
+	font-size: clamp(
+		var(--p-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-desktop)),
+		var(--p-font-size-max-desktop, 180px)
+	);
+}
+@mixin p {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+	--default-font-weight: var(--paragraph-default-font-weight);
+	font-weight: var(--default-font-weight);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-mobile)),
+		var(--p-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-portrait)),
+			var(--p-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-landscape)),
+			var(--p-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-size();
+	}
+}
+@mixin p-s-size {
+	font-size: clamp(
+		var(--p-s-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-s-desktop)),
+		var(--p-s-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-s {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-s-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-s-mobile), 'mobile'),
+		var(--p-s-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-s-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-s-portrait), 'portrait'),
+			var(--p-s-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-s-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-s-landscape), 'landscape'),
+			var(--p-s-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-s-size();
+	}
+}
+@mixin p-xs-size {
+	font-size: clamp(
+		var(--p-xs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-xs-desktop)),
+		var(--p-xs-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-xs {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-xs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-xs-mobile)),
+		var(--p-xs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-xs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-xs-portrait)),
+			var(--p-xs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-xs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-xs-landscape)),
+			var(--p-xs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-xs-size();
+	}
+}
+@mixin p-xs-size {
+	font-size: clamp(
+		var(--p-xs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-xs-desktop)),
+		var(--p-xs-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-xs {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-xs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-xs-mobile)),
+		var(--p-xs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-xs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-xs-portrait)),
+			var(--p-xs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-xs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-xs-landscape)),
+			var(--p-xs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-xs-size();
+	}
+}
+@mixin p-xxs-size {
+	font-size: clamp(
+		var(--p-xxs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-xxs-desktop)),
+		var(--p-xxs-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-xxs {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-xxs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-xxs-mobile)),
+		var(--p-xxs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-xxs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-xxs-portrait)),
+			var(--p-xxs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-xxs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-xxs-landscape)),
+			var(--p-xxs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-xxs-size();
+	}
+}
+@mixin p-xxxs-size {
+	font-size: clamp(
+		var(--p-xxxs-font-size-min-desktop, 10px),
+		core-functions-v3.fontSize(var(--p-xxxs-desktop)),
+		var(--p-xxxs-font-size-max-desktop, 180px)
+	);
+}
+@mixin p-xxxs {
+	line-height: var(--paragraph-line-height);
+	letter-spacing: var(--paragraph-letter-spacing);
+	font-family: var(--paragraph-font-family);
+
+	strong,
+	b {
+		font-weight: var(--paragraph-bold-font-weight);
+	}
+
+	&:has(.font-tertiary) {
+		line-height: calc(
+			var(--paragraph-line-height) *
+				var(--global-line-height-multiplier-tertiary)
+		);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	font-size: clamp(
+		var(--p-xxxs-font-size-min-mobile, 10px),
+		core-functions-v3.fontSize(var(--p-xxxs-mobile)),
+		var(--p-xxxs-font-size-max-mobile, 180px)
+	);
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: clamp(
+			var(--p-xxxs-font-size-min-mobile, 10px),
+			core-functions-v3.fontSize(var(--p-xxxs-portrait)),
+			var(--p-xxxs-font-size-max-mobile, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: clamp(
+			var(--p-xxxs-font-size-min-desktop, 10px),
+			core-functions-v3.fontSize(var(--p-xxxs-landscape)),
+			var(--p-xxxs-font-size-max-desktop, 180px)
+		);
+	}
+
+	@include core-mixins-v3.device(breakpoints.$desktop) {
+		@include p-xxxs-size();
+	}
+}
+@mixin fontPrimary() {
+	font-family: var(--primary-font-family), sans-serif;
+	--font-size-multiplier: var(--global-font-multiplier-primary);
+}
+@mixin fontSecondary() {
+	font-family: var(--secondary-font-family), sans-serif;
+	--font-size-multiplier: var(--global-font-multiplier-secondary);
+}
+@mixin fontTertiary() {
+	font-family: var(--tertiary-font-family), sans-serif;
+	--font-size-multiplier: var(--global-font-multiplier-tertiary);
+}
+@mixin fontQuaternary() {
+	font-family: var(--quaternary-font-family), sans-serif;
+	--font-size-multiplier: var(--global-font-multiplier-quaternary);
+}

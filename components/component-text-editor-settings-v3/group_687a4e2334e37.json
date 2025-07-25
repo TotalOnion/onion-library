@@ -49,7 +49,25 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_687a624a6e353",
+                        "operator": "==",
+                        "value": ""
+                    },
+                    {
+                        "field": "field_687a621c6e352",
+                        "operator": "==",
+                        "value": ""
+                    },
+                    {
+                        "field": "field_687a4e4e1c0da",
+                        "operator": "==",
+                        "value": ""
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -490,7 +508,6 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "__inherit": "Use responsive bundle",
                 "__h-extra-large-desktop": "H extra large",
                 "__h-large-desktop": "H large",
                 "__h-medium-desktop": "H medium",
@@ -516,13 +533,13 @@
             "multiple": 0,
             "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "allow_null": 0,
+            "allow_null": 1,
             "ui": 1,
             "ajax": 1,
-            "placeholder": "",
             "min": ""
         },
         {
@@ -760,7 +777,6 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "__inherit": "Use responsive bundle",
                 "__h-extra-large-portrait": "H extra large",
                 "__h-large-portrait": "H large",
                 "__h-medium-portrait": "H medium",
@@ -786,13 +802,13 @@
             "multiple": 0,
             "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "allow_null": 0,
+            "allow_null": 1,
             "ui": 1,
             "ajax": 1,
-            "placeholder": "",
             "min": ""
         },
         {
@@ -1021,7 +1037,6 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "__inherit": "Use responsive bundle",
                 "__h-extra-large-mobile": "H extra large",
                 "__h-large-mobile": "H large",
                 "__h-medium-mobile": "H medium",
@@ -1047,13 +1062,13 @@
             "multiple": 0,
             "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "allow_null": 0,
+            "allow_null": 1,
             "ui": 1,
             "ajax": 1,
-            "placeholder": "",
             "min": ""
         },
         {
@@ -1352,5 +1367,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753357179
+    "modified": 1753459080
 }
