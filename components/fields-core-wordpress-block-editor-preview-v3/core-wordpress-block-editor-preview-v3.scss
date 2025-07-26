@@ -1,8 +1,12 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-root-variables/core-root-variables';
-@use 'Assets/scss/modules/library-modules/core-css-sizing-vars/core-css-sizing-vars';
-@use 'Assets/scss/modules/library-modules/core-css-modules/core-css-modules';
+@use 'Assets/scss/modules/library-modules/core-typography-mixins-v3/core-typography-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-typography-v3/core-typography-v3';
+@use 'Assets/scss/modules/library-modules/core-root-variables-v3/core-root-variables-v3';
+@use 'Assets/scss/modules/library-modules/core-css-sizing-vars-v3/core-css-sizing-vars-v3';
+@use 'Assets/scss/modules/library-modules/core-css-modules-v3/core-css-modules-v3';
+@use 'Assets/scss/modules/dynamicBlocksPreview.scss';
+@use 'Assets/scss/theme/typography';
+@use 'NodeModules/swiper/swiper-bundle';
 
 /* Box sizing rules */
 *,
@@ -13,7 +17,7 @@
 .editor-styles-wrapper {
 }
 .block-editor-block-list__layout .wp-block {
-	@include core-mixins.fontSecondary();
+	@include core-typography-mixins-v3.fontSecondary();
 	border: 1px solid #0000002e;
 	background: var(--theme-primary-background-colour);
 	color: var(--theme-primary-text-colour);
@@ -31,8 +35,8 @@ html :where([style*='border-width'][data-assetkey]) {
 }
 
 .acf-block-component.acf-block-body .acf-block-preview {
-	@import 'Assets/scss/modules/dynamicBlocksPreview';
-	@import 'Assets/scss/theme/typography';
+	@include core-typography-v3.core-typography-v3();
+	@include typography.typography();
 
 	.swiper {
 		&::before {

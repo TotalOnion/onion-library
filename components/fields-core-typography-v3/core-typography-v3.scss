@@ -4,649 +4,651 @@
 @use 'Assets/scss/theme/breakpoints';
 @use 'sass:math';
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-//***** TYPOGRAPHY *****\\
-body {
-	@include core-typography-mixins-v3.fontSecondary();
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0; //reset default margin
-	font-weight: unset; //reset default font weight
-	margin-top: unset;
-	@include core-typography-mixins-v3.fontPrimary();
-}
-.override-element-styles {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-size: 0;
+@mixin core-typography-v3() {
+	/* Box sizing rules */
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
 	}
-}
 
-.standard-content-box-wysiwyg-editor {
+	//***** TYPOGRAPHY *****\\
+	body {
+		@include core-typography-mixins-v3.fontSecondary();
+	}
+
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
-		margin-bottom: var(--heading-block-spacing);
-
-		&:last-child {
-			margin-bottom: 0;
+		margin: 0; //reset default margin
+		font-weight: unset; //reset default font weight
+		margin-top: unset;
+		@include core-typography-mixins-v3.fontPrimary();
+	}
+	.override-element-styles {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-size: 0;
 		}
 	}
+
+	.standard-content-box-wysiwyg-editor {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-bottom: var(--heading-block-spacing);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		p {
+			margin-bottom: var(--paragraph-block-spacing);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// // h1 {
+	// // 	@include core-mixins-v3.h1();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h1-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // h2 {
+	// // 	@include core-mixins-v3.h2();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h2-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // h3 {
+	// // 	@include core-mixins-v3.h3();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h3-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // h4 {
+	// // 	@include core-mixins-v3.h4();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h4-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // h5 {
+	// // 	@include core-mixins-v3.h5();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h5-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // h6 {
+	// // 	@include core-mixins-v3.h6();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h6-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // .sh1-sizing {
+	// // 	@include core-mixins-v3.sh1();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--sh1-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // .sh2-sizing {
+	// // 	@include core-mixins-v3.sh2();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--h2-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // .sh3-sizing {
+	// // 	@include core-mixins-v3.sh3();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--sh3-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // .sh4-sizing {
+	// // 	@include core-mixins-v3.sh4();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--sh4-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // .sh5-sizing {
+	// // 	@include core-mixins-v3.sh5();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--sh5-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
+	// // .sh6-sizing {
+	// // 	@include core-mixins-v3.sh6();
+
+	// // 	&:has(.font-tertiary) {
+	// // 		line-height: calc(
+	// // 			var(--sh6-line-height) *
+	// // 				var(--global-line-height-multiplier-tertiary)
+	// // 		);
+	// // 	}
+	// // }
+
 	p {
-		margin-bottom: var(--paragraph-block-spacing);
+		margin: 0; //reset default margin
+		@include core-typography-mixins-v3.p();
+	}
 
-		&:last-child {
-			margin-bottom: 0;
+	a:not([class*='cmpl-cta-style-']) {
+		text-decoration-skip-ink: auto;
+		color: var(--link-colour);
+		text-decoration: var(--link-decoration-style);
+		text-decoration-color: var(--link-decoration-colour);
+
+		strong,
+		b {
+			font-weight: var(--weight-bold);
+		}
+
+		&:hover {
+			cursor: pointer;
+			color: var(--link-colour-hover);
+			text-decoration: var(--link-decoration-style-hover);
+			text-decoration-color: var(--link-decoration-colour-hover);
 		}
 	}
-}
 
-// // h1 {
-// // 	@include core-mixins-v3.h1();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h1-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // h2 {
-// // 	@include core-mixins-v3.h2();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h2-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // h3 {
-// // 	@include core-mixins-v3.h3();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h3-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // h4 {
-// // 	@include core-mixins-v3.h4();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h4-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // h5 {
-// // 	@include core-mixins-v3.h5();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h5-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // h6 {
-// // 	@include core-mixins-v3.h6();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h6-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // .sh1-sizing {
-// // 	@include core-mixins-v3.sh1();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--sh1-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // .sh2-sizing {
-// // 	@include core-mixins-v3.sh2();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--h2-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // .sh3-sizing {
-// // 	@include core-mixins-v3.sh3();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--sh3-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // .sh4-sizing {
-// // 	@include core-mixins-v3.sh4();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--sh4-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // .sh5-sizing {
-// // 	@include core-mixins-v3.sh5();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--sh5-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-// // .sh6-sizing {
-// // 	@include core-mixins-v3.sh6();
-
-// // 	&:has(.font-tertiary) {
-// // 		line-height: calc(
-// // 			var(--sh6-line-height) *
-// // 				var(--global-line-height-multiplier-tertiary)
-// // 		);
-// // 	}
-// // }
-
-p {
-	margin: 0; //reset default margin
-	@include core-typography-mixins-v3.p();
-}
-
-a:not([class*='cmpl-cta-style-']) {
-	text-decoration-skip-ink: auto;
-	color: var(--link-colour);
-	text-decoration: var(--link-decoration-style);
-	text-decoration-color: var(--link-decoration-colour);
-
-	strong,
-	b {
-		font-weight: var(--weight-bold);
+	button {
+		&:focus {
+			// outline: none;
+			// appearance: none;
+		}
 	}
 
-	&:hover {
-		cursor: pointer;
-		color: var(--link-colour-hover);
-		text-decoration: var(--link-decoration-style-hover);
-		text-decoration-color: var(--link-decoration-colour-hover);
-	}
-}
+	blockquote {
+		margin: 0; //reset default margin
+		quotes: '“' '”' '‘' '’';
+		font-weight: bold;
 
-button {
-	&:focus {
-		// outline: none;
-		// appearance: none;
-	}
-}
+		&::before {
+			content: open-quote;
+		}
 
-blockquote {
-	margin: 0; //reset default margin
-	quotes: '“' '”' '‘' '’';
-	font-weight: bold;
-
-	&::before {
-		content: open-quote;
+		&::after {
+			content: close-quote;
+		}
 	}
 
-	&::after {
-		content: close-quote;
-	}
-}
-
-figure,
-figcaption,
-dl,
-dd {
-	margin: 0;
-}
-
-q {
-	&::before {
-		content: open-quote;
+	figure,
+	figcaption,
+	dl,
+	dd {
+		margin: 0;
 	}
 
-	&::after {
-		content: close-quote;
-	}
-}
+	q {
+		&::before {
+			content: open-quote;
+		}
 
-ol {
-	list-style-type: decimal;
-}
-ul {
-	list-style-type: disc;
-}
-li {
-	@include core-typography-mixins-v3.p();
-}
-ol {
-	padding: 0; //reset default padding
-	margin: 0; //reset default margin
-	font-family: var(--secondary-font-family);
-	margin-bottom: var(--paragraph-block-spacing);
-	list-style-position: inside;
-	&:last-child {
-		margin-bottom: 0;
+		&::after {
+			content: close-quote;
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+	ul {
+		list-style-type: disc;
 	}
 	li {
-		margin-bottom: var(--list-item-block-spacing);
-		line-height: var(--list-item-line-height);
-		letter-spacing: var(--list-item-letter-spacing);
+		@include core-typography-mixins-v3.p();
+	}
+	ol {
+		padding: 0; //reset default padding
+		margin: 0; //reset default margin
+		font-family: var(--secondary-font-family);
+		margin-bottom: var(--paragraph-block-spacing);
+		list-style-position: inside;
 		&:last-child {
 			margin-bottom: 0;
 		}
-	}
-}
-.font-primary {
-	@include core-typography-mixins-v3.fontPrimary();
-}
-.font-secondary {
-	@include core-typography-mixins-v3.fontSecondary();
-}
-.font-tertiary {
-	@include core-typography-mixins-v3.fontTertiary();
-}
-.font-quaternary {
-	@include core-typography-mixins-v3.fontQuaternary();
-}
-.h1-l-sizing,
-.h-extra-large {
-	@include core-typography-mixins-v3.h-xl();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-xl-size();
+		li {
+			margin-bottom: var(--list-item-block-spacing);
+			line-height: var(--list-item-line-height);
+			letter-spacing: var(--list-item-letter-spacing);
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-xl-size();
+	.font-primary {
+		@include core-typography-mixins-v3.fontPrimary();
+	}
+	.font-secondary {
+		@include core-typography-mixins-v3.fontSecondary();
+	}
+	.font-tertiary {
+		@include core-typography-mixins-v3.fontTertiary();
+	}
+	.font-quaternary {
+		@include core-typography-mixins-v3.fontQuaternary();
+	}
+	.h1-l-sizing,
+	.h-extra-large {
+		@include core-typography-mixins-v3.h-xl();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-xl-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-xl-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-xl-size();
+			}
 		}
 	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-xl-size();
+	.h1-sizing,
+	.h-large {
+		@include core-typography-mixins-v3.h-l();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-l-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-l-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-l-size();
+			}
 		}
 	}
-}
-.h1-sizing,
-.h-large {
-	@include core-typography-mixins-v3.h-l();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-l-size();
+	.h2-sizing,
+	.h-medium {
+		@include core-typography-mixins-v3.h-m();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-m-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-m-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-m-size();
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-l-size();
+	.h3-sizing,
+	.h-small {
+		@include core-typography-mixins-v3.h-s();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-s-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-s-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-s-size();
+			}
 		}
 	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-l-size();
+	.h4-sizing,
+	.h-xsmall {
+		@include core-typography-mixins-v3.h-xs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-xs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-xs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-xs-size();
+			}
 		}
 	}
-}
-.h2-sizing,
-.h-medium {
-	@include core-typography-mixins-v3.h-m();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-m-size();
+	.h5-sizing,
+	.h-xxsmall {
+		@include core-typography-mixins-v3.h-xxs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-xxs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-xxs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-xxs-size();
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-m-size();
+	.h6-sizing,
+	.h-xxxsmall {
+		@include core-typography-mixins-v3.h-xxxs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.h-xxxs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.h-xxxs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.h-xxxs-size();
+			}
 		}
 	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-m-size();
+	.sh1-sizing,
+	.sh-extra-large {
+		@include core-typography-mixins-v3.sh-xl();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.sh-xl-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.sh-xl-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.sh-xl-size();
+			}
 		}
 	}
-}
-.h3-sizing,
-.h-small {
-	@include core-typography-mixins-v3.h-s();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-s-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-s-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-s-size();
-		}
-	}
-}
-.h4-sizing,
-.h-xsmall {
-	@include core-typography-mixins-v3.h-xs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-xs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-xs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-xs-size();
-		}
-	}
-}
-.h5-sizing,
-.h-xxsmall {
-	@include core-typography-mixins-v3.h-xxs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-xxs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-xxs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-xxs-size();
-		}
-	}
-}
-.h6-sizing,
-.h-xxxsmall {
-	@include core-typography-mixins-v3.h-xxxs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.h-xxxs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.h-xxxs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.h-xxxs-size();
-		}
-	}
-}
-.sh1-sizing,
-.sh-extra-large {
-	@include core-typography-mixins-v3.sh-xl();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.sh-xl-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.sh-xl-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.sh-xl-size();
-		}
-	}
-}
 
-.sh2-sizing,
-.sh-large {
-	@include core-typography-mixins-v3.sh-l();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.sh-l-size();
+	.sh2-sizing,
+	.sh-large {
+		@include core-typography-mixins-v3.sh-l();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.sh-l-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.sh-l-size();
+			}
+		}
+		&-desktop {
+			@media (#{breakpoints.$tabLandscape} <= width) {
+				// @include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.sh-l-size();
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.sh-l-size();
+	.sh3-sizing,
+	.sh-medium {
+		@include core-typography-mixins-v3.sh-m();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.sh-m-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.sh-m-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.sh-m-size();
+			}
 		}
 	}
-	&-desktop {
-		@media (#{breakpoints.$tabLandscape} <= width) {
-			// @include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.sh-l-size();
+	.sh4-sizing,
+	.sh-small {
+		@include core-typography-mixins-v3.sh-s();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.sh-s-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.sh-s-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.sh-s-size();
+			}
 		}
 	}
-}
-.sh3-sizing,
-.sh-medium {
-	@include core-typography-mixins-v3.sh-m();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.sh-m-size();
+	.sh5-sizing,
+	.sh-xsmall {
+		@include core-typography-mixins-v3.sh-xs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.sh-xs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.sh-xs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.sh-xs-size();
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.sh-m-size();
+	.sh6-sizing,
+	.sh-xxsmall {
+		@include core-typography-mixins-v3.sh-xxs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.sh-xxs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.sh-xxs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.sh-xxs-size();
+			}
 		}
 	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.sh-m-size();
+	.p-l-sizing {
+		@include core-typography-mixins-v3.p-l();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.p-l-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.p-l-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.p-l-size();
+			}
 		}
 	}
-}
-.sh4-sizing,
-.sh-small {
-	@include core-typography-mixins-v3.sh-s();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.sh-s-size();
+	.p-sizing {
+		@include core-typography-mixins-v3.p();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.p-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.p-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.p-size();
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.sh-s-size();
+	.p-s-sizing {
+		@include core-typography-mixins-v3.p-s();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.p-s-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.p-s-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.p-s-size();
+			}
 		}
 	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.sh-s-size();
+	.p-xs-sizing {
+		@include core-typography-mixins-v3.p-xs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.p-xs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.p-xs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.p-xs-size();
+			}
 		}
 	}
-}
-.sh5-sizing,
-.sh-xsmall {
-	@include core-typography-mixins-v3.sh-xs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.sh-xs-size();
+	.p-xxs-sizing {
+		@include core-typography-mixins-v3.p-xxs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.p-xxs-size();
+			}
+		}
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.p-xxs-size();
+			}
+		}
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.p-xxs-size();
+			}
 		}
 	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.sh-xs-size();
+	.p-xxxs-sizing {
+		@include core-typography-mixins-v3.p-xxxs();
+		&-mobile {
+			@media ( width <= #{breakpoints.$tabPortrait}) {
+				@include core-typography-mixins-v3.p-xxxs-size();
+			}
 		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.sh-xs-size();
+		&-portrait {
+			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+				@include core-typography-mixins-v3.p-xxxs-size();
+			}
 		}
-	}
-}
-.sh6-sizing,
-.sh-xxsmall {
-	@include core-typography-mixins-v3.sh-xxs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.sh-xxs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.sh-xxs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.sh-xxs-size();
-		}
-	}
-}
-.p-l-sizing {
-	@include core-typography-mixins-v3.p-l();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.p-l-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.p-l-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.p-l-size();
-		}
-	}
-}
-.p-sizing {
-	@include core-typography-mixins-v3.p();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.p-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.p-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.p-size();
-		}
-	}
-}
-.p-s-sizing {
-	@include core-typography-mixins-v3.p-s();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.p-s-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.p-s-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.p-s-size();
-		}
-	}
-}
-.p-xs-sizing {
-	@include core-typography-mixins-v3.p-xs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.p-xs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.p-xs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.p-xs-size();
-		}
-	}
-}
-.p-xxs-sizing {
-	@include core-typography-mixins-v3.p-xxs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.p-xxs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.p-xxs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.p-xxs-size();
-		}
-	}
-}
-.p-xxxs-sizing {
-	@include core-typography-mixins-v3.p-xxxs();
-	&-mobile {
-		@media ( width <= #{breakpoints.$tabPortrait}) {
-			@include core-typography-mixins-v3.p-xxxs-size();
-		}
-	}
-	&-portrait {
-		@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-			@include core-typography-mixins-v3.p-xxxs-size();
-		}
-	}
-	&-desktop {
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			@include core-typography-mixins-v3.p-xxxs-size();
+		&-desktop {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				@include core-typography-mixins-v3.p-xxxs-size();
+			}
 		}
 	}
 }
