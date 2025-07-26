@@ -1,0 +1,45 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+// This is the new version the older mixins should be removed and the blocks use Gradient Overlay mixin instead
+@mixin gradientOverlay() {
+	--spread: calc(100% - var(--gradient-spread));
+	&__gradient-overlay-element {
+		position: absolute;
+		inset: 0;
+		z-index: var(--gradient-zindex);
+		grid-area: var(--gradient-grid-area);
+		&::before,
+		&:after {
+			content: '';
+			pointer-events: none;
+			position: absolute;
+			inset: 0;
+			opacity: var(--gradient-opacity);
+		}
+		&::before {
+			background: linear-gradient(
+				var(--gradient-origin-before),
+				rgba(255, 255, 255, 0) 0%,
+				rgba(255, 255, 255, 0)
+					calc(var(--spread) - var(--gradient-amount)),
+				var(--gradient-colour) calc(100% - var(--gradient-amount))
+			);
+		}
+		&::after {
+			content: var(--enable-after);
+			background: linear-gradient(
+				var(--gradient-origin-after),
+				rgba(255, 255, 255, 0) 0%,
+				rgba(255, 255, 255, 0)
+					calc(var(--spread) - var(--gradient-amount)),
+				var(--gradient-colour) calc(100% - var(--gradient-amount))
+			);
+		}
+	}
+	&__blur-overlay-element {
+		background: var(--blur-colour);
+		backdrop-filter: blur(var(--blur-value));
+		position: absolute;
+		inset: 0;
+		z-index: var(--blur-zindex);
+	}
+}

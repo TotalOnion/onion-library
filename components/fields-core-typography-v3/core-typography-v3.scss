@@ -24,8 +24,8 @@ h5,
 h6 {
 	margin: 0; //reset default margin
 	font-weight: unset; //reset default font weight
-	@include core-typography-mixins-v3.fontPrimary();
 	margin-top: unset;
+	@include core-typography-mixins-v3.fontPrimary();
 }
 .override-element-styles {
 	h1,
