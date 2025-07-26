@@ -1,11 +1,10 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/post-info-v3/post-info-v3-extra';
-@use 'Assets/scss/modules/library-modules/grid-layout-container/grid-layout-container';
-@use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
-@use 'Assets/scss/modules/library-modules/element-positioning/element-positioning';
+@use 'Assets/scss/modules/library-modules/grid-layout-container-v3/grid-layout-container-v3';
+@use 'Assets/scss/modules/library-modules/grid-layout-element-v3/grid-layout-element-v3';
+@use 'Assets/scss/modules/library-modules/element-positioning-v3/element-positioning-v3';
 @use 'Assets/scss/modules/library-modules/gradient-overlay/gradient-overlay';
 @use 'Assets/scss/modules/library-modules/social-media-share/social-media-share';
 @use 'Assets/scss/modules/library-modules/better-reviews/better-reviews';
@@ -16,7 +15,7 @@
 	grid-auto-columns: 1fr;
 	grid-template: 'main' / 1fr;
 	@include content-container-settings-v3.contentContainerSettingsV3();
-	@include grid-layout-container.gridLayoutContainer();
+	@include grid-layout-container-v3.gridLayoutContainer();
 	@include social-media-share.social-media-share();
 	@include better-reviews.better-reviews();
 	&__post-cover-link {
@@ -40,7 +39,7 @@
 		border: 0;
 	}
 	&__info-item {
-		@include grid-layout-element.gridLayoutElement();
+		@include grid-layout-element-v3.gridLayoutElement();
 		width: 100%;
 		position: relative;
 	}
@@ -48,22 +47,22 @@
 		width: 100%;
 	}
 	&__cta-selection-container {
-		@include grid-layout-element.gridLayoutElement();
+		@include grid-layout-element-v3.gridLayoutElement();
 	}
 	&__cta {
 		display: flex;
 	}
 	&__cta-style-post-colour,
 	&__cta-style-post-text-colour-style {
-		padding-block: core-functions-v3.fluidSize(10, 'mobile');
-		padding-inline: core-functions-v3.fluidSize(20, 'mobile');
+		padding-block: core-functions-v3.fluidSize(10);
+		padding-inline: core-functions-v3.fluidSize(20);
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			padding-block: core-functions-v3.fluidSize(10, 'portrait');
-			padding-inline: core-functions-v3.fluidSize(20, 'portrait');
+			padding-block: core-functions-v3.fluidSize(10);
+			padding-inline: core-functions-v3.fluidSize(20);
 		}
 		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			padding-block: core-functions-v3.fluidSize(10, 'desktop');
-			padding-inline: core-functions-v3.fluidSize(20, 'desktop');
+			padding-block: core-functions-v3.fluidSize(10);
+			padding-inline: core-functions-v3.fluidSize(20);
 		}
 	}
 	&__cta-style-post-colour {
@@ -86,7 +85,7 @@
 		pointer-events: none;
 		display: flex;
 		width: auto;
-		@include grid-layout-element.gridLayoutElement();
+		@include grid-layout-element-v3.gridLayoutElement();
 	}
 	&__post-image-container {
 		display: grid;
@@ -96,7 +95,7 @@
 			img,
 			svg {
 				margin: unset;
-				@include element-positioning.elementPositioning();
+				@include element-positioning-v3.elementPositioning();
 			}
 		}
 	}
@@ -110,7 +109,7 @@
 			--image-aspect-ratio-mobile,
 			var(--image-aspect-ratio-desktop)
 		);
-		@include grid-layout-element.gridLayoutElement();
+		@include grid-layout-element-v3.gridLayoutElement();
 		width: var(--post-image-width-mobile);
 
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
@@ -171,7 +170,7 @@
 	}
 	&__post-text-alternative-style {
 		width: auto;
-		@include grid-layout-element.gridLayoutElement();
+		@include grid-layout-element-v3.gridLayoutElement();
 	}
 	@include post-info-v3-extra.additionalStyles();
 }

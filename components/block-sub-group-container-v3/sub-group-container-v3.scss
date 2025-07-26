@@ -1,26 +1,20 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
-@use 'Assets/scss/modules/library-modules/grid-layout-container/grid-layout-container';
-@use 'Assets/scss/modules/library-modules/responsive-image/responsive-image';
-// @use 'Assets/scss/modules/library-modules/animations/animations';
+@use 'Assets/scss/modules/library-modules/grid-layout-element-v3/grid-layout-element-v3';
+@use 'Assets/scss/modules/library-modules/grid-layout-container-v3/grid-layout-container-v3';
+@use 'Assets/scss/modules/library-modules/animations-v3/animations-v3';
 @use 'Assets/scss/blocks/sub-group-container-v3/sub-group-container-v3-extra';
-@use 'Assets/scss/modules/library-modules/cover-link/cover-link';
 .sub-group-container-v3 {
-	@include responsive-image.responsiveImage();
-	// @include animations.animations();
-	@include cover-link.coverLink();
-
 	display: grid;
 	grid-template: 'main' / 1fr;
 	place-items: center;
+	@include animations-v3.animations();
 	&__grid-container {
 		grid-area: main;
 		place-self: stretch;
-		@include grid-layout-container.gridLayoutContainer();
+		@include grid-layout-container-v3.gridLayoutContainer();
 	}
 	&__block-container {
-		@include grid-layout-element.gridLayoutElement();
 		z-index: 5;
+		@include grid-layout-element-v3.gridLayoutElement();
 	}
 	@include sub-group-container-v3-extra.additionalStyles();
 }

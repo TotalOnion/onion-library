@@ -1,12 +1,12 @@
 @use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 
 @mixin gridLayoutContainer() {
 	display: grid;
 	position: relative;
 	grid-auto-flow: var(--grid-auto-flow-mobile, row);
-	--grid-auto-columns-custom-size: #{core-functions.fluidSize(
+	--grid-auto-columns-custom-size: #{core-functions-v3.fluidSize(
 			var(--grid-auto-columns-custom),
 			'static'
 		)};
@@ -23,7 +23,7 @@
 	grid-template-rows: var(--grid-template-rows-custom-mobile);
 	grid-auto-rows: var(--grid-auto-rows);
 
-	@include core-mixins.device(breakpoints.$tabPortrait) {
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		grid-gap: calc(
 				var(--global-inline-spacing) * var(--row-gap-mult-portrait, 0)
 			)
@@ -44,7 +44,7 @@
 		grid-template-rows: var(--grid-template-rows-custom-portrait);
 	}
 
-	@include core-mixins.device(breakpoints.$tabLandscape) {
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		grid-gap: calc(
 				var(--global-inline-spacing) * var(--row-gap-mult-desktop, 0)
 			)

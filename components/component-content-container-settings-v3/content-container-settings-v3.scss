@@ -1,6 +1,6 @@
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @use 'Assets/scss/modules/library-modules/box-shadow/box-shadow';
 
 @mixin contentContainerSettingsV3() {
@@ -22,19 +22,19 @@
 		align-items: center;
 		background-color: var(--cb-bg-colour);
 		padding: calc(
-				var(--global-content-box-padding-block) *
+				var(--global-inline-spacing) *
 					var(--content-box-top-padding-mult-mobile)
 			)
 			calc(
-				var(--global-content-box-padding-inline) *
+				var(--global-inline-spacing) *
 					var(--content-box-right-padding-mult-mobile)
 			)
 			calc(
-				var(--global-content-box-padding-inline) *
+				var(--global-inline-spacing) *
 					var(--content-box-bottom-padding-mult-mobile)
 			)
 			calc(
-				var(--global-content-box-padding-inline) *
+				var(--global-inline-spacing) *
 					var(--content-box-left-padding-mult-mobile)
 			);
 		margin: calc(
@@ -62,19 +62,19 @@
 			place-self: var(--content-box-vert-align-portrait)
 				var(--content-box-horiz-align-portrait);
 			padding: calc(
-					var(--global-content-box-padding-block) *
+					var(--global-inline-spacing) *
 						var(--content-box-top-padding-mult-portrait)
 				)
 				calc(
-					var(--global-content-box-padding-inline) *
+					var(--global-inline-spacing) *
 						var(--content-box-right-padding-mult-portrait)
 				)
 				calc(
-					var(--global-content-box-padding-inline) *
+					var(--global-inline-spacing) *
 						var(--content-box-bottom-padding-mult-portrait)
 				)
 				calc(
-					var(--global-content-box-padding-inline) *
+					var(--global-inline-spacing) *
 						var(--content-box-left-padding-mult-portrait)
 				);
 			margin: calc(
@@ -112,15 +112,15 @@
 						var(--content-box-top-padding-mult)
 				)
 				calc(
-					var(--global-content-box-padding-inline) *
+					var(--global-inline-spacing) *
 						var(--content-box-right-padding-mult)
 				)
 				calc(
-					var(--global-content-box-padding-inline) *
+					var(--global-inline-spacing) *
 						var(--content-box-bottom-padding-mult)
 				)
 				calc(
-					var(--global-content-box-padding-inline) *
+					var(--global-inline-spacing) *
 						var(--content-box-left-padding-mult)
 				);
 			margin: calc(
@@ -149,7 +149,7 @@
 		display: grid;
 		word-break: normal;
 		width: var(--content-container-width, 100%);
-		-webkit-text-stroke: core-functions.fontSize(
+		-webkit-text-stroke: core-functions-v3.fontSize(
 				var(--text-stroke-width),
 				'static'
 			)
