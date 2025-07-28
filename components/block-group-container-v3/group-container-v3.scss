@@ -1,6 +1,7 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 @use 'Assets/scss/modules/library-modules/grid-layout-element-v3/grid-layout-element-v3';
 @use 'Assets/scss/modules/library-modules/grid-layout-container-v3/grid-layout-container-v3';
+@use 'Assets/scss/modules/library-modules/flex-layout-container-v3/flex-layout-container-v3';
 @use 'Assets/scss/blocks/group-container-v3/group-container-v3-extra';
 
 .group-container-v3 {
@@ -10,7 +11,12 @@
 	&__grid-container {
 		grid-area: main;
 		place-self: stretch;
-		@include grid-layout-container-v3.gridLayoutContainer();
+		&.flex-layout-container {
+			@include flex-layout-container-v3.flexLayoutContainer();
+		}
+		&.grid-layout-container {
+			@include grid-layout-container-v3.gridLayoutContainer();
+		}
 	}
 	&__block-container {
 		@include grid-layout-element-v3.gridLayoutElement();
