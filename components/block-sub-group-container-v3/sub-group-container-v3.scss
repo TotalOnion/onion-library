@@ -16,5 +16,5 @@
 		z-index: 5;
 		@include grid-layout-element-v3.gridLayoutElement();
 	}
-	@include sub-group-container-v3-extra.additionalStyles();
 }
+@include sub-group-container-v3-extra.additionalStyles();

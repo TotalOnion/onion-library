@@ -3,5 +3,5 @@
 
 .single-responsive-image-v3 {
 	@include responsive-image.responsiveImage();
-	@include single-responsive-image-v3-extra.additionalStyles();
 }
+@include single-responsive-image-v3-extra.additionalStyles();

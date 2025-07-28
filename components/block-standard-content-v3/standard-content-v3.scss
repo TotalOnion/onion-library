@@ -7,5 +7,5 @@
 	grid-template: 'main' / 1fr;
 	@include core-mixins-v3.responsiveShowHide(grid);
 	@include content-container-v3.contentContainerV3();
-	@include standard-content-v3-extra.additionalStyles();
 }
+@include standard-content-v3-extra.additionalStyles();

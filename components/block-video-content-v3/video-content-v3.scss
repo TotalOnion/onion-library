@@ -7,5 +7,5 @@
 	&:has(.video-playing) {
 		z-index: 99;
 	}
-	@include video-content-v3-extra.additionalStyles();
 }
+@include video-content-v3-extra.additionalStyles();

@@ -1,7 +1,7 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
-@use 'Assets/scss/modules/library-modules/element-positioning/element-positioning';
+@use 'Assets/scss/modules/library-modules/element-positioning-v3/element-positioning-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra';
 
@@ -113,7 +113,7 @@
 		width: unset;
 	}
 	.swiper-pagination {
-		@include element-positioning.elementPositioning();
+		@include element-positioning-v3.elementPositioning();
 	}
 
 	.swiper-pagination-bullet {
@@ -150,6 +150,5 @@
 			display: var(--display-arrows-desktop);
 		}
 	}
-
-	@include carousel-multi-layout-v3-extra.additionalStyles();
 }
+@include carousel-multi-layout-v3-extra.additionalStyles();
