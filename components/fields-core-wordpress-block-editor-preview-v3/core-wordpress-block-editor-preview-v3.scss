@@ -1,8 +1,10 @@
 @use 'Assets/scss/modules/library-modules/core-typography-mixins-v3/core-typography-mixins-v3';
 @use 'Assets/scss/modules/library-modules/core-critical-v3/core-critical-v3';
+@use 'Assets/scss/theme/font-face';
 @use 'Assets/scss/theme/typography';
 @use 'Assets/scss/modules/dynamicBlocksPreview.scss';
 @use 'NodeModules/swiper/swiper-bundle';
+@include core-critical-v3.coreCriticalV3();
 
 /* Box sizing rules */
 *,
@@ -31,7 +33,6 @@ html :where([style*='border-width'][data-assetkey]) {
 }
 
 .acf-block-component.acf-block-body .acf-block-preview {
-	@include core-critical-v3.coreCriticalV3();
 	@include typography.typography();
 
 	.swiper {
