@@ -1,11 +1,7 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 @use 'Assets/scss/modules/library-modules/core-typography-mixins-v3/core-typography-mixins-v3';
-@use 'Assets/scss/modules/library-modules/core-typography-v3/core-typography-v3';
-@use 'Assets/scss/modules/library-modules/core-root-variables-v3/core-root-variables-v3';
-@use 'Assets/scss/modules/library-modules/core-css-sizing-vars-v3/core-css-sizing-vars-v3';
-@use 'Assets/scss/modules/library-modules/core-css-modules-v3/core-css-modules-v3';
-@use 'Assets/scss/modules/dynamicBlocksPreview.scss';
+@use 'Assets/scss/modules/library-modules/core-critical-v3/core-critical-v3';
 @use 'Assets/scss/theme/typography';
+@use 'Assets/scss/modules/dynamicBlocksPreview.scss';
 @use 'NodeModules/swiper/swiper-bundle';
 
 /* Box sizing rules */
@@ -35,7 +31,7 @@ html :where([style*='border-width'][data-assetkey]) {
 }
 
 .acf-block-component.acf-block-body .acf-block-preview {
-	@include core-typography-v3.core-typography-v3();
+	@include core-critical-v3.coreCriticalV3();
 	@include typography.typography();
 
 	.swiper {

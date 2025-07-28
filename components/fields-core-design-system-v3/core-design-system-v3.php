@@ -11,8 +11,8 @@ function core_design_system_v3()
         $options = GLOBAL_SETTINGS;
         if ($options) {
             $output = '
-            <style id="core-design-system">
-            :root { 
+            <style id="core-design-system-v3">
+            body { 
                 --mobile-inline:' . ($options['mobile_inline'] ?? 0) . '; 
                 --portrait-inline:' . ($options['portrait_inline'] ?? 0) . '; 
                 --landscape-inline:' . ($options['landscape_inline'] ?? 0) . '; 

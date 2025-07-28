@@ -4,9 +4,10 @@
 @use 'Assets/scss/modules/library-modules/block-settings/block-settings';
 @use 'Assets/scss/modules/library-modules/social-networks/social-networks';
 @use 'Assets/scss/modules/library-modules/core-cta/core-cta';
-
-@include block-padding.blockPadding();
-@include social-networks.socialNetworks();
-@include animations.animations();
-@include block-settings.blockSettings();
-@include core-cta.core-cta();
+@mixin coreCssModulesV3() {
+	@include block-padding.blockPadding();
+	@include social-networks.socialNetworks();
+	@include animations.animations();
+	@include block-settings.blockSettings();
+	@include core-cta.core-cta();
+}

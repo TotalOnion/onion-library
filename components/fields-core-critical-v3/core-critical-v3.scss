@@ -2,6 +2,13 @@
 @use 'Assets/scss/modules/library-modules/core-root-variables-v3/core-root-variables-v3';
 @use 'Assets/scss/modules/library-modules/core-css-sizing-vars-v3/core-css-sizing-vars-v3';
 @use 'Assets/scss/modules/library-modules/core-typography-v3/core-typography-v3';
-@use 'Assets/scss/modules/library-modules/core-generic-v3/core-generic-v3';
 @use 'Assets/scss/modules/library-modules/core-css-modules-v3/core-css-modules-v3';
-@include core-typography-v3.core-typography-v3();
+@use 'Assets/scss/modules/library-modules/core-generic-v3/core-generic-v3';
+
+@mixin coreCriticalV3() {
+	@include core-root-variables-v3.coreRootVariablesV3();
+	@include core-css-sizing-vars-v3.coreCssSizingVarsV3();
+	@include core-typography-v3.coreTypographyV3();
+	@include core-css-modules-v3.coreCssModulesV3();
+	@include core-generic-v3.coreGenericV3();
+}

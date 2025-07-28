@@ -4,7 +4,7 @@
 @use 'Assets/scss/theme/breakpoints';
 @use 'sass:math';
 
-@mixin core-typography-v3() {
+@mixin coreTypographyV3() {
 	/* Box sizing rules */
 	*,
 	*::before,

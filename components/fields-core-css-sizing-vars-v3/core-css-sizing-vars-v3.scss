@@ -2,96 +2,97 @@
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
-
-body {
-	--screen-width: var(--screen-width-mobile);
-	--font-reference: var(--font-reference-mobile);
-	--design-reference: var(--mobile-design-reference);
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-		--screen-width: var(--screen-width-portrait);
-		--font-reference: var(--font-reference-portrait);
-		--design-reference: var(--portrait-design-reference);
+@mixin coreCssSizingVarsV3() {
+	body {
+		--screen-width: var(--screen-width-mobile);
+		--font-reference: var(--font-reference-mobile);
+		--design-reference: var(--mobile-design-reference);
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			--screen-width: var(--screen-width-portrait);
+			--font-reference: var(--font-reference-portrait);
+			--design-reference: var(--portrait-design-reference);
+		}
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			--screen-width: var(--screen-width-landscape);
+			--font-reference: var(--font-reference-landscape);
+			--design-reference: var(--landscape-design-reference);
+		}
+		@include core-mixins-v3.device(breakpoints.$desktop) {
+			--screen-width: var(--screen-width-desktop);
+			--font-reference: var(--font-reference-desktop);
+			--design-reference: var(--desktop-design-reference);
+		}
+		@include core-mixins-v3.device(breakpoints.$desktop-fullhd) {
+			--screen-width: var(--screen-width-fullhd);
+			--font-reference: var(--font-reference-fullhd);
+			--design-reference: var(--fullhd-design-reference);
+		}
 	}
-	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-		--screen-width: var(--screen-width-landscape);
-		--font-reference: var(--font-reference-landscape);
-		--design-reference: var(--landscape-design-reference);
-	}
-	@include core-mixins-v3.device(breakpoints.$desktop) {
-		--screen-width: var(--screen-width-desktop);
-		--font-reference: var(--font-reference-desktop);
-		--design-reference: var(--desktop-design-reference);
-	}
-	@include core-mixins-v3.device(breakpoints.$desktop-fullhd) {
-		--screen-width: var(--screen-width-fullhd);
-		--font-reference: var(--font-reference-fullhd);
-		--design-reference: var(--fullhd-design-reference);
-	}
-}
-body {
-	--global-inline-spacing: #{core-functions-v3.fluidSize(
-			var(--mobile-inline),
-			'mobile'
-		)};
-
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+	body {
 		--global-inline-spacing: #{core-functions-v3.fluidSize(
-				var(--portrait-inline),
-				'portrait'
+				var(--mobile-inline),
+				'mobile'
+			)};
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			--global-inline-spacing: #{core-functions-v3.fluidSize(
+					var(--portrait-inline),
+					'portrait'
+				)};
+		}
+
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			--global-inline-spacing: #{core-functions-v3.fluidSize(
+					var(--landscape-inline),
+					'landscape'
+				)};
+		}
+
+		@include core-mixins-v3.device(breakpoints.$desktop) {
+			--global-inline-spacing: #{core-functions-v3.fluidSize(
+					var(--desktop-inline),
+					'desktop'
+				)};
+		}
+	}
+
+	body {
+		--heading-block-spacing: var(--heading-block-spacing-mobile);
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			--heading-block-spacing: var(--heading-block-spacing-portrait);
+		}
+
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			--heading-block-spacing: var(--heading-block-spacing-desktop);
+		}
+	}
+	body {
+		--paragraph-block-spacing: var(--paragraph-block-spacing-mobile);
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			--paragraph-block-spacing: var(--paragraph-block-spacing-portrait);
+		}
+
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			--paragraph-block-spacing: var(--paragraph-block-spacing-desktop);
+		}
+	}
+	body {
+		--list-item-block-spacing: var(--list-item-block-spacing-mobile);
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			--list-item-block-spacing: var(--list-item-block-spacing-portrait);
+		}
+
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			--list-item-block-spacing: var(--list-item-block-spacing-desktop);
+		}
+	}
+	body {
+		--global-content-max-width: #{core-functions-v3.fluidSize(
+				var(--global-content-max-width-setting),
+				'static'
 			)};
 	}
-
-	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-		--global-inline-spacing: #{core-functions-v3.fluidSize(
-				var(--landscape-inline),
-				'landscape'
-			)};
-	}
-
-	@include core-mixins-v3.device(breakpoints.$desktop) {
-		--global-inline-spacing: #{core-functions-v3.fluidSize(
-				var(--desktop-inline),
-				'desktop'
-			)};
-	}
-}
-
-body {
-	--heading-block-spacing: var(--heading-block-spacing-mobile);
-
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-		--heading-block-spacing: var(--heading-block-spacing-portrait);
-	}
-
-	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-		--heading-block-spacing: var(--heading-block-spacing-desktop);
-	}
-}
-body {
-	--paragraph-block-spacing: var(--paragraph-block-spacing-mobile);
-
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-		--paragraph-block-spacing: var(--paragraph-block-spacing-portrait);
-	}
-
-	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-		--paragraph-block-spacing: var(--paragraph-block-spacing-desktop);
-	}
-}
-body {
-	--list-item-block-spacing: var(--list-item-block-spacing-mobile);
-
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-		--list-item-block-spacing: var(--list-item-block-spacing-portrait);
-	}
-
-	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-		--list-item-block-spacing: var(--list-item-block-spacing-desktop);
-	}
-}
-body {
-	--global-content-max-width: #{core-functions-v3.fluidSize(
-			var(--global-content-max-width-setting),
-			'static'
-		)};
-}
+} // End of mixin

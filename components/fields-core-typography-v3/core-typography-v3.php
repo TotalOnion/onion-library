@@ -8,8 +8,8 @@ function core_typography_v3()
         if (is_array($options)) {
             if (array_key_exists('headings', $options)) {
                 $output = '
-            <style id="core-typography-vars">
-            :root {
+            <style id="core-typography-v3-vars">
+            body {
                 --paragraph-block-spacing-mobile:' . ($options['paragraph_spacing_mobile'] ?? 0) . 'px;
                 --paragraph-block-spacing-portrait:' . ($options['paragraph_spacing_portrait'] ?? 0) . 'px;
                 --paragraph-block-spacing-desktop:' . ($options['paragraph_spacing_desktop'] ?? 0) . 'px;
