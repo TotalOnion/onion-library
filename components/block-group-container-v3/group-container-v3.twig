@@ -12,13 +12,12 @@
 	{% set fallbackBackgroundColour = '--block-background-colour: ' ~ fields.background_colour ~ ';' %}
 {% endif %}
 {% set layoutType = fields.layout_type|ru %}
-
 {% set layoutStyles = '' %}
 {% if layoutType == 'flex' %}
-	{% set layoutStyles = include('components/flex-layout-container.twig') %}
+	{% set layoutStyles = include('components/flex-layout-container-v3.twig') %}
 	{% set layoutClass = 'flex-layout-container' %}
 {% elseif layoutType == 'grid' %}
-	{% set layoutStyles = include('components/grid-layout-container.twig') %}
+	{% set layoutStyles = include('components/grid-layout-container-v3.twig') %}
 	{% set layoutClass = 'grid-layout-container' %}
 {% endif %}
 

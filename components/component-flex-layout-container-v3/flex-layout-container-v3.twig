@@ -1,0 +1,33 @@
+{% set flexDirectionDesktop = '--flex-direction-desktop: ' ~ fields.flex_layout.flex_direction_desktop|ru|default('row') ~ ';' %}
+{% set flexDirectionPortrait = '--flex-direction-portrait: ' ~ fields.flex_layout.flex_direction_portrait|ru|default('row') ~ ';' %}
+
+{% set flexDirectionMobile = '--flex-direction-mobile: ' ~ fields.flex_layout.flex_direction_mobile|ru|default('row') ~ ';' %}
+
+{% set flexWrapDesktop = '--flex-wrap-desktop: ' ~ fields.flex_layout.flex_wrap_desktop|ru|default('nowrap') ~ ';' %}
+{% set flexWrapPortrait = '--flex-wrap-portrait: ' ~ fields.flex_layout.flex_wrap_portrait|ru|default('nowrap') ~ ';' %}
+{% set flexWrapMobile = '--flex-wrap-mobile: ' ~ fields.flex_layout.flex_wrap_mobile|ru|default('nowrap') ~ ';' %}
+
+{% set displayType = '--display-type: ' ~ 'flex' ~ ';' %}
+
+{% set flexDirection = flexDirectionDesktop ~ flexDirectionPortrait ~ flexDirectionMobile %}
+{% set flexWrap = flexWrapDesktop ~ flexWrapPortrait ~ flexWrapMobile %}
+
+{% set justifyContentDesktop = '--justify-content-desktop: ' ~ fields.flex_layout.justify_content_desktop|ru|default('flex-start') ~ ';' %}
+{% set justifyContentPortrait = '--justify-content-portrait: ' ~ fields.flex_layout.justify_content_portrait|ru|default('flex-start') ~ ';' %}
+{% set justifyContentMobile = '--justify-content-mobile: ' ~ fields.flex_layout.justify_content_mobile|ru|default('flex-start') ~ ';' %}
+
+{% set justifyContent = justifyContentDesktop ~ justifyContentPortrait ~ justifyContentMobile %}
+{% set flexDirection = flexDirection ~ flexWrap ~ justifyContentDesktop ~ justifyContentPortrait ~ justifyContentMobile %}
+{% set alignItemsDesktop = '--align-items-desktop: ' ~ fields.flex_layout.align_items_desktop|ru|default('flex-start') ~ ';' %}
+{% set alignItemsPortrait = '--align-items-portrait: ' ~ fields.flex_layout.align_items_portrait|ru|default('flex-start') ~ ';' %}
+{% set alignItemsMobile = '--align-items-mobile: ' ~ fields.flex_layout.align_items_mobile|ru|default('flex-start') ~ ';' %}
+
+{% set alignItems = alignItemsDesktop ~ alignItemsPortrait ~ alignItemsMobile %}
+
+{% set gapDesktop = '--gap-desktop: ' ~ fields.flex_layout.gap_desktop|ru|default('0px') ~ ';' %}
+{% set gapPortrait = '--gap-portrait: ' ~ fields.flex_layout.gap_portrait|ru|default('0px') ~ ';' %}
+{% set gapMobile = '--gap-mobile: ' ~ fields.flex_layout.gap_mobile|ru|default('0px') ~ ';' %}
+
+{% set gap = gapDesktop ~ gapPortrait ~ gapMobile %}
+
+{{flexDirection ~ flexWrap ~ justifyContent ~ alignItems ~ gap ~ displayType}}
