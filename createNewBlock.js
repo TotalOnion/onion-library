@@ -4,7 +4,6 @@ const { globSync } = require('glob');
 const yargs = require('yargs');
 const {exec} = require('child_process');
 const swiperTemplates = require('./new-block-templates/template-swiper');
-// const cypressJs = require('./new-block-templates/template-cypress');
 const vueTemplates = require('./new-block-templates/template-vue');
 const acfTemplate = require('./new-block-templates/template-acf');
 const defaultTemplates = require('./new-block-templates/template-default');
@@ -88,7 +87,7 @@ const contentContainerTemplate = `
 const templateData = `
 {% set blockClassName = "${newBlockName}" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
@@ -96,7 +95,12 @@ const templateData = `
 {% set sectionStyles =  styleEntryPoint %}
 
 {{previewEntryPoint}}
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 	${swiper ? swiperTemplates.templatetwig(newBlockName) : ''}${
 	image ? imageTemplate : ''
 }
