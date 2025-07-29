@@ -5,12 +5,23 @@
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields: fields, block: block, displaytype: displaytype, is_preview: is_preview }, with_context = false) %}
-{% set backgroundColour = '--section-background-colour: ' ~ fields.background_colour ~ ';' %}
-{% set gridLayoutContainer = include('components/grid-layout-container.twig') %}
+
+{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_columns_desktop)|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_columns_desktop)|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_columns_portrait)|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_columns_mobile)|round ~ 'vw, 100vw' %}
+
+{% set layoutType = fields.layout_type|ru|default('grid') %}
+{% set layoutStyles = '' %}
+{% if layoutType == 'flex' %}
+	{% set layoutStyles = include('components/flex-layout-container-v3.twig') %}
+	{% set layoutClass = 'flex-layout-container' %}
+{% elseif layoutType == 'grid' %}
+	{% set layoutStyles = include('components/grid-layout-container-v3.twig') %}
+	{% set layoutClass = 'grid-layout-container' %}
+{% endif %}
 {% set gridGapMults = include('components/grid-gap-mults.twig') %}
 {% set blockElementType = fields.block_element_type|default('section')|ru %}
-{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_columns_desktop)|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_columns_desktop)|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_columns_portrait)|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_columns_mobile)|round ~ 'vw, 100vw' %}
+
 {% set sectionStyles =  styleEntryPoint ~ backgroundColour ~ gridGapMults ~ gridLayoutContainer ~ containerOverflowType ~ blockPosition %}
+
 {{previewEntryPoint}}
 <style>
 	.{{blockClassName}}.{{block.id}}{
@@ -18,9 +29,20 @@
 	}
 </style>
 <{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="sub-group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3">
-	<div class="{{blockClassName}}__grid-container">
+
+	{% if block %}
+		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
+	{% endif %}
+
+	<style>
+		.{{blockClassName}}__grid-container.{{block.id}}{
+			{{layoutStyles}}
+		}
+	</style>
+
+	<div class="{{blockClassName}}__grid-container {{layoutClass}} {{block.id}}">
 		{% for section in fields.sections %}
-			{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: section, block: block }, with_context = false) %}
+			{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: section, block: block }, with_context = false) %}
 			{% if block %}
 				{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ '-' ~ loop.index }) %}
 			{% endif %}

@@ -23,7 +23,7 @@
 		pointer-events: none;
 		position: relative;
 		&.grid-layout-container {
-			@include grid-layout-container-v3.gridLayoutContainer();
+			@include grid-layout-element-v3.gridLayoutElement();
 		}
 		&:has(.video-content-v3__video-container.video-playing) {
 			z-index: 100;

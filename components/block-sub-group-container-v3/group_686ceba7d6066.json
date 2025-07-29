@@ -901,8 +901,8 @@
                 },
                 "layout_65ddac9f98296": {
                     "key": "layout_65ddac9f98296",
-                    "name": "site_logo_container",
-                    "label": "Site Logo container",
+                    "name": "site_logo_container_v3",
+                    "label": "Site Logo container v3",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1246,7 +1246,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/sub-group-container"
+                "value": "acf\/sub-group-container-v3"
             }
         ]
     ],
@@ -1267,5 +1267,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753112547
+    "modified": 1753779288
 }
