@@ -19,10 +19,12 @@
 		}
 	}
 	&__block-container {
-		@include grid-layout-element-v3.gridLayoutElement();
 		z-index: 5;
 		pointer-events: none;
 		position: relative;
+		&.grid-layout-container {
+			@include grid-layout-container-v3.gridLayoutContainer();
+		}
 		&:has(.video-content-v3__video-container.video-playing) {
 			z-index: 100;
 		}

@@ -6,7 +6,7 @@
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 
-{% set layoutType = fields.layout_type|ru %}
+{% set layoutType = fields.layout_type|ru|default('grid') %}
 {% set layoutStyles = '' %}
 {% if layoutType == 'flex' %}
 	{% set layoutStyles = include('components/flex-layout-container-v3.twig') %}
@@ -39,7 +39,6 @@
 		}
 	</style>
 	<div class="group-container-v3__grid-container {{layoutClass}} {{block.id}}">
-
 		{% for section in fields.sections %}
 			{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: section, block }, with_context = false) %}
 			{% if block %}
@@ -50,7 +49,7 @@
 					{{gridLayoutElement}}
 				}
 			</style>
-			<div class="group-container-v3__block-container {{block.id}}">
+			<div class="group-container-v3__block-container {{layoutClass}} {{block.id}}">
 				{% if fields.show_block_numbers and is_preview %}
 					<div class="{{blockClassName}}__block-number">{{ loop.index }}</div>
 				{% endif %}
