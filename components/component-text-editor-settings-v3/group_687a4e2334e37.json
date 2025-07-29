@@ -528,7 +528,7 @@
                 "__p-xxs-sizing-desktop": "P xx small",
                 "__p-xxxs-sizing-desktop": "P xxx small"
             },
-            "default_value": "__inherit",
+            "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "max": "",
@@ -797,7 +797,7 @@
                 "__p-xxs-sizing-portrait": "P xx small",
                 "__p-xxxs-sizing-portrait": "P xxx small"
             },
-            "default_value": "__inherit",
+            "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "max": "",
@@ -1057,7 +1057,7 @@
                 "__p-xxs-sizing-mobile": "P xx small",
                 "__p-xxxs-sizing-mobile": "P xxx small"
             },
-            "default_value": "__inherit",
+            "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "max": "",
@@ -1367,5 +1367,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753459080
+    "modified": 1753795382
 }
