@@ -1,0 +1,10 @@
+{% set columnGapDesktop = '--column-gap-mult-desktop: ' ~ fields.grid_layout.column_gap_desktop ~ ';' %}
+{% set columnGapPortrait = '--column-gap-mult-portrait: ' ~ fields.grid_layout.column_gap_portrait ~ ';' %}
+{% set columnGapMobile = '--column-gap-mult-mobile: ' ~ fields.grid_layout.column_gap_mobile ~ ';' %}
+{% set rowGapDesktop = '--row-gap-mult-desktop: ' ~ fields.grid_layout.row_gap_desktop ~ ';' %}
+{% set rowGapPortrait = '--row-gap-mult-portrait: ' ~ fields.grid_layout.row_gap_portrait ~ ';' %}
+{% set rowGapMobile = '--row-gap-mult-mobile: ' ~ fields.grid_layout.row_gap_mobile ~ ';' %}
+
+{% set gridGapMults = columnGapDesktop ~ columnGapPortrait ~ columnGapMobile ~ rowGapDesktop ~ rowGapPortrait ~ rowGapMobile %}
+
+{{ gridGapMults}}
