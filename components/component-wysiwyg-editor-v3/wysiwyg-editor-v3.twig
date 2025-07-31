@@ -3,7 +3,7 @@
 {% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields, block, blockClassName, is_preview }, with_context = false) %}
 {% set elementType = fields.element_type|ru %}
 <style>
-	.{{blockClassName|default('default-class')}}__content-container.{{block.id}}{
+	.{{blockClassName}}__content-container.{{block.id}}{
 		{{textEditorStyleVars}}
 	}
 </style>
