@@ -8,6 +8,8 @@
 		core-functions-v3.fontSize(var(--h-xl-desktop)),
 		var(--h-xl-font-size-max-desktop, 180px)
 	);
+	line-height: var(--h1-l-line-height);
+	letter-spacing: var(--h1-l-letter-spacing);
 }
 @mixin h-xl {
 	letter-spacing: var(--h1-l-letter-spacing);
@@ -49,6 +51,8 @@
 		core-functions-v3.fontSize(var(--h-l-desktop)),
 		var(--h-l-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--h1-letter-spacing);
+	line-height: var(--h1-line-height);
 }
 @mixin h-l {
 	letter-spacing: var(--h1-letter-spacing);
@@ -94,6 +98,8 @@
 		core-functions-v3.fontSize(var(--h-m-desktop)),
 		var(--h-m-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--h2-letter-spacing);
+	line-height: var(--h2-line-height);
 }
 @mixin h-m {
 	letter-spacing: var(--h2-letter-spacing);
@@ -139,6 +145,8 @@
 		core-functions-v3.fontSize(var(--h-s-desktop)),
 		var(--h-s-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--h3-letter-spacing);
+	line-height: var(--h3-line-height);
 }
 @mixin h-s {
 	letter-spacing: var(--h3-letter-spacing);
@@ -184,6 +192,8 @@
 		core-functions-v3.fontSize(var(--h-xs-desktop)),
 		var(--h-xs-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--h4-letter-spacing);
+	line-height: var(--h4-line-height);
 }
 @mixin h-xs {
 	letter-spacing: var(--h4-letter-spacing);
@@ -229,6 +239,8 @@
 		core-functions-v3.fontSize(var(--h-xxs-desktop)),
 		var(--h-xxs-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--h5-letter-spacing);
+	line-height: var(--h5-line-height);
 }
 @mixin h-xxs {
 	letter-spacing: var(--h5-letter-spacing);
@@ -274,6 +286,8 @@
 		core-functions-v3.fontSize(var(--h-xxxs-desktop)),
 		var(--h-xxxs-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--h6-letter-spacing);
+	line-height: var(--h6-line-height);
 }
 @mixin h-xxxs {
 	letter-spacing: var(--h6-letter-spacing);
@@ -319,6 +333,8 @@
 		core-functions-v3.fontSize(var(--sh-xl-desktop)),
 		var(--sh-xl-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--sh1-letter-spacing);
+	line-height: var(--sh1-line-height);
 }
 @mixin sh-xl {
 	letter-spacing: var(--sh1-letter-spacing);
@@ -364,6 +380,8 @@
 		core-functions-v3.fontSize(var(--sh-l-desktop)),
 		var(--sh-l-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--sh2-letter-spacing);
+	line-height: var(--sh2-line-height);
 }
 @mixin sh-l {
 	letter-spacing: var(--sh2-letter-spacing);
@@ -409,6 +427,8 @@
 		core-functions-v3.fontSize(var(--sh-m-desktop)),
 		var(--sh-m-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--sh3-letter-spacing);
+	line-height: var(--sh3-line-height);
 }
 @mixin sh-m {
 	letter-spacing: var(--sh3-letter-spacing);
@@ -454,6 +474,8 @@
 		core-functions-v3.fontSize(var(--sh-s-desktop)),
 		var(--sh-s-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--sh4-letter-spacing);
+	line-height: var(--sh4-line-height);
 }
 @mixin sh-s {
 	letter-spacing: var(--sh4-letter-spacing);
@@ -499,6 +521,8 @@
 		core-functions-v3.fontSize(var(--sh-xs-desktop)),
 		var(--sh-xs-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--sh5-letter-spacing);
+	line-height: var(--sh5-line-height);
 }
 @mixin sh-xs {
 	letter-spacing: var(--sh5-letter-spacing);
@@ -544,6 +568,8 @@
 		core-functions-v3.fontSize(var(--sh-xxs-desktop)),
 		var(--sh-xxs-font-size-max-desktop, 180px)
 	);
+	letter-spacing: var(--sh6-letter-spacing);
+	line-height: var(--sh6-line-height);
 }
 @mixin sh-xxs {
 	letter-spacing: var(--sh6-letter-spacing);
@@ -589,11 +615,13 @@
 		core-functions-v3.fontSize(var(--p-l-desktop)),
 		var(--p-l-font-size-max-desktop, 180px)
 	);
+	line-height: var(--paragraph-large-line-height);
+	letter-spacing: var(--paragraph-large-letter-spacing);
 }
 @mixin p-l {
-	line-height: var(--paragraph-line-height);
-	letter-spacing: var(--paragraph-letter-spacing);
-	font-family: var(--paragraph-font-family);
+	line-height: var(--paragraph-large-line-height);
+	letter-spacing: var(--paragraph-large-letter-spacing);
+	font-family: var(--paragraph-large-font-family);
 
 	strong,
 	b {
@@ -637,13 +665,7 @@
 		@include p-l-size();
 	}
 }
-@mixin p-size {
-	font-size: clamp(
-		var(--p-m-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-m-desktop)),
-		var(--p-m-font-size-max-desktop, 180px)
-	);
-}
+
 @mixin p-size {
 	font-size: clamp(
 		var(--p-font-size-min-desktop, 10px),

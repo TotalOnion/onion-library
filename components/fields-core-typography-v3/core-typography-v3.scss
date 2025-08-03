@@ -295,269 +295,323 @@
 		@include core-typography-mixins-v3.fontQuaternary();
 	}
 	.h1-l-sizing,
-	.h-extra-large {
+	.h-xl-sizing {
 		@include core-typography-mixins-v3.h-xl();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-xl-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-xl-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-xl-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-xl-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-xl-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-xl-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-xl-size();
+				}
 			}
 		}
 	}
 	.h1-sizing,
-	.h-large {
+	.h-l-sizing {
 		@include core-typography-mixins-v3.h-l();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-l-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-l-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-l-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-l-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.h2-sizing,
-	.h-medium {
+	.h-m-sizing {
 		@include core-typography-mixins-v3.h-m();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-m-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-m-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-m-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-m-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.h3-sizing,
-	.h-small {
+	.h-s-sizing {
 		@include core-typography-mixins-v3.h-s();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-s-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-s-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-s-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-s-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.h4-sizing,
-	.h-xsmall {
+	.h-xs-sizing {
 		@include core-typography-mixins-v3.h-xs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-xs-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-xs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-xs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-xs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.h5-sizing,
-	.h-xxsmall {
+	.h-xxs-sizing {
 		@include core-typography-mixins-v3.h-xxs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-xxs-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-xxs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-xxs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-xxs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.h6-sizing,
-	.h-xxxsmall {
+	.h-xxxs-sizing {
 		@include core-typography-mixins-v3.h-xxxs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.h-xxxs-size();
+	}
+	.cmpl-text-editor-settings {
+		.h-xxxs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.h-xxxs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.h-xxxs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.sh1-sizing,
-	.sh-extra-large {
+	.sh-xl-sizing {
 		@include core-typography-mixins-v3.sh-xl();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.sh-xl-size();
+	}
+	.cmpl-text-editor-settings {
+		.sh-xl-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.sh-xl-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.sh-xl-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
-
 	.sh2-sizing,
-	.sh-large {
+	.sh-l-sizing {
 		@include core-typography-mixins-v3.sh-l();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.sh-l-size();
+	}
+	.cmpl-text-editor-settings {
+		.sh-l-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.sh-l-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@media (#{breakpoints.$tabLandscape} <= width) {
-				// @include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.sh-l-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.sh3-sizing,
-	.sh-medium {
+	.sh-m-sizing {
 		@include core-typography-mixins-v3.sh-m();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.sh-m-size();
+	}
+	.cmpl-text-editor-settings {
+		.sh-m-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.sh-m-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.sh-m-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.sh4-sizing,
-	.sh-small {
+	.sh-s-sizing {
 		@include core-typography-mixins-v3.sh-s();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.sh-s-size();
+	}
+	.cmpl-text-editor-settings {
+		.sh-s-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.sh-s-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.sh-s-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.sh5-sizing,
-	.sh-xsmall {
+	.sh-xs-sizing {
 		@include core-typography-mixins-v3.sh-xs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.sh-xs-size();
+	}
+	.cmpl-text-editor-settings {
+		.sh-xs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.sh-xs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.sh-xs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.sh6-sizing,
-	.sh-xxsmall {
+	.sh-xxs-sizing {
 		@include core-typography-mixins-v3.sh-xxs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.sh-xxs-size();
+	}
+	.cmpl-text-editor-settings {
+		.sh-xxs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.sh-xxs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.sh-xxs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.h-l-size();
+				}
 			}
 		}
 	}
 	.p-l-sizing {
 		@include core-typography-mixins-v3.p-l();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.p-l-size();
+	}
+	.cmpl-text-editor-settings {
+		.p-l-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.p-l-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.p-l-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.p-l-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.p-l-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.p-l-size();
+				}
 			}
 		}
 	}

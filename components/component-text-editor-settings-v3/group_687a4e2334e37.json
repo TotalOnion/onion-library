@@ -49,25 +49,7 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_687a624a6e353",
-                        "operator": "==",
-                        "value": ""
-                    },
-                    {
-                        "field": "field_687a621c6e352",
-                        "operator": "==",
-                        "value": ""
-                    },
-                    {
-                        "field": "field_687a4e4e1c0da",
-                        "operator": "==",
-                        "value": ""
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
                 "class": "",
@@ -75,19 +57,19 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "__h1-l-sizing": "H extra large",
-                "__h1-sizing": "H large",
-                "__h2-sizing": "H medium",
-                "__h3-sizing": "H small",
-                "__h4-sizing": "H extra small",
-                "__h5-sizing": "H xx smal",
-                "__h6-sizing": "H xxx small",
-                "__sh1-sizing": "SH extra large",
-                "__sh2-sizing": "SH large",
-                "__sh3-sizing": "SH medium",
-                "__sh4-sizing": "SH small",
-                "__sh5-sizing": "SH x small",
-                "__sh6-sizing": "SH xx small",
+                "__h-xl-sizing": "H extra large",
+                "__h-l-sizing": "H large",
+                "__h-m-sizing": "H medium",
+                "__h-s-sizing": "H small",
+                "__h-xs-sizing": "H extra small",
+                "__h-xxs-sizing": "H xx smal",
+                "__h-xxxs-sizing": "H xxx small",
+                "__sh-xl-sizing": "SH extra large",
+                "__sh-l-sizing": "SH large",
+                "__sh-m-sizing": "SH medium",
+                "__sh-s-sizing": "SH small",
+                "__sh-xs-sizing": "SH x small",
+                "__sh-xxs-sizing": "SH xx small",
                 "__p-l-sizing": "P large",
                 "__p-sizing": "P",
                 "__p-s-sizing": "P small",
@@ -494,8 +476,8 @@
         },
         {
             "key": "field_687a624a6e353",
-            "label": "Typographic style desktop",
-            "name": "typographic_style_desktop",
+            "label": "Font size desktop",
+            "name": "font_size_desktop",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -508,7 +490,7 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "__h-extra-large-desktop": "H extra large",
+                "__h-xl-fs-desktop": "H extra large",
                 "__h-large-desktop": "H large",
                 "__h-medium-desktop": "H medium",
                 "__h-small-desktop": "H small",
@@ -763,8 +745,8 @@
         },
         {
             "key": "field_687a621c6e352",
-            "label": "Typographic style portrait",
-            "name": "typographic_style_portrait",
+            "label": "Font size portrait",
+            "name": "font_size_portrait",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -1023,8 +1005,8 @@
         },
         {
             "key": "field_687a4e4e1c0da",
-            "label": "Typographic style mobile",
-            "name": "typographic_style_mobile",
+            "label": "Font size mobile",
+            "name": "font_size_mobile",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -1367,5 +1349,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753795382
+    "modified": 1754216792
 }
