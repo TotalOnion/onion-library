@@ -21,19 +21,22 @@
 {% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
 
 <style>
-	.{{blockClassName}}__post-link.{{block.id}} {
+	.{{blockClassName}}__post-link.{{block.id}}{
 		{{widgetStyles}}
 	}
 </style>
-<a href="{{post.link}}" data-pattern-post-info="link" class="{{blockClassName}}__post-link {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{blockClassName}}__cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : ''}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}}">
-	<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
-	{% set icon = enableCtaIcon %}
-	{% if icon %}
-		{% set iconType = cta.cta_link.target == '_blank' ? options.theme_cta_icons.cta_external_link_icon : options.theme_cta_icons.cta_link_icon %}
-		{% set iconImage = get_image(iconType) %}
-		{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
-		<span class="{{ blockClassName ~ '__icon-link ' ~ blockClassName ~ '__cta-icon cmpl-cta-icon'}}">
-			{{ isSVG ? get_raw_svg(iconImage.id) : '<img class="" src="' ~ iconImage.src ~ '">'}}
-		</span>
-	{% endif %}
-</a>
+<div class="{{blockClassName}}__post-link-container {{blockClassName}}__post-link {{blockClassName}}__info-item {{block.id}}">
+
+	<a href="{{post.link}}" data-pattern-post-info="link" class=" {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}}">
+		<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
+		{% set icon = enableCtaIcon %}
+		{% if icon %}
+			{% set iconType = cta.cta_link.target == '_blank' ? options.theme_cta_icons.cta_external_link_icon : options.theme_cta_icons.cta_link_icon %}
+			{% set iconImage = get_image(iconType) %}
+			{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
+			<span class="{{ blockClassName ~ '__icon-link ' ~ blockClassName ~ '__cta-icon cmpl-cta-icon'}}">
+				{{ isSVG ? get_raw_svg(iconImage.id) : '<img class="" src="' ~ iconImage.src ~ '">'}}
+			</span>
+		{% endif %}
+	</a>
+</div>
