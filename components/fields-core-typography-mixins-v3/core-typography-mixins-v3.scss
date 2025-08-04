@@ -478,15 +478,15 @@
 	line-height: var(--sh-s--line-height);
 }
 @mixin sh-s {
-	letter-spacing: var(--sh-s--letter-spacing);
-	line-height: var(--sh-s--line-height);
-	font-family: var(--sh-s--font-family);
-	--default-font-weight: var(--sh-s--default-font-weight);
+	letter-spacing: var(--sh-s-letter-spacing);
+	line-height: var(--sh-s-line-height);
+	font-family: var(--sh-s-font-family);
+	--default-font-weight: var(--sh-s-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh-s--bold-font-weight);
+		font-weight: var(--sh-s-bold-font-weight);
 	}
 
 	font-size: clamp(
