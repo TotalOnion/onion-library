@@ -65,15 +65,6 @@
                     }
                 ]
             ],
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6890b84053bf0",
-                        "operator": "==",
-                        "value": "post-info"
-                    }
-                ]
-            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -104,45 +95,6 @@
             "bidirectional_target": [],
             "save_post_type": "",
             "min": ""
-        },
-        {
-            "key": "field_6890b82d53bef",
-            "label": "Taxonomy",
-            "name": "taxonomy",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6890b84053bf0",
-                        "operator": "==",
-                        "value": "post-taxonomy"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "taxonomy": "product_category",
-            "add_term": 1,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "id",
-            "field_type": "select",
-            "allow_null": 0,
-            "acfe_bidirectional": {
-                "acfe_bidirectional_enabled": "0"
-            },
-            "bidirectional": 0,
-            "multiple": 0,
-            "bidirectional_target": [],
-            "min": "",
-            "max": ""
         },
         {
             "key": "field_6890b82d53bef",
