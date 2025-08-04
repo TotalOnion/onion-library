@@ -2707,10 +2707,10 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "advanced",
+    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754319478
+    "modified": 1754320455
 }
