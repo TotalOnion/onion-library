@@ -1,0 +1,7 @@
+// @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
+// @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/product-info-v3/product-info-v3-extra';
+.product-info-v3 {
+	@include product-info-v3-extra.additionalStyles();
+}
