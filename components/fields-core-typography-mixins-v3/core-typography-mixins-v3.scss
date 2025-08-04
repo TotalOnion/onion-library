@@ -333,19 +333,19 @@
 		core-functions-v3.fontSize(var(--sh-xl-desktop)),
 		var(--sh-xl-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--sh1-letter-spacing);
-	line-height: var(--sh1-line-height);
+	letter-spacing: var(--sh-xl-letter-spacing);
+	line-height: var(--sh-xl-line-height);
 }
 @mixin sh-xl {
-	letter-spacing: var(--sh1-letter-spacing);
-	line-height: var(--sh1-line-height);
-	font-family: var(--sh1-font-family);
-	--default-font-weight: var(--sh1-default-font-weight);
+	letter-spacing: var(--sh-xl-letter-spacing);
+	line-height: var(--sh-xl-line-height);
+	font-family: var(--sh-xl-font-family);
+	--default-font-weight: var(--sh-xl-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh1-bold-font-weight);
+		font-weight: var(--sh-xl-bold-font-weight);
 	}
 
 	font-size: clamp(
