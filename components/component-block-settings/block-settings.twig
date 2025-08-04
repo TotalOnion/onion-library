@@ -12,6 +12,9 @@
 {% set blockMinHeightMobile = '--block-min-height-mobile: ' ~ fields.block_min_height.mobile_min_height|default(0) ~ ';' %}
 {% set blockMinHeightPortrait = '--block-min-height-portrait: ' ~ fields.block_min_height.portrait_min_height|default(0) ~ ';' %}
 {% set blockMinHeightDesktop = '--block-min-height-desktop: ' ~ fields.block_min_height.desktop_min_height|default(0) ~ ';' %}
+{% set blockHeightMobile = '--block-height-mobile: ' ~ fields.block_height.mobile_height|ru|default('auto') ~ ';' %}
+{% set blockHeightPortrait = '--block-height-portrait: ' ~ fields.block_height.portrait_height|ru ~ ';' %}
+{% set blockHeightDesktop = '--block-height-desktop: ' ~ fields.block_height.desktop_height|ru ~ ';' %}
 {% set blockPositionType = '--block-position-type:' ~ fields.block_position_type|ru|default('relative') ~ ';' %}
 {% set blockPositionTypeTabletPortrait = '--block-position-type-tablet-portrait:' ~ fields.block_position_type_tablet_portrait|ru|default('relative') ~ ';' %}
 {% set blockPositionTypeMobile = '--block-position-type-mobile:' ~ fields.block_position_type_mobile|ru|default('relative') ~ ';' %}
@@ -25,7 +28,7 @@
 	{% set blockPositionBottom = '--block-position-bottom: ' ~ fields.block_inset_value ~ ';' %}
 	{% set blockPositionLeft = '--block-position-left: ' ~ fields.block_inset_value ~ ';' %}
 {% endif %}
-{% set blockSettingsString = blockBorderRadius ~ blockAspectRatio ~ blockAspectRatioPortrait ~ blockAspectRatioMobile ~ blockZIndex ~ blockOverflow ~ blockBgColour ~ blockPointerEvents ~ blockPosition ~ blockInset ~ blockPositionTop ~ blockPositionRight ~ blockPositionBottom ~ blockPositionLeft ~ blockPositionType ~ blockPositionTypeTabletPortrait ~ blockPositionTypeMobile ~ blockMinHeightMobile ~ blockMinHeightPortrait ~  blockMinHeightDesktop %}
+{% set blockSettingsString = blockBorderRadius ~ blockAspectRatio ~ blockAspectRatioPortrait ~ blockAspectRatioMobile ~ blockZIndex ~ blockOverflow ~ blockBgColour ~ blockPointerEvents ~ blockPosition ~ blockInset ~ blockPositionTop ~ blockPositionRight ~ blockPositionBottom ~ blockPositionLeft ~ blockPositionType ~ blockPositionTypeTabletPortrait ~ blockPositionTypeMobile ~ blockMinHeightMobile ~ blockMinHeightPortrait ~  blockMinHeightDesktop ~ blockHeightMobile ~ blockHeightPortrait ~ blockHeightDesktop %}
 
 
 {{blockSettingsString}}
