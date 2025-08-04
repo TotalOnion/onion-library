@@ -867,26 +867,6 @@
                             "selected": 0
                         },
                         {
-                            "key": "field_6890ca9ae367a",
-                            "label": "Content",
-                            "name": "",
-                            "aria-label": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 3,
-                            "placement": "top",
-                            "endpoint": 0,
-                            "no_preference": 0,
-                            "selected": 0
-                        },
-                        {
                             "key": "field_6890ca8ce3678",
                             "label": "grid layout",
                             "name": "grid_layout",
@@ -913,6 +893,26 @@
                             "acfe_clone_modal_close": 0,
                             "acfe_clone_modal_button": "",
                             "acfe_clone_modal_size": "large"
+                        },
+                        {
+                            "key": "field_6890ca9ae367a",
+                            "label": "Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "placement": "top",
+                            "endpoint": 0,
+                            "no_preference": 0,
+                            "selected": 0
                         },
                         {
                             "key": "field_6890ca8ce3679",
@@ -1616,5 +1616,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754320812
+    "modified": 1754324188
 }
