@@ -1,0 +1,7 @@
+// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
+// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/accent-image-v3/accent-image-v3-extra';
+.accent-image-v3 {
+	@include accent-image-v3-extra.additionalStyles();
+}

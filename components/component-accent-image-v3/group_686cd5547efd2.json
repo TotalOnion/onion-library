@@ -20,6 +20,9 @@
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_686cd5548b803",
@@ -128,8 +131,8 @@
                         },
                         {
                             "key": "field_686cd5549023b",
-                            "label": "Accent Image v2 Image",
-                            "name": "accent_image_v2_image",
+                            "label": "Accent Image v3 Image",
+                            "name": "accent_image_v3_image",
                             "aria-label": "",
                             "type": "image",
                             "instructions": "",
@@ -141,8 +144,11 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 3,
+                            "uploader": "",
                             "return_format": "id",
                             "library": "all",
+                            "upload_folder": "",
+                            "acfe_thumbnail": 0,
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -151,10 +157,7 @@
                             "max_size": "",
                             "mime_types": "",
                             "preview_size": "medium",
-                            "parent_repeater": "field_686cd5548bfb0",
-                            "uploader": "",
-                            "acfe_thumbnail": 0,
-                            "upload_folder": ""
+                            "parent_repeater": "field_686cd5548bfb0"
                         },
                         {
                             "key": "field_686cd554905f8",
@@ -912,10 +915,7 @@
                         }
                     ]
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         }
     ],
     "location": [
@@ -944,5 +944,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1751962992
+    "modified": 1754326595
 }
