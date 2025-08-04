@@ -23,6 +23,32 @@
             "selected": 0
         },
         {
+            "key": "field_6890b84053bf0",
+            "label": "Post Info Type",
+            "name": "post_info_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "post-info": "Post Info",
+                "post-taxonomy": "Post Taxonomy"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_686642953df36",
             "label": "Post",
             "name": "post",
@@ -30,7 +56,15 @@
             "type": "post_object",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6890b84053bf0",
+                        "operator": "==",
+                        "value": "post-info"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -61,6 +95,45 @@
             "bidirectional_target": [],
             "save_post_type": "",
             "min": ""
+        },
+        {
+            "key": "field_6890b82d53bef",
+            "label": "Taxonomy",
+            "name": "taxonomy",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6890b84053bf0",
+                        "operator": "==",
+                        "value": "post-taxonomy"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "taxonomy": "product_category",
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": [],
+            "min": "",
+            "max": ""
         },
         {
             "key": "field_686642953fa84",
@@ -232,6 +305,7 @@
                             "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_68822860bda9f"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -349,8 +423,10 @@
                             "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_68822860bda9f"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
+                            "layout": "block",
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0,
@@ -465,6 +541,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
+                                "group_68822860bda9f"
                                 "group_68822860bda9f"
                             ],
                             "display": "seamless",
@@ -583,6 +660,7 @@
                             "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_68822860bda9f"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -678,6 +756,7 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 3,
+                            "wpml_cf_preferences": 3,
                             "placement": "top",
                             "endpoint": 0,
                             "no_preference": 0,
@@ -699,6 +778,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
+                                "group_68822860bda9f"
                                 "group_68822860bda9f"
                             ],
                             "display": "seamless",
@@ -725,6 +805,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 3,
                             "wpml_cf_preferences": 3,
                             "placement": "top",
                             "endpoint": 0,
@@ -935,6 +1016,7 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 3,
+                            "wpml_cf_preferences": 3,
                             "placement": "top",
                             "endpoint": 0,
                             "no_preference": 0,
@@ -998,6 +1080,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
+                                "group_68822860bda9f"
                                 "group_68822860bda9f"
                             ],
                             "display": "seamless",
