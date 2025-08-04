@@ -8,6 +8,7 @@
 			var(--block-min-height-mobile),
 			'mobile'
 		);
+		height: var(--block-height-mobile, auto);
 		overflow: var(--block-overflow, hidden);
 		border-radius: var(--block-border-radius);
 		place-items: center;
@@ -25,6 +26,7 @@
 		}
 
 		@include core-mixins.device(breakpoints.$tabPortrait) {
+			height: var(--block-height-portrait, auto);
 			aspect-ratio: var(--block-aspect-ratio-portrait);
 			min-height: core-functions.fluidSize(
 				var(--block-min-height-portrait),
@@ -32,6 +34,7 @@
 			);
 		}
 		@include core-mixins.device(breakpoints.$tabLandscape) {
+			height: var(--block-height-desktop, auto);
 			aspect-ratio: var(--block-aspect-ratio);
 			min-height: core-functions.fluidSize(
 				var(--block-min-height-desktop),
