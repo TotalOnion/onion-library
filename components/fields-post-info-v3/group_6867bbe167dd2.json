@@ -251,6 +251,112 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_689091e40fe68",
+            "label": "Videos",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "acfe_permissions": "",
+            "instruction_placement": "",
+            "selected": 0
+        },
+        {
+            "key": "field_689092eacc2f6",
+            "label": "Post video",
+            "name": "post_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "wpml_cf_preferences": 3,
+            "uploader": "",
+            "return_format": "array",
+            "preview_style": "default",
+            "library": "all",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "file_count": 0,
+            "multiple": 0,
+            "max": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Select",
+            "stylised_button": 0,
+            "min": ""
+        },
+        {
+            "key": "field_68909328cc2f7",
+            "label": "Post video alt",
+            "name": "post_video_alt",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "wpml_cf_preferences": 3,
+            "uploader": "",
+            "return_format": "array",
+            "preview_style": "default",
+            "library": "all",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "file_count": 0,
+            "multiple": 0,
+            "max": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Select",
+            "stylised_button": 0,
+            "min": ""
+        },
+        {
             "key": "field_6867bbe179710",
             "label": "Theme",
             "name": "",
@@ -339,7 +445,9 @@
             "ui": 1,
             "ajax": 0,
             "placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6867bbe17a2c6",
@@ -400,7 +508,9 @@
             "ui": 1,
             "ajax": 0,
             "placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6867bbe17aa97",
@@ -522,7 +632,9 @@
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6867bbe17b64e",
@@ -563,7 +675,9 @@
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6867bbe17ba37",
@@ -604,7 +718,9 @@
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6867bbe17be1e",
@@ -741,7 +857,9 @@
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6867bbe17cdc4",
@@ -932,6 +1050,13 @@
                 "operator": "==",
                 "value": "product"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_category"
+            }
         ]
     ],
     "menu_order": -2,
@@ -952,5 +1077,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752848849
+    "modified": 1754314639
 }
