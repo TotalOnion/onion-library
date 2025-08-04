@@ -5,6 +5,7 @@
 {% set gridAutoFlowMobile = '--grid-auto-flow-mobile: ' ~ fields.grid_layout.grid_auto_flow_mobile|ru ~ ';' %}
 {% set containerOverflowType = '--container-overflow-type: ' ~ fields.grid_layout.container_overflow_type|ru ~ ';' %}
 {% set gridAutoColumns = '--grid-auto-columns: ' ~ fields.grid_layout.grid_auto_columns|ru ~ ';' %}
+{% set gridAutoRows = '--grid-auto-rows: ' ~ fields.grid_layout.grid_auto_rows|ru ~ ';' %}
 
 {% if fields.grid_layout.grid_auto_columns|ru == 'custom' %}
 	{% set gridAutoColumns = '--grid-auto-columns-custom: ' ~ fields.grid_layout.grid_auto_columns_custom_width ~ ';' %}
