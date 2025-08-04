@@ -37,11 +37,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "clone": [
-                "group_6504a88c17463"
+                "group_6882282e65bf2"
             ],
             "display": "seamless",
             "layout": "block",
@@ -165,7 +162,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -262,7 +259,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -359,7 +356,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -456,7 +453,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -573,7 +570,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -670,7 +667,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -754,7 +751,7 @@
                         {
                             "key": "field_686ceba801007",
                             "label": "grid layout",
-                            "name": "grid_layout_copy",
+                            "name": "grid_layout",
                             "aria-label": "",
                             "type": "clone",
                             "instructions": "",
@@ -766,9 +763,7 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 3,
-                            "clone": [
-                                "group_6504a81a0623c"
-                            ],
+                            "clone": "",
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
@@ -864,10 +859,10 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
-                            "layout": "",
+                            "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0,
                             "acfe_seamless_style": 0,
@@ -961,7 +956,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -1058,7 +1053,7 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_6504a81a0623c"
+                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -1386,5 +1381,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754036824
+    "modified": 1754316909
 }
