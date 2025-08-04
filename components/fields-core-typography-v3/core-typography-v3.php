@@ -10,94 +10,95 @@ function core_typography_v3()
                 $output = '
             <style id="core-typography-v3-vars">
             body {
-                --paragraph-block-spacing-desktop:' . ($options['paragraph_spacing_desktop'] ?? 0) . 'em;
-                --paragraph-block-spacing-portrait:' . ($options['paragraph_spacing_portrait'] ?? 0) . 'em;
-                --paragraph-block-spacing-mobile:' . ($options['paragraph_spacing_mobile'] ?? 0) . 'em;
-                --heading-block-spacing-desktop:' . ($options['heading_spacing_desktop'] ?? 0) . 'em;
-                --heading-block-spacing-portrait:' . ($options['heading_spacing_portrait'] ?? 0) . 'em;
-                --heading-block-spacing-mobile:' . ($options['heading_spacing_mobile'] ?? 0) . 'em;
+                --paragraph-block-spacing-desktop:' . ($options['paragraph_block_spacing']['paragraph_spacing_desktop'] ?? 0) . 'em;
+                --paragraph-block-spacing-portrait:' . ($options['paragraph_block_spacing']['paragraph_spacing_portrait'] ?? 0) . 'em;
+                --paragraph-block-spacing-mobile:' . ($options['paragraph_block_spacing']['paragraph_spacing_mobile'] ?? 0) . 'em;
+
+                --heading-block-spacing-desktop:' . ($options['heading_block_spacing']['heading_spacing_desktop'] ?? 0) . 'em;
+                --heading-block-spacing-portrait:' . ($options['heading_block_spacing']['heading_spacing_portrait'] ?? 0) . 'em;
+                --heading-block-spacing-mobile:' . ($options['heading_block_spacing']['heading_spacing_mobile'] ?? 0) . 'em;
 
                 --list-item-line-height:' . ($options['list_item_line_height'] ?? 0) . '%;
                 --list-item-letter-spacing:' . ($options['list_item_letter_spacing'] ?? 0) . 'em;
-                --list-item-block-spacing-desktop:' . ($options['list_item_block_spacing_desktop'] ?? 0) . 'em;
-                --list-item-block-spacing-landscape:' . ($options['list_item_block_spacing_desktop'] ?? 0) . 'em;
-                --list-item-block-spacing-portrait:' . ($options['list_item_block_spacing_portrait'] ?? 0) . 'em;
-                --list-item-block-spacing-mobile:' . ($options['list_item_block_spacing_mobile'] ?? 0) . 'em;
+                --list-item-block-spacing-desktop:' . ($options['list_item_block_spacing']['list_item_block_spacing_desktop'] ?? 0) . 'em;
+                --list-item-block-spacing-landscape:' . ($options['list_item_block_spacing']['list_item_block_spacing_landscape'] ?? 0) . 'em;
+                --list-item-block-spacing-portrait:' . ($options['list_item_block_spacing']['list_item_block_spacing_portrait'] ?? 0) . 'em;
+                --list-item-block-spacing-mobile:' . ($options['list_item_block_spacing']['list_item_block_spacing_mobile'] ?? 0) . 'em;
 
-                --h1-l-font-family:' . (remove_underscore($options['headings']['h1_l_font_family'] ?? 'arial')) . ';
-                --h1-font-family:' . (remove_underscore($options['headings']['h1_font_family'] ?? 'arial')) . ';
-                --h2-font-family:' . (remove_underscore($options['headings']['h2_font_family'] ?? 'arial')) . ';
-                --h3-font-family:' . (remove_underscore($options['headings']['h3_font_family'] ?? 'arial')) . ';
-                --h4-font-family:' . (remove_underscore($options['headings']['h4_font_family'] ?? 'arial')) . ';
-                --h5-font-family:' . (remove_underscore($options['headings']['h5_font_family'] ?? 'arial')) . ';
-                --h6-font-family:' . (remove_underscore($options['headings']['h6_font_family'] ?? 'arial')) . ';
-                
-                --sh1-font-family:' . (remove_underscore($options['sub_headings']['sh1_font_family'] ?? 'arial')) . ';
-                --sh2-font-family:' . (remove_underscore($options['sub_headings']['sh2_font_family'] ?? 'arial')) . ';
-                --sh3-font-family:' . (remove_underscore($options['sub_headings']['sh3_font_family'] ?? 'arial')) . ';
-                --sh4-font-family:' . (remove_underscore($options['sub_headings']['sh4_font_family'] ?? 'arial')) . ';
-                --sh5-font-family:' . (remove_underscore($options['sub_headings']['sh5_font_family'] ?? 'arial')) . ';
-                --sh6-font-family:' . (remove_underscore($options['sub_headings']['sh6_font_family'] ?? 'arial')) . ';
-                
-                --h1-l-letter-spacing:' . ($options['headings']['h1_l_letter_spacing'] ?? 0) . 'em;
-                --h1-letter-spacing:' . ($options['headings']['h1_letter_spacing'] ?? 0) . 'em;
-                --h2-letter-spacing:' . ($options['headings']['h2_letter_spacing'] ?? 0) . 'em;
-                --h3-letter-spacing:' . ($options['headings']['h3_letter_spacing'] ?? 0) . 'em;
-                --h4-letter-spacing:' . ($options['headings']['h4_letter_spacing'] ?? 0) . 'em;
-                --h5-letter-spacing:' . ($options['headings']['h5_letter_spacing'] ?? 0) . 'em;
-                --h6-letter-spacing:' . ($options['headings']['h6_letter_spacing'] ?? 0) . 'em;
+                --h-xl-font-family:' . (remove_underscore($options['headings']['h_xl_font_family'] ?? 'arial')) . ';
+                --h-l-font-family:' . (remove_underscore($options['headings']['h_l_font_family'] ?? 'arial')) . ';
+                --h-m-font-family:' . (remove_underscore($options['headings']['h_m_font_family'] ?? 'arial')) . ';
+                --h-s-font-family:' . (remove_underscore($options['headings']['h_s_font_family'] ?? 'arial')) . ';
+                --h-xs-font-family:' . (remove_underscore($options['headings']['h_xs_font_family'] ?? 'arial')) . ';
+                --h-xss-font-family:' . (remove_underscore($options['headings']['h_xxs_font_family'] ?? 'arial')) . ';
+                --h-xss-font-family:' . (remove_underscore($options['headings']['h_xxxs_font_family'] ?? 'arial')) . ';
 
-                --sh1-letter-spacing:' . ($options['sub_headings']['sh1_letter_spacing'] ?? 0) . 'em;
-                --sh2-letter-spacing:' . ($options['sub_headings']['sh2_letter_spacing'] ?? 0) . 'em;
-                --sh3-letter-spacing:' . ($options['sub_headings']['sh3_letter_spacing'] ?? 0) . 'em;
-                --sh4-letter-spacing:' . ($options['sub_headings']['sh4_letter_spacing'] ?? 0) . 'em;
-                --sh5-letter-spacing:' . ($options['sub_headings']['sh5_letter_spacing'] ?? 0) . 'em;
-                --sh6-letter-spacing:' . ($options['sub_headings']['sh6_letter_spacing'] ?? 0) . 'em;
-                
-                --h1-l-line-height:' . ($options['headings']['h1_l_line_height'] ?? 100) . '%;
-                --h1-line-height:' . ($options['headings']['h1_line_height'] ?? 100) . '%;
-                --h2-line-height:' . ($options['headings']['h2_line_height'] ?? 100) . '%;
-                --h3-line-height:' . ($options['headings']['h3_line_height'] ?? 100) . '%;
-                --h4-line-height:' . ($options['headings']['h4_line_height'] ?? 100) . '%;
-                --h5-line-height:' . ($options['headings']['h5_line_height'] ?? 100) . '%;
-                --h6-line-height:' . ($options['headings']['h6_line_height'] ?? 100) . '%;
+                --sh-xl-font-family:' . (remove_underscore($options['sub_headings']['sh_xl_font_family'] ?? 'arial')) . ';
+                --sh-l-font-family:' . (remove_underscore($options['sub_headings']['sh_l_font_family'] ?? 'arial')) . ';
+                --sh-m-font-family:' . (remove_underscore($options['sub_headings']['sh_m_font_family'] ?? 'arial')) . ';
+                --sh-s-font-family:' . (remove_underscore($options['sub_headings']['sh_s_font_family'] ?? 'arial')) . ';
+                --sh-xs-font-family:' . (remove_underscore($options['sub_headings']['sh_xs_font_family'] ?? 'arial')) . ';
+                --sh-xss-font-family:' . (remove_underscore($options['sub_headings']['sh_xxs_font_family'] ?? 'arial')) . ';
+                --sh-xss-font-family:' . (remove_underscore($options['sub_headings']['sh_xxxs_font_family'] ?? 'arial')) . ';
 
-                --sh1-line-height:' . ($options['sub_headings']['sh1_line_height'] ?? 100) . '%;
-                --sh2-line-height:' . ($options['sub_headings']['sh2_line_height'] ?? 100) . '%;
-                --sh3-line-height:' . ($options['sub_headings']['sh3_line_height'] ?? 100) . '%;
-                --sh4-line-height:' . ($options['sub_headings']['sh4_line_height'] ?? 100) . '%;
-                --sh5-line-height:' . ($options['sub_headings']['sh5_line_height'] ?? 100) . '%;
-                --sh6-line-height:' . ($options['sub_headings']['sh6_line_height'] ?? 100) . '%;
+                --h-xl-letter-spacing:' . ($options['headings']['h_xl_letter_spacing'] ?? 0) . 'em;
+                --h-l-letter-spacing:' . ($options['headings']['h_l_letter_spacing'] ?? 0) . 'em;
+                --h-m-letter-spacing:' . ($options['headings']['h_m_letter_spacing'] ?? 0) . 'em;
+                --h-s-letter-spacing:' . ($options['headings']['h_s_letter_spacing'] ?? 0) . 'em;
+                --h-xs-letter-spacing:' . ($options['headings']['h_xs_letter_spacing'] ?? 0) . 'em;
+                --h-xss-letter-spacing:' . ($options['headings']['h_xxs_letter_spacing'] ?? 0) . 'em;
+                --h-xss-letter-spacing:' . ($options['headings']['h_xxxs_letter_spacing'] ?? 0) . 'em;
 
-                --sh1-default-font-weight:' . ($options['sub_headings']['sh1_default_font_weight'] ?? 400) . ';
-                --sh2-default-font-weight:' . ($options['sub_headings']['sh2_default_font_weight'] ?? 400) . ';
-                --sh3-default-font-weight:' . ($options['sub_headings']['sh3_default_font_weight'] ?? 400) . ';
-                --sh4-default-font-weight:' . ($options['sub_headings']['sh4_default_font_weight'] ?? 400) . ';
-                --sh5-default-font-weight:' . ($options['sub_headings']['sh5_default_font_weight'] ?? 400) . ';
-                --sh6-default-font-weight:' . ($options['sub_headings']['sh6_default_font_weight'] ?? 400) . ';
+                --sh-xl-letter-spacing:' . ($options['sub_headings']['sh_xl_letter_spacing'] ?? 0) . 'em;
+                --sh-l-letter-spacing:' . ($options['sub_headings']['sh_l_letter_spacing'] ?? 0) . 'em;
+                --sh-m-letter-spacing:' . ($options['sub_headings']['sh_m_letter_spacing'] ?? 0) . 'em;
+                --sh-s-letter-spacing:' . ($options['sub_headings']['sh_s_letter_spacing'] ?? 0) . 'em;
+                --sh-xs-letter-spacing:' . ($options['sub_headings']['sh_xs_letter_spacing'] ?? 0) . 'em;
+                --sh-xss-letter-spacing:' . ($options['sub_headings']['sh_xxs_letter_spacing'] ?? 0) . 'em;
+                --sh-xss-letter-spacing:' . ($options['sub_headings']['sh_xxxs_letter_spacing'] ?? 0) . 'em;
 
-                --sh1-bold-font-weight:' . ($options['sub_headings']['sh1_bold_font_weight'] ?? 600) . ';
-                --sh2-bold-font-weight:' . ($options['sub_headings']['sh2_bold_font_weight'] ?? 600) . ';
-                --sh3-bold-font-weight:' . ($options['sub_headings']['sh3_bold_font_weight'] ?? 600) . ';
-                --sh4-bold-font-weight:' . ($options['sub_headings']['sh4_bold_font_weight'] ?? 600) . ';
-                --sh5-bold-font-weight:' . ($options['sub_headings']['sh5_bold_font_weight'] ?? 600) . ';
-                --sh6-bold-font-weight:' . ($options['sub_headings']['sh6_bold_font_weight'] ?? 600) . ';
+                --h-xl-line-height:' . ($options['headings']['h_xl_line_height'] ?? 100) . '%;
+                --h-l-line-height:' . ($options['headings']['h_l_line_height'] ?? 100) . '%;
+                --h-m-line-height:' . ($options['headings']['h_m_line_height'] ?? 100) . '%;
+                --h-s-line-height:' . ($options['headings']['h_s_line_height'] ?? 100) . '%;
+                --h-xs-line-height:' . ($options['headings']['h_xs_line_height'] ?? 100) . '%;
+                --h-xss-line-height:' . ($options['headings']['h_xxs_line_height'] ?? 100) . '%;
+                --h-xss-line-height:' . ($options['headings']['h_xxxs_line_height'] ?? 100) . '%;
 
-                --h1-l-default-font-weight:' . ($options['headings']['h1_l_default_font_weight'] ?? 400) . ';
-                --h1-default-font-weight:' . ($options['headings']['h1_default_font_weight'] ?? 400) . ';
-                --h2-default-font-weight:' . ($options['headings']['h2_default_font_weight'] ?? 400) . ';
-                --h3-default-font-weight:' . ($options['headings']['h3_default_font_weight'] ?? 400) . ';
-                --h4-default-font-weight:' . ($options['headings']['h4_default_font_weight'] ?? 400) . ';
-                --h5-default-font-weight:' . ($options['headings']['h5_default_font_weight'] ?? 400) . ';
-                --h6-default-font-weight:' . ($options['headings']['h6_default_font_weight'] ?? 400) . ';
+                --sh-xl-line-height:' . ($options['sub_headings']['sh_xl_line_height'] ?? 100) . '%;
+                --sh-l-line-height:' . ($options['sub_headings']['sh_l_line_height'] ?? 100) . '%;
+                --sh-m-line-height:' . ($options['sub_headings']['sh_m_line_height'] ?? 100) . '%;
+                --sh-s-line-height:' . ($options['sub_headings']['sh_s_line_height'] ?? 100) . '%;
+                --sh-xs-line-height:' . ($options['sub_headings']['sh_xs_line_height'] ?? 100) . '%;
+                --sh-xss-line-height:' . ($options['sub_headings']['sh_xxs_line_height'] ?? 100) . '%;
 
-                --h1-l-bold-font-weight:' . ($options['headings']['h1_l_bold_font_weight'] ?? 600) . ';
-                --h1-bold-font-weight:' . ($options['headings']['h1_bold_font_weight'] ?? 600) . ';
-                --h2-bold-font-weight:' . ($options['headings']['h2_bold_font_weight'] ?? 600) . ';
-                --h3-bold-font-weight:' . ($options['headings']['h3_bold_font_weight'] ?? 600) . ';
-                --h4-bold-font-weight:' . ($options['headings']['h4_bold_font_weight'] ?? 600) . ';
-                --h5-bold-font-weight:' . ($options['headings']['h5_bold_font_weight'] ?? 600) . ';
-                --h6-bold-font-weight:' . ($options['headings']['h6_bold_font_weight'] ?? 600) . ';
+                --sh-xl-default-font-weight:' . ($options['sub_headings']['sh_xl_default_font_weight'] ?? 400) . ';
+                --sh-l-default-font-weight:' . ($options['sub_headings']['sh_l_default_font_weight'] ?? 400) . ';
+                --sh-m-default-font-weight:' . ($options['sub_headings']['sh_m_default_font_weight'] ?? 400) . ';
+                --sh-s-default-font-weight:' . ($options['sub_headings']['sh_s_default_font_weight'] ?? 400) . ';
+                --sh-xs-default-font-weight:' . ($options['sub_headings']['sh_xs_default_font_weight'] ?? 400) . ';
+                --sh-xss-default-font-weight:' . ($options['sub_headings']['sh_xxs_default_font_weight'] ?? 400) . ';
+
+                --sh-xl-bold-font-weight:' . ($options['sub_headings']['sh_xl_bold_font_weight'] ?? 600) . ';
+                --sh-l-bold-font-weight:' . ($options['sub_headings']['sh_l_bold_font_weight'] ?? 600) . ';
+                --sh-m-bold-font-weight:' . ($options['sub_headings']['sh_m_bold_font_weight'] ?? 600) . ';
+                --sh-s-bold-font-weight:' . ($options['sub_headings']['sh_s_bold_font_weight'] ?? 600) . ';
+                --sh-xs-bold-font-weight:' . ($options['sub_headings']['sh_xs_bold_font_weight'] ?? 600) . ';
+                --sh-xss-bold-font-weight:' . ($options['sub_headings']['sh_xxs_bold_font_weight'] ?? 600) . ';
+
+                --h-xl-default-font-weight:' . ($options['headings']['h_xl_default_font_weight'] ?? 400) . ';
+                --h-l-default-font-weight:' . ($options['headings']['h_l_default_font_weight'] ?? 400) . ';
+                --h-m-default-font-weight:' . ($options['headings']['h_m_default_font_weight'] ?? 400) . ';
+                --h-s-default-font-weight:' . ($options['headings']['h_s_default_font_weight'] ?? 400) . ';
+                --h-xs-default-font-weight:' . ($options['headings']['h_xs_default_font_weight'] ?? 400) . ';
+                --h-xss-default-font-weight:' . ($options['headings']['h_xss_default_font_weight'] ?? 400) . ';
+
+                --h-xl-bold-font-weight:' . ($options['headings']['h_xl_bold_font_weight'] ?? 600) . ';
+                --h-l-bold-font-weight:' . ($options['headings']['h_l_bold_font_weight'] ?? 600) . ';
+                --h-m-bold-font-weight:' . ($options['headings']['h_m_bold_font_weight'] ?? 600) . ';
+                --h-s-bold-font-weight:' . ($options['headings']['h_s_bold_font_weight'] ?? 600) . ';
+                --h-xs-bold-font-weight:' . ($options['headings']['h_xs_bold_font_weight'] ?? 600) . ';
+                --h-xss-bold-font-weight:' . ($options['headings']['h_xss_bold_font_weight'] ?? 600) . ';
 
                 --paragraph-large-line-height:' . ($options['paragraphs']['paragraph_large_line_height'] ?? 100) . '%;
                 --paragraph-line-height:' . ($options['paragraphs']['paragraph_line_height'] ?? 100) . '%;

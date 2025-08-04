@@ -8,18 +8,18 @@
 		core-functions-v3.fontSize(var(--h-xl-desktop)),
 		var(--h-xl-font-size-max-desktop, 180px)
 	);
-	line-height: var(--h1-l-line-height);
-	letter-spacing: var(--h1-l-letter-spacing);
+	line-height: var(--h-xl-line-height);
+	letter-spacing: var(--h-xl-letter-spacing);
 }
 @mixin h-xl {
-	letter-spacing: var(--h1-l-letter-spacing);
-	line-height: var(--h1-l-line-height);
-	font-family: var(--h1-l-font-family);
-	--default-font-weight: var(--h1-l-default-font-weight);
+	letter-spacing: var(--h-xl-letter-spacing);
+	line-height: var(--h-xl-line-height);
+	font-family: var(--h-xl-font-family);
+	--default-font-weight: var(--h-xl-default-font-weight);
 	font-weight: var(--default-font-weight);
 	strong,
 	b {
-		font-weight: var(--h1-l-bold-font-weight);
+		font-weight: var(--h-xl-bold-font-weight);
 	}
 	font-size: clamp(
 		var(--h-xl-font-size-min-mobile, 10px),
@@ -51,19 +51,19 @@
 		core-functions-v3.fontSize(var(--h-l-desktop)),
 		var(--h-l-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--h1-letter-spacing);
-	line-height: var(--h1-line-height);
+	letter-spacing: var(--h-l-letter-spacing);
+	line-height: var(--h-l-line-height);
 }
 @mixin h-l {
-	letter-spacing: var(--h1-letter-spacing);
-	line-height: var(--h1-line-height);
-	font-family: var(--h1-font-family);
-	--default-font-weight: var(--h1-default-font-weight);
+	letter-spacing: var(--h-l-letter-spacing);
+	line-height: var(--h-l-line-height);
+	font-family: var(--h-l-font-family);
+	--default-font-weight: var(--h-l-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--h1-bold-font-weight);
+		font-weight: var(--h-l-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -98,19 +98,19 @@
 		core-functions-v3.fontSize(var(--h-m-desktop)),
 		var(--h-m-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--h2-letter-spacing);
-	line-height: var(--h2-line-height);
+	letter-spacing: var(--h-m-letter-spacing);
+	line-height: var(--h-m-line-height);
 }
 @mixin h-m {
-	letter-spacing: var(--h2-letter-spacing);
-	line-height: var(--h2-line-height);
-	font-family: var(--h2-font-family);
-	--default-font-weight: var(--h2-default-font-weight);
+	letter-spacing: var(--h-m-letter-spacing);
+	line-height: var(--h-m-line-height);
+	font-family: var(--h-m-font-family);
+	--default-font-weight: var(--h-m-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--h2-bold-font-weight);
+		font-weight: var(--h-m-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -145,19 +145,19 @@
 		core-functions-v3.fontSize(var(--h-s-desktop)),
 		var(--h-s-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--h3-letter-spacing);
-	line-height: var(--h3-line-height);
+	letter-spacing: var(--h-s-letter-spacing);
+	line-height: var(--h-s-line-height);
 }
 @mixin h-s {
-	letter-spacing: var(--h3-letter-spacing);
-	line-height: var(--h3-line-height);
-	font-family: var(--h3-font-family);
-	--default-font-weight: var(--h3-default-font-weight);
+	letter-spacing: var(--h-s-letter-spacing);
+	line-height: var(--h-s-line-height);
+	font-family: var(--h-s-font-family);
+	--default-font-weight: var(--h-s-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--h3-bold-font-weight);
+		font-weight: var(--h-s-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -192,19 +192,19 @@
 		core-functions-v3.fontSize(var(--h-xs-desktop)),
 		var(--h-xs-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--h4-letter-spacing);
-	line-height: var(--h4-line-height);
+	letter-spacing: var(--h-xs-letter-spacing);
+	line-height: var(--h-xs-line-height);
 }
 @mixin h-xs {
-	letter-spacing: var(--h4-letter-spacing);
-	line-height: var(--h4-line-height);
-	font-family: var(--h4-font-family);
-	--default-font-weight: var(--h4-default-font-weight);
+	letter-spacing: var(--h-xs-letter-spacing);
+	line-height: var(--h-xs-line-height);
+	font-family: var(--h-xs-font-family);
+	--default-font-weight: var(--h-xs-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--h4-bold-font-weight);
+		font-weight: var(--h-xs-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -239,19 +239,19 @@
 		core-functions-v3.fontSize(var(--h-xxs-desktop)),
 		var(--h-xxs-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--h5-letter-spacing);
-	line-height: var(--h5-line-height);
+	letter-spacing: var(--h-xxs-letter-spacing);
+	line-height: var(--h-xxs-line-height);
 }
 @mixin h-xxs {
-	letter-spacing: var(--h5-letter-spacing);
-	line-height: var(--h5-line-height);
-	font-family: var(--h5-font-family);
-	--default-font-weight: var(--h5-default-font-weight);
+	letter-spacing: var(--h-xxs-letter-spacing);
+	line-height: var(--h-xxs-line-height);
+	font-family: var(--h-xxs-font-family);
+	--default-font-weight: var(--h-xxs-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--h5-bold-font-weight);
+		font-weight: var(--h-xxs-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -263,7 +263,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-xxs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h5-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-xxs-portrait), 'portrait'),
 			var(--h-xxs-font-size-max-mobile, 180px)
 		);
 	}
@@ -271,7 +271,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-xxs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h5-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--h-xxs-landscape), 'landscape'),
 			var(--h-xxs-font-size-max-desktop, 180px)
 		);
 	}
@@ -286,19 +286,19 @@
 		core-functions-v3.fontSize(var(--h-xxxs-desktop)),
 		var(--h-xxxs-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--h6-letter-spacing);
-	line-height: var(--h6-line-height);
+	letter-spacing: var(--h-xxxs-letter-spacing);
+	line-height: var(--h-xxxs-line-height);
 }
 @mixin h-xxxs {
-	letter-spacing: var(--h6-letter-spacing);
-	line-height: var(--h6-line-height);
-	font-family: var(--h6-font-family);
-	--default-font-weight: var(--h6-default-font-weight);
+	letter-spacing: var(--h-xxxs-letter-spacing);
+	line-height: var(--h-xxxs-line-height);
+	font-family: var(--h-xxxs-font-family);
+	--default-font-weight: var(--h-xxxs-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--h6-bold-font-weight);
+		font-weight: var(--h-xxxs-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -380,19 +380,19 @@
 		core-functions-v3.fontSize(var(--sh-l-desktop)),
 		var(--sh-l-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--sh2-letter-spacing);
-	line-height: var(--sh2-line-height);
+	letter-spacing: var(--sh-l-letter-spacing);
+	line-height: var(--sh-l-line-height);
 }
 @mixin sh-l {
-	letter-spacing: var(--sh2-letter-spacing);
-	line-height: var(--sh2-line-height);
-	font-family: var(--sh2-font-family);
-	--default-font-weight: var(--sh2-default-font-weight);
+	letter-spacing: var(--sh-l-letter-spacing);
+	line-height: var(--sh-l-line-height);
+	font-family: var(--sh-l-font-family);
+	--default-font-weight: var(--sh-l-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh2-bold-font-weight);
+		font-weight: var(--sh-l-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -427,19 +427,19 @@
 		core-functions-v3.fontSize(var(--sh-m-desktop)),
 		var(--sh-m-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--sh3-letter-spacing);
-	line-height: var(--sh3-line-height);
+	letter-spacing: var(--sh-m-letter-spacing);
+	line-height: var(--sh-m-line-height);
 }
 @mixin sh-m {
-	letter-spacing: var(--sh3-letter-spacing);
-	line-height: var(--sh3-line-height);
-	font-family: var(--sh3-font-family);
-	--default-font-weight: var(--sh3-default-font-weight);
+	letter-spacing: var(--sh-m-letter-spacing);
+	line-height: var(--sh-m-line-height);
+	font-family: var(--sh-m-font-family);
+	--default-font-weight: var(--sh-m-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh3-bold-font-weight);
+		font-weight: var(--sh-m-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -474,19 +474,19 @@
 		core-functions-v3.fontSize(var(--sh-s-desktop)),
 		var(--sh-s-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--sh4-letter-spacing);
-	line-height: var(--sh4-line-height);
+	letter-spacing: var(--sh-s--letter-spacing);
+	line-height: var(--sh-s--line-height);
 }
 @mixin sh-s {
-	letter-spacing: var(--sh4-letter-spacing);
-	line-height: var(--sh4-line-height);
-	font-family: var(--sh4-font-family);
-	--default-font-weight: var(--sh4-default-font-weight);
+	letter-spacing: var(--sh-s--letter-spacing);
+	line-height: var(--sh-s--line-height);
+	font-family: var(--sh-s--font-family);
+	--default-font-weight: var(--sh-s--default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh4-bold-font-weight);
+		font-weight: var(--sh-s--bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -521,19 +521,19 @@
 		core-functions-v3.fontSize(var(--sh-xs-desktop)),
 		var(--sh-xs-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--sh5-letter-spacing);
-	line-height: var(--sh5-line-height);
+	letter-spacing: var(--sh-xs-letter-spacing);
+	line-height: var(--sh-xs-line-height);
 }
 @mixin sh-xs {
-	letter-spacing: var(--sh5-letter-spacing);
-	line-height: var(--sh5-line-height);
-	font-family: var(--sh5-font-family);
-	--default-font-weight: var(--sh5-default-font-weight);
+	letter-spacing: var(--sh-xs-letter-spacing);
+	line-height: var(--sh-xs-line-height);
+	font-family: var(--sh-xs-font-family);
+	--default-font-weight: var(--sh-xs-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh5-bold-font-weight);
+		font-weight: var(--sh-xs-bold-font-weight);
 	}
 
 	font-size: clamp(
@@ -568,19 +568,19 @@
 		core-functions-v3.fontSize(var(--sh-xxs-desktop)),
 		var(--sh-xxs-font-size-max-desktop, 180px)
 	);
-	letter-spacing: var(--sh6-letter-spacing);
-	line-height: var(--sh6-line-height);
+	letter-spacing: var(--sh-xxs-letter-spacing);
+	line-height: var(--sh-xxs-line-height);
 }
 @mixin sh-xxs {
-	letter-spacing: var(--sh6-letter-spacing);
-	line-height: var(--sh6-line-height);
-	font-family: var(--sh6-font-family);
-	--default-font-weight: var(--sh6-default-font-weight);
+	letter-spacing: var(--sh-xxs-letter-spacing);
+	line-height: var(--sh-xxs-line-height);
+	font-family: var(--sh-xxs-font-family);
+	--default-font-weight: var(--sh-xxs-default-font-weight);
 	font-weight: var(--default-font-weight);
 
 	strong,
 	b {
-		font-weight: var(--sh6-bold-font-weight);
+		font-weight: var(--sh-xxs-bold-font-weight);
 	}
 
 	font-size: clamp(
