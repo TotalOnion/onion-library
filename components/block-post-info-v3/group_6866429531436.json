@@ -38,8 +38,8 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "post-info": "Post Info",
-                "post-taxonomy": "Post Taxonomy"
+                "__post-info": "Post Info",
+                "__post-taxonomy": "Post Taxonomy"
             },
             "default_value": "",
             "return_format": "value",
@@ -305,7 +305,6 @@
                             "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_68822860bda9f"
-                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -423,10 +422,8 @@
                             "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_68822860bda9f"
-                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
-                            "layout": "block",
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0,
@@ -541,7 +538,6 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_68822860bda9f"
                                 "group_68822860bda9f"
                             ],
                             "display": "seamless",
@@ -660,7 +656,6 @@
                             "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_68822860bda9f"
-                                "group_68822860bda9f"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -756,7 +751,6 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 3,
-                            "wpml_cf_preferences": 3,
                             "placement": "top",
                             "endpoint": 0,
                             "no_preference": 0,
@@ -778,7 +772,6 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_68822860bda9f"
                                 "group_68822860bda9f"
                             ],
                             "display": "seamless",
@@ -805,7 +798,6 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 3,
                             "wpml_cf_preferences": 3,
                             "placement": "top",
                             "endpoint": 0,
@@ -1016,7 +1008,6 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 3,
-                            "wpml_cf_preferences": 3,
                             "placement": "top",
                             "endpoint": 0,
                             "no_preference": 0,
@@ -1080,7 +1071,6 @@
                             },
                             "wpml_cf_preferences": 3,
                             "clone": [
-                                "group_68822860bda9f"
                                 "group_68822860bda9f"
                             ],
                             "display": "seamless",
@@ -1952,5 +1942,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754307212
+    "modified": 1754315750
 }

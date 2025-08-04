@@ -8,8 +8,15 @@
 {% set gridGapMults = include('components/grid-gap-mults.twig', { fields: fields, block: block }, with_context = false) %}
 {% set gridLayoutContainer = include('components/grid-layout-container.twig') %}
 {% set sectionStyles =  styleEntryPoint ~ gridGapMults ~ gridLayoutContainer %}
-{# {% set post = get_post(fields.post) %} #}
-{% set post = get_term(fields.taxonomy) %}
+
+{% if fields.post_info_type|ru == 'post-info' %}
+	{% set post = get_post(fields.post) %}
+{% endif %}
+{% if fields.post_info_type|ru == 'post-taxonomy' %}
+	{% set post = get_term(fields.taxonomy) %}
+{% endif %}
+
+
 {% set postTypeFields = fields.post_fields %}
 {% set layout = fields.layout|ru %}
 {% set imageSizes = imageSizes %}
