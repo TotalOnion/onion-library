@@ -6,7 +6,7 @@
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields: fields, block: block, displaytype: displaytype, is_preview: is_preview }, with_context = false) %}
 
-{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_layout.grid_columns_desktop)|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_layout.grid_columns_desktop)|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_layout.grid_columns_portrait)|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_layout.grid_columns_mobile)|round ~ 'vw, 100vw' %}
+{% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_layout.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_layout.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_layout.grid_columns_portrait|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_layout.grid_columns_mobile|default(1))|round ~ 'vw, 100vw' %}
 
 {% set layoutType = fields.layout_type|ru|default('grid') %}
 {% set layoutStyles = '' %}
