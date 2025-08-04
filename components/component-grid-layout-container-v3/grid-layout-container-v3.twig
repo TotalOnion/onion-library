@@ -29,7 +29,6 @@
 	{% set gridTemplateRowsCustomMobile = '--grid-template-rows-custom-mobile: ' ~ fields.grid_layout.grid_template_rows_custom_mobile ~ ';' %}
 {% endif %}
 {% set displayType = '--display-type: grid;' %}
-{% set gridLayoutContainer = displayType ~ gridColumnsDesktop ~ gridColumnsPortrait ~ gridColumnsMobile ~ gridAutoFlowDesktop ~ gridAutoFlowMobile ~ containerOverflowType ~ gridAutoColumns ~ gridTemplateRowsCustomDesktop ~ gridTemplateRowsCustomPortrait ~ gridTemplateRowsCustomMobile %}
-
+{% set gridLayoutContainer = displayType ~ gridColumnsDesktop ~ gridColumnsPortrait ~ gridColumnsMobile ~ gridAutoFlowDesktop ~ gridAutoFlowMobile ~ containerOverflowType ~ gridAutoColumns ~ gridTemplateRowsCustomDesktop ~ gridTemplateRowsCustomPortrait ~ gridTemplateRowsCustomMobile ~ gridAutoRows %}
 
 {{gridLayoutContainer}}
