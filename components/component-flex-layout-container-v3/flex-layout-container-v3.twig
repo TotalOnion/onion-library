@@ -21,7 +21,7 @@
 {% set alignItemsPortrait = '--align-items-portrait: ' ~ fields.flex_layout.align_items_portrait|ru|default('flex-start') ~ ';' %}
 {% set alignItemsMobile = '--align-items-mobile: ' ~ fields.flex_layout.align_items_mobile|ru|default('flex-start') ~ ';' %}
 
-{% set gridGapMults = include('components/grid-gap-mults.twig', {fields: fields.flex_layout}, with_context = false) %}
+{% set gridGapMults = include('components/grid-gap-mults-v3.twig', {fields: fields.flex_layout}, with_context = false) %}
 
 {% set alignItems = alignItemsDesktop ~ alignItemsPortrait ~ alignItemsMobile %}
 

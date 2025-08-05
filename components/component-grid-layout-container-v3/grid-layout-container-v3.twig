@@ -29,7 +29,7 @@
 	{% set gridTemplateRowsCustomMobile = '--grid-template-rows-custom-mobile: ' ~ fields.grid_layout.grid_template_rows_custom_mobile ~ ';' %}
 {% endif %}
 {% set displayType = '--display-type: grid;' %}
-{% set gridGapMults = include('components/grid-gap-mults.twig', {fields: fields.grid_layout}, with_context = false) %}
+{% set gridGapMults = include('components/grid-gap-mults-v3.twig', {fields: fields.grid_layout}, with_context = false) %}
 {% set gridLayoutContainer = displayType ~ gridColumnsDesktop ~ gridColumnsPortrait ~ gridGapMults ~ gridColumnsMobile ~ gridAutoFlowDesktop ~ gridAutoFlowMobile ~ containerOverflowType ~ gridAutoColumns ~ gridTemplateRowsCustomDesktop ~ gridTemplateRowsCustomPortrait ~ gridTemplateRowsCustomMobile ~ gridAutoRows %}
 
 
