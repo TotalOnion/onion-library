@@ -12,7 +12,7 @@ export default function formselectionv3Js ( options = {} ) {
 			openModal.addEventListener('click', function (e) {
 				e.preventDefault();
 				document.documentElement.classList.add('lock-position');
-				formContainer.style.display = 'block';
+				formContainer.style.display = 'flex';
 			});
 			closeModal.addEventListener('click', function (e) {
 				document.documentElement.classList.remove('lock-position');
