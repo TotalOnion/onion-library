@@ -1,4 +1,3 @@
-
 {% set blockClassName = "sub-group-container-v3" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, cta_styles, environment, is_preview, nav_menus }, with_context = false) %}
@@ -11,16 +10,16 @@
 {% set layoutType = fields.layout_type|ru|default('grid') %}
 {% set layoutStyles = '' %}
 {% if layoutType == 'flex' %}
-	{% set layoutStyles = include('components/flex-layout-container-v3.twig') %}
+	{% set layoutStyles = include('components/flex-layout-container-v3.twig', { fields, block }, with_context = false) %}
 	{% set layoutClass = 'flex-layout-container' %}
 {% elseif layoutType == 'grid' %}
-	{% set layoutStyles = include('components/grid-layout-container-v3.twig') %}
+	{% set layoutStyles = include('components/grid-layout-container-v3.twig', { fields, block }, with_context = false) %}
 	{% set layoutClass = 'grid-layout-container' %}
 {% endif %}
-{% set gridGapMults = include('components/grid-gap-mults.twig') %}
 {% set blockElementType = fields.block_element_type|default('section')|ru %}
 
-{% set sectionStyles =  styleEntryPoint ~ backgroundColour ~ gridGapMults ~ gridLayoutContainer ~ containerOverflowType ~ blockPosition %}
+
+{% set sectionStyles =  styleEntryPoint ~ backgroundColour ~ gridLayoutContainer ~ containerOverflowType ~ blockPosition %}
 
 {{previewEntryPoint}}
 <style>
