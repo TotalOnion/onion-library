@@ -10,6 +10,7 @@
 		{{gridLayoutElement}}
 	}
 </style>
-<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">
-	<{{field.text_style.text_element_type|ru}} data-pattern-post-info="post_text_alternative_style" class="{{blockClassName}}__post_text_alternative_style {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}">{{post.post_text_alternative_style}}</{{field.text_style.text_element_type|ru}}>
+<div class="{{blockClassName}}__content-container {{blockClassName}}__post_text_alternative_style {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">
+
+	<{{elementType|default('p')}} data-pattern-post-info="post_text_alternative_style" class=" {{block.id}}">{{post.post_text_alternative_style}}</{{elementType|default('p')}}>
 </div>
