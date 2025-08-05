@@ -6,7 +6,7 @@
 	display: var(--display-type, flex);
 	justify-content: var(--justify-content-mobile, flex-start);
 	flex-direction: var(--flex-direction-mobile, row);
-	align-items: var(--align-items-mobile, stretch);
+	align-items: var(--align-items-mobile, center);
 	gap: calc(var(--global-inline-spacing) * var(--row-gap-mult-mobile, 0))
 		calc(var(--global-inline-spacing) * var(--column-gap-mult-mobile, 0));
 	flex-wrap: var(--flex-wrap-mobile, nowrap);
@@ -14,7 +14,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		justify-content: var(--justify-content-portrait, flex-start);
 		flex-direction: var(--flex-direction-portrait, row);
-		align-items: var(--align-items-portrait, stretch);
+		align-items: var(--align-items-portrait, center);
 		gap: calc(
 				var(--global-inline-spacing) * var(--row-gap-mult-portrait, 0)
 			)
@@ -28,7 +28,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		justify-content: var(--justify-content-desktop, flex-start);
 		flex-direction: var(--flex-direction-desktop, row);
-		align-items: var(--align-items-desktop, stretch);
+		align-items: var(--align-items-desktop, center);
 		gap: calc(var(--global-inline-spacing) * var(--row-gap-mult-desktop, 0))
 			calc(
 				var(--global-inline-spacing) * var(--column-gap-mult-desktop, 0)
