@@ -1,0 +1,18 @@
+
+{% set blockClassName = "social-networks-v3" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+
+{% set sectionStyles =  styleEntryPoint %}
+
+{{previewEntryPoint}}
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+		{% if fields.enable_title and fields.title is not empty %}
+			{{fields.title}}
+		{% endif %}
+		{{ include('components/social-networks.twig', {fields, block, blockClassName, is_preview, market_settings}, with_context = false, ignore_missing = true) }}
+	{{htmlEntryPoint}}
+</section>

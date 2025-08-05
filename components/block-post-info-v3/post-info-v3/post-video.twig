@@ -1,0 +1,8 @@
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
+
+<style>
+	.{{blockClassName}}__post-video.{{block.id}}{
+		{{gridLayoutElement}}
+	}
+</style>
+
