@@ -1,8 +1,7 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block }, with_context = false) %}
-{% set elementStyles = gridLayoutElement %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 <style>
 	.{{blockClassName}}__spacer-container.{{block.id}}{
-		{{elementStyles}}
+		{{gridLayoutElement}}
 	}
 </style>
 <div class="{{blockClassName}}__spacer-container {{blockClassName}}__info-item {{block.id}}">
