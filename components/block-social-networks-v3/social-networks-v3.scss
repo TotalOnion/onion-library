@@ -1,0 +1,11 @@
+// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/social-networks-v3/social-networks-v3-extra';
+.social-networks-v3 {
+	display: flex;
+	flex-direction: column;
+	gap: core-functions-v3.fluidSize(20,'static');
+
+	@include social-networks-v3-extra.additionalStyles();
+}
