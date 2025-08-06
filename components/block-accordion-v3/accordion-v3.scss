@@ -37,6 +37,10 @@
 		}
 	}
 
+	&__content-container {
+            padding: core-functions-v3.fluidSize(10,'static') core-functions-v3.fluidSize(50,'static') core-functions-v3.fluidSize(10,'static') 0;
+        }
+
 	&-image-wrapper {
 		grid-area: icon;
 		position: absolute;
