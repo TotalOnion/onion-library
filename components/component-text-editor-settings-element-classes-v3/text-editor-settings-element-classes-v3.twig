@@ -1,9 +1,7 @@
 {% set typographicStyle = '' %}
-{% set typographicStyleDesktop = fields.typographic_style_desktop|ru %}
-{% set typographicStylePortrait = fields.typographic_style_portrait|ru %}
-{% set typographicStyleMobile = fields.typographic_style_mobile|ru %}
-{% if typographicStyleDesktop is empty and typographicStylePortrait is empty and typographicStyleMobile is empty %}
-	{% set typographicStyle = fields.typographic_style|ru %}
-{% endif %}
+{% set typographicStyleDesktop = fields.font_size_desktop|ru %}
+{% set typographicStylePortrait = fields.font_size_portrait|ru %}
+{% set typographicStyleMobile = fields.font_size_mobile|ru %}
+{% set typographicStyle = fields.typographic_style|ru %}
 {% set styleClasses = typographicStyle  ~ ' ' ~ typographicStyleDesktop  ~ ' ' ~ typographicStylePortrait  ~ ' ' ~ typographicStyleMobile  ~ ' ' ~ textShadowClass %}
 {{styleClasses}}

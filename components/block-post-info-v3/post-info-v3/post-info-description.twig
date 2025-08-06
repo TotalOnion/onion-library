@@ -8,7 +8,7 @@
 		{{textEditorStyleVars}}
 	}
 </style>
-<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}}">
-	<{{elementType|default('p')}} data-pattern-post-info="post_info_description" class="{{blockClassName}}__post-info-description {{blockClassName}}__info-item {{textEditorElementClasses}} {{block.id}}">
+<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">
+	<{{elementType|default('p')}} data-pattern-post-info="post_info_description" class="{{blockClassName}}__post-info-description {{textEditorElementClasses}} {{block.id}}">
 		{{post.post_info_description}}</{{elementType|default('p')}}>
 </div>

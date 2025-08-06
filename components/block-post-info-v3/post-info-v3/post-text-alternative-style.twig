@@ -1,9 +1,16 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
-{% set textStyle = include('components/text-style.twig', {field, post}) %}
-{% set elementStyles = gridLayoutElement ~ textStyle %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
+{% set textEditorStyleVars = include('components/text-editor-settings-variables-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set elementType = field.element_type|ru %}
+
 <style>
-	.{{blockClassName}}__post_text_alternative_style.{{block.id}} {
-		{{elementStyles}}
+	.{{blockClassName}}__post_text_alternative_style.{{block.id}}{
+		{{textEditorStyleVars}}
+		{{gridLayoutElement}}
 	}
 </style>
-<{{field.text_style.text_element_type|ru}} data-pattern-post-info="post_text_alternative_style" class="{{blockClassName}}__post_text_alternative_style {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}">{{post.post_text_alternative_style}}</{{field.text_style.text_element_type|ru}}>
+<div class="{{blockClassName}}__content-container {{blockClassName}}__post_text_alternative_style {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">
+
+	<{{elementType|default('p')}} data-pattern-post-info="post_text_alternative_style" class=" {{block.id}}">{{post.post_text_alternative_style}}</{{elementType|default('p')}}>
+</div>

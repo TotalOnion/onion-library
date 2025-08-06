@@ -1,6 +1,6 @@
-{% if fields.accent_image_v2.enable_accent_image_v2 %}
-    {% for image in fields.accent_image_v2.accent_images %}
-        {% set accentImage = get_image(image.accent_image_v2_image) %}
+{% if fields.accent_image_v3.enable_accent_image_v3 %}
+    {% for image in fields.accent_image_v3.accent_images %}
+        {% set accentImage = get_image(image.accent_image_v3_image) %}
         {% set rotationDesktop = image.desktop_positioning.image_rotation_desktop|default(0) %}
         {% set rotationMobile = image.mobile_positioning.image_rotation_mobile|default(rotationDesktop) %}
         {% set opacity = image.accent_image_opacity|default(1) %}
@@ -101,7 +101,7 @@
                 alt="{{ accentImage.alt }}"
 				loading="lazy"
             />
-			{% if fields.accent_image_v2.show_image_number and is_preview%}
+			{% if fields.accent_image_v3.show_image_number and is_preview%}
 				<div class="{{blockClassName}}__image-number">{{ loop.index }}</div>
 			{% endif %}
         </{{accentImageContainerElement}}>

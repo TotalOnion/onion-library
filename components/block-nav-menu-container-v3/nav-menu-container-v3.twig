@@ -6,14 +6,20 @@
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set menuType = fields.select_menu_type|ru %}
 {% set sectionStyles =  styleEntryPoint %}
-
-<section
-	{{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}" data-navtype="{{menuType}}">
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-pattern-nav-menu-container data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}" data-navtype="{{menuType}}">
 	{% if menuType == 'classic_nav_items_center' %}
-	{{ include( 'components/classic-nav-items-center.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
+		{{ include( 'components/classic-nav-items-center.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
 	{% elseif menuType == 'slide_in_nav_panel'%}
-	{{ include( 'components/nav-menu-slide-in-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
+		{{ include( 'components/slide-in-nav-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
+	{% elseif menuType == 'nav_menu_slide_in_panel' %}
+		<!-- nav-menu-slide-in-panel -->
+		{{ include( 'components/nav-menu-slide-in-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
+		<!-- end-nav-menu-slide-in-panel -->
 	{% endif %}
-	
 	{{htmlEntryPoint}}
 </section>

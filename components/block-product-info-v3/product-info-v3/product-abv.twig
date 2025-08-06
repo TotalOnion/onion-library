@@ -1,0 +1,14 @@
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
+{% set textEditorStyleVars = include('components/text-editor-settings-variables-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set elementType = field.element_type|ru %}
+<style>
+	.{{blockClassName}}__product-abv.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
+		{{textEditorStyleVars}}
+		{{gridLayoutElement}}
+	}
+</style>
+<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{blockClassName}}__info-item {{block.id}}">
+	<{{elementType|default('p')}} data-pattern-post-info="abv" class="{{blockClassName}}__product-abv {{textEditorElementClasses}} {{block.id}}">{{post.product_abv}}</{{elementType|default('p')}}>
+</div>

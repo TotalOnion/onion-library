@@ -220,6 +220,138 @@
             ]
         },
         {
+            "key": "field_6890929777da9",
+            "label": "Block height",
+            "name": "block_height",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hidden",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_6890929777daa",
+                    "label": "Desktop height",
+                    "name": "desktop_height",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__max-content": "max-content",
+                        "__min-content": "min-content",
+                        "__fit-content": "fit-content",
+                        "__auto": "auto",
+                        "__unset": "unset"
+                    },
+                    "default_value": "__auto",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "min": ""
+                },
+                {
+                    "key": "field_6890944cb2579",
+                    "label": "Portrait height",
+                    "name": "portrait_height",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__max-content": "max-content",
+                        "__min-content": "min-content",
+                        "__fit-content": "fit-content",
+                        "__auto": "auto",
+                        "__unset": "unset"
+                    },
+                    "default_value": "__auto",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "min": ""
+                },
+                {
+                    "key": "field_68909454b257a",
+                    "label": "Mobile height",
+                    "name": "mobile_height",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__max-content": "max-content",
+                        "__min-content": "min-content",
+                        "__fit-content": "fit-content",
+                        "__auto": "auto",
+                        "__unset": "unset"
+                    },
+                    "default_value": "__auto",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "min": ""
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
             "key": "field_64f1fb9b2d3df",
             "label": "Block aspect ratio desktop",
             "name": "block_aspect_ratio",
@@ -432,7 +564,6 @@
                 "__relative": "Relative",
                 "__absolute": "Absolute",
                 "__sticky": "Sticky",
-                "__fixed": "Fixed",
                 "__static": "Static"
             },
             "default_value": "__relative",
@@ -475,6 +606,9 @@
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_6836b81fed41b",
@@ -560,10 +694,7 @@
                     "prepend": "",
                     "append": ""
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
             "key": "field_65d28f09ca104",
@@ -696,5 +827,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1749284669
+    "modified": 1754305763
 }

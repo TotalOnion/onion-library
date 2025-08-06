@@ -1,4 +1,4 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 {% set imageSelect = field.image_select|ru %}
 {% if imageSelect == 'image_accent' %}
 	{% set positionVars = include('components/element-positioning.twig', {fields : field.post_image_positioning, block : block, blockClassName : imageClassname}, with_context = false) %}

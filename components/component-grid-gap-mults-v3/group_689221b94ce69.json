@@ -1,0 +1,220 @@
+{
+	"key": "group_689221b94ce69",
+	"title": "Component: Grid Gap Mults v3",
+	"fields": [
+		{
+			"key": "field_6892222e02038",
+			"label": "Desktop",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6892220c470ae",
+			"label": "Column gap desktop",
+			"name": "column_gap_desktop",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68922212470af",
+			"label": "Row gap desktop",
+			"name": "row_gap_desktop",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68922261cc6c2",
+			"label": "Portrait",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_68922216470b0",
+			"label": "Column gap portrait",
+			"name": "column_gap_portrait",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6892221a470b1",
+			"label": "Row gap portrait",
+			"name": "row_gap_portrait",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689222868db0a",
+			"label": "Mobile",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6892221f470b2",
+			"label": "Column gap mobile",
+			"name": "column_gap_mobile",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68922222470b3",
+			"label": "Row gap mobile",
+			"name": "row_gap_mobile",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "!=",
+				"value": "all"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": false,
+	"description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+	"show_in_rest": 0,
+	"acfe_autosync": ["json"],
+	"acfml_field_group_mode": "localization",
+	"acfe_form": 0,
+	"acfe_display_title": "",
+	"acfe_meta": "",
+	"acfe_note": "",
+	"modified": 1754407681
+}

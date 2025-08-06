@@ -1,9 +1,12 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
-{% set textStyle = include('components/text-style.twig', {field, post}) %}
-{% set elementStyles = gridLayoutElement ~ textStyle %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
+{% set textEditorStyleVars = include('components/text-editor-settings-variables-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
+{% set elementType = field.element_type|ru %}
 <style>
-	.{{blockClassName}}__post-name.{{block.id}} {
+	.{{blockClassName}}__post-name.{{block.id}}{
 		{{elementStyles}}
+		{{gridLayoutElement}}
 	}
 </style>
 <{{field.text_style.text_element_type|ru}} class="{{blockClassName}}__post-name {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}" pattern-post_name>{{post.post_name}}</{{field.text_style.text_element_type|ru}}>
