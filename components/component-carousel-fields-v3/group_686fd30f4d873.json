@@ -1723,11 +1723,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "clone": [
-                "group_65b0e17675b81"
+                "group_6882281544263"
             ],
             "display": "seamless",
             "layout": "block",
@@ -2844,5 +2841,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752739318
+    "modified": 1754580153
 }
