@@ -88,7 +88,7 @@
             "acfe_wysiwyg_transparent": 0,
             "acfe_wysiwyg_merge_toolbar": 0,
             "acfe_wysiwyg_custom_toolbar": 0,
-            "tabs": "visual",
+            "tabs": "all",
             "toolbar": "colour_bold_italic_underline_link",
             "media_upload": 0,
             "delay": 1,
@@ -123,5 +123,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753351837
+    "modified": 1754663460
 }
