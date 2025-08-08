@@ -245,11 +245,11 @@
                     "style": ""
                 },
                 {
-                    "key": "field_6888f3e868459",
-                    "label": "Image Icon",
-                    "name": "image_icon",
+                    "key": "field_6893c44fd23e3",
+                    "label": "",
+                    "name": "",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "message",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -266,21 +266,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 3,
-                    "uploader": "",
-                    "return_format": "id",
-                    "library": "all",
-                    "upload_folder": "",
-                    "acfe_thumbnail": 0,
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "allow_in_bindings": 1,
-                    "preview_size": "medium"
+                    "wpml_cf_preferences": 2,
+                    "message": "Please upload this icon in:\r\nGlobal Settings → CTA Icons → CTA Accordion Icon",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
                 },
                 {
                     "key": "field_6888f4166845a",
@@ -465,5 +454,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753912871
+    "modified": 1754514693
 }

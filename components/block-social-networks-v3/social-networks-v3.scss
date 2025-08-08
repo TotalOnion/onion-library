@@ -1,8 +1,10 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
 @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
-// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/social-networks-v3/social-networks-v3-extra';
+@use 'Assets/scss/modules/library-modules/content-container-settings-v3/content-container-settings-v3';
 .social-networks-v3 {
+	@include content-container-settings-v3.contentContainerSettingsV3();
 	pointer-events: all;
 	display: flex;
 	flex-direction: column;

@@ -10,7 +10,7 @@
 {% set iconBackgroundColor = '--icon-background-color: ' ~ fields.accordion_title.icon_background_color ~ ';' %}
 {% set textPaddingHorizontal = '--text-padding-horizontal: ' ~ fields.accordion_text.text_padding_horizontal ~ ';' %}
 {% set enableCustomIcon = fields.accordion_title.enable_custom_icon %}
-{% set imageIcon = get_image(fields.accordion_title.image_icon) %}
+{% set imageIcon = get_image(options.theme_cta_icons.cta_accordion_icon) %}
 {% set imageIconSize = '--image-icon-size: ' ~ fields.accordion_title.image_icon_size ~ ';' %}
 {% set imageIconRotationDeg = '--image-icon-rotation-deg: ' ~ fields.accordion_title.image_icon_rotation_deg ~ 'deg;' %}
 

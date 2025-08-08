@@ -320,154 +320,6 @@
             "append": ""
         },
         {
-            "key": "field_6872282f534a6",
-            "label": "Tips:",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6872282f51575",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "message": "- Autoplay is only available if muted = yes.\r\n- Autoplay, fullscreen and play in pop up are exclusive and cannot be enabled at the same time.\r\n- Fullscreen and pop up modal will only work on the front end. In the admin they will play in the preview box as usual.",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_6872282f538da",
-            "label": "Play button alignment",
-            "name": "play_button_alignment",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6872282f51575",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__upload"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__youtube"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__vimeo"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "choices": {
-                "__flex-start": "Left",
-                "__center": "Cnt",
-                "__flex-end": "Right"
-            },
-            "default_value": "__center",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6872282f53d5c",
-            "label": "Play button style",
-            "name": "play_button_style",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6872282f51575",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__upload"
-                    },
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__youtube"
-                    },
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__vimeo"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "choices": {
-                "__primary": "Primary",
-                "__secondary": "Secondary",
-                "__tertiary": "Tertiary"
-            },
-            "default_value": "__primary",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 1,
-            "ajax": 1,
-            "placeholder": "",
-            "min": ""
-        },
-        {
             "key": "field_6872282f54062",
             "label": "Controls",
             "name": "controls",
@@ -506,14 +358,11 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
             "default_value": 1,
             "ui_on_text": "",
@@ -539,16 +388,16 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": "",
+            "ui": 1,
             "style": ""
         },
         {
@@ -590,7 +439,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -676,7 +525,7 @@
             },
             "wpml_cf_preferences": 3,
             "message": "",
-            "default_value": 1,
+            "default_value": 0,
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1,
@@ -698,7 +547,7 @@
                         "value": "1"
                     },
                     {
-                        "field": "field_6258aa0c297cd",
+                        "field": "field_6872282f51575",
                         "operator": "!=",
                         "value": "1"
                     },
@@ -710,16 +559,16 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": "",
+            "ui": 1,
             "style": ""
         },
         {
@@ -740,16 +589,16 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "message": "",
             "default_value": 0,
-            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": "",
+            "ui": 1,
             "style": ""
         },
         {
@@ -780,7 +629,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -793,67 +642,70 @@
             "style": ""
         },
         {
-            "key": "field_6872282f55fec",
-            "label": "Enable Text",
-            "name": "enable_text",
+            "key": "field_68851550ebfd8",
+            "label": "Video playing high Z index",
+            "name": "video_playing_high_z_index",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6872282f51575",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1,
             "style": ""
         },
         {
-            "key": "field_6872282f56385",
-            "label": "Play Button Text",
-            "name": "play_button_text",
+            "key": "field_6885157bebfd9",
+            "label": "Video playing opacity",
+            "name": "video_playing_opacity",
             "aria-label": "",
-            "type": "text",
-            "instructions": "",
+            "type": "number",
+            "instructions": "coming soon...",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6872282f55fec",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
+            "wpml_cf_preferences": 3,
             "default_value": "",
-            "maxlength": "",
+            "min": -100,
+            "max": 10000,
             "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68851584ebfda",
+            "label": "Video playing pointer events",
+            "name": "video_playing_pointer_events",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "coming soon...",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "min": -100,
+            "max": 10000,
+            "placeholder": "",
+            "step": 1,
             "prepend": "",
             "append": ""
         },
@@ -1067,5 +919,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752846171
+    "modified": 1754573386
 }

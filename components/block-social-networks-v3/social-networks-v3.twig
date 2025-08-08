@@ -9,10 +9,16 @@
 {% set sectionStyles =  styleEntryPoint %}
 
 {{previewEntryPoint}}
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
-		{% if fields.enable_title and fields.title is not empty %}
-			{{fields.title}}
+		{% if fields.wysiwyg_editor is not empty %}
+			{{ include('components/wysiwyg-editor-v3.twig', { fields, block, blockClassName}, with_context = false, ignore_missing = true) }}	
 		{% endif %}
+
 		{{ include('components/social-networks.twig', {fields, block, blockClassName, is_preview, market_settings}, with_context = false, ignore_missing = true) }}
 	{{htmlEntryPoint}}
 </section>

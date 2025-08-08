@@ -219,8 +219,8 @@
                             },
                             "wpml_cf_preferences": 3,
                             "default_value": "",
-                            "min": -400,
-                            "max": 400,
+                            "min": -1000,
+                            "max": 1000,
                             "step": "",
                             "prepend": "",
                             "append": ""
@@ -467,5 +467,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753360418
+    "modified": 1754579749
 }
