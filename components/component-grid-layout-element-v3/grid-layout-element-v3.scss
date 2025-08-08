@@ -3,6 +3,7 @@
 
 @mixin gridLayoutElement() {
 	display: grid;
+	z-index: var(--element-z-index, 5);
 	grid-row: var(--grid-row-start-mobile) / span var(--grid-row-span-mobile);
 	grid-column: var(--grid-column-start-mobile) / span
 		var(--grid-column-span-mobile);

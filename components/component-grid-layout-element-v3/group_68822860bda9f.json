@@ -438,8 +438,8 @@
                 },
                 {
                     "key": "field_689601b410e13",
-                    "label": "Container Z index",
-                    "name": "container_z_index",
+                    "label": "Element Z index",
+                    "name": "element_z_index",
                     "aria-label": "",
                     "type": "number",
                     "instructions": "",
@@ -786,5 +786,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754665099
+    "modified": 1754680191
 }
