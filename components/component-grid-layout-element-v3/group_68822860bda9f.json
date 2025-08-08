@@ -437,6 +437,29 @@
                     "endpoint": 0
                 },
                 {
+                    "key": "field_689601b410e13",
+                    "label": "Container Z index",
+                    "name": "container_z_index",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": 5,
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_68822860d0d3c",
                     "label": "Grid horizontal placement",
                     "name": "grid_horizontal_placement",
@@ -763,5 +786,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753360492
+    "modified": 1754665099
 }
