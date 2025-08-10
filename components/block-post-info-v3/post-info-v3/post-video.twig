@@ -1,8 +1,22 @@
 {% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 
+{% set imageAspectRatioDesktop = '--image-aspect-ratio-desktop:' ~ field.image_aspect_ratio_desktop ~ ';' %}
+{% set imageAspectRatioPortrait = '--image-aspect-ratio-portrait:' ~ field.image_aspect_ratio_portrait ~ ';' %}
+{% set imageAspectRatioMobile = '--image-aspect-ratio-mobile:' ~ field.image_aspect_ratio_mobile ~ ';' %}
+
+{% set styleVars = imageAspectRatioDesktop ~ imageAspectRatioPortrait ~ imageAspectRatioMobile %}
+
 <style>
 	.{{blockClassName}}__post-video.{{block.id}}{
 		{{gridLayoutElement}}
+		{{styleVars}}
 	}
 </style>
+{% set videoSelect = field.video_select|ru %}
+{% set videoDesktop = attribute(post, videoSelect) %}
 
+<div class="{{blockClassName}}__post-video-container" data-pattern-type >
+	<video class="{{blockClassName}}__post-video {{block.id}}" playsinline width='{{videoDesktop.width}}' height='{{videoDesktop.height}}' autoplay loop muted>
+		<source src="{{gt_video_mainsrc(videoDesktop['url'])}}" type="video/mp4">
+	</video>
+</div>

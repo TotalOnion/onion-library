@@ -1,4 +1,4 @@
-export default function bazaarvoicereviewv3Js ( options = {} ) {
+export default function betterreviewsdisplay3Js ( options = {} ) {
 	try {
 		const { block } = options;
 	} catch ( error ) {

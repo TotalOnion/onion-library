@@ -1442,8 +1442,8 @@
                 },
                 "layout_68928b20c2e90": {
                     "key": "layout_68928b20c2e90",
-                    "name": "bazaarvoice_review_v3",
-                    "label": "Bazaarvoice review v3",
+                    "name": "betterreviews_display_v3",
+                    "label": "Betterreviews display v3",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1496,8 +1496,8 @@
                         },
                         {
                             "key": "field_68928b20c2e95",
-                            "label": "Bazaarvoice review fields",
-                            "name": "bazaarvoice_review_fields",
+                            "label": "Betterreviews display fields",
+                            "name": "betterreviews_display_fields",
                             "aria-label": "",
                             "type": "clone",
                             "instructions": "",
@@ -2004,5 +2004,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754434407
+    "modified": 1754703874
 }

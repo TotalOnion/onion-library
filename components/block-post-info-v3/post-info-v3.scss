@@ -43,6 +43,19 @@
 		width: 100%;
 		position: relative;
 	}
+	&__post-video {
+		aspect-ratio: var(--image-aspect-ratio-mobile, var(--image-aspect-ratio-desktop));
+		width: 100%;
+		object-fit: cover;
+		height: auto;
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			aspect-ratio: var(--image-aspect-ratio-portrait);
+		}
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			aspect-ratio: var(--image-aspect-ratio-desktop);
+		}
+	}
 	&__content-container {
 		width: 100%;
 	}
