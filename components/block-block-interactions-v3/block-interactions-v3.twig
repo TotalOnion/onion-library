@@ -21,11 +21,14 @@
 
 	{% if blockInteractionsEnabled %}
 
+		{% for item in fields.modal_popup_triggers %}
+			<button data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">{{ item.modal_popup_trigger_text }}</button>
+		{% endfor %}
 
 		{% if enableInteractionsButton %}
 			{% if (interactionsButtonType|ru == 'close-block') %}
+				{% set closeButtonIcon = get_image(fields.upload_close_icon) %}
 				{% set closeButtonCookie = fields.enable_closed_cookie %}
-
 				<button class="block-interactions-v3__block-close-button" data-animationname="{{animationName}}" data-animationduration="{{animationDuration}}" data-store-cookie="{{closeButtonCookie ? 'true' : 'false' }}">
 					{% set iconType = options.theme_cta_icons.cta_close_icon %}
 					{% set iconImage = get_image(iconType) %}
@@ -35,8 +38,6 @@
 			{% endif %}
 		{% endif %}
 
-
 	{% endif %}
-
 	{{htmlEntryPoint}}
 </section>

@@ -1,4 +1,4 @@
-@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/block-interactions-v3/block-interactions-v3-extra';
@@ -20,6 +20,5 @@
 			height: core-functions-v3.fluidSize(20, 'desktop');
 		}
 	}
-
 	@include block-interactions-v3-extra.additionalStyles();
 }
