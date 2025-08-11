@@ -1,6 +1,6 @@
 {
     "name": "@total_onion/onion-library",
-    "version": "1.0.163",
+    "version": "1.0.164",
     "description": "Component library",
     "main": "index.js",
     "scripts": {

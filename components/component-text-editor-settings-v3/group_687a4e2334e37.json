@@ -87,7 +87,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "placeholder": "",
             "min": ""
         },
@@ -521,7 +521,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -610,9 +610,6 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "choices": {
                 "__uppercase": "Uppercase",
                 "__capitalize": "Capitalize"
@@ -628,7 +625,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -662,7 +659,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -695,7 +692,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -790,7 +787,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -950,16 +947,16 @@
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
-            "allow_null": 1,
-            "ui": 1,
-            "ajax": 1,
-            "placeholder": "",
+            "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "min": "",
-            "max": ""
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "min": ""
         },
         {
             "key": "field_687a4e2346d40",
@@ -1050,7 +1047,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -1224,7 +1221,7 @@
             "append": "",
             "allow_null": 1,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "min": ""
         },
         {
@@ -1349,5 +1346,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754216792
+    "modified": 1754900778
 }
