@@ -1,7 +1,58 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins'; 
-// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/betterreviews-display-v3/betterreviews-display-v3-extra';
+
 .betterreviews-display-v3 {
-	@include betterreviews-display-v3-extra.additionalStyles();
+  .better-reviews__average {
+    .better-reviews__criteria-stars {
+		--star-count: 5;
+		--better-reviews-star-width: calc(var(--star-count) * 16px + (var(--star-count) - 1) * 0px);
+		position: relative;
+		width: var(--better-reviews-star-width);
+		height: 16px;
+		mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
+		mask-repeat: repeat-x;
+		mask-size: 16px auto;
+		mask-position: left 33%;
+		background: transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          #44271C 0%,
+          #DABB9C 32%,
+          #E5C29D 38%,
+          #EBC79F 45%,
+          #7A4A36 74%,
+          #89563E 81%,
+          #9D6749 92%,
+          #A56D4E 100%
+        );
+        background-clip: content-box;
+        mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
+        mask-repeat: repeat-x;
+        mask-size: 16px auto;
+        mask-position: left 33%;
+
+      }
+
+      &.better-reviews__star_05::before { padding-right: calc(var(--better-reviews-star-width) * 0.911); }
+      &.better-reviews__star_10::before { padding-right: calc(var(--better-reviews-star-width) * 0.8); }
+      &.better-reviews__star_15::before { padding-right: calc(var(--better-reviews-star-width) * 0.702); }
+      &.better-reviews__star_20::before { padding-right: calc(var(--better-reviews-star-width) * 0.6); }
+      &.better-reviews__star_25::before { padding-right: calc(var(--better-reviews-star-width) * 0.5); }
+      &.better-reviews__star_30::before { padding-right: calc(var(--better-reviews-star-width) * 0.4); }
+      &.better-reviews__star_35::before { padding-right: calc(var(--better-reviews-star-width) * 0.298); }
+      &.better-reviews__star_40::before { padding-right: calc(var(--better-reviews-star-width) * 0.2); }
+      &.better-reviews__star_45::before { padding-right: calc(var(--better-reviews-star-width) * 0.10); }
+      &.better-reviews__star_50::before { padding-right: 0; }
+    }
+  }
+
+
+  @include betterreviews-display-v3-extra.additionalStyles();
 }
