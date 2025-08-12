@@ -4,11 +4,11 @@
 {% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set elementType = field.element_type|ru %}
 <style>
-	.{{blockClassName}}__product-cask-type.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
+	.{{blockClassName}}__product-finish-label.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
 		{{textEditorStyleVars}}
 		{{gridLayoutElement}}
 	}
 </style>
 <div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{blockClassName}}__info-item {{block.id}}">
-	<{{elementType|default('p')}} data-pattern-post-info="product_cask_type" class="{{blockClassName}}__product-cask-type  {{textEditorElementClasses}} {{block.id}}">{{post.product_cask_type}}</{{elementType|default('p')}}>
+	<{{elementType|default('p')}} data-pattern-post-info="finish-label" class="{{blockClassName}}__product-finish-label {{textEditorElementClasses}} {{block.id}}">{{post.product_finish_label}}</{{elementType|default('p')}}>
 </div>
