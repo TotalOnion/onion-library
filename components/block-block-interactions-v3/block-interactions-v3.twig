@@ -20,9 +20,14 @@
 	{% set animationDuration = fields.animation_duration|ru %}
 
 	{% if blockInteractionsEnabled %}
-
 		{% for item in fields.modal_popup_triggers %}
-			<button class="cmpl-cta-style-{{item.cta_style}}" data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">{{ item.modal_popup_trigger_text }}</button>
+			{% if item.cta_style|ru matches '/^\\d+$/' %}
+				{% set ctaData = attribute(cta_styles['theme_cta_styles'], item.cta_style|ru - 1) %}
+				{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
+				{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
+				{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
+			{% endif %}
+			<button class="cmpl-cta-style-{{item.cta_style}} cmpl-cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : ''}}" data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">{{ item.modal_popup_trigger_text }}</button>
 		{% endfor %}
 
 		{% if enableInteractionsButton %}
