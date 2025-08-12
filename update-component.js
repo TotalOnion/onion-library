@@ -162,7 +162,7 @@ const copyBlockComponent = (componentName) => {
           if (!fs.existsSync(`./assets/js/blocks/${componentModuleName}`)) {
             fs.mkdirSync(`./assets/js/blocks/${componentModuleName}`, { recursive: true });
           }
-          copyFile(extraJsSourcePath, extraJsDestinationPath);
+          copyFileKeeping(extraJsSourcePath, extraJsDestinationPath);
         }
         break;
 
