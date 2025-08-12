@@ -22,7 +22,7 @@
 	{% if blockInteractionsEnabled %}
 
 		{% for item in fields.modal_popup_triggers %}
-			<button data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">{{ item.modal_popup_trigger_text }}</button>
+			<button class="cmpl-cta-style-{{item.cta_style}}" data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">{{ item.modal_popup_trigger_text }}</button>
 		{% endfor %}
 
 		{% if enableInteractionsButton %}

@@ -119,6 +119,40 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_6898aa7bb4898"
+                },
+                {
+                    "key": "field_689b644175f6c",
+                    "label": "Cta style",
+                    "name": "cta_style",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "choices": {
+                        "1": "White text",
+                        "2": "test"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "min": "",
+                    "parent_repeater": "field_6898aa7bb4898"
                 }
             ]
         },
@@ -564,5 +598,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754835935
+    "modified": 1755014382
 }
