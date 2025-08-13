@@ -41,7 +41,7 @@
 		{% for section in fields.sections %}
 			{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: section, block }, with_context = false) %}
 			{% if block %}
-				{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ '-' ~ loop.index }) %}
+				{% set block = block|merge({'anchor' : '', 'id': block.id ~ '-' ~ loop.index }) %}
 			{% endif %}
 			<style>
 				.group-container-v3__block-container.{{block.id}}{
@@ -52,7 +52,7 @@
 				{% if fields.show_block_numbers and is_preview %}
 					<div class="{{blockClassName}}__block-number">{{ loop.index }}</div>
 				{% endif %}
-				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
+				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes, loop: loop.index}, with_context = false, ignore_missing = true) }}
 			</div>
 		{% endfor %}
 	</div>

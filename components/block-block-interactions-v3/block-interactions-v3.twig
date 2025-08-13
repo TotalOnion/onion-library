@@ -11,8 +11,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
-
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{block.className ~ '-' ~ loop}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
 	{% set blockInteractionsEnabled = fields.enable_block_interactions %}
 	{% set enableInteractionsButton = fields.enable_interactions_button %}
 	{% set interactionsButtonType = fields.interactions_button_type %}

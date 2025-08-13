@@ -15,7 +15,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{block.className ~ '-' ~ loop}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+
 	<a class="{{blockClassName}}__site-logo-link" href="/{{ market_slug ? market_slug ~ '/' : '' }}" aria-label="site-logo-link">
 		{% if fields.logo_type|ru == 'site-header' %}
 			{% set siteLogo = get_image(options.header_logo_desktop) %}
