@@ -44,7 +44,10 @@
 		position: relative;
 	}
 	&__post-video {
-		aspect-ratio: var(--image-aspect-ratio-mobile, var(--image-aspect-ratio-desktop));
+		aspect-ratio: var(
+			--image-aspect-ratio-mobile,
+			var(--image-aspect-ratio-desktop)
+		);
 		width: 100%;
 		object-fit: cover;
 		height: auto;
@@ -185,5 +188,5 @@
 		width: auto;
 		@include grid-layout-element-v3.gridLayoutElement();
 	}
-	@include post-info-v3-extra.additionalStyles();
 }
+@include post-info-v3-extra.additionalStyles();
