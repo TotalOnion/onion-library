@@ -26,7 +26,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{block.className ~ '-' ~ loop}} {{postType}}-type {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="post-info-v3">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{postType}}-type {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="post-info-v3">
 
 	{% for field in postTypeFields %}
 		{% if block %}

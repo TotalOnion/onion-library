@@ -4,19 +4,16 @@
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
-
 {% set logoMaxWidthDesktop = '--site-logo-max-width-desktop: ' ~ fields.site_logo_max_width_desktop ~ ';'%}
 {% set logoMaxWidthPortrait = '--site-logo-max-width-portrait: ' ~ fields.site_logo_max_width_portrait ~ ';' %}
 {% set logoMaxWidthMobile = '--site-logo-max-width-mobile: ' ~ fields.site_logo_max_width_mobile ~ ';' %}
-
 {% set sectionStyles =  styleEntryPoint ~ logoMaxWidthDesktop ~ logoMaxWidthPortrait ~ logoMaxWidthMobile %}
 <style>
 	.{{blockClassName}}.{{block.id}}{
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{block.className ~ '-' ~ loop}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
-
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 	<a class="{{blockClassName}}__site-logo-link" href="/{{ market_slug ? market_slug ~ '/' : '' }}" aria-label="site-logo-link">
 		{% if fields.logo_type|ru == 'site-header' %}
 			{% set siteLogo = get_image(options.header_logo_desktop) %}

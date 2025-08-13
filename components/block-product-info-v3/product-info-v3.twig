@@ -21,7 +21,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{blockClassName}} {{postType}}-type {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="product-info-v3">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{postType}}-type {{classNameEntryPoint}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="product-info-v3">
+
 	{% for field in postTypeFields %}
 		{% if block %}
 			{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ '-' ~ loop.index }) %}

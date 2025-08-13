@@ -15,7 +15,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{ block.anchor ? 'id=' ~ block.anchor : '' }} data-assetkey="{{blockClassName}}" class="{{blockClassName}} {{block.className}} {{block.className ~ '-' ~ loop}} {{classNameEntryPoint}} {{ block.id }} lazy-fade" {{dataAttributeEntryPoint}}>
+<section {{ block.anchor ? 'id=' ~ block.anchor : '' }} data-assetkey="{{blockClassName}}" class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{ block.id }} lazy-fade" {{dataAttributeEntryPoint}}>
 
 
 	{{htmlEntryPoint}}
