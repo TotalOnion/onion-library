@@ -1,0 +1,241 @@
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'Assets/scss/theme/breakpoints';
+
+.modal-form-v3 {
+	pointer-events: all;
+
+	&__container-modal {
+		display: none;
+		position: fixed;
+		inset: 0;
+		z-index: 9998;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	&__inner {
+		padding: core-functions-v3.fluidSize(80) 0;
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(90);
+		}
+	}
+
+	&__modal-open {
+		&--icon {
+			cursor: pointer;
+			appearance: none;
+			border: none;
+			background: transparent;
+		}
+	}
+
+	&__modal-close {
+		position: absolute;
+		top: core-functions-v3.fluidSize(20);
+		right: core-functions-v3.fluidSize(20);
+	}
+
+}
+
+  .form__content {
+	display: flex;
+	flex-direction: column;
+	max-width: core-functions-v3.fluidSize(920);
+	height: 100%;
+
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		height: 80vh;
+	}
+
+  	.cdb_form_container {
+		margin-top: core-functions-v3.fluidSize(50);
+
+		.cdb_form_input_container {
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: core-functions-v3.fluidSize(40, 'static');
+			}
+		}
+
+		.cdb_form_field {
+			input,
+			select {
+				font-size: core-functions-v3.fontSize(14, 'mobile');
+				font-family: var(--primary-font-family);
+				width: 100%;
+				font-weight: 200;
+				border: 1px solid #2d292633;
+				border-radius: 0;
+				padding: core-functions-v3.fluidSize(20, 'static');
+				outline: unset;
+				background: transparent;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					font-size: core-functions-v3.fontSize(14, 'portrait');
+				}
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					font-size: core-functions-v3.fontSize(14, 'desktop');
+				}
+
+				&::placeholder {
+					color: #2d2926;
+				}
+			}
+
+			select {
+				padding-left: core-functions-v3.fluidSize(20, 'static');
+				appearance: none;
+			}
+		}
+
+		._block_country_for_optin {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				background-image: url('Assets/images/icon/arrow-down-teal.svg');
+				background-size: cover;
+				top: 26px;
+				right: 12px;
+				width: 14px;
+				height: 8px;
+			}
+		}
+
+		.optin,
+		.cdb_form_privacypolicy_information {
+			label {
+				display: flex;
+
+				input[type='checkbox'] {
+					width: auto;
+					appearance: none;
+					border: unset;
+					padding: unset;
+					margin: unset;
+					position: relative;
+
+					&::before {
+						content: ' ';
+						cursor: pointer;
+						display: block;
+						width: 35px !important;
+						height: 35px !important;
+						border-radius: 0 !important;
+						border: 1px solid #2d292633 !important;
+						background-color: #f6f6f0 !important;
+					}
+
+					&::after {
+						content: ' ';
+						cursor: pointer;
+						background-image: url('Assets/images/icon/tick.svg');
+						background-size: cover;
+						width: 35px !important;
+						height: 35px !important;
+						display: none;
+					}
+
+					&:checked::after {
+						display: block;
+					}
+
+					&:checked::before {
+						display: none;
+					}
+				}
+
+				span {
+					margin-left: core-functions-v3.fluidSize(30, 'static');
+				}
+
+				p {
+					text-transform: initial;
+					color: black;
+					font-size: core-functions-v3.fluidSize(14, 'static');
+					font-weight: 200;
+
+					a {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+
+		.cdb_form_privacypolicy_information {
+			p {
+				margin-left: core-functions-v3.fluidSize(30, 'static');
+			}
+		}
+
+		.cdb_form_gdpr_information {
+			p {
+				font-size: core-functions-v3.fluidSize(14, 'static');
+				font-weight: 200;
+
+				a {
+					font-weight: 400;
+				}
+			}
+		}
+
+		.cdb-submit {
+			cursor: pointer;
+			width: max-content;
+			margin: auto;
+			padding: core-functions-v3.fluidSize(12, 'static')
+				core-functions-v3.fluidSize(20, 'static');
+			border: 2px solid black;
+			text-transform: uppercase;
+			font-weight: 800;
+			background: transparent;
+			z-index: 2;
+
+			&::before {
+				z-index: -1;
+			}
+		}
+
+		.cdb_form_field.invalid {
+			position: relative;
+
+			&::before {
+				content: 'Please fill in this field.';
+				position: absolute;
+				left: 0;
+				bottom: -25px;
+				color: #dc1919;
+				font-weight: 200;
+				font-size: core-functions-v3.fontSize(16, 'static');
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				background-image: url('Assets/images/icon/warning.svg');
+				background-size: cover;
+				top: 19px;
+				right: 10px;
+				width: 20px;
+				height: 20px;
+			}
+
+			input {
+				border: 1px solid #dc1919;
+			}
+		}
+
+		.optin.invalid {
+			&::after {
+				position: unset;
+			}
+		}
+
+		.cdb_form_field.invalid input[type='checkbox']::before {
+			border-color: #dc1919 !important;
+		}
+	}
+  }
