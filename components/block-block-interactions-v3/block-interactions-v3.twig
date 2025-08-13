@@ -27,7 +27,9 @@
 				{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
 				{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
 			{% endif %}
-			<button class="cmpl-cta-style-{{item.cta_style}} cmpl-cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : ''}}" data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">{{ item.modal_popup_trigger_text }}</button>
+			<button class="cmpl-cta-style-{{item.cta_style}} cmpl-cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : ''}}" data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">
+				<span class="cmpl-cta-span">{{ item.modal_popup_trigger_text }}</span>
+			</button>
 		{% endfor %}
 
 		{% if enableInteractionsButton %}
