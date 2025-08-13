@@ -6,7 +6,8 @@
 				{{item.raw_html}}
 			{% endif %}
 			{% if item.acf_fc_layout == 'form_selection' %}
-				{{function('do_shortcode', '[cdbform id=' ~ item.form.ID ~ ']')}}
+			{% set data = {'title' : item.title, 'form' : item.form.ID} %}
+				{{ include('blocks/modal-form-v3.twig', { fields: data, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
 			{% endif %}
 		</div>
 	</div>
