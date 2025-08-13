@@ -5,10 +5,10 @@
 {% set elementType = field.element_type|ru %}
 
 <style>
-	.{{blockClassName}}__post-categories.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
+	.{{blockClassName}}__post-categories.{{block.id}}{
 		{{textEditorStyleVars}}
 	}
 </style>
-<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">
-	<{{elementType|default('p')}} class="{{blockClassName}}__post-categories {{field.text_style.typography_style|ru}} {{block.id}}" data-pattern-post-info="post_categories.0.name">{{post.categories.0.name}}</{{elementType|default('p')}}>
+<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}}">
+	<{{elementType|default('p')}} class="{{blockClassName}}__post-categories {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}" data-pattern-post-info="post_categories.0.name">{{post.categories.0.name}}</{{elementType|default('p')}}>
 </div>
