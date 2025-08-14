@@ -1,23 +1,43 @@
-{% set gridColumnsDesktop = '--grid-template-columns-custom-desktop: repeat(' ~ fields.grid_layout.grid_columns_desktop|default(1) ~ ', 1fr);' %}
-{% set gridColumnsPortrait = '--grid-template-columns-custom-portrait: repeat(' ~ fields.grid_layout.grid_columns_portrait|default(1) ~ ', 1fr);' %}
-{% set gridColumnsMobile = '--grid-template-columns-custom-mobile: repeat(' ~ fields.grid_layout.grid_columns_mobile|default(1) ~ ', 1fr);' %}
-{% set gridAutoFlowDesktop = '--grid-auto-flow-desktop: ' ~ fields.grid_layout.grid_auto_flow_desktop|ru ~ ';' %}
-{% set gridAutoFlowMobile = '--grid-auto-flow-mobile: ' ~ fields.grid_layout.grid_auto_flow_mobile|ru ~ ';' %}
+{% set displayType = '--display-type: grid;' %}
 {% set containerOverflowType = '--container-overflow-type: ' ~ fields.grid_layout.container_overflow_type|ru ~ ';' %}
-{% set gridAutoColumns = '--grid-auto-columns: ' ~ fields.grid_layout.grid_auto_columns|ru ~ ';' %}
-{% set gridAutoRows = '--grid-auto-rows: ' ~ fields.grid_layout.grid_auto_rows|ru ~ ';' %}
 
-{% if fields.grid_layout.grid_auto_columns|ru == 'custom' %}
-	{% set gridAutoColumns = '--grid-auto-columns-custom: ' ~ fields.grid_layout.grid_auto_columns_custom_width ~ ';' %}
+{% set scrollSnap = '--scroll-snap-type: ' ~ fields.grid_layout.scroll_snap_type|ru ~ ';' %}
+{% set scrollSnapAlign = '--scroll-snap-align: ' ~ fields.grid_layout.scroll_snap_align|ru ~ ';' %}
+
+{% set gridTemplateColumnsDesktop = '--grid-template-columns-desktop:' ~ fields.grid_layout.grid_columns_desktop ~ ';' %}
+{% set gridTemplateColumnsPortrait = '--grid-template-columns-portrait:' ~ fields.grid_layout.grid_columns_portrait|default(1) ~ ';' %}
+{% set gridTemplateColumnsMobile = '--grid-template-columns-mobile:' ~ fields.grid_layout.grid_columns_mobile|default(1) ~ ';' %}
+
+{% set gridAutoFlowDesktop = '--grid-auto-flow-desktop: ' ~ fields.grid_layout.grid_auto_flow_desktop|ru ~ ';' %}
+{% set gridAutoFlowPortrait = '--grid-auto-flow-portrait: ' ~ fields.grid_layout.grid_auto_flow_portrait|ru ~ ';' %}
+{% set gridAutoFlowMobile = '--grid-auto-flow-mobile: ' ~ fields.grid_layout.grid_auto_flow_mobile|ru ~ ';' %}
+
+{% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns|ru ~ ';' %}
+{% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_portrait|ru ~ ';' %}
+{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_mobile|ru ~ ';' %}
+
+{% set gridAutoRows = '--grid-auto-rows: ' ~ fields.grid_layout.grid_auto_rows|ru ~ ';' %}
+{% set gridAutoRowsPortrait = '--grid-auto-rows-portrait: ' ~ fields.grid_layout.grid_auto_rows_portrait|ru ~ ';' %}
+{% set gridAutoRowsMobile = '--grid-auto-rows-mobile: ' ~ fields.grid_layout.grid_auto_rows_mobile|ru ~ ';' %}
+
+{% if fields.grid_layout.grid_auto_columns_desktop|ru == 'custom' %}
+	{% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns_custom_width ~ ';' %}
 {% endif %}
+{% if fields.grid_layout.grid_auto_columns_portrait|ru == 'custom' %}
+	{% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_custom_width_portrait ~ ';' %}
+{% endif %}
+{% if fields.grid_layout.grid_auto_columns_mobile|ru == 'custom' %}
+	{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_custom_width_mobile ~ ';' %}
+{% endif %}
+
 {% if fields.grid_layout.grid_template_columns_custom_desktop is not empty %}
-	{% set gridColumnsDesktop = '--grid-template-columns-custom-desktop: ' ~ fields.grid_layout.grid_template_columns_custom_desktop ~ ';' %}
+	{% set gridTemplateColumnsCustomDesktop = '--grid-template-columns-custom-desktop: ' ~ fields.grid_layout.grid_template_columns_custom_desktop ~ ';' %}
 {% endif %}
 {% if fields.grid_layout.grid_template_columns_custom_portrait is not empty %}
-	{% set gridColumnsPortrait = '--grid-template-columns-custom-portrait: ' ~ fields.grid_layout.grid_template_columns_custom_portrait ~ ';' %}
+	{% set gridTemplateColumnsPortrait = '--grid-template-columns-custom-portrait: ' ~ fields.grid_layout.grid_template_columns_custom_portrait ~ ';' %}
 {% endif %}
 {% if fields.grid_layout.grid_template_columns_custom_mobile is not empty %}
-	{% set gridColumnsMobile = '--grid-template-columns-custom-mobile: ' ~ fields.grid_layout.grid_template_columns_custom_mobile ~ ';' %}
+	{% set gridTemplateColumnsCustomMobile = '--grid-template-columns-custom-mobile: ' ~ fields.grid_layout.grid_template_columns_custom_mobile ~ ';' %}
 {% endif %}
 {% if fields.grid_layout.grid_template_rows_custom_desktop is not empty %}
 	{% set gridTemplateRowsCustomDesktop = '--grid-template-rows-custom-desktop: ' ~ fields.grid_layout.grid_template_rows_custom_desktop ~ ';' %}
@@ -28,9 +48,10 @@
 {% if fields.grid_layout.grid_template_rows_custom_mobile is not empty %}
 	{% set gridTemplateRowsCustomMobile = '--grid-template-rows-custom-mobile: ' ~ fields.grid_layout.grid_template_rows_custom_mobile ~ ';' %}
 {% endif %}
-{% set displayType = '--display-type: grid;' %}
+
+
 {% set gridGapMults = include('components/grid-gap-mults-v3.twig', {fields: fields.grid_layout}, with_context = false) %}
-{% set gridLayoutContainer = displayType ~ gridColumnsDesktop ~ gridColumnsPortrait ~ gridGapMults ~ gridColumnsMobile ~ gridAutoFlowDesktop ~ gridAutoFlowMobile ~ containerOverflowType ~ gridAutoColumns ~ gridTemplateRowsCustomDesktop ~ gridTemplateRowsCustomPortrait ~ gridTemplateRowsCustomMobile ~ gridAutoRows %}
+{% set gridLayoutContainer = displayType ~ gridTemplateColumnsDesktop ~ gridTemplateColumnsPortrait ~ gridTemplateColumnsMobile ~ gridGapMults ~ gridTemplateColumnsCustomDesktop ~ gridTemplateColumnsPortrait ~ gridTemplateColumnsCustomMobile ~ gridAutoFlowDesktop ~ gridAutoFlowPortrait ~ gridAutoFlowMobile ~ containerOverflowType ~ gridAutoColumnsDesktop ~ gridTemplateRowsCustomDesktop ~ gridTemplateRowsCustomPortrait ~ gridTemplateRowsCustomMobile ~ gridAutoRows ~ gridAutoRowsPortrait ~ gridAutoRowsMobile ~ gridAutoColumnsPortrait ~ gridAutoColumnsMobile ~ scrollSnap ~ scrollSnapAlign %}
 
 
 {{gridLayoutContainer}}

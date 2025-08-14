@@ -1,2 +1,47 @@
 @mixin additionalStyles() {
+	.group-container-v3__grid-container {
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+	}
+	.group-container-v3__grid-container::scroll-button(left) {
+		content: '◄';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 100;
+	}
+
+	.group-container-v3__grid-container::scroll-button(right) {
+		content: '►';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 100;
+	}
+	.group-container-v3__grid-container::scroll-button(*) {
+		border: 0;
+		font-size: 2rem;
+		background: none;
+		color: green;
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+	.group-container-v3__grid-container::scroll-button(*):hover,
+	.group-container-v3__grid-container::scroll-button(*):focus {
+		opacity: 1;
+	}
+
+	.group-container-v3__grid-container::scroll-button(*):active {
+		translate: 1px 1px;
+	}
+
+	.group-container-v3__grid-container::scroll-button(*):disabled {
+		opacity: 0.2;
+		cursor: unset;
+	}
 }

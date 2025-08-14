@@ -432,9 +432,159 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_689ce5d0bb07c",
+            "label": "Auto Columns",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
             "key": "field_6882282e77289",
-            "label": "Grid auto columns",
+            "label": "Grid auto columns desktop",
             "name": "grid_auto_columns",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__auto": "Auto",
+                "__1fr": "1fr",
+                "__min-content": "Min Content",
+                "__max-content": "Max Content",
+                "__custom": "Custom"
+            },
+            "default_value": "__auto",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_6882282e7766d",
+            "label": "Grid auto columns desktop custom",
+            "name": "grid_auto_columns_desktop_custom",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6882282e77289",
+                        "operator": "==",
+                        "value": "__custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_689d9c794d260",
+            "label": "Grid auto columns portrait",
+            "name": "grid_auto_columns_portrait",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__auto": "Auto",
+                "__1fr": "1fr",
+                "__min-content": "Min Content",
+                "__max-content": "Max Content",
+                "__custom": "Custom"
+            },
+            "default_value": "__auto",
+            "return_format": "value",
+            "multiple": 0,
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_689d9c824d261",
+            "label": "Grid auto columns portrait custom",
+            "name": "grid_auto_columns_portrait_custom",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_689d9c794d260",
+                        "operator": "==",
+                        "value": "__custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_689ce3f6636e4",
+            "label": "Grid auto columns mobile",
+            "name": "grid_auto_columns_mobile",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -454,7 +604,6 @@
             "default_value": "__auto",
             "return_format": "value",
             "multiple": 0,
-            "max": "",
             "prepend": "",
             "append": "",
             "allow_null": 0,
@@ -463,20 +612,21 @@
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "min": ""
+            "min": "",
+            "max": ""
         },
         {
-            "key": "field_6882282e7766d",
-            "label": "Grid auto columns custom width",
-            "name": "grid_auto_columns_custom_width",
+            "key": "field_689ce400636e5",
+            "label": "Grid auto columns custom width mobile",
+            "name": "grid_auto_columns_custom_width_mobile",
             "aria-label": "",
-            "type": "range",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6882282e77289",
+                        "field": "field_689ce3f6636e4",
                         "operator": "==",
                         "value": "__custom"
                     }
@@ -487,17 +637,36 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
+            "wpml_cf_preferences": 2,
             "default_value": "",
-            "min": 0,
-            "max": 1000,
-            "step": "",
+            "maxlength": "",
+            "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
+            "key": "field_689ce6198afed",
+            "label": "Auto Rows",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
             "key": "field_6882282e77a58",
-            "label": "Grid auto rows",
+            "label": "Grid auto rows desktop",
             "name": "grid_auto_rows",
             "aria-label": "",
             "type": "select",
@@ -533,8 +702,8 @@
         },
         {
             "key": "field_6882282e77e3d",
-            "label": "Grid auto rows custom height",
-            "name": "grid_auto_rows_custom_height",
+            "label": "Grid auto rows desktop custom",
+            "name": "grid_auto_rows_desktop_custom",
             "aria-label": "",
             "type": "range",
             "instructions": "",
@@ -543,6 +712,138 @@
                 [
                     {
                         "field": "field_6882282e77a58",
+                        "operator": "==",
+                        "value": "__custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "min": 0,
+            "max": 1000,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_689db0bd71354",
+            "label": "Grid auto rows portrait",
+            "name": "grid_auto_rows_portrait",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__auto": "Auto",
+                "__1fr": "1fr",
+                "__custom": "Custom",
+                "__min-content": "Min Content",
+                "__max-content": "Max Content"
+            },
+            "default_value": "__auto",
+            "return_format": "value",
+            "multiple": 0,
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_689db0d171355",
+            "label": "Grid auto rows portrait custom",
+            "name": "grid_auto_rows_portrait_custom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6882282e77a58",
+                        "operator": "==",
+                        "value": "__custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "min": 0,
+            "max": 1000,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_689ce5a3428a5",
+            "label": "Grid auto rows mobile",
+            "name": "grid_auto_rows_mobile",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__auto": "Auto",
+                "__1fr": "1fr",
+                "__custom": "Custom",
+                "__min-content": "Min Content",
+                "__max-content": "Max Content"
+            },
+            "default_value": "__auto",
+            "return_format": "value",
+            "multiple": 0,
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_689ce5ab428a6",
+            "label": "Grid auto rows mobile custom",
+            "name": "grid_auto_rows_mobile_custom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_689ce5a3428a5",
                         "operator": "==",
                         "value": "__custom"
                     }
@@ -884,5 +1185,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754407595
+    "modified": 1755164960
 }
