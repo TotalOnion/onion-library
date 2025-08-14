@@ -473,7 +473,7 @@
                 "__max-content": "Max Content",
                 "__custom": "Custom"
             },
-            "default_value": "__auto",
+            "default_value": "__1fr",
             "return_format": "value",
             "multiple": 0,
             "max": "",
@@ -538,9 +538,10 @@
                 "__max-content": "Max Content",
                 "__custom": "Custom"
             },
-            "default_value": "__auto",
+            "default_value": "__1fr",
             "return_format": "value",
             "multiple": 0,
+            "max": "",
             "prepend": "",
             "append": "",
             "allow_null": 0,
@@ -549,8 +550,7 @@
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "min": "",
-            "max": ""
+            "min": ""
         },
         {
             "key": "field_689d9c824d261",
@@ -601,9 +601,10 @@
                 "__1fr": "1fr",
                 "__custom": "Custom"
             },
-            "default_value": "__auto",
+            "default_value": "__1fr",
             "return_format": "value",
             "multiple": 0,
+            "max": "",
             "prepend": "",
             "append": "",
             "allow_null": 0,
@@ -612,13 +613,12 @@
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "min": "",
-            "max": ""
+            "min": ""
         },
         {
             "key": "field_689ce400636e5",
-            "label": "Grid auto columns custom width mobile",
-            "name": "grid_auto_columns_custom_width_mobile",
+            "label": "Grid auto columns mobile custom",
+            "name": "grid_auto_columns_mobile_custom",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -1185,5 +1185,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755164960
+    "modified": 1755195019
 }

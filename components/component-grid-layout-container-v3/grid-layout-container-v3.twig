@@ -12,24 +12,23 @@
 {% set gridAutoFlowPortrait = '--grid-auto-flow-portrait: ' ~ fields.grid_layout.grid_auto_flow_portrait|ru ~ ';' %}
 {% set gridAutoFlowMobile = '--grid-auto-flow-mobile: ' ~ fields.grid_layout.grid_auto_flow_mobile|ru ~ ';' %}
 
-{% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns|ru ~ ';' %}
-{% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_portrait|ru ~ ';' %}
-{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_mobile|ru ~ ';' %}
+{% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns|ru|default('1fr') ~ ';' %}
+{% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_portrait|ru|default('1fr') ~ ';' %}
+{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_mobile|ru|default('1fr') ~ ';' %}
 
 {% set gridAutoRows = '--grid-auto-rows: ' ~ fields.grid_layout.grid_auto_rows|ru ~ ';' %}
 {% set gridAutoRowsPortrait = '--grid-auto-rows-portrait: ' ~ fields.grid_layout.grid_auto_rows_portrait|ru ~ ';' %}
 {% set gridAutoRowsMobile = '--grid-auto-rows-mobile: ' ~ fields.grid_layout.grid_auto_rows_mobile|ru ~ ';' %}
 
 {% if fields.grid_layout.grid_auto_columns_desktop|ru == 'custom' %}
-	{% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns_custom_width ~ ';' %}
+	{% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns_desktop_custom ~ ';' %}
 {% endif %}
 {% if fields.grid_layout.grid_auto_columns_portrait|ru == 'custom' %}
-	{% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_custom_width_portrait ~ ';' %}
+	{% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_portrait_custom ~ ';' %}
 {% endif %}
 {% if fields.grid_layout.grid_auto_columns_mobile|ru == 'custom' %}
-	{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_custom_width_mobile ~ ';' %}
+	{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_mobile_custom ~ ';' %}
 {% endif %}
-
 {% if fields.grid_layout.grid_template_columns_custom_desktop is not empty %}
 	{% set gridTemplateColumnsCustomDesktop = '--grid-template-columns-custom-desktop: ' ~ fields.grid_layout.grid_template_columns_custom_desktop ~ ';' %}
 {% endif %}

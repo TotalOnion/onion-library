@@ -13,12 +13,8 @@
 	grid-gap: calc(var(--global-inline-spacing) * var(--row-gap-mult-mobile, 0))
 		calc(var(--global-inline-spacing) * var(--column-gap-mult-mobile, 0));
 	grid-auto-flow: var(--grid-auto-flow-mobile, row);
-	--grid-auto-columns-custom-size: #{core-functions-v3.fluidSize(
-			var(--grid-auto-columns-custom),
-			'static'
-		)};
 	grid-auto-columns: var(--grid-auto-columns-mobile, 1fr);
-	grid-auto-rows: var(--grid-auto-rows-mobile, 1fr);
+	grid-auto-rows: var(--grid-auto-rows-mobile, auto);
 	grid-template-columns: var(
 		--grid-template-columns-custom-mobile,
 		repeat(
@@ -37,7 +33,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		grid-auto-flow: var(--grid-auto-flow-portrait, row);
 		grid-auto-columns: var(--grid-auto-columns-portrait, 1fr);
-		grid-auto-rows: var(--grid-auto-rows-portrait, 1fr);
+		grid-auto-rows: var(--grid-auto-rows-portrait, auto);
 		grid-gap: calc(
 				var(--global-inline-spacing) * var(--row-gap-mult-portrait, 0)
 			)
@@ -69,7 +65,7 @@
 				var(--global-inline-spacing) * var(--column-gap-mult-desktop, 0)
 			);
 		grid-auto-flow: var(--grid-auto-flow-desktop, row);
-		grid-auto-columns: var(--grid-auto-columns, auto);
+		grid-auto-columns: var(--grid-auto-columns, 1fr);
 		grid-auto-rows: var(--grid-auto-rows, auto);
 		grid-template-columns: var(
 			--grid-template-columns-custom-desktop,
@@ -78,6 +74,12 @@
 				var(--grid-auto-columns-desktop, 1fr)
 			)
 		);
-		grid-template-rows: var(--grid-template-rows-custom-desktop);
+		grid-template-rows: var(
+			--grid-template-rows-custom-desktop,
+			repeat(
+				var(--grid-template-rows-desktop),
+				var(--grid-auto-rows-desktop, 1fr)
+			)
+		);
 	}
 }
