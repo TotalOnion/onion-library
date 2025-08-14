@@ -7,13 +7,16 @@
   .better-reviews__average {
     .better-reviews__criteria-stars {
 		--star-count: 5;
-		--better-reviews-star-width: calc(var(--star-count) * 16px + (var(--star-count) - 1) * 0px);
+    --star-size: 16px;
+		--better-reviews-star-width: calc(var(--star-count) * var(--star-size) + (var(--star-count) - 1) * 0px);
+    opacity: 0;
+    animation: slide-reveal-right 1s 0.5s ease-out forwards;
 		position: relative;
 		width: var(--better-reviews-star-width);
-		height: 16px;
+		height: var(--star-size);
 		mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
 		mask-repeat: repeat-x;
-		mask-size: 16px auto;
+		mask-size: var(--star-size) auto;
 		mask-position: left 33%;
 		background: transparent;
 
@@ -35,7 +38,7 @@
         background-clip: content-box;
         mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
         mask-repeat: repeat-x;
-        mask-size: 16px auto;
+        mask-size: var(--star-size) auto;
         mask-position: left 33%;
 
       }
@@ -52,7 +55,21 @@
       &.better-reviews__star_50::before { padding-right: 0; }
     }
   }
-
-
+  
   @include betterreviews-display-v3-extra.additionalStyles();
 }
+
+
+@keyframes slide-reveal-right {
+    from {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
