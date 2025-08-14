@@ -15,8 +15,8 @@
 {% set videoSelect = field.video_select|ru %}
 {% set videoDesktop = attribute(post, videoSelect) %}
 
-<div class="{{blockClassName}}__post-video-container {{blockClassName}}__info-item {{block.id}}" data-pattern-type >
-	<video class="{{blockClassName}}__post-video {{block.id}}" playsinline width='{{videoDesktop.width}}' height='{{videoDesktop.height}}' autoplay loop muted>
+<div class="{{blockClassName}}__post-video-container {{blockClassName}}__info-item {{block.id}}" data-pattern-post-info="post_video" data-video-select={{videoSelect}}>
+	<video class="{{blockClassName}}__post-video {{block.id}}" playsinline width="{{videoDesktop.width}}" height="{{videoDesktop.height}}" autoplay loop muted>
 		<source src="{{gt_video_mainsrc(videoDesktop['url'])}}" type="video/mp4">
 	</video>
 </div>
