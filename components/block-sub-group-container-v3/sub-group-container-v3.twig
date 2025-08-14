@@ -17,6 +17,8 @@
 {% set blockElementType = fields.block_element_type|default('section')|ru %}
 
 {% set sectionStyles =  styleEntryPoint ~ backgroundColour ~ gridLayoutContainer ~ containerOverflowType ~ blockPosition %}
+{% set renderDynamic = fields.render_dynamic %}
+{% set renderDynamicSuffix = fields.render_dynamic_suffix %}
 
 {{previewEntryPoint}}
 <style>
@@ -24,7 +26,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="sub-group-container-v3 {{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3">
+
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="sub-group-container-v3 {{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
 	{% endif %}

@@ -19,6 +19,8 @@
 {% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_layout.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_layout.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_layout.grid_columns_portrait|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_layout.grid_columns_mobile|default(1))|round ~ 'vw, 100vw' %}
 
 {% set sectionStyles =  styleEntryPoint ~ fallbackBackgroundColour ~ containerOverflowType ~ blockPosition %}
+{% set renderDynamic = fields.render_dynamic %}
+{% set renderDynamicSuffix = fields.render_dynamic_suffix %}
 
 {{previewEntryPoint}}
 <style>
@@ -26,7 +28,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="group-container-v3">
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
 
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}

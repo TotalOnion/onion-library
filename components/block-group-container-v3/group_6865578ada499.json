@@ -2450,6 +2450,57 @@
             "acfe_flexible_grid_container": false
         },
         {
+            "key": "field_689e0054d0f18",
+            "label": "Render Dynamic",
+            "name": "render_dynamic",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_689e0a6a78ef8",
+            "label": "Render Dynamic Suffix",
+            "name": "render_dynamic_suffix",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_689e0054d0f18",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6865578ae85b0",
             "label": "Layout",
             "name": "",
@@ -2875,7 +2926,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6865578aeb4b3",
@@ -2921,10 +2974,9 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754666342
+    "modified": 1755187841
 }
