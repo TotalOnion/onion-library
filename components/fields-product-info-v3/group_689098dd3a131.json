@@ -176,6 +176,27 @@
             "append": ""
         },
         {
+            "key": "field_689e80a3fb542",
+            "label": "Volume",
+            "name": "product_volume",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_689098dd52322",
             "label": "Whisky type",
             "name": "product_whisky_type",
@@ -479,5 +500,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754909929
+    "modified": 1755218094
 }
