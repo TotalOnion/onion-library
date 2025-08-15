@@ -4,11 +4,6 @@
 // @use 'Assets/scss/theme/breakpoints';
 
 @mixin additionalStyles {
-	&:has(.post-info__post-cover-link.post-cover-link-hover-effect) {
-		&:hover {
-			.post-info__info-item {
-				color: red;
-			}
-		}
+	.post-info-v3 {
 	}
 }
