@@ -1,0 +1,14 @@
+{{ include('components/block-padding-v3.twig', {fields, block}, with_context = false, ignore_missing = true) }}
+{% if fields.animations.enable_animations %}
+	{{ include('components/animations-v3.twig', {fields, block}, with_context = false, ignore_missing = true) }}
+{% endif %}
+{% if fields.block_overflow is defined or fields.block_background_colour %}
+	{{ include('components/block-settings-v3.twig', {fields, block}, with_context = false, ignore_missing = true) }}
+{% endif %}
+{{ include('components/responsive-show-hide.twig', {fields, block, displaytype}, with_context = false, ignore_missing = true) }}
+{% if fields.enable_global_content_max_width %}
+	{{ include('components/global-content-max-width.twig', {fields, block, is_preview}, with_context = false, ignore_missing = true) }}
+{% endif %}
+{% if fields.enable_gradient_overlay %}
+	{{ include('components/gradient-overlay.twig', {fields, block, is_preview, type : 'style'}, with_context = false, ignore_missing = true) }}
+{% endif %}

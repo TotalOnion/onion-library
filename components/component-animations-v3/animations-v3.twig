@@ -1,0 +1,18 @@
+{% if fields.animations.enable_animations %}
+	{% set animationName = '--animation-name: ' ~ fields.animations.animation_name|ru ~ ';' %}
+	{% if fields.animations.animation_name|ru == 'custom'  %}
+		{% set animationName = '--animation-name: ' ~ fields.animations.animation_name|ru ~ '-' ~ suffix ~ ';' %}
+	{% endif %}
+	{% set animationDuration = '--animation-duration: ' ~ fields.animations.animation_duration|ru ~ 's;' %}
+	{% set animationDelay = '--animation-delay: ' ~ fields.animations.animation_delay|ru ~ 's;' %}
+	{% set animationRepeat = '--animation-repeat: ' ~ fields.animations.animation_repeat|ru ~ ';' %}
+	{% set animationFillMode = '--animation-fill-mode: ' ~ fields.animations.animation_fill_mode|ru ~ ';' %}
+	{% set animationEasing = '--animation-easing: ' ~ fields.animations.animation_easing|ru ~ ';' %}
+	{% if fields.animations.animation_easing|ru == 'custom' %}
+		{% set animationEasing = '--animation-easing: ' ~ fields.animations.animation_easing_custom|ru ~ ';' %}
+	{% endif %}
+	{% set animationDirection = '--animation-direction: ' ~ fields.animations.animation_direction|ru ~ ';' %}
+	{% set animationsString = animationName ~ animationDuration ~ animationDelay ~ animationRepeat ~ animationEasing ~ animationFillMode ~ animationDirection %}
+	{{animationsString}}
+{% endif %}
+

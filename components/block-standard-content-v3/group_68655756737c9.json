@@ -289,8 +289,8 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6865575686460",
-                        "operator": "!=empty"
+                        "operator": "!=empty",
+                        "value": ""
                     }
                 ]
             ],
@@ -300,11 +300,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "clone": [
-                "group_65a45ada4e128"
+                "group_689f649af2ac4"
             ],
             "display": "seamless",
             "layout": "block",
@@ -440,5 +437,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753351607
+    "modified": 1755276905
 }

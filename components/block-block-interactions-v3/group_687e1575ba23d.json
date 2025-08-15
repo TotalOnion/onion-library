@@ -134,7 +134,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 2,
+                    "wpml_cf_preferences": 3,
                     "choices": {
                         "1": "White text",
                         "2": "test"
@@ -540,7 +540,7 @@
             },
             "wpml_cf_preferences": 3,
             "clone": [
-                "group_65a45ada4e128"
+                "group_689f649af2ac4"
             ],
             "display": "seamless",
             "layout": "block",
@@ -598,5 +598,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755014382
+    "modified": 1755276882
 }

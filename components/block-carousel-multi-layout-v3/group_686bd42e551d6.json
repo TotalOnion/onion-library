@@ -288,7 +288,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": "",
+                            "wpml_cf_preferences": 3,
                             "clone": [
                                 "group_6867bcf24c2fc"
                             ],
@@ -470,7 +470,7 @@
         {
             "key": "field_686bd42e67002",
             "label": "block settings fields",
-            "name": "block_copy",
+            "name": "block_settings_fields",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -482,11 +482,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "clone": [
-                "group_65a45ada4e128"
+                "group_689f649af2ac4"
             ],
             "display": "seamless",
             "layout": "block",
@@ -577,5 +574,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754319408
+    "modified": 1755276781
 }

@@ -1945,7 +1945,7 @@
             },
             "wpml_cf_preferences": 3,
             "clone": [
-                "group_638f4148bc10b"
+                "group_689f66f3e26df"
             ],
             "display": "seamless",
             "layout": "block",
@@ -2014,11 +2014,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "clone": [
-                "group_65a45ada4e128"
+                "group_689f649af2ac4"
             ],
             "display": "seamless",
             "layout": "block",
@@ -2119,5 +2116,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755266368
+    "modified": 1755277147
 }
