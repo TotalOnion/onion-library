@@ -3,7 +3,7 @@
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/sticky-buy-cta-v3/sticky-buy-cta-v3-extra';
 .sticky-buy-cta-v3 {
-
+	pointer-events: all;
 	width: 100%;
 	position: fixed;
 	bottom: core-functions-v3.fluidSize(60);
