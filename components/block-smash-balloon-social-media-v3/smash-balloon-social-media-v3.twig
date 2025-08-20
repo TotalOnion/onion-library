@@ -10,7 +10,9 @@
 {{previewEntryPoint}}
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}" {% if fields.marquee %} data-marquee="true" {% endif %}>
 	{% if fields.social_media_type == 'instagram' %}
-		{{ function('do_shortcode', '[instagram-feed feed=' ~ fields.feed_id ~ ']') }}
+		<div class="{{blockClassName}}__instagram">
+			{{ function('do_shortcode', '[instagram-feed feed=' ~ fields.feed_id ~ ']') }}
+		</div>
 	{% endif %}
 	{{htmlEntryPoint}}
 </section>
