@@ -3,7 +3,7 @@ export default function smashballoonsocialmediav3Js(options = {}) {
 		const {block} = options;
 		if (!block) return;
 
-		// Avoid double init per block
+		// in carousel need to be moving without stops and delays
 		if (block.dataset.marquee) {
 			if (block.dataset.sbiMarqueeInit === '1') return;
 			block.dataset.sbiMarqueeInit = '1';
@@ -17,7 +17,6 @@ export default function smashballoonsocialmediav3Js(options = {}) {
 			// --- Config ---
 			const PX_PER_SEC = 50; // adjust speed as needed
 
-			// --- Scoped CSS (only affects this block) ---
 			const uid = `sbi-marquee-${Math.random().toString(36).slice(2)}`;
 			block.setAttribute('data-sbi-marquee-id', uid);
 
@@ -53,7 +52,7 @@ export default function smashballoonsocialmediav3Js(options = {}) {
 				return w;
 			};
 
-			// --- Animation state ---
+
 			let loopW = getLoopWidth();
 			let x = 0;
 			let last = performance.now();
@@ -65,7 +64,6 @@ export default function smashballoonsocialmediav3Js(options = {}) {
 
 				x -= PX_PER_SEC * dt;
 
-				// Wrap seamlessly after the width of the original (non-cloned) set
 				if (-x >= loopW) x += loopW;
 
 				stage.style.setProperty(
@@ -76,13 +74,11 @@ export default function smashballoonsocialmediav3Js(options = {}) {
 				raf = requestAnimationFrame(tick);
 			}
 
-			// Resize-aware (e.g., responsive cols/images)
 			const ro = new ResizeObserver(() => {
 				loopW = getLoopWidth();
 			});
 			ro.observe(stage);
 
-			// Optional: pause on hover
 			outer.addEventListener('mouseenter', () => {
 				if (raf) cancelAnimationFrame(raf);
 				raf = null;
@@ -94,11 +90,9 @@ export default function smashballoonsocialmediav3Js(options = {}) {
 				}
 			});
 
-			// Kick off
 			last = performance.now();
 			raf = requestAnimationFrame(tick);
 
-			// Optional cleanup handle if you ever need it later
 			block._sbiMarqueeDestroy = () => {
 				if (raf) cancelAnimationFrame(raf);
 				ro.disconnect();
