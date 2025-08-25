@@ -1,7 +1,6 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
-@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @mixin coreCssSizingVarsV3() {
 	body {
 		--screen-width: var(--screen-width-mobile);

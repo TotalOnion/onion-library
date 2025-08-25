@@ -1,6 +1,6 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
-@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/divider-v3/divider-v3-extra';
 
@@ -57,8 +57,14 @@
 		);
 
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			height: core-functions-v3.fluidSize(var(--divider-v3-height), 'portrait');
-			width: core-functions-v3.fluidSize(var(--divider-v3-width), 'portrait');
+			height: core-functions-v3.fluidSize(
+				var(--divider-v3-height),
+				'portrait'
+			);
+			width: core-functions-v3.fluidSize(
+				var(--divider-v3-width),
+				'portrait'
+			);
 			max-width: core-functions-v3.fluidSize(
 				var(--divider-v3-max-width-portrait),
 				'portrait'
@@ -70,8 +76,14 @@
 		}
 
 		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			height: core-functions-v3.fluidSize(var(--divider-v3-height), 'desktop');
-			width: core-functions-v3.fluidSize(var(--divider-v3-width), 'desktop');
+			height: core-functions-v3.fluidSize(
+				var(--divider-v3-height),
+				'desktop'
+			);
+			width: core-functions-v3.fluidSize(
+				var(--divider-v3-width),
+				'desktop'
+			);
 			max-width: core-functions-v3.fluidSize(
 				var(--divider-v3-max-width-desktop),
 				'desktop'

@@ -1,12 +1,12 @@
-@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
-@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/product-info-v3/product-info-v3-extra';
-@use 'Assets/scss/modules/library-modules/grid-layout-container-v3/grid-layout-container-v3';
-@use 'Assets/scss/modules/library-modules/grid-layout-element-v3/grid-layout-element-v3';
-@use 'Assets/scss/modules/library-modules/element-positioning-v3/element-positioning-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-container-v3/grid-layout-container-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-element-v3/grid-layout-element-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-element-positioning-v3/element-positioning-v3';
 @use 'Assets/scss/modules/library-modules/gradient-overlay/gradient-overlay';
-@use 'Assets/scss/modules/library-modules/content-container-settings-v3/content-container-settings-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-content-container-settings-v3/content-container-settings-v3';
 
 .product-info-v3 {
 	display: grid;

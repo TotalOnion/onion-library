@@ -1,4 +1,4 @@
-@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @mixin animations() {
 	.cmpl-block-animations {
 		--slide-distance-default: 50;
@@ -29,8 +29,7 @@
 								var(
 										--slide-distance,
 										var(--slide-distance-default)
-									) *
-									-1
+									) * -1
 							)
 						)
 					)
@@ -83,8 +82,7 @@
 								var(
 										--slide-distance,
 										var(--slide-distance-default)
-									) *
-									-1
+									) * -1
 							)
 						)
 					)
