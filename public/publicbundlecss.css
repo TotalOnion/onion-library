@@ -4,18 +4,18 @@
 @charset "UTF-8";
 @font-face {
   font-family: "ano";
-  src: url(/wp-content/themes/global-theme/static/fonts/AnoRegular-Regular.otf) format("opentype");
+  /* src: url(/wp-content/themes/global-theme/static/fonts/AnoRegular-Regular.otf) format("opentype"); */
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "satoshi-variable";
-  src: url(/wp-content/themes/global-theme/static/fonts/Satoshi-Variable.ttf) format("truetype");
+  /* src: url(/wp-content/themes/global-theme/static/fonts/Satoshi-Variable.ttf) format("truetype"); */
   font-display: swap;
 }
 @font-face {
   font-family: "satoshi-variable";
-  src: url(/wp-content/themes/global-theme/static/fonts/Satoshi-VariableItalic.ttf) format("truetype");
+  /* src: url(/wp-content/themes/global-theme/static/fonts/Satoshi-VariableItalic.ttf) format("truetype"); */
   font-style: italic;
   font-display: swap;
 }
@@ -14605,7 +14605,7 @@ section {
   display: none;
 }
 .nav-menu-container .nav-menu-slide-in-panel__nav-item-drop-down, .nav-menu-container .nav-menu-slide-in-panel__nav-item-drop-down-small {
-  background-image: url(/wp-content/themes/global-theme/static/images/chevron-library.svg);
+  /* background-image: url(/wp-content/themes/global-theme/static/images/chevron-library.svg); */
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -16021,7 +16021,7 @@ section {
   display: none;
 }
 .nav-menu-container-v3 .nav-menu-slide-in-panel__nav-item-drop-down, .nav-menu-container-v3 .nav-menu-slide-in-panel__nav-item-drop-down-small {
-  background-image: url(/wp-content/themes/global-theme/static/images/chevron-library.svg);
+  /* background-image: url(/wp-content/themes/global-theme/static/images/chevron-library.svg); */
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -17350,7 +17350,6 @@ html.markets-active {
 }
 .market-selector-v3 .market-selector-v3__modal-close-button {
   justify-self: flex-end;
-  background-image: url(/wp-content/themes/global-theme/static/images/close-modal-teal.svg);
   background-size: cover;
   background-color: transparent;
   cursor: pointer;
