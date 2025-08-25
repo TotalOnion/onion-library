@@ -1,32 +1,36 @@
 {
-    "name": "@total_onion/onion-library",
-    "version": "1.0.202",
-    "description": "Component library",
-    "main": "index.js",
-    "scripts": {
-        "build": "esbuild",
-        "test": "jest"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Chivas-Brothers/cbl-component-library.git"
-    },
-    "author": "Ciaran",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Chivas-Brothers/cbl-component-library/issues"
-    },
-    "homepage": "https://github.com/Chivas-Brothers/cbl-component-library#readme",
-    "dependencies": {
-        "cpy": "^9.0.1",
-        "fs": "^0.0.1-security",
-        "fs-extra": "^11.1.0",
-        "glob": "^11.0.0",
-        "prettier": "^2.6.2",
-        "yargs": "^17.4.1"
-    },
-    "devDependencies": {
-        "dotenv": "^16.0.3",
-        "esbuild": "0.25.5"
-    }
+	"name": "@total_onion/onion-library",
+	"version": "1.0.203",
+	"description": "Component library",
+	"main": "index.js",
+	"scripts": {
+		"build": "esbuild",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chivas-Brothers/cbl-component-library.git"
+	},
+	"author": "Ciaran",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Chivas-Brothers/cbl-component-library/issues"
+	},
+	"homepage": "https://github.com/Chivas-Brothers/cbl-component-library#readme",
+	"dependencies": {
+		"cpy": "^9.0.1",
+		"fs": "^0.0.1-security",
+		"fs-extra": "^11.1.0",
+		"glob": "^11.0.0",
+		"prettier": "^2.6.2",
+		"yargs": "^17.4.1"
+	},
+	"devDependencies": {
+		"@pernod-ricard-global-cms/jsutils": "^4.0.3",
+		"@total_onion/onion-modalcontroller": "^1.0.5",
+		"@total_onion/onion-videocontroller": "^1.0.2",
+		"dotenv": "^16.0.3",
+		"esbuild": "0.25.5",
+		"swiper": "^11.2.10"
+	}
 }
