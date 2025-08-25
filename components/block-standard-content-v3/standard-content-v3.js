@@ -1,27 +1,35 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 import extraJs from 'Assets/js/blocks/standard-content-v3/standard-content-v3-extra.js';
 export default function standardcontentv3Js(options = {}) {
 	try {
 		const {block} = options;
-		const dataset = block.dataset;
-		if (dataset.enablebuynowbutton) {
+		const formContainerElement = block.querySelector('.form-container');
+		const modalFormContainerElement = block.querySelector(
+			'.form-container__modal'
+		);
+		const countdownElement = block.querySelector('.countdowndate');
+		const socialMediaElement = block.querySelector(
+			'.social-media-share-popup'
+		);
+
+		if (formContainerElement || modalFormContainerElement) {
 			import(
-				'Assets/js/modules/library-modules/buy-now-button/buy-now-button.js'
+				'Assets/js/modules/library-modules/form-selection/form-selection.js'
 			).then((module) => {
 				module.default(block);
 			});
 		}
-		if (dataset.enablescrollingbanner) {
+
+		if (countdownElement) {
 			import(
-				'Assets/js/modules/library-modules/scrolling-banner/scrolling-banner.js'
+				'Assets/js/modules/library-modules/countdown/countdown.js'
 			).then((module) => {
 				module.default(block);
 			});
 		}
-		
-		if (dataset.enablecontentcontainer) {
+
+		if (socialMediaElement) {
 			import(
-				'Assets/js/modules/library-modules/content-container/content-container.js'
+				'Assets/js/modules/library-modules/social-media-share/social-media-share.js'
 			).then((module) => {
 				module.default(block);
 			});
