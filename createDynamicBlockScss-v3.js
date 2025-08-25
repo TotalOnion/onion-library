@@ -7,7 +7,7 @@ const themePath =
 
 // Create the directory path for the target file
 const scssModulePath = path.join(themePath, 'assets/scss/modules');
-const scssFilePath = path.join(scssModulePath, 'dynamicBlocksPreview.scss');
+const scssFilePath = path.join(scssModulePath, 'dynamicBlockScss-v3.scss');
 
 // Create directories if they don't exist
 fs.mkdirSync(scssModulePath, {recursive: true});
@@ -19,7 +19,7 @@ fs.writeFileSync(
 );
 
 const dynamicEntryPoints = globSync(
-	`${themePath}/assets/scss/blocks/*.scss`
+	`${themePath}/assets/scss/blocks/*-v3.scss`
 ).map((path) => {
 	const assetPath = path.replace(
 		'assets/scss/blocks/',
