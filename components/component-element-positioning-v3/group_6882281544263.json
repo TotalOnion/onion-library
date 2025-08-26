@@ -272,6 +272,170 @@
                     ]
                 },
                 {
+                    "key": "field_68a09654d2ab6",
+                    "label": "Portrait",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "placement": "top",
+                    "endpoint": 0,
+                    "no_preference": 0,
+                    "selected": 0
+                },
+                {
+                    "key": "field_68a0965dd2ab7",
+                    "label": "Portrait positioning",
+                    "name": "portrait_positioning",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "layout": "block",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_68a0965dd2ab8",
+                            "label": "Vertical position",
+                            "name": "vertical_snap",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "choices": {
+                                "__flex-start": "Top",
+                                "__center": "Center",
+                                "__flex-end": "Bottom"
+                            },
+                            "default_value": "__center",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_68a0965dd2ab9",
+                            "label": "Horizontal position",
+                            "name": "horizontal_snap",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "choices": {
+                                "__flex-start": "Left",
+                                "__center": "Cntr",
+                                "__flex-end": "Right"
+                            },
+                            "default_value": "__center",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "horizontal",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_68a0965dd2aba",
+                            "label": "Vertical offset",
+                            "name": "vertical_offset",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "Negative values move up and positive move down",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "min": -1000,
+                            "max": 1000,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_68a0965dd2abb",
+                            "label": "Horizontal offset",
+                            "name": "horizontal_offset",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "Negative values move left and positive move right",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": "",
+                            "min": -400,
+                            "max": 400,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_68a0965dd2abc",
+                            "label": "Element rotation Desktop",
+                            "name": "element_rotation_desktop",
+                            "aria-label": "",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 3,
+                            "default_value": 0,
+                            "min": -180,
+                            "max": 180,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
+                },
+                {
                     "key": "field_6882281555030",
                     "label": "Mobile",
                     "name": "",
@@ -467,5 +631,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754579749
+    "modified": 1755354735
 }

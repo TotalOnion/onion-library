@@ -1,6 +1,9 @@
-@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-element-v3/grid-layout-element-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-container-v3/grid-layout-container-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-flex-layout-container-v3/flex-layout-container-v3';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/modules/library-modules/grid-layout-element-v3/grid-layout-element-v3';
+@use 'Assets/scss/modules/library-modules/grid-layout-container-v3/grid-layout-container-v3';
+@use 'Assets/scss/modules/library-modules/flex-layout-container-v3/flex-layout-container-v3';
 @use 'Assets/scss/blocks/group-container-v3/group-container-v3-extra';
 
 .group-container-v3 {
@@ -23,7 +26,9 @@
 		&.grid-layout-container {
 			@include grid-layout-element-v3.gridLayoutElement();
 		}
-		&:has(.video-content-v3__video-container.video-playing.video-playing--high-z-index) {
+		&:has(
+			.video-content-v3__video-container.video-playing.video-playing--high-z-index
+		) {
 			z-index: 50;
 		}
 	}

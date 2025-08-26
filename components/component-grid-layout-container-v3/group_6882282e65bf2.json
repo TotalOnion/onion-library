@@ -454,7 +454,7 @@
         {
             "key": "field_6882282e77289",
             "label": "Grid auto columns desktop",
-            "name": "grid_auto_columns",
+            "name": "grid_auto_columns_desktop",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -667,7 +667,7 @@
         {
             "key": "field_6882282e77a58",
             "label": "Grid auto rows desktop",
-            "name": "grid_auto_rows",
+            "name": "grid_auto_rows_desktop",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -777,7 +777,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6882282e77a58",
+                        "field": "field_689db0bd71354",
                         "operator": "==",
                         "value": "__custom"
                     }
@@ -864,7 +864,7 @@
         },
         {
             "key": "field_6882282e78223",
-            "label": "Scroll Snap",
+            "label": "Grid Container Settings",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -884,15 +884,15 @@
         },
         {
             "key": "field_6882282e7860d",
-            "label": "Scroll snap type",
-            "name": "scroll_snap_type",
+            "label": "Scroll snap type desktop",
+            "name": "scroll_snap_type_desktop",
             "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -923,16 +923,204 @@
             "min": ""
         },
         {
-            "key": "field_6882282e789f5",
-            "label": "Container overflow type",
-            "name": "container_overflow_type",
+            "key": "field_68a0915404285",
+            "label": "Scroll snap type portrait",
+            "name": "scroll_snap_type_portrait",
             "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__none": "None",
+                "__x": "X",
+                "__x mandatory": "X mandatory",
+                "__y": "Y",
+                "__y mandatory": "Y mandatory",
+                "__both mandatory": "Both mandatory",
+                "__block": "Block",
+                "__inline": "Inline",
+                "__both": "Both"
+            },
+            "default_value": "__none",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_68a0918204289",
+            "label": "Scroll snap type mobile",
+            "name": "scroll_snap_type_mobile",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__none": "None",
+                "__x": "X",
+                "__x mandatory": "X mandatory",
+                "__y": "Y",
+                "__y mandatory": "Y mandatory",
+                "__both mandatory": "Both mandatory",
+                "__block": "Block",
+                "__inline": "Inline",
+                "__both": "Both"
+            },
+            "default_value": "__none",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_6882282e78ddb",
+            "label": "Scroll snap align desktop",
+            "name": "scroll_snap_align_desktop",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__none": "None",
+                "__start": "Start",
+                "__end": "End",
+                "__start end": "Start End",
+                "__end start": "End Start"
+            },
+            "default_value": "__none",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_68a093ba80505",
+            "label": "Scroll snap align portrait",
+            "name": "scroll_snap_align_portrait",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__none": "None",
+                "__start": "Start",
+                "__end": "End",
+                "__start end": "Start End",
+                "__end start": "End Start"
+            },
+            "default_value": "__none",
+            "return_format": "value",
+            "multiple": 0,
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_68a0918a0428a",
+            "label": "Scroll snap align mobile",
+            "name": "scroll_snap_align_mobile",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__none": "None",
+                "__start": "Start",
+                "__end": "End",
+                "__start end": "Start End",
+                "__end start": "End Start"
+            },
+            "default_value": "__none",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_6882282e789f5",
+            "label": "Container overflow type desktop",
+            "name": "container_overflow_type_desktop",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -958,28 +1146,62 @@
             "min": ""
         },
         {
-            "key": "field_6882282e78ddb",
-            "label": "Scroll snap align",
-            "name": "scroll_snap_align",
+            "key": "field_68a0916c04287",
+            "label": "Container overflow type portrait",
+            "name": "container_overflow_type_portrait",
             "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "__none": "None",
-                "__start": "Start",
-                "__end": "End",
-                "__start end": "Start End",
-                "__end start": "End Start"
+                "__hidden": "Hidden",
+                "__auto": "Auto",
+                "__scroll": "Scroll",
+                "__visible": "Visible"
             },
-            "default_value": "__none",
+            "default_value": "__hidden",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_68a091910428b",
+            "label": "Container overflow type mobile",
+            "name": "container_overflow_type_mobile",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__hidden": "Hidden",
+                "__auto": "Auto",
+                "__scroll": "Scroll",
+                "__visible": "Visible"
+            },
+            "default_value": "__hidden",
             "return_format": "value",
             "multiple": 0,
             "max": "",
@@ -1140,6 +1362,92 @@
             "append": ""
         },
         {
+            "key": "field_68a07c25eb2d7",
+            "label": "Scroll Buttons",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_68a07c2feb2d8",
+            "label": "Enable Scroll Buttons desktop",
+            "name": "enable_scroll_buttons_desktop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_68a07c46eb2d9",
+            "label": "Enable Scroll Buttons portrait",
+            "name": "enable_scroll_buttons_portrait",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_68a07c4ceb2da",
+            "label": "Enable Scroll Buttons mobile",
+            "name": "enable_scroll_buttons_mobile",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
             "key": "field_6882282e7ad1b",
             "label": "Advanced grid settings end",
             "name": "",
@@ -1185,5 +1493,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755195019
+    "modified": 1755354147
 }

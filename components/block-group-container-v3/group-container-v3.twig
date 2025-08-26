@@ -14,7 +14,12 @@
 {% elseif layoutType == 'grid' %}
 	{% set layoutStyles = include('components/grid-layout-container-v3.twig', { fields, block }, with_context = false) %}
 	{% set layoutClass = 'grid-layout-container' %}
+	{% set scrollButtonsDesktop = fields.grid_layout.enable_scroll_buttons_desktop ? 'scroll-btns-desktop' : '' %}
+	{% set scrollButtonsPortrait = fields.grid_layout.enable_scroll_buttons_portrait ? ' scroll-btns-portrait' : '' %}
+	{% set scrollButtonsMobile = fields.grid_layout.enable_scroll_buttons_mobile ? ' scroll-btns-mobile' : '' %}
+	{% set scrollButtons = scrollButtonsDesktop ~ scrollButtonsPortrait ~ scrollButtonsMobile %}
 {% endif %}
+
 {% set blockElementType = fields.block_element_type|default('section')|ru %}
 {% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.grid_layout.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.grid_layout.grid_columns_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.grid_layout.grid_columns_portrait|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.grid_layout.grid_columns_mobile|default(1))|round ~ 'vw, 100vw' %}
 
@@ -28,18 +33,16 @@
 		{{sectionStyles}}
 	}
 </style>
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
-
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="group-container-v3 {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
 	{% endif %}
-
 	<style>
 		.{{blockClassName}}__grid-container.{{block.id}}{
 			{{layoutStyles}}
 		}
 	</style>
-	<div class="group-container-v3__grid-container {{layoutClass}} {{block.id}}">
+	<div class="group-container-v3__grid-container {{scrollButtons}} {{layoutClass}} {{block.id}}">
 		{% for section in fields.sections %}
 			{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: section, block }, with_context = false) %}
 			{% if block %}
