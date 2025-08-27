@@ -9,6 +9,9 @@
 		background: unset;
 	}
 	&__popup-trigger {
+		appearance: none;
+		border: unset;
+		background-color: unset;
 		display: flex;
 	}
 	svg {
