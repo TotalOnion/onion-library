@@ -153,6 +153,74 @@
                     "placeholder": "",
                     "min": "",
                     "parent_repeater": "field_6898aa7bb4898"
+                },
+                {
+                    "key": "field_68af0ac222bfa",
+                    "label": "Enable Trigger Icon",
+                    "name": "enable_trigger_icon",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "message": "",
+                    "default_value": 0,
+                    "style": "",
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_6898aa7bb4898"
+                },
+                {
+                    "key": "field_68af0af322bfb",
+                    "label": "Trigger Icon type",
+                    "name": "trigger_icon_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "This will choose an icon from global icons",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_68af0ac222bfa",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__cta_link_icon": "Link",
+                        "__cta_external_link_icon": "External link",
+                        "__cta_market_selector_icon": "Market selector",
+                        "__cta_signup_icon": "Sign up icon",
+                        "__cta_shopify_cart_icon": "Shopify cart icon"
+                    },
+                    "default_value": "__cta_link_icon",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "min": "",
+                    "parent_repeater": "field_6898aa7bb4898"
                 }
             ]
         },
@@ -598,5 +666,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755276882
+    "modified": 1756302619
 }
