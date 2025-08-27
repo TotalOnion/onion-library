@@ -2541,7 +2541,7 @@
                 "__grid": "Grid",
                 "__flex": "Flex"
             },
-            "default_value": "",
+            "default_value": "__grid",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -2978,5 +2978,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755277107
+    "modified": 1756281936
 }
