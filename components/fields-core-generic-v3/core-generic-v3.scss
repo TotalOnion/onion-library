@@ -1,4 +1,4 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 @use 'Assets/scss/modules/library-modules/core-typography-mixins-v3/core-typography-mixins-v3';
 @use 'Assets/scss/theme/breakpoints';
 
@@ -8,6 +8,35 @@
 	*::before,
 	*::after {
 		box-sizing: border-box;
+	}
+
+	/* Remove default padding */
+	ul,
+	ol {
+		padding: 0;
+	}
+
+	/* Remove default margin */
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	ul,
+	ol,
+	li,
+	figure,
+	figcaption,
+	blockquote,
+	dl,
+	dd {
+		margin: 0;
+	}
+
+	/* Make images easier to work with */
+	img {
+		display: block;
 	}
 
 	html {
@@ -95,7 +124,7 @@
 		margin-inline: auto;
 		background-image: var(--main-container-background-image);
 		background-repeat: repeat;
-		container-type: inline-size;
+		container-type: size;
 	}
 
 	header,
