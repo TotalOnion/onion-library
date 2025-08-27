@@ -3,11 +3,11 @@
     "title": "Fields: Drink Responsibly Notice v3",
     "fields": [
         {
-            "key": "field_687512b51fa35",
-            "label": "Drink Responsibly Image",
-            "name": "drink_responsibly_image",
+            "key": "field_68ade4a7f3c31",
+            "label": "Enable Drink Responsibly Image",
+            "name": "enable_drink_responsibly_image",
             "aria-label": "",
-            "type": "image",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -20,7 +20,81 @@
             "hide_label": "",
             "hide_instructions": "",
             "hide_required": "",
-            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "allow_in_bindings": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_68ade4d9f3c32",
+            "label": "Drink Responsibly Link",
+            "name": "drink_responsibly_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ade4a7f3c31",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "default_value": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "maxlength": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_687512b51fa35",
+            "label": "Drink Responsibly Image",
+            "name": "drink_responsibly_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ade4a7f3c31",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
             "uploader": "",
             "return_format": "id",
             "library": "all",
@@ -37,7 +111,84 @@
             "mime_types": "",
             "instruction_placement": "",
             "acfe_permissions": "",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_68ade3c57d8c3",
+            "label": "Drink Responsibly Image Size Desktop",
+            "name": "drink_responsibly_image_size_desktop",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ade4a7f3c31",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "default_value": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "min": 0,
+            "max": 1000,
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "allow_in_bindings": 0,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68adeafd614c3",
+            "label": "Drink Responsibly Image Size Mobile",
+            "name": "drink_responsibly_image_size_mobile",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68ade4a7f3c31",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "default_value": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "min": 0,
+            "max": 1000,
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "allow_in_bindings": 0,
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_687512579da98",
@@ -105,11 +256,10 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "translation",
     "acfe_form": 1,
     "acfe_display_title": "",
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752503156
+    "modified": 1756229097
 }
