@@ -298,6 +298,27 @@
                             "display": "block",
                             "sub_fields": [
                                 {
+                                    "key": "field_68af4c8575eaf",
+                                    "label": "Modal Popup Content ID",
+                                    "name": "modal_popup_content_id",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 2,
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
                                     "key": "field_68af326a74c48",
                                     "label": "market selector fields",
                                     "name": "market_selector_fields",
@@ -378,5 +399,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1756312231
+    "modified": 1756318897
 }
