@@ -1,11 +1,11 @@
-@use 'Assets/scss/theme/breakpoints';
 @use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/theme/breakpoints';
 
 @mixin h-xl-size {
 	font-size: clamp(
 		var(--h-xl-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-xl-desktop)),
+		core-functions-v3.fontSize(var(--h-xl-desktop, 70)),
 		var(--h-xl-font-size-max-desktop, 180px)
 	);
 	line-height: var(--h-xl-line-height);
@@ -23,20 +23,20 @@
 	}
 	font-size: clamp(
 		var(--h-xl-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-xl-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--h-xl-mobile, 44), 'mobile'),
 		var(--h-xl-font-size-max-mobile, 180px)
 	);
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-xl-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-xl-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-xl-portrait, 44), 'portrait'),
 			var(--h-xl-font-size-max-mobile, 180px)
 		);
 	}
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-xl-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-xl-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--h-xl-landscape, 70), 'landscape'),
 			var(--h-xl-font-size-max-desktop, 180px)
 		);
 	}
@@ -48,7 +48,7 @@
 @mixin h-l-size {
 	font-size: clamp(
 		var(--h-l-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-l-desktop)),
+		core-functions-v3.fontSize(var(--h-l-desktop, 44)),
 		var(--h-l-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--h-l-letter-spacing);
@@ -68,14 +68,14 @@
 
 	font-size: clamp(
 		var(--h-l-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-l-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--h-l-mobile, 32), 'mobile'),
 		var(--h-l-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-l-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-l-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-l-portrait, 32), 'portrait'),
 			var(--h-l-font-size-max-mobile, 180px)
 		);
 	}
@@ -83,7 +83,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-l-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-l-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--h-l-landscape, 44), 'landscape'),
 			var(--h-l-font-size-max-desktop, 180px)
 		);
 	}
@@ -95,7 +95,7 @@
 @mixin h-m-size {
 	font-size: clamp(
 		var(--h-m-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-m-desktop)),
+		core-functions-v3.fontSize(var(--h-m-desktop, 32)),
 		var(--h-m-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--h-m-letter-spacing);
@@ -115,14 +115,14 @@
 
 	font-size: clamp(
 		var(--h-m-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-m-mobile)),
+		core-functions-v3.fontSize(var(--h-m-mobile, 24)),
 		var(--h-m-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-m-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-m-portrait)),
+			core-functions-v3.fontSize(var(--h-m-portrait, 24)),
 			var(--h-m-font-size-max-mobile, 180px)
 		);
 	}
@@ -130,7 +130,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-m-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-m-landscape)),
+			core-functions-v3.fontSize(var(--h-m-landscape, 32)),
 			var(--h-m-font-size-max-desktop, 180px)
 		);
 	}
@@ -142,7 +142,7 @@
 @mixin h-s-size {
 	font-size: clamp(
 		var(--h-s-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-s-desktop)),
+		core-functions-v3.fontSize(var(--h-s-desktop, 24)),
 		var(--h-s-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--h-s-letter-spacing);
@@ -162,14 +162,14 @@
 
 	font-size: clamp(
 		var(--h-s-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-s-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--h-s-mobile, 20), 'mobile'),
 		var(--h-s-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-s-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-s-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-s-portrait, 20), 'portrait'),
 			var(--h-s-font-size-max-mobile, 180px)
 		);
 	}
@@ -177,7 +177,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-s-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-s-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--h-s-landscape, 24), 'landscape'),
 			var(--h-s-font-size-max-desktop, 180px)
 		);
 	}
@@ -189,7 +189,7 @@
 @mixin h-xs-size {
 	font-size: clamp(
 		var(--h-xs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-xs-desktop)),
+		core-functions-v3.fontSize(var(--h-xs-desktop, 18)),
 		var(--h-xs-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--h-xs-letter-spacing);
@@ -209,14 +209,14 @@
 
 	font-size: clamp(
 		var(--h-xs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-xs-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--h-xs-mobile, 14), 'mobile'),
 		var(--h-xs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-xs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-xs-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-xs-portrait, 14), 'portrait'),
 			var(--h-xs-font-size-max-mobile, 180px)
 		);
 	}
@@ -224,7 +224,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-xs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-xs-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--h-xs-landscape, 18), 'landscape'),
 			var(--h-xs-font-size-max-desktop, 180px)
 		);
 	}
@@ -236,7 +236,7 @@
 @mixin h-xxs-size {
 	font-size: clamp(
 		var(--h-xxs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-xxs-desktop)),
+		core-functions-v3.fontSize(var(--h-xxs-desktop, 16)),
 		var(--h-xxs-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--h-xxs-letter-spacing);
@@ -256,14 +256,14 @@
 
 	font-size: clamp(
 		var(--h-xxs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-xxs-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--h-xxs-mobile, 12), 'mobile'),
 		var(--h-xxs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-xxs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-xxs-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-xxs-portrait, 12), 'portrait'),
 			var(--h-xxs-font-size-max-mobile, 180px)
 		);
 	}
@@ -271,7 +271,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-xxs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-xxs-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--h-xxs-landscape, 16), 'landscape'),
 			var(--h-xxs-font-size-max-desktop, 180px)
 		);
 	}
@@ -283,7 +283,7 @@
 @mixin h-xxxs-size {
 	font-size: clamp(
 		var(--h-xxxs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--h-xxxs-desktop)),
+		core-functions-v3.fontSize(var(--h-xxxs-desktop, 12)),
 		var(--h-xxxs-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--h-xxxs-letter-spacing);
@@ -303,14 +303,14 @@
 
 	font-size: clamp(
 		var(--h-xxxs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--h-xxxs-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--h-xxxs-mobile, 10), 'mobile'),
 		var(--h-xxxs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--h-xxxs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--h-xxxs-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--h-xxxs-portrait, 10), 'portrait'),
 			var(--h-xxxs-font-size-max-mobile, 180px)
 		);
 	}
@@ -318,7 +318,10 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--h-xxxs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--h-xxxs-landscape), 'landscape'),
+			core-functions-v3.fontSize(
+				var(--h-xxxs-landscape, 12),
+				'landscape'
+			),
 			var(--h-xxxs-font-size-max-desktop, 180px)
 		);
 	}
@@ -330,7 +333,7 @@
 @mixin sh-xl-size {
 	font-size: clamp(
 		var(--sh-xl-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-xl-desktop)),
+		core-functions-v3.fontSize(var(--sh-xl-desktop, 70)),
 		var(--sh-xl-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-xl-letter-spacing);
@@ -350,14 +353,14 @@
 
 	font-size: clamp(
 		var(--sh-xl-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--sh-xl-mobile)),
+		core-functions-v3.fontSize(var(--sh-xl-mobile, 44)),
 		var(--sh-xl-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--sh-xl-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--sh-xl-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--sh-xl-portrait, 44), 'portrait'),
 			var(--sh-xl-font-size-max-mobile, 180px)
 		);
 	}
@@ -365,7 +368,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--sh-xl-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--sh-xl-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--sh-xl-landscape, 70), 'landscape'),
 			var(--sh-xl-font-size-max-desktop, 180px)
 		);
 	}
@@ -377,7 +380,7 @@
 @mixin sh-l-size {
 	font-size: clamp(
 		var(--sh-l-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-l-desktop)),
+		core-functions-v3.fontSize(var(--sh-l-desktop, 44)),
 		var(--sh-l-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-l-letter-spacing);
@@ -397,14 +400,14 @@
 
 	font-size: clamp(
 		var(--sh-l-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--sh-l-mobile)),
+		core-functions-v3.fontSize(var(--sh-l-mobile, 32)),
 		var(--sh-l-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--sh-l-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--sh-l-portrait)),
+			core-functions-v3.fontSize(var(--sh-l-portrait, 32)),
 			var(--sh-l-font-size-max-mobile, 180px)
 		);
 	}
@@ -412,7 +415,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--sh-l-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--sh-l-landscape)),
+			core-functions-v3.fontSize(var(--sh-l-landscape, 44)),
 			var(--sh-l-font-size-max-desktop, 180px)
 		);
 	}
@@ -424,7 +427,7 @@
 @mixin sh-m-size {
 	font-size: clamp(
 		var(--sh-m-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-m-desktop)),
+		core-functions-v3.fontSize(var(--sh-m-desktop, 32)),
 		var(--sh-m-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-m-letter-spacing);
@@ -444,14 +447,14 @@
 
 	font-size: clamp(
 		var(--sh-m-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--sh-m-mobile)),
+		core-functions-v3.fontSize(var(--sh-m-mobile, 24)),
 		var(--sh-m-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--sh-m-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--sh-m-portrait)),
+			core-functions-v3.fontSize(var(--sh-m-portrait, 24)),
 			var(--sh-m-font-size-max-mobile, 180px)
 		);
 	}
@@ -459,7 +462,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--sh-m-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--sh-m-landscape)),
+			core-functions-v3.fontSize(var(--sh-m-landscape, 32)),
 			var(--sh-m-font-size-max-desktop, 180px)
 		);
 	}
@@ -471,7 +474,7 @@
 @mixin sh-s-size {
 	font-size: clamp(
 		var(--sh-s-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-s-desktop)),
+		core-functions-v3.fontSize(var(--sh-s-desktop, 24)),
 		var(--sh-s-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-s--letter-spacing);
@@ -491,14 +494,14 @@
 
 	font-size: clamp(
 		var(--sh-s-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--sh-s-mobile)),
+		core-functions-v3.fontSize(var(--sh-s-mobile, 20)),
 		var(--sh-s-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--sh-s-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--sh-s-portrait)),
+			core-functions-v3.fontSize(var(--sh-s-portrait, 20)),
 			var(--sh-s-font-size-max-mobile, 180px)
 		);
 	}
@@ -506,7 +509,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--sh-s-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--sh-s-landscape)),
+			core-functions-v3.fontSize(var(--sh-s-landscape, 24)),
 			var(--sh-s-font-size-max-desktop, 180px)
 		);
 	}
@@ -518,7 +521,7 @@
 @mixin sh-xs-size {
 	font-size: clamp(
 		var(--sh-xs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-xs-desktop)),
+		core-functions-v3.fontSize(var(--sh-xs-desktop, 18)),
 		var(--sh-xs-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-xs-letter-spacing);
@@ -538,14 +541,14 @@
 
 	font-size: clamp(
 		var(--sh-xs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--sh-xs-mobile)),
+		core-functions-v3.fontSize(var(--sh-xs-mobile, 14)),
 		var(--sh-xs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--sh-xs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--sh-xs-portrait)),
+			core-functions-v3.fontSize(var(--sh-xs-portrait, 14)),
 			var(--sh-xs-font-size-max-mobile, 180px)
 		);
 	}
@@ -553,7 +556,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--sh-xs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--sh-xs-landscape)),
+			core-functions-v3.fontSize(var(--sh-xs-landscape, 18)),
 			var(--sh-xs-font-size-max-desktop, 180px)
 		);
 	}
@@ -565,7 +568,7 @@
 @mixin sh-xxs-size {
 	font-size: clamp(
 		var(--sh-xxs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-xxs-desktop)),
+		core-functions-v3.fontSize(var(--sh-xxs-desktop, 16)),
 		var(--sh-xxs-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-xxs-letter-spacing);
@@ -585,14 +588,14 @@
 
 	font-size: clamp(
 		var(--sh-xxs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--sh-xxs-mobile)),
+		core-functions-v3.fontSize(var(--sh-xxs-mobile, 12)),
 		var(--sh-xxs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--sh-xxs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--sh-xxs-portrait)),
+			core-functions-v3.fontSize(var(--sh-xxs-portrait, 12)),
 			var(--sh-xxs-font-size-max-mobile, 180px)
 		);
 	}
@@ -600,7 +603,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--sh-xxs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--sh-xxs-landscape)),
+			core-functions-v3.fontSize(var(--sh-xxs-landscape, 16)),
 			var(--sh-xxs-font-size-max-desktop, 180px)
 		);
 	}
@@ -612,7 +615,7 @@
 @mixin p-l-size {
 	font-size: clamp(
 		var(--p-l-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-l-desktop)),
+		core-functions-v3.fontSize(var(--p-l-desktop, 20)),
 		var(--p-l-font-size-max-desktop, 180px)
 	);
 	line-height: var(--paragraph-large-line-height);
@@ -641,14 +644,14 @@
 
 	font-size: clamp(
 		var(--p-l-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--p-l-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--p-l-mobile, 18), 'mobile'),
 		var(--p-l-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--p-l-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--p-l-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--p-l-portrait, 18), 'portrait'),
 			var(--p-l-font-size-max-mobile, 180px)
 		);
 	}
@@ -656,7 +659,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--p-l-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--p-l-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--p-l-landscape, 20), 'landscape'),
 			var(--p-l-font-size-max-desktop, 180px)
 		);
 	}
@@ -669,7 +672,7 @@
 @mixin p-size {
 	font-size: clamp(
 		var(--p-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-desktop)),
+		core-functions-v3.fontSize(var(--p-desktop, 18)),
 		var(--p-font-size-max-desktop, 180px)
 	);
 }
@@ -698,14 +701,14 @@
 
 	font-size: clamp(
 		var(--p-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--p-mobile)),
+		core-functions-v3.fontSize(var(--p-mobile, 16)),
 		var(--p-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--p-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--p-portrait)),
+			core-functions-v3.fontSize(var(--p-portrait, 16)),
 			var(--p-font-size-max-mobile, 180px)
 		);
 	}
@@ -713,7 +716,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--p-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--p-landscape)),
+			core-functions-v3.fontSize(var(--p-landscape, 18)),
 			var(--p-font-size-max-desktop, 180px)
 		);
 	}
@@ -725,7 +728,7 @@
 @mixin p-s-size {
 	font-size: clamp(
 		var(--p-s-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-s-desktop)),
+		core-functions-v3.fontSize(var(--p-s-desktop, 16)),
 		var(--p-s-font-size-max-desktop, 180px)
 	);
 }
@@ -752,14 +755,14 @@
 
 	font-size: clamp(
 		var(--p-s-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--p-s-mobile), 'mobile'),
+		core-functions-v3.fontSize(var(--p-s-mobile, 14), 'mobile'),
 		var(--p-s-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--p-s-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--p-s-portrait), 'portrait'),
+			core-functions-v3.fontSize(var(--p-s-portrait, 14), 'portrait'),
 			var(--p-s-font-size-max-mobile, 180px)
 		);
 	}
@@ -767,7 +770,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--p-s-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--p-s-landscape), 'landscape'),
+			core-functions-v3.fontSize(var(--p-s-landscape, 16), 'landscape'),
 			var(--p-s-font-size-max-desktop, 180px)
 		);
 	}
@@ -779,7 +782,7 @@
 @mixin p-xs-size {
 	font-size: clamp(
 		var(--p-xs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-xs-desktop)),
+		core-functions-v3.fontSize(var(--p-xs-desktop, 14)),
 		var(--p-xs-font-size-max-desktop, 180px)
 	);
 }
@@ -806,14 +809,14 @@
 
 	font-size: clamp(
 		var(--p-xs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--p-xs-mobile)),
+		core-functions-v3.fontSize(var(--p-xs-mobile, 12)),
 		var(--p-xs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--p-xs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--p-xs-portrait)),
+			core-functions-v3.fontSize(var(--p-xs-portrait, 12)),
 			var(--p-xs-font-size-max-mobile, 180px)
 		);
 	}
@@ -821,7 +824,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--p-xs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--p-xs-landscape)),
+			core-functions-v3.fontSize(var(--p-xs-landscape, 14)),
 			var(--p-xs-font-size-max-desktop, 180px)
 		);
 	}
@@ -833,7 +836,7 @@
 @mixin p-xs-size {
 	font-size: clamp(
 		var(--p-xs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-xs-desktop)),
+		core-functions-v3.fontSize(var(--p-xs-desktop, 12)),
 		var(--p-xs-font-size-max-desktop, 180px)
 	);
 }
@@ -860,14 +863,14 @@
 
 	font-size: clamp(
 		var(--p-xs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--p-xs-mobile)),
+		core-functions-v3.fontSize(var(--p-xs-mobile, 12)),
 		var(--p-xs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--p-xs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--p-xs-portrait)),
+			core-functions-v3.fontSize(var(--p-xs-portrait, 12)),
 			var(--p-xs-font-size-max-mobile, 180px)
 		);
 	}
@@ -875,7 +878,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--p-xs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--p-xs-landscape)),
+			core-functions-v3.fontSize(var(--p-xs-landscape, 12)),
 			var(--p-xs-font-size-max-desktop, 180px)
 		);
 	}
@@ -887,7 +890,7 @@
 @mixin p-xxs-size {
 	font-size: clamp(
 		var(--p-xxs-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--p-xxs-desktop)),
+		core-functions-v3.fontSize(var(--p-xxs-desktop, 10)),
 		var(--p-xxs-font-size-max-desktop, 180px)
 	);
 }
@@ -914,14 +917,14 @@
 
 	font-size: clamp(
 		var(--p-xxs-font-size-min-mobile, 10px),
-		core-functions-v3.fontSize(var(--p-xxs-mobile)),
+		core-functions-v3.fontSize(var(--p-xxs-mobile, 10)),
 		var(--p-xxs-font-size-max-mobile, 180px)
 	);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		font-size: clamp(
 			var(--p-xxs-font-size-min-mobile, 10px),
-			core-functions-v3.fontSize(var(--p-xxs-portrait)),
+			core-functions-v3.fontSize(var(--p-xxs-portrait, 10)),
 			var(--p-xxs-font-size-max-mobile, 180px)
 		);
 	}
@@ -929,7 +932,7 @@
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		font-size: clamp(
 			var(--p-xxs-font-size-min-desktop, 10px),
-			core-functions-v3.fontSize(var(--p-xxs-landscape)),
+			core-functions-v3.fontSize(var(--p-xxs-landscape, 10)),
 			var(--p-xxs-font-size-max-desktop, 180px)
 		);
 	}

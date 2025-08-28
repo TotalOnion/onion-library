@@ -1,5 +1,5 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 
 @mixin responsiveImage() {
@@ -11,12 +11,12 @@
 		min-height: 100%;
 		display: flex;
 		z-index: var(--image-z-index);
-		border: core-functions.fluidSize(var(--image-border-width), 'static')
+		border: core-functions-v3.fluidSize(var(--image-border-width), 'static')
 			var(--image-border-style) var(--image-border-colour);
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			width: var(--image-width-portrait, 100%);
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			width: var(--image-width, 100%);
 		}
 	}
@@ -40,11 +40,11 @@
 				)
 		);
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			aspect-ratio: var(--image-aspect-ratio-portrait);
 		}
 
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			aspect-ratio: var(--image-aspect-ratio-desktop);
 			min-height: calc(
 				var(--image-min-height-desktop) - calc(
