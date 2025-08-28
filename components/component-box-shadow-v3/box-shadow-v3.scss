@@ -1,0 +1,12 @@
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
+
+@mixin boxShadow() {
+	box-shadow: core-functions-v3.fluidSize(
+			var(--box-shadow-offset-x),
+			'static'
+		)
+		core-functions-v3.fluidSize(var(--box-shadow-offset-y), 'static')
+		core-functions-v3.fluidSize(var(--box-shadow-blur), 'static')
+		core-functions-v3.fluidSize(var(--box-shadow-spread), 'static')
+		var(--box-shadow-colour);
+}

@@ -17,36 +17,23 @@
 	}
 </style>
 
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
-	<a class="{{blockClassName}}__cta {{selectorType}}">
-		{% set iconType = options.theme_cta_icons.cta_market_selector_icon %}
-		{% set iconImage = get_image(iconType) %}
-		{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
-		<span class="{{blockClassName}}__icon">
-			{{ isSVG ? get_raw_svg(iconImage.id) : '<img class="" src="' ~ iconImage.src ~ '">'}}
-		</span>
-	</a>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-loadjs="false" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-	<div class="{{blockClassName}}__modal-overlay">
-		<div class="{{blockClassName}}__modal">
-			<div class="{{blockClassName}}__modal-header-container">
-				<h5 class="{{blockClassName}}__modal-heading">{{fields.heading_text}}</h5>
-				<button class="{{blockClassName}}__modal-close-button"></button>
-			</div>
-			<div class="{{blockClassName}}__modal-markets-container">
-				{% for language in languages %}
-					<a class="{{blockClassName}}__market-link {{language['active'] ? "market-selector-v3__market-link--active" : ""}}" href=" {{ language[ 'url' ] }} " data-lang=" {{ language[ 'language_code' ] }} " aria-label=" view this page on the {{language[ 'native_name' ]}} market">{{ language[ 'native_name' ] }}</a>
-				{% endfor %}
-			</div>
-			<div class="{{blockClassName}}__modal-logo-container">
-				{% set logo = fields.logo %}
-				{% set logoImage = get_image(logo) %}
-				{% set isSVG = logoImage.post_mime_type == 'image/svg+xml' %}
-				<span class="{{blockClassName}}__modal-logo">
-					{{ isSVG ? get_raw_svg(logoImage.id) : '<img class="" src="' ~ logoImage.src ~ '">'}}
-				</span>
-			</div>
-		</div>
+	<div class="{{blockClassName}}__modal-header-container">
+		<h5 class="{{blockClassName}}__modal-heading">{{fields.heading_text}}</h5>
+	</div>
+	<div class="{{blockClassName}}__modal-markets-container">
+		{% for language in languages %}
+			<a class="{{blockClassName}}__market-link {{language['active'] ? "market-selector-v3__market-link--active" : ""}}" href=" {{ language[ 'url' ] }} " data-lang=" {{ language[ 'language_code' ] }} " aria-label=" view this page on the {{language[ 'native_name' ]}} market">{{ language[ 'native_name' ] }}</a>
+		{% endfor %}
+	</div>
+	<div class="{{blockClassName}}__modal-logo-container">
+		{% set logo = fields.logo %}
+		{% set logoImage = get_image(logo) %}
+		{% set isSVG = logoImage.post_mime_type == 'image/svg+xml' %}
+		<span class="{{blockClassName}}__modal-logo">
+			{{ isSVG ? get_raw_svg(logoImage.id) : '<img class="" src="' ~ logoImage.src ~ '">'}}
+		</span>
 	</div>
 
 	{{htmlEntryPoint}}

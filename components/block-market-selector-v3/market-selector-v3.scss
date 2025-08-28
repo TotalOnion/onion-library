@@ -1,78 +1,58 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/market-selector-v3/market-selector-v3-extra';
 .market-selector-v3 {
-	@include market-selector-v3-extra.additionalStyles();
 	pointer-events: all;
-	&__modal-overlay {
-		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.6);
-		justify-content: center;
-		align-items: center;
-		z-index: 1000;
+	display: grid;
+	background: #f6f6f0;
+	width: 100%;
+	height: 100%;
+	max-width: core-functions-v3.fluidSize(345);
+	max-height: core-functions-v3.fluidSize(500);
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		max-width: core-functions-v3.fluidSize(725);
+		max-height: core-functions-v3.fluidSize(528);
 	}
-	&__modal {
-		display: grid;
-		background: #f6f6f0;
-		width: 75%;
-		height: 75%;
-		grid-template:
-			'header'
-			'markets'
-			'markets'
-			'logo' / 1fr;
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		max-width: core-functions-v3.fluidSize(1102);
+		max-height: core-functions-v3.fluidSize(528);
 	}
+	grid-template:
+		'header'
+		'markets'
+		'markets'
+		'logo' / 1fr;
+
 	&__modal-header-container {
 		grid-area: header;
 		display: grid;
 		grid-auto-flow: column;
 		align-items: center;
 		height: min-content;
-		padding: core-functions.fluidSize(15, 'mobile')
-			core-functions.fluidSize(20, 'mobile');
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			padding: core-functions.fluidSize(30, 'portrait');
+		padding: core-functions-v3.fluidSize(15, 'mobile')
+			core-functions-v3.fluidSize(20, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(30, 'portrait');
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			padding: core-functions.fluidSize(30, 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding: core-functions-v3.fluidSize(30, 'desktop');
 		}
-		border-bottom: solid 2px #00968f;
+		border-bottom: solid 1px #00968f;
 	}
 	&__modal-heading {
 		color: #00968f;
 		font-weight: 700;
 		text-transform: uppercase;
-		font-size: core-functions.fluidSize(20, 'mobile');
-		line-height: core-functions.fluidSize(20, 'mobile');
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			font-size: core-functions.fluidSize(20, 'portrait');
-			line-height: core-functions.fluidSize(20, 'portrait');
+		font-size: core-functions-v3.fluidSize(20, 'mobile');
+		line-height: core-functions-v3.fluidSize(20, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			font-size: core-functions-v3.fluidSize(20, 'portrait');
+			line-height: core-functions-v3.fluidSize(20, 'portrait');
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			font-size: core-functions.fluidSize(24, 'desktop');
-			line-height: core-functions.fluidSize(24, 'desktop');
-		}
-	}
-	.market-selector-v3__modal-close-button {
-		justify-self: flex-end;
-		background-image: url('Assets/images/icon/close-modal-teal.svg');
-		background-size: cover;
-		background-color: transparent;
-		cursor: pointer;
-		width: 40px;
-		height: 40px;
-		border: unset;
-		padding: unset;
-		transition: transform 0.2s;
-
-		&:hover {
-			transform: scale(1.1);
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			font-size: core-functions-v3.fluidSize(24, 'desktop');
+			line-height: core-functions-v3.fluidSize(24, 'desktop');
 		}
 	}
 	&__modal-markets-container {
@@ -80,9 +60,17 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-auto-rows: auto;
-		place-items: center;
 		text-transform: uppercase;
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		place-items: flex-start;
+		gap: core-functions-v3.fluidSize(10);
+		padding: 0px core-functions-v3.fluidSize(15);
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: 0px core-functions-v3.fluidSize(35);
+			gap: core-functions-v3.fluidSize(10);
+		}
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding: 0px core-functions-v3.fluidSize(100);
+			gap: core-functions-v3.fluidSize(20);
 			grid-auto-flow: column;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(4, 1fr);
@@ -93,17 +81,18 @@
 		text-decoration: none;
 		color: #2d2926;
 		font-weight: 400;
-		line-height: core-functions.fluidSize(20, 'mobile');
-		font-size: core-functions.fluidSize(12, 'mobile');
+		line-height: core-functions-v3.fluidSize(20, 'mobile');
+		font-size: core-functions-v3.fluidSize(12, 'mobile');
 		border-bottom: 2px solid transparent;
+		padding-bottom: core-functions-v3.fluidSize(2, 'static');
 		transition: border 0.3s ease-out;
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			font-size: core-functions.fluidSize(16, 'portrait');
-			line-height: core-functions.fluidSize(16, 'portrait');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			font-size: core-functions-v3.fluidSize(16, 'portrait');
+			line-height: core-functions-v3.fluidSize(16, 'portrait');
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			font-size: core-functions.fluidSize(20, 'desktop');
-			line-height: core-functions.fluidSize(16, 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			font-size: core-functions-v3.fluidSize(20, 'desktop');
+			line-height: core-functions-v3.fluidSize(16, 'desktop');
 		}
 
 		&:hover {
@@ -125,4 +114,8 @@
 			width: auto;
 		}
 	}
+	&__icon {
+		display: flex;
+	}
+	@include market-selector-v3-extra.additionalStyles();
 }

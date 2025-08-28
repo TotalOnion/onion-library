@@ -1,6 +1,5 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 
 @mixin blockquoteV3() {
@@ -8,7 +7,7 @@
 		display: flex;
 		flex-direction: column;
 		font-weight: unset;
-		gap: core-functions.fluidSize(20, 'static');
+		gap: core-functions-v3.fluidSize(20, 'static');
 		&::before {
 			content: unset;
 		}
@@ -20,13 +19,13 @@
 			text-transform: var(--default-text-transform-mobile);
 			text-align: var(--default-text-align-mobile);
 			color: var(--default-text-colour-mobile);
-			-webkit-text-stroke: core-functions.fontSize(
+			-webkit-text-stroke: core-functions-v3.fontSize(
 					var(--text-stroke-width),
 					'static'
 				)
 				var(--text-stroke-colour);
 
-			@include core-mixins.device(breakpoints.$tabLandscape) {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 				font-weight: var(--default-font-weight-desktop);
 				text-transform: var(--default-text-transform-desktop);
 				text-align: var(--default-text-align-desktop);
@@ -48,7 +47,7 @@
 	footer {
 		align-self: var(--footer-align);
 		color: var(--default-text-colour-mobile);
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			color: var(--default-text-colour-desktop);
 		}
 	}
