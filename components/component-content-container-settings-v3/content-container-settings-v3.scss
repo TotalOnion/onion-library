@@ -141,7 +141,7 @@
 				);
 		}
 
-		@include box-shadow.boxShadow();
+		@include box-shadow-v3.boxShadow();
 	}
 	&__content-container {
 		max-width: var(--wysiwyg-max-width-mobile);
