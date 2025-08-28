@@ -1,8 +1,6 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
-@use './better-reviews-v3-extra';
 
 @mixin better-reviews() {
 	&__better-reviews {
@@ -136,8 +134,6 @@
 			}
 		}
 	}
-
-	@include better-reviews-extra.additionalReviewsStyles();
 }
 
 .better-reviews__modal {
@@ -338,7 +334,6 @@
 			background-image: var(--better-reviews-no-fill-star);
 		}
 	}
-	@include better-reviews-v3-extra.additionalPopupStyles();
 }
 
 .better-reviews__modal-succeeded {
