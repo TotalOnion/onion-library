@@ -1,5 +1,5 @@
+@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
 @use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
 
 @mixin elementPositioning() {
 	position: var(--element-position, relative);

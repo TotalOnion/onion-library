@@ -1,8 +1,8 @@
 @use 'NodeModules/@total_onion/onion-library/components/component-content-container-settings-v3/content-container-settings-v3';
-@use 'Assets/scss/modules/library-modules/content-image-v3/content-image-v3';
-@use 'Assets/scss/modules/library-modules/accent-text-v3/accent-text-v3';
-@use 'Assets/scss/modules/library-modules/nav-menu-v3/nav-menu-v3';
-@use 'Assets/scss/modules/library-modules/blockquote-v3/blockquote-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-content-image-v3/content-image-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-accent-text-v3/accent-text-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-nav-menu-v3/nav-menu-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-blockquote-v3/blockquote-v3';
 @use 'Assets/scss/theme/buttons';
 
 @mixin contentContainerV3() {
