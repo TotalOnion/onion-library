@@ -1,6 +1,3 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
-// @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
-// @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/blocks/sticky-buy-cta-v3/sticky-buy-cta-v3-extra';
 .sticky-buy-cta-v3 {
 	@include sticky-buy-cta-v3-extra.additionalStyles();
