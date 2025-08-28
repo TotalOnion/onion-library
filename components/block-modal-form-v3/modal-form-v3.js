@@ -45,7 +45,7 @@ export default function modalformv3Js ( options = {} ) {
 		}
 
 				
-		flatpickr("#birthday3", {
+		flatpickr(".flatpickr-input", {
 			dateFormat: "Y-m-d",
 		});
 
