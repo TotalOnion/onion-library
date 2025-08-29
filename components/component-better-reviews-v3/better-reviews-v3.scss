@@ -10,7 +10,7 @@
 	--better-reviews-filled-star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.86 26"><path d="M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z" fill="%23ECFC34"/></svg>');
 	--better-reviews-no-fill-star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.86 26"><path d="M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z" opacity="0.3" fill="%230f8d86" /></svg>');
 	--better-reviews-half-fill-star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.86 25.82" fill="%23ECFC34"><path d="M13.93 0L9.77 8.72 0 9.94l7.24 6.46-1.99 9.42 8.68-4.53h0V0z"/></svg>');
-	--better-reviews-font-size: core-functions.fontSize(16, 'static');
+	--better-reviews-font-size: core-functions-v3.fontSize(16, 'static');
 	--better-reviews-text-colour: #ffffff;
 
 	.better-reviews__review {
@@ -198,15 +198,15 @@
 	}
 
 	.better-reviews__modal-submit {
-		padding: core-functions.fluidSize(11, 'static')
-			core-functions.fluidSize(34, 'static')
-			core-functions.fluidSize(12, 'static')
-			core-functions.fluidSize(34, 'static');
+		padding: core-functions-v3.fluidSize(11, 'static')
+			core-functions-v3.fluidSize(34, 'static')
+			core-functions-v3.fluidSize(12, 'static')
+			core-functions-v3.fluidSize(34, 'static');
 		display: flex;
 		width: 100%;
 		background-color: var(--better-reviews-text-colour);
 		color: var(--better-reviews-submit-button-text-colour);
-		margin-top: core-functions.fluidSize(10, 'static');
+		margin-top: core-functions-v3.fluidSize(10, 'static');
 		appearance: none;
 		border: none;
 		font-family: var(--primary-font-family);
@@ -217,10 +217,10 @@
 		filter: alpha(opacity=100);
 		-moz-opacity: 1;
 		opacity: 1;
-		width: core-functions.fluidSize(114, 'static');
-		height: core-functions.fluidSize(41, 'static');
-		border-radius: core-functions.fluidSize(30, 'static');
-		font-size: core-functions.fontSize(14, 'static');
+		width: core-functions-v3.fluidSize(114, 'static');
+		height: core-functions-v3.fluidSize(41, 'static');
+		border-radius: core-functions-v3.fluidSize(30, 'static');
+		font-size: core-functions-v3.fontSize(14, 'static');
 		place-self: center;
 		display: flex;
 		justify-content: center;
@@ -245,11 +245,11 @@
 			content: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z' fill='%23000000'%3E%3C/path%3E%3C/svg%3E");
 			border-radius: 50%;
 			background-color: white;
-			width: core-functions.fluidSize(48, 'static');
-			height: core-functions.fluidSize(48, 'static');
+			width: core-functions-v3.fluidSize(48, 'static');
+			height: core-functions-v3.fluidSize(48, 'static');
 			position: absolute;
-			top: core-functions.fluidSize(-15, 'static');
-			right: core-functions.fluidSize(10, 'static');
+			top: core-functions-v3.fluidSize(-15, 'static');
+			right: core-functions-v3.fluidSize(10, 'static');
 			display: flex;
 			align-items: center;
 			justify-content: center;
