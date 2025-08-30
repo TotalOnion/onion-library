@@ -32,7 +32,7 @@
 			{% if current_post.id is defined and current_post.id is not empty %}
 				<div class="sticky-buy-cta-v3__cta-wrapper">
 					{% apply shortcodes %}
-						[clicktobuy class="sticky-buy-cta-v3__cta-button cmpl-cta-style-{{fields.cta_style}} cmpl-cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : '1'}} has-shop shop-ctb" lang="{{ postObject.meta('click_to_buy_language') }}" variant="{{ postObject.meta('click_to_buy_pim_id') }}" country="{{ postObject.meta('click_to_buy_country') }}" customQueryString="{{ postObject.meta('click_to_buy_custom_query_string') }}"]
+						[clicktobuy class="sticky-buy-cta-v3__cta-button cmpl-cta-style-{{fields.cta_style}} cmpl-cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : '1'}} has-shop shop-ctb" lang="{{ postObject.meta('click_to_buy_language') }}" variant="{{ postObject.meta('click_to_buy_pim_id') }}" defaultView="links" country="{{ postObject.meta('click_to_buy_country') }}" customQueryString="{{ postObject.meta('click_to_buy_custom_query_string') }}"]
 							<span class="cmpl-cta-span">{{ fields.cta_text }}</span>
 						[/clicktobuy]
 					{% endapply %}
