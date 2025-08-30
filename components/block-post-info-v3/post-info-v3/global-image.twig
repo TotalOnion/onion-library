@@ -1,4 +1,4 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 {% set imageSelect = field.image_select|ru %}
 {% set globalImageFitStyle = '--global-image-fit-style: ' ~ field.global_image_fit_style|ru ~ ';' %}
 {% set globalImageWidth = '--global-image-width: ' ~ field.global_image_width ~ '%;' %}
@@ -7,8 +7,8 @@
 {% set globalImagePosition = '--global-image-position: ' ~ field.global_image_position|ru ~ ';' %}
 {% set styleVars = globalImageWidth ~ globalImageMaxWidth ~ globalImageFitStyle ~ globalImageZindex ~ globalImagePosition %}
 <style>
-	.{{blockClassName}}__global-image-container.{{block.id}} {
-		{{elementStyles}}; 
+	.{{blockClassName}}__global-image-container.{{block.id}}{
+		{{gridLayoutElement}}
 		{{styleVars}}
 	}
 </style>

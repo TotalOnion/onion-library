@@ -1,4 +1,4 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 {% set textEditorStyleVars = include('components/text-editor-settings-variables-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
@@ -6,6 +6,7 @@
 <style>
 	.{{blockClassName}}__post-info-subtitle.{{block.id}}{
 		{{textEditorStyleVars}}
+		{{gridLayoutElement}}
 	}
 </style>
 <div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">

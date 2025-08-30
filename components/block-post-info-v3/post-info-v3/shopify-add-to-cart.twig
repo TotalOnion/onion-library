@@ -1,4 +1,4 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 {% set icon = field.enable_cta_icon %}
 {% set postColour = '--post-colour: ' ~ post.post_colour|ru ~ ';' %}
 {% set postTextColourStyle = '--post-text-colour-style: ' ~ post.post_text_colour_style|ru ~ ';' %}
@@ -13,7 +13,7 @@
 {% set productType = field.product_type|ru %}
 {% if productType == 'standard' %}
 	<style>
-		.{{blockClassName}}__shopify-add-to-cart.{{block.id}} {
+		.{{blockClassName}}__shopify-add-to-cart.{{block.id}}{
 			{{widgetStyles}}
 		}
 	</style>
@@ -22,7 +22,7 @@
 {% endif %}
 {% if productType == 'engraved' %}
 	<style>
-		.{{blockClassName}}__shopify-add-to-cart.{{block.id}} {
+		.{{blockClassName}}__shopify-add-to-cart.{{block.id}}{
 			{{widgetStyles}}
 		}
 	</style>

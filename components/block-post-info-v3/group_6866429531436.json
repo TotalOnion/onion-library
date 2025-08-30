@@ -39,13 +39,14 @@
             "wpml_cf_preferences": 3,
             "choices": {
                 "__grid": "Grid",
-                "__flex": "Flex"
+                "__flex": "Flex",
+                "__subgrid": "Subgrid"
             },
             "default_value": "",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "layout": "vertical",
+            "layout": "horizontal",
             "save_other_choice": 0
         },
         {
@@ -62,6 +63,13 @@
                         "field": "field_68b30f66d6499",
                         "operator": "==",
                         "value": "__grid"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_68b30f66d6499",
+                        "operator": "==",
+                        "value": "__subgrid"
                     }
                 ]
             ],
@@ -2387,5 +2395,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1756565391
+    "modified": 1756572779
 }

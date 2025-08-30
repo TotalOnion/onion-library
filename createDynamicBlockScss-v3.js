@@ -19,12 +19,9 @@ fs.writeFileSync(
 );
 
 const dynamicEntryPoints = globSync(
-	`${themePath}/assets/scss/blocks/*-v3.scss`
+	`${themePath}/node_modules/@total_onion/onion-library/components/block-*/*-v3.scss`
 ).map((path) => {
-	const assetPath = path.replace(
-		'assets/scss/blocks/',
-		'Assets/scss/blocks/'
-	);
+	const assetPath = path.replace('node_modules', 'NodeModules');
 	return assetPath;
 });
 
