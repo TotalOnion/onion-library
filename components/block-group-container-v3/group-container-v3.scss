@@ -26,11 +26,6 @@
 		&.grid-layout-container {
 			@include grid-layout-element-v3.gridLayoutElement();
 		}
-		&:has(> .subgrid-layout) {
-			grid-template-rows: subgrid;
-			grid-row: 1 / -1;
-			grid-column: 1 / -1;
-		}
 		&:has(.video-content-v3__video-container.video-playing.video-playing--high-z-index) {
 			z-index: 50;
 		}
