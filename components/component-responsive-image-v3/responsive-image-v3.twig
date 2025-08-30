@@ -127,14 +127,14 @@
 	</style>
 	<picture class="{{ blockClassName|default('cbl-image') }}__picture {{block.id}}" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" data-assetkey="responsive-image" data-enableparallax="{{ parallaxEnabled }}">
 		{% if desktopImage %}
-			<source data-type="srcSetDesktop" data-pattern-suffix="{{suffix}}" media="(min-width: 1024px)" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}--desktop" width="{{ desktopImage.width }}" height="{{ desktopImage.height }}" srcset="{{desktopSrcset}}"/>
+			<source data-type="srcSetDesktop" data-pattern-suffix="{{suffix}}" media="(min-width: 1024px)" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}--desktop" width="{{ desktopImage.width }}" height="{{ desktopImage.height }}" sizes="{{ sizes }}" srcset="{{desktopSrcset}}"/>
 		{% endif %}
 		{% if tabletImage %}
-			<source data-type="srcSetTablet" data-pattern-suffix="{{suffix}}" media="(min-width: 768px)" width="{{ tabletImage.width }}" height="{{ tabletImage.height }}" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}--tablet" srcset="{{ tabletSrcset }}"/>
+			<source data-type="srcSetTablet" data-pattern-suffix="{{suffix}}" media="(min-width: 768px)" width="{{ tabletImage.width }}" height="{{ tabletImage.height }}" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}--tablet" sizes="{{ sizes }}" srcset="{{ tabletSrcset }}"/>
 		{% endif %}
 		{% if mobileImage %}
-			<source data-type="srcSetMobile" data-pattern-suffix="{{suffix}}" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}__source--mobile" width="{{ mobileImage.width }}" height="{{ mobileImage.height }}" srcset="{{ mobileSrcset }}"/>
+			<source data-type="srcSetMobile" data-pattern-suffix="{{suffix}}" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}__source--mobile" width="{{ mobileImage.width }}" height="{{ mobileImage.height }}" sizes="{{ sizes }}" srcset="{{ mobileSrcset }}"/>
 		{% endif %}
-		<img data-type="srcGeneral" data-elementname="main-image" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" {{ enableEagerLoading }} class="{{ blockClassName|default('cbl-image') }}__image" src="{{mainImageSrc}}" alt="{{ desktopImage.alt }}" sizes="{{ sizes }}" {{ parallaxDepth }} {{ parallaxOffsetY }}/>
+		<img data-type="srcGeneral" data-elementname="main-image" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" {{ enableEagerLoading }} class="{{ blockClassName|default('cbl-image') }}__image" src="{{mainImageSrc}}" alt="{{ desktopImage.alt }}" {{ parallaxDepth }} {{ parallaxOffsetY }}/>
 	</picture>
 {% endif %}
