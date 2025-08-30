@@ -9,6 +9,9 @@
 		var(--grid-column-span-mobile);
 	place-self: var(--grid-vertical-placement-mobile)
 		var(--grid-horizontal-placement-mobile);
+	&:has(> .subgrid-layout) {
+		grid-template-rows: subgrid;
+	}
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		grid-row: var(--grid-row-start-portrait) / span
 			var(--grid-row-span-portrait);

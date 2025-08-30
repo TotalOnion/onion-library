@@ -18,7 +18,7 @@
 	@include grid-layout-container-v3.gridLayoutContainer();
 	@include social-media-share-v3.social-media-share();
 	@include better-reviews-v3.better-reviews();
-	&--subgrid {
+	&.subgrid-layout {
 		grid-row: 1 / -1;
 		grid-column: 1 / -1;
 		grid-template-rows: subgrid;
