@@ -16,7 +16,7 @@
 	{% set layoutClass = 'grid-layout-container' %}
 {% elseif layoutType == 'subgrid' %}
 	{% set layoutStyles = include('components/grid-layout-container-v3.twig', { fields, block }, with_context = false) %}
-	{% set layoutClass = 'grid-layout-container ' ~ blockClassName ~ '--subgrid ' %}
+	{% set layoutClass = 'grid-layout-container ' ~ 'subgrid-layout' %}
 {% endif %}
 
 {% set sectionStyles =  styleEntryPoint ~ gridGapMults ~ layoutStyles %}
@@ -41,8 +41,6 @@
 </style>
 
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{layoutClass}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="post-info-v3" data-post-info-type={{fields.post_info_type}}>
-
-
 	{% for field in postTypeFields %}
 		{% if block %}
 			{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ '-' ~ loop.index }) %}
