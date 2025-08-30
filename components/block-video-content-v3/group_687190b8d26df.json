@@ -150,9 +150,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/video-content-v3"
             }
         ]
     ],
@@ -173,5 +173,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752311923
+    "modified": 1756554563
 }
