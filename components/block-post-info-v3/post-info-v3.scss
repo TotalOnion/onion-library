@@ -4,9 +4,9 @@
 @use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-container-v3/grid-layout-container-v3';
 @use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-element-v3/grid-layout-element-v3';
 @use 'NodeModules/@total_onion/onion-library/components/component-element-positioning-v3/element-positioning-v3';
-@use 'Assets/scss/modules/library-modules/gradient-overlay/gradient-overlay';
-@use 'Assets/scss/modules/library-modules/social-media-share/social-media-share';
-@use 'Assets/scss/modules/library-modules/better-reviews/better-reviews';
+@use 'NodeModules/@total_onion/onion-library/components/component-gradient-overlay-v3/gradient-overlay-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-social-media-share-v3/social-media-share-v3';
+@use 'NodeModules/@total_onion/onion-library/components/component-better-reviews-v3/better-reviews-v3';
 @use 'Assets/scss/blocks/post-info-v3/post-info-v3-extra';
 @use 'Assets/scss/theme/breakpoints';
 
@@ -16,8 +16,13 @@
 	grid-template: 'main' / 1fr;
 	@include content-container-settings-v3.contentContainerSettingsV3();
 	@include grid-layout-container-v3.gridLayoutContainer();
-	@include social-media-share.social-media-share();
-	@include better-reviews.better-reviews();
+	@include social-media-share-v3.social-media-share();
+	@include better-reviews-v3.better-reviews();
+	&--subgrid {
+		grid-row: 1 / -1;
+		grid-column: 1 / -1;
+		grid-template-rows: subgrid;
+	}
 	&__post-cover-link {
 		grid-area: unset;
 		position: absolute;
@@ -42,6 +47,7 @@
 		@include grid-layout-element-v3.gridLayoutElement();
 		width: 100%;
 		position: relative;
+		overflow: hidden;
 	}
 	&__post-video {
 		aspect-ratio: var(
@@ -95,7 +101,7 @@
 	}
 	&__gradient-overlay {
 		height: 100%;
-		@include gradient-overlay.gradientOverlay();
+		@include gradient-overlay-v3.gradientOverlay();
 	}
 	&__post-tags {
 		pointer-events: none;
