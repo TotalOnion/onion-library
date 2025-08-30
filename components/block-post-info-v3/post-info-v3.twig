@@ -5,8 +5,18 @@
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
-{% set gridLayoutContainer = include('components/grid-layout-container-v3.twig') %}
-{% set sectionStyles =  styleEntryPoint ~ gridGapMults ~ gridLayoutContainer %}
+
+{% set layoutType = fields.layout_type|ru|default('grid') %}
+{% set layoutStyles = '' %}
+{% if layoutType == 'flex' %}
+	{% set layoutStyles = include('components/flex-layout-container-v3.twig', { fields, block }, with_context = false) %}
+	{% set layoutClass = 'flex-layout-container' %}
+{% elseif layoutType == 'grid' %}
+	{% set layoutStyles = include('components/grid-layout-container-v3.twig', { fields, block }, with_context = false) %}
+	{% set layoutClass = 'grid-layout-container' %}
+{% endif %}
+
+{% set sectionStyles =  styleEntryPoint ~ gridGapMults ~ layoutStyles %}
 
 {% if fields.post_info_type|ru == 'post-info' %}
 	{% set post = get_post(fields.post) %}

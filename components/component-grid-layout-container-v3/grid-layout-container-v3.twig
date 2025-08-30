@@ -1,4 +1,5 @@
 {% set displayType = '--display-type: grid;' %}
+
 {% set gridGapMults = include('components/grid-gap-mults-v3.twig', {fields: fields.grid_layout}, with_context = false) %}
 
 {# Grid Container Settings #}
@@ -25,6 +26,7 @@
 {% set gridAutoFlowMobile = '--grid-auto-flow-mobile: ' ~ fields.grid_layout.grid_auto_flow_mobile|ru ~ ';' %}
 {% set gridAutoFlow = gridAutoFlowDesktop ~ gridAutoFlowPortrait ~ gridAutoFlowMobile %}
 
+
 {# Grid Auto Columns #}
 {% set gridAutoColumnsDesktop = '--grid-auto-columns-desktop: ' ~ fields.grid_layout.grid_auto_columns_desktop|ru|default('1fr') ~ ';' %}
 {% set gridAutoColumnsPortrait = '--grid-auto-columns-portrait: ' ~ fields.grid_layout.grid_auto_columns_portrait|ru|default('1fr') ~ ';' %}
@@ -40,6 +42,12 @@
 	{% set gridAutoColumnsMobile = '--grid-auto-columns-mobile: ' ~ fields.grid_layout.grid_auto_columns_mobile_custom ~ ';' %}
 {% endif %}
 {% set gridAutoColumns = gridAutoColumnsDesktop ~ gridAutoColumnsPortrait ~ gridAutoColumnsMobile %}
+
+{# Grid Template Columns #}
+{% set gridTemplateColumnsDesktop = '--grid-template-columns-desktop: ' ~ fields.grid_layout.grid_columns_desktop|ru|default('1fr') ~ ';' %}
+{% set gridTemplateColumnsPortrait = '--grid-template-columns-portrait: ' ~ fields.grid_layout.grid_columns_portrait|ru|default('1fr') ~ ';' %}
+{% set gridTemplateColumnsMobile = '--grid-template-columns-mobile: ' ~ fields.grid_layout.grid_columns_mobile|ru|default('1fr') ~ ';' %}
+{% set gridTemplateColumns = gridTemplateColumnsDesktop ~ gridTemplateColumnsPortrait ~ gridTemplateColumnsMobile %}
 
 {# Template Columns Custom #}
 {% if fields.grid_layout.grid_template_columns_custom_desktop is not empty %}
