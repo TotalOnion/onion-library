@@ -1,14 +1,25 @@
-export default function lottiecontentv3Js ( options = {} ) {
-	try {
-		const { block } = options;
-		if (dataset.enablelottieanimations) {
-			import(
-				'Assets/js/modules/library-modules/lottie-animations/lottie-animations.js'
-			).then((module) => {
-				module.default(block);
-			});
-		}
-	} catch ( error ) {
-		console.error( error );
+import lottie from 'lottie-web';
+export default function lottiecontentv3Js(block) {
+	const lottieElement = block.querySelector('.lottie-animations');
+	if (!lottieElement) {
+		return;
 	}
+	const lottieData = lottieElement.dataset;
+	const filePath = lottieData.lottiefile;
+	if (!filePath) {
+		return;
+	}
+	const loop = parseInt(lottieData.loop) ? true : false;
+	const autoplay = parseInt(lottieData.autoplay) ? true : false;
+	lottie.loadAnimation({
+		container: lottieElement,
+		renderer: 'svg',
+		loop: loop,
+		autoplay: autoplay,
+		path: filePath,
+		rendererSettings: {
+			preserveAspectRatio: 'xMidYMid slice',
+			progressiveLoad: true
+		}
+	});
 }
