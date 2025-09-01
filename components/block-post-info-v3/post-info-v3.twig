@@ -14,13 +14,19 @@
 {% elseif layoutType == 'grid' %}
 	{% set layoutStyles = include('components/grid-layout-container-v3.twig', { fields, block }, with_context = false) %}
 	{% set layoutClass = 'grid-layout-container' %}
-{% elseif layoutType == 'subgrid' %}
-	{% set layoutStyles = include('components/grid-layout-container-v3.twig', { fields, block }, with_context = false) %}
-	{% set layoutClass = 'grid-layout-container ' ~ 'subgrid-layout' %}
+{% endif %}
+
+{% if fields.grid_layout.grid_template_rows_custom_desktop == 'subgrid' %}
+	{% set layoutClass = layoutClass ~ ' subgrid-layout-desktop ' %}
+{% endif %}
+{% if fields.grid_layout.grid_template_rows_custom_portrait == 'subgrid' %}
+	{% set layoutClass = layoutClass ~ ' subgrid-layout-portrait ' %}
+{% endif %}
+{% if fields.grid_layout.grid_template_rows_custom_mobile == 'subgrid' %}
+	{% set layoutClass = layoutClass ~ ' subgrid-layout-mobile ' %}
 {% endif %}
 
 {% set sectionStyles =  styleEntryPoint ~ gridGapMults ~ layoutStyles %}
-
 {% if fields.post_info_type|ru == 'post-info' %}
 	{% set post = get_post(fields.post) %}
 {% endif %}
@@ -28,19 +34,20 @@
 	{% set post = get_term(fields.taxonomy) %}
 {% endif %}
 
-{% set postInfoType = fields.post_info_type %}
 {% set postTypeFields = fields.post_fields %}
 {% set layout = fields.layout|ru %}
 {% set imageSizes = imageSizes %}
 
 {{previewEntryPoint}}
+
 <style>
 	.{{blockClassName}}.{{block.id}}{
 		{{sectionStyles}}
 	}
 </style>
 
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{layoutClass}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="post-info-v3" data-post-info-type={{fields.post_info_type}}>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{layoutClass}} {{block.className}} {{loop > 0 and block.className ? block.className ~ '-' ~ loop : ''}} {{classNameEntryPoint}} {{block.className}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="post-info-v3" data-post-info-type={{fields.post_info_type}}>
+
 	{% for field in postTypeFields %}
 		{% if block %}
 			{% set block = block|merge({'anchor' : '','className' : '', 'id': block.id ~ '-' ~ loop.index }) %}
@@ -57,5 +64,4 @@
 			<span class="{{blockClassName}}__post-cover-label">{{post.title}}</span>
 		</a>
 	{% endif %}
-	{{htmlEntryPoint}}
-</section>
+	{{htmlEntryPoint}}</section>

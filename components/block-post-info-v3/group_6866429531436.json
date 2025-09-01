@@ -39,8 +39,7 @@
             "wpml_cf_preferences": 3,
             "choices": {
                 "__grid": "Grid",
-                "__flex": "Flex",
-                "__subgrid": "Subgrid"
+                "__flex": "Flex"
             },
             "default_value": "",
             "return_format": "value",
@@ -2395,5 +2394,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1756572779
+    "modified": 1756718523
 }
