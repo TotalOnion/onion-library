@@ -1,5 +1,6 @@
 @use 'NodeModules/@total_onion/onion-library/components/fields-core-typography-mixins-v3/core-typography-mixins-v3';
 @use 'NodeModules/@total_onion/onion-library/components/fields-core-critical-v3/core-critical-v3';
+@use '../dynamicBlocksPreview.scss';
 @use 'Assets/scss/modules/dynamicBlocksPreview.scss';
 @use 'Assets/scss/theme/font-face';
 @use 'Assets/scss/theme/typography';

@@ -6,17 +6,16 @@ const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 
 // Create the directory path for the target file
-const scssModulePath = path.join(themePath, 'assets/scss/modules');
+const scssModulePath = path.join(
+	'./node_modules/@total_onion/onion-library/public'
+);
 const scssFilePath = path.join(scssModulePath, 'dynamicBlockScss-v3.scss');
 
 // Create directories if they don't exist
 fs.mkdirSync(scssModulePath, {recursive: true});
 
 // Write the initial content to the target file
-fs.writeFileSync(
-	scssFilePath,
-	'// This file is auto-generated. To include assets for the lazyloader, just add your .scss file to Assets/scss/blocks/ and it will be included here.\n'
-);
+fs.writeFileSync(scssFilePath, '// This file is auto-generated.\n');
 
 const dynamicEntryPoints = globSync(
 	`${themePath}/node_modules/@total_onion/onion-library/components/block-*/*-v3.scss`
