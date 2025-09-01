@@ -1,8 +1,7 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
 import wppreview from '@pernod-ricard-global-cms/wordpresspreview';
 import colourPalettes from '@pernod-ricard-global-cms/cblcolourpalettes';
-import ctaStyles from 'Assets/js/modules/library-modules/core-editor-cta-style-select/core-editor-cta-style-select.js';
-import themeNames from 'Assets/js/modules/library-modules/core-editor-theme-select/core-editor-theme-select.js';
+// import ctaStyles from 'Assets/js/modules/library-modules/core-editor-cta-style-select/core-editor-cta-style-select.js';
+// import themeNames from 'Assets/js/modules/library-modules/core-editor-theme-select/core-editor-theme-select.js';
 import jQuery from 'jquery';
 const $ = jQuery;
 
@@ -53,8 +52,8 @@ $(document).ready(function ($) {
 	const themeSelectNames = ['page_theme'];
 	const colourData = globalThis.colourconfig;
 	colourPalettes(colourData);
-	ctaStyles(ctaSelectNames);
-	themeNames(themeSelectNames);
+	// ctaStyles(ctaSelectNames);
+	// themeNames(themeSelectNames);
 	wppreview({lazyloaderFilepath: 'js/blocks/'});
 
 	document.documentElement.insertAdjacentHTML('afterbegin', previewvars[0]);
