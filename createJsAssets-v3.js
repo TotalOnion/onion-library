@@ -3,7 +3,7 @@ const path = require('path');
 const {globSync} = require('glob');
 
 const dynamicEntryPoints = globSync(
-	`./node_modules/@total_onion/onion-library/components/block-*/*.js`
+	`./node_modules/@total_onion/onion-library/components/block-*/*-v3.js`
 ).map((filePath) => {
 	const assetKey = path.basename(filePath, '.js');
 	return assetKey;
@@ -22,10 +22,7 @@ const jsAssetsFilePath = path.join(jsModulePath, 'jsAssets.mjs');
 fs.mkdirSync(jsModulePath, {recursive: true});
 
 // Write the initial content to the target file
-fs.writeFileSync(
-	jsAssetsFilePath,
-	'// This file is auto-generated. To include assets for the lazyloader, just add your .scss file to Assets/scss/blocks/ and it will be included here.\n'
-);
+fs.writeFileSync(jsAssetsFilePath, '// This file is auto-generated.\n');
 
 // Create directories if they don't exist
 const dirPath = path.dirname(jsAssetsFilePath);
