@@ -1,4 +1,4 @@
-import wppreview from '@pernod-ricard-global-cms/wordpresspreview';
+// import wppreview from '@pernod-ricard-global-cms/wordpresspreview';
 import colourPalettes from '@pernod-ricard-global-cms/cblcolourpalettes';
 // import ctaStyles from 'Assets/js/modules/library-modules/core-editor-cta-style-select/core-editor-cta-style-select.js';
 // import themeNames from 'Assets/js/modules/library-modules/core-editor-theme-select/core-editor-theme-select.js';
