@@ -61,138 +61,6 @@
 		}
 	}
 
-	// // h1 {
-	// // 	@include core-mixins-v3.h1();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h1-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // h2 {
-	// // 	@include core-mixins-v3.h2();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h2-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // h3 {
-	// // 	@include core-mixins-v3.h3();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h3-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // h4 {
-	// // 	@include core-mixins-v3.h4();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h4-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // h5 {
-	// // 	@include core-mixins-v3.h5();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h5-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // h6 {
-	// // 	@include core-mixins-v3.h6();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h6-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // .sh1-sizing {
-	// // 	@include core-mixins-v3.sh1();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--sh1-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // .sh2-sizing {
-	// // 	@include core-mixins-v3.sh2();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--h2-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // .sh3-sizing {
-	// // 	@include core-mixins-v3.sh3();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--sh3-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // .sh4-sizing {
-	// // 	@include core-mixins-v3.sh4();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--sh4-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // .sh5-sizing {
-	// // 	@include core-mixins-v3.sh5();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--sh5-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
-	// // .sh6-sizing {
-	// // 	@include core-mixins-v3.sh6();
-
-	// // 	&:has(.font-tertiary) {
-	// // 		line-height: calc(
-	// // 			var(--sh6-line-height) *
-	// // 				var(--global-line-height-multiplier-tertiary)
-	// // 		);
-	// // 	}
-	// // }
-
 	p {
 		margin: 0; //reset default margin
 		@include core-typography-mixins-v3.p();
@@ -617,91 +485,111 @@
 	}
 	.p-sizing {
 		@include core-typography-mixins-v3.p();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.p-size();
+	}
+	.cmpl-text-editor-settings {
+		.p-m-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.p-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.p-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.p-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.p-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.p-size();
+				}
 			}
 		}
 	}
 	.p-s-sizing {
 		@include core-typography-mixins-v3.p-s();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.p-s-size();
+	}
+	.cmpl-text-editor-settings {
+		.p-s-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.p-s-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.p-s-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.p-s-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.p-s-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.p-s-size();
+				}
 			}
 		}
 	}
 	.p-xs-sizing {
 		@include core-typography-mixins-v3.p-xs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.p-xs-size();
+	}
+	.cmpl-text-editor-settings {
+		.p-xs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.p-xs-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.p-xs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.p-xs-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.p-xs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.p-xs-size();
+				}
 			}
 		}
 	}
 	.p-xxs-sizing {
 		@include core-typography-mixins-v3.p-xxs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.p-xxs-size();
+	}
+	.cmpl-text-editor-settings {
+		.p-xxs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.p-xxs-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.p-xxs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.p-xxs-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.p-xxs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.p-xxs-size();
+				}
 			}
 		}
 	}
 	.p-xxxs-sizing {
 		@include core-typography-mixins-v3.p-xxxs();
-		&-mobile {
-			@media ( width <= #{breakpoints.$tabPortrait}) {
-				@include core-typography-mixins-v3.p-xxxs-size();
+	}
+	.cmpl-text-editor-settings {
+		.p-xxs-fs {
+			&-mobile {
+				@media ( width <= #{breakpoints.$tabPortrait}) {
+					@include core-typography-mixins-v3.p-xxxs-size();
+				}
 			}
-		}
-		&-portrait {
-			@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-				@include core-typography-mixins-v3.p-xxxs-size();
+			&-portrait {
+				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
+					@include core-typography-mixins-v3.p-xxxs-size();
+				}
 			}
-		}
-		&-desktop {
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				@include core-typography-mixins-v3.p-xxxs-size();
+			&-desktop {
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					@include core-typography-mixins-v3.p-xxxs-size();
+				}
 			}
 		}
 	}
