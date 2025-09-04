@@ -82,13 +82,13 @@
             "multiple": 0,
             "max": "",
             "allow_custom": 0,
+            "placeholder": "",
             "search_placeholder": "",
             "prepend": "",
             "append": "",
-            "allow_null": 0,
+            "allow_null": 1,
             "ui": 1,
             "ajax": 0,
-            "placeholder": "",
             "min": ""
         },
         {
@@ -1346,5 +1346,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754900778
+    "modified": 1756986200
 }
