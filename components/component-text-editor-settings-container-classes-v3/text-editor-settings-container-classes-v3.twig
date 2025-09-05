@@ -4,5 +4,6 @@
 {% if fields.enable_text_shadow %}
 	{% set textShadowClass = blockClassName ~ "--text-shadow" %}
 {% endif %}
-{% set styleClasses = wysiwygDecorationStyle  ~ ' ' ~ textShadowClass %}
+{% set styleClasses = wysiwygDecorationStyle  ~ ' ' ~ textShadowClass ~ ' ' ~ 'cmpl-text-editor-settings' %}
+
 {{styleClasses}}
