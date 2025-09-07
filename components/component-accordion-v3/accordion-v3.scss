@@ -1,19 +1,19 @@
 // LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+@use '../core-mixins-v3/core-mixins-v3';
+@use '../core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 
 @mixin accordion-v3() {
 	&__accordion-v3 {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: core-functions.fluidSize(var(--title-gap), 'mobile');
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			gap: core-functions.fluidSize(var(--title-gap), 'portrait');
+		gap: core-functions-v3.fluidSize(var(--title-gap), 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			gap: core-functions-v3.fluidSize(var(--title-gap), 'portrait');
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			gap: core-functions.fluidSize(var(--title-gap), 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			gap: core-functions-v3.fluidSize(var(--title-gap), 'desktop');
 		}
 	}
 
@@ -39,14 +39,20 @@
 
 	&__accordion-image-wrapper {
 		grid-area: icon;
-		width: core-functions.fluidSize(var(--image-icon-size), 'mobile');
+		width: core-functions-v3.fluidSize(var(--image-icon-size), 'mobile');
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			width: core-functions.fluidSize(var(--image-icon-size), 'portrait');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			width: core-functions-v3.fluidSize(
+				var(--image-icon-size),
+				'portrait'
+			);
 		}
 
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			width: core-functions.fluidSize(var(--image-icon-size), 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			width: core-functions-v3.fluidSize(
+				var(--image-icon-size),
+				'desktop'
+			);
 		}
 
 		img {
@@ -64,7 +70,7 @@
 			grid-template:
 				'icon question'
 				'... answer' / min-content auto;
-			column-gap: core-functions.fluidSize(20, 'static');
+			column-gap: core-functions-v3.fluidSize(20, 'static');
 		}
 	}
 
@@ -75,20 +81,20 @@
 
 		p {
 			color: var(--text-color);
-			padding-block: core-functions.fluidSize(
+			padding-block: core-functions-v3.fluidSize(
 				var(--text-padding-horizontal),
 				'mobile'
 			);
 
-			@include core-mixins.device(breakpoints.$tabPortrait) {
-				padding-block: core-functions.fluidSize(
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				padding-block: core-functions-v3.fluidSize(
 					var(--text-padding-horizontal),
 					'portrait'
 				);
 			}
 
-			@include core-mixins.device(breakpoints.$tabLandscape) {
-				padding-block: core-functions.fluidSize(
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				padding-block: core-functions-v3.fluidSize(
 					var(--text-padding-horizontal),
 					'desktop'
 				);
@@ -97,19 +103,19 @@
 	}
 
 	&__accordion-answer {
-		font-size: core-functions.fontSize(22, 'static');
+		font-size: core-functions-v3.fontSize(22, 'static');
 		grid-column: 1/-1;
-		padding-bottom: core-functions.fluidSize(20, 'mobile');
-		padding-top: core-functions.fluidSize(20, 'mobile');
+		padding-bottom: core-functions-v3.fluidSize(20, 'mobile');
+		padding-top: core-functions-v3.fluidSize(20, 'mobile');
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			padding-bottom: core-functions.fluidSize(20, 'portrait');
-			padding-top: core-functions.fluidSize(20, 'portrait');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding-bottom: core-functions-v3.fluidSize(20, 'portrait');
+			padding-top: core-functions-v3.fluidSize(20, 'portrait');
 		}
 
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			padding-bottom: core-functions.fluidSize(20, 'desktop');
-			padding-top: core-functions.fluidSize(20, 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding-bottom: core-functions-v3.fluidSize(20, 'desktop');
+			padding-top: core-functions-v3.fluidSize(20, 'desktop');
 		}
 
 		&:last-child {
@@ -123,8 +129,8 @@
 		border-radius: 4px;
 		display: flex;
 		align-items: center;
-		height: core-functions.fluidSize(50, 'static');
-		width: core-functions.fluidSize(50, 'static');
+		height: core-functions-v3.fluidSize(50, 'static');
+		width: core-functions-v3.fluidSize(50, 'static');
 
 		&.active {
 			.standard-content-v3__accordion-animation {
@@ -150,11 +156,11 @@
 	}
 
 	&__accordion-animation {
-		height: core-functions.fluidSize(20, 'static');
+		height: core-functions-v3.fluidSize(20, 'static');
 		margin: auto;
 		position: relative;
 		transition: transform 0.3s ease;
-		width: core-functions.fluidSize(20, 'static');
+		width: core-functions-v3.fluidSize(20, 'static');
 
 		&:before,
 		&:after {

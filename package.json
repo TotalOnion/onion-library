@@ -18,11 +18,15 @@
 	},
 	"homepage": "https://github.com/Chivas-Brothers/cbl-component-library#readme",
 	"dependencies": {
+		"autoprefixer": "^10.4.21",
 		"cpy": "^9.0.1",
+		"esbuild-sass-plugin": "^3.3.1",
 		"fs": "^0.0.1-security",
 		"fs-extra": "^11.1.0",
 		"glob": "^11.0.0",
 		"lottie-web": "^5.13.0",
+		"postcss": "^8.5.6",
+		"postcss-preset-env": "^10.3.1",
 		"prettier": "^2.6.2",
 		"yargs": "^17.4.1"
 	},

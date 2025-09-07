@@ -1,12 +1,4 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/responsive-image/responsive-image';
-@use 'Assets/scss/modules/library-modules/gradient-overlay/gradient-overlay';
-@use 'Assets/scss/blocks/single-column-container-v3/single-column-container-v3-extra';
-
-.single-column-container-v3 {
-	@include responsive-image.responsiveImage();
-	@include gradient-overlay.gradientOverlay();
-}
+// @use 'Assets/scss/blocks/single-column-container-v3/single-column-container-v3-extra';
 .single-column-container-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
@@ -18,5 +10,5 @@
 		z-index: 5;
 		width: 100%;
 	}
-	@include single-column-container-v3-extra.additionalStyles();
+	// @include single-column-container-v3-extra.additionalStyles();
 }

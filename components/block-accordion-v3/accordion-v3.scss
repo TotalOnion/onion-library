@@ -1,8 +1,8 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-content-container-settings-v3/content-container-settings-v3';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/accordion-v3/accordion-v3-extra';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../component-content-container-settings-v3/content-container-settings-v3';
+@use '../../breakpoints';
+// @use 'Assets/scss/blocks/accordion-v3/accordion-v3-extra';
 
 .accordion-v3 {
 	@include content-container-settings-v3.contentContainerSettingsV3();
@@ -193,4 +193,4 @@
 	}
 }
 
-@include accordion-v3-extra.additionalStyles();
+// @include accordion-v3-extra.additionalStyles();

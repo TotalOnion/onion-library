@@ -1,7 +1,7 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-box-shadow-v3/box-shadow-v3';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../component-box-shadow-v3/box-shadow-v3';
+@use '../../breakpoints';
 
 @mixin contentContainerSettingsV3() {
 	&__inner-container {

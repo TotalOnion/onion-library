@@ -1,18 +1,23 @@
 import * as esbuild from "esbuild";
-
-// const coreEntrypoints = 
-
-// const coreEntrypoints = globSync(
-// 	`./components/js/market-specific/*.js`
-// ).reduce((acc, fullPath) => {
-// 	const entry = fullPath.replace(`assets/js/market-specific/`, '');
-// 	console.log(entry.substring(0, entry.length - 3));
-// 	acc[entry.substring(0, entry.length - 3)] = `./${fullPath}`;
-// 	return acc;
-// }, {});
+import { sassPlugin } from "esbuild-sass-plugin";
+import assets from "./public/assetList.mjs";
+import postcss from "postcss";
+import autoprefixer from "autoprefixer";
+import postcssPresetEnv from "postcss-preset-env";
 
 await esbuild.build({
-	entryPoints: ["./components/block-back-to-top-button/back-to-top-button.js","./components/block-divider/divider.js"],
+	plugins: [
+		sassPlugin({
+			async transform(source, resolveDir) {
+				const { css } = await postcss([
+					autoprefixer,
+					postcssPresetEnv({ stage: 0 }),
+				]).process(source);
+				return css;
+			},
+		}),
+	],
+	entryPoints: assets,
 	bundle: false,
 	outdir: "./public/",
 });

@@ -1,5 +1,4 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/theme/breakpoints';
+@use '../../breakpoints';
 @use 'sass:math';
 
 @function fontSize($size-px, $screen: '') {
@@ -8,8 +7,7 @@
 			(
 					($size-px / var(--desktop-design-reference)) *
 						var(--screen-width-static)
-				) *
-				var(--font-size-multiplier)
+				) * var(--font-size-multiplier)
 		);
 	} @else {
 		@return calc(

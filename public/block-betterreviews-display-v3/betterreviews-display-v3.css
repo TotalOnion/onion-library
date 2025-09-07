@@ -1,0 +1,94 @@
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars {
+  --star-count: 5;
+  --star-size: 16px;
+  --better-reviews-star-width: calc( var(--star-count) * var(--star-size) + (var(--star-count) - 1) * 0px );
+  opacity: 0;
+  animation: slide-reveal-right 1s 0.5s ease-out forwards;
+  position: relative;
+  width: calc(5 * 16px + (5 - 1) * 0px);
+  width: var(--better-reviews-star-width);
+  height: 16px;
+  height: var(--star-size);
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-size: 16px auto;
+  mask-size: 16px auto;
+  -webkit-mask-size: var(--star-size) auto;
+  mask-size: var(--star-size) auto;
+  -webkit-mask-position: left 33%;
+  mask-position: left 33%;
+  background: transparent;
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #44271c 0%,
+      #dabb9c 32%,
+      #e5c29d 38%,
+      #ebc79f 45%,
+      #7a4a36 74%,
+      #89563e 81%,
+      #9d6749 92%,
+      #a56d4e 100%);
+  background-clip: content-box;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.86 26'><path d='M27.86,10.12l-7.24,6.46,1.99,9.42-8.68-4.71-8.68,4.54,1.99-9.43L0,9.95l9.77-1.22L13.93,0l4.16,8.73,9.77,1.4Z'/></svg>");
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-size: var(--star-size) auto;
+  mask-size: var(--star-size) auto;
+  -webkit-mask-position: left 33%;
+  mask-position: left 33%;
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_05::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.911);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_10::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.8);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_15::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.702);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_20::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.6);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_25::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.5);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_30::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.4);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_35::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.298);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_40::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.2);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_45::before {
+  padding-right: calc(var(--better-reviews-star-width) * 0.1);
+}
+.betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars.better-reviews__star_50::before {
+  padding-right: 0;
+}
+@keyframes slide-reveal-right {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}

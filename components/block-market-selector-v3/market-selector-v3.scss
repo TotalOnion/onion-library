@@ -1,7 +1,7 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/market-selector-v3/market-selector-v3-extra';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
+// @use 'Assets/scss/blocks/market-selector-v3/market-selector-v3-extra';
 .market-selector-v3 {
 	pointer-events: all;
 	display: grid;
@@ -117,5 +117,5 @@
 	&__icon {
 		display: flex;
 	}
-	@include market-selector-v3-extra.additionalStyles();
+	// @include market-selector-v3-extra.additionalStyles();
 }

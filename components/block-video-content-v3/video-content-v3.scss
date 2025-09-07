@@ -1,11 +1,11 @@
-@use 'NodeModules/@pernod-ricard-global-cms/cblvideocontroller/vc-styles';
-@use 'Assets/scss/blocks/video-content-v3/video-content-v3-extra';
+// @use 'NodeModules/@pernod-ricard-global-cms/cblvideocontroller/vc-styles';
+// @use 'Assets/scss/blocks/video-content-v3/video-content-v3-extra';
 .video-content-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
-	@include vc-styles.basic();
+	// @include vc-styles.basic();
 	&:has(.video-playing) {
 		z-index: 99;
 	}
 }
-@include video-content-v3-extra.additionalStyles();
+// @include video-content-v3-extra.additionalStyles();

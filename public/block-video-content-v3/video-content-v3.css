@@ -1,0 +1,7 @@
+.video-content-v3 {
+  display: grid;
+  grid-template: "main"/1fr;
+}
+.video-content-v3:has(.video-playing) {
+  z-index: 99;
+}

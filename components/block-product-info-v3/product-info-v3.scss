@@ -1,12 +1,12 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-container-v3/grid-layout-container-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-element-v3/grid-layout-element-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-element-positioning-v3/element-positioning-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-content-container-settings-v3/content-container-settings-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-gradient-overlay-v3/gradient-overlay-v3';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/product-info-v3/product-info-v3-extra';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../component-grid-layout-container-v3/grid-layout-container-v3';
+@use '../component-grid-layout-element-v3/grid-layout-element-v3';
+@use '../component-element-positioning-v3/element-positioning-v3';
+@use '../component-content-container-settings-v3/content-container-settings-v3';
+@use '../component-gradient-overlay-v3/gradient-overlay-v3';
+@use '../../breakpoints';
+// @use 'Assets/scss/blocks/product-info-v3/product-info-v3-extra';
 
 .product-info-v3 {
 	display: grid;

@@ -1,8 +1,6 @@
-@use 'Assets/scss/modules/library-modules/nav-menu-slide-in-panel/nav-menu-slide-in-panel';
-@use 'Assets/scss/modules/library-modules/classic-nav-items-center/classic-nav-items-center';
+// @use 'Assets/scss/modules/library-modules/nav-menu-slide-in-panel/nav-menu-slide-in-panel';
 
 .nav-menu-container-v3 {
 	pointer-events: all;
-	@include nav-menu-slide-in-panel.navMenuSlideInPanel();
-	@include classic-nav-items-center.classicNavItemsCenter();
+	// @include nav-menu-slide-in-panel.navMenuSlideInPanel();
 }

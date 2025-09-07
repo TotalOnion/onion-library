@@ -1,6 +1,6 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 
 @mixin contentImageV3() {
 	width: 100%;
@@ -11,18 +11,18 @@
 	rotate: var(--image-rotation);
 	z-index: -1;
 	border-radius: var(--content-image-border-radius);
-	max-width: core-functions.fluidSize(
+	max-width: core-functions-v3.fluidSize(
 		var(--image-max-width-mobile),
 		'mobile'
 	);
-	@include core-mixins.device(breakpoints.$tabPortrait) {
-		max-width: core-functions.fluidSize(
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		max-width: core-functions-v3.fluidSize(
 			var(--image-max-width-portrait),
 			'portrait'
 		);
 	}
-	@include core-mixins.device(breakpoints.$tabLandscape) {
-		max-width: core-functions.fluidSize(
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		max-width: core-functions-v3.fluidSize(
 			var(--image-max-width-desktop),
 			'desktop'
 		);

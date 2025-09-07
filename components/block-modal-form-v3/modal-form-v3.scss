@@ -1,7 +1,7 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/modal-form-v3/modal-form-v3-extra';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
+// @use 'Assets/scss/blocks/modal-form-v3/modal-form-v3-extra';
 .modal-form-v3 {
-	@include modal-form-v3-extra.additionalStyles();
+	// @include modal-form-v3-extra.additionalStyles();
 }

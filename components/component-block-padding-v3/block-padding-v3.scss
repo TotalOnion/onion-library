@@ -1,6 +1,6 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 
 @mixin blockPadding() {
 	.cmpl-block-padding {
@@ -21,7 +21,7 @@
 					var(--padding-inline-multiplier-mobile-left)
 			);
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			padding: calc(
 					var(--global-inline-spacing) *
 						var(--padding-block-multiplier-portrait-top)
@@ -40,7 +40,7 @@
 				);
 		}
 
-		@include core-mixins.device(breakpoints.$tabLandscape) {
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 			padding: calc(
 					var(--global-inline-spacing) *
 						var(--padding-block-multiplier-desktop-top)

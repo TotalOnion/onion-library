@@ -1,13 +1,11 @@
 //Modules
-@use 'Assets/scss/modules/library-modules/animations/animations';
-@use 'Assets/scss/modules/library-modules/block-padding/block-padding';
-@use 'Assets/scss/modules/library-modules/block-settings/block-settings';
-@use 'Assets/scss/modules/library-modules/social-networks/social-networks';
-@use 'Assets/scss/modules/library-modules/core-cta/core-cta';
+@use '../component-animations-v3/animations-v3';
+@use '../component-block-padding-v3/block-padding-v3';
+@use '../component-block-settings-v3/block-settings-v3';
+@use '../fields-core-cta-v3/core-cta-v3';
 @mixin coreCssModulesV3() {
-	@include block-padding.blockPadding();
-	@include social-networks.socialNetworks();
-	@include animations.animations();
-	@include block-settings.blockSettings();
-	@include core-cta.core-cta();
+	@include block-padding-v3.blockPadding();
+	@include animations-v3.animations();
+	@include block-settings-v3.blockSettings();
+	@include core-cta-v3.core-cta();
 }

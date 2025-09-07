@@ -2,20 +2,18 @@ const fs = require('fs');
 const path = require('path');
 const {globSync} = require('glob');
 
-const dynamicEntryPoints = globSync(
-	`./node_modules/@total_onion/onion-library/components/block-*/*-v3.js`
-).map((filePath) => {
-	const assetKey = path.basename(filePath, '.js');
-	return assetKey;
-});
+const dynamicEntryPoints = globSync(`./components/block-*/*-v3.js`).map(
+	(filePath) => {
+		const assetKey = path.basename(filePath, '.js');
+		return assetKey;
+	}
+);
 const assetArray = dynamicEntryPoints.map((entry) => {
 	return {assetKey: entry};
 });
 
 // Create the directory path for the target file
-const jsModulePath = path.join(
-	'./node_modules/@total_onion/onion-library/public'
-);
+const jsModulePath = path.join('./public');
 const jsAssetsFilePath = path.join(jsModulePath, 'jsAssets.mjs');
 
 // Create directories if they don't exist

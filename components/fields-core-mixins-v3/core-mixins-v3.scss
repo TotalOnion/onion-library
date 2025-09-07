@@ -1,5 +1,5 @@
-@use 'Assets/scss/theme/breakpoints';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
+@use '../fields-core-functions-v3/core-functions-v3';
 @use 'sass:math';
 
 @mixin textStyle() {

@@ -1,4 +1,4 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
 
 @mixin animations() {
 	.cmpl-block-animations {

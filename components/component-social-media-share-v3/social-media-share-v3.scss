@@ -1,7 +1,7 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-element-v3/grid-layout-element-v3';
-@use './social-media-share-v3-extra';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../component-grid-layout-element-v3/grid-layout-element-v3';
+@use '../../breakpoints';
+// @use './social-media-share-v3-extra';
 
 @mixin social-media-share() {
 	.social-media-share-popup {
@@ -126,6 +126,6 @@
 			}
 		}
 
-		@include social-media-share-v3-extra.additionalStyles();
+		// @include social-media-share-v3-extra.additionalStyles();
 	}
 }

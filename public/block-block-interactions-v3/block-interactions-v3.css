@@ -1,0 +1,34 @@
+.block-interactions-v3__block-close-button {
+  cursor: pointer;
+  border: medium none currentcolor;
+  border: initial;
+  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+  background: initial;
+}
+.block-interactions-v3__popup-trigger {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: medium none currentcolor;
+  border: initial;
+  background-color: transparent;
+  background-color: initial;
+  display: flex;
+  cursor: pointer;
+}
+.block-interactions-v3 svg {
+  width: calc(20 / var(--design-reference) * var(--screen-width));
+  height: calc(20 / var(--design-reference) * var(--screen-width));
+}
+@media screen and (min-width: 768px) {
+  .block-interactions-v3 svg {
+    width: calc(20 / var(--design-reference) * var(--screen-width));
+    height: calc(20 / var(--design-reference) * var(--screen-width));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .block-interactions-v3 svg {
+    width: calc(20 / var(--design-reference) * var(--screen-width));
+    height: calc(20 / var(--design-reference) * var(--screen-width));
+  }
+}

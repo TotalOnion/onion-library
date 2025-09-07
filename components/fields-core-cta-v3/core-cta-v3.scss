@@ -1,7 +1,6 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../../breakpoints';
 
 @mixin ctaButtonStyles() {
 	[class*='cmpl-cta-style-'] {
@@ -14,9 +13,7 @@
 		align-items: center;
 		text-decoration-line: unset;
 		text-align: center;
-		transition:
-			background-color 0.1s,
-			border-colour 0.1s;
+		transition: background-color 0.1s, border-colour 0.1s;
 
 		&:hover,
 		&:active,
@@ -71,7 +68,7 @@
 
 			font-size: clamp(
 				var(--cta-style-font-size-min-mobile, 10px),
-				core-functions.fontSize(
+				core-functions-v3.fontSize(
 					var(--cta-style-#{$i}-font-size-mobile),
 					'mobile'
 				),
@@ -79,11 +76,11 @@
 			);
 
 			min-width: var(--cta-style-#{$i}-min-width-mobile);
-			padding: core-functions.fluidSize(
+			padding: core-functions-v3.fluidSize(
 					var(--cta-style-#{$i}-padding-block-mobile),
 					'mobile'
 				)
-				core-functions.fluidSize(
+				core-functions-v3.fluidSize(
 					var(--cta-style-#{$i}-padding-inline-mobile),
 					'mobile'
 				);
@@ -120,23 +117,23 @@
 				--cta-style-#{$i}-shadow-hover-position,
 				0
 			);
-			@include core-mixins.boxShadow();
+			@include core-mixins-v3.boxShadow();
 
-			@include core-mixins.device(breakpoints.$tabPortrait) {
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				font-size: clamp(
 					var(--cta-style-font-size-min-mobile, 10px),
-					core-functions.fontSize(
+					core-functions-v3.fontSize(
 						var(--cta-style-#{$i}-font-size-portrait),
 						'portrait'
 					),
 					var(--cta-style-font-size-max-mobile, 180px)
 				);
 				min-width: var(--cta-style-#{$i}-min-width-portrait);
-				padding: core-functions.fluidSize(
+				padding: core-functions-v3.fluidSize(
 						var(--cta-style-#{$i}-padding-block-portrait),
 						'portrait'
 					)
-					core-functions.fluidSize(
+					core-functions-v3.fluidSize(
 						var(--cta-style-#{$i}-padding-inline-portrait),
 						'portrait'
 					);
@@ -150,41 +147,41 @@
 				}
 			}
 
-			@include core-mixins.device(breakpoints.$tabLandscape) {
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 				font-size: clamp(
 					var(--cta-style-font-size-min-desktop, 10px),
-					core-functions.fontSize(
+					core-functions-v3.fontSize(
 						var(--cta-style-#{$i}-font-size-landscape),
 						'landscape'
 					),
 					var(--cta-style-font-size-max-desktop, 180px)
 				);
 				min-width: var(--cta-style-#{$i}-min-width-landscape);
-				padding: core-functions.fluidSize(
+				padding: core-functions-v3.fluidSize(
 						var(--cta-style-#{$i}-padding-block-landscape),
 						'landscape'
 					)
-					core-functions.fluidSize(
+					core-functions-v3.fluidSize(
 						var(--cta-style-#{$i}-padding-inline-landscape),
 						'landscape'
 					);
 			}
 
-			@include core-mixins.device(breakpoints.$desktop) {
+			@include core-mixins-v3.device(breakpoints.$desktop) {
 				font-size: clamp(
 					var(--cta-style-font-size-min-desktop, 10px),
-					core-functions.fontSize(
+					core-functions-v3.fontSize(
 						var(--cta-style-#{$i}-font-size-desktop),
 						'desktop'
 					),
 					var(--cta-style-font-size-max-desktop, 180px)
 				);
 				min-width: var(--cta-style-#{$i}-min-width-desktop);
-				padding: core-functions.fluidSize(
+				padding: core-functions-v3.fluidSize(
 						var(--cta-style-#{$i}-padding-block-desktop),
 						'desktop'
 					)
-					core-functions.fluidSize(
+					core-functions-v3.fluidSize(
 						var(--cta-style-#{$i}-padding-inline-desktop),
 						'desktop'
 					);
@@ -217,7 +214,7 @@
 						);
 					}
 
-					@include core-mixins.device(breakpoints.$tabPortrait) {
+					@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 						background-color: var(
 							--cta-style-#{$i}-hover-background-colour
 						);

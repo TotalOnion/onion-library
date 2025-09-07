@@ -1,7 +1,7 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/form-selection-v3/form-selection-v3-extra';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
+// @use 'Assets/scss/blocks/form-selection-v3/form-selection-v3-extra';
 
 .form-selection-v3 {
 	pointer-events: all;
@@ -36,5 +36,5 @@
 		right: core-functions-v3.fluidSize(20);
 	}
 
-	@include form-selection-v3-extra.additionalStyles();
+	// @include form-selection-v3-extra.additionalStyles();
 }

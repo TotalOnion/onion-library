@@ -1,8 +1,8 @@
-@use 'NodeModules/@total_onion/onion-library/components/component-gradient-overlay-v3/gradient-overlay-v3';
-@use 'Assets/scss/blocks/gradient-layer-v3/gradient-layer-v3-extra';
+@use '../component-gradient-overlay-v3/gradient-overlay-v3';
+// @use 'Assets/scss/blocks/gradient-layer-v3/gradient-layer-v3-extra';
 .gradient-layer-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
 	@include gradient-overlay-v3.gradientOverlay();
-	@include gradient-layer-v3-extra.additionalStyles();
+	// @include gradient-layer-v3-extra.additionalStyles();
 }

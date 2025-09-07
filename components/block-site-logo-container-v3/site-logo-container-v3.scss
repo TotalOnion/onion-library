@@ -1,7 +1,7 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/site-logo-container-v3/site-logo-container-v3-extra';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
+// @use 'Assets/scss/blocks/site-logo-container-v3/site-logo-container-v3-extra';
 .site-logo-container-v3 {
 	&__site-logo {
 		margin: auto;
@@ -26,5 +26,5 @@
 	&__site-logo-link {
 		display: flex;
 	}
-	@include site-logo-container-v3-extra.additionalStyles();
+	// @include site-logo-container-v3-extra.additionalStyles();
 }
