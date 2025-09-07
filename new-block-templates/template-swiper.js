@@ -1,7 +1,6 @@
 module.exports = {
-	templatejs : function() {
-		return `import {fadeIn} from '@pernod-ricard-global-cms/jsanimations';
-import {loadCss, getSwiperAssetsV2} from '@pernod-ricard-global-cms/jsutils';
+	templatejs: function () {
+		return `import {loadCss, getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils';
 import('swiper/css/bundle');
 
 export default function carouselmultilayoutJs(options = {}) {
@@ -97,7 +96,6 @@ export default function carouselmultilayoutJs(options = {}) {
 					}
 				}
 			);
-			fadeIn(block);
 		});
 	} catch (error) {
 		console.error(error);
@@ -122,6 +120,6 @@ export default function carouselmultilayoutJs(options = {}) {
 	<div class="swiper-button-prev"></div>
 	<div class="swiper-button-next"></div>
 </div>
-`
+`;
 	}
-}
+};

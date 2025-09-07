@@ -1,5 +1,4 @@
-// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
-import {getSwiperAssetsV2} from '@pernod-ricard-global-cms/jsutils';
+import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils';
 import extraJs from 'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js';
 import('swiper/css/bundle');
 
@@ -97,7 +96,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 								totalClass +
 								'"></span>'
 							);
-						}
+					  }
 					: false;
 			const customNumber =
 				dataAttributes.paginationstyle === 'customnumber'
@@ -110,7 +109,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 								(index + 1) +
 								'</span></div>'
 							);
-						}
+					  }
 					: false;
 			// console.log(paginationStyle);
 			const carouselmultilayoutv3Swiper = new Swiper(
@@ -159,7 +158,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					autoplay: autoplayCarousel
 						? {
 								delay
-							}
+						  }
 						: '',
 					watchOverflow: true,
 					centeredSlides: centerActiveSlideMobile,

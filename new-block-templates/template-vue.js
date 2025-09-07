@@ -1,6 +1,6 @@
 module.exports = {
-    templatevuefile: function (newBlockName) {
-        return `
+	templatevuefile: function (newBlockName) {
+		return `
 <template>
 	<div>
 	</div>
@@ -30,11 +30,11 @@ export default {
 </script>
 
 `;
-    },
-    templatejs: function (newBlockName) {
-        return `
-import {fadeIn} from '@pernod-ricard-global-cms/jsanimations';
-import {loadCss} from '@pernod-ricard-global-cms/jsutils';
+	},
+	templatejs: function (newBlockName) {
+		return `
+import {loadCss} from '@total_onion/onion-utils/onion-utils';
+';
 import {createApp} from 'vue';
 import ${newBlockName} from 'Assets/vue/blocks/${newBlockName}.vue'; 
 
@@ -44,16 +44,15 @@ export default function ${newBlockName.replaceAll('-', '')}Js ( options = {} ) {
 		loadCss(block.dataset.assetkey, options).then(() => {
 			const mountElement = block.children[0];
 			createApp(${newBlockName}, {...mountElement.dataset}).mount(mountElement);
-			fadeIn(block);
 		});
 	} catch ( error ) {
 		console.error( error );
 	}
-}`
+}`;
 	},
 	templatetwig: function (newBlockName) {
 		return `
 	<div id="${newBlockName}"></div>
-`
+`;
 	}
-}
+};
