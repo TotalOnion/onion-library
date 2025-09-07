@@ -6,8 +6,12 @@
 				{{item.raw_html}}
 			{% endif %}
 			{% if item.acf_fc_layout == 'form_selection' %}
-			{% set data = {'title' : item.title, 'form' : item.form.ID} %}
+				{% set data = {'title' : item.title, 'form' : item.form.ID} %}
 				{{ include('blocks/modal-form-v3.twig', { fields: data, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
+			{% endif %}
+			{% if item.acf_fc_layout == 'market_selector_v3' %}
+				{% set data = {'heading_text' : item.heading_text, 'logo' : item.logo, 'selector_type': 'inline'} %}
+				{{ include('blocks/market-selector-v3.twig', { fields: data, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
 			{% endif %}
 		</div>
 	</div>
