@@ -1,6 +1,6 @@
 {
 	"name": "@total_onion/onion-library",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Component library",
 	"main": "index.js",
 	"scripts": {
@@ -31,8 +31,8 @@
 		"yargs": "^17.4.1"
 	},
 	"devDependencies": {
-		"@total_onion/onion-utils/onion-utils": "^4.0.3",
 		"@total_onion/onion-modalcontroller": "^1.0.5",
+		"@total_onion/onion-utils": "^1.0.10",
 		"@total_onion/onion-videocontroller": "^1.0.2",
 		"dotenv": "^16.0.3",
 		"esbuild": "0.25.5",
