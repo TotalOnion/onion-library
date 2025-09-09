@@ -29,6 +29,24 @@ html :where([style*='border-width'][data-assetkey]) {
 	border-style: initial;
 }
 
+.iris-square {
+  display: none;
+}
+.iris-slider {
+  display: none;
+}
+.iris-picker {
+  max-height: 15px;
+  transform: translate(0px, -210%);
+}
+
+.block-editor-block-list__block {
+  background-color: var(--palette-default-1);
+  .edit-post-visual-editor__post-title-wrapper & {
+    background-color: transparent;
+  }
+}
+
 .acf-block-component.acf-block-body .acf-block-preview {
 	.swiper {
 		&::before {
