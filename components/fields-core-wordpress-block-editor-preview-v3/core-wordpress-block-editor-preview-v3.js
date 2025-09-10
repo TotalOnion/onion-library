@@ -186,7 +186,6 @@ function colourSetup(colourData) {
 		let acfPaletteFields = [];
 
 		if (typeof acf != 'undefined') {
-			import('./colour-picker-styles.scss');
 			// This runs only once when the colour pickers initialize
 			acf.add_filter('color_picker_args', function (args, field) {
 				acfPaletteFields.push(field);
