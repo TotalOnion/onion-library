@@ -117,6 +117,10 @@
 	}
 
 	.swiper-pagination-bullet {
+		background-color: transparent;
+	}
+
+	.swiper-pagination-bullet-active {
 		background-color: var(--swiper-pagination-colour);
 	}
 
