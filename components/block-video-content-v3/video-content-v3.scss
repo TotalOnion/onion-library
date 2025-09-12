@@ -1,3 +1,6 @@
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 // @use 'NodeModules/@pernod-ricard-global-cms/cblvideocontroller/vc-styles';
 // @use 'Assets/scss/blocks/video-content-v3/video-content-v3-extra';
 .video-content-v3 {
@@ -16,7 +19,7 @@
 		transition: opacity 0.5s, background-color 1s;
 		z-index: -1;
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			object-fit: cover;
 			grid-area: main;
 		}
@@ -50,8 +53,8 @@
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
-			width: core-functions.fluidSize(84, 'static');
-			height: core-functions.fluidSize(84, 'static');
+			width: core-functions-v3.fluidSize(84, 'static');
+			height: core-functions-v3.fluidSize(84, 'static');
 
 			--spinner-bg-colour: #ffffff54;
 			--spinner-colour: white;
@@ -60,17 +63,17 @@
 				content: '';
 				top: 0;
 				left: 0;
-				width: core-functions.fluidSize(84, 'static');
-				height: core-functions.fluidSize(84, 'static');
+				width: core-functions-v3.fluidSize(84, 'static');
+				height: core-functions-v3.fluidSize(84, 'static');
 				position: absolute;
 				border-radius: 50%;
-				border-right: solid core-functions.fluidSize(5, 'static')
+				border-right: solid core-functions-v3.fluidSize(5, 'static')
 					var(--spinner-bg-colour);
-				border-left: solid core-functions.fluidSize(5, 'static')
+				border-left: solid core-functions-v3.fluidSize(5, 'static')
 					var(--spinner-bg-colour);
-				border-top: solid core-functions.fluidSize(5, 'static')
+				border-top: solid core-functions-v3.fluidSize(5, 'static')
 					var(--spinner-bg-colour);
-				border-bottom: solid core-functions.fluidSize(5, 'static')
+				border-bottom: solid core-functions-v3.fluidSize(5, 'static')
 					var(--spinner-colour);
 				animation: rotate 1s linear infinite;
 			}
@@ -80,7 +83,7 @@
 	&__video-play-button {
 		grid-area: main;
 		place-self: center;
-		@include playButtonDefault();
+		// @include playButtonDefault();
 		transform: scale(1);
 		transition: transform 0.3s 0.5s;
 
