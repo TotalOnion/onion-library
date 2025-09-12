@@ -1,588 +1,589 @@
 {
-    "key": "group_689098dd3a131",
-    "title": "Fields: Product Info v3",
-    "fields": [
-        {
-            "key": "field_689098dd4ff5c",
-            "label": "Product logo",
-            "name": "product_logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium",
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "upload_folder": ""
-        },
-        {
-            "key": "field_689098dd50338",
-            "label": "Product Name",
-            "name": "product_name",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd5072d",
-            "label": "Country",
-            "name": "product_country",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd50b0f",
-            "label": "Bazaarvoice ID",
-            "name": "product_bazaarvoice",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd516c9",
-            "label": "Age statement",
-            "name": "product_age_statement",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd51abb",
-            "label": "Price",
-            "name": "product_price",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd51ebd",
-            "label": "ABV",
-            "name": "product_abv",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689e80a3fb542",
-            "label": "Volume",
-            "name": "product_volume",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd52322",
-            "label": "Whisky type",
-            "name": "product_whisky_type",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd52671",
-            "label": "Ingredients",
-            "name": "ingredients",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": "",
-            "acfe_textarea_code": 0
-        },
-        {
-            "key": "field_6899cb3c882b9",
-            "label": "Cask type Label",
-            "name": "product_cask_type_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd52a4d",
-            "label": "Cask type",
-            "name": "product_cask_type",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6899cb8c882ba",
-            "label": "Nose Label",
-            "name": "product_nose_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd52e3e",
-            "label": "Nose",
-            "name": "product_nose",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6899cbab3620f",
-            "label": "Taste Label",
-            "name": "product_taste_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd53233",
-            "label": "Taste",
-            "name": "product_taste",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6899cbcd36210",
-            "label": "Finish Label",
-            "name": "product_finish_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd53649",
-            "label": "Finish",
-            "name": "product_finish",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68c05157f7a4b",
-            "label": "Palate Label",
-            "name": "product_palate_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68c05162f7a4c",
-            "label": "Palate",
-            "name": "product_palate",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68c051cbb5d71",
-            "label": "Pair With Label",
-            "name": "product_pair_with_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68c051d8b5d72",
-            "label": "Pair With",
-            "name": "product_pair_with",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689098dd539f4",
-            "label": "History",
-            "name": "product_history",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "user_roles": [
-                "all"
-            ],
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": "",
-            "acfe_textarea_code": 0
-        },
-        {
-            "key": "field_689098dd545b8",
-            "label": "Related Products",
-            "name": "related_products",
-            "aria-label": "",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "post_type": [
-                "product"
-            ],
-            "post_status": "",
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
-            "return_format": "object",
-            "acfe_add_post": 0,
-            "acfe_edit_post": 0,
-            "acfe_bidirectional": {
-                "acfe_bidirectional_enabled": "0"
-            },
-            "min": "",
-            "max": "",
-            "elements": "",
-            "bidirectional": 0,
-            "bidirectional_target": []
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "product"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
-    "show_in_rest": 0,
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfml_field_group_mode": "localization",
-    "acfe_form": 0,
-    "acfe_display_title": "",
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1757435464
+	"key": "group_689098dd3a131",
+	"title": "Fields: Product Info v3",
+	"fields": [
+		{
+			"key": "field_689098dd4ff5c",
+			"label": "Product logo",
+			"name": "product_logo",
+			"aria-label": "",
+			"type": "image",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"uploader": "",
+			"return_format": "id",
+			"library": "all",
+			"upload_folder": "",
+			"acfe_thumbnail": 0,
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": "",
+			"allow_in_bindings": 1,
+			"preview_size": "medium"
+		},
+		{
+			"key": "field_689098dd50338",
+			"label": "Product Name",
+			"name": "product_name",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68c2f23bf7e10",
+			"label": "Product Description",
+			"name": "product_description",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"acfe_textarea_code": 0,
+			"maxlength": "",
+			"allow_in_bindings": 0,
+			"rows": "",
+			"placeholder": "",
+			"new_lines": "br"
+		},
+		{
+			"key": "field_689098dd5072d",
+			"label": "Country",
+			"name": "product_country",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd50b0f",
+			"label": "Bazaarvoice ID",
+			"name": "product_bazaarvoice",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd516c9",
+			"label": "Age statement",
+			"name": "product_age_statement",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd51abb",
+			"label": "Price",
+			"name": "product_price",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd51ebd",
+			"label": "ABV",
+			"name": "product_abv",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689e80a3fb542",
+			"label": "Volume",
+			"name": "product_volume",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd52322",
+			"label": "Whisky type",
+			"name": "product_whisky_type",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd52671",
+			"label": "Ingredients",
+			"name": "ingredients",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"acfe_textarea_code": 0,
+			"maxlength": "",
+			"allow_in_bindings": 1,
+			"rows": "",
+			"placeholder": "",
+			"new_lines": ""
+		},
+		{
+			"key": "field_6899cb3c882b9",
+			"label": "Cask type Label",
+			"name": "product_cask_type_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd52a4d",
+			"label": "Cask type",
+			"name": "product_cask_type",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6899cb8c882ba",
+			"label": "Nose Label",
+			"name": "product_nose_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd52e3e",
+			"label": "Nose",
+			"name": "product_nose",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68c05157f7a4b",
+			"label": "Palate Label",
+			"name": "product_palate_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68c05162f7a4c",
+			"label": "Palate",
+			"name": "product_palate",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6899cbab3620f",
+			"label": "Taste Label",
+			"name": "product_taste_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd53233",
+			"label": "Taste",
+			"name": "product_taste",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6899cbcd36210",
+			"label": "Finish Label",
+			"name": "product_finish_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd53649",
+			"label": "Finish",
+			"name": "product_finish",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68c051cbb5d71",
+			"label": "Pair With Label",
+			"name": "product_pair_with_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68c051d8b5d72",
+			"label": "Pair With",
+			"name": "product_pair_with",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689098dd539f4",
+			"label": "History",
+			"name": "product_history",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"user_roles": ["all"],
+			"default_value": "",
+			"maxlength": "",
+			"rows": "",
+			"placeholder": "",
+			"new_lines": "",
+			"acfe_textarea_code": 0
+		},
+		{
+			"key": "field_689098dd545b8",
+			"label": "Related Products",
+			"name": "related_products",
+			"aria-label": "",
+			"type": "relationship",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"post_type": ["product"],
+			"post_status": "",
+			"taxonomy": "",
+			"filters": ["search"],
+			"return_format": "object",
+			"acfe_add_post": 0,
+			"acfe_edit_post": 0,
+			"acfe_bidirectional": {
+				"acfe_bidirectional_enabled": "0"
+			},
+			"min": "",
+			"max": "",
+			"elements": "",
+			"bidirectional": 0,
+			"bidirectional_target": []
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "product"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+	"show_in_rest": 0,
+	"acfe_autosync": ["json"],
+	"acfml_field_group_mode": "localization",
+	"acfe_form": 0,
+	"acfe_display_title": "",
+	"acfe_meta": "",
+	"acfe_note": "",
+	"modified": 1757608506
 }

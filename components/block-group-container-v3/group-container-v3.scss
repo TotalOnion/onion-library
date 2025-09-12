@@ -3,7 +3,6 @@
 @use '../component-grid-layout-element-v3/grid-layout-element-v3';
 @use '../component-grid-layout-container-v3/grid-layout-container-v3';
 @use '../component-flex-layout-container-v3/flex-layout-container-v3';
-// @use 'Assets/scss/blocks/group-container-v3/group-container-v3-extra';
 @use '../../breakpoints';
 
 .group-container-v3 {
@@ -41,4 +40,3 @@
 		text-shadow: 1px 1px 1px blue;
 	}
 }
-// @include group-container-v3-extra.additionalStyles();
