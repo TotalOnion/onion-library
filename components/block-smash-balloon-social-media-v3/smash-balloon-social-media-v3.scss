@@ -1,4 +1,7 @@
-// @use 'Assets/scss/blocks/smash-balloon-social-media-v3/smash-balloon-social-media-v3-extra';
+// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+// @use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/smash-balloon-social-media-v3/smash-balloon-social-media-v3-extra';
 .smash-balloon-social-media-v3 {
 	position: relative;
 	max-width: 100vw;
@@ -6,5 +9,19 @@
 		width: 100%;
 		position: relative;
 	}
-	// @include smash-balloon-social-media-v3-extra.additionalStyles();
+	&[data-marquee='true'] {
+		.sbi-owl-stage {
+			transition: none !important;
+			animation: sbiScroll 30s linear infinite;
+		}
+	}
+	@keyframes sbiScroll {
+		0% {
+			transform: translate3d(0, 0, 0);
+		}
+		100% {
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+	@include smash-balloon-social-media-v3-extra.additionalStyles();
 }
