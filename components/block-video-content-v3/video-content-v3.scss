@@ -4,6 +4,114 @@
 	display: grid;
 	grid-template: 'main' / 1fr;
 	// @include vc-styles.basic();
+	&__video-container {
+		display: grid;
+		grid-template: 'video' / 1fr;
+		grid-area: main;
+		opacity: 0;
+		pointer-events: none;
+		height: 100%;
+		width: 100%;
+		background-color: black;
+		transition: opacity 0.5s, background-color 1s;
+		z-index: -1;
+
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			object-fit: cover;
+			grid-area: main;
+		}
+
+		&.video-playing {
+			pointer-events: all;
+			opacity: 1;
+			z-index: 10;
+		}
+
+		&.lock-video-aspect-to-image {
+			iframe,
+			video {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&.set-video-to-cover {
+			iframe,
+			video {
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		.loading-wrapper {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: core-functions.fluidSize(84, 'static');
+			height: core-functions.fluidSize(84, 'static');
+
+			--spinner-bg-colour: #ffffff54;
+			--spinner-colour: white;
+
+			&:before {
+				content: '';
+				top: 0;
+				left: 0;
+				width: core-functions.fluidSize(84, 'static');
+				height: core-functions.fluidSize(84, 'static');
+				position: absolute;
+				border-radius: 50%;
+				border-right: solid core-functions.fluidSize(5, 'static')
+					var(--spinner-bg-colour);
+				border-left: solid core-functions.fluidSize(5, 'static')
+					var(--spinner-bg-colour);
+				border-top: solid core-functions.fluidSize(5, 'static')
+					var(--spinner-bg-colour);
+				border-bottom: solid core-functions.fluidSize(5, 'static')
+					var(--spinner-colour);
+				animation: rotate 1s linear infinite;
+			}
+		}
+	}
+
+	&__video-play-button {
+		grid-area: main;
+		place-self: center;
+		@include playButtonDefault();
+		transform: scale(1);
+		transition: transform 0.3s 0.5s;
+
+		&.video-playing {
+			transform: scale(0);
+			transition: transform 0.5s;
+			opacity: 0;
+			pointer-events: none;
+			max-height: 0px;
+		}
+	}
+
+	&__video-inner-container {
+		grid-area: video;
+		display: flex;
+		width: 100%;
+		position: relative;
+
+		iframe {
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__video-player {
+		height: auto;
+		object-fit: contain;
+		width: 100%;
+	}
 	&:has(.video-playing) {
 		z-index: 99;
 	}
