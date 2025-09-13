@@ -120,7 +120,7 @@
 				{% endfor %}
 			</div>
 		</div>
-		{% set positionVars = include('components/element-positioning.twig', { fields, block, blockClassName, is_preview}, with_context = false) %}
+		{% set positionVars = include('components/element-positioning-v3.twig', { fields, block, blockClassName, is_preview}, with_context = false) %}
 
 		{% if fields.carousel_pagination %}
 			<div class="swiper-pagination" style="{{positionVars}}"></div>
