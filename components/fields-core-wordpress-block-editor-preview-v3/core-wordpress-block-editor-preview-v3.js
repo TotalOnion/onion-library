@@ -43,7 +43,7 @@ $(document).ready(function ($) {
 	const colourData = globalThis.colourconfig;
 	colourSetup(colourData);
 	// coreEditorThemeSelect(themeSelectNames);
-	// wordpressPreviewJs({lazyloaderFilepath: 'js/blocks/'});
+	wordpressPreviewJs({lazyloaderFilepath: 'js/blocks/'});
 
 	document.documentElement.insertAdjacentHTML('afterbegin', previewvars[0]);
 	document.documentElement.insertAdjacentHTML(
