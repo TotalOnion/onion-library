@@ -1,8 +1,5 @@
 /* eslint-disable no-restricted-syntax */
 import lazyloader from '@total_onion/onion-loader/onion-loader';
-import(
-	'../fields-core-wordpress-block-editor-preview-v3/core-wordpress-block-editor-preview-v3.scss'
-);
 
 import jQuery from 'jquery';
 const $ = jQuery;
@@ -42,11 +39,11 @@ $(document).ready(function ($) {
 		// return;
 	}
 
-	const themeSelectNames = ['page_theme'];
+	// const themeSelectNames = ['page_theme'];
 	const colourData = globalThis.colourconfig;
 	colourSetup(colourData);
-	coreEditorThemeSelect(themeSelectNames);
-	wordpressPreviewJs({lazyloaderFilepath: 'js/blocks/'});
+	// coreEditorThemeSelect(themeSelectNames);
+	// wordpressPreviewJs({lazyloaderFilepath: 'js/blocks/'});
 
 	document.documentElement.insertAdjacentHTML('afterbegin', previewvars[0]);
 	document.documentElement.insertAdjacentHTML(
@@ -60,55 +57,55 @@ $(document).ready(function ($) {
 	document.documentElement.insertAdjacentHTML('afterbegin', corethemes[0]);
 	document.documentElement.insertAdjacentHTML('afterbegin', corecta[0]);
 
-	setTimeout(() => {
-		const previewToggle = document.querySelector(
-			'.editor-preview-dropdown__toggle'
-		);
-		previewToggle.addEventListener('click', () => {
-			setTimeout(() => {
-				const resizeButtons = document.querySelectorAll(
-					'.components-menu-item__button'
-				);
-				resizeButtons.forEach((button) => {
-					button.addEventListener('click', () => {
-						setTimeout(() => {
-							let frame = document.querySelector(
-								'.edit-post-visual-editor iframe'
-							);
-							frame.contentWindow.document.documentElement.insertAdjacentHTML(
-								'afterbegin',
-								coretypography[0]
-							);
-							frame.contentWindow.document.documentElement.insertAdjacentHTML(
-								'afterbegin',
-								previewvars[0]
-							);
-							frame.contentWindow.document.documentElement.insertAdjacentHTML(
-								'afterbegin',
-								corefontmodifiers[0]
-							);
-							frame.contentWindow.document.documentElement.insertAdjacentHTML(
-								'afterbegin',
-								corecta[0]
-							);
-							frame.contentWindow.document.documentElement.insertAdjacentHTML(
-								'afterbegin',
-								corethemes[0]
-							);
-							let currentTheme =
-								document.documentElement.getAttribute(
-									'data-currentcolourpalette'
-								);
-							frame.contentWindow.document.documentElement.setAttribute(
-								'data-currentcolourpalette',
-								currentTheme
-							);
-						}, 1000);
-					});
-				});
-			}, 1000);
-		});
-	}, 2000);
+	// setTimeout(() => {
+	// 	const previewToggle = document.querySelector(
+	// 		'.editor-preview-dropdown__toggle'
+	// 	);
+	// 	previewToggle.addEventListener('click', () => {
+	// 		setTimeout(() => {
+	// 			const resizeButtons = document.querySelectorAll(
+	// 				'.components-menu-item__button'
+	// 			);
+	// 			resizeButtons.forEach((button) => {
+	// 				button.addEventListener('click', () => {
+	// 					setTimeout(() => {
+	// 						let frame = document.querySelector(
+	// 							'.edit-post-visual-editor iframe'
+	// 						);
+	// 						frame.contentWindow.document.documentElement.insertAdjacentHTML(
+	// 							'afterbegin',
+	// 							coretypography[0]
+	// 						);
+	// 						frame.contentWindow.document.documentElement.insertAdjacentHTML(
+	// 							'afterbegin',
+	// 							previewvars[0]
+	// 						);
+	// 						frame.contentWindow.document.documentElement.insertAdjacentHTML(
+	// 							'afterbegin',
+	// 							corefontmodifiers[0]
+	// 						);
+	// 						frame.contentWindow.document.documentElement.insertAdjacentHTML(
+	// 							'afterbegin',
+	// 							corecta[0]
+	// 						);
+	// 						frame.contentWindow.document.documentElement.insertAdjacentHTML(
+	// 							'afterbegin',
+	// 							corethemes[0]
+	// 						);
+	// 						let currentTheme =
+	// 							document.documentElement.getAttribute(
+	// 								'data-currentcolourpalette'
+	// 							);
+	// 						frame.contentWindow.document.documentElement.setAttribute(
+	// 							'data-currentcolourpalette',
+	// 							currentTheme
+	// 						);
+	// 					}, 1000);
+	// 				});
+	// 			});
+	// 		}, 1000);
+	// 	});
+	// }, 2000);
 });
 
 function wordpressPreviewJs(
