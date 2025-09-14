@@ -4,8 +4,7 @@ import extraJs from 'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-la
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
 		const {block} = options;
-		const totalSlides = block.querySelector('.swiper-slide');
-		console.log('🚀 ~ carouselmultilayoutv3Js ~ totalSlides:', totalSlides);
+		const totalSlides = block.querySelector('.swiper-slide') || 1;
 		Promise.all([getSwiperAssetsV2()]).then((values) => {
 			const {
 				Swiper,
@@ -112,7 +111,6 @@ export default function carouselmultilayoutv3Js(options = {}) {
 							);
 					  }
 					: false;
-			// console.log(paginationStyle);
 			const carouselmultilayoutv3Swiper = new Swiper(
 				block.querySelector('.swiper'),
 				{
