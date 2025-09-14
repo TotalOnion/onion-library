@@ -2,18 +2,15 @@ const getComponentsList = () => {
 	const path = require('path');
 	const glob = require('glob');
 	const fs = require('fs');
-	const libraryPath =
-		'./node_modules/@total_onion/onion-library';
+	const libraryPath = './node_modules/@total_onion/onion-library';
 
 	let finalList = [];
 
-	printMemoryUsage('Before checking components list');
+	// printMemoryUsage('Before checking components list');
 
 	if (fs.existsSync('./project-components-list.json')) {
-		// Get core components
 		const componentsList = glob.sync(`${libraryPath}/components/*`);
 
-		// Push
 		const listJson = fs.readFileSync('./project-components-list.json');
 		const componentsListObject = JSON.parse(listJson);
 
@@ -40,7 +37,7 @@ const getComponentsList = () => {
 			});
 	}
 
-	printMemoryUsage('After checking components list');
+	// printMemoryUsage('After checking components list');
 
 	return finalList;
 };
@@ -48,8 +45,9 @@ const getComponentsList = () => {
 const updateAllComponents = () => {
 	const {exec} = require('child_process');
 	const componentsList = getComponentsList();
+	console.log('updating all Onions');
 
-	printMemoryUsage('Before updating components');
+	// printMemoryUsage('Before updating components');
 
 	if (
 		componentsList.includes('admin-core-generic') ||
@@ -72,22 +70,25 @@ const updateAllComponents = () => {
 		}
 
 		const component = componentsList[currentIndex++];
-		exec(`yarn update-onion-component ${component}`, (error, stdout, stderr) => {
-			if (error) {
-			  console.error(`Error: ${error.message}`);
-			}
-			
-			if (stderr) {
-			  console.error(`stderr: ${stderr}`);
-			}
-	
-			if (stdout) {
-			  console.log(`stdout: ${stdout}`);
-			}
+		exec(
+			`yarn update-onion-template ${component}`,
+			(error, stdout, stderr) => {
+				if (error) {
+					console.error(`Error: ${error.message}`);
+				}
 
-			// Recursively update the next component
-			updateNextComponent();
-		});
+				if (stderr) {
+					console.error(`stderr: ${stderr}`);
+				}
+
+				if (stdout) {
+					console.log(`stdout: ${stdout}`);
+				}
+
+				// Recursively update the next component
+				updateNextComponent();
+			}
+		);
 	};
 
 	// Start the initial batch of updates
@@ -99,7 +100,7 @@ const updateAllComponents = () => {
 		updateNextComponent();
 	}
 
-	printMemoryUsage('After updating components');
+	// printMemoryUsage('After updating components');
 };
 
 const printMemoryUsage = (label) => {
