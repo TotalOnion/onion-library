@@ -1,6 +1,5 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
 import extraJs from 'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js';
-import('swiper/css/bundle');
 
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
