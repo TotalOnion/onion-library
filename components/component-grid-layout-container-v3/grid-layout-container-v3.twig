@@ -68,6 +68,10 @@
 {% set gridAutoRows = gridAutoRowsDesktop ~ gridAutoRowsPortrait ~ gridAutoRowsMobile %}
 
 {# Grid Template Rows Custom #}
+{% set gridTemplateRowsCustomDesktop = ' --grid-template-rows-custom-desktop:; ' %}
+{% set gridTemplateRowsCustomPortrait = '--grid-template-rows-custom-portrait:; ' %}
+{% set gridTemplateRowsCustomMobile = '--grid-template-rows-custom-mobile:; ' %}
+
 {% if fields.grid_layout.grid_template_rows_custom_desktop is not empty %}
 	{% set gridTemplateRowsCustomDesktop = '--grid-template-rows-custom-desktop: ' ~ fields.grid_layout.grid_template_rows_custom_desktop ~ ';' %}
 {% endif %}
