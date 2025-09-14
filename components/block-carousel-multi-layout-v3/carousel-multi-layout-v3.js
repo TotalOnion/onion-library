@@ -4,6 +4,8 @@ import extraJs from 'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-la
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
 		const {block} = options;
+		const totalSlides = block.querySelector('.swiper-slide');
+		console.log('🚀 ~ carouselmultilayoutv3Js ~ totalSlides:', totalSlides);
 		Promise.all([getSwiperAssetsV2()]).then((values) => {
 			const {
 				Swiper,
@@ -127,7 +129,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					],
 					slidesPerView: slidesMobile,
 					spaceBetween: spaceBetweenSlidesMobile,
-					loop: loopSlidesMobile,
+					loop: totalSlides > 1 ? loopSlidesMobile : false,
 					preloadImages: true,
 					watchSlidesVisibility: true,
 					effect: transitionStyle,
@@ -179,7 +181,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 
 							slidesOffsetBefore: slidesOffsetTabletBefore,
 							slidesOffsetAfter: slidesOffsetTabletAfter,
-							loop: loopSlidesPortrait
+							loop: totalSlides > 1 ? loopSlidesPortrait : false
 						},
 						1024: {
 							slidesPerView: slidesDesktop,
@@ -189,7 +191,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 								centerInsufficientSlidesDesktop,
 							slidesOffsetBefore: slidesOffsetDesktopBefore,
 							slidesOffsetAfter: slidesOffsetDesktopAfter,
-							loop: loopSlides
+							loop: totalSlides > 1 ? loopSlides : false
 						}
 					},
 					navigation: {
