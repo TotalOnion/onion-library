@@ -9,12 +9,13 @@
 		width: 100%;
 		position: relative;
 	}
-	&[data-marquee='true'] {
+	&[data-marquee] {
 		.sbi-owl-stage {
 			transition: none !important;
 			animation: sbiScroll 30s linear infinite;
 		}
 	}
+
 	@keyframes sbiScroll {
 		0% {
 			transform: translate3d(0, 0, 0);
