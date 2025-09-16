@@ -1,6 +1,3 @@
-import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.css";
-
 export default function modalformv3Js ( options = {} ) {
 	try {
 		const { block } = options;
@@ -44,10 +41,6 @@ export default function modalformv3Js ( options = {} ) {
 			});
 		}
 
-				
-		flatpickr(".flatpickr-input", {
-			dateFormat: "Y-m-d",
-		});
 
 		const submit = block.querySelector(
 			'.cdb-submit'
