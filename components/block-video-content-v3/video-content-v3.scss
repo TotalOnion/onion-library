@@ -1,8 +1,6 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-// @use 'NodeModules/@pernod-ricard-global-cms/cblvideocontroller/vc-styles';
-// @use 'Assets/scss/blocks/video-content-v3/video-content-v3-extra';
 .video-content-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
@@ -119,4 +117,3 @@
 		z-index: 99;
 	}
 }
-// @include video-content-v3-extra.additionalStyles();
