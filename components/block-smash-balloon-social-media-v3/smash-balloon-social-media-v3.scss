@@ -8,6 +8,7 @@
 	&__instagram {
 		width: 100%;
 		position: relative;
+		pointer-events: all;
 	}
 	&[data-marquee] {
 		.sbi-owl-stage {
