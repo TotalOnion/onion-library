@@ -34,9 +34,150 @@
 		margin: 0;
 	}
 
-	/* Make images easier to work with */
-	img {
-		display: block;
+	/* Box sizing rules */
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	//***** TYPOGRAPHY *****\\
+	body {
+		// @include core-typography-mixins-v3.fontSecondary();
+	}
+
+	// h1,
+	// h2,
+	// h3,
+	// h4,
+	// h5,
+	// h6 {
+	// 	margin: 0; //reset default margin
+	// 	font-weight: unset; //reset default font weight
+	// 	margin-top: unset;
+	// 	@include core-typography-mixins-v3.fontPrimary();
+	// }
+	.override-element-styles {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-size: 0;
+		}
+	}
+
+	.standard-content-box-wysiwyg-editor {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin-bottom: var(--heading-block-spacing);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		p {
+			margin-bottom: var(--paragraph-block-spacing);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	p {
+		margin: 0; //reset default margin
+		// @include core-typography-mixins-v3.p();
+	}
+
+	a {
+		text-decoration-skip-ink: auto;
+		color: var(--link-colour);
+		text-decoration: var(--link-decoration-style);
+		text-decoration-color: var(--link-decoration-colour);
+
+		strong,
+		b {
+			font-weight: var(--weight-bold);
+		}
+
+		&:hover {
+			cursor: pointer;
+			color: var(--link-colour-hover);
+			text-decoration: var(--link-decoration-style-hover);
+			text-decoration-color: var(--link-decoration-colour-hover);
+		}
+	}
+
+	button {
+		&:focus {
+			// outline: none;
+			// appearance: none;
+		}
+	}
+
+	blockquote {
+		margin: 0; //reset default margin
+		quotes: '“' '”' '‘' '’';
+		font-weight: bold;
+
+		&::before {
+			content: open-quote;
+		}
+
+		&::after {
+			content: close-quote;
+		}
+	}
+
+	figure,
+	figcaption,
+	dl,
+	dd {
+		margin: 0;
+	}
+
+	q {
+		&::before {
+			content: open-quote;
+		}
+
+		&::after {
+			content: close-quote;
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+	ul {
+		list-style-type: disc;
+	}
+	li {
+		// @include core-typography-mixins-v3.p();
+	}
+	ol {
+		padding: 0; //reset default padding
+		margin: 0; //reset default margin
+		// font-family: var(--secondary-font-family);
+		margin-bottom: var(--paragraph-block-spacing);
+		list-style-position: inside;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		li {
+			margin-bottom: var(--list-item-block-spacing);
+			line-height: var(--list-item-line-height);
+			letter-spacing: var(--list-item-letter-spacing);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	html {
@@ -68,7 +209,6 @@
 		height: auto;
 		min-height: 100vh;
 		position: relative;
-		@include core-typography-mixins-v3.fontSecondary();
 		background: var(--body-background-colour);
 		--default-text-colour-mobile: var(--theme-primary-text-colour);
 		color: var(--default-text-colour-mobile);
@@ -141,20 +281,6 @@
 	.grecaptcha-badge {
 		z-index: 50;
 		bottom: 0 !important;
-	}
-
-	.evidon-consent-button,
-	.evidon-prefdiag-overlay,
-	.evidon-banner {
-		color: var(--black);
-		img {
-			width: auto;
-		}
-
-		a {
-			text-decoration: underline;
-			font-size: unset;
-		}
 	}
 
 	/* Remove all animations and transitions for people that prefer not to see them */
