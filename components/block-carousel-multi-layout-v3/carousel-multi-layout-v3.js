@@ -4,7 +4,7 @@ import extraJs from 'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-la
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
 		const {block} = options;
-		const totalSlides = block.querySelector('.swiper-slide') || 1;
+		const totalSlides = block.querySelectorAll('.swiper-slide').length || 1;
 		Promise.all([getSwiperAssetsV2()]).then((values) => {
 			const {
 				Swiper,
@@ -46,6 +46,9 @@ export default function carouselmultilayoutv3Js(options = {}) {
 				Number(dataAttributes.loopslidesportrait) === 1;
 			const loopSlidesMobile =
 				Number(dataAttributes.loopslidesmobile) === 1;
+
+			console.log(totalSlides > 1 ? loopSlides : false);
+
 			const spaceBetweenSlidesDesktop = Number(
 				dataAttributes.desktopspacebetweenslides
 			);
