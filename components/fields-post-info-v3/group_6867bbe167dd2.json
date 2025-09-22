@@ -550,13 +550,23 @@
                 "class": "",
                 "id": ""
             },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
             "wpml_cf_preferences": 3,
             "message": "",
             "default_value": 0,
-            "style": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui_on_text": "",
             "ui_off_text": "",
-            "ui": 1
+            "ui": 1,
+            "style": ""
         },
         {
             "key": "field_6867bbe179edd",
@@ -601,13 +611,13 @@
             "acfe_validate": "",
             "allow_null": 0,
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui": 1,
             "ajax": 0,
             "placeholder": "",
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         },
         {
             "key": "field_6867bbe17a2c6",
@@ -664,13 +674,13 @@
             "acfe_validate": "",
             "allow_null": 0,
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui": 1,
             "ajax": 0,
             "placeholder": "",
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         },
         {
             "key": "field_6867bbe17aa97",
@@ -713,7 +723,9 @@
             "acfe_settings": "",
             "acfe_validate": "",
             "instruction_placement": "",
-            "acfe_permissions": ""
+            "acfe_permissions": [
+                "administrator"
+            ]
         },
         {
             "key": "field_6867bbe17ae7f",
@@ -749,7 +761,9 @@
             "max_size": "",
             "mime_types": "",
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "preview_size": "medium"
         },
         {
@@ -788,13 +802,13 @@
             "acfe_validate": "",
             "allow_null": 0,
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         },
         {
             "key": "field_6867bbe17b64e",
@@ -831,13 +845,13 @@
             "acfe_validate": "",
             "allow_null": 0,
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         },
         {
             "key": "field_6867bbe17ba37",
@@ -874,13 +888,13 @@
             "acfe_validate": "",
             "allow_null": 0,
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         },
         {
             "key": "field_6867bbe17be1e",
@@ -941,7 +955,9 @@
             "acfe_settings": "",
             "acfe_validate": "",
             "instruction_placement": "",
-            "acfe_permissions": ""
+            "acfe_permissions": [
+                "administrator"
+            ]
         },
         {
             "key": "field_6867bbe17c5f6",
@@ -976,7 +992,9 @@
             "acfe_settings": "",
             "acfe_validate": "",
             "instruction_placement": "",
-            "acfe_permissions": ""
+            "acfe_permissions": [
+                "administrator"
+            ]
         },
         {
             "key": "field_6867bbe17c9d6",
@@ -1011,15 +1029,15 @@
             "acfe_validate": "",
             "allow_null": 0,
             "instruction_placement": "",
-            "acfe_permissions": "",
+            "acfe_permissions": [
+                "administrator"
+            ],
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "min": "",
-            "create_options": 0,
-            "save_options": 0
+            "min": ""
         }
     ],
     "location": [
@@ -1084,5 +1102,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1758189789
+    "modified": 1758482755
 }
