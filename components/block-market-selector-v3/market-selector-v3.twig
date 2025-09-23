@@ -20,7 +20,7 @@
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-loadjs="false" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
 	<div class="{{blockClassName}}__modal-header-container">
-		<h5 class="{{blockClassName}}__modal-heading">{{fields.heading_text}}</h5>
+		<span class="{{blockClassName}}__modal-heading">{{fields.heading_text}}</span>
 	</div>
 	<div class="{{blockClassName}}__modal-markets-container">
 		{% for language in languages %}
