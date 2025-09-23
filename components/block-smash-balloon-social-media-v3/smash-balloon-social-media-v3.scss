@@ -9,6 +9,9 @@
 		width: 100%;
 		position: relative;
 		pointer-events: all;
+        .sbi-owl-stage {
+			min-width: core-functions.fluidSize(190, 'static')
+		}
 	}
 	&[data-marquee] {
 		.sbi-owl-stage {
