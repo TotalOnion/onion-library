@@ -1,14 +1,5 @@
-@use '../fields-core-mixins-v3/core-mixins-v3';
-@use '../fields-core-functions-v3/core-functions-v3';
-@use '../../breakpoints';
-@use '../component-content-container-settings-v3/content-container-settings-v3';
-// @use 'Assets/scss/blocks/social-networks-v3/social-networks-v3-extra';
-.social-networks-v3 {
-	@include content-container-settings-v3.contentContainerSettingsV3();
-	pointer-events: all;
-	display: flex;
-	flex-direction: column;
-	gap: core-functions-v3.fluidSize(10);
+@use '../component-social-networks-v3/social-networks-v3';
 
-	// @include social-networks-v3-extra.additionalStyles();
+.social-networks-v3 {
+	@include social-networks-v3.socialNetworksV3();
 }
