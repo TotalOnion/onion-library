@@ -19,6 +19,6 @@
 			{{ include('components/wysiwyg-editor-v3.twig', { fields, block, blockClassName}, with_context = false, ignore_missing = true) }}	
 		{% endif %}
 
-		{{ include('components/social-networks.twig', {fields, block, blockClassName, is_preview, market_settings}, with_context = false, ignore_missing = true) }}
+		{{ include('components/social-networks-v3.twig', {fields, block, blockClassName, is_preview, market_settings, options}, with_context = false, ignore_missing = true) }}
 	{{htmlEntryPoint}}
 </section>
