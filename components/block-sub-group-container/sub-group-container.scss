@@ -1,0 +1,27 @@
+// LIBRARY FILE - Do not modify/override here as your changes will be lost when the package is updated.
+@use 'Assets/scss/modules/library-modules/grid-layout-element/grid-layout-element';
+@use 'Assets/scss/modules/library-modules/grid-layout-container/grid-layout-container';
+@use 'Assets/scss/modules/library-modules/responsive-image/responsive-image';
+// @use 'Assets/scss/modules/library-modules/animations/animations';
+@use 'Assets/scss/blocks/sub-group-container/sub-group-container-extra';
+@use 'Assets/scss/modules/library-modules/cover-link/cover-link';
+.sub-group-container {
+	@include responsive-image.responsiveImage();
+	// @include animations.animations();
+	@include cover-link.coverLink();
+}
+.sub-group-container {
+	display: grid;
+	grid-template: 'main' / 1fr;
+	place-items: center;
+	&__grid-container {
+		grid-area: main;
+		place-self: stretch;
+		@include grid-layout-container.gridLayoutContainer();
+	}
+	&__block-container {
+		z-index: 5;
+		@include grid-layout-element.gridLayoutElement();
+	}
+	@include sub-group-container-extra.additionalStyles();
+}

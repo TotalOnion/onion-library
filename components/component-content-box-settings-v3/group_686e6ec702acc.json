@@ -447,10 +447,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -480,10 +477,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -513,10 +507,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -576,10 +567,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -609,10 +597,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -642,10 +627,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -675,10 +657,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -800,6 +779,66 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_686e6ec715e00",
+            "label": "Content box padding portrait top",
+            "name": "content_box_padding_portrait_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec7161e1",
+            "label": "Content box padding portrait right",
+            "name": "content_box_padding_portrait_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_686e6ec71562f",
             "label": "Content items vertical alignment portrait",
             "name": "content_items_vertical_alignment_portrait",
@@ -837,93 +876,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_686e6ec715a16",
-            "label": "Content box padding portrait:",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec714a75",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_686e6ec715e00",
-            "label": "Content box padding portrait top",
-            "name": "content_box_padding_portrait_top",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec714a75",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec7161e1",
-            "label": "Content box padding portrait right",
-            "name": "content_box_padding_portrait_right",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec714a75",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_686e6ec7165cc",
             "label": "Content box padding portrait bottom",
             "name": "content_box_padding_portrait_bottom",
@@ -946,7 +898,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -976,7 +928,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -984,8 +936,8 @@
             "append": ""
         },
         {
-            "key": "field_686e6ec716d9e",
-            "label": "Content box (container) margin portrait:",
+            "key": "field_686e6ec715a16",
+            "label": "Content box padding portrait:",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -1033,7 +985,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -1063,7 +1015,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -1093,7 +1045,7 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "0.5",
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -1123,7 +1075,209 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "default_value": "0.5",
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec716d9e",
+            "label": "Content box (container) margin portrait:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec71a073",
+            "label": "Content box padding mobile top",
+            "name": "content_box_padding_mobile_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71a44d",
+            "label": "Content box padding mobile right",
+            "name": "content_box_padding_mobile_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71a838",
+            "label": "Content box padding mobile bottom",
+            "name": "content_box_padding_mobile_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71ac1d",
+            "label": "Content box padding mobile left",
+            "name": "content_box_padding_mobile_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71b3ee",
+            "label": "Content container margin mobile top",
+            "name": "content_container_margin_mobile_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
             "min": "",
             "max": 4,
             "step": "0.125",
@@ -1154,6 +1308,41 @@
             "selected": 0
         },
         {
+            "key": "field_686e6ec71b7d2",
+            "label": "Content container margin mobile right",
+            "name": "content_container_margin_mobile_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_686e6ec71850b",
             "label": "Enable mobile specific content box layout",
             "name": "enable_mobile_content_box_layout",
@@ -1174,6 +1363,41 @@
             "ui_off_text": "",
             "ui": 1,
             "style": ""
+        },
+        {
+            "key": "field_686e6ec71bbc1",
+            "label": "Content container margin mobile bottom",
+            "name": "content_container_margin_mobile_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_686e6ec7188f3",
@@ -1213,6 +1437,41 @@
             "other_choice": 0,
             "layout": "horizontal",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec71bfa5",
+            "label": "Content container margin mobile left",
+            "name": "content_container_margin_mobile_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_686e6ec718cdc",
@@ -1393,158 +1652,6 @@
             "esc_html": 0
         },
         {
-            "key": "field_686e6ec71a073",
-            "label": "Content box padding mobile top",
-            "name": "content_box_padding_mobile_top",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec71a44d",
-            "label": "Content box padding mobile right",
-            "name": "content_box_padding_mobile_right",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec71a838",
-            "label": "Content box padding mobile bottom",
-            "name": "content_box_padding_mobile_bottom",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec71ac1d",
-            "label": "Content box padding mobile left",
-            "name": "content_box_padding_mobile_left",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_686e6ec71b008",
             "label": "Content box (container) margin mobile:",
             "name": "",
@@ -1578,158 +1685,6 @@
             "message": "",
             "new_lines": "wpautop",
             "esc_html": 0
-        },
-        {
-            "key": "field_686e6ec71b3ee",
-            "label": "Content container margin mobile top",
-            "name": "content_container_margin_mobile_top",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec71b7d2",
-            "label": "Content container margin mobile right",
-            "name": "content_container_margin_mobile_right",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec71bbc1",
-            "label": "Content container margin mobile bottom",
-            "name": "content_container_margin_mobile_bottom",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_686e6ec71bfa5",
-            "label": "Content container margin mobile left",
-            "name": "content_container_margin_mobile_left",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_686e6ec71003c",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_686e6ec71850b",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
-            "default_value": "0.5",
-            "min": "",
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
         },
         {
             "key": "field_686e6ec71c390",
@@ -2029,5 +1984,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752067796
+    "modified": 1759158443
 }

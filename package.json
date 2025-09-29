@@ -1,46 +1,46 @@
 {
-    "name": "@total_onion/onion-library",
-    "version": "1.1.40",
-    "description": "Component library",
-    "main": "index.js",
-    "scripts": {
-        "build": "esbuild",
-        "test": "jest"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/TotalOnion/onion-library.git"
-    },
-    "author": "Ciaran",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/TotalOnion/onion-library/issues"
-    },
-    "homepage": "https://github.com/TotalOnion/onion-library#readme",
-    "dependencies": {
-        "@total_onion/onion-loader": "^1.0.10",
-        "@total_onion/onion-modalcontroller": "^1.0.5",
-        "@total_onion/onion-utils": "^1.0.10",
-        "@total_onion/onion-videocontroller": "^1.0.2",
-        "autoprefixer": "^10.4.21",
-        "compressing": "^2.0.0",
-        "cpy": "^9.0.1",
-        "esbuild-sass-plugin": "^3.3.1",
-        "flatpickr": "^4.6.13",
-        "fs": "^0.0.1-security",
-        "fs-extra": "^11.1.0",
-        "glob": "^11.0.0",
-        "jquery": "^3.7.1",
-        "lottie-web": "^5.13.0",
-        "postcss": "^8.5.6",
-        "postcss-preset-env": "^10.3.1",
-        "prettier": "^2.6.2",
-        "swiper": "^11.2.10",
-        "yargs": "^17.4.1"
-    },
-    "devDependencies": {
-        "dotenv": "^16.0.3",
-        "esbuild": "0.25.5",
-        "gsap": "^3.13.0"
-    }
+	"name": "@total_onion/onion-library",
+	"version": "2.0.2",
+	"description": "Component library",
+	"main": "index.js",
+	"scripts": {
+		"build": "esbuild",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TotalOnion/onion-library.git"
+	},
+	"author": "Ciaran",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/TotalOnion/onion-library/issues"
+	},
+	"homepage": "https://github.com/TotalOnion/onion-library#readme",
+	"dependencies": {
+		"@total_onion/onion-loader": "^1.0.10",
+		"@total_onion/onion-modalcontroller": "^1.0.5",
+		"@total_onion/onion-utils": "^1.0.10",
+		"@total_onion/onion-videocontroller": "^1.0.2",
+		"autoprefixer": "^10.4.21",
+		"compressing": "^2.0.0",
+		"cpy": "^9.0.1",
+		"esbuild-sass-plugin": "^3.3.1",
+		"flatpickr": "^4.6.13",
+		"fs": "^0.0.1-security",
+		"fs-extra": "^11.1.0",
+		"glob": "^11.0.0",
+		"jquery": "^3.7.1",
+		"lottie-web": "^5.13.0",
+		"postcss": "^8.5.6",
+		"postcss-preset-env": "^10.3.1",
+		"prettier": "^2.6.2",
+		"swiper": "^11.2.10",
+		"yargs": "^17.4.1"
+	},
+	"devDependencies": {
+		"dotenv": "^16.0.3",
+		"esbuild": "0.25.5",
+		"gsap": "^3.13.0"
+	}
 }

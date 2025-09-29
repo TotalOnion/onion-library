@@ -1,0 +1,44 @@
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../component-grid-layout-element-v3/grid-layout-element-v3';
+@use '../component-grid-layout-container-v3/grid-layout-container-v3';
+@use '../component-flex-layout-container-v3/flex-layout-container-v3';
+@use '../../breakpoints';
+
+@mixin coreGroupContainerStylesV3() {
+	.core-group-container {
+		display: grid;
+		grid-template: 'main' / 1fr;
+		place-items: center;
+		&__grid-container {
+			grid-area: main;
+			place-self: stretch;
+			&.flex-layout-container {
+				@include flex-layout-container-v3.flexLayoutContainer();
+			}
+			&.grid-layout-container {
+				@include grid-layout-container-v3.gridLayoutContainer();
+			}
+		}
+		&__block-container {
+			pointer-events: none;
+			position: relative;
+			&.grid-layout-container {
+				@include grid-layout-element-v3.gridLayoutElement();
+			}
+			&:has(.video-content-v3__video-container.video-playing.video-playing--high-z-index) {
+				z-index: 50;
+			}
+		}
+		&__block-number {
+			z-index: 99;
+			position: absolute;
+			font-size: 40px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-shadow: 1px 1px 1px blue;
+		}
+	}
+}

@@ -2,7 +2,7 @@
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
-{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set sectionStyles =  styleEntryPoint %}
 {{previewEntryPoint}}
@@ -39,7 +39,12 @@
 						{% if item.modal_popup_trigger_text %}
 							<span class="{{blockClassName}}__popup-trigger-text">{{ item.modal_popup_trigger_text }}</span>
 						{% endif %}
-						<span class="{{blockClassName}}__popup-trigger-icon"><img src="{{ get_image(options.theme_cta_icons[item.trigger_icon_type|ru]).src }}"></span>
+						<span class="{{blockClassName}}__popup-trigger-icon">
+						{# <img src="{{ get_image(options.theme_cta_icons[item.trigger_icon_type|ru]).src }}"> #}
+						<img src="{{ options.cta_icons[item.trigger_icon_type|ru].src }}">
+						
+						
+						</span>
 					</button>
 				{% else %}
 					<button class="cmpl-cta-style-{{item.cta_style}} cmpl-cta-animation-style-{{enableCtaAnimation ? ctaAnimationStyle : ''}}" data-modalpopuptrigger="{{ item.modal_popup_trigger_id }}">

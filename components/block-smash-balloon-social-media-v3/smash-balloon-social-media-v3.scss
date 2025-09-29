@@ -1,6 +1,9 @@
 // @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
 // @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
 // @use 'Assets/scss/theme/breakpoints';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 @use 'Assets/scss/blocks/smash-balloon-social-media-v3/smash-balloon-social-media-v3-extra';
 .smash-balloon-social-media-v3 {
 	position: relative;
