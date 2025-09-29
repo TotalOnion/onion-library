@@ -100,7 +100,10 @@ if (fs.existsSync(`${srcPathJs}/block-${blockName}/${blockName}.js`)) {
 					regEx,
 					`${newBlockName.toLowerCase().replaceAll(/( |-)/g, '')}`
 				)
-				.replaceAll(`blocks/${blockName}`, `blocks/${newBlockName}`);
+				.replaceAll(
+					`blocks/${blockName}/${blockName}-extra`,
+					`blocks/${newBlockName}/${newBlockName}-extra`
+				);
 			fs.writeFile(
 				`${jsdir}/${newBlockName}.js`,
 				replaced,
@@ -155,6 +158,35 @@ axios.post(parentURL, data, headers).then(function (response) {
 	fs.writeFileSync(
 		`${themePath}/views/blocks/${newBlockName}.twig`,
 		response.data.html
+	);
+	fs.readFile(
+		`${themePath}/views/blocks/${newBlockName}.twig`,
+		'utf-8',
+		(err, contents) => {
+			if (err) throw err;
+			const regEx = RegExp(
+				String.raw`(${blockName.replaceAll(/( |-)/g, '')})`,
+				'gi'
+			);
+
+			const replaced = contents
+				.replaceAll(
+					regEx,
+					`${newBlockName.toLowerCase().replaceAll(/( |-)/g, '')}`
+				)
+				.replaceAll(`group-container-v3`, `${newBlockName}`);
+			fs.writeFile(
+				`${themePath}/views/blocks/${newBlockName}.twig`,
+				replaced,
+				'utf-8',
+				function (err) {
+					if (err) throw err;
+					console.log(
+						`👑👑\x1b[32m Successfully duplicated the js file! 👑👑`
+					);
+				}
+			);
+		}
 	);
 });
 
