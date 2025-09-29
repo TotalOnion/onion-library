@@ -17,18 +17,18 @@
   cursor: pointer;
 }
 .block-interactions-v3 svg {
-  width: calc(20 / var(--design-reference) * var(--screen-width));
-  height: calc(20 / var(--design-reference) * var(--screen-width));
+  width: calc(30 / var(--design-reference) * var(--screen-width));
+  height: calc(30 / var(--design-reference) * var(--screen-width));
 }
 @media screen and (min-width: 768px) {
   .block-interactions-v3 svg {
-    width: calc(20 / var(--design-reference) * var(--screen-width));
-    height: calc(20 / var(--design-reference) * var(--screen-width));
+    width: calc(30 / var(--design-reference) * var(--screen-width));
+    height: calc(30 / var(--design-reference) * var(--screen-width));
   }
 }
 @media screen and (min-width: 1024px) {
   .block-interactions-v3 svg {
-    width: calc(20 / var(--design-reference) * var(--screen-width));
-    height: calc(20 / var(--design-reference) * var(--screen-width));
+    width: calc(30 / var(--design-reference) * var(--screen-width));
+    height: calc(30 / var(--design-reference) * var(--screen-width));
   }
 }

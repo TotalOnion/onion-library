@@ -1,7 +1,6 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-// @use 'Assets/scss/blocks/betterreviews-display-v3/betterreviews-display-v3-extra';
 
 .betterreviews-display-v3 {
 	&.loaded {
@@ -81,8 +80,6 @@
 			}
 		}
 	}
-
-	// @include betterreviews-display-v3-extra.additionalStyles();
 }
 
 @keyframes slide-reveal-right {

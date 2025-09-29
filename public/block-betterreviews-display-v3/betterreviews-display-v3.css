@@ -1,9 +1,11 @@
+.betterreviews-display-v3.loaded .better-reviews__criteria-stars {
+  animation: slide-reveal-right 1s 2s ease-out forwards;
+}
 .betterreviews-display-v3 .better-reviews__average .better-reviews__criteria-stars {
   --star-count: 5;
   --star-size: 16px;
   --better-reviews-star-width: calc( var(--star-count) * var(--star-size) + (var(--star-count) - 1) * 0px );
   opacity: 0;
-  animation: slide-reveal-right 1s 0.5s ease-out forwards;
   position: relative;
   width: calc(5 * 16px + (5 - 1) * 0px);
   width: var(--better-reviews-star-width);

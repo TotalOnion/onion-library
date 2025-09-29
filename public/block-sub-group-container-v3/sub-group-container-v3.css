@@ -77,6 +77,26 @@
     scale: 1;
   }
 }
+@keyframes slide-reveal-right {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+@keyframes slide-reveal-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
 .sub-group-container-v3 .cmpl-block-animations.loaded {
   animation: var(--animation-name) var(--animation-duration) var(--animation-delay) var(--animation-easing) var(--animation-repeat) var(--animation-fill-mode) var(--animation-direction);
 }

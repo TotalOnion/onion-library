@@ -1,7 +1,7 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-// @use 'Assets/scss/blocks/block-interactions-v3/block-interactions-v3-extra';
+
 .block-interactions-v3 {
 	&__block-close-button {
 		cursor: pointer;
@@ -27,5 +27,4 @@
 			height: core-functions-v3.fluidSize(30, 'desktop');
 		}
 	}
-	// @include block-interactions-v3-extra.additionalStyles();
 }

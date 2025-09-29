@@ -7,7 +7,6 @@
 @use '../component-gradient-overlay-v3/gradient-overlay-v3';
 @use '../component-social-media-share-v3/social-media-share-v3';
 @use '../component-better-reviews-v3/better-reviews-v3';
-// @use 'Assets/scss/blocks/post-info-v3/post-info-v3-extra';
 @use '../../breakpoints';
 
 .post-info-v3 {
@@ -190,4 +189,3 @@
 		@include grid-layout-element-v3.gridLayoutElement();
 	}
 }
-// @include post-info-v3-extra.additionalStyles();

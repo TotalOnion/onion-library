@@ -1,10 +1,7 @@
-// @use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-// @use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-// @use 'Assets/scss/theme/breakpoints';
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-@use 'Assets/scss/blocks/smash-balloon-social-media-v3/smash-balloon-social-media-v3-extra';
+// @use 'Assets/scss/blocks/smash-balloon-social-media-v3/smash-balloon-social-media-v3-extra';
 .smash-balloon-social-media-v3 {
 	position: relative;
 	max-width: 100vw;
@@ -12,7 +9,7 @@
 		width: 100%;
 		position: relative;
 		pointer-events: all;
-        .sbi-owl-stage {
+		.sbi-owl-stage {
 			min-width: core-functions-v3.fluidSize(190, 'static');
 		}
 	}
@@ -31,5 +28,5 @@
 			transform: translate3d(-50%, 0, 0);
 		}
 	}
-	@include smash-balloon-social-media-v3-extra.additionalStyles();
+	// @include smash-balloon-social-media-v3-extra.additionalStyles();
 }
