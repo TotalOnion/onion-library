@@ -3,6 +3,7 @@
 @use '../component-block-padding-v3/block-padding-v3';
 @use '../component-block-settings-v3/block-settings-v3';
 @use '../fields-core-cta-v3/core-cta-v3';
+@use '../component-core-group-container-styles-v3/core-group-container-styles-v3';
 @mixin coreCssModulesV3() {
 	@include block-padding-v3.blockPadding();
 	@include animations-v3.animations();
