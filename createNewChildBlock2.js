@@ -3,6 +3,8 @@ const fs = require('fs');
 const {globSync} = require('glob');
 const {exec} = require('child_process');
 const acfTemplate = require('./new-block-templates/template-acf-pattern');
+const acfTemplateScss = require('@total_onion/onion-library/new-block-templates/template-scss-blank');
+const acfTemplateJs = require('@total_onion/onion-library/new-block-templates/template-js-blank');
 const yaml = require('js-yaml');
 const axios = require('axios');
 
@@ -67,9 +69,9 @@ fs.writeFileSync(
 
 const blockName = 'group-container-v3';
 
-console.log(`${srcPathJs}/block-${blockName}/${blockName}.js`);
-console.log('__dirname:', __dirname);
-console.log('process.cwd():', process.cwd());
+// console.log(`${srcPathJs}/block-${blockName}/${blockName}.js`);
+// console.log('__dirname:', __dirname);
+// console.log('process.cwd():', process.cwd());
 
 const fullPath = `${srcPathJs}/block-${blockName}/${blockName}.js`;
 
@@ -82,65 +84,20 @@ const scssdir = `Assets/scss/blocks/`;
 // 	fs.mkdirSync(scssdir, 0o744);
 // }
 
-if (fs.existsSync(`${srcPathJs}/block-${blockName}/${blockName}.js`)) {
-	console.log('found it');
-
-	fs.readFile(
-		`${srcPathJs}/block-${blockName}/${blockName}.js`,
-		'utf-8',
-		(err, contents) => {
-			if (err) throw err;
-			const regEx = RegExp(
-				String.raw`(${blockName.replaceAll(/( |-)/g, '')})`,
-				'gi'
-			);
-
-			const replaced = contents
-				.replaceAll(
-					regEx,
-					`${newBlockName.toLowerCase().replaceAll(/( |-)/g, '')}`
-				)
-				.replaceAll(
-					`blocks/${blockName}/${blockName}-extra`,
-					`blocks/${newBlockName}/${newBlockName}-extra`
-				);
-			fs.writeFile(
-				`${jsdir}/${newBlockName}.js`,
-				replaced,
-				'utf-8',
-				function (err) {
-					if (err) throw err;
-					console.log(
-						`👑👑\x1b[32m Successfully duplicated the js file! 👑👑`
-					);
-				}
-			);
-		}
+if (!fs.existsSync(`${jsdir}/${newBlockName}.js`)) {
+	fs.writeFileSync(
+		`${jsdir}/${newBlockName}.js`,
+		acfTemplateJs(newBlockName)
 	);
+	console.log(`👑👑\x1b[32m Successfully created the js file! 👑👑`);
 }
-if (fs.existsSync(`${srcPathJs}/block-${blockName}/${blockName}.scss`)) {
-	fs.readFile(
-		`${srcPathJs}/block-${blockName}/${blockName}.scss`,
-		'utf-8',
-		(err, contents) => {
-			if (err) throw err;
-			const replaced = contents.replaceAll(
-				`${blockName}`,
-				`${newBlockName}`
-			);
-			fs.writeFile(
-				`${scssdir}/${newBlockName}.scss`,
-				replaced,
-				'utf-8',
-				function (err) {
-					if (err) throw err;
-					console.log(
-						`👑👑\x1b[32m Successfully duplicated the scss file! 👑👑`
-					);
-				}
-			);
-		}
+
+if (!fs.existsSync(`${scssdir}/${newBlockName}.scss`)) {
+	fs.writeFileSync(
+		`${scssdir}/${newBlockName}.scss`,
+		acfTemplateScss(newBlockName)
 	);
+	console.log(`👑👑\x1b[32m Successfully created the scss file! 👑👑`);
 }
 
 let data = new FormData();
@@ -182,14 +139,13 @@ axios.post(parentURL, data, headers).then(function (response) {
 				function (err) {
 					if (err) throw err;
 					console.log(
-						`👑👑\x1b[32m Successfully duplicated the js file! 👑👑`
+						`👑👑\x1b[32m Successfully did searcha and replace on the twig file! 👑👑`
+					);
+					console.log(
+						`👑 👑 👑 Hurrah! You made a new child block called ${newBlockName} 👑 👑 👑`
 					);
 				}
 			);
 		}
 	);
 });
-
-console.log(
-	`👑 👑 👑 Hurrah! You made a new child block called ${newBlockName} 👑 👑 👑`
-);
