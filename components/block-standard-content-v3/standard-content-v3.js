@@ -33,7 +33,6 @@ export default function standardcontentv3Js(options = {}) {
 		// 		module.default(block);
 		// 	});
 		// }
-		extraJs(block);
 	} catch (error) {
 		console.error(error);
 	}
