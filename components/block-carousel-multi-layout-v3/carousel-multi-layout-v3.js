@@ -1,5 +1,4 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
-import extraJs from 'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js';
 
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
@@ -208,7 +207,6 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					}
 				}
 			);
-			extraJs(block);
 		});
 	} catch (error) {
 		console.error(error);

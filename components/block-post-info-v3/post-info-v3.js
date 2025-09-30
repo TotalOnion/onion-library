@@ -1,4 +1,3 @@
-import extraJs from 'Assets/js/blocks/post-info-v3/post-info-v3-extra';
 // import videocontroller from '@total_onion/onion-videocontroller/onion-videocontroller.js';
 
 export default function postinfov3Js(options = {}) {

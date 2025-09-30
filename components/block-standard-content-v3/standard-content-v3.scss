@@ -1,6 +1,5 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../component-content-container-v3/content-container-v3';
-// @use 'Assets/scss/blocks/standard-content-v3/standard-content-v3-extra';
 
 .standard-content-v3 {
 	display: grid;
@@ -8,4 +7,3 @@
 	@include core-mixins-v3.responsiveShowHide(grid);
 	@include content-container-v3.contentContainerV3();
 }
-// @include standard-content-v3-extra.additionalStyles();

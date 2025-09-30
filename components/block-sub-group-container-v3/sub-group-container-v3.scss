@@ -2,7 +2,7 @@
 @use '../component-grid-layout-container-v3/grid-layout-container-v3';
 @use '../component-flex-layout-container-v3/flex-layout-container-v3';
 @use '../component-animations-v3/animations-v3';
-// @use 'Assets/scss/blocks/sub-group-container-v3/sub-group-container-v3-extra';
+
 .sub-group-container-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
@@ -25,4 +25,3 @@
 		@include grid-layout-element-v3.gridLayoutElement();
 	}
 }
-// @include sub-group-container-v3-extra.additionalStyles();

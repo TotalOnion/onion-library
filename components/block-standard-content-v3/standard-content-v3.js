@@ -1,4 +1,3 @@
-import extraJs from 'Assets/js/blocks/standard-content-v3/standard-content-v3-extra.js';
 export default function standardcontentv3Js(options = {}) {
 	try {
 		const {block} = options;

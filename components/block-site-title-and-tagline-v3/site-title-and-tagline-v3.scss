@@ -1,7 +1,6 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-// @use 'Assets/scss/blocks/site-title-and-tagline-v3/site-title-and-tagline-v3-extra';
 
 .site-title-and-tagline-v3 {
 	display: grid;
@@ -14,5 +13,4 @@
 	&__tagline {
 		font-weight: bold;
 	}
-	// @include site-title-and-tagline-v3-extra.additionalStyles();
 }
