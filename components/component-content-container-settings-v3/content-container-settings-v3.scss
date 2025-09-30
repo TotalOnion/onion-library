@@ -108,7 +108,7 @@
 			place-self: var(--content-box-vert-align)
 				var(--content-box-horiz-align);
 			padding: calc(
-					var(--global-content-box-padding-block) *
+					var(--global-inline-spacing) *
 						var(--content-box-top-padding-mult)
 				)
 				calc(
