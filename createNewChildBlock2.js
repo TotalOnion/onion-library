@@ -131,7 +131,7 @@ axios.post(parentURL, data, headers).then(function (response) {
 					regEx,
 					`${newBlockName.toLowerCase().replaceAll(/( |-)/g, '')}`
 				)
-				.replaceAll(`group-container-v3`, `${newBlockName}`);
+				.replace(/(?<!sub-)group-container-v3/g, `${newBlockName}`);
 			fs.writeFile(
 				`${themePath}/views/blocks/${newBlockName}.twig`,
 				replaced,
