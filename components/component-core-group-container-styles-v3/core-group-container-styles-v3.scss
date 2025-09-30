@@ -6,7 +6,7 @@
 @use '../../breakpoints';
 
 @mixin coreGroupContainerStylesV3() {
-	.core-group-container {
+	.cmpl-core-group-container {
 		display: grid;
 		grid-template: 'main' / 1fr;
 		place-items: center;

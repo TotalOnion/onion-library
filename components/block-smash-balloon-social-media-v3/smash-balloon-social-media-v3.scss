@@ -9,8 +9,9 @@
 		width: 100%;
 		position: relative;
 		pointer-events: all;
-		.sbi-owl-stage {
-			min-width: core-functions-v3.fluidSize(190, 'static');
+		.sbi-owl-stage,
+		.sbi-owl-item {
+			min-width: core-functions.fluidSize(190, 'static');
 		}
 	}
 	&[data-marquee] {
