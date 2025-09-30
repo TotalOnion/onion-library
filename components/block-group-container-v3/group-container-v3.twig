@@ -32,7 +32,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} cmpl-core-group-container {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} cmpl-core-group-container-styles {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
 
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
@@ -57,7 +57,7 @@
 				{% if fields.show_block_numbers and is_preview %}
 					<div class="{{blockClassName}}__block-number">{{ loop.index }}</div>
 				{% endif %}
-				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes, loop: loop.index}, with_context = false, ignore_missing = true) }}
+				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, is_preview, current_post, nav_menus, site, global_settings, market_settings, market_slug, cta_styles, languages, imageSizes, loop: loop.index}, with_context = false, ignore_missing = true) }}
 			</div>
 		{% endfor %}
 	</div>
