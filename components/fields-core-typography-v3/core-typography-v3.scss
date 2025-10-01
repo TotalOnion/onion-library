@@ -71,17 +71,17 @@
 		.h-m-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-m-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-m-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-m-size();
 				}
 			}
 		}
@@ -94,17 +94,17 @@
 		.h-s-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-s-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-s-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-s-size();
 				}
 			}
 		}
@@ -117,17 +117,17 @@
 		.h-xs-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xs-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xs-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xs-size();
 				}
 			}
 		}
@@ -140,17 +140,17 @@
 		.h-xxs-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xxs-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xxs-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xxs-size();
 				}
 			}
 		}
@@ -163,17 +163,17 @@
 		.h-xxxs-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xxxs-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xxxs-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.h-xxxs-size();
 				}
 			}
 		}
@@ -186,17 +186,17 @@
 		.sh-xl-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xl-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xl-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xl-size();
 				}
 			}
 		}
@@ -209,17 +209,17 @@
 		.sh-l-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-l-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-l-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-l-size();
 				}
 			}
 		}
@@ -232,17 +232,17 @@
 		.sh-m-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-m-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-m-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-m-size();
 				}
 			}
 		}
@@ -255,17 +255,17 @@
 		.sh-s-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-s-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-s-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-s-size();
 				}
 			}
 		}
@@ -278,17 +278,17 @@
 		.sh-xs-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xs-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xs-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xs-size();
 				}
 			}
 		}
@@ -301,17 +301,17 @@
 		.sh-xxs-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xxs-size();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xxs-size();
 				}
 			}
 			&-desktop {
 				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-					@include core-typography-mixins-v3.h-l-size();
+					@include core-typography-mixins-v3.sh-xxs-size();
 				}
 			}
 		}
