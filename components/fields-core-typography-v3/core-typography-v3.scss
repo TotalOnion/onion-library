@@ -178,6 +178,12 @@
 			}
 		}
 	}
+	.sh-xxxl-sizing {
+		@include core-typography-mixins-v3.sh-xxxl();
+	}
+	.sh-xxl-sizing {
+		@include core-typography-mixins-v3.sh-xxl();
+	}
 	.sh1-sizing,
 	.sh-xl-sizing {
 		@include core-typography-mixins-v3.sh-xl();
