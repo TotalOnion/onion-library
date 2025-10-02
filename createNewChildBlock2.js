@@ -56,11 +56,6 @@ if (!newBlockName) {
 if (!patternID) {
 	return console.log('Did you forget to supply the pattern ID?');
 }
-// if (dynamicEntryPoints.indexOf(newBlockName) !== -1) {
-// 	return console.log(
-// 		`Alas! There is already a block called ${newBlockName} :( You'll have to try something else..`
-// 	);
-// }
 
 fs.writeFileSync(
 	`${themePath}/inc/acf-blocks/${newBlockName}.php`,
@@ -68,10 +63,6 @@ fs.writeFileSync(
 );
 
 const blockName = 'group-container-v3';
-
-// console.log(`${srcPathJs}/block-${blockName}/${blockName}.js`);
-// console.log('__dirname:', __dirname);
-// console.log('process.cwd():', process.cwd());
 
 const fullPath = `${srcPathJs}/block-${blockName}/${blockName}.js`;
 
