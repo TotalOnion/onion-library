@@ -1,4 +1,9 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
@@ -6,16 +11,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 		const totalSlides = block.querySelectorAll('.swiper-slide').length || 1;
 		Promise.all([getSwiperAssetsV2()]).then((values) => {
 			const {
-				Swiper,
-				Navigation,
-				Pagination,
-				Lazy,
-				Autoplay,
-				EffectFade,
-				EffectCoverflow,
-				EffectCreative,
-				FreeMode,
-				Mousewheel
+				Swiper
 			} = values[0][0];
 
 			const dataAttributes = block.dataset;
@@ -119,13 +115,13 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					modules: [
 						Navigation,
 						Pagination,
-						Lazy,
-						Autoplay,
-						EffectFade,
-						EffectCoverflow,
-						EffectCreative,
-						FreeMode,
-						Mousewheel
+						// Lazy,
+						// Autoplay,
+						// EffectFade,
+						// EffectCoverflow,
+						// EffectCreative,
+						// FreeMode,
+						// Mousewheel
 					],
 					slidesPerView: slidesMobile,
 					spaceBetween: spaceBetweenSlidesMobile,
