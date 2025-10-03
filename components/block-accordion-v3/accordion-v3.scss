@@ -1,10 +1,10 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
-@use '../component-content-container-settings-v3/content-container-settings-v3';
+@use '../component-content-box-settings-v3/content-box-settings-v3';
 @use '../../breakpoints';
 
 .accordion-v3 {
-	@include content-container-settings-v3.contentContainerSettingsV3();
+	@include content-box-settings-v3.contentBoxSettingsV3();
 	width: 100%;
 	pointer-events: all;
 	display: flex;

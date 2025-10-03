@@ -1,9 +1,9 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
-@use '../component-content-container-v3/content-container-v3';
+@use '../component-content-box-v3/content-box-v3';
 
 .standard-content-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
 	@include core-mixins-v3.responsiveShowHide(grid);
-	@include content-container-v3.contentContainerV3();
+	@include content-box-v3.contentBoxV3();
 }

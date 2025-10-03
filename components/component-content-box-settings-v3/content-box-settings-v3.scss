@@ -3,7 +3,7 @@
 @use '../component-box-shadow-v3/box-shadow-v3';
 @use '../../breakpoints';
 
-@mixin contentContainerSettingsV3() {
+@mixin contentBoxSettingsV3() {
 	&__inner-container {
 		grid-area: main;
 		place-self: var(--content-box-vert-align-mobile)
