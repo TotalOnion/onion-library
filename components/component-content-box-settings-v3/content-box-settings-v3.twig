@@ -17,46 +17,46 @@
 
 	{% set enableAdvancedContentBoxSettings = fields.enable_advanced_content_box_settings %}
 
-	{% set contentBoxTopPaddingValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_desktop_top : fields.content_box_padding) %}
-	{% set contentBoxRightPaddingValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_desktop_right : fields.content_box_padding) %}
-	{% set contentBoxBottomPaddingValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_desktop_bottom : fields.content_box_padding) %}
-	{% set contentBoxLeftPaddingValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_desktop_left : fields.content_box_padding) %}
+	{% set contentBoxTopPaddingValue = fields.content_box_padding_desktop_top %}
+	{% set contentBoxRightPaddingValue = fields.content_box_padding_desktop_right %}
+	{% set contentBoxBottomPaddingValue = fields.content_box_padding_desktop_bottom %}
+	{% set contentBoxLeftPaddingValue = fields.content_box_padding_desktop_left %}
 
-	{% set contentContainerTopMarginValue = (enableAdvancedContentBoxSettings ? fields.content_container_margin_desktop_top : fields.content_container_margin) %}
-	{% set contentContainerRightMarginValue = (enableAdvancedContentBoxSettings ? fields.content_container_margin_desktop_right : fields.content_container_margin) %}
-	{% set contentContainerBottomMarginValue = (enableAdvancedContentBoxSettings ? fields.content_container_margin_desktop_bottom : fields.content_container_margin) %}
-	{% set contentContainerLeftMarginValue = (enableAdvancedContentBoxSettings ? fields.content_container_margin_desktop_left : fields.content_container_margin) %}
+	{% set contentBoxTopMarginValue = fields.content_box_margin_desktop_top %}
+	{% set contentBoxRightMarginValue = fields.content_box_margin_desktop_right %}
+	{% set contentBoxBottomMarginValue = fields.content_box_margin_desktop_bottom %}
+	{% set contentBoxLeftMarginValue = fields.content_box_margin_desktop_left %}
 
 	{% set contentBoxTopPadding = '--content-box-top-padding-mult:' ~ contentBoxTopPaddingValue ~ ';' %}
 	{% set contentBoxRightPadding = '--content-box-right-padding-mult:' ~ contentBoxRightPaddingValue ~ ';' %}
 	{% set contentBoxBottomPadding = '--content-box-bottom-padding-mult:' ~ contentBoxBottomPaddingValue ~ ';' %}
 	{% set contentBoxLeftPadding = '--content-box-left-padding-mult:' ~ contentBoxLeftPaddingValue ~ ';' %}
 
-	{% set contentContainerTopMargin = '--content-container-top-margin:' ~ contentContainerTopMarginValue ~ ';' %}
-	{% set contentContainerRightMargin = '--content-container-right-margin:' ~ contentContainerRightMarginValue ~ ';' %}
-	{% set contentContainerBottomMargin = '--content-container-bottom-margin:' ~ contentContainerBottomMarginValue ~ ';' %}
-	{% set contentContainerLeftMargin = '--content-container-left-margin:' ~ contentContainerLeftMarginValue ~ ';' %}
+	{% set contentBoxTopMargin = '--content-box-top-margin:' ~ contentBoxTopMarginValue ~ ';' %}
+	{% set contentBoxRightMargin = '--content-box-right-margin:' ~ contentBoxRightMarginValue ~ ';' %}
+	{% set contentBoxBottomMargin = '--content-box-bottom-margin:' ~ contentBoxBottomMarginValue ~ ';' %}
+	{% set contentBoxLeftMargin = '--content-box-left-margin:' ~ contentBoxLeftMarginValue ~ ';' %}
 
 	{% set contentBoxPaddingTopMobileValue = contentBoxTopPaddingValue %}
 	{% set contentBoxPaddingRightMobileValue = contentBoxRightPaddingValue %}
 	{% set contentBoxPaddingBottomMobileValue = contentBoxBottomPaddingValue %}
 	{% set contentBoxPaddingLeftMobileValue = contentBoxLeftPaddingValue %}
 
-	{% set contentContainerTopMarginMobileValue = contentContainerTopMarginValue %}
-	{% set contentContainerRightMarginMobileValue = contentContainerRightMarginValue %}
-	{% set contentContainerBottomMarginMobileValue = contentContainerBottomMarginValue %}
-	{% set contentContainerLeftMarginMobileValue = contentContainerLeftMarginValue %}
+	{% set contentBoxTopMarginMobileValue = contentBoxTopMarginValue %}
+	{% set contentBoxRightMarginMobileValue = contentBoxRightMarginValue %}
+	{% set contentBoxBottomMarginMobileValue = contentBoxBottomMarginValue %}
+	{% set contentBoxLeftMarginMobileValue = contentBoxLeftMarginValue %}
 
 	{% if fields.enable_mobile_content_box_layout %}
-		{% set contentBoxPaddingTopMobileValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_mobile_top : fields.content_box_padding_mobile) %}
-		{% set contentBoxPaddingRightMobileValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_mobile_right : fields.content_box_padding_mobile) %}
-		{% set contentBoxPaddingBottomMobileValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_mobile_bottom : fields.content_box_padding_mobile) %}
-		{% set contentBoxPaddingLeftMobileValue = (enableAdvancedContentBoxSettings ? fields.content_box_padding_mobile_left : fields.content_box_padding_mobile)  %}
+		{% set contentBoxPaddingTopMobileValue = fields.content_box_padding_mobile_top %}
+		{% set contentBoxPaddingRightMobileValue = fields.content_box_padding_mobile_right %}
+		{% set contentBoxPaddingBottomMobileValue = fields.content_box_padding_mobile_bottom %}
+		{% set contentBoxPaddingLeftMobileValue = fields.content_box_padding_mobile_left  %}
 
-		{% set contentContainerTopMarginMobileValue =  (enableAdvancedContentBoxSettings ? fields.content_container_margin_mobile_top : fields.content_container_margin_mobile) %}
-		{% set contentContainerRightMarginMobileValue =  (enableAdvancedContentBoxSettings ? fields.content_container_margin_mobile_right : fields.content_container_margin_mobile) %}
-		{% set contentContainerBottomMarginMobileValue =  (enableAdvancedContentBoxSettings ? fields.content_container_margin_mobile_bottom : fields.content_container_margin_mobile) %}
-		{% set contentContainerLeftMarginMobileValue =  (enableAdvancedContentBoxSettings ? fields.content_container_margin_mobile_left : fields.content_container_margin_mobile) %}
+		{% set contentBoxTopMarginMobileValue =  fields.content_box_margin_mobile_top %}
+		{% set contentBoxRightMarginMobileValue =  fields.content_box_margin_mobile_right %}
+		{% set contentBoxBottomMarginMobileValue =  fields.content_box_margin_mobile_bottom %}
+		{% set contentBoxLeftMarginMobileValue =  fields.content_box_margin_mobile_left %}
 
 	{% endif %}
 
@@ -65,10 +65,10 @@
 	{% set contentBoxPaddingBottomMobile = '--content-box-bottom-padding-mult-mobile:' ~ contentBoxPaddingBottomMobileValue ~ ';' %}
 	{% set contentBoxPaddingLeftMobile = '--content-box-left-padding-mult-mobile:' ~  contentBoxPaddingLeftMobileValue ~ ';' %}
 
-	{% set contentContainerTopMarginMobile = '--content-container-top-margin-mobile:' ~ contentContainerTopMarginMobileValue ~ ';' %}
-	{% set contentContainerRightMarginMobile = '--content-container-right-margin-mobile:' ~ contentContainerRightMarginMobileValue ~ ';' %}
-	{% set contentContainerBottomMarginMobile = '--content-container-bottom-margin-mobile:' ~ contentContainerBottomMarginMobileValue ~ ';' %}
-	{% set contentContainerLeftMarginMobile = '--content-container-left-margin-mobile:' ~ contentContainerLeftMarginMobileValue ~ ';' %}
+	{% set contentBoxTopMarginMobile = '--content-box-top-margin-mobile:' ~ contentBoxTopMarginMobileValue ~ ';' %}
+	{% set contentBoxRightMarginMobile = '--content-box-right-margin-mobile:' ~ contentBoxRightMarginMobileValue ~ ';' %}
+	{% set contentBoxBottomMarginMobile = '--content-box-bottom-margin-mobile:' ~ contentBoxBottomMarginMobileValue ~ ';' %}
+	{% set contentBoxLeftMarginMobile = '--content-box-left-margin-mobile:' ~ contentBoxLeftMarginMobileValue ~ ';' %}
 
 
 	{% set contentBoxPaddingTopPortrait = '--content-box-top-padding-mult-portrait:' ~ contentBoxPaddingTopMobileValue ~ ';' %}
@@ -76,21 +76,21 @@
 	{% set contentBoxPaddingBottomPortrait = '--content-box-bottom-padding-mult-portrait:' ~ contentBoxPaddingBottomMobileValue ~ ';' %}
 	{% set contentBoxPaddingLeftPortrait = '--content-box-left-padding-mult-portrait:' ~ contentBoxPaddingLeftMobileValue ~ ';' %}
 
-	{% set contentContainerTopMarginPortrait = '--content-container-top-margin-portrait:' ~ contentContainerTopMarginMobileValue ~ ';' %}
-	{% set contentContainerRightMarginPortrait = '--content-container-right-margin-portrait:' ~ contentContainerRightMarginMobileValue ~ ';' %}
-	{% set contentContainerBottomMarginPortrait = '--content-container-bottom-margin-portrait:' ~ contentContainerBottomMarginMobileValue ~ ';' %}
-	{% set contentContainerLeftMarginPortrait = '--content-container-left-margin-portrait:' ~ contentContainerLeftMarginMobileValue ~ ';' %}
+	{% set contentBoxTopMarginPortrait = '--content-box-top-margin-portrait:' ~ contentBoxTopMarginMobileValue ~ ';' %}
+	{% set contentBoxRightMarginPortrait = '--content-box-right-margin-portrait:' ~ contentBoxRightMarginMobileValue ~ ';' %}
+	{% set contentBoxBottomMarginPortrait = '--content-box-bottom-margin-portrait:' ~ contentBoxBottomMarginMobileValue ~ ';' %}
+	{% set contentBoxLeftMarginPortrait = '--content-box-left-margin-portrait:' ~ contentBoxLeftMarginMobileValue ~ ';' %}
 
 	{% if fields.enable_portrait_content_box_layout %}
-		{% set contentBoxPaddingTopPortrait = '--content-box-top-padding-mult-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_box_padding_portrait_top) ~ ';' %}
-		{% set contentBoxPaddingRightPortrait = '--content-box-right-padding-mult-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_box_padding_portrait_right) ~ ';' %}
-		{% set contentBoxPaddingBottomPortrait = '--content-box-bottom-padding-mult-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_box_padding_portrait_bottom) ~ ';' %}
-		{% set contentBoxPaddingLeftPortrait = '--content-box-left-padding-mult-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_box_padding_portrait_left) ~ ';' %}
+		{% set contentBoxPaddingTopPortrait = '--content-box-top-padding-mult-portrait:' ~ fields.content_box_padding_portrait_top ~ ';' %}
+		{% set contentBoxPaddingRightPortrait = '--content-box-right-padding-mult-portrait:' ~ fields.content_box_padding_portrait_right ~ ';' %}
+		{% set contentBoxPaddingBottomPortrait = '--content-box-bottom-padding-mult-portrait:' ~ fields.content_box_padding_portrait_bottom ~ ';' %}
+		{% set contentBoxPaddingLeftPortrait = '--content-box-left-padding-mult-portrait:' ~ fields.content_box_padding_portrait_left ~ ';' %}
 
-		{% set contentContainerTopMarginPortrait = '--content-container-top-margin-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_container_margin_portrait_top) ~ ';' %}
-		{% set contentContainerRightMarginPortrait = '--content-container-right-margin-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_container_margin_portrait_right) ~ ';' %}
-		{% set contentContainerBottomMarginPortrait = '--content-container-bottom-margin-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_container_margin_portrait_bottom) ~ ';' %}
-		{% set contentContainerLeftMarginPortrait = '--content-container-left-margin-portrait:' ~ (enableAdvancedContentBoxSettings ? fields.content_container_margin_portrait_left) ~ ';' %}
+		{% set contentBoxTopMarginPortrait = '--content-box-top-margin-portrait:' ~ fields.content_box_margin_portrait_top ~ ';' %}
+		{% set contentBoxRightMarginPortrait = '--content-box-right-margin-portrait:' ~ fields.content_box_margin_portrait_right ~ ';' %}
+		{% set contentBoxBottomMarginPortrait = '--content-box-bottom-margin-portrait:' ~ fields.content_box_margin_portrait_bottom ~ ';' %}
+		{% set contentBoxLeftMarginPortrait = '--content-box-left-margin-portrait:' ~ fields.content_box_margin_portrait_left ~ ';' %}
 	{% endif %}
 
 
@@ -115,9 +115,9 @@
 	{% if fields.enable_mobile_content_box_layout %}
 		{% set contentItemsDirectionMobile = '--content-box-items-direction-mobile:' ~ (fields.content_items_direction_mobile|ru|default('column')) ~ ';' %}
 	{% endif %}
-	{% set contentContainerWidth = '--content-container-width: 100%;' %}
+	{% set contentBoxWidth = '--content-box-width: 100%;' %}
 	{% if fields.content_items_direction_desktop|ru == 'row' %}
-		{% set contentContainerWidth = '--content-container-width: auto;' %}
+		{% set contentBoxWidth = '--content-box-width: auto;' %}
 	{% endif %}
 
 
@@ -148,7 +148,7 @@
 	{% endif %}
 
 	{% set gapSettings = contentItemsGapDesktop ~ microContentItemsGapDesktop ~ microContentItemsClassDesktop ~ contentItemsGapMobile ~ microContentItemsGapMobile ~ microContentItemsClassMobile %}
-	{% set containerStyles = cbMaxWidth ~ contentBoxVertAlign ~ contentBoxHorizAlignPortrait ~ contentBoxVertAlignPortrait ~ contentBoxTopPadding ~ contentBoxRightPadding ~ contentBoxBottomPadding ~ contentBoxLeftPadding ~ contentContainerTopMargin ~ contentContainerRightMargin ~ contentContainerBottomMargin ~ contentContainerLeftMargin ~ contentBoxPaddingTopPortrait ~ contentBoxPaddingRightPortrait ~ contentBoxPaddingBottomPortrait ~ contentBoxPaddingLeftPortrait ~ contentContainerTopMarginPortrait ~ contentContainerRightMarginPortrait ~ contentContainerBottomMarginPortrait ~ contentContainerLeftMarginPortrait ~ contentBoxPaddingTopMobile ~ contentBoxPaddingRightMobile ~ contentBoxPaddingBottomMobile ~ contentBoxPaddingLeftMobile ~ contentContainerTopMarginMobile ~ contentContainerRightMarginMobile ~ contentContainerBottomMarginMobile ~ contentContainerLeftMarginMobile ~ contentBoxOverflow ~ contentContainerHorizMarginMobile ~ contentContainerVertMarginMobile ~ contentBoxPaddingHorizMobile ~ contentBoxPaddingVertMobile ~ contentBoxHorizAlign ~ contentBoxVertAlignMobile ~ contentBoxHorizAlignMobile ~ contentBoxVisibleWithVideo ~ contentContainerHorizMargin ~ contentContainerVertMargin ~ contentBoxBgColour ~ contentBoxBorderRadius ~ contentBoxBorderColour ~ contentBoxBorderWidth ~ contentBoxBorderStyle ~ contentBoxAspectRatio ~ ctaSpacingGap ~ ctaSpacingGapMobile ~ contentItemsAlignment ~ contentItemsAlignmentMobile ~ contentItemsAlignmentPortrait ~ boxShadowStyle ~ contentItemsDirectionDesktop ~ contentItemsDirectionMobile ~ contentContainerWidth ~ gapSettings %}
+	{% set containerStyles = cbMaxWidth ~ contentBoxVertAlign ~ contentBoxHorizAlignPortrait ~ contentBoxVertAlignPortrait ~ contentBoxTopPadding ~ contentBoxRightPadding ~ contentBoxBottomPadding ~ contentBoxLeftPadding ~ contentBoxTopMargin ~ contentBoxRightMargin ~ contentBoxBottomMargin ~ contentBoxLeftMargin ~ contentBoxPaddingTopPortrait ~ contentBoxPaddingRightPortrait ~ contentBoxPaddingBottomPortrait ~ contentBoxPaddingLeftPortrait ~ contentBoxTopMarginPortrait ~ contentBoxRightMarginPortrait ~ contentBoxBottomMarginPortrait ~ contentBoxLeftMarginPortrait ~ contentBoxPaddingTopMobile ~ contentBoxPaddingRightMobile ~ contentBoxPaddingBottomMobile ~ contentBoxPaddingLeftMobile ~ contentBoxTopMarginMobile ~ contentBoxRightMarginMobile ~ contentBoxBottomMarginMobile ~ contentBoxLeftMarginMobile ~ contentBoxOverflow ~ contentBoxHorizMarginMobile ~ contentBoxVertMarginMobile ~ contentBoxPaddingHorizMobile ~ contentBoxPaddingVertMobile ~ contentBoxHorizAlign ~ contentBoxVertAlignMobile ~ contentBoxHorizAlignMobile ~ contentBoxVisibleWithVideo ~ contentBoxHorizMargin ~ contentBoxVertMargin ~ contentBoxBgColour ~ contentBoxBorderRadius ~ contentBoxBorderColour ~ contentBoxBorderWidth ~ contentBoxBorderStyle ~ contentBoxAspectRatio ~ ctaSpacingGap ~ ctaSpacingGapMobile ~ contentItemsAlignment ~ contentItemsAlignmentMobile ~ contentItemsAlignmentPortrait ~ boxShadowStyle ~ contentItemsDirectionDesktop ~ contentItemsDirectionMobile ~ contentBoxWidth ~ gapSettings %}
 
 
 	{{containerStyles}}
