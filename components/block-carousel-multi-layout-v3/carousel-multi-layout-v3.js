@@ -201,11 +201,11 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					}
 				}
 			);
-			if (true) {
+			if (false) {
 				import(
 					'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js'
 				).then((result) => {
-					result.default()
+					result.default();
 				});
 			}
 		});
