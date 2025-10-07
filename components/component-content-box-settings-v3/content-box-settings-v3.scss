@@ -142,10 +142,8 @@
 
 		@include box-shadow-v3.boxShadow();
 	}
+	&__content-box,
 	&__content-container {
-		width: 100%;
-	}
-	&__content-box {
 		max-width: var(--wysiwyg-max-width-mobile);
 		margin-inline: auto;
 		display: grid;
