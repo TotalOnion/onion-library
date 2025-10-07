@@ -409,11 +409,8 @@
                 "id": ""
             },
             "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "clone": [
-                "group_638f4148bc10b"
+                "group_689f66f3e26df"
             ],
             "display": "seamless",
             "layout": "block",
@@ -574,5 +571,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755276781
+    "modified": 1759787683
 }

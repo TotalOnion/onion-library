@@ -1,5 +1,5 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
-import { Navigation, Pagination } from 'swiper/modules';
+import {Navigation, Pagination, Autoplay} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,9 +10,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 		const {block} = options;
 		const totalSlides = block.querySelectorAll('.swiper-slide').length || 1;
 		Promise.all([getSwiperAssetsV2()]).then((values) => {
-			const {
-				Swiper
-			} = values[0][0];
+			const {Swiper} = values[0][0];
 
 			const dataAttributes = block.dataset;
 			const slidesDesktop = Number(dataAttributes.desktopslides);
@@ -115,8 +113,8 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					modules: [
 						Navigation,
 						Pagination,
+						Autoplay
 						// Lazy,
-						// Autoplay,
 						// EffectFade,
 						// EffectCoverflow,
 						// EffectCreative,
@@ -203,6 +201,13 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					}
 				}
 			);
+			if (true) {
+				import(
+					'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js'
+				).then((result) => {
+					result.default()
+				});
+			}
 		});
 	} catch (error) {
 		console.error(error);
