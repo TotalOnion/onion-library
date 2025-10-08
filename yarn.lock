@@ -635,18 +635,6 @@
     "@parcel/watcher-win32-ia32" "2.5.1"
     "@parcel/watcher-win32-x64" "2.5.1"
 
-"@pernod-ricard-global-cms/cbl-component-library@^12.4.25":
-  version "12.4.25"
-  resolved "https://registry.yarnpkg.com/@pernod-ricard-global-cms/cbl-component-library/-/cbl-component-library-12.4.25.tgz#8d8a79538b4dbaa477ba10a05acbf582bfcfdcd6"
-  integrity sha512-NGufG4JAxGNMdQTSbLO6S/f16RhBI8NZV+LjBPrTbh3G5G2tPr+Aado5grCvlhp3ZlDIGGaifX9uvGKFsbj1xA==
-  dependencies:
-    cpy "^9.0.1"
-    fs "^0.0.1-security"
-    fs-extra "^11.1.0"
-    glob "^11.0.0"
-    prettier "^2.6.2"
-    yargs "^17.4.1"
-
 "@pernod-ricard-global-cms/cbllazyloader@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@pernod-ricard-global-cms/cbllazyloader/-/cbllazyloader-2.2.1.tgz#dcd02239876fefca4b4c4e84c19be965b6a1703c"
