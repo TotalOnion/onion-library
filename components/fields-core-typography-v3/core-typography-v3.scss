@@ -215,12 +215,12 @@
 		.sh-l-fs {
 			&-mobile {
 				@media ( width <= #{breakpoints.$tabPortrait}) {
-					@include core-typography-mixins-v3.sh-l-size();
+					@include core-typography-mixins-v3.sh-l();
 				}
 			}
 			&-portrait {
 				@media (#{breakpoints.$tabPortrait} <= width <= #{breakpoints.$tabLandscape}) {
-					@include core-typography-mixins-v3.sh-l-size();
+					@include core-typography-mixins-v3.sh-l();
 				}
 			}
 			&-desktop {
