@@ -39,6 +39,7 @@
 		"yargs": "^17.4.1"
 	},
 	"devDependencies": {
+		"@pernod-ricard-global-cms/cbl-component-library": "^12.4.25",
 		"dotenv": "^16.0.3",
 		"esbuild": "0.25.5",
 		"gsap": "^3.13.0"
