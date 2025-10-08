@@ -6,7 +6,7 @@ export default function groupcontainerv3Js(options = {}) {
 			import(
 				'Assets/js/blocks/group-container-v3/group-container-v3-extra.js'
 			).then((result) => {
-				result.default();
+				result.default({block: block});
 			});
 		}
 	} catch (error) {
