@@ -1,22 +1,16 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
+import {Navigation, Pagination, Autoplay} from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
 		const {block} = options;
 		const totalSlides = block.querySelectorAll('.swiper-slide').length || 1;
 		Promise.all([getSwiperAssetsV2()]).then((values) => {
-			const {
-				Swiper,
-				Navigation,
-				Pagination,
-				Lazy,
-				Autoplay,
-				EffectFade,
-				EffectCoverflow,
-				EffectCreative,
-				FreeMode,
-				Mousewheel
-			} = values[0][0];
+			const {Swiper} = values[0][0];
 
 			const dataAttributes = block.dataset;
 			const slidesDesktop = Number(dataAttributes.desktopslides);
@@ -119,13 +113,13 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					modules: [
 						Navigation,
 						Pagination,
-						Lazy,
-						Autoplay,
-						EffectFade,
-						EffectCoverflow,
-						EffectCreative,
-						FreeMode,
-						Mousewheel
+						Autoplay
+						// Lazy,
+						// EffectFade,
+						// EffectCoverflow,
+						// EffectCreative,
+						// FreeMode,
+						// Mousewheel
 					],
 					slidesPerView: slidesMobile,
 					spaceBetween: spaceBetweenSlidesMobile,
@@ -207,6 +201,13 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					}
 				}
 			);
+			if (false) {
+				import(
+					'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js'
+				).then((result) => {
+					result.default();
+				});
+			}
 		});
 	} catch (error) {
 		console.error(error);

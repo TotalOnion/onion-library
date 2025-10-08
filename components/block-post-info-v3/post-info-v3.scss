@@ -1,6 +1,6 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
-@use '../component-content-container-settings-v3/content-container-settings-v3';
+@use '../component-content-box-settings-v3/content-box-settings-v3';
 @use '../component-grid-layout-container-v3/grid-layout-container-v3';
 @use '../component-grid-layout-element-v3/grid-layout-element-v3';
 @use '../component-element-positioning-v3/element-positioning-v3';
@@ -13,7 +13,7 @@
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template: 'main' / 1fr;
-	@include content-container-settings-v3.contentContainerSettingsV3();
+	@include content-box-settings-v3.contentBoxSettingsV3();
 	@include grid-layout-container-v3.gridLayoutContainer();
 	@include social-media-share-v3.social-media-share();
 	@include better-reviews-v3.better-reviews();

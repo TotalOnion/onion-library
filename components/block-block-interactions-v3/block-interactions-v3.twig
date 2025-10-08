@@ -11,7 +11,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
+
 	{% set blockInteractionsEnabled = fields.enable_block_interactions %}
 	{% set enableInteractionsButton = fields.enable_interactions_button %}
 	{% set interactionsButtonType = fields.interactions_button_type %}
@@ -26,7 +27,7 @@
 				{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
 				{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
 			{% endif %}
-			
+
 			{% for item in fields.modal_popup_triggers %}
 				{% if item.cta_style|ru matches '/^\\d+$/' %}
 					{% set ctaData = attribute(cta_styles['theme_cta_styles'], item.cta_style|ru - 1) %}
@@ -39,11 +40,12 @@
 						{% if item.modal_popup_trigger_text %}
 							<span class="{{blockClassName}}__popup-trigger-text">{{ item.modal_popup_trigger_text }}</span>
 						{% endif %}
-						<span class="{{blockClassName}}__popup-trigger-icon">
-						{# <img src="{{ get_image(options.theme_cta_icons[item.trigger_icon_type|ru]).src }}"> #}
-						<img src="{{ options.cta_icons[item.trigger_icon_type|ru].src }}" alt="modal trigger icon">
-						
-						
+						<span
+							class="{{blockClassName}}__popup-trigger-icon">
+							{# <img src="{{ get_image(options.theme_cta_icons[item.trigger_icon_type|ru]).src }}"> #}
+							<img src="{{ options.cta_icons[item.trigger_icon_type|ru].src }}" alt="modal trigger icon">
+
+
 						</span>
 					</button>
 				{% else %}

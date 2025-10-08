@@ -20,7 +20,7 @@
   align-items: center;
   background-color: var(--cb-bg-colour);
   padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult-mobile)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult-mobile)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult-mobile)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult-mobile));
-  margin: calc(var(--global-inline-spacing) * var(--content-container-top-margin-mobile)) calc(var(--global-inline-spacing) * var(--content-container-right-margin-mobile)) calc(var(--global-inline-spacing) * var(--content-container-bottom-margin-mobile)) calc(var(--global-inline-spacing) * var(--content-container-left-margin-mobile));
+  margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin-mobile)) calc(var(--global-inline-spacing) * var(--content-box-right-margin-mobile)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin-mobile)) calc(var(--global-inline-spacing) * var(--content-box-left-margin-mobile));
   -moz-column-gap: var(--content-items-micro-gap-mobile, calc(var(--content-items-gap-mobile) * var(--global-inline-spacing)));
   column-gap: var(--content-items-micro-gap-mobile, calc(var(--content-items-gap-mobile) * var(--global-inline-spacing)));
 }
@@ -31,7 +31,7 @@
     justify-self: var(--content-box-horiz-align-portrait);
     place-self: var(--content-box-vert-align-portrait) var(--content-box-horiz-align-portrait);
     padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult-portrait));
-    margin: calc(var(--global-inline-spacing) * var(--content-container-top-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-container-right-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-container-bottom-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-container-left-margin-portrait));
+    margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-right-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-left-margin-portrait));
   }
 }
 @media screen and (min-width: 1024px) {
@@ -43,168 +43,168 @@
     align-self: var(--content-box-vert-align);
     justify-self: var(--content-box-horiz-align);
     place-self: var(--content-box-vert-align) var(--content-box-horiz-align);
-    padding: calc(var(--global-content-box-padding-block) * var(--content-box-top-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult));
-    margin: calc(var(--global-inline-spacing) * var(--content-container-top-margin)) calc(var(--global-inline-spacing) * var(--content-container-right-margin)) calc(var(--global-inline-spacing) * var(--content-container-bottom-margin)) calc(var(--global-inline-spacing) * var(--content-container-left-margin));
+    padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult));
+    margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin)) calc(var(--global-inline-spacing) * var(--content-box-right-margin)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin)) calc(var(--global-inline-spacing) * var(--content-box-left-margin));
   }
 }
 .accordion-v3__inner-container {
   box-shadow: calc(var(--box-shadow-offset-x) / var(--desktop-design-reference) * var(--screen-width-static)) calc(var(--box-shadow-offset-y) / var(--desktop-design-reference) * var(--screen-width-static)) calc(var(--box-shadow-blur) / var(--desktop-design-reference) * var(--screen-width-static)) calc(var(--box-shadow-spread) / var(--desktop-design-reference) * var(--screen-width-static)) var(--box-shadow-colour);
 }
-.accordion-v3__content-container {
+.accordion-v3__content-box {
   max-width: var(--wysiwyg-max-width-mobile);
   margin-left: auto;
   margin-right: auto;
   display: grid;
   word-break: normal;
   width: 100%;
-  width: var(--content-container-width, 100%);
+  width: var(--content-box-width, 100%);
   -webkit-text-stroke: calc(var(--text-stroke-width) / var(--desktop-design-reference) * var(--screen-width-static) * var(--font-size-multiplier)) var(--text-stroke-colour);
 }
-.accordion-v3__content-container:last-child {
+.accordion-v3__content-box:last-child {
   margin-bottom: 0;
 }
-.accordion-v3__content-container {
+.accordion-v3__content-box {
   color: var(--default-text-colour-mobile, var(--theme-primary-text-colour));
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     color: var(--default-text-colour-portrait, var(--default-text-colour-desktop));
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     color: var(--default-text-colour-desktop, var(--theme-primary-text-colour));
   }
 }
-.accordion-v3__content-container {
+.accordion-v3__content-box {
   text-transform: var(--default-text-transform-mobile);
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     text-transform: var(--default-text-transform-portrait, var(--default-text-transform-desktop));
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     text-transform: var(--default-text-transform-desktop);
   }
 }
-.accordion-v3__content-container {
+.accordion-v3__content-box {
   text-align: var(--default-text-align-mobile);
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     text-align: var(--default-text-align-portrait, var(--default-text-align-desktop));
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     text-align: var(--default-text-align-desktop);
   }
 }
-.accordion-v3__content-container {
+.accordion-v3__content-box {
   display: block;
   display: var(--display-mobile, block);
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     display: block;
     display: var(--display-portrait, block);
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     display: block;
     display: var(--display-desktop, block);
   }
 }
-.accordion-v3__content-container p,
-.accordion-v3__content-container h1,
-.accordion-v3__content-container h2,
-.accordion-v3__content-container h3,
-.accordion-v3__content-container h4,
-.accordion-v3__content-container h5,
-.accordion-v3__content-container h6,
-.accordion-v3__content-container a,
-.accordion-v3__content-container li,
-.accordion-v3__content-container div {
+.accordion-v3__content-box p,
+.accordion-v3__content-box h1,
+.accordion-v3__content-box h2,
+.accordion-v3__content-box h3,
+.accordion-v3__content-box h4,
+.accordion-v3__content-box h5,
+.accordion-v3__content-box h6,
+.accordion-v3__content-box a,
+.accordion-v3__content-box li,
+.accordion-v3__content-box div {
   font-weight: var(--default-font-weight-mobile, var(--default-font-weight));
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container p,
-  .accordion-v3__content-container h1,
-  .accordion-v3__content-container h2,
-  .accordion-v3__content-container h3,
-  .accordion-v3__content-container h4,
-  .accordion-v3__content-container h5,
-  .accordion-v3__content-container h6,
-  .accordion-v3__content-container a,
-  .accordion-v3__content-container li,
-  .accordion-v3__content-container div {
+  .accordion-v3__content-box p,
+  .accordion-v3__content-box h1,
+  .accordion-v3__content-box h2,
+  .accordion-v3__content-box h3,
+  .accordion-v3__content-box h4,
+  .accordion-v3__content-box h5,
+  .accordion-v3__content-box h6,
+  .accordion-v3__content-box a,
+  .accordion-v3__content-box li,
+  .accordion-v3__content-box div {
     font-weight: var(--default-font-weight-portrait, var(--default-font-weight));
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container p,
-  .accordion-v3__content-container h1,
-  .accordion-v3__content-container h2,
-  .accordion-v3__content-container h3,
-  .accordion-v3__content-container h4,
-  .accordion-v3__content-container h5,
-  .accordion-v3__content-container h6,
-  .accordion-v3__content-container a,
-  .accordion-v3__content-container li,
-  .accordion-v3__content-container div {
+  .accordion-v3__content-box p,
+  .accordion-v3__content-box h1,
+  .accordion-v3__content-box h2,
+  .accordion-v3__content-box h3,
+  .accordion-v3__content-box h4,
+  .accordion-v3__content-box h5,
+  .accordion-v3__content-box h6,
+  .accordion-v3__content-box a,
+  .accordion-v3__content-box li,
+  .accordion-v3__content-box div {
     font-weight: var(--default-font-weight-desktop, var(--default-font-weight));
   }
 }
-.accordion-v3__content-container p,
-.accordion-v3__content-container h1,
-.accordion-v3__content-container h2,
-.accordion-v3__content-container h3,
-.accordion-v3__content-container h4,
-.accordion-v3__content-container h5,
-.accordion-v3__content-container h6,
-.accordion-v3__content-container a,
-.accordion-v3__content-container li,
-.accordion-v3__content-container div {
+.accordion-v3__content-box p,
+.accordion-v3__content-box h1,
+.accordion-v3__content-box h2,
+.accordion-v3__content-box h3,
+.accordion-v3__content-box h4,
+.accordion-v3__content-box h5,
+.accordion-v3__content-box h6,
+.accordion-v3__content-box a,
+.accordion-v3__content-box li,
+.accordion-v3__content-box div {
   font-style: var(--default-font-style-mobile);
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container p,
-  .accordion-v3__content-container h1,
-  .accordion-v3__content-container h2,
-  .accordion-v3__content-container h3,
-  .accordion-v3__content-container h4,
-  .accordion-v3__content-container h5,
-  .accordion-v3__content-container h6,
-  .accordion-v3__content-container a,
-  .accordion-v3__content-container li,
-  .accordion-v3__content-container div {
+  .accordion-v3__content-box p,
+  .accordion-v3__content-box h1,
+  .accordion-v3__content-box h2,
+  .accordion-v3__content-box h3,
+  .accordion-v3__content-box h4,
+  .accordion-v3__content-box h5,
+  .accordion-v3__content-box h6,
+  .accordion-v3__content-box a,
+  .accordion-v3__content-box li,
+  .accordion-v3__content-box div {
     font-style: var(--default-font-style-portrait, var(--default-font-style-desktop));
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container p,
-  .accordion-v3__content-container h1,
-  .accordion-v3__content-container h2,
-  .accordion-v3__content-container h3,
-  .accordion-v3__content-container h4,
-  .accordion-v3__content-container h5,
-  .accordion-v3__content-container h6,
-  .accordion-v3__content-container a,
-  .accordion-v3__content-container li,
-  .accordion-v3__content-container div {
+  .accordion-v3__content-box p,
+  .accordion-v3__content-box h1,
+  .accordion-v3__content-box h2,
+  .accordion-v3__content-box h3,
+  .accordion-v3__content-box h4,
+  .accordion-v3__content-box h5,
+  .accordion-v3__content-box h6,
+  .accordion-v3__content-box a,
+  .accordion-v3__content-box li,
+  .accordion-v3__content-box div {
     font-style: var(--default-font-style-desktop);
   }
 }
 @media screen and (min-width: 768px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     max-width: var(--wysiwyg-max-width-portrait);
   }
 }
 @media screen and (min-width: 1024px) {
-  .accordion-v3__content-container {
+  .accordion-v3__content-box {
     max-width: var(--wysiwyg-max-width);
   }
 }

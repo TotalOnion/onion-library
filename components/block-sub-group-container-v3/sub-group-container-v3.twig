@@ -27,7 +27,8 @@
 	}
 </style>
 
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
+
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
 	{% endif %}

@@ -3,7 +3,7 @@
 @use '../component-grid-layout-container-v3/grid-layout-container-v3';
 @use '../component-grid-layout-element-v3/grid-layout-element-v3';
 @use '../component-element-positioning-v3/element-positioning-v3';
-@use '../component-content-container-settings-v3/content-container-settings-v3';
+@use '../component-content-box-settings-v3/content-box-settings-v3';
 @use '../component-gradient-overlay-v3/gradient-overlay-v3';
 @use '../../breakpoints';
 
@@ -11,7 +11,7 @@
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template: 'main' / 1fr;
-	@include content-container-settings-v3.contentContainerSettingsV3();
+	@include content-box-settings-v3.contentBoxSettingsV3();
 	@include grid-layout-container-v3.gridLayoutContainer();
 	&__post-cover-link {
 		grid-area: unset;
@@ -167,5 +167,4 @@
 		width: auto;
 		@include grid-layout-element-v3.gridLayoutElement();
 	}
-	// @include product-info-v3-extra.additionalStyles();
 }

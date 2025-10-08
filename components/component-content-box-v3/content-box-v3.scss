@@ -1,11 +1,11 @@
-@use '../component-content-container-settings-v3/content-container-settings-v3';
+@use '../component-content-box-settings-v3/content-box-settings-v3';
 @use '../component-content-image-v3/content-image-v3';
 @use '../component-accent-text-v3/accent-text-v3';
 @use '../component-nav-menu-v3/nav-menu-v3';
 @use '../component-blockquote-v3/blockquote-v3';
 
-@mixin contentContainerV3() {
-	@include content-container-settings-v3.contentContainerSettingsV3();
+@mixin contentBoxV3() {
+	@include content-box-settings-v3.contentBoxSettingsV3();
 	@include nav-menu-v3.navMenuV3();
 	@include blockquote-v3.blockquoteV3();
 	@include accent-text-v3.accentTextV3();

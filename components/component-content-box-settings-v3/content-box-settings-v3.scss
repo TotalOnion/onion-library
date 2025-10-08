@@ -3,7 +3,7 @@
 @use '../component-box-shadow-v3/box-shadow-v3';
 @use '../../breakpoints';
 
-@mixin contentContainerSettingsV3() {
+@mixin contentBoxSettingsV3() {
 	&__inner-container {
 		grid-area: main;
 		place-self: var(--content-box-vert-align-mobile)
@@ -39,19 +39,19 @@
 			);
 		margin: calc(
 				var(--global-inline-spacing) *
-					var(--content-container-top-margin-mobile)
+					var(--content-box-top-margin-mobile)
 			)
 			calc(
 				var(--global-inline-spacing) *
-					var(--content-container-right-margin-mobile)
+					var(--content-box-right-margin-mobile)
 			)
 			calc(
 				var(--global-inline-spacing) *
-					var(--content-container-bottom-margin-mobile)
+					var(--content-box-bottom-margin-mobile)
 			)
 			calc(
 				var(--global-inline-spacing) *
-					var(--content-container-left-margin-mobile)
+					var(--content-box-left-margin-mobile)
 			);
 		column-gap: var(
 			--content-items-micro-gap-mobile,
@@ -79,19 +79,19 @@
 				);
 			margin: calc(
 					var(--global-inline-spacing) *
-						var(--content-container-top-margin-portrait)
+						var(--content-box-top-margin-portrait)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--content-container-right-margin-portrait)
+						var(--content-box-right-margin-portrait)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--content-container-bottom-margin-portrait)
+						var(--content-box-bottom-margin-portrait)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--content-container-left-margin-portrait)
+						var(--content-box-left-margin-portrait)
 				);
 		}
 
@@ -124,31 +124,31 @@
 						var(--content-box-left-padding-mult)
 				);
 			margin: calc(
-					var(--global-inline-spacing) *
-						var(--content-container-top-margin)
+					var(--global-inline-spacing) * var(--content-box-top-margin)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--content-container-right-margin)
+						var(--content-box-right-margin)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--content-container-bottom-margin)
+						var(--content-box-bottom-margin)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--content-container-left-margin)
+						var(--content-box-left-margin)
 				);
 		}
 
 		@include box-shadow-v3.boxShadow();
 	}
+	&__content-box,
 	&__content-container {
 		max-width: var(--wysiwyg-max-width-mobile);
 		margin-inline: auto;
 		display: grid;
 		word-break: normal;
-		width: var(--content-container-width, 100%);
+		width: var(--content-box-width, 100%);
 		-webkit-text-stroke: core-functions-v3.fontSize(
 				var(--text-stroke-width),
 				'static'

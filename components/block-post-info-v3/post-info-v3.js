@@ -4,7 +4,6 @@ export default function postinfov3Js(options = {}) {
 	const {block} = options;
 	try {
 		// const videoController = new videocontroller(block);
-		extraJs(block);
 	} catch (error) {
 		console.error(error);
 	}

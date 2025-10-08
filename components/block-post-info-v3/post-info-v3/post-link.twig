@@ -1,4 +1,4 @@
-{% set gridLayoutElement = include('components/grid-layout-element.twig', { fields: field, block: block }, with_context = false) %}
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 {% set postColour = '--post-colour: ' ~ post.post_colour|ru ~ ';' %}
 {% set postTextColourStyle = '--post-text-colour-style: ' ~ post.post_text_colour_style|ru ~ ';' %}
 {% set ctaStyle = field.cta_style|ru %}
