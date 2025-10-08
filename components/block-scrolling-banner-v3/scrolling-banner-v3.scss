@@ -1,6 +1,6 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/breakpoints';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../../breakpoints';
 
 .scrolling-banner-v3 {
 	position: relative;
@@ -14,7 +14,6 @@
 	text-transform: uppercase;
 	height: auto;
 	z-index: 99;
-	grid-area: main;
 	place-self: var(--position);
 
 	&__wrapper {
