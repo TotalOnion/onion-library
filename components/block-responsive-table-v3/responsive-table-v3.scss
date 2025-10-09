@@ -1,0 +1,51 @@
+@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
+@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/theme/breakpoints';
+@use 'Assets/scss/blocks/responsive-table/responsive-table-extra';
+
+.responsive-table-v3 {
+	&__wrapper {
+		display: grid;
+		grid-auto-flow: column;
+		gap: calc(
+			var(--global-inline-spacing) * var(--table-spacing-gap-desktop)
+		);
+		overflow: auto;
+	}
+	&__headings {
+		display: grid;
+		grid-auto-flow: column;
+		grid-column: 1/ (var(--headings));
+		grid-template-columns: subgrid;
+	}
+
+	&__heading {
+		grid-row: 1;
+		background-color: var(--background-column-headers);
+		padding: core-functions.fluidSize(5, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			padding: core-functions.fluidSize(5, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding: core-functions.fluidSize(5, 'desktop');
+		}
+	}
+	&__item {
+		display: grid;
+		grid-auto-flow: column;
+		grid-column: 1/ (var(--headings));
+		grid-template-columns: subgrid;
+	}
+	&__item-value {
+		background-color: var(--background-colour-items);
+		padding: core-functions.fluidSize(5, 'mobile');
+		@include core-mixins.device(breakpoints.$tabPortrait) {
+			padding: core-functions.fluidSize(5, 'portrait');
+		}
+		@include core-mixins.device(breakpoints.$tabLandscape) {
+			padding: core-functions.fluidSize(5, 'desktop');
+		}
+	}
+
+	@include responsive-table-extra.additionalStyles();
+}
