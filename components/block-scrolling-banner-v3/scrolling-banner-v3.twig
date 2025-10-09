@@ -1,6 +1,5 @@
 {% set blockClassName = "scrolling-banner-v3" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
-{# {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %} #}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
@@ -13,9 +12,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-	{% set className = 'scrolling-banner'  %}
 	{% set bannerText = fields.scrolling_banner_text %}
 	{% set enableScrolling = fields.enable_scrolling_banner %}
 	{% set bannerSpeed = fields.scrolling_banner_speed %}
@@ -28,23 +26,19 @@
 	{% set bannerTextStyles =  textSizeDesktop ~ textSizePortrait ~ textSizeMobile ~ positioning ~ textColour %}
 
 	{% if fields.enable_text_shadow %}
-		{% set textShadowClassName = className ~ "--text-shadow" %}
+		{% set textShadowClassName = blockClassName ~ "--text-shadow" %}
 		{% set textShadowStyle = "--text-shadow-offset-x:" ~ (fields.text_shadow_horizontal_offset|default(0)) ~ "; --text-shadow-offset-y: " ~ (fields.text_shadow_vertical_offset|default(0)) ~ "; --text-shadow-blur: " ~ (fields.text_shadow_blur|default(0)) ~ "; --text-shadow-colour: " ~ (fields.text_shadow_colour|default("#000000")) ~ ";" %}
 	{% endif %}
-
 	{% if enableScrolling %}
-		<div class="{{className}}" data-speed="{{bannerSpeed}}" style="{{bannerTextStyles ~ textShadowStyle}}">
-			<div class="{{className}}__wrapper">
-				<div class="{{className}}__container">
-					<div class="{{className}}__inner">
-						<span class="{{className}}__separator"></span>
-						<span class="{{className}}__text {{textShadowClassName}}">{{bannerText}}</span>
+		<div class="{{blockClassName}}" data-speed="{{bannerSpeed}}" style="{{bannerTextStyles ~ textShadowStyle}}">
+			<div class="{{blockClassName}}__wrapper">
+				<div class="{{blockClassName}}__container">
+					<div class="{{blockClassName}}__inner">
+						<span class="{{blockClassName}}__separator"></span>
+						<span class="{{blockClassName}}__text {{textShadowClassName}}">{{bannerText}}</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	{% endif %}
-
-
-	{# {{htmlEntryPoint}} #}
 </section>

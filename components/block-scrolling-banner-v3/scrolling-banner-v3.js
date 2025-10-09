@@ -6,14 +6,14 @@ export default function scrollingbannerv3Js(options = {}) {
 		console.error(error);
 	}
 }
-//import {resizeDebouncer} from '@pernod-ricard-global-cms/jsutils';
+
 const initializedBanners = new WeakMap(); // key = element, value = { animations } //cleaner way
 function scrollingbannerJs(block) {
 	if (!block) {
 		return;
 	}
 
-	const bannerElement = block.querySelector('.scrolling-banner');
+	const bannerElement = block.querySelector('.scrolling-banner-v3');
 	if (!bannerElement) {
 		return;
 	}
@@ -27,7 +27,7 @@ function scrollingbannerJs(block) {
 		// resize observer instead of resizeDebouncer because the later
 		// caused the issue mentionned in MLDB-7
 		const wrapper = bannerElement.querySelector(
-			'.scrolling-banner__wrapper'
+			'.scrolling-banner-v3__wrapper'
 		);
 		if (wrapper) {
 			if (window.ResizeObserver) {
@@ -55,12 +55,14 @@ function scrollingbannerJs(block) {
 		// console.log('bannerInit');
 
 		const container = bannerElement.querySelector(
-			'.scrolling-banner__container'
+			'.scrolling-banner-v3__container'
 		);
 		const wrapper = bannerElement.querySelector(
-			'.scrolling-banner__wrapper'
+			'.scrolling-banner-v3__wrapper'
 		);
-		const inner = bannerElement.querySelector('.scrolling-banner__inner');
+		const inner = bannerElement.querySelector(
+			'.scrolling-banner-v3__inner'
+		);
 		const speed = bannerElement.dataset.speed ?? 5;
 
 		const wrapperWidth = wrapper.clientWidth;
@@ -97,7 +99,7 @@ function scrollingbannerJs(block) {
 			iterations: Infinity
 		};
 		const containers = bannerElement.querySelectorAll(
-			'.scrolling-banner__container'
+			'.scrolling-banner-v3__container'
 		);
 
 		const anim1 = containers[0].animate(animation, timing);
@@ -118,12 +120,12 @@ function scrollingbannerJs(block) {
 
 		bannerElement
 			.querySelectorAll(
-				'.scrolling-banner__container.clone, .scrolling-banner__inner.clone'
+				'.scrolling-banner-v3__container.clone, .scrolling-banner-v3__inner.clone'
 			)
 			.forEach((el) => el.remove());
 
 		bannerElement
-			.querySelector('.scrolling-banner__wrapper')
+			.querySelector('.scrolling-banner-v3__wrapper')
 			.removeAttribute('style');
 	}
 }
