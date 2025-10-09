@@ -13,24 +13,26 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}" data-pattern-site-logo-container="{{fields.logo_type|ru}}">
 	<a class="{{blockClassName}}__site-logo-link" href="/{{ market_slug ? market_slug ~ '/' : '' }}" aria-label="site-logo-link">
-		{% if fields.logo_type|ru == 'site-header' %}
-			{% set siteLogo = get_image(options.header_logo_desktop) %}
-		{% endif %}
-		{% if fields.logo_type|ru == 'site-footer' %}
-			{% set siteLogo = get_image(options.footer_logo) %}
+		<!-- site-logo-container -->
+		{% if fields.logo_type|ru == 'site-logo' %}
+			{% set siteLogo = options.site_logos.site_logo %}
 		{% endif %}
 		{% if fields.logo_type|ru == 'site-logo-alt' %}
-			{% set siteLogo = get_image(options.site_logo_alt) %}
+			{% set siteLogo = options.site_logos.site_logo_alt %}
 		{% endif %}
-		{% set isSVG = siteLogo.post_mime_type == 'image/svg+xml' %}
-		{% set siteLogo = isSVG ? siteLogo.src : gt_image_mainsrc(siteLogo) %}
-		{% if isSVG %}
+		{% if fields.logo_type|ru == 'site-logo-footer' %}
+			{% set siteLogo = options.site_logos.site_logo_footer %}
+		{% endif %}
+		{# {% set isSVG = siteLogo.post_mime_type == 'image/svg+xml' %} #}
+		{# {% set siteLogo = isSVG ? siteLogo.src : gt_image_mainsrc(siteLogo) %} #}
+		{% if isSVG and false %}
 			{{get_raw_svg(siteLogo.id, 'site-logo-container__site-logo')}}
 		{% else %}
-			<img src="{{gt_image_mainsrc(siteLogo)}}" srcset="{{gt_image_srcset(siteLogo)}}" width="{{siteLogo.width}}" height="{{siteLogo.height}}" alt="{{siteLogo.alt|default('site-logo')}}" class="{{blockClassName}}__site-logo style-svg"/>
+			<img src="{{siteLogo.src}}" srcset="{{siteLogo.srcset}}" width="{{siteLogo.width}}" height="{{siteLogo.height}}" alt="{{siteLogo.alt|default('site-logo')}}" class="{{blockClassName}}__site-logo style-svg"/>
 		{% endif %}
+		<!-- end-site-logo-container -->
 	</a>
 	{{htmlEntryPoint}}
 </section>
