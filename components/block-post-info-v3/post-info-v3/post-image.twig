@@ -21,7 +21,7 @@
 		{{positionVars}}
 	}
 </style>
-<a href="{{post.link}}" data-pattern-post-info="link" data-image-select="{{ imageSelect }}" class="{{blockClassName}}__post-image-container {{blockClassName}}__info-item {{blockClassName}}__info-item--{{postType}} {{blockClassName}}__post-image-container--{{imageSelect|replace({'_':'-'})}} {{block.id}}">
+<a aria-label="{{post.title}}" href="{{post.link}}" data-pattern-post-info="link" data-image-select="{{ imageSelect }}" class="{{blockClassName}}__post-image-container {{blockClassName}}__info-item {{blockClassName}}__info-item--{{postType}} {{blockClassName}}__post-image-container--{{imageSelect|replace({'_':'-'})}} {{block.id}}">
 	{% set imageSizes = imageSizes|default('(min-width: 1440px) 50vw, (min-width: 768px) 50vw, (min-width: 500px) 50vw, 100vw') %}
 	{% set imageFields = [] %}
 	{% set imageFields = imageFields|merge({'enable_image' : true}) %}

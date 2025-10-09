@@ -16,7 +16,12 @@
 {% set videoDesktop = attribute(post, videoSelect) %}
 
 <div class="{{blockClassName}}__post-video-container {{blockClassName}}__info-item {{block.id}}" data-pattern-post-info="post_video" data-video-select={{videoSelect}}>
-	<video class="{{blockClassName}}__post-video {{block.id}}" playsinline width="{{videoDesktop.width}}" height="{{videoDesktop.height}}" autoplay loop muted>
+	{# <video class="{{blockClassName}}__post-video {{block.id}}" playsinline width="{{videoDesktop.width}}" height="{{videoDesktop.height}}" autoplay loop muted>
 		<source src="{{gt_video_mainsrc(videoDesktop['url'])}}" type="video/mp4">
-	</video>
+	</video> #}
+	{# {% set videoDesktop = gt_video_mainsrc(videoDesktop['url']) %} #}
+
+	{% set videoData = { enable_video : true, video_type : 'upload', video_desktop : gt_video_mainsrc(videoDesktop['url']), autoplay : true,  } %}
+
+	{{ include('components/video-component-v3.twig', { fields: videoData, block: block }, with_context = false) }}
 </div>
