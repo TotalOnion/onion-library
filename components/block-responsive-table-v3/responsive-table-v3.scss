@@ -1,7 +1,7 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
-@use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/responsive-table/responsive-table-extra';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../../breakpoints';
+@use '../responsive-table-v3-extra/responsive-table-v3-extra';
 
 .responsive-table-v3 {
 	&__wrapper {
