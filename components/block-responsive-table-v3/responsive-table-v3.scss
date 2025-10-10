@@ -45,6 +45,4 @@
 			padding: core-functions-v3.fluidSize(5, 'desktop');
 		}
 	}
-
-	@include responsive-table-extra.additionalStyles();
 }
