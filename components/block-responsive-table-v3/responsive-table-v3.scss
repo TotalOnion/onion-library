@@ -22,12 +22,12 @@
 	&__heading {
 		grid-row: 1;
 		background-color: var(--background-column-headers);
-		padding: core-functions.fluidSize(5, 'mobile');
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			padding: core-functions.fluidSize(5, 'portrait');
+		padding: core-functions-v3.fluidSize(5, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(5, 'portrait');
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			padding: core-functions.fluidSize(5, 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding: core-functions-v3.fluidSize(5, 'desktop');
 		}
 	}
 	&__item {
@@ -38,12 +38,12 @@
 	}
 	&__item-value {
 		background-color: var(--background-colour-items);
-		padding: core-functions.fluidSize(5, 'mobile');
-		@include core-mixins.device(breakpoints.$tabPortrait) {
-			padding: core-functions.fluidSize(5, 'portrait');
+		padding: core-functions-v3.fluidSize(5, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(5, 'portrait');
 		}
-		@include core-mixins.device(breakpoints.$tabLandscape) {
-			padding: core-functions.fluidSize(5, 'desktop');
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding: core-functions-v3.fluidSize(5, 'desktop');
 		}
 	}
 
