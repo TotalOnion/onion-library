@@ -1,7 +1,6 @@
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../../breakpoints';
-@use '../responsive-table-v3-extra/responsive-table-v3-extra';
 
 .responsive-table-v3 {
 	&__wrapper {
