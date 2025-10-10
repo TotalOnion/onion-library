@@ -1,0 +1,45 @@
+{% set blockClassName = "responsive-table-v3" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+
+{% set columnsLimit = fields.headings|length %}
+{% set TabCellFlexDirection = fields.table_cell_direction|ru %}
+{% set columnCount = '--headings: ' ~ (columnsLimit + 1) ~ ';' %}
+{% set bgColourHeader = '--background-column-headers: ' ~ fields.background_column_headers|ru ~ ';' %}
+{% set bgColourItems = '--background-colour-items:' ~ fields.background_colour_items|ru  ~ ';' %}
+{% set spacingGapDesktop = '--table-spacing-gap-desktop:' ~ fields.table_spacing_gap|ru  ~ ';' %}
+
+
+{% set textStyle = include('components/text-style.twig', {field, post}) %}
+
+{% set elementStyles =  textStyle  %}
+
+
+{% set sectionStyles =  styleEntryPoint ~ elementStyles ~ columnCount ~ bgColourItems ~ bgColourHeader ~ spacingGapDesktop %}
+
+
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+	<div class="{{ blockClassName }}__wrapper" style=" {{columnCount}}" aria-hidden="true">
+		<div class="{{ blockClassName }}__headings ">
+			{% for field in fields.headings %}
+				<div class="{{ blockClassName }}__heading" aria-hidden="true">
+					{{field.heading}}</div>
+			{% endfor %}
+		</div>
+
+		{% for field in fields.items %}
+			<div class="{{ blockClassName }}__item" aria-hidden="true">
+				{% for element in field.item|slice(0, columnsLimit) %}
+					<div class="{{ blockClassName }}__item-value">{{element.item_value}}</div>
+				{% endfor %}
+			</div>
+
+		{% endfor %}
+
+
+	</div>
+	{{htmlEntryPoint}}
+</section>

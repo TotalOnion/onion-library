@@ -1,0 +1,33 @@
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
+<style>
+	.{{blockClassName}}__social-networks.{{block.id}}, .{{blockClassName}}__content-container.{{block.id}}{
+		{{gridLayoutElement}}
+	}
+</style>
+
+<div class="{{blockClassName}}__content-container {{block.id}} {{blockClassName}}__info-item">
+	<div class="{{blockClassName}}__social-networks-inner-container">
+		{% if field.share_label is defined and field.share_label is not empty %}
+			<p class="{{blockClassName}}__social-networks-share-label">{{field.share_label}}</p>
+		{% endif %}
+		<div class="{{blockClassName}}__social-networks-links-container">
+		{% for social in options.social_networks.networks %}
+			{% if social.enabled %}
+				{% set image = options.cta_icons[social.social_network] %}
+
+				{% set isSVG = image.post_mime_type == 'image/svg+xml' %}
+				
+				{% set target = social.social_link.target is not empty ? social.social_link.target : "_self" %}
+				
+				<a class="{{blockClassName}}__social-networks-link-container" href="{{social.social_link.url}}" aria-label="social-network-link-{{social.social_network}}" target="{{target}}">
+					{% if isSVG and false %}
+						{{get_raw_svg(image.id)}}
+					{% else %}
+						<img class="{{blockClassName}}__social-networks-image style-svg" src="{{image.src}}" loading="lazy" width="30" height="30" alt="{{ image.alt }}">
+					{% endif %}
+				</a>
+			{% endif %}
+		{% endfor %}
+		</div>
+	</div>
+</div>
