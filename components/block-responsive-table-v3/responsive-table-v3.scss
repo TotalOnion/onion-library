@@ -1,0 +1,48 @@
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../../breakpoints';
+
+.responsive-table-v3 {
+	&__wrapper {
+		display: grid;
+		grid-auto-flow: column;
+		gap: calc(
+			var(--global-inline-spacing) * var(--table-spacing-gap-desktop)
+		);
+		overflow: auto;
+	}
+	&__headings {
+		display: grid;
+		grid-auto-flow: column;
+		grid-column: 1/ (var(--headings));
+		grid-template-columns: subgrid;
+	}
+
+	&__heading {
+		grid-row: 1;
+		background-color: var(--background-column-headers);
+		padding: core-functions-v3.fluidSize(5, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(5, 'portrait');
+		}
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding: core-functions-v3.fluidSize(5, 'desktop');
+		}
+	}
+	&__item {
+		display: grid;
+		grid-auto-flow: column;
+		grid-column: 1/ (var(--headings));
+		grid-template-columns: subgrid;
+	}
+	&__item-value {
+		background-color: var(--background-colour-items);
+		padding: core-functions-v3.fluidSize(5, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(5, 'portrait');
+		}
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			padding: core-functions-v3.fluidSize(5, 'desktop');
+		}
+	}
+}
