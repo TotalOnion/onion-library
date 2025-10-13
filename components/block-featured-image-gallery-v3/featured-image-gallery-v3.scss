@@ -1,5 +1,5 @@
-@use 'Assets/scss/modules/library-modules/core-mixins/core-mixins';
-@use 'Assets/scss/modules/library-modules/core-functions/core-functions';
+@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3';
+@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
 @use 'Assets/scss/theme/breakpoints';
 @use 'Assets/scss/theme/mixins';
 
@@ -60,9 +60,7 @@
 		object-fit: cover;
 		width: 100%;
 		height: core-functions.fluidSize(109, 'mobile');
-		transition:
-			transform 0.5s ease-out,
-			filter 0.5s;
+		transition: transform 0.5s ease-out, filter 0.5s;
 
 		@include core-mixins.device(breakpoints.$tabPortrait) {
 			height: core-functions.fluidSize(189, 'desktop');
