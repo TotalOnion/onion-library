@@ -1,0 +1,30 @@
+{% set blockId = block.id %}
+{% set images = fields.images %}
+{% set blockClassName = 'feature-image-gallery-v3' %}
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} lazy" data-assetkey="{{blockClassName}}">
+
+
+	{% if not cloudflare_config.use_cloudflare_images %}
+		<img loading="lazy" class="{{blockClassName}}__featured-image" srcset="{{get_image(images[0].image).srcset}}" width="500" height="500" src="{{get_image(images[0]).src}}" sizes="(min-width: 1366px) 50vw, (min-width: 1024px) 400px, 90vw" alt="{{get_image(images[0]).alt}}">
+	{% else %}
+		{% set image = get_image(images[0].image) %}
+		{% set srcset = gt_cf_srcset(image) %}
+		{% set mainImageSrc = gt_cf_mainsrc(image) %}
+		<img loading="lazy" class="{{blockClassName}}__featured-image" srcset="{{srcset}}" width="500" height="500" src="{{mainImageSrc}}" sizes="(min-width: 1366px) 50vw, (min-width: 1024px) 400px, 90vw" alt="{{image.alt}}">
+	{% endif %}
+
+	<div class="{{blockClassName}}__other-images">
+		{% for image in images %}
+			<div class="{{blockClassName}}__image-wrapper">
+				{% if not cloudflare_config.use_cloudflare_images %}
+					<img loading="lazy" class="{{blockClassName}}__image" srcset="{{get_image(image.image).srcset}}" width="500" height="500" src="{{get_image(image.image).src}}" sizes="(min-width: 1366px) 20vw, (min-width: 1024px) 20vw, 50vw " alt="{{get_image(image.image).alt}}">
+				{% else %}
+					{% set image = get_image(image.image) %}
+					{% set srcset = gt_cf_srcset(image) %}
+					{% set mainImageSrc = gt_cf_mainsrc(image) %}
+					<img loading="lazy" class="{{blockClassName}}__image" srcset="{{srcset}}" width="500" height="500" src="{{mainImageSrc}}" sizes="(min-width: 1366px) 20vw, (min-width: 1024px) 20vw, 50vw " alt="{{image.alt}}">
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</section>
