@@ -494,7 +494,7 @@
 @mixin sh-m-size {
 	font-size: clamp(
 		var(--sh-m-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-m-desktop, 32)),
+		core-functions-v3.fontSize(var(--sh-m-desktop, 30)),
 		var(--sh-m-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-m-letter-spacing);
@@ -541,7 +541,7 @@
 @mixin sh-s-size {
 	font-size: clamp(
 		var(--sh-s-font-size-min-desktop, 10px),
-		core-functions-v3.fontSize(var(--sh-s-desktop, 24)),
+		core-functions-v3.fontSize(var(--sh-s-desktop, 26)),
 		var(--sh-s-font-size-max-desktop, 180px)
 	);
 	letter-spacing: var(--sh-s-letter-spacing);

@@ -188,4 +188,37 @@
 		width: auto;
 		@include grid-layout-element-v3.gridLayoutElement();
 	}
+	&__social-networks-inner-container {
+		display: flex;
+		flex-direction: column;
+		gap: core-functions-v3.fluidSize(10);
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			flex-direction: row;
+			gap: core-functions-v3.fluidSize(20);
+		}
+	}
+	&__social-networks-links-container {
+		display: flex;
+		gap: core-functions-v3.fluidSize(20);
+	}
+	&__social-networks-link-container {
+		img {
+			width: core-functions-v3.fluidSize(30);
+			height: core-functions-v3.fluidSize(30);
+		}
+	}
+	&__social-networks-share-label {
+		--default-font-weight: 700;
+		line-height: var(--paragraph-line-height);
+		letter-spacing: var(--paragraph-letter-spacing);
+		font-family: var(--paragraph-font-family);
+		font-weight: var(--default-font-weight);
+		font-size: core-functions-v3.fontSize(18, 'mobile');
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			font-size: core-functions-v3.fontSize(22, 'portrait');
+		}
+		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			font-size: core-functions-v3.fontSize(22, 'desktop');
+		}
+	}
 }

@@ -1,5 +1,5 @@
 {% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
-{% set textStyle = include('components/text-style.twig', {field, post}) %}
+{# {% set textStyle = include('components/text-style.twig', {field, post}) %} #}
 {% set elementStyles = gridLayoutElement ~ textStyle %}
 <style>
 	.{{blockClassName}}__bazaarvoice.{{block.id}}{
