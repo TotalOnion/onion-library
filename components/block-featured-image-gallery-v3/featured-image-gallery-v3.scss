@@ -11,7 +11,7 @@
 		'other' / 1fr;
 	grid-gap: core-functions-v3.fluidSize(8, 'mobile');
 
-	@include core-mixins.device(breakpoints.$tabPortrait) {
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		padding: var(--section-padding-desktop-tall) var(--side-padding-desktop);
 		grid-template: 'featured other' / 1fr 1fr;
 		grid-gap: core-functions-v3.fluidSize(13, 'desktop');
@@ -22,7 +22,7 @@
 		height: core-functions-v3.fluidSize(343, 'mobile');
 		object-fit: cover;
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			height: core-functions-v3.fluidSize(595, 'desktop');
 			width: 100%;
 		}
@@ -37,7 +37,7 @@
 		grid-auto-rows: 1fr;
 		height: 100%;
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			grid-auto-rows: unset;
 			grid-gap: core-functions-v3.fluidSize(13, 'desktop');
 			grid-template-rows: 1fr 1fr 1fr;
@@ -62,7 +62,7 @@
 		height: core-functions-v3.fluidSize(109, 'mobile');
 		transition: transform 0.5s ease-out, filter 0.5s;
 
-		@include core-mixins.device(breakpoints.$tabPortrait) {
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			height: core-functions-v3.fluidSize(189, 'desktop');
 		}
 
