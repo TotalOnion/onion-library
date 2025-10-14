@@ -10,5 +10,5 @@
 	}
 </style>
 <div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{blockClassName}}__info-item {{block.id}}">
-	<{{elementType|default('p')}} data-pattern-post-info="volume" class="{{blockClassName}}__product-volume {{textEditorElementClasses}} {{block.id}}">{{post.product_volume}}</{{elementType|default('p')}}>
+	<{{elementType|default('p')}} data-pattern-post-info="volume" class="{{blockClassName}}__product-volume {{textEditorElementClasses}} {{block.id}}"><span class="{{blockClassName}}__product-volume--label">{{post.product_volume_label}}</span> {{post.product_volume}}</{{elementType|default('p')}}>
 </div>
