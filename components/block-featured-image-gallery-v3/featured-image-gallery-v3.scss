@@ -10,7 +10,6 @@
 	grid-gap: core-functions-v3.fluidSize(var(--column-gap), 10);
 
 	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		padding: var(--section-padding-desktop-tall) var(--side-padding-desktop);
 		grid-template: 'featured other' / 1fr 1fr;
 		grid-gap: core-functions-v3.fluidSize(10);
@@ -36,7 +35,6 @@
 		grid-auto-rows: 1fr;
 		height: 100%;
 
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 			grid-auto-rows: unset;
 			grid-gap: core-functions-v3.fluidSize(10);
