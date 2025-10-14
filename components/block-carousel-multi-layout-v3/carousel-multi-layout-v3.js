@@ -1,9 +1,9 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
 import {Navigation, Pagination, Autoplay} from 'swiper/modules';
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/bundle';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 export default function carouselmultilayoutv3Js(options = {}) {
 	try {
