@@ -38,6 +38,10 @@
 					<div class="{{blockClassName}}__inner">
 						<span class="{{blockClassName}}__separator"></span>
 						<span class="{{blockClassName}}__text {{textShadowClassName}}">{{bannerText}}</span>
+						{% if bannerText2 %}
+							<span class="{{blockClassName}}__separator"></span>
+							<span class="{{blockClassName}}__text {{textShadowClassName}}">{{bannerText2}}</span>
+						{% endif %}
 					</div>
 				</div>
 			</div>
