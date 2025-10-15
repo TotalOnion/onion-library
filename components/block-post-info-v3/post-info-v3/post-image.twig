@@ -1,7 +1,7 @@
 {% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
 {% set imageSelect = field.image_select|ru %}
 {% if imageSelect == 'image_accent' %}
-	{% set positionVars = include('components/element-positioning.twig', {fields : field.post_image_positioning, block : block, blockClassName : imageClassname}, with_context = false) %}
+	{% set positionVars = include('components/element-positioning-v3.twig', {fields : field.post_image_positioning, block : block, blockClassName : imageClassname}, with_context = false) %}
 {% endif %}
 {% set imageWidthPercentMobile = '--post-image-width-mobile: ' ~ field.post_image_width ~ '%;' %}
 {% set imageWidthPercentDesktop = '--post-image-width-desktop: ' ~ field.post_image_width ~ '%;' %}
