@@ -1,6 +1,9 @@
 export default function featuredImagegalleryJs(options = {}) {
 	try {
 		const {block} = options;
+		const featuredImageContainer = block.querySelector(
+			`.featured-image-gallery-v3__featured-image-container`
+		);
 		const featuredImage = block.querySelector(
 			`.featured-image-gallery-v3__featured-image`
 		);
@@ -9,12 +12,16 @@ export default function featuredImagegalleryJs(options = {}) {
 		);
 		otherImages.forEach((image) => {
 			image.addEventListener('click', function updateSrc() {
-				featuredImage.setAttribute(
-					'srcset',
-					this.getAttribute('srcset')
-				);
-				featuredImage.setAttribute('src', this.getAttribute('src'));
-				featuredImage.setAttribute('alt', this.getAttribute('alt'));
+				featuredImageContainer.classList.add('changing-image');
+				setTimeout(() => {
+					featuredImage.setAttribute('src', this.getAttribute('src'));
+					featuredImage.setAttribute('alt', this.getAttribute('alt'));
+					featuredImage.setAttribute(
+						'srcset',
+						this.getAttribute('srcset')
+					);
+					featuredImageContainer.classList.remove('changing-image');
+				}, 800);
 			});
 		});
 	} catch (error) {

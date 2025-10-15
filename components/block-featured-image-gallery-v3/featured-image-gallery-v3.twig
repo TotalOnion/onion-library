@@ -1,13 +1,34 @@
-{% set blockId = block.id %}
+{% set blockClassName = "featured-image-gallery-v3" %}
+
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set sectionStyles =  styleEntryPoint %}
+{{previewEntryPoint}}
+
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
 {% set images = fields.images %}
-{% set blockClassName = 'featured-image-gallery-v3' %}
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} lazy" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="{{blockClassName}}">
 
-	{% set image = get_image(images[0].image) %}
-	{% set srcset = gt_image_srcset(image) %}
-	{% set mainImageSrc = gt_image_mainsrc(image) %}
-	<img loading="lazy" class="{{blockClassName}}__featured-image" srcset="{{srcset}}" width="500" height="500" src="{{mainImageSrc}}" sizes="(min-width: 1366px) 50vw, (min-width: 1024px) 400px, 90vw" alt="{{image.alt}}">
-
+	<div class="{{blockClassName}}__featured-image-container">
+		<div class="{{blockClassName}}__featured-image-inner-container">
+			{% set image = get_image(images[0].image) %}
+			{% set srcset = gt_image_srcset(image) %}
+			{% set mainImageSrc = gt_image_mainsrc(image) %}
+			<div class="{{blockClassName}}__featured-image-front">
+				<img loading="lazy" class="{{blockClassName}}__featured-image" srcset="{{srcset}}" width="500" height="500" src="{{mainImageSrc}}" sizes="(min-width: 1366px) 50vw, (min-width: 1024px) 400px, 90vw" alt="{{image.alt}}">
+			</div>
+			<div class="{{blockClassName}}__featured-image-back">
+				<img class="{{blockClassName}}__featured-image-back-logo" src="{{options.site_logos.site_logo.src}}">
+			</div>
+		</div>
+	</div>
 
 	<div class="{{blockClassName}}__other-images">
 		{% for image in images %}

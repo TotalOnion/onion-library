@@ -13,6 +13,45 @@
 		grid-gap: core-functions-v3.fluidSize(10);
 	}
 
+	&__featured-image-container {
+		perspective: 1000px;
+		&.changing-image
+			.featured-image-gallery-v3__featured-image-inner-container {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&__featured-image-inner-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	}
+	&__featured-image-front,
+	&__featured-image-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+	}
+	&__featured-image-front {
+		background-color: #bbb;
+		color: black;
+	}
+
+	&__featured-image-back {
+		display: grid;
+		place-items: center;
+		background-color: var(--bally-blue-dark);
+		transform: rotateY(180deg);
+		padding: core-functions-v3.fluidSize(20);
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding: core-functions-v3.fluidSize(120);
+		}
+	}
+
 	&__featured-image {
 		grid-area: featured;
 		object-fit: cover;
@@ -28,13 +67,10 @@
 		place-self: stretch;
 		display: grid;
 		grid-gap: core-functions-v3.fluidSize(8);
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		grid-auto-rows: 1fr;
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			grid-auto-rows: unset;
 			grid-gap: core-functions-v3.fluidSize(10);
-			grid-template-rows: 1fr 1fr 1fr;
 		}
 	}
 

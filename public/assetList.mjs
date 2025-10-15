@@ -1,4 +1,8 @@
 const dynamicAssets = [
+	"./components/block-accent-image-v3/accent-image-v3.scss",
+	"./components/block-accordion-v3/accordion-v3.scss",
+	"./components/block-betterreviews-display-v3/betterreviews-display-v3.scss",
+	"./components/block-block-interactions-v3/block-interactions-v3.scss",
 	"./components/block-video-content-v3/video-content-v3.scss",
 	"./components/block-sub-group-container-v3/sub-group-container-v3.scss",
 	"./components/block-sticky-buy-cta-v3/sticky-buy-cta-v3.scss",
@@ -23,12 +27,7 @@ const dynamicAssets = [
 	"./components/block-divider-v3/divider-v3.scss",
 	"./components/block-cover-link-v3/cover-link-v3.scss",
 	"./components/block-carousel-multi-layout-v3/carousel-multi-layout-v3.scss",
-	"./components/block-block-interactions-v3/block-interactions-v3.scss",
-	"./components/block-betterreviews-display-v3/betterreviews-display-v3.scss",
-	"./components/block-accordion-v3/accordion-v3.scss",
-	"./components/block-accent-image-v3/accent-image-v3.scss",
 	"./components/block-featured-image-gallery-v3/featured-image-gallery-v3.scss",
 	"./components/block-responsive-table-v3/responsive-table-v3.scss",
-	"./components/block-product-info-v3/product-info-v3.scss",
 ];
 export default dynamicAssets;
