@@ -1,0 +1,115 @@
+{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: field, block: block }, with_context = false) %}
+{% set postColour = '--post-colour: ' ~ post.post_colour|ru ~ ';' %}
+{% set postTextColourStyle = '--post-text-colour-style: ' ~ post.post_text_colour_style|ru ~ ';' %}
+{% set ctaStyle = field.cta_style|ru %}
+
+{% if field.cta_style_select|ru == 'post-colour' %}
+	{% set ctaStyle = 'post-colour' %}
+{% endif %}
+
+{% if field.cta_style_select|ru == 'post-text-colour-style' %}
+	{% set ctaStyle = 'post-text-colour-style' %}
+{% endif %}
+
+{% if field.cta_style|ru matches '/^\\d+$/' %}
+	{% set ctaData = attribute(cta_styles['theme_cta_styles'], field.cta_style|ru - 1) %}
+	{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
+	{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
+{% endif %}
+
+{% set widgetStyles = gridLayoutElement ~ postColour ~ postTextColourStyle %}
+{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
+
+{% set buyNowOptionSelect = post.meta('buy_now_option_select') %}
+
+<style>
+	.{{blockClassName}}__post-link.{{block.id}}{
+		{{widgetStyles}}
+	}
+</style>
+<div class="{{blockClassName}}__post-link-container {{blockClassName}}__post-link {{blockClassName}}__info-item {{block.id}}">
+	{% if buyNowOptionSelect|ru == 'none' %}
+		<style>
+			.{{blockClassName}}__product-buy-now.{{block.id}}{
+				{{widgetStyles}}
+			}
+		</style>
+		<a href="#" class="{{blockClassName}}__product-buy-now {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}}">
+			<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
+			{{icon ? '<span class="' ~ blockClassName ~ '__icon-link"><img class="style-svg" src="' ~ options.theme_cta_icons.cta_link_icon ~ '"></span>' : ""}}
+		</a>
+	{% endif %}
+	{% if buyNowOptionSelect|ru == 'link' %}
+		{% set productDirectLink = post.meta('direct_link') %}
+		{% set directLinkTarget = '_self' %}
+		{% if productDirectLink.target is not empty %}
+			{% set directLinkTarget = '_self' %}
+		{% endif %}
+		<style>
+			.{{blockClassName}}__product-buy-now {
+				{{widgetStyles}}
+			}
+		</style>
+		<a href="{{productDirectLink.url}}" class="{{blockClassName}}__product-buy-now link {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}}" target="{{directLinkTarget}}">
+			<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
+			{{icon ? '<span class="' ~ blockClassName ~ '__icon-link"><img class="style-svg" src="' ~ options.theme_cta_icons.cta_link_icon ~ '"></span>' : ""}}
+		</a>
+	{% endif %}
+	{% if buyNowOptionSelect|ru == 'ctb' %}
+		{% set productCtbPimid = post.meta('click_to_buy_pim_id') %}
+		<style>
+			.{{blockClassName}}__product-buy-now {
+				{{widgetStyles}}
+			}
+		</style>
+		<a href="#" class="{{blockClassName}}__product-buy-now ctb {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}}" data-ctbuy data-ctbuy-variant="{{productCtbPimid}}" data-ctbuy-country="" data-ctbuy-lang="" data-ctbuy-default-view="" data-ctbuy-customquerystring="" data-ctbuy-direct-link="" title="{{field.post_link_text}}">
+			<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
+			{{icon ? '<span class="' ~ blockClassName ~ '__icon-link"><img class="style-svg" src="' ~ options.theme_cta_icons.cta_link_icon ~ '"></span>' : ""}}
+		</a>
+	{% endif %}
+	{% if buyNowOptionSelect|ru == 'wtb' %}
+		{% set productPimDebrainId = post.meta('debrain_pim_id') %}
+		<style>
+			.{{blockClassName}}__product-buy-now {
+				{{widgetStyles}}
+			}
+		</style>
+		<a href="#" class="dloc-link {{blockClassName}}__product-buy-now wtb {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}}" data-action="where-to-buy" data-filter="{{productPimDebrainId}}" title="{{field.post_link_text}}">
+			<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
+			{{icon ? '<span class="' ~ blockClassName ~ '__icon-link"><img class="style-svg" src="' ~ options.theme_cta_icons.cta_link_icon ~ '"></span>' : ""}}
+		</a>
+	{% endif %}
+	{% if buyNowOptionSelect|ru == 'wtb-v2' %}
+		{% set productDebrainSkuId = post.meta('debrain_sku_id') %}
+		<wtb-button sku={{productDebrainSkuId}}></wtb-button>
+	{% endif %}
+	{% if buyNowOptionSelect|ru == 'mikmak' %}
+		{% set productEANs = post.meta('mikmak_ean_ids') %}
+		{% set relatedProducts = post.meta('related_products') %}
+		{% set drawer_widget_id = attribute(market_settings['e-shop_settings'], 'mikmak_ctb_drawer_widget_id') %}
+		{% set relatedProductEANs = '' %}
+		{% for relatedPost in relatedProducts %}
+			{% set relatedProduct = get_post(relatedPost) %}
+			{% set relatedProductEANs = relatedProductEANs ~ ',' ~ relatedProduct.meta('mikmak_ean_ids')|trim(',') %}
+		{% endfor %}
+		{% set relatedProductEANs = relatedProductEANs|trim(',') %}
+		{# {% if productEANs is not empty and drawer_widget_id is not empty %} #}
+		{% if productEANs is not empty %}
+			{% set totalProductEANs = productEANs ~ (relatedProductEANs is not empty ? ',' ~ relatedProductEANs : '') %}
+			<a href="#" data-mm-wtbid="{{drawer_widget_id}}" data-mm-ids="{{totalProductEANs}}" data-mm-default-id="{{productEANs}}" class="{{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}} mikmak-buy-now">{{field.post_link_text}}</a>
+		{% endif %}
+	{% endif %}
+	{% if buyNowOptionSelect|ru == 'reservebar' %}
+		{% set reserveBarLiquidId = post.meta('reserve_bar_liquid_grouping_id') %}
+		<style>
+			.{{blockClassName}}__product-buy-now {
+				{{widgetStyles}}
+			}
+		</style>
+		<a href="#" class="{{blockClassName}}__product-buy-now reservebar {{blockClassName}}__info-item {{blockClassName}}__cta cmpl-cta-style-{{ctaStyle}} {{enableCtaAnimation ? 'cmpl-cta-animation-style-' ~ ctaAnimationStyle : ''}} {{block.id}} reservebar-popup-trigger" title="{{field.post_link_text}}" reservebar-liquid-id="{{reserveBarLiquidId}}">
+			<span class="{{blockClassName}}__cta-span">{{field.post_link_text}}</span>
+			{{icon ? '<span class="' ~ blockClassName ~ '__icon-link"><img class="style-svg" src="' ~ options.theme_cta_icons.cta_link_icon ~ '"></span>' : ""}}
+		</a>
+	{% endif %}
+
+</div>
