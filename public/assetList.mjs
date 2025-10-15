@@ -27,5 +27,8 @@ const dynamicAssets = [
 	"./components/block-betterreviews-display-v3/betterreviews-display-v3.scss",
 	"./components/block-accordion-v3/accordion-v3.scss",
 	"./components/block-accent-image-v3/accent-image-v3.scss",
+	"./components/block-featured-image-gallery-v3/featured-image-gallery-v3.scss",
+	"./components/block-responsive-table-v3/responsive-table-v3.scss",
+	"./components/block-product-info-v3/product-info-v3.scss",
 ];
 export default dynamicAssets;
