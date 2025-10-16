@@ -62,7 +62,7 @@
 {% set gridTemplateColumnsCustom = gridTemplateColumnsCustomDesktop ~ gridTemplateColumnsCustomPortrait ~ gridTemplateColumnsCustomMobile %}
 
 {# Grid Auto Rows #}
-{% set gridAutoRows = '--grid-auto-rows-desktop: ' ~ fields.grid_layout.grid_auto_rows_desktop|ru ~ ';' %}
+{% set gridAutoRowsDesktop = '--grid-auto-rows-desktop: ' ~ fields.grid_layout.grid_auto_rows_desktop|ru ~ ';' %}
 {% set gridAutoRowsPortrait = '--grid-auto-rows-portrait: ' ~ fields.grid_layout.grid_auto_rows_portrait|ru ~ ';' %}
 {% set gridAutoRowsMobile = '--grid-auto-rows-mobile: ' ~ fields.grid_layout.grid_auto_rows_mobile|ru ~ ';' %}
 {% set gridAutoRows = gridAutoRowsDesktop ~ gridAutoRowsPortrait ~ gridAutoRowsMobile %}
