@@ -269,9 +269,10 @@ const topLevelCategoryButtonStyle = fields.top_level_category_button_style
 	.replace("__", "");
 const categoryButtonStyle = fields.category_button_style?.toString().replace("__", "");
 const loadMoreButtonStyle = fields.load_more_button_style?.toString().replace("__", "");
-const loadMoreAnimationStyle =
-	ctaStyles[parseInt(loadMoreButtonStyle) - 1]?.cta_settings
-		?.cta_animation_style;
+// const loadMoreAnimationStyle =
+// 	ctaStyles[parseInt(loadMoreButtonStyle) - 1]?.cta_settings
+// 		?.cta_animation_style;
+const loadMoreAnimationStyle = 1;
 const toggleFilterButtonStyle = fields.toggle_filter_button_style
 	?.toString()
 	.replace("__", "");
