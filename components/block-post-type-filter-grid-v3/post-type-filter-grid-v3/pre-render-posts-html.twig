@@ -1,0 +1,17 @@
+<div class="{{blockClassName}}__no-js-content lazy-fade js-enabled-hide" style="width: 100%; padding: var(--global-inline-spacing)">
+	<div class="{{blockClassName}}__posts-container" style="width: 100%; display: grid; grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); gap: 20px;">
+		{% for post in updatedPosts.posts %}
+			{% set postImage = get_image(post.post_images.post_image) %}
+
+			<div class="{{blockClassName}}__post-container">
+				<a href="{{post.link}}"><img class="js-enabled-hide" src="{{postImage.src}}" srcset="{{postImage.srcset}}" alt="{{post.post_images.post_image_alt_text}}" loading='lazy' class=""></a>
+				{% if post.post_title is not empty %}
+					<h2 class="">{{post.post_title}}</h2>
+				{% endif %}
+				{% if post.post_info_description is not empty %}
+					<p class="">{{post.post_info_description}}</p>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
