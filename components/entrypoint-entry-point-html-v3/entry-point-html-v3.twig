@@ -1,11 +1,8 @@
 {% if fields.buy_now_button.enable_buy_now_button %}
-	{{ include('components/buy-now-button.twig', {fields, block, blockClassName, options, environment}, with_context = false, ignore_missing = true) }}
+	{{ include('components/buy-now-button-v3.twig', {fields, block, blockClassName, options, environment}, with_context = false, ignore_missing = true) }}
 {% endif %}
 {% if fields.enable_scrolling_banner %}
-	{{ include('components/scrolling-banner.twig', {fields, block, blockClassName}, with_context = false, ignore_missing = true) }}
-{% endif %}
-{% if fields.scrolling_posts.enable_scrolling_posts %}
-	{{ include('components/scrolling-posts.twig', {fields, block, blockClassName}, with_context = false, ignore_missing = true) }}
+	{{ include('components/scrolling-banner-v3.twig', {fields, block, blockClassName}, with_context = false, ignore_missing = true) }}
 {% endif %}
 {% if fields.accent_image_v2.enable_accent_image_v2 %}
 	{{ include('components/accent-image-v3.twig', {fields, block, blockClassName, is_preview}, with_context = false, ignore_missing = true) }}
@@ -20,10 +17,10 @@
 	{{ include('components/content-box-v3.twig', { fields, block, options, market_settings, cta_styles, blockClassName, nav_menus, languages }, with_context = false) }}
 {% endif %}
 {% if fields.animations.enable_animations %}
-	{{ include('components/animations-style.twig', { fields, block, blockClassName }, with_context = false) }}
+	{{ include('components/animations-style-v3.twig', { fields, block, blockClassName }, with_context = false) }}
 {% endif %}
 {% if fields.lottie_animations.enable_lottie_animations %}
-	{{ include('components/lottie-animations.twig', { fields, block, blockClassName }, with_context = false) }}
+	{{ include('components/lottie-animations-v3.twig', { fields, block, blockClassName }, with_context = false) }}
 {% endif %}
 {% if fields.enable_gradient_overlay %}
 	{{ include('components/gradient-overlay-v3.twig', { fields, block, blockClassName, type : 'html' }, with_context = false) }}

@@ -42,22 +42,22 @@
 
 <script type="speculationrules">
 	{
-				        "prefetch": [
-				            {
-				                "where": { "href_matches": ["/"] },
-				                "eagerness": "eager"
-				            }
-				        ]
-				    }
+						"prefetch": [
+							{
+								"where": { "href_matches": ["/"] },
+								"eagerness": "eager"
+							}
+						]
+					}
 </script>
 {# speculation api end #}
 
 
 {# core design settings #}
-{{function('core_critical_css').0}}
 {{function('core_design_settings_v3').0}}
+{{function('core_site_global_v3').0}}
+{{function('core_font_modifiers_v3').0}}
+{{function('core_critical_css_v3').0}}
 {{function('core_typography_v3').0}}
-{{function('core_font_modifiers').0}}
-{{function('core_themes').0}}
-{{function('core_cta').0}}
+{{function('core_themes_v3').0}}
 {# core design settings end #}
