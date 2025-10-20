@@ -14,9 +14,8 @@
 </style>
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-	{% set bannerText = fields.scrolling_banner_text_1 %}
-	{% set bannerText2 = fields.scrolling_banner_text_2 %}
-	{% set size = fields.scrolling_banner_text_size %}
+	{% set bannerText1 = fields.scrolling_banner_text1 %}
+	{% set bannerText2 = fields.scrolling_banner_text2 %}
 	{% set enableScrolling = fields.enable_scrolling_banner %}
 	{% set bannerSpeed = fields.scrolling_banner_speed %}
 	{% set imageSeperator = fields.seperator_as_image %}
@@ -31,13 +30,14 @@
 		{% set textShadowClassName = blockClassName ~ "--text-shadow" %}
 		{% set textShadowStyle = "--text-shadow-offset-x:" ~ (fields.text_shadow_horizontal_offset|default(0)) ~ "; --text-shadow-offset-y: " ~ (fields.text_shadow_vertical_offset|default(0)) ~ "; --text-shadow-blur: " ~ (fields.text_shadow_blur|default(0)) ~ "; --text-shadow-colour: " ~ (fields.text_shadow_colour|default("#000000")) ~ ";" %}
 	{% endif %}
+
 	{% if enableScrolling %}
 		<div class="{{blockClassName}}" data-speed="{{bannerSpeed}}" style="{{bannerTextStyles ~ textShadowStyle}}">
 			<div class="{{blockClassName}}__wrapper">
 				<div class="{{blockClassName}}__container">
 					<div class="{{blockClassName}}__inner">
 						<span class="{{blockClassName}}__separator"></span>
-						<span class="{{blockClassName}}__text {{textShadowClassName}}">{{bannerText}}</span>
+						<span class="{{blockClassName}}__text {{textShadowClassName}}">{{bannerText1}}</span>
 						{% if bannerText2 %}
 							<span class="{{blockClassName}}__separator"></span>
 							<span class="{{blockClassName}}__text {{textShadowClassName}}">{{bannerText2}}</span>
@@ -47,4 +47,7 @@
 			</div>
 		</div>
 	{% endif %}
+
+
+	{# {{htmlEntryPoint}} #}
 </section>

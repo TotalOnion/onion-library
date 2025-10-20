@@ -1,1939 +1,1729 @@
 {
-	"key": "group_686e6ec702acc",
-	"title": "Component: Content Box Settings v3",
-	"fields": [
-		{
-			"key": "field_686e6ec70ec7c",
-			"label": "General",
-			"name": "",
-			"aria-label": "",
-			"type": "tab",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"placement": "top",
-			"endpoint": 0,
-			"no_preference": 0,
-			"selected": 0
-		},
-		{
-			"key": "field_686e6ec70f0ae",
-			"label": "Content Box background",
-			"name": "content_box_background",
-			"aria-label": "",
-			"type": "color_picker",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"default_value": "",
-			"enable_opacity": 1,
-			"return_format": "string",
-			"display": "default",
-			"button_label": "Select Color",
-			"color_picker": true,
-			"absolute": false,
-			"input": true,
-			"allow_null": true,
-			"theme_colors": false,
-			"colors": []
-		},
-		{
-			"key": "field_686e6ec70f480",
-			"label": "Content Box aspect ratio",
-			"name": "content_box_aspect_ratio",
-			"aria-label": "",
-			"type": "text",
-			"instructions": "Css aspect ratio format (eg. 16 / 9)",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"user_roles": ["administrator"],
-			"default_value": 0,
-			"maxlength": "",
-			"placeholder": "",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec70f86b",
-			"label": "Content box overflow",
-			"name": "content_box_overflow",
-			"aria-label": "",
-			"type": "select",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"choices": {
-				"__hidden": "Hidden",
-				"__visible": "Visible"
-			},
-			"default_value": "__hidden",
-			"return_format": "value",
-			"multiple": 0,
-			"max": "",
-			"prepend": "",
-			"append": "",
-			"allow_null": 0,
-			"ui": 0,
-			"ajax": 0,
-			"placeholder": "",
-			"allow_custom": 0,
-			"search_placeholder": "",
-			"min": ""
-		},
-		{
-			"key": "field_686e6ec70fc56",
-			"label": "Content box max width (%)",
-			"name": "content_box_max_width",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "Note: The content box width can never be smaller than the longest word. This setting  does not apply to mobile devices, only to desktop and tablet.",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"default_value": 100,
-			"min": "",
-			"max": "",
-			"step": "",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71003c",
-			"label": "Enable advanced content box padding",
-			"name": "enable_advanced_content_box_settings",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"message": "",
-			"default_value": 1,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		},
-		{
-			"key": "field_686e6ec710428",
-			"label": "Content box visible while video plays",
-			"name": "content_box_visible_with_video",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "Enable this to keep your text on top of a background video",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"message": "",
-			"default_value": 0,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		},
-		{
-			"key": "field_686e6ec71080b",
-			"label": "Desktop",
-			"name": "",
-			"aria-label": "",
-			"type": "tab",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"placement": "top",
-			"endpoint": 0,
-			"no_preference": 0,
-			"selected": 0
-		},
-		{
-			"key": "field_686e6ec710bf1",
-			"label": "Content Box Horizontal alignment",
-			"name": "content_box_horizontal_alignment",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"choices": {
-				"__flex-start": "Left",
-				"__center": "Center",
-				"__flex-end": "Right",
-				"__stretch": "Stretch"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec710fe0",
-			"label": "Content Box Vertical alignment",
-			"name": "content_box_vertical_alignment",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"choices": {
-				"__flex-start": "Top",
-				"__center": "Center",
-				"__flex-end": "Bottom",
-				"__stretch": "Stretch"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec7113c1",
-			"label": "Content items vertical alignment",
-			"name": "content_items_alignment",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"choices": {
-				"__flex-start": "Top",
-				"__center": "Center",
-				"__flex-end": "Bottom",
-				"__space-between": "Space between",
-				"__space-around": "Space around"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec7117b4",
-			"label": "Content box padding",
-			"name": "content_box_padding",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "!=",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec711b93",
-			"label": "Content container margin",
-			"name": "content_container_margin",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "!=",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec711f81",
-			"label": "Content box padding desktop:",
-			"name": "",
-			"aria-label": "",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"user_roles": ["all"],
-			"message": "",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_686e6ec712366",
-			"label": "Content box padding desktop top",
-			"name": "content_box_padding_desktop_top",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec712753",
-			"label": "Content box padding desktop right",
-			"name": "content_box_padding_desktop_right",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec712b30",
-			"label": "Content box padding desktop bottom",
-			"name": "content_box_padding_desktop_bottom",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec712f22",
-			"label": "Content box padding desktop left",
-			"name": "content_box_padding_desktop_left",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec713302",
-			"label": "Content box (container) margin desktop:",
-			"name": "",
-			"aria-label": "",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"user_roles": ["all"],
-			"message": "",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_686e6ec7136eb",
-			"label": "Content container margin desktop top",
-			"name": "content_container_margin_desktop_top",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec713ad5",
-			"label": "Content container margin desktop right",
-			"name": "content_container_margin_desktop_right",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec713ebd",
-			"label": "Content container margin desktop bottom",
-			"name": "content_container_margin_desktop_bottom",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec7142a2",
-			"label": "Content container margin desktop left",
-			"name": "content_container_margin_desktop_left",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71468e",
-			"label": "Portrait",
-			"name": "",
-			"aria-label": "",
-			"type": "tab",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"placement": "top",
-			"endpoint": 0,
-			"no_preference": 0,
-			"selected": 0
-		},
-		{
-			"key": "field_686e6ec714a75",
-			"label": "Enable portrait specific content box layout",
-			"name": "enable_portrait_content_box_layout",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"message": "",
-			"default_value": 0,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		},
-		{
-			"key": "field_686e6ec714e5a",
-			"label": "Content Box Horizontal alignment portrait",
-			"name": "content_box_horizontal_alignment_portrait",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"choices": {
-				"__flex-start": "Left",
-				"__center": "Center",
-				"__flex-end": "Right",
-				"__stretch": "Stretch"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec715242",
-			"label": "Content Box Vertical alignment portrait",
-			"name": "content_box_vertical_alignment_portrait",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"choices": {
-				"__flex-start": "Top",
-				"__center": "Center",
-				"__flex-end": "Bottom",
-				"__stretch": "Stretch"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec715e00",
-			"label": "Content box padding portrait top",
-			"name": "content_box_padding_portrait_top",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec7161e1",
-			"label": "Content box padding portrait right",
-			"name": "content_box_padding_portrait_right",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71562f",
-			"label": "Content items vertical alignment portrait",
-			"name": "content_items_vertical_alignment_portrait",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"choices": {
-				"__flex-start": "Top",
-				"__center": "Center",
-				"__flex-end": "Bottom",
-				"__space-between": "Space between",
-				"__space-around": "Space around"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec7165cc",
-			"label": "Content box padding portrait bottom",
-			"name": "content_box_padding_portrait_bottom",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec7169b5",
-			"label": "Content box padding portrait left",
-			"name": "content_box_padding_portrait_left",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec715a16",
-			"label": "Content box padding portrait:",
-			"name": "",
-			"aria-label": "",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"message": "",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_686e6ec717183",
-			"label": "Content container margin portrait top",
-			"name": "content_container_margin_portrait_top",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec717570",
-			"label": "Content container margin portrait right",
-			"name": "content_container_margin_portrait_right",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec717956",
-			"label": "Content container margin portrait bottom",
-			"name": "content_container_margin_portrait_bottom",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec717d41",
-			"label": "Content container margin portrait left",
-			"name": "content_container_margin_portrait_left",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec716d9e",
-			"label": "Content box (container) margin portrait:",
-			"name": "",
-			"aria-label": "",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec714a75",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"message": "",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_686e6ec71a073",
-			"label": "Content box padding mobile top",
-			"name": "content_box_padding_mobile_top",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71a44d",
-			"label": "Content box padding mobile right",
-			"name": "content_box_padding_mobile_right",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71a838",
-			"label": "Content box padding mobile bottom",
-			"name": "content_box_padding_mobile_bottom",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71ac1d",
-			"label": "Content box padding mobile left",
-			"name": "content_box_padding_mobile_left",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71b3ee",
-			"label": "Content container margin mobile top",
-			"name": "content_container_margin_mobile_top",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71812e",
-			"label": "Mobile",
-			"name": "",
-			"aria-label": "",
-			"type": "tab",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"placement": "top",
-			"endpoint": 0,
-			"no_preference": 0,
-			"selected": 0
-		},
-		{
-			"key": "field_686e6ec71b7d2",
-			"label": "Content container margin mobile right",
-			"name": "content_container_margin_mobile_right",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71850b",
-			"label": "Enable mobile specific content box layout",
-			"name": "enable_mobile_content_box_layout",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"message": "",
-			"default_value": 1,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		},
-		{
-			"key": "field_686e6ec71bbc1",
-			"label": "Content container margin mobile bottom",
-			"name": "content_container_margin_mobile_bottom",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec7188f3",
-			"label": "Content Box Horizontal alignment mobile",
-			"name": "content_box_horizontal_alignment_mobile",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"choices": {
-				"__flex-start": "Left",
-				"__center": "Cnt",
-				"__flex-end": "Right",
-				"__stretch": "Stretch"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec71bfa5",
-			"label": "Content container margin mobile left",
-			"name": "content_container_margin_mobile_left",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec718cdc",
-			"label": "Content Box Vertical alignment mobile",
-			"name": "content_box_vertical_alignment_mobile",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"choices": {
-				"__flex-start": "Top",
-				"__center": "Center",
-				"__flex-end": "Bottom",
-				"__stretch": "Stretch"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec7190c3",
-			"label": "Content items alignment mobile",
-			"name": "content_items_alignment_mobile",
-			"aria-label": "",
-			"type": "radio",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"choices": {
-				"__flex-start": "Top",
-				"__center": "Center",
-				"__flex-end": "Bottom",
-				"__space-between": "Space between",
-				"__space-around": "Space around"
-			},
-			"default_value": "__center",
-			"return_format": "value",
-			"allow_null": 0,
-			"other_choice": 0,
-			"layout": "horizontal",
-			"save_other_choice": 0
-		},
-		{
-			"key": "field_686e6ec7194af",
-			"label": "Content box padding mobile",
-			"name": "content_box_padding_mobile",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "!=",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec719897",
-			"label": "Content container margin mobile",
-			"name": "content_container_margin_mobile",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "!=",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"default_value": 0,
-			"min": "",
-			"max": 4,
-			"step": "0.125",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec719c7d",
-			"label": "Content box padding mobile:",
-			"name": "",
-			"aria-label": "",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"user_roles": ["all"],
-			"message": "",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_686e6ec71b008",
-			"label": "Content box (container) margin mobile:",
-			"name": "",
-			"aria-label": "",
-			"type": "message",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71003c",
-						"operator": "==",
-						"value": "1"
-					},
-					{
-						"field": "field_686e6ec71850b",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"user_roles": ["all"],
-			"message": "",
-			"new_lines": "wpautop",
-			"esc_html": 0
-		},
-		{
-			"key": "field_686e6ec71c390",
-			"label": "Border",
-			"name": "",
-			"aria-label": "",
-			"type": "tab",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"placement": "top",
-			"endpoint": 0,
-			"no_preference": 0,
-			"selected": 0
-		},
-		{
-			"key": "field_686e6ec71c777",
-			"label": "Enable content box border",
-			"name": "enable_content_box_border",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"message": "",
-			"default_value": 0,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		},
-		{
-			"key": "field_686e6ec71cb62",
-			"label": "Content box border colour",
-			"name": "content_box_border_colour",
-			"aria-label": "",
-			"type": "color_picker",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71c777",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"default_value": "",
-			"enable_opacity": 1,
-			"return_format": "string",
-			"display": "default",
-			"button_label": "Select Color",
-			"color_picker": 1,
-			"absolute": 0,
-			"input": 1,
-			"allow_null": 1,
-			"theme_colors": 0,
-			"colors": []
-		},
-		{
-			"key": "field_686e6ec71cf41",
-			"label": "Content box border style",
-			"name": "content_box_border_style",
-			"aria-label": "",
-			"type": "select",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71c777",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"choices": {
-				"__solid": "Solid",
-				"__dashed": "Dashed",
-				"__double": "Double",
-				"__ridge": "Ridge",
-				"__groove": "Groove",
-				"__none": "None"
-			},
-			"default_value": "__none",
-			"return_format": "value",
-			"multiple": 0,
-			"max": "",
-			"prepend": "",
-			"append": "",
-			"allow_null": 0,
-			"ui": 0,
-			"ajax": 0,
-			"placeholder": "",
-			"allow_custom": 0,
-			"search_placeholder": "",
-			"min": ""
-		},
-		{
-			"key": "field_686e6ec71d331",
-			"label": "Content box border width",
-			"name": "content_box_border_width",
-			"aria-label": "",
-			"type": "range",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71c777",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"default_value": "",
-			"min": 1,
-			"max": 25,
-			"step": "",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71d727",
-			"label": "Content box border radius",
-			"name": "content_box_border_radius",
-			"aria-label": "",
-			"type": "text",
-			"instructions": "CSS border radius format, eg. 10px 5px or 50%\r\nTip: Border radius still works with other border settings turned off.",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_686e6ec71c777",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 2,
-			"user_roles": ["administrator"],
-			"default_value": "0px",
-			"maxlength": "",
-			"placeholder": "",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_686e6ec71db02",
-			"label": "Box shadow",
-			"name": "",
-			"aria-label": "",
-			"type": "tab",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"placement": "top",
-			"endpoint": 0,
-			"no_preference": 0,
-			"selected": 0
-		},
-		{
-			"key": "field_686e6ec71de51",
-			"label": "Content Box Shadow",
-			"name": "content_box_shadow",
-			"aria-label": "",
-			"type": "group",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"layout": "block",
-			"acfe_seamless_style": 0,
-			"acfe_group_modal": 0,
-			"acfe_group_modal_close": 0,
-			"acfe_group_modal_button": "",
-			"acfe_group_modal_size": "large",
-			"sub_fields": [
-				{
-					"key": "field_686e6ec749d6b",
-					"label": "Box Shadow",
-					"name": "box_shadow",
-					"aria-label": "",
-					"type": "clone",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": 0,
-					"wrapper": {
-						"width": "",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"clone": ["group_666ed2bece4c3"],
-					"display": "seamless",
-					"layout": "block",
-					"prefix_label": 0,
-					"prefix_name": 0,
-					"acfe_seamless_style": 0,
-					"acfe_clone_modal": 0,
-					"acfe_clone_modal_close": 0,
-					"acfe_clone_modal_button": "",
-					"acfe_clone_modal_size": "large"
-				}
-			]
-		}
-	],
-	"location": [
-		[
-			{
-				"param": "post_type",
-				"operator": "==",
-				"value": "post"
-			}
-		]
-	],
-	"menu_order": 0,
-	"position": "normal",
-	"style": "default",
-	"label_placement": "left",
-	"instruction_placement": "label",
-	"hide_on_screen": "",
-	"active": false,
-	"description": "",
-	"show_in_rest": 0,
-	"acfe_autosync": ["json"],
-	"acfml_field_group_mode": "localization",
-	"acfe_form": 0,
-	"acfe_display_title": "",
-	"acfe_meta": "",
-	"acfe_note": "",
-	"modified": 1759338164
+    "key": "group_686e6ec702acc",
+    "title": "Component: Content Box Settings v3",
+    "fields": [
+        {
+            "key": "field_686e6ec70ec7c",
+            "label": "General",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_686e6ec70f0ae",
+            "label": "Content Box background",
+            "name": "content_box_background",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "display": "default",
+            "button_label": "Select Color",
+            "color_picker": true,
+            "absolute": false,
+            "input": true,
+            "allow_null": true,
+            "theme_colors": false,
+            "colors": []
+        },
+        {
+            "key": "field_686e6ec70f480",
+            "label": "Content Box aspect ratio",
+            "name": "content_box_aspect_ratio",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Css aspect ratio format (eg. 16 \/ 9)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 0,
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec70f86b",
+            "label": "Content box overflow",
+            "name": "content_box_overflow",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "choices": {
+                "__hidden": "Hidden",
+                "__visible": "Visible"
+            },
+            "default_value": "__hidden",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_686e6ec70fc56",
+            "label": "Content box max width (%)",
+            "name": "content_box_max_width",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Note: The content box width can never be smaller than the longest word. This setting  does not apply to mobile devices, only to desktop and tablet.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": 100,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71080b",
+            "label": "Desktop",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_686e6ec710bf1",
+            "label": "Content Box Horizontal alignment",
+            "name": "content_box_horizontal_alignment",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "choices": {
+                "__flex-start": "Left",
+                "__center": "Center",
+                "__flex-end": "Right",
+                "__stretch": "Stretch"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec710fe0",
+            "label": "Content Box Vertical alignment",
+            "name": "content_box_vertical_alignment",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "choices": {
+                "__flex-start": "Top",
+                "__center": "Center",
+                "__flex-end": "Bottom",
+                "__stretch": "Stretch"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec7113c1",
+            "label": "Content items vertical alignment",
+            "name": "content_items_alignment",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__flex-start": "Top",
+                "__center": "Center",
+                "__flex-end": "Bottom",
+                "__space-between": "Space between",
+                "__space-around": "Space around"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec711f81",
+            "label": "Content box padding desktop:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec712366",
+            "label": "Content box padding desktop top",
+            "name": "content_box_padding_desktop_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec712753",
+            "label": "Content box padding desktop right",
+            "name": "content_box_padding_desktop_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec712b30",
+            "label": "Content box padding desktop bottom",
+            "name": "content_box_padding_desktop_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec712f22",
+            "label": "Content box padding desktop left",
+            "name": "content_box_padding_desktop_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec713302",
+            "label": "Content box margin desktop:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec7136eb",
+            "label": "Content box margin desktop top",
+            "name": "content_box_margin_desktop_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec713ad5",
+            "label": "Content box margin desktop right",
+            "name": "content_box_margin_desktop_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec713ebd",
+            "label": "Content box margin desktop bottom",
+            "name": "content_box_margin_desktop_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec7142a2",
+            "label": "Content box margin desktop left",
+            "name": "content_box_margin_desktop_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71468e",
+            "label": "Portrait",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_686e6ec714e5a",
+            "label": "Content Box Horizontal alignment portrait",
+            "name": "content_box_horizontal_alignment_portrait",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__flex-start": "Left",
+                "__center": "Center",
+                "__flex-end": "Right",
+                "__stretch": "Stretch"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec715242",
+            "label": "Content Box Vertical alignment portrait",
+            "name": "content_box_vertical_alignment_portrait",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__flex-start": "Top",
+                "__center": "Center",
+                "__flex-end": "Bottom",
+                "__stretch": "Stretch"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec71562f",
+            "label": "Content items vertical alignment portrait",
+            "name": "content_items_vertical_alignment_portrait",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__flex-start": "Top",
+                "__center": "Center",
+                "__flex-end": "Bottom",
+                "__space-between": "Space between",
+                "__space-around": "Space around"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec715a16",
+            "label": "Content box padding portrait:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec715e00",
+            "label": "Content box padding portrait top",
+            "name": "content_box_padding_portrait_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec7161e1",
+            "label": "Content box padding portrait right",
+            "name": "content_box_padding_portrait_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec7165cc",
+            "label": "Content box padding portrait bottom",
+            "name": "content_box_padding_portrait_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec7169b5",
+            "label": "Content box padding portrait left",
+            "name": "content_box_padding_portrait_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec716d9e",
+            "label": "Content box margin portrait:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec717183",
+            "label": "Content box margin portrait top",
+            "name": "content_box_margin_portrait_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec717570",
+            "label": "Content box margin portrait right",
+            "name": "content_box_margin_portrait_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec717956",
+            "label": "Content box margin portrait bottom",
+            "name": "content_box_margin_portrait_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec717d41",
+            "label": "Content box margin portrait left",
+            "name": "content_box_margin_portrait_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec714a75",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71812e",
+            "label": "Mobile",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_686e6ec7188f3",
+            "label": "Content Box Horizontal alignment mobile",
+            "name": "content_box_horizontal_alignment_mobile",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "choices": {
+                "__flex-start": "Left",
+                "__center": "Cnt",
+                "__flex-end": "Right",
+                "__stretch": "Stretch"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec718cdc",
+            "label": "Content Box Vertical alignment mobile",
+            "name": "content_box_vertical_alignment_mobile",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__flex-start": "Top",
+                "__center": "Center",
+                "__flex-end": "Bottom",
+                "__stretch": "Stretch"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_686e6ec7190c3",
+            "label": "Content items alignment mobile",
+            "name": "content_items_alignment_mobile",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "__flex-start": "Top",
+                "__center": "Center",
+                "__flex-end": "Bottom",
+                "__space-between": "Space between",
+                "__space-around": "Space around"
+            },
+            "default_value": "__center",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_68dfb978f0bbd",
+            "label": "Content box padding mobile:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec71a073",
+            "label": "Content box padding mobile top",
+            "name": "content_box_padding_mobile_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71a44d",
+            "label": "Content box padding mobile right",
+            "name": "content_box_padding_mobile_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71a838",
+            "label": "Content box padding mobile bottom",
+            "name": "content_box_padding_mobile_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71ac1d",
+            "label": "Content box padding mobile left",
+            "name": "content_box_padding_mobile_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68dfb9c22d1f9",
+            "label": "Content box margin mobile:",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_686e6ec71b3ee",
+            "label": "Content box margin mobile top",
+            "name": "content_box_margin_mobile_top",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71b7d2",
+            "label": "Content box margin mobile right",
+            "name": "content_box_margin_mobile_right",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71bbc1",
+            "label": "Content box margin mobile bottom",
+            "name": "content_box_margin_mobile_bottom",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71bfa5",
+            "label": "Content box margin mobile left",
+            "name": "content_box_margin_mobile_left",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71003c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_686e6ec71850b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 0,
+            "min": "",
+            "max": 4,
+            "step": "0.125",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71c390",
+            "label": "Border",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_686e6ec71c777",
+            "label": "Enable content box border",
+            "name": "enable_content_box_border",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_686e6ec71cb62",
+            "label": "Content box border colour",
+            "name": "content_box_border_colour",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71c777",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "",
+            "enable_opacity": 1,
+            "return_format": "string",
+            "display": "default",
+            "button_label": "Select Color",
+            "color_picker": 1,
+            "absolute": 0,
+            "input": 1,
+            "allow_null": 1,
+            "theme_colors": 0,
+            "colors": []
+        },
+        {
+            "key": "field_686e6ec71cf41",
+            "label": "Content box border style",
+            "name": "content_box_border_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71c777",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "choices": {
+                "__solid": "Solid",
+                "__dashed": "Dashed",
+                "__double": "Double",
+                "__ridge": "Ridge",
+                "__groove": "Groove",
+                "__none": "None"
+            },
+            "default_value": "__none",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_686e6ec71d331",
+            "label": "Content box border width",
+            "name": "content_box_border_width",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71c777",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "",
+            "min": 1,
+            "max": 25,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71d727",
+            "label": "Content box border radius",
+            "name": "content_box_border_radius",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "CSS border radius format, eg. 10px 5px or 50%\r\nTip: Border radius still works with other border settings turned off.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_686e6ec71c777",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "administrator"
+            ],
+            "default_value": "0px",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_686e6ec71db02",
+            "label": "Box shadow",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_686e6ec71de51",
+            "label": "Content Box Shadow",
+            "name": "content_box_shadow",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
+            "sub_fields": [
+                {
+                    "key": "field_686e6ec749d6b",
+                    "label": "Box Shadow",
+                    "name": "box_shadow",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "clone": [
+                        "group_666ed2bece4c3"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "acfe_seamless_style": 0,
+                    "acfe_clone_modal": 0,
+                    "acfe_clone_modal_close": 0,
+                    "acfe_clone_modal_button": "",
+                    "acfe_clone_modal_size": "large"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "localization",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1759492853
 }

@@ -721,6 +721,27 @@
             "append": ""
         },
         {
+            "key": "field_68e4ec2b416d9",
+            "label": "Section class",
+            "name": "section_class",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hidden",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_689f649b24e71",
             "label": "Eager loading",
             "name": "eager_loading",
@@ -828,5 +849,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755276641
+    "modified": 1759833159
 }

@@ -1,26 +1,27 @@
 {% set blockClassName = "nav-menu-container-v3" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
-{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set menuType = fields.select_menu_type|ru %}
-{% set sectionStyles =  styleEntryPoint %}
+{% set sectionStyles = styleEntryPoint %}
 <style>
 	.{{blockClassName}}.{{block.id}}{
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-pattern-nav-menu-container data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}" data-navtype="{{menuType}}">
 
-	{% if menuType == 'classic_nav_items_center' %}
-		{{ include( 'components/classic-nav-items-center.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-pattern-nav-menu-container data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}" data-navtype="{{menuType}}">
+
+	{% if menuType == 'inline_nav_menu' %}
+		{{ include( 'components/inline-nav-menu.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
 	{% elseif menuType == 'slide_in_nav_panel'%}
-		{{ include( 'components/slide-in-nav-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
-	{% elseif menuType == 'nav_menu_slide_in_panel' %}
+		{# {{ include( 'components/slide-in-nav-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }} #}
 		<!-- nav-menu-slide-in-panel -->
 		{{ include( 'components/nav-menu-slide-in-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
 		<!-- end-nav-menu-slide-in-panel -->
+		{% elseif menuType == 'nav_menu_slide_in_panel' %}
 	{% endif %}
 	{{htmlEntryPoint}}
 </section>

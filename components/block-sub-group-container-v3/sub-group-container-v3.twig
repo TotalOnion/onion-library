@@ -27,8 +27,7 @@
 	}
 </style>
 
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
-
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-assetkey="sub-group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
 	{% endif %}
@@ -37,7 +36,7 @@
 			{{layoutStyles}}
 		}
 	</style>
-	<div class="{{blockClassName}}__grid-container {{layoutClass}} {{block.id}}">
+	<div class="{{blockClassName}}__grid-container cmpl-core-group-container-styles__grid-container {{layoutClass}} {{block.id}}">
 		{% for section in fields.sections %}
 			{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: section, block: block }, with_context = false) %}
 			{% if block %}
@@ -48,7 +47,7 @@
 					{{gridLayoutElement}}
 				}
 			</style>
-			<div class="{{blockClassName}}__block-container {{block.id}}">
+			<div class="{{blockClassName}}__block-container cmpl-core-group-container-styles__block-container {{block.id}}">
 				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, is_preview, current, nav_menus, site, cta_styles, global_settings, market_settings, languages, imageSizes, loop: loop.index }, with_context = false, ignore_missing = true) }}
 			</div>
 		{% endfor %}

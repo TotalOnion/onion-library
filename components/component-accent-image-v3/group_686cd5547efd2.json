@@ -447,8 +447,8 @@
                                     },
                                     "wpml_cf_preferences": 3,
                                     "default_value": "",
-                                    "min": -250,
-                                    "max": 250,
+                                    "min": -1000,
+                                    "max": 1003,
                                     "step": "",
                                     "prepend": "",
                                     "append": ""
@@ -469,8 +469,8 @@
                                     },
                                     "wpml_cf_preferences": 3,
                                     "default_value": "",
-                                    "min": -250,
-                                    "max": 250,
+                                    "min": -1000,
+                                    "max": 1000,
                                     "step": "",
                                     "prepend": "",
                                     "append": ""
@@ -944,5 +944,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754326595
+    "modified": 1760102177
 }

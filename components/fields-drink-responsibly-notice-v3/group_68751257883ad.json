@@ -256,10 +256,11 @@
     "acfe_autosync": [
         "json"
     ],
+    "acfml_field_group_mode": "localization",
     "acfe_form": 1,
     "acfe_display_title": "",
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1756229097
+    "modified": 1758874042
 }

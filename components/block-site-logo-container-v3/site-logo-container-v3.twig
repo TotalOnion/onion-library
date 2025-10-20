@@ -1,18 +1,20 @@
 {% set blockClassName = "site-logo-container-v3" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
-{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set logoMaxWidthDesktop = '--site-logo-max-width-desktop: ' ~ fields.site_logo_max_width_desktop ~ ';'%}
 {% set logoMaxWidthPortrait = '--site-logo-max-width-portrait: ' ~ fields.site_logo_max_width_portrait ~ ';' %}
 {% set logoMaxWidthMobile = '--site-logo-max-width-mobile: ' ~ fields.site_logo_max_width_mobile ~ ';' %}
 {% set sectionStyles =  styleEntryPoint ~ logoMaxWidthDesktop ~ logoMaxWidthPortrait ~ logoMaxWidthMobile %}
+
 <style>
 	.{{blockClassName}}.{{block.id}}{
 		{{sectionStyles}}
 	}
 </style>
+
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} lazy-fade" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}" data-pattern-site-logo-container="{{fields.logo_type|ru}}">
 	<a class="{{blockClassName}}__site-logo-link" href="/{{ market_slug ? market_slug ~ '/' : '' }}" aria-label="site-logo-link">
 		<!-- site-logo-container -->

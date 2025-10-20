@@ -64,7 +64,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "placeholder": "",
             "min": ""
         },
@@ -178,7 +178,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "placeholder": "",
             "min": ""
         },
@@ -297,7 +297,7 @@
             "append": "",
             "allow_null": 0,
             "ui": 1,
-            "ajax": 1,
+            "ajax": 0,
             "placeholder": "",
             "min": ""
         },
@@ -1438,33 +1438,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_6867bc541727e",
-            "label": "Parallax",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6867bc54074c9",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
             "key": "field_6867bc5417a2b",
             "label": "Enable Parallax",
             "name": "enable_parallax",
@@ -1602,5 +1575,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1751877374
+    "modified": 1759402944
 }

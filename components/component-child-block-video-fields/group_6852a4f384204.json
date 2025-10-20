@@ -1,351 +1,353 @@
 {
-	"key": "group_6852a4f384204",
-	"title": "Component: Child Block Video Fields",
-	"fields": [
-		{
-			"key": "field_6894ca9ff2725",
-			"label": "Enable video",
-			"name": "enable_video",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"message": "",
-			"default_value": 1,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		},
-		{
-			"key": "field_6852a4f5f66a5",
-			"label": "Video Type",
-			"name": "video_type",
-			"aria-label": "",
-			"type": "select",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"choices": {
-				"__upload": "Upload",
-				"__vimeo": "Vimeo",
-				"__youtube": "Youtube"
-			},
-			"default_value": "__upload",
-			"return_format": "value",
-			"multiple": 0,
-			"max": "",
-			"prepend": "",
-			"append": "",
-			"allow_null": 0,
-			"ui": 0,
-			"ajax": 0,
-			"placeholder": "",
-			"allow_custom": 0,
-			"search_placeholder": "",
-			"min": ""
-		},
-		{
-			"key": "field_6852a55cf66a6",
-			"label": "Youtube Desktop",
-			"name": "youtube_embed",
-			"aria-label": "",
-			"type": "oembed",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6852a4f5f66a5",
-						"operator": "==",
-						"value": "__youtube"
-					},
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"width": "",
-			"height": ""
-		},
-		{
-			"key": "field_6852a571f66a7",
-			"label": "Youtube Mobile",
-			"name": "youtube_mobile",
-			"aria-label": "",
-			"type": "oembed",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6852a4f5f66a5",
-						"operator": "==",
-						"value": "__youtube"
-					},
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"width": "",
-			"height": ""
-		},
-		{
-			"key": "field_6852a588f66a8",
-			"label": "Vimeo Desktop",
-			"name": "vimeo_embed",
-			"aria-label": "",
-			"type": "oembed",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6852a4f5f66a5",
-						"operator": "==",
-						"value": "__vimeo"
-					},
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"width": "",
-			"height": ""
-		},
-		{
-			"key": "field_6852a593f66a9",
-			"label": "Vimeo Mobile",
-			"name": "vimeo_mobile",
-			"aria-label": "",
-			"type": "oembed",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6852a4f5f66a5",
-						"operator": "==",
-						"value": "__vimeo"
-					},
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"width": "",
-			"height": ""
-		},
-		{
-			"key": "field_6852a5b3f66aa",
-			"label": "Video Desktop",
-			"name": "video_desktop",
-			"aria-label": "",
-			"type": "file",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6852a4f5f66a5",
-						"operator": "==",
-						"value": "__upload"
-					},
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"uploader": "",
-			"return_format": "array",
-			"preview_style": "default",
-			"library": "all",
-			"upload_folder": "",
-			"button_label": "Add File",
-			"file_count": 0,
-			"multiple": 0,
-			"max": "",
-			"min_size": "",
-			"max_size": "",
-			"mime_types": "",
-			"placeholder": "Select",
-			"stylised_button": 0,
-			"min": ""
-		},
-		{
-			"key": "field_6852a5d6f66ac",
-			"label": "Video Mobile",
-			"name": "video_mobile",
-			"aria-label": "",
-			"type": "file",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": [
-				[
-					{
-						"field": "field_6852a4f5f66a5",
-						"operator": "==",
-						"value": "__upload"
-					},
-					{
-						"field": "field_6894ca9ff2725",
-						"operator": "==",
-						"value": "1"
-					}
-				]
-			],
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"uploader": "",
-			"return_format": "array",
-			"preview_style": "default",
-			"library": "all",
-			"upload_folder": "",
-			"button_label": "Add File",
-			"file_count": 0,
-			"multiple": 0,
-			"max": "",
-			"min_size": "",
-			"max_size": "",
-			"mime_types": "",
-			"placeholder": "Select",
-			"stylised_button": 0,
-			"min": ""
-		},
-		{
-			"key": "field_68c6d229ad78e",
-			"label": "Autoplay desktop",
-			"name": "autoplay_desktop",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"message": "",
-			"default_value": 0,
-			"style": "",
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1
-		},
-		{
-			"key": "field_68c7c161ad78f",
-			"label": "Autoplay mobile",
-			"name": "autoplay_mobile",
-			"aria-label": "",
-			"type": "true_false",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 1,
-			"message": "",
-			"default_value": 0,
-			"ui_on_text": "",
-			"ui_off_text": "",
-			"ui": 1,
-			"style": ""
-		}
-	],
-	"location": [
-		[
-			{
-				"param": "post_type",
-				"operator": "==",
-				"value": "post"
-			}
-		]
-	],
-	"menu_order": 0,
-	"position": "normal",
-	"style": "default",
-	"label_placement": "left",
-	"instruction_placement": "label",
-	"hide_on_screen": "",
-	"active": false,
-	"description": "",
-	"show_in_rest": 0,
-	"acfe_autosync": ["json"],
-	"acfml_field_group_mode": "translation",
-	"acfe_form": 0,
-	"acfe_display_title": "",
-	"acfe_meta": "",
-	"acfe_note": "",
-	"modified": 1757922184
+    "key": "group_6852a4f384204",
+    "title": "Component: Child Block Video Fields",
+    "fields": [
+        {
+            "key": "field_6894ca9ff2725",
+            "label": "Enable video",
+            "name": "enable_video",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6852a4f5f66a5",
+            "label": "Video Type",
+            "name": "video_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "__upload": "Upload",
+                "__vimeo": "Vimeo",
+                "__youtube": "Youtube"
+            },
+            "default_value": "__upload",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_6852a55cf66a6",
+            "label": "Youtube Desktop",
+            "name": "youtube_embed",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__youtube"
+                    },
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_6852a571f66a7",
+            "label": "Youtube Mobile",
+            "name": "youtube_mobile",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__youtube"
+                    },
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_6852a588f66a8",
+            "label": "Vimeo Desktop",
+            "name": "vimeo_embed",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    },
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_6852a593f66a9",
+            "label": "Vimeo Mobile",
+            "name": "vimeo_mobile",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__vimeo"
+                    },
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_6852a5b3f66aa",
+            "label": "Video Desktop",
+            "name": "video_desktop",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "uploader": "",
+            "return_format": "array",
+            "preview_style": "default",
+            "library": "all",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "file_count": 0,
+            "multiple": 0,
+            "max": "",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "placeholder": "Select",
+            "stylised_button": 0,
+            "min": ""
+        },
+        {
+            "key": "field_6852a5d6f66ac",
+            "label": "Video Mobile",
+            "name": "video_mobile",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "uploader": "",
+            "return_format": "array",
+            "preview_style": "default",
+            "library": "all",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "file_count": 0,
+            "multiple": 0,
+            "max": "",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "placeholder": "Select",
+            "stylised_button": 0,
+            "min": ""
+        },
+        {
+            "key": "field_68c6d229ad78e",
+            "label": "Autoplay desktop",
+            "name": "autoplay_desktop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "style": "",
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_68c7c161ad78f",
+            "label": "Autoplay mobile",
+            "name": "autoplay_mobile",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "translation",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1757922184
 }

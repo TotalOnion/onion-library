@@ -6,8 +6,8 @@
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set sectionStyles =  styleEntryPoint %}
-{{previewEntryPoint}}
 
+{{previewEntryPoint}}
 <style>
 	.{{blockClassName}}.{{block.id}}{
 		{{sectionStyles}}
@@ -22,7 +22,7 @@
 			{% set srcset = gt_image_srcset(image) %}
 			{% set mainImageSrc = gt_image_mainsrc(image) %}
 			<div class="{{blockClassName}}__featured-image-front">
-				<img loading="lazy" class="{{blockClassName}}__featured-image" srcset="{{srcset}}" width="500" height="500" src="{{mainImageSrc}}" sizes="(min-width: 1366px) 50vw, (min-width: 1024px) 400px, 90vw" alt="{{image.alt}}">
+				<img loading="lazy" src="{{mainImageSrc}}" class="{{blockClassName}}__featured-image" srcset="{{srcset}}" width="500" height="500" sizes="(min-width: 1366px) 50vw, (min-width: 1024px) 400px, 90vw" alt="{{image.alt}}">
 			</div>
 			<div class="{{blockClassName}}__featured-image-back">
 				<img class="{{blockClassName}}__featured-image-back-logo" src="{{options.site_logos.site_logo.src}}">

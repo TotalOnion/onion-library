@@ -1,9 +1,8 @@
-
 {% set blockClassName = "accordion-v3" %}
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
-{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 
 {% set backgroundColor = '--background-color: ' ~ fields.accordion_title.background_color ~ ';' %}
@@ -23,30 +22,30 @@
 	}
 </style>
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
-	
-		<div class="{{ blockClassName }}-wrapper">
-			<div class="{{ blockClassName }}-content">
-				<h3 class="{{ blockClassName }}-question-wrapper">
-					<button class="{{ blockClassName }}-question">
+
+	<div class="{{ blockClassName }}-wrapper">
+		<div class="{{ blockClassName }}-content">
+			<h3 class="{{ blockClassName }}-question-wrapper">
+				<button class="{{ blockClassName }}-question">
 					{% set block = block|merge({'id': block.id ~ '-' ~ 1 }) %}
 					{{ include('components/wysiwyg-editor-v3.twig', { fields: fields.title, block, blockClassName}, with_context = false, ignore_missing = true) }}
-						{% if enableCustomIcon %}
-							<div class="{{ blockClassName }}-image-wrapper">
-								<img class="{{ blockClassName }}-image-icon" src="{{imageIcon.src}}" alt="{{imageIcon.alt}}" width="{{imageIcon.width}}" height="{{imageIcon.height}}">
-							</div>
-						{% else %}
-							<div class="{{ blockClassName }}-icon">
-								<div class="{{ blockClassName }}-animation"></div>
-							</div>
-						{% endif %}
-						<div class="{{ blockClassName }}-answer-wrapper" aria-hidden="true">
-					{% set block = block|merge({'id': block.id ~ '-' ~ 2 }) %}
-					{{ include('components/wysiwyg-editor-v3.twig', { fields: fields.text, block, blockClassName}, with_context = false, ignore_missing = true) }}
+					{% if enableCustomIcon %}
+						<div class="{{ blockClassName }}-image-wrapper">
+							<img class="{{ blockClassName }}-image-icon" src="{{imageIcon.src}}" alt="{{imageIcon.alt}}" width="{{imageIcon.width}}" height="{{imageIcon.height}}">
+						</div>
+					{% else %}
+						<div class="{{ blockClassName }}-icon">
+							<div class="{{ blockClassName }}-animation"></div>
+						</div>
+					{% endif %}
+					<div class="{{ blockClassName }}-answer-wrapper" aria-hidden="true">
+						{% set block = block|merge({'id': block.id ~ '-' ~ 2 }) %}
+						{{ include('components/wysiwyg-editor-v3.twig', { fields: fields.text, block, blockClassName}, with_context = false, ignore_missing = true) }}
 					</div>
-					</button>
-				</h3>
-			</div>
+				</button>
+			</h3>
 		</div>
-	
+	</div>
+
 	{{htmlEntryPoint}}
 </section>

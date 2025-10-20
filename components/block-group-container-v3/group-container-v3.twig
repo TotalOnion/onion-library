@@ -32,7 +32,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} cmpl-core-group-container-styles {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
+<{{blockElementType}} {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} cmpl-core-group-container-styles {{classNameEntryPoint}} lazy-fade {{block.id}}" data-blockid="{{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="group-container-v3" data-render-dynamic="{{renderDynamic}}" data-render-dynamic-suffix="{{renderDynamicSuffix}}">
 
 	{% if block %}
 		{% set block = block|merge({'videoIdPrefix' : block.id }) %}
@@ -42,18 +42,19 @@
 			{{layoutStyles}}
 		}
 	</style>
-	<div class="group-container-v3__grid-container {{scrollButtons}} {{layoutClass}} {{block.id}}">
+	<div class="{{blockClassName}}__grid-container cmpl-core-group-container-styles__grid-container {{scrollButtons}} {{layoutClass}} {{block.id}}">
+
 		{% for section in fields.sections %}
 			{% set gridLayoutElement = include('components/grid-layout-element-v3.twig', { fields: section, block }, with_context = false) %}
 			{% if block %}
 				{% set block = block|merge({'anchor' : '', 'id': block.id ~ '-' ~ loop.index }) %}
 			{% endif %}
 			<style>
-				.group-container-v3__block-container.{{block.id}}{
+				.{{blockClassName}}__block-container.{{block.id}}{
 					{{gridLayoutElement}}
 				}
 			</style>
-			<div class="group-container-v3__block-container {{layoutClass}}  {{block.id}}">
+			<div class="{{blockClassName}}__block-container cmpl-core-group-container-styles__block-container {{layoutClass}} {{block.id}}">
 				{% if fields.show_block_numbers and is_preview %}
 					<div class="{{blockClassName}}__block-number">{{ loop.index }}</div>
 				{% endif %}

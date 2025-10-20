@@ -9,7 +9,7 @@ use Timber\Timber;
  * @param string $content content.
  * @param bool $is_preview If it's a preview.
  */
-function athena_block_render_post_object_v3_v3(array $block, string $content = '', bool $is_preview = false, $post_id = 0, $wp_block = false, $context = false, array $extraContext = null): void
+function core_block_render_post_object_v3(array $block, string $content = '', bool $is_preview = false, $post_id = 0, $wp_block = false, $context = false, array $extraContext = null): void
 {
     $context = \Timber\Timber::context();
     $slug = substr($block['name'], 4); // Removes 'acf/' from the name.

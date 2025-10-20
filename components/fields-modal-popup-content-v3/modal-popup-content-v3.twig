@@ -1,0 +1,18 @@
+{% for item in market_settings.modal_popup_content_v3.modal_popup_content_items %}
+	{% set contentId = item.modal_popup_content_id|lower %}
+	<div class="{{ contentId }}-popup" style="display: none;">
+		<div class="{{ contentId }}__content" data-modalpopupcontent="{{ contentId }}">
+			{% if item.acf_fc_layout == 'raw_html' %}
+				{{item.raw_html}}
+			{% endif %}
+			{% if item.acf_fc_layout == 'form_selection' %}
+				{% set data = {'title' : item.title, 'form' : item.form.ID} %}
+				{{ include('blocks/modal-form-v3.twig', { fields: data, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
+			{% endif %}
+			{% if item.acf_fc_layout == 'market_selector_v3' %}
+				{% set data = {'heading_text' : item.heading_text, 'logo' : item.logo, 'selector_type': 'inline'} %}
+				{{ include('blocks/market-selector-v3.twig', { fields: data, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
+			{% endif %}
+		</div>
+	</div>
+{% endfor %}

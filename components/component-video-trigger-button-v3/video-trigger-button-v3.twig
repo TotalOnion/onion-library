@@ -7,7 +7,7 @@
 		{{videoButtonStyles}}
 	}
 </style>
-<button aria-label="video controller play button" data-triggerid="{{videoId}}" class="{{blockClassName}}__video-play-button {{blockClassName}}__video-play-button--{{buttonStyle}} cblvc-video-container__trigger-button" tabindex="0"> 
+<button aria-label="{% if fields.enable_text %}{{fields.play_button_text}}{% endif %}" data-triggerid="{{videoId}}" class="{{blockClassName}}__video-play-button {{blockClassName}}__video-play-button--{{buttonStyle}} cblvc-video-container__trigger-button" tabindex="0">
 	{% if fields.enable_text %}
 		{{fields.play_button_text}}
 	{% endif %}
