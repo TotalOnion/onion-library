@@ -1,9 +1,12 @@
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../../breakpoints';
+
 .spotify-embed-v3 {
 	height: var(--mobile-height, 350px);
-	@include core-mixins.device(breakpoints.$tabPortrait) {
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 		height: var(--tablet-height, 352px);
 	}
-	@include core-mixins.device(breakpoints.$tabLandscape) {
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		height: var(--desktop-height, 352px);
 	}
 }
