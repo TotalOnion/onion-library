@@ -182,7 +182,7 @@
 
 	html {
 		min-height: 100%;
-		container-type: inline-size;
+		// container-type: inline-size;
 		&.lock-position {
 			@include core-mixins-v3.lockPosition();
 		}
