@@ -1,0 +1,9 @@
+.spotify-embed-v3 {
+	height: var(--mobile-height, 350px);
+	@include core-mixins.device(breakpoints.$tabPortrait) {
+		height: var(--tablet-height, 352px);
+	}
+	@include core-mixins.device(breakpoints.$tabLandscape) {
+		height: var(--desktop-height, 352px);
+	}
+}
