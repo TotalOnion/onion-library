@@ -12,7 +12,8 @@
 		{% set animationEasing = '--animation-easing: ' ~ fields.animations.animation_easing_custom|ru ~ ';' %}
 	{% endif %}
 	{% set animationDirection = '--animation-direction: ' ~ fields.animations.animation_direction|ru ~ ';' %}
-	{% set animationsString = animationName ~ animationDuration ~ animationDelay ~ animationRepeat ~ animationEasing ~ animationFillMode ~ animationDirection %}
+	{% set animationTimeline = '--animation-timeline: ' ~ fields.animations.animation_timeline|ru ~ ';' %}
+	{% set animationsString = animationName ~ animationDuration ~ animationDelay ~ animationRepeat ~ animationEasing ~ animationFillMode ~ animationDirection ~ animationTimeline %}
+
 	{{animationsString}}
 {% endif %}
-
