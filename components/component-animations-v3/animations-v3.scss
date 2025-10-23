@@ -143,6 +143,7 @@
 				var(--animation-delay) var(--animation-easing)
 				var(--animation-repeat) var(--animation-fill-mode)
 				var(--animation-direction);
+			animation-timeline: var(--animation-timeline);
 		}
 	}
 }

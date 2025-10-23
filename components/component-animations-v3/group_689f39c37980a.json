@@ -421,6 +421,26 @@
 					"step": "",
 					"prepend": "",
 					"append": ""
+				},
+				{
+					"key": "field_68f9e35d7db0b",
+					"label": "Animation Timeline",
+					"name": "animation_timeline",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "Add your timeline function with the appropriate arguments or leave blank for no timeline.\r\nSee https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": ""
 				}
 			]
 		}
@@ -444,10 +464,9 @@
 	"description": "",
 	"show_in_rest": 0,
 	"acfe_autosync": ["json"],
-	"acfml_field_group_mode": "localization",
 	"acfe_form": 0,
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1761045273
+	"modified": 1761207280
 }

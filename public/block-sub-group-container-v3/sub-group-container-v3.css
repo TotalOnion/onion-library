@@ -97,8 +97,19 @@
     opacity: 1;
   }
 }
+@keyframes reveal-up {
+  from {
+    opacity: 1;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
 .sub-group-container-v3 .cmpl-block-animations.loaded {
   animation: var(--animation-name) var(--animation-duration) var(--animation-delay) var(--animation-easing) var(--animation-repeat) var(--animation-fill-mode) var(--animation-direction);
+  animation-timeline: var(--animation-timeline);
 }
 .sub-group-container-v3__grid-container {
   grid-area: main;
