@@ -14,12 +14,7 @@
 					v-on:click.prevent="clearAllFilters()" :data-layout="filterLayout">
 					{{ showAllText }}
 				</button>
-				<div v-if="
-					filterLayout == 1 ||
-					filterLayout == 2 ||
-					filterLayout == 4 ||
-					filterLayout == 5
-				" :class="`${blockClassName}__filter-categories`" :data-layout="filterLayout">
+				<div :class="`${blockClassName}__filter-categories`" :data-layout="filterLayout">
 					<div v-if="filterLayout == 4" :class="`${blockClassName}__filter-categories-label`">
 						{{ categoriesTitleText }}
 						<button @click="modalOpen = !modalOpen"></button>
@@ -89,17 +84,6 @@
 						</ul>
 					</div>
 					<div :class="`${blockClassName}__filter-subcategories-container`">
-						<!--    <ul v-if="enablePlaceholderFilter">
-								<li :class="`${blockClassName}__filter-subcategory-list-item ${placeholderFilterActiveStatus ? 'active' : ''}`"
-									v-if="enablePlaceholderFilter" data-categoryid="placeholder">
-									<button
-										:class="`${blockClassName}__filter-subcategory-button ${placeholderFilterActiveStatus ? 'active' : ''}  cmpl-cta-style-${categoryButtonStyle}`">
-										Choose country <img v-if="enableFilterIcon" :src="ctaIcons.cta_filter_icon"
-											:class="`${blockClassName}__filter-subcategory-button-icon style-svg`">
-									</button>
-	
-								</li>
-							</ul>-->
 						<ul v-for="(topCategory, index) in computedCategories?.topLevelCategories" v-bind:key="index"
 							@click="toggleSubcategoryListContainer(topCategory?.term_id)" :class="`${blockClassName}__filter-subcategory-list ${topLevelCategoryActiveStatus(topCategory?.term_id)
 								? blockClassName + '__filter-subcategory-list--active'
@@ -124,28 +108,6 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-		</div>
-
-		<div :class="`${blockClassName}__featured-post`" v-if="enableFeaturedPost && activeFilterCategories.length < 1"
-			:style="featuredPostBackgroundColour">
-			<TransitionGroup>
-				<div :class="`${blockClassName}__featured-post-container`" v-if="featuredPost">
-					<FeaturedPostComponent :featuredpost="featuredPost" :fields="fields" :options="options"
-						:mappedIcons="mappedIcons" :ctaStyles="ctaStyles" :ctaIcons="ctaIcons">
-					</FeaturedPostComponent>
-				</div>
-			</TransitionGroup>
-		</div>
-
-		<div :class="`${blockClassName}__market-toggle`" v-if="showMarketToggle">
-			<div :class="`${blockClassName}__switch`">
-				<span :class="`${blockClassName}__switch-text`">All Products</span>
-				<label :class="`${blockClassName}__switch-toggle`">
-					<input type="checkbox" v-model="showAllMarkets" @change="onMarketToggle" />
-					<span class="switch-slider"></span>
-				</label>
-				<span :class="`${blockClassName}__switch-text`">Local Products</span>
 			</div>
 		</div>
 
@@ -191,14 +153,7 @@
 
 <script setup>
 import { ref, reactive, onMounted, useAttrs, computed, watch } from "vue";
-// import likes from "WpPlugins/cbl-better-reviews/public/src/modules/likes.js";
-// import reviews from "WpPlugins/cbl-better-reviews/public/src/modules/reviews.js";
-// import shop from "Assets/js/modules/library-modules/shopify/shop.js";
-// import reviewModal from "WpPlugins/cbl-better-reviews/public/src/modules/review-modal.js";
-// import reservebarPopup from "Assets/js/modules/library-modules/reservebar-popup/reservebar-popup.js";
-// import { isWpAdmin, ctbCTAClickHandler } from "@pernod-ricard-global-cms/jsutils";
 import PostComponent from "./post-type-filter-grid-v3/post-component.vue";
-import FeaturedPostComponent from "./post-type-filter-grid-v3/featured-post-component.vue";
 import TextSearch from "./post-type-filter-grid-v3/text-search.vue";
 
 // get content data from window
@@ -247,7 +202,6 @@ const allPosts = reactive({ items: ptfgData.posts });
 const allProducts = ptfgData.allProducts;
 const postDataConfig = ptfgData.postDataConfig;
 const allCategories = ptfgData.taxonomies;
-const featuredPost = ptfgData.featuredPost;
 const mappedIcons = ptfgData.mappedIcons;
 const ctaStyles = ptfgData.ctaStyles;
 const totalPosts = ptfgData.total;
@@ -269,17 +223,15 @@ const topLevelCategoryButtonStyle = fields.top_level_category_button_style
 	.replace("__", "");
 const categoryButtonStyle = fields.category_button_style?.toString().replace("__", "");
 const loadMoreButtonStyle = fields.load_more_button_style?.toString().replace("__", "");
-// const loadMoreAnimationStyle =
-// 	ctaStyles[parseInt(loadMoreButtonStyle) - 1]?.cta_settings
-// 		?.cta_animation_style;
-const loadMoreAnimationStyle = 1;
+const loadMoreAnimationStyle =
+	ctaStyles[parseInt(loadMoreButtonStyle) - 1]?.cta_settings
+		?.cta_animation_style;
 const toggleFilterButtonStyle = fields.toggle_filter_button_style
 	?.toString()
 	.replace("__", "");
 const showAllButtonStyle = fields.show_all_button_style?.toString().replace("__", "");
 const enableLoadMoreButton = fields.enable_load_more_button;
 const showFilters = fields.show_filters;
-const showMarketToggle = fields.show_market_toggle;
 const showTopLevelFilters = fields.show_top_level_filters;
 const topLevelFiltersActiveOnLoad = fields.top_level_filters_active_on_load;
 const singleActiveTopLevelCategory = fields.single_active_top_level_category;
@@ -304,10 +256,7 @@ const enableFilterIcon = fields.enable_filter_icon;
 const enableTopLevelFilterIcon = fields.enable_top_level_filter_icon;
 const enableStartingFilter = fields.enable_starting_filter;
 const enablePlaceholderFilter = fields.enable_placeholder_filter;
-const enableShopify = JSON.parse(localStorage.getItem("enableShopify"));
 const placeholderFilterText = fields.placeholder_filter_text;
-const enableFeaturedPost = fields.enable_featured_post;
-const featuredPostBackgroundColour = `--featured-post-background-colour: ${fields.featured_post_background_colour}`;
 const initialPostsPerPageDesktop = fields.initial_posts_per_page_desktop;
 const initialPostsPerPageTablet = fields.initial_posts_per_page_portrait;
 const initialPostsPerPageMobile = fields.initial_posts_per_page_mobile;
@@ -315,16 +264,6 @@ const postsPerPageDesktop = showAllPosts ? 999999 : Number(fields.posts_per_page
 const postsPerPageTablet = showAllPosts ? 999999 : Number(fields.posts_per_page_tablet);
 const postsPerPageMobile = showAllPosts ? 999999 : Number(fields.posts_per_page_mobile);
 const loadedCategories = [];
-const subFilterOverflowMobileValue = fields.sub_filter_overflow ? fields.sub_filter_overflow.mobile_overflow.toString().replace("__", "") : 'scroll';
-const subFilterOverflowTabletValue = fields.sub_filter_overflow ? fields.sub_filter_overflow.tablet_overflow.toString().replace("__", "") : 'scroll';
-const subFilterOverflowDesktopValue = fields.sub_filter_overflow ? fields.sub_filter_overflow.desktop_overflow.toString().replace("__", "") : 'scroll';
-const subFilterOverflowMobile = `--sub-filter-overflow-mobile: ${subFilterOverflowMobileValue};`;
-const subFilterOverflowTablet = `--sub-filter-overflow-tablet: ${subFilterOverflowTabletValue};`;
-const subFilterOverflowDesktop = `--sub-filter-overflow-desktop: ${subFilterOverflowDesktopValue};`;
-const subFilterOverflowCenterMobile = `--sub-filter-overflow-center-mobile: ${subFilterOverflowMobileValue === 'wrap' ? 'center' : ''};`;
-const subFilterOverflowCenterTablet = `--sub-filter-overflow-center-tablet: ${subFilterOverflowTabletValue === 'wrap' ? 'center' : ''};`;
-const subFilterOverflowCenterDesktop = `--sub-filter-overflow-center-desktop: ${subFilterOverflowDesktopValue === 'wrap' ? 'center' : ''};`;
-const subFilterOverflowStyles = subFilterOverflowMobile + subFilterOverflowTablet + subFilterOverflowDesktop + subFilterOverflowCenterMobile + subFilterOverflowCenterTablet + subFilterOverflowCenterDesktop
 
 let devicePostsPerPage = postsPerPageDesktop;
 let deviceInitialPostsPerPage = initialPostsPerPageDesktop;
@@ -365,11 +304,6 @@ const computedAllPosts = computed(() => {
 });
 const computedFilteredPosts = computed(() => {
 	let computedPosts = computedAllPosts.value;
-	if (enableFeaturedPost) {
-		computedPosts = computedAllPosts.value.filter(
-			(post) => post.post_data.ID != fields.featured_post
-		);
-	}
 	const posts = filterPosts(computedPosts, activeFilterCategories.value);
 	return sortPosts(posts);
 });
@@ -406,13 +340,6 @@ const resetPage = () => {
 	window.history.pushState({}, "", path);
 };
 
-const computedFeaturedPost = computed(() => {
-	const featuredPost = computedAllPosts.value.filter(
-		(post) => post.id == fields.featured_post
-	);
-	const [post] = featuredPost;
-	return post;
-});
 
 const computedProducts = computed(() => {
 	// const updatedProducts = [];
@@ -522,14 +449,6 @@ const filterPosts = (posts, filterCategoryIds = activeFilterCategories.value) =>
 		});
 	}
 	filteredPosts = searchTerm == null ? filteredPosts : textFilteredPosts;
-	setTimeout(() => {
-		const gridContainer = document.querySelector(".post-type-filter-grid-v3__grid");
-		ctbCTAClickHandler(gridContainer);
-		reservebarPopup();
-		if (enableShopify) {
-			refreshShopifyBuyButtons();
-		}
-	}, 50);
 
 	return filteredPosts;
 };
@@ -553,12 +472,7 @@ const incrementLoadMoreStatus = () => {
 	const url = new URL(window.location);
 	loadMoreStatus.value = Number(loadMoreStatus.value) + 1;
 	url.searchParams.set("pages", loadMoreStatus.value);
-	setTimeout(() => {
-		reviews.init();
-		if (enableShopify) {
-			refreshShopifyBuyButtons();
-		}
-	}, 0);
+
 	if (!isWpAdmin()) {
 		window.history.pushState({}, "", url);
 	}
@@ -805,7 +719,7 @@ const loadMorePosts = async (currentCategoryId = null, { replace = false } = {})
 	form_data.append("includeReviews", ptfgData.includeReviews);
 	form_data.append("reviewDisplayOptions", ptfgData.reviewDisplayOptions);
 	form_data.append("limitPostsToSelectedCategories", fields.limit_posts_to_selected_categories);
-	form_data.append("currentMarket", showAllMarkets.value ? "en" : ptfgData.currentMarket);
+	form_data.append("currentMarket", ptfgData.currentMarket);
 
 	form_data.append(
 		"categoryIds",
@@ -839,12 +753,7 @@ const loadMorePosts = async (currentCategoryId = null, { replace = false } = {})
 				];
 				allPosts.items = sortPosts(mergedArray); // Merge as usual
 			}
-			setTimeout(() => {
-				reviews.init();
-				if (enableShopify) {
-					refreshShopifyBuyButtons();
-				}
-			}, 0);
+
 			isLoading.value = false;
 		}
 	} catch (e) {
@@ -892,47 +801,9 @@ const scrollBackToStart = () => {
 	}
 }
 
-const refreshShopifyBuyButtons = () => {
-	postDataConfig.forEach((item) => {
-		if (item.acf_fc_layout === "shopify_add_to_cart") {
-			document.dispatchEvent(
-				new Event('shop-refresh')
-			)
-		}
-	})
-}
-
-const showAllMarkets = ref(false);
-const onMarketToggle = async () => {
-	isLoading.value = true;
-	page.value = 1;
-	resetPage();
-	const previousPosts = [...allPosts.items];
-	try {
-		await loadMorePosts(null, { replace: true });
-		isLoading.value = false;
-	} catch (e) {
-		console.error("Market toggle failed:", e);
-		allPosts.items = previousPosts;
-		isLoading.value = false;
-	}
-};
-
 onMounted(() => {
 	getLoadMoreStatusParam();
 	setupFilterLayout();
-	reservebarPopup();
-
-
-	setTimeout(() => {
-		reviews.init();
-		if (enableShopify) {
-			shop.loadShops();
-			refreshShopifyBuyButtons();
-		}
-		if (!allPosts.items.length) {
-			loadMorePosts();
-		}
-	}, 500);
+	loadMorePosts();
 });
 </script>
