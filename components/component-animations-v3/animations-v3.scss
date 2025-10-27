@@ -138,7 +138,7 @@
 			}
 		}
 
-		&.loaded {
+		&.trigger-animation {
 			animation: var(--animation-name) var(--animation-duration)
 				var(--animation-delay) var(--animation-easing)
 				var(--animation-repeat) var(--animation-fill-mode)
