@@ -14,7 +14,7 @@
 	{{ include('components/video-component-v3.twig', { fields, block, blockClassName }, with_context = false) }}
 {% endif %}
 {% if (fields.enable_content_box and fields.content_sections|length > 0) %}
-	{{ include('components/content-box-v3.twig', { fields, block, options, market_settings, cta_styles, blockClassName, nav_menus, languages }, with_context = false) }}
+	{{ include('components/content-box-v3.twig', { fields, block, options, cta_styles, blockClassName, nav_menus, languages }, with_context = false) }}
 {% endif %}
 {% if fields.animations.enable_animations %}
 	{{ include('components/animations-style-v3.twig', { fields, block, blockClassName }, with_context = false) }}

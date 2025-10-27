@@ -430,7 +430,15 @@
 					"type": "text",
 					"instructions": "Add your timeline function with the appropriate arguments or leave blank for no timeline.\r\nSee https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline",
 					"required": 0,
-					"conditional_logic": 0,
+					"conditional_logic": [
+						[
+							{
+								"field": "field_689f39c38fbd7",
+								"operator": "==",
+								"value": "1"
+							}
+						]
+					],
 					"wrapper": {
 						"width": "",
 						"class": "",
@@ -468,5 +476,5 @@
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1761207280
+	"modified": 1761217399
 }

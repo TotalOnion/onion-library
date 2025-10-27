@@ -39,7 +39,7 @@
 			<div class="{{ blockClassName }}__inner">
 				<div class="{{ blockClassName }}__wrapper">
 					{% if fields.enable_title %}
-						{{ include('blocks/standard-content-v3.twig', { fields: fields.form_title, options, block, is_preview, current_post, nav_menus, site, market_settings, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
+						{{ include('blocks/standard-content-v3.twig', { fields: fields.form_title, options, block, is_preview, post, nav_menus, site, market_slug, cta_styles, languages, imageSizes}, with_context = false, ignore_missing = true) }}
 					{% endif %}
 					{% if fields.title %}
 						<h2 class="{{ blockClassName }}__title">{{ fields.title }}</h2>

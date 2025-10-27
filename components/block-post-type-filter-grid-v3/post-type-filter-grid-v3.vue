@@ -202,6 +202,7 @@ const allPosts = reactive({ items: ptfgData.posts });
 const allProducts = ptfgData.allProducts;
 const postDataConfig = ptfgData.postDataConfig;
 const allCategories = ptfgData.taxonomies;
+const featuredPost = ptfgData.featuredPost;
 const mappedIcons = ptfgData.mappedIcons;
 const ctaStyles = ptfgData.ctaStyles;
 const totalPosts = ptfgData.total;
@@ -304,6 +305,7 @@ const computedAllPosts = computed(() => {
 });
 const computedFilteredPosts = computed(() => {
 	let computedPosts = computedAllPosts.value;
+
 	const posts = filterPosts(computedPosts, activeFilterCategories.value);
 	return sortPosts(posts);
 });

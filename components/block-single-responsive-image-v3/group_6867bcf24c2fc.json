@@ -174,7 +174,7 @@
         },
         {
             "key": "field_6867bcf259d1a",
-            "label": "Block settings",
+            "label": "Block",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -186,13 +186,9 @@
                 "class": "",
                 "id": ""
             },
-            "user_roles": [
-                "administrator"
-            ],
             "open": 0,
             "multi_expand": 0,
-            "endpoint": 0,
-            "wpml_cf_preferences": 3
+            "endpoint": 0
         },
         {
             "key": "field_6867bcf25a085",
@@ -208,7 +204,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "clone": [
                 "group_689f649af2ac4"
             ],
@@ -224,7 +219,7 @@
         },
         {
             "key": "field_6867bcf25a500",
-            "label": "Block settings end",
+            "label": "Block end",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -236,10 +231,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "administrator"
-            ],
             "open": 0,
             "multi_expand": 0,
             "endpoint": 1
@@ -263,13 +254,13 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759402930
+    "modified": 1761474179
 }

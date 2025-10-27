@@ -1,5 +1,7 @@
 <script>
-export default function (props) { }
+export default function (props) {
+	console.log('pointless default function');
+}
 export function gridLayoutElement(props) {
 	const element = props.element;
 	return `
@@ -22,6 +24,7 @@ export function gridLayoutElement(props) {
 	--grid-horizontal-placement-desktop: ${element.grid_layout_element?.grid_horizontal_placement?.slice(2)};
 	--grid-vertical-placement-desktop: ${element.grid_layout_element?.grid_vertical_placement?.slice(2)};`;
 }
+
 export function textEditorStyles(props) {
 	const element = props.element;
 	const textColourType = props.element?.text_style?.text_colour?.slice(2);

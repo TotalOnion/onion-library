@@ -48,7 +48,7 @@
 				}
 			</style>
 			<div class="{{blockClassName}}__block-container cmpl-core-group-container-styles__block-container {{block.id}}">
-				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, is_preview, current, nav_menus, site, cta_styles, global_settings, market_settings, languages, imageSizes, loop: loop.index }, with_context = false, ignore_missing = true) }}
+				{{ include('blocks/' ~ (section.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: section, options, block, post, is_preview, site, cta_styles, languages, imageSizes, loop: loop.index }, with_context = false, ignore_missing = true) }}
 			</div>
 		{% endfor %}
 	</div>

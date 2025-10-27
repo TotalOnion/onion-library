@@ -3,7 +3,7 @@
 {% set displaytype = 'grid' %}
 
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, cta_styles, environment, market_settings, is_preview, nav_menus, imageSizes }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, cta_styles, environment,  is_preview, nav_menus, imageSizes }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
@@ -15,7 +15,6 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{ block.anchor ? 'id=' ~ block.anchor : '' }} data-assetkey="{{blockClassName}}" class="{{blockClassName}} {{block.className}} {{fields.section_class}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{ block.id }} lazy-fade" {{dataAttributeEntryPoint}}>
-
+<section {{ block.anchor ? 'id=' ~ block.anchor : '' }} class="{{blockClassName}} {{fields.section_class}} {{classNameEntryPoint}} {{ block.id }} lazy-fade" {{dataAttributeEntryPoint}} data-assetkey="{{blockClassName}}">
 	{{htmlEntryPoint}}
 </section>

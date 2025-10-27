@@ -5,7 +5,7 @@
 	}
 </style>
 {% set currentBlockId = block.id %}
-<div class="{{blockClassName}}__inner-container {{block.id}} XX">
+<div class="{{blockClassName}}__inner-container {{block.id}}">
 	{% for item in fields.content_sections %}
 		{% if block %}
 			{% set block = block|merge({'anchor' : ''}) %}
@@ -18,6 +18,6 @@
 		{% else %}
 			{% set path = 'components' %}
 		{% endif %}
-		{{ include(path ~ '/' ~ (item.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: item, block, contentImageSizes, blockClassName, options, nav_menus, market_settings, cta_styles, current_post, languages}, with_context = false, ignore_missing = true) }}
+		{{ include(path ~ '/' ~ (item.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: item, block, contentImageSizes, blockClassName, options, nav_menus, cta_styles}, with_context = false, ignore_missing = true) }}
 	{% endfor %}
 </div>

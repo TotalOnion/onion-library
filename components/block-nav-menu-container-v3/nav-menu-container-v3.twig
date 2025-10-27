@@ -17,11 +17,7 @@
 	{% if menuType == 'inline_nav_menu' %}
 		{{ include( 'components/inline-nav-menu.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
 	{% elseif menuType == 'slide_in_nav_panel'%}
-		{# {{ include( 'components/slide-in-nav-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }} #}
-		<!-- nav-menu-slide-in-panel -->
 		{{ include( 'components/nav-menu-slide-in-panel.twig', { fields, block, blockClassName, options, nav_menus, current_post}, with_context = false, ignore_missing = true) }}
-		<!-- end-nav-menu-slide-in-panel -->
-		{% elseif menuType == 'nav_menu_slide_in_panel' %}
 	{% endif %}
 	{{htmlEntryPoint}}
 </section>
