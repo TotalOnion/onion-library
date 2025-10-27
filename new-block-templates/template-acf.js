@@ -8,7 +8,7 @@ acf_register_block_type(
 			newBlockName.charAt(0).toUpperCase() +
 			newBlockName.slice(1).replaceAll('-', ' ')
 		}', '${projectName} Admin' ),
-		'render_callback' => 'athena_block_render_post_object_v3',
+		'render_callback' => 'core_block_render_post_object_v3',
 		'category'        => 'common',
 		'icon'            => get_svg_icon_content('brick.svg'),
 		'keywords'        => array('content', 'text' ),
