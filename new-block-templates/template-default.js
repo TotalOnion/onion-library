@@ -12,20 +12,10 @@ module.exports = {
 }`;
 	},
 	defaultscss: function (newBlockName) {
-		return `// @use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
-// @use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
-// @use 'Assets/scss/theme/breakpoints';
-@use 'Assets/scss/blocks/${newBlockName}/${newBlockName}-extra';
+		return `// @use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3'; 
+// @use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
+// @use 'NodeModules/@total_onion/onion-library/breakpoints';
 .${newBlockName} {
-	@include ${newBlockName}-extra.additionalStyles();
-}`;
-	},
-	defaultextrascss: function (newBlockName) {
-		return `@use 'Assets/scss/modules/library-modules/core-mixins-v3/core-mixins-v3'; 
-@use 'Assets/scss/modules/library-modules/core-functions-v3/core-functions-v3';
-@use 'Assets/scss/theme/breakpoints';
-@mixin additionalStyles() {
-	
 }`;
 	}
 };
