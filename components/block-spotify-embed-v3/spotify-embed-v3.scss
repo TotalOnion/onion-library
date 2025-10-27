@@ -3,7 +3,6 @@
 @use '../fields-core-functions-v3/core-functions-v3';
 
 .spotify-embed-v3 {
-	height: 100%;
 	max-width: core-functions-v3.fluidSize(1086);
 	margin: auto;
 	iframe {

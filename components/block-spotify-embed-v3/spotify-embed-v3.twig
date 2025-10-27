@@ -3,10 +3,7 @@
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
-{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
-{% set desktopHeight = fields.desktop_height|default(352) %}
-{% set tabletHeight = fields.tablet_height|default(352) %}
-{% set mobileHeight = fields.mobile_height|default(350) %}
+
 
 {% set sectionStyles =  styleEntryPoint %}
 
@@ -18,8 +15,6 @@
 </style>
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-	<iframe style="border-radius:12px; --desktop-height: {{desktopHeight}}px;--tablet-height: {{tabletHeight}}px;--mobile-height: {{mobileHeight}}px" src="{{fields.embed_url}}" class="spotify-embed" width="100%" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-
+	<iframe style="border-radius:12px;" height="{{fields.height}}" src="{{fields.embed_url}}" class="spotify-embed" width="100%" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 	{{htmlEntryPoint}}
 </section>
