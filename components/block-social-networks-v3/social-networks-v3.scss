@@ -1,5 +1,7 @@
 @use '../component-social-networks-v3/social-networks-v3';
 
 .social-networks-v3 {
+	display: flex;
+	gap: 10px;
 	@include social-networks-v3.socialNetworksV3();
 }
