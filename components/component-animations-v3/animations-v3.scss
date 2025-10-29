@@ -137,6 +137,18 @@
 				clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
 			}
 		}
+		@keyframes reveal-up-and-slide {
+			from {
+				opacity: 1;
+				transition: -100%;
+				clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+			}
+			100% {
+				opacity: 1;
+				transition: 0%;
+				clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+			}
+		}
 
 		&.trigger-animation {
 			animation: var(--animation-name) var(--animation-duration)
