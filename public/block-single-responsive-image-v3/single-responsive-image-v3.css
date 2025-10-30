@@ -9,7 +9,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  min-height: 100%;
+  min-height: 0;
   display: flex;
   z-index: var(--image-z-index);
   border: calc(var(--image-border-width) / var(--desktop-design-reference) * var(--screen-width-static)) var(--image-border-style) var(--image-border-colour);
