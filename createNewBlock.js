@@ -1,6 +1,6 @@
 require('dotenv').config();
 const fs = require('fs');
-const { globSync } = require('glob');
+const {globSync} = require('glob');
 const yargs = require('yargs');
 const {exec} = require('child_process');
 const swiperTemplates = require('./new-block-templates/template-swiper');
@@ -55,13 +55,14 @@ templateOptions.forEach((option) => {
 	}
 });
 
-const dynamicEntryPoints = globSync(`${themePath}/assets/js/blocks/*.js`)
-	.map((path) => {
+const dynamicEntryPoints = globSync(`${themePath}/assets/js/blocks/*.js`).map(
+	(path) => {
 		const assetKey = path
 			.replace('assets/js/blocks/', '')
 			.replace('.js', '');
 		return assetKey;
-	});
+	}
+);
 const newBlockName = process.argv[2]?.toLowerCase();
 const blockType = process.argv[3];
 
@@ -126,10 +127,7 @@ fs.writeFileSync(
 if (!fs.existsSync(`${themePath}/assets/scss/blocks/${newBlockName}`)) {
 	fs.mkdirSync(`${themePath}/assets/scss/blocks/${newBlockName}`);
 }
-fs.writeFileSync(
-	`${themePath}/assets/scss/blocks/${newBlockName}/${newBlockName}-extra.scss`,
-	defaultTemplates.defaultextrascss(newBlockName)
-);
+
 fs.writeFileSync(
 	`${themePath}/views/blocks/${newBlockName}.twig`,
 	templateData
