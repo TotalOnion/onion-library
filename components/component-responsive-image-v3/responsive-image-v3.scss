@@ -8,7 +8,7 @@
 		grid-area: var(--image-grid-area, main);
 		position: var(--image-position, relative);
 		inset: 0;
-		min-height: 100%;
+		min-height: 0;
 		display: flex;
 		z-index: var(--image-z-index);
 		border: core-functions-v3.fluidSize(var(--image-border-width), 'static')
