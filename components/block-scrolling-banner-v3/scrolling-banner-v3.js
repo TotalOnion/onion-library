@@ -63,7 +63,7 @@ function scrollingbannerJs(block) {
 		const inner = bannerElement.querySelector(
 			'.scrolling-banner-v3__inner'
 		);
-		const speed = bannerElement.dataset.speed ?? 5;
+		const speed = bannerElement.dataset.speed ?? 3;
 
 		const wrapperWidth = wrapper.clientWidth;
 		const innerContentWidth = inner.clientWidth;
@@ -82,28 +82,34 @@ function scrollingbannerJs(block) {
 		newTickerContainer.classList.add('clone');
 		wrapper.appendChild(newTickerContainer);
 
-		const animation = [
-			{transform: `translateX(0%)`},
-			{transform: `translateX(-200%)`}
+		const animation1 = [
+			{ transform: 'translateX(0%)' },
+			{ transform: 'translateX(-100%)' }
+		];
+		const animation2 = [
+			{ transform: 'translateX(100%)' },
+			{ transform: 'translateX(0%)' }
 		];
 
 		const time = 100000 / speed;
 
 		let timing = {
 			duration: time,
-			iterations: Infinity
+			iterations: Infinity,
+			fill: 'both'
 		};
-		let timing2 = {
-			duration: time,
-			delay: time / 2,
-			iterations: Infinity
-		};
+		let timing2 = timing;
 		const containers = bannerElement.querySelectorAll(
 			'.scrolling-banner-v3__container'
 		);
+		// Ensure initial positions are applied so content is visible immediately
+		containers[0].style.transform = 'translateX(0%)';
+		containers[1].style.transform = 'translateX(100%)';
+		// Force style application before animations start
+		void containers[0].offsetWidth;
 
-		const anim1 = containers[0].animate(animation, timing);
-		const anim2 = containers[1].animate(animation, timing2);
+		const anim1 = containers[0].animate(animation1, timing);
+		const anim2 = containers[1].animate(animation2, timing2);
 
 		// set as initialized and store animation for a possible cleanup
 		initializedBanners.set(bannerElement, {anim1, anim2});
