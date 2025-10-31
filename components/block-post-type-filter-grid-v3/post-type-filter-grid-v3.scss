@@ -1,9 +1,9 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/breakpoints';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 // @use 'Assets/scss/modules/library-modules/core-gradient-designer/core-gradient-designer';
-@use 'NodeModules/@total_onion/onion-library/components/component-grid-layout-element-v3/grid-layout-element-v3';
-@use 'NodeModules/@total_onion/onion-library/components/component-element-positioning-v3/element-positioning-v3';
+@use '../component-grid-layout-element-v3/grid-layout-element-v3';
+@use '../component-element-positioning-v3/element-positioning-v3';
 
 .post-type-filter-grid-v3 {
 	z-index: 10;
@@ -768,13 +768,7 @@
 		@include grid-layout-element-v3.gridLayoutElement();
 		z-index: 2;
 
-		&:not(
-			.post-type-filter-grid-v3__post-link,
-			.post-type-filter-grid-v3__product-buy-now,
-			.post-type-filter-grid-v3__post-image-container-link,
-			.post-type-filter-grid-v3__post-tags,
-			.post-type-filter-grid-v3__shopify
-		) {
+		&:not(.post-type-filter-grid-v3__post-link, .post-type-filter-grid-v3__product-buy-now, .post-type-filter-grid-v3__post-image-container-link, .post-type-filter-grid-v3__post-tags, .post-type-filter-grid-v3__shopify) {
 			* {
 				width: 100%;
 				// @include core-mixins-v3.textStyle();
