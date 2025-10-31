@@ -98,6 +98,9 @@
 		<{{accentImageContainerElement}}
 			{{accentImageCtaType == 'link' ? 'href="' ~ image.accent_image_link.url ~ '" ' ~ 'target="' ~ image.accent_image_link.target ~ '" ' : ''}}
             class="{{block.id}}-{{ loop.index }} {{blockClassName}}__accent-image">
+			{% if image.inline_raw_svg %}
+				{{fn('get_raw_svg', accentImage.id, blockClassName ~ '__image-element element')}}
+			{% else %}
             <img
                 class="{{block.id}}-{{ loop.index }} {{blockClassName}}__image-element element"
                 src="{{ accentImage.src }}"
@@ -106,9 +109,11 @@
                 alt="{{ accentImage.alt }}"
 				loading="lazy"
             />
+			{% endif %}
+			
 			{% if fields.accent_image_v3.show_image_number and is_preview %}
 				<div class="{{blockClassName}}__image-number">{{ loop.index }}</div>
 			{% endif %}
        	</{{accentImageContainerElement}}>
-		{% endfor %}
-	{% endif %}
+	{% endfor %}
+{% endif %}
