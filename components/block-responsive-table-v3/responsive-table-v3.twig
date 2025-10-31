@@ -17,11 +17,16 @@
 
 {% set elementStyles =  textStyle  %}
 
-
 {% set sectionStyles =  styleEntryPoint ~ elementStyles ~ columnCount ~ bgColourItems ~ bgColourHeader ~ spacingGapDesktop %}
 
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
 
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+
 	<div class="{{ blockClassName }}__wrapper" style=" {{columnCount}}" aria-hidden="true">
 		<div class="{{ blockClassName }}__headings ">
 			{% for field in fields.headings %}
@@ -36,10 +41,7 @@
 					<div class="{{ blockClassName }}__item-value">{{element.item_value}}</div>
 				{% endfor %}
 			</div>
-
 		{% endfor %}
-
-
 	</div>
 	{{htmlEntryPoint}}
 </section>

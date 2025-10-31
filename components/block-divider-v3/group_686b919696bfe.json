@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_686b9196a0bc8",
-            "label": "Block Settings",
+            "label": "Divider Settings",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -16,10 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "placement": "top",
             "endpoint": 0,
             "no_preference": 0,
@@ -58,7 +54,9 @@
             "allow_custom": 0,
             "search_placeholder": "",
             "min": "",
-            "wpml_cf_preferences": 3
+            "wpml_cf_preferences": 3,
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_686b9196a140d",
@@ -93,7 +91,10 @@
             "allow_null": 1,
             "theme_colors": 0,
             "colors": [],
-            "wpml_cf_preferences": 3
+            "wpml_cf_preferences": 3,
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_686b9196a17fd",
@@ -176,7 +177,9 @@
             "prepend": "",
             "append": "",
             "min": "",
-            "max": ""
+            "max": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_686b9196a1fcc",
@@ -380,7 +383,9 @@
             "prepend": "",
             "append": "",
             "min": "",
-            "max": ""
+            "max": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_686b9196a373c",
@@ -417,7 +422,9 @@
             "prepend": "",
             "append": "",
             "min": "",
-            "max": ""
+            "max": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_686b9196a3b2a",
@@ -777,7 +784,7 @@
                     {
                         "field": "field_686b9196a104c",
                         "operator": "==",
-                        "value": "__colour"
+                        "value": "__colour-picker"
                     }
                 ]
             ],
@@ -786,12 +793,8 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
-            "user_roles": [
-                "all"
-            ],
             "clone": [
-                "group_638f4148bc10b"
+                "group_689f66f3e26df"
             ],
             "display": "seamless",
             "layout": "block",
@@ -863,7 +866,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/divider"
+                "value": "acf\/divider-v3"
             }
         ]
     ],
@@ -876,13 +879,13 @@
     "active": true,
     "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1751880107
+    "modified": 1761760329
 }

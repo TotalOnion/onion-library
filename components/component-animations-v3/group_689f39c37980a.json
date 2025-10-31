@@ -1,480 +1,499 @@
 {
-	"key": "group_689f39c37980a",
-	"title": "Component: Animations v3",
-	"fields": [
-		{
-			"key": "field_689f39c38dfbb",
-			"label": "Animations",
-			"name": "animations",
-			"aria-label": "",
-			"type": "group",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
-			"layout": "block",
-			"acfe_seamless_style": 0,
-			"acfe_group_modal": 0,
-			"acfe_group_modal_close": 0,
-			"acfe_group_modal_button": "",
-			"acfe_group_modal_size": "large",
-			"sub_fields": [
-				{
-					"key": "field_689f39c38fbd7",
-					"label": "Enable animations",
-					"name": "enable_animations",
-					"aria-label": "",
-					"type": "true_false",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": 0,
-					"wrapper": {
-						"width": "",
-						"class": "",
-						"id": ""
-					},
-					"message": "",
-					"default_value": 0,
-					"ui_on_text": "",
-					"ui_off_text": "",
-					"ui": 1,
-					"style": "",
-					"wpml_cf_preferences": 3
-				},
-				{
-					"key": "field_689f39c38ff69",
-					"label": "Animation name",
-					"name": "animation_name",
-					"aria-label": "",
-					"type": "select",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__fade-in": "Fade In",
-						"__fade-in-left": "Fade in left",
-						"__fade-in-right": "Fade in right",
-						"__fade-in-up": "Fade in  up",
-						"__fade-in-down": "Fade in down",
-						"__rotate": "Rotate",
-						"__scale-in": "Scale in",
-						"__reveal-up": "Reveal Up",
-						"__custom": "Custom"
-					},
-					"default_value": "__fade-in",
-					"return_format": "value",
-					"multiple": 0,
-					"max": "",
-					"prepend": "",
-					"append": "",
-					"allow_null": 0,
-					"ui": 0,
-					"ajax": 0,
-					"placeholder": "",
-					"allow_custom": 0,
-					"search_placeholder": "",
-					"min": ""
-				},
-				{
-					"key": "field_689f39c39039e",
-					"label": "Custom animation (keyframe)",
-					"name": "custom_animation",
-					"aria-label": "",
-					"type": "acfe_code_editor",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38ff69",
-								"operator": "==",
-								"value": "__custom"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 2,
-					"default_value": "{\r\n    from {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}",
-					"placeholder": "{\r\n    from {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}",
-					"mode": "css",
-					"lines": 1,
-					"indent_unit": 4,
-					"maxlength": "",
-					"rows": 9,
-					"max_rows": "",
-					"return_format": ["htmlentities"]
-				},
-				{
-					"key": "field_689f39c39073b",
-					"label": "Animation duration",
-					"name": "animation_duration",
-					"aria-label": "",
-					"type": "range",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"default_value": 1,
-					"min": 0,
-					"max": 10,
-					"step": "0.1",
-					"prepend": "",
-					"append": ""
-				},
-				{
-					"key": "field_689f39c390b34",
-					"label": "Animation delay",
-					"name": "animation_delay",
-					"aria-label": "",
-					"type": "range",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"default_value": 0,
-					"min": 0,
-					"max": 10,
-					"step": "0.1",
-					"prepend": "",
-					"append": ""
-				},
-				{
-					"key": "field_689f39c390f17",
-					"label": "Animation fill mode",
-					"name": "animation_fill_mode",
-					"aria-label": "",
-					"type": "select",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__forwards": "Forwards",
-						"__none": "None"
-					},
-					"default_value": "__forwards",
-					"return_format": "value",
-					"multiple": 0,
-					"max": "",
-					"allow_custom": 0,
-					"search_placeholder": "",
-					"prepend": "",
-					"append": "",
-					"allow_null": 0,
-					"ui": 1,
-					"ajax": 1,
-					"placeholder": "",
-					"min": ""
-				},
-				{
-					"key": "field_689f39c391309",
-					"label": "Animation direction",
-					"name": "animation_direction",
-					"aria-label": "",
-					"type": "select",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__normal": "Normal",
-						"__reverse": "Reverse",
-						"__alternate": "Alternate",
-						"__alternate-reverse": "Alternate reverse"
-					},
-					"default_value": "__forwards",
-					"return_format": "value",
-					"multiple": 0,
-					"max": "",
-					"allow_custom": 0,
-					"search_placeholder": "",
-					"prepend": "",
-					"append": "",
-					"allow_null": 0,
-					"ui": 1,
-					"ajax": 1,
-					"placeholder": "",
-					"min": ""
-				},
-				{
-					"key": "field_689f39c3916e8",
-					"label": "Animation easing",
-					"name": "animation_easing",
-					"aria-label": "",
-					"type": "select",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__linear": "Linear",
-						"__ease-out": "Ease out",
-						"__ease-in": "Ease in",
-						"__ease-in-out": "Ease in out",
-						"__custom": "Custom"
-					},
-					"default_value": "__linear",
-					"return_format": "value",
-					"multiple": 0,
-					"max": "",
-					"allow_custom": 0,
-					"search_placeholder": "",
-					"prepend": "",
-					"append": "",
-					"allow_null": 0,
-					"ui": 1,
-					"ajax": 1,
-					"placeholder": "",
-					"min": ""
-				},
-				{
-					"key": "field_689f39c391acf",
-					"label": "Animation easing custom",
-					"name": "animation_easing_custom",
-					"aria-label": "",
-					"type": "text",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							},
-							{
-								"field": "field_689f39c3916e8",
-								"operator": "==",
-								"value": "__custom"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 2,
-					"default_value": "",
-					"maxlength": "",
-					"placeholder": "",
-					"prepend": "",
-					"append": ""
-				},
-				{
-					"key": "field_689f39c391eb9",
-					"label": "Animation repeat",
-					"name": "animation_repeat",
-					"aria-label": "",
-					"type": "select",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__1": "Once",
-						"__infinite": "Infinite",
-						"__custom": "Custom"
-					},
-					"default_value": "__1",
-					"return_format": "value",
-					"multiple": 0,
-					"max": "",
-					"allow_custom": 0,
-					"search_placeholder": "",
-					"prepend": "",
-					"append": "",
-					"allow_null": 0,
-					"ui": 1,
-					"ajax": 1,
-					"placeholder": "",
-					"min": ""
-				},
-				{
-					"key": "field_689f39c3922a7",
-					"label": "Animation repeat number",
-					"name": "animation_repeat_number",
-					"aria-label": "",
-					"type": "range",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c391eb9",
-								"operator": "==",
-								"value": "__custom"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "50",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"default_value": 1,
-					"min": "",
-					"max": 50,
-					"step": "",
-					"prepend": "",
-					"append": ""
-				},
-				{
-					"key": "field_68f9e35d7db0b",
-					"label": "Animation Timeline",
-					"name": "animation_timeline",
-					"aria-label": "",
-					"type": "text",
-					"instructions": "Add your timeline function with the appropriate arguments or leave blank for no timeline.\r\nSee https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline",
-					"required": 0,
-					"conditional_logic": [
-						[
-							{
-								"field": "field_689f39c38fbd7",
-								"operator": "==",
-								"value": "1"
-							}
-						]
-					],
-					"wrapper": {
-						"width": "",
-						"class": "",
-						"id": ""
-					},
-					"default_value": "",
-					"maxlength": "",
-					"placeholder": "",
-					"prepend": "",
-					"append": ""
-				}
-			]
-		}
-	],
-	"location": [
-		[
-			{
-				"param": "post_type",
-				"operator": "==",
-				"value": "post"
-			}
-		]
-	],
-	"menu_order": 0,
-	"position": "normal",
-	"style": "default",
-	"label_placement": "left",
-	"instruction_placement": "label",
-	"hide_on_screen": "",
-	"active": false,
-	"description": "",
-	"show_in_rest": 0,
-	"acfe_autosync": ["json"],
-	"acfe_form": 0,
-	"acfe_display_title": "",
-	"acfe_meta": "",
-	"acfe_note": "",
-	"modified": 1761217399
+    "key": "group_689f39c37980a",
+    "title": "Component: Animations v3",
+    "fields": [
+        {
+            "key": "field_689f39c38dfbb",
+            "label": "Animations",
+            "name": "animations",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
+            "sub_fields": [
+                {
+                    "key": "field_689f39c38fbd7",
+                    "label": "Enable animations",
+                    "name": "enable_animations",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "style": "",
+                    "wpml_cf_preferences": 3
+                },
+                {
+                    "key": "field_689f39c38ff69",
+                    "label": "Animation name",
+                    "name": "animation_name",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fade-in": "Fade In",
+                        "fade-in-left": "Fade in left",
+                        "fade-in-right": "Fade in right",
+                        "fade-in-up": "Fade in  up",
+                        "fade-in-down": "Fade in down",
+                        "rotate": "Rotate",
+                        "scale-in": "Scale in",
+                        "reveal-up": "Reveal Up",
+                        "reveal-up-and-slide": "Reveal Up and Slide",
+                        "custom": "Custom"
+                    },
+                    "default_value": "fade-in",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "min": ""
+                },
+                {
+                    "key": "field_689f39c39039e",
+                    "label": "Custom animation (keyframe)",
+                    "name": "custom_animation",
+                    "aria-label": "",
+                    "type": "acfe_code_editor",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38ff69",
+                                "operator": "==",
+                                "value": "custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "{\r\n    from {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}",
+                    "placeholder": "{\r\n    from {\r\n        opacity: 0;\r\n    }\r\n    100% {\r\n        opacity: 1;\r\n    }\r\n}",
+                    "mode": "css",
+                    "lines": 1,
+                    "indent_unit": 4,
+                    "maxlength": "",
+                    "rows": 9,
+                    "max_rows": "",
+                    "return_format": [
+                        "htmlentities"
+                    ],
+                    "allow_in_bindings": 1
+                },
+                {
+                    "key": "field_689f39c39073b",
+                    "label": "Animation duration",
+                    "name": "animation_duration",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": 1,
+                    "min": 0,
+                    "max": 10,
+                    "step": "0.1",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_689f39c390b34",
+                    "label": "Animation delay",
+                    "name": "animation_delay",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": 0,
+                    "min": 0,
+                    "max": 10,
+                    "step": "0.1",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_689f39c390f17",
+                    "label": "Animation fill mode",
+                    "name": "animation_fill_mode",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__forwards": "Forwards",
+                        "__none": "None"
+                    },
+                    "default_value": "__forwards",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "placeholder": "",
+                    "min": "",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_689f39c391309",
+                    "label": "Animation direction",
+                    "name": "animation_direction",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "normal": "Normal",
+                        "reverse": "Reverse",
+                        "alternate": "Alternate",
+                        "alternate-reverse": "Alternate reverse"
+                    },
+                    "default_value": "normal",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 1,
+                    "ajax": 1,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "min": ""
+                },
+                {
+                    "key": "field_689f39c3916e8",
+                    "label": "Animation easing",
+                    "name": "animation_easing",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__linear": "Linear",
+                        "__ease-out": "Ease out",
+                        "__ease-in": "Ease in",
+                        "__ease-in-out": "Ease in out",
+                        "__custom": "Custom"
+                    },
+                    "default_value": "__linear",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "placeholder": "",
+                    "min": "",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_689f39c391acf",
+                    "label": "Animation easing custom",
+                    "name": "animation_easing_custom",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_689f39c3916e8",
+                                "operator": "==",
+                                "value": "__custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 2,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_689f39c391eb9",
+                    "label": "Animation repeat",
+                    "name": "animation_repeat",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "choices": {
+                        "__1": "Once",
+                        "__infinite": "Infinite",
+                        "__custom": "Custom"
+                    },
+                    "default_value": "__1",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "max": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "placeholder": "",
+                    "min": "",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_689f39c3922a7",
+                    "label": "Animation repeat number",
+                    "name": "animation_repeat_number",
+                    "aria-label": "",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c391eb9",
+                                "operator": "==",
+                                "value": "__custom"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 3,
+                    "default_value": 1,
+                    "min": "",
+                    "max": 50,
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_68f9e35d7db0b",
+                    "label": "Animation Timeline",
+                    "name": "animation_timeline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Add your timeline function with the appropriate arguments or leave blank for no timeline.\r\nSee https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/animation-timeline",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_689f39c38fbd7",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1761846934
 }
