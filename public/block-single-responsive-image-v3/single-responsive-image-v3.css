@@ -1,3 +1,7 @@
+.single-responsive-image-v3 {
+  display: flex;
+  align-items: stretch;
+}
 .single-responsive-image-v3__picture {
   width: 100%;
   width: var(--image-width-mobile, 100%);
