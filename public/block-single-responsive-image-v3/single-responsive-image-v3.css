@@ -1,7 +1,3 @@
-.single-responsive-image-v3 {
-  display: flex;
-  align-items: stretch;
-}
 .single-responsive-image-v3__picture {
   width: 100%;
   width: var(--image-width-mobile, 100%);
@@ -57,4 +53,8 @@
     min-height: calc(var(--image-min-height-desktop) - (0px - var(--cancel-header-height)));
     min-height: calc(var(--image-min-height-desktop) - (var(--global-site-header-height, 0px) - var(--cancel-header-height)));
   }
+}
+.single-responsive-image-v3 {
+  display: flex;
+  align-items: stretch;
 }

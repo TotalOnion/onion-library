@@ -1191,6 +1191,9 @@
   object-fit: var(--image-fit-style);
   margin: auto;
 }
+.post-info-v3__post-author-label {
+  display: flex;
+}
 .post-info-v3__global-image {
   z-index: var(--global-image-zindex);
   max-width: var(--global-image-max-width);
@@ -1216,24 +1219,6 @@
   .post-info-v3__product-logo {
     max-width: calc(var(--logo-max-width-desktop) / var(--design-reference) * var(--screen-width));
   }
-}
-.post-info-v3__person-rating {
-  display: flex;
-  gap: 1em;
-}
-.post-info-v3__person-rating-star {
-  --rating-star-colour: gold;
-  width: calc(20 / var(--desktop-design-reference) * var(--screen-width-static));
-}
-.post-info-v3__person-questionaire-list {
-  list-style-type: none;
-}
-.post-info-v3__person-email {
-  display: flex;
-  gap: 1em;
-}
-.post-info-v3__person-email-icon {
-  width: 1em;
 }
 .post-info-v3__post-text-alternative-style {
   width: auto;

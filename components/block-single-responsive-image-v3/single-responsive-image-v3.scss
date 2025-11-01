@@ -1,7 +1,7 @@
 @use '../component-responsive-image-v3/responsive-image-v3';
 
 .single-responsive-image-v3 {
+	@include responsive-image-v3.responsiveImage();
 	display: flex;
 	align-items: stretch;
-	@include responsive-image-v3.responsiveImage();
 }
