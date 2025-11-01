@@ -140,6 +140,9 @@
 		object-fit: var(--image-fit-style);
 		margin: auto;
 	}
+	&__post-author-label {
+		display: flex;
+	}
 	&__global-image {
 		z-index: var(--global-image-zindex);
 		max-width: var(--global-image-max-width);
@@ -165,24 +168,6 @@
 				'desktop'
 			);
 		}
-	}
-	&__person-rating {
-		display: flex;
-		gap: 1em;
-	}
-	&__person-rating-star {
-		--rating-star-colour: gold;
-		width: core-functions-v3.fluidSize(20, 'static');
-	}
-	&__person-questionaire-list {
-		list-style-type: none;
-	}
-	&__person-email {
-		display: flex;
-		gap: 1em;
-	}
-	&__person-email-icon {
-		width: 1em;
 	}
 	&__post-text-alternative-style {
 		width: auto;
