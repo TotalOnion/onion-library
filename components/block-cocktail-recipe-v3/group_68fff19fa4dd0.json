@@ -1,0 +1,200 @@
+{
+    "key": "group_68fff19fa4dd0",
+    "title": "Block: Cocktail Recipe V3",
+    "fields": [
+        {
+            "key": "field_68fff1a0c8ae0",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6900985627b79",
+            "label": "Cocktail Select",
+            "name": "cocktail_select",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "post_type": [
+                "cocktail"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 0,
+            "max": "",
+            "save_custom": 0,
+            "save_post_status": "publish",
+            "acfe_add_post": 0,
+            "acfe_edit_post": 0,
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": [],
+            "save_post_type": "",
+            "min": ""
+        },
+        {
+            "key": "field_6904e13661b9e",
+            "label": "Enable Unit Transform",
+            "name": "enable_unit_transform",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_6903a0595a265",
+            "label": "Unit Transform",
+            "name": "unit_transform",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6904e13661b9e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "oz": "OZ"
+            },
+            "default_value": "oz",
+            "return_format": "value",
+            "multiple": 0,
+            "max": "",
+            "prepend": "",
+            "append": "",
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
+        },
+        {
+            "key": "field_68fff1cac8ae1",
+            "label": "Block Padding",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_68fff1d4c8ae2",
+            "label": "Block Padding Fields",
+            "name": "block_padding_fields",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "clone": [
+                "group_689f66f3e26df"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/cocktail-recipe-v3"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfml_field_group_mode": "localization",
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1761927501
+}

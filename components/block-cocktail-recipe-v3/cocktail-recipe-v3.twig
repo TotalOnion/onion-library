@@ -1,0 +1,89 @@
+{% set blockClassName = "cocktail-recipe-v3" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set sectionStyles =  styleEntryPoint %}
+{{previewEntryPoint}}
+
+{% set selectedPost = Post(fields.cocktail_select) %}
+{% set ingredients = selectedPost.meta('ingredients_recipe') %}
+{% set equipments = selectedPost.meta('other_equipment') %}
+{% set instructions = selectedPost.meta('instruction_steps') %}
+
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} {{block.id}} " {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+	{{htmlEntryPoint}}
+
+	<div class="{{blockClassName}}__ingredients-container">
+		<h1 class="ingredients-title">{{ selectedPost.ingredients_title }}</h1>
+
+		<div class="{{blockClassName}}__servings" data-servings-controls>
+			<h3 class="servings-title">Serve:</h3>
+			<div class="servings-control-wrapper">
+				<div class="dec-btn-wrapper">
+					<button type="button" class="servings-dec-btn" data-servings-dec aria-label="Decrease servings">-</button>
+				</div>
+				<span class="servings-current" data-servings-value>1x</span>
+				<div class="inc-btn-wrapper">
+					<button type="button" class="servings-inc-btn" data-servings-inc aria-label="Increase servings">+</button>
+				</div>
+			</div>
+		</div>
+
+		{% if fields.enable_unit_transform %}
+			<div class="{{blockClassName}}__unit-toggle" data-unit-toggle>
+				<p class="unit-label unit-text">Unit</p>
+				<div class="unit-toggle-wrapper">
+					<span class="unit-option unit-text" data-unit="ml">ml</span>
+					<div class="checkbox-wrapper">
+						<div class="block">
+							<input data-index="0" id="checkbox" data-unit-checkbox type="checkbox"/>
+							<label for="checkbox"></label>
+						</div>
+					</div>
+					<span class="unit-option unit-text" data-unit="{{ fields.unit_transform }}">{{ fields.unit_transform }}</span>
+				</div>
+			</div>
+		{% endif %}
+
+
+		{% for ingredient in ingredients %}
+			<div class="ingredients-wrapper">
+				<img src="{{ get_image(ingredient.ingredient_image) }}" width="20">
+				<p class="ingredient-text" data-ingredients data-amount="{{ ingredient.amount }}" data-unit="{{ ingredient.default_unit }}" data-name="{{ ingredient.name }}">{{ ingredient.amount }}{{ ingredient.default_unit }}
+					{{ ingredient.name }}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+	{% if selectedPost.enable_equipment %}
+		<div class="{{blockClassName}}__equipment-container">
+			<h3 class="equipments-title">{{ selectedPost.equipment_title }}</h3>
+
+			{% for equipment in equipments %}
+				<div class="equipments-wrapper">
+					<img src="{{ get_image(equipment.equipment_image) }}" width="20">
+					<p class="equipments-text">{{ equipment.equipment_name }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	<div class="{{blockClassName}}__instructions-container">
+		<h1 class="instructions-title">{{ selectedPost.instructions_title }}</h1>
+
+		{% for index, instruction in instructions %}
+			<div class="instructions-wrapper">
+				<span class="instructions-number">{{index + 1}}</span>
+				<p class="instructions-text">{{ instruction.instruction }}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+</section>
