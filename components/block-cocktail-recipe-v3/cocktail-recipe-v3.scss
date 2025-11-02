@@ -13,9 +13,13 @@
 		.ingredients-title {
 			padding-block: core-functions-v3.fluidSize(10);
 			font-family: var(--primary-font-family);
-			font-size: core-functions-v3.fontSize(160);
+			font-size: core-functions-v3.fontSize(80);
 			font-weight: 500;
 			text-transform: uppercase;
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				font-size: core-functions-v3.fontSize(160);
+			}
 		}
 	}
 
@@ -23,7 +27,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-block: core-functions-v3.fluidSize(10);
+		padding-block: core-functions-v3.fluidSize(15);
 		border-bottom: 1px solid #faf8ec4d;
 
 		.servings-title {
@@ -82,11 +86,15 @@
 
 			.servings-current {
 				font-family: var(--secondary-font-family);
-				font-size: core-functions-v3.fontSize(30);
+				font-size: core-functions-v3.fontSize(26);
 				font-weight: 500;
 				display: inline-block;
 				width: core-functions-v3.fluidSize(60);
 				text-align: center;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					font-size: core-functions-v3.fontSize(30);
+				}
 			}
 
 			.inc-btn-wrapper {
@@ -137,8 +145,12 @@
 
 		.unit-text {
 			font-family: var(--tertiary-font-family);
-			font-size: core-functions-v3.fontSize(22);
+			font-size: core-functions-v3.fontSize(18);
 			font-weight: 700;
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				font-size: core-functions-v3.fontSize(22);
+			}
 		}
 
 		.unit-toggle-wrapper {
@@ -191,16 +203,29 @@
 	.ingredients-wrapper {
 		display: flex;
 		align-items: center;
-		gap: core-functions-v3.fluidSize(30);
+		gap: core-functions-v3.fluidSize(15);
 
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			gap: core-functions-v3.fluidSize(30);
+		}
+
+		// to be changed
 		img {
-			max-width: 100px;
+			max-width: 50px;
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				max-width: 100px;
+			}
 		}
 
 		.ingredient-text {
-			font-size: core-functions-v3.fontSize(22);
+			font-size: core-functions-v3.fontSize(18);
 			font-family: var(--tertiary-font-family);
 			font-weight: 400;
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				font-size: core-functions-v3.fontSize(22);
+			}
 		}
 	}
 
@@ -208,29 +233,50 @@
 		display: flex;
 		flex-direction: column;
 		gap: core-functions-v3.fluidSize(20);
-		padding-bottom: core-functions-v3.fluidSize(180);
+		padding-bottom: core-functions-v3.fluidSize(100);
+
+		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+			padding-bottom: core-functions-v3.fluidSize(180);
+		}
 
 		.equipments-title {
 			font-family: var(--secondary-font-family);
 			font-size: core-functions-v3.fontSize(26);
 			font-weight: 500;
-			padding-block: core-functions-v3.fluidSize(10);
+			padding-block: core-functions-v3.fluidSize(20);
 			border-bottom: 1px solid #faf8ec4d;
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				padding-block: core-functions-v3.fluidSize(10);
+			}
 		}
 
 		.equipments-wrapper {
 			display: flex;
 			align-items: center;
-			gap: core-functions-v3.fluidSize(30);
+			gap: core-functions-v3.fluidSize(15);
 
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				gap: core-functions-v3.fluidSize(30);
+			}
+
+			// to be changed
 			img {
-				max-width: 100px;
+				max-width: 50px;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					max-width: 100px;
+				}
 			}
 
 			.equipments-text {
 				font-family: var(--tertiary-font-family);
-				font-size: core-functions-v3.fontSize(22);
+				font-size: core-functions-v3.fontSize(18);
 				font-weight: 400;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					font-size: core-functions-v3.fontSize(22);
+				}
 			}
 		}
 	}
@@ -238,23 +284,35 @@
 	&__instructions-container {
 		.instructions-title {
 			font-family: var(--primary-font-family);
-			font-size: core-functions-v3.fontSize(160);
+			font-size: core-functions-v3.fontSize(70);
 			font-weight: 500;
 			text-transform: uppercase;
-			padding-block: core-functions-v3.fluidSize(40);
+			padding-block: core-functions-v3.fluidSize(10);
+			
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				padding-block: core-functions-v3.fluidSize(40);
+				font-size: core-functions-v3.fontSize(160);
+			}
 		}
 
 		.instructions-wrapper {
 			display: flex;
-			align-items: center;
-			gap: core-functions-v3.fluidSize(40);
+			align-items: flex-start;
+			gap: core-functions-v3.fluidSize(20);
 			padding-block: core-functions-v3.fluidSize(30);
 			border-top: 1px solid #faf8ec4d;
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				align-items: center;
+			}
 
 			.instructions-number {
 				font-family: var(--secondary-font-family);
 				font-size: core-functions-v3.fontSize(30);
+				padding-inline: core-functions-v3.fluidSize(10);
 				font-weight: 500;
+				text-box-trim: trim-both;
+				text-box-edge: cap alphabetic;
 			}
 
 			.instructions-text {
