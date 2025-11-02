@@ -1,7 +1,6 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-// @use 'Assets/scss/modules/library-modules/core-gradient-designer/core-gradient-designer';
 @use '../component-grid-layout-element-v3/grid-layout-element-v3';
 @use '../component-element-positioning-v3/element-positioning-v3';
 
@@ -9,9 +8,6 @@
 	z-index: 10;
 	position: relative;
 	background-color: var(--block-background-colour);
-	.mobile-menu-active & {
-		z-index: 9999;
-	}
 	&__post-cover-link {
 		grid-area: unset;
 		position: absolute;
