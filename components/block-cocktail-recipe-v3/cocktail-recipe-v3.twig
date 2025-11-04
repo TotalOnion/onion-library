@@ -55,7 +55,9 @@
 
 		{% for ingredient in ingredients %}
 			<div class="ingredients-wrapper">
-				<img src="{{ get_image(ingredient.ingredient_image) }}" width="20">
+				{% set ingredientSelect = ingredient.ingredients_list %}
+				{% set image = get_image(options.ingredient[ingredientSelect].ingredient_image) %}
+				<img class="ingredient-image" src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}">
 				<p class="ingredient-text" data-ingredients data-amount="{{ ingredient.amount }}" data-unit="{{ ingredient.default_unit }}" data-name="{{ ingredient.name }}">{{ ingredient.amount }}{{ ingredient.default_unit }}
 					{{ ingredient.name }}</p>
 			</div>
@@ -68,8 +70,10 @@
 
 			{% for equipment in equipments %}
 				<div class="equipments-wrapper">
-					<img src="{{ get_image(equipment.equipment_image) }}" width="20">
-					<p class="equipments-text">{{ equipment.equipment_name }}</p>
+					{% set equipmentSelect = equipment.equipment_list %}
+					{% set image = get_image(options.equipments[equipmentSelect].equipment_image) %}
+					<img class="equipment-image" src="{{ image }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}">
+					<p class="equipment-text">{{ equipment.equipment_name }}</p>
 				</div>
 			{% endfor %}
 		</div>

@@ -46,10 +46,10 @@
 				height: 40px;
 				border: 1px solid #faf8ec;
 				overflow: hidden;
-				
+
 				.servings-dec-btn {
 					cursor: pointer;
-					background-color: #0054FF;
+					background-color: #0054ff;
 					color: #faf8ec;
 					font-size: 28px;
 					padding-bottom: 4px;
@@ -57,11 +57,11 @@
 					height: 100%;
 					border: unset;
 					transform: translateX(0);
-					transition: transform .3s ease;
+					transition: transform 0.3s ease;
 
 					&::after {
 						content: '\2212';
-						color: #0054FF;
+						color: #0054ff;
 						padding-top: 4px;
 						width: 38px;
 						height: 38px;
@@ -106,14 +106,14 @@
 
 				.servings-inc-btn {
 					cursor: pointer;
-					color: #0054FF;
+					color: #0054ff;
 					font-size: 30px;
 					background-color: #faf8ec;
 					width: 100%;
 					height: 100%;
 					border: unset;
 					transform: translateX(-100%);
-					transition: transform .3s ease;
+					transition: transform 0.3s ease;
 
 					&::after {
 						content: '+';
@@ -124,7 +124,7 @@
 						position: absolute;
 						top: 0;
 						right: -38px;
-						background-color: #0054FF;
+						background-color: #0054ff;
 					}
 				}
 
@@ -209,12 +209,12 @@
 			gap: core-functions-v3.fluidSize(30);
 		}
 
-		// to be changed
-		img {
-			max-width: 50px;
+		.ingredient-image {
+			max-width: core-functions-v3.fluidSize(50);
+			aspect-ratio: 1;
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-				max-width: 100px;
+				max-width: core-functions-v3.fluidSize(100);
 			}
 		}
 
@@ -260,16 +260,16 @@
 				gap: core-functions-v3.fluidSize(30);
 			}
 
-			// to be changed
-			img {
-				max-width: 50px;
+			.equipment-image {
+				max-width: core-functions-v3.fluidSize(50);
+				aspect-ratio: 1;
 
 				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-					max-width: 100px;
+					max-width: core-functions-v3.fluidSize(100);
 				}
 			}
 
-			.equipments-text {
+			.equipment-text {
 				font-family: var(--tertiary-font-family);
 				font-size: core-functions-v3.fontSize(18);
 				font-weight: 400;
@@ -288,7 +288,7 @@
 			font-weight: 500;
 			text-transform: uppercase;
 			padding-block: core-functions-v3.fluidSize(10);
-			
+
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				padding-block: core-functions-v3.fluidSize(40);
 				font-size: core-functions-v3.fontSize(160);
