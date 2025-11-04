@@ -1,13 +1,11 @@
 @use '../component-grid-layout-element-v3/grid-layout-element-v3';
 @use '../component-grid-layout-container-v3/grid-layout-container-v3';
 @use '../component-flex-layout-container-v3/flex-layout-container-v3';
-@use '../component-animations-v3/animations-v3';
 
 .sub-group-container-v3 {
 	display: grid;
 	grid-template: 'main' / 1fr;
 	place-items: center;
-	@include animations-v3.animations();
 	&__grid-container {
 		grid-area: main;
 		place-self: stretch;
