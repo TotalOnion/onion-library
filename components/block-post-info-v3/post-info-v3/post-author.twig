@@ -12,6 +12,6 @@
 </style>
 
 <div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} {{block.id}} {{blockClassName}}__info-item">
-	<span class="{{blockClassName}}__post-author-label" data-pattern-post-info="label_text">{{field.label_text}}</span>
-	<{{elementType|default('p')}} data-pattern-post-info="post_author" class="{{blockClassName}}__post-author {{textEditorElementClasses}} {{block.id}}">{{post.author.name}}</{{elementType|default('p')}}>
+	<span class="{{blockClassName}}__post-author-label">{{field.label_text}}</span>
+	<{{elementType|default('p')}} data-pattern-post-info="author.name" class="{{blockClassName}}__post-author {{textEditorElementClasses}} {{block.id}}">{{post.author.name}}</{{elementType|default('p')}}>
 </div>

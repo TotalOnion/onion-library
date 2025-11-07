@@ -8,5 +8,5 @@
 	}
 </style>
 <{{field.text_style.text_element_type|ru}} class="{{blockClassName}}__post-publish-date {{blockClassName}}__info-item {{field.text_style.typography_style|ru}} {{block.id}}">{{field.enable_label ? '<span class="post-publish-date-label">' ~ field.label ~ '</span>' : ''}}
-	<span class="pattern-date">{{post.date}}</span>
+	<span class="{{blockClassName}}__post-publish-date-span" data-pattern-post-info="date">{{post.date}}</span>
 </{{field.text_style.text_element_type|ru}}>
