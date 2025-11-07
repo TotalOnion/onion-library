@@ -13,7 +13,7 @@
 			{% set block = block|merge({'className' : ''}) %}
 		{% endif %}
 		{% set path = '' %}
-		{% if item.acf_fc_layout == 'spacer_v3' or item.acf_fc_layout == 'divider_v3' or item.acf_fc_layout == 'breadcrumb_display' %}
+		{% if item.acf_fc_layout == 'spacer_v3' or item.acf_fc_layout == 'divider_v3' or item.acf_fc_layout == 'breadcrumb_display' or item.acf_fc_layout == 'block_interactions_v3' %}
 			{% set path = 'blocks' %}
 		{% else %}
 			{% set path = 'components' %}
