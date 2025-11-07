@@ -64,7 +64,9 @@
             "placeholder": "",
             "allow_custom": 0,
             "search_placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6852a55cf66a6",
@@ -213,11 +215,10 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "uploader": "",
             "return_format": "array",
             "preview_style": "default",
@@ -230,6 +231,7 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "placeholder": "Select",
             "stylised_button": 0,
             "min": ""
@@ -257,11 +259,10 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "uploader": "",
             "return_format": "array",
             "preview_style": "default",
@@ -274,9 +275,50 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "",
+            "allow_in_bindings": 1,
             "placeholder": "Select",
             "stylised_button": 0,
             "min": ""
+        },
+        {
+            "key": "field_690dcee93a7f6",
+            "label": "Muted",
+            "name": "muted",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_690dd018a08fd",
+            "label": "Important!",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Autoplay needs Muted= Yes",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_68c6d229ad78e",
@@ -288,17 +330,17 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "message": "",
             "default_value": 0,
-            "style": "",
+            "allow_in_bindings": 1,
             "ui_on_text": "",
             "ui_off_text": "",
-            "ui": 1
+            "ui": 1,
+            "style": ""
         },
         {
             "key": "field_68c7c161ad78f",
@@ -310,17 +352,158 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
             "message": "",
             "default_value": 0,
+            "allow_in_bindings": 1,
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1,
             "style": ""
+        },
+        {
+            "key": "field_690dca35e3bbf",
+            "label": "Enable Captions",
+            "name": "enable_captions",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_690dca63905de",
+            "label": "Captions",
+            "name": "captions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6894ca9ff2725",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6852a4f5f66a5",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_690dca35e3bbf",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_690dca63905df",
+                    "label": "Captions File",
+                    "name": "captions_file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "Must be in VTT (Video Text Track)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "array",
+                    "preview_style": "default",
+                    "library": "all",
+                    "upload_folder": "",
+                    "button_label": "Add File",
+                    "file_count": 0,
+                    "multiple": 0,
+                    "max": "",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "Select",
+                    "stylised_button": 0,
+                    "min": "",
+                    "parent_repeater": "field_690dca63905de"
+                },
+                {
+                    "key": "field_690dca63905e0",
+                    "label": "Language Code",
+                    "name": "language_code",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "For example: en, fr, es",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_690dca63905de"
+                },
+                {
+                    "key": "field_690dca63905e1",
+                    "label": "Caption Label",
+                    "name": "caption_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "For example \"English Captions\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_690dca63905de"
+                }
+            ]
         }
     ],
     "location": [
@@ -341,13 +524,13 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "translation",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1757922184
+    "modified": 1762513105
 }
