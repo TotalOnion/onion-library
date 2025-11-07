@@ -1,4 +1,4 @@
-import jsAssetList from "./jsAssets.mjs";
+import jsAssetList from './public/jsAssets.mjs';
 const coreAssets = jsAssetList.dynamicAssets;
 
 /* eslint-disable no-use-before-define */
@@ -26,86 +26,90 @@ const coreAssets = jsAssetList.dynamicAssets;
  */
 
 const options = {
-  rootMargin: "100% 0px 300px 0px",
-  threshold: 0,
-  debugLogMessages: false,
-  lazyBlocksToSearchFor: [],
-  lazyBlocksFound: [],
-  coreAssets: [...coreAssets], //latest assetArray can be found in /@total_onion/onion-library/public/jsAssets.mjs
-  projectAssets: [],
-  assetMap: {},
-  css: true,
-  lazy: true,
-  cssLoadingStyle: "component", // 'component' or 'bundle'
-  filePrefix: "nodemodules", //'nodemodules', 'assets' or 'dev'
-  fileSuffixJs: ".js",
-  fileSuffixCss: ".scss",
-  filePath: "js/blocks",
-  filePathCss: "scss/blocks",
+	rootMargin: '100% 0px 300px 0px',
+	threshold: 0,
+	debugLogMessages: false,
+	lazyBlocksToSearchFor: [],
+	lazyBlocksFound: [],
+	coreAssets: [...coreAssets],
+	projectAssets: [],
+	assetMap: {},
+	css: true,
+	lazy: true,
+	cssLoadingStyle: 'component', // 'component' or 'bundle'
+	filePrefix: 'nodemodules', //'nodemodules', 'assets' or 'dev'
+	fileSuffixJs: '.js',
+	fileSuffixCss: '.scss',
+	filePath: 'js/blocks',
+	filePathCss: 'scss/blocks'
 };
 
 /**
  * Initializes the lazyloader.
  */
 function lazyloaderInit() {
-  const assetArray = options.coreAssets.concat(options.projectAssets);
-  options.debugLogMessages && console.log("Lazy Loader initialized!");
-  options.lazyBlocksToSearchFor = [];
-  assetArray.forEach((asset) => {
-    if (
-      options.filePrefix === "nodemodules" &&
-      asset.assetKey.includes("-v3")
-    ) {
-      options.assetMap[asset.assetKey] = {
-        js: () =>
-          import(
-            `NodeModules/@total_onion/onion-library/components/block-${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
-          ),
-        css: options.ignoreCss === true,
-      };
-    } else {
-    }
-    if (
-      options.filePrefix === "nodemodules" &&
-      !asset.assetKey.includes("-v3")
-    ) {
-      options.assetMap[asset.assetKey] = {
-        js: () =>
-          import(`Assets/js/blocks/${asset.assetKey}${options.fileSuffixJs}`),
-        css: options.ignoreCss === false,
-      };
-    }
+	const assetArray = options.coreAssets.concat(options.projectAssets);
+	options.debugLogMessages && console.log('Lazy Loader initialized!');
+	options.lazyBlocksToSearchFor = [];
+	assetArray.forEach((asset) => {
+		if (
+			options.filePrefix === 'nodemodules' &&
+			asset.assetKey.includes('-v3')
+		) {
+			options.assetMap[asset.assetKey] = {
+				js: () =>
+					import(
+						`NodeModules/@total_onion/onion-library/components/block-${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
+					),
+				css: options.ignoreCss === true
+			};
+		} else {
+		}
+		if (
+			options.filePrefix === 'nodemodules' &&
+			!asset.assetKey.includes('-v3')
+		) {
+			options.assetMap[asset.assetKey] = {
+				js: () =>
+					import(
+						`Assets/js/blocks/${asset.assetKey}${options.fileSuffixJs}`
+					),
+				css: options.ignoreCss === false
+			};
+		}
 
-    // Add to lazy blocks to search for
-    options.lazyBlocksToSearchFor.push(`[data-assetkey="${asset.assetKey}"]`);
-    options.lazyBlocksFound = Array.from(
-      document.querySelectorAll(options.lazyBlocksToSearchFor)
-    );
-  });
+		// Add to lazy blocks to search for
+		options.lazyBlocksToSearchFor.push(
+			`[data-assetkey="${asset.assetKey}"]`
+		);
+		options.lazyBlocksFound = Array.from(
+			document.querySelectorAll(options.lazyBlocksToSearchFor)
+		);
+	});
 
-  // If data eager loading attribute is true - load js straight away
-  options.lazyBlocksFound.forEach((block) => {
-    if (block.dataset.eager == "true") {
-      callBlockJs(block);
-    }
-  });
+	// If data eager loading attribute is true - load js straight away
+	options.lazyBlocksFound.forEach((block) => {
+		if (block.dataset.eager == 'true') {
+			callBlockJs(block);
+		}
+	});
 
-  options.debugLogMessages && console.log("Lazyloader Options", options);
+	options.debugLogMessages && console.log('Lazyloader Options', options);
 
-  // Check if the browser has intersection observer which is needed for the Lazyloader or if all assets should load immediately anyway.
-  if (options.lazy === false || !("IntersectionObserver" in window)) {
-    options.debugLogMessages && console.log("running eager loading");
-    try {
-      options.lazyBlocksFound.forEach((block) => {
-        callBlockJs(block);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  } else {
-    options.debugLogMessages && console.log("running normal process");
-    observerInit(options.lazyBlocksFound);
-  }
+	// Check if the browser has intersection observer which is needed for the Lazyloader or if all assets should load immediately anyway.
+	if (options.lazy === false || !('IntersectionObserver' in window)) {
+		options.debugLogMessages && console.log('running eager loading');
+		try {
+			options.lazyBlocksFound.forEach((block) => {
+				callBlockJs(block);
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	} else {
+		options.debugLogMessages && console.log('running normal process');
+		observerInit(options.lazyBlocksFound);
+	}
 }
 
 /**
@@ -113,12 +117,12 @@ function lazyloaderInit() {
  * @param {array} elementsToObserve The array of block elements to observe.
  */
 function observerInit(elementsToObserve = []) {
-  const observer = new IntersectionObserver(intersectionCallback, options);
-  elementsToObserve.forEach((element) => {
-    if (element) {
-      observer.observe(element);
-    }
-  });
+	const observer = new IntersectionObserver(intersectionCallback, options);
+	elementsToObserve.forEach((element) => {
+		if (element) {
+			observer.observe(element);
+		}
+	});
 }
 
 /**
@@ -127,28 +131,28 @@ function observerInit(elementsToObserve = []) {
  * @param {object} observer The IntersectionObserver object.
  */
 const intersectionCallback = (entries, observer) => {
-  options.debugLogMessages && console.log("Observer entries", entries);
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const lazyTarget = entry.target;
-      try {
-        callBlockJs(lazyTarget);
-      } catch (error) {
-        console.log(
-          error,
-          "block data assetkey:",
-          lazyTarget.dataset.assetkey,
-          " - ",
-          "asset import function:",
-          options.assetMap[lazyTarget.dataset.assetkey],
-          "are you missing an asset key or import function?"
-        );
-      }
-      observer.unobserve(lazyTarget);
-      options.debugLogMessages &&
-        console.log("Unobserving lazyElement", lazyTarget);
-    }
-  });
+	options.debugLogMessages && console.log('Observer entries', entries);
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			const lazyTarget = entry.target;
+			try {
+				callBlockJs(lazyTarget);
+			} catch (error) {
+				console.log(
+					error,
+					'block data assetkey:',
+					lazyTarget.dataset.assetkey,
+					' - ',
+					'asset import function:',
+					options.assetMap[lazyTarget.dataset.assetkey],
+					'are you missing an asset key or import function?'
+				);
+			}
+			observer.unobserve(lazyTarget);
+			options.debugLogMessages &&
+				console.log('Unobserving lazyElement', lazyTarget);
+		}
+	});
 };
 
 /**
@@ -156,29 +160,29 @@ const intersectionCallback = (entries, observer) => {
  * @param {object} block The block element.
  */
 function callBlockJs(block) {
-  if (!block.classList.contains("loaded")) {
-    Promise.all([
-      options.assetMap[block.dataset.assetkey].js(),
-      block.dataset.cssload !== "false" && loadCss(block.dataset.assetkey),
-    ]).then((module) => {
-      try {
-        if (block.dataset.jsload !== "false") {
-          module[0].default({
-            block,
-            css: false,
-          });
-        } else {
-          options.debugLogMessages &&
-            console.log(
-              `Skipping JS load for block: ${block.dataset.assetkey}`
-            );
-        }
-        block.classList.add("loaded");
-      } catch (error) {
-        console.log("could not load block js", error);
-      }
-    });
-  }
+	if (!block.classList.contains('loaded')) {
+		Promise.all([
+			options.assetMap[block.dataset.assetkey].js(),
+			block.dataset.cssload !== 'false' && loadCss(block.dataset.assetkey)
+		]).then((module) => {
+			try {
+				if (block.dataset.jsload !== 'false') {
+					module[0].default({
+						block,
+						css: false
+					});
+				} else {
+					options.debugLogMessages &&
+						console.log(
+							`Skipping JS load for block: ${block.dataset.assetkey}`
+						);
+				}
+				block.classList.add('loaded');
+			} catch (error) {
+				console.log('could not load block js', error);
+			}
+		});
+	}
 }
 
 /**
@@ -188,16 +192,16 @@ function callBlockJs(block) {
  * @returns {boolean}
  */
 export function inCriticalCssConfig(assetKey) {
-  if (!globalThis.criticalConfig) {
-    return false;
-  }
-  if (
-    globalThis.criticalConfig &&
-    globalThis.criticalConfig.indexOf(assetKey) === -1
-  ) {
-    return false;
-  }
-  return true;
+	if (!globalThis.criticalConfig) {
+		return false;
+	}
+	if (
+		globalThis.criticalConfig &&
+		globalThis.criticalConfig.indexOf(assetKey) === -1
+	) {
+		return false;
+	}
+	return true;
 }
 
 /**
@@ -207,67 +211,67 @@ export function inCriticalCssConfig(assetKey) {
  * @returns {promise}
  */
 export function loadCss(assetKey) {
-  // if (options.css == true && options.cssLoadingStyle === "bundle") {
-  //   options.debugLogMessages && console.log("using css bundle");
-  //   const promise = new Promise((resolve) => {
-  //     import(
-  //       `NodeModules/@total_onion/onion-library/public/publicbundlecss.css`
-  //     ).then(() => {
-  //       console.log("resolved");
-  //       resolve(true);
-  //     });
-  //   });
-  //   return promise;
-  // }
-  if (
-    options.css == true &&
-    options.cssLoadingStyle === "component" &&
-    options.filePrefix === "nodemodules"
-  ) {
-    options.debugLogMessages && console.log("using individual css");
-    const promise = new Promise((resolve) => {
-      if (
-        options.css === true &&
-        !inCriticalCssConfig(assetKey) &&
-        assetKey.includes("-v3")
-      ) {
-        import(
-          /* webpackChunkName: "[request]" */ `NodeModules/@total_onion/onion-library/components/block-${assetKey}/${assetKey}${options.fileSuffixCss}`
-        ).then(() => resolve(true));
-      } else if (
-        options.css === true &&
-        !inCriticalCssConfig(assetKey) &&
-        !assetKey.includes("-v3")
-      ) {
-        import(
-          /* webpackChunkName: "[request]" */ `Assets/scss/blocks/${assetKey}${options.fileSuffixCss}`
-        ).then(() => resolve(true));
-      } else {
-        return resolve(true);
-      }
-    });
-  }
-  // if (
-  //   options.css == true &&
-  //   options.cssLoadingStyle === "component" &&
-  //   options.filePrefix === "dev"
-  // ) {
-  //   options.debugLogMessages && console.log("using dev css");
-  //   const promise = new Promise((resolve) => {
-  //     if (options.css === true && !inCriticalCssConfig(assetKey)) {
-  //       import(
-  //         `../../../../../../../../onion-library/components/block-${assetKey}/${assetKey}${options.fileSuffixCss}`
-  //       ).then(() => resolve(true));
-  //     } else {
-  //       return resolve(true);
-  //     }
-  //   });
-  // }
+	// if (options.css == true && options.cssLoadingStyle === "bundle") {
+	//   options.debugLogMessages && console.log("using css bundle");
+	//   const promise = new Promise((resolve) => {
+	//     import(
+	//       `NodeModules/@total_onion/onion-library/public/publicbundlecss.css`
+	//     ).then(() => {
+	//       console.log("resolved");
+	//       resolve(true);
+	//     });
+	//   });
+	//   return promise;
+	// }
+	if (
+		options.css == true &&
+		options.cssLoadingStyle === 'component' &&
+		options.filePrefix === 'nodemodules'
+	) {
+		options.debugLogMessages && console.log('using individual css');
+		const promise = new Promise((resolve) => {
+			if (
+				options.css === true &&
+				!inCriticalCssConfig(assetKey) &&
+				assetKey.includes('-v3')
+			) {
+				import(
+					/* webpackChunkName: "[request]" */ `NodeModules/@total_onion/onion-library/components/block-${assetKey}/${assetKey}${options.fileSuffixCss}`
+				).then(() => resolve(true));
+			} else if (
+				options.css === true &&
+				!inCriticalCssConfig(assetKey) &&
+				!assetKey.includes('-v3')
+			) {
+				import(
+					/* webpackChunkName: "[request]" */ `Assets/scss/blocks/${assetKey}${options.fileSuffixCss}`
+				).then(() => resolve(true));
+			} else {
+				return resolve(true);
+			}
+		});
+	}
+	// if (
+	//   options.css == true &&
+	//   options.cssLoadingStyle === "component" &&
+	//   options.filePrefix === "dev"
+	// ) {
+	//   options.debugLogMessages && console.log("using dev css");
+	//   const promise = new Promise((resolve) => {
+	//     if (options.css === true && !inCriticalCssConfig(assetKey)) {
+	//       import(
+	//         `../../../../../../../../onion-library/components/block-${assetKey}/${assetKey}${options.fileSuffixCss}`
+	//       ).then(() => resolve(true));
+	//     } else {
+	//       return resolve(true);
+	//     }
+	//   });
+	// }
 }
 
 const api = {
-  lazyloaderInit,
-  options,
+	lazyloaderInit,
+	options
 };
 
 export default api;
