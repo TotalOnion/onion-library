@@ -9,7 +9,7 @@ const textEditorStylesString = textEditorStyles(props);
 
 </script>
 <template>
-    <h3 :class="`${blockClassname}__post-headline ${blockClassname}__info-item ${element.text_style?.typography_style.slice(2)}`"
+    <h3 :class="`${blockClassname}__post-headline ${blockClassname}__info-item ${element.text_style?.typography_style.replace('__', '')}`"
         :style="`${gridLayoutString} ${textEditorStylesString}`">
         {{ element.headline_text }}
     </h3>

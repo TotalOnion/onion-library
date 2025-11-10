@@ -8,7 +8,7 @@ const textEditorStylesString = textEditorStyles(props);
 
 </script>
 <template>
-    <p :class="`${blockClassname}__post-author ${blockClassname}__info-item ${element.text_style?.typography_style.slice(2)}`"
+    <p :class="`${blockClassname}__post-author ${blockClassname}__info-item ${element.text_style?.typography_style.replace('__', '')}`"
         :style="`${gridLayoutString} ${textEditorStylesString}`">
         {{ post.author_display_name }}
     </p>

@@ -3,7 +3,7 @@ import { gridLayoutElement } from "./ptfg-utils.vue";
 const blockClassname = "post-type-filter-grid-v3";
 const props = defineProps(["post", "element", "mappedIcons", "ctaStyles", "blockClassname", "options"]);
 const postColour = props.post.post_data.post_colour;
-const postTextColourStyle = props.post.post_data?.post_text_colour_style?.slice(2);
+const postTextColourStyle = props.post.post_data?.post_text_colour_style?.replace('__', '');
 let ctaStyle = '';
 if (typeof props.element.cta_style == 'string') {
     ctaStyle = props.element?.cta_style?.replace("__", '');
@@ -14,11 +14,11 @@ let postCtaStyle = ctaStyle;
 let postCtaStyleValue = '';
 let ctaAnimationStyle = '';
 if (props.element?.cta_style_select) {
-    if (props.element?.cta_style_select?.slice(2) == 'post-colour') {
+    if (props.element?.cta_style_select?.replace('__', '') == 'post-colour') {
         postCtaStyle = 'post-colour';
         postCtaStyleValue = `color: ${postColour};--post-text-colour-style: ${postColour};`;
     }
-    if (props.element?.cta_style_select?.slice(2) == 'post-text-colour-style') {
+    if (props.element?.cta_style_select?.replace('__', '') == 'post-text-colour-style') {
         postCtaStyle = 'post-text-colour-style';
         postCtaStyleValue = `color: ${postTextColourStyle};--post-text-colour-style: ${postTextColourStyle};`;
     }

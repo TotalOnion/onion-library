@@ -11,7 +11,7 @@ const textEditorStylesString = textEditorStyles(props);
 <template>
 	<a :href="props.post.link" :class="`${blockClassname}__post-title ${blockClassname}__info-item`"
 		:style="`${gridLayoutString}`">
-		<h3 :class="`${element.text_style?.typography_style.slice(2)}`" :style="`${textEditorStylesString}`"
+		<h3 :class="`${element.text_style?.typography_style.replace('__', '')}`" :style="`${textEditorStylesString}`"
 			v-html="post.post_title">
 		</h3>
 		<img :class="`${blockClassname}__post-title-icon`" v-if="element.enable_icon" :src="ctaIcons.cta_load_more_icon"

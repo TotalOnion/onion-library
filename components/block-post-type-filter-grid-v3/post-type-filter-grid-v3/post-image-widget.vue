@@ -3,7 +3,7 @@ import { gridLayoutElement } from "./ptfg-utils.vue";
 
 const props = defineProps(["post", "element", "fields", "imageSizesAttribute"]);
 const blockClassname = "post-type-filter-grid-v3";
-const imageType = props.element?.image_select?.slice(2);
+const imageType = props.element?.image_select?.replace('__', '');
 const imageTypeSecondary = 'image_alt';
 const setAsBackgroundImage = props.element?.set_as_background_image;
 let positioningString = '';
@@ -18,10 +18,10 @@ if (imageType === 'image_accent') {
 --element-vertical-offset-mobile: ${elementPositioning.mobile_positioning.vertical_offset}%;
 --element-horizontal-offset-desktop: ${elementPositioning.desktop_positioning.horizontal_offset}%;
 --element-vertical-offset-desktop: ${elementPositioning.desktop_positioning.vertical_offset}%;
---mobile-horizontal-placement: ${elementPositioning.mobile_positioning.horizontal_snap?.slice(2)};
---mobile-vertical-placement: ${elementPositioning.mobile_positioning.vertical_snap?.slice(2)};
---desktop-horizontal-placement: ${elementPositioning.desktop_positioning.horizontal_snap?.slice(2)};
---desktop-vertical-placement: ${elementPositioning.desktop_positioning.vertical_snap?.slice(2)};
+--mobile-horizontal-placement: ${elementPositioning.mobile_positioning.horizontal_snap?.replace('__', '')};
+--mobile-vertical-placement: ${elementPositioning.mobile_positioning.vertical_snap?.replace('__', '')};
+--desktop-horizontal-placement: ${elementPositioning.desktop_positioning.horizontal_snap?.replace('__', '')};
+--desktop-vertical-placement: ${elementPositioning.desktop_positioning.vertical_snap?.replace('__', '')};
 --element-position: ${elementPositioning.element_position};
 
 `;

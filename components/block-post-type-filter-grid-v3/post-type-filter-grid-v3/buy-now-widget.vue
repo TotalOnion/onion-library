@@ -31,7 +31,7 @@ if (productEANs !== '') {
         :style="`--post-colour: ${postColour}; --post-text-colour-style: ${postTextColourStyle}; ${gridLayoutString}`">
         <a href="#"
             :class="`${blockClassname}__cta cmpl-cta-style-${ctaStyle} ${blockClassname}__cta-animation-style-${ctaAnimationStyle} ctb`"
-            v-if="element.buy_now_text && post.post_data.buy_now_option_select.slice(2) == 'ctb'" data-ctbuy
+            v-if="element.buy_now_text && post.post_data.buy_now_option_select.replace('__', '') == 'ctb'" data-ctbuy
             :data-ctbuy-variant="click2buyPimId">
             <span :class="`${blockClassname}__cta-span`">{{ element.buy_now_text }}</span>
             <span :class="`${blockClassname}__cta-icon`" v-if="element.enable_cta_icon">
@@ -40,7 +40,7 @@ if (productEANs !== '') {
         </a>
         <a href="#"
             :class="`dloc-link ${blockClassname}__cta cmpl-cta-style-${ctaStyle} ${blockClassname}__cta-animation-style-${ctaAnimationStyle} wtb`"
-            v-if="element.buy_now_text && post.post_data.buy_now_option_select.slice(2) == 'wtb'" data-ctbuy
+            v-if="element.buy_now_text && post.post_data.buy_now_option_select.replace('__', '') == 'wtb'" data-ctbuy
             :data-filter="debrainId" data-action="where-to-buy">
             <span :class="`${blockClassname}__cta-span`">{{ element.buy_now_text }}</span>
             <span :class="`${blockClassname}__cta-icon`" v-if="element.enable_cta_icon">
@@ -49,19 +49,19 @@ if (productEANs !== '') {
         </a>
         <a :href="directLinkURL[0]"
             :class="`${blockClassname}__cta cmpl-cta-style-${ctaStyle} ${blockClassname}__cta-animation-style-${ctaAnimationStyle} link`"
-            v-if="element.buy_now_text && post.post_data.buy_now_option_select.slice(2) == 'link'"
+            v-if="element.buy_now_text && post.post_data.buy_now_option_select.replace('__', '') == 'link'"
             :target="(directLinkURL[2] !== '' ? directLinkURL[2] : '_blank')">
             <span :class="`${blockClassname}__cta-span`">{{ element.buy_now_text }}</span>
             <span :class="`${blockClassname}__cta-icon`" v-if="element.enable_cta_icon">
                 <img :class="`${blockClassname}__icon-image style-svg`" :src="ctaIcons.cta_link_icon">
             </span>
         </a>
-        <wtb-button v-if="post.post_data.buy_now_option_select.slice(2) == 'wtb-v2' && productDebrainSkuId"
+        <wtb-button v-if="post.post_data.buy_now_option_select.replace('__', '') == 'wtb-v2' && productDebrainSkuId"
             :sku="productDebrainSkuId"></wtb-button>
         <a href="#" :data-mm-wtbid="`${mikmakDrawerWidgetID}`" :data-mm-ids="`${totalProductEANs}`"
             :data-mm-default-id="`${productEANs}`"
             :class="`${blockClassname}__cta cmpl-cta-style-${ctaStyle} ${blockClassname}__cta-animation-style-${ctaAnimationStyle} mikmak-buy-now`"
-            v-if="element.buy_now_text && post.post_data.buy_now_option_select.slice(2) == 'mikmak'"
+            v-if="element.buy_now_text && post.post_data.buy_now_option_select.replace('__', '') == 'mikmak'"
             :data-filter="debrainId">
             <span :class="`${blockClassname}__cta-span`">{{ element.buy_now_text }}</span>
             <span :class="`${blockClassname}__cta-icon`" v-if="element.enable_cta_icon">

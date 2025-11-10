@@ -3,7 +3,7 @@ import { gridLayoutElement } from "./ptfg-utils.vue";
 
 const props = defineProps(["post", "element", "fields", "globalImages"]);
 const blockClassname = "post-type-filter-grid-v3";
-const imageSelect = props.element.image_select?.slice(2);
+const imageSelect = props.element.image_select?.replace('__', '');
 let globalImage = '';
 if (props.globalImages[imageSelect]) {
     globalImage = props.globalImages[imageSelect]['global_image'];

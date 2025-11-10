@@ -37,7 +37,7 @@ const dateWithoutTime = computed(() => {
 });
 </script>
 <template>
-    <p :class="`${blockClassname}__post-publish-date ${blockClassname}__info-item ${element.text_style?.typography_style.slice(2)}`"
+    <p :class="`${blockClassname}__post-publish-date ${blockClassname}__info-item ${element.text_style?.typography_style.replace('__', '')}`"
         :style="`${gridLayoutString} ${textEditorStylesString}`">
         {{ dateWithoutTime }}
     </p>

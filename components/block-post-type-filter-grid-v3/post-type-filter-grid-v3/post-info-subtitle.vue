@@ -9,6 +9,7 @@ const textEditorStylesString = textEditorStyles(props);
 <template>
     <div :class="`${blockClassname}__post-info-subtitle ${blockClassname}__info-item`"
         :style="`${gridLayoutString} ${textEditorStylesString}`">
-        <p :class="`${element.text_style?.typography_style.slice(2)}`">{{ post.post_data.post_info_subtitle }}</p>
+        <p :class="`${element.text_style?.typography_style.replace('__', '')}`">{{ post.post_data.post_info_subtitle }}
+        </p>
     </div>
 </template>

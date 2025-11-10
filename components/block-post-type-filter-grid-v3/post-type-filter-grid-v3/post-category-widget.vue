@@ -13,7 +13,7 @@ const textEditorStylesString = textEditorStyles(props);
         :style="`${gridLayoutString} ${textEditorStylesString}`">
         <template v-for="(category, index) in props.post.categories" :key="index">
             <p v-if="category.taxonomy != 'translation_priority'" v-html="category.name"
-                :class="`${blockClassname}__post-category--item ${element.text_style?.typography_style.slice(2)}`">
+                :class="`${blockClassname}__post-category--item ${element.text_style?.typography_style.replace('__', '')}`">
             </p>
         </template>
     </div>
