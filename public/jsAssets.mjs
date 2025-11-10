@@ -28,6 +28,7 @@ const dynamicAssets = [
 	{ assetKey: "accordion-v3" },
 	{ assetKey: "accent-image-v3" },
 	{ assetKey: "site-copyright-notice-v3" },
+	{ assetKey: "post-type-filter-grid-v3" },
 ];
 const api = { dynamicAssets };
 export default api;
