@@ -471,73 +471,17 @@
 						"class": "",
 						"id": ""
 					},
-					"wpml_cf_preferences": 3,
 					"choices": {
-						"__flex-start": "Left",
-						"__center": "Center",
-						"__flex-end": "Right",
-						"__stretch": "Stretch"
+						"flex-start": "Left",
+						"center": "Center",
+						"flex-end": "Right",
+						"stretch": "Stretch"
 					},
-					"default_value": "__stretch",
+					"default_value": "stretch",
 					"return_format": "value",
 					"allow_null": 0,
 					"other_choice": 0,
-					"layout": "horizontal",
-					"save_other_choice": 0
-				},
-				{
-					"key": "field_68822860d0d3c",
-					"label": "Grid horizontal placement",
-					"name": "grid_horizontal_placement",
-					"aria-label": "",
-					"type": "radio",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": 0,
-					"wrapper": {
-						"width": "",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__flex-start": "Left",
-						"__center": "Center",
-						"__flex-end": "Right",
-						"__stretch": "Stretch"
-					},
-					"default_value": "__stretch",
-					"return_format": "value",
-					"allow_null": 0,
-					"other_choice": 0,
-					"layout": "horizontal",
-					"save_other_choice": 0
-				},
-				{
-					"key": "field_68822860d150c",
-					"label": "Grid vertical placement",
-					"name": "grid_vertical_placement",
-					"aria-label": "",
-					"type": "radio",
-					"instructions": "",
-					"required": 0,
-					"conditional_logic": 0,
-					"wrapper": {
-						"width": "",
-						"class": "",
-						"id": ""
-					},
-					"wpml_cf_preferences": 3,
-					"choices": {
-						"__flex-start": "Top",
-						"__center": "Center",
-						"__flex-end": "Bottom",
-						"__stretch": "Stretch"
-					},
-					"default_value": "__stretch",
-					"return_format": "value",
-					"allow_null": 0,
-					"other_choice": 0,
+					"allow_in_bindings": 1,
 					"layout": "horizontal",
 					"save_other_choice": 0
 				},
@@ -774,11 +718,11 @@
 	"active": false,
 	"description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
 	"show_in_rest": 0,
+	"display_title": "",
 	"acfe_autosync": ["json"],
-	"acfml_field_group_mode": "localization",
 	"acfe_form": 0,
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1756913188
+	"modified": 1762784598
 }

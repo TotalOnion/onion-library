@@ -1,1497 +1,1525 @@
 {
-    "key": "group_6882282e65bf2",
-    "title": "Component: Grid Layout Container v3",
-    "fields": [
-        {
-            "key": "field_6882282e724a3",
-            "label": "Desktop",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_6882282e72836",
-            "label": "Grid columns desktop",
-            "name": "grid_columns_desktop",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "min": 1,
-            "max": 30,
-            "step": 1,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e72c3b",
-            "label": "Column gap desktop",
-            "name": "column_gap_desktop",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 0,
-            "min": 0,
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e7301e",
-            "label": "Row gap desktop",
-            "name": "row_gap_desktop",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 0,
-            "min": 0,
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e73405",
-            "label": "Desktop end",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
-        },
-        {
-            "key": "field_6882282e737ea",
-            "label": "Portrait",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_6882282e73bd6",
-            "label": "Grid columns portrait",
-            "name": "grid_columns_portrait",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "min": 1,
-            "max": 30,
-            "step": 1,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e73fb7",
-            "label": "Column gap portrait",
-            "name": "column_gap_portrait",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 0,
-            "min": 0,
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e743a6",
-            "label": "Row gap portrait",
-            "name": "row_gap_portrait",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 0,
-            "min": 0,
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e74787",
-            "label": "Portrait end",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
-        },
-        {
-            "key": "field_6882282e74b71",
-            "label": "Mobile",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_6882282e74f5e",
-            "label": "Grid columns mobile",
-            "name": "grid_columns_mobile",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "min": 1,
-            "max": 30,
-            "step": 1,
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e7534c",
-            "label": "Column gap mobile",
-            "name": "column_gap_mobile",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 0,
-            "min": 0,
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e75729",
-            "label": "Row gap mobile",
-            "name": "row_gap_mobile",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": 0,
-            "min": 0,
-            "max": 4,
-            "step": "0.125",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e75b16",
-            "label": "Mobile end",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
-        },
-        {
-            "key": "field_6882282e75efb",
-            "label": "Advanced grid settings",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_6882282e762e5",
-            "label": "Auto Flow",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6882282e7668c",
-            "label": "Grid auto flow desktop",
-            "name": "grid_auto_flow_desktop",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__row": "Row",
-                "__column": "Column"
-            },
-            "default_value": "__row",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6882282e76ac4",
-            "label": "Grid auto flow portrait",
-            "name": "grid_auto_flow_portrait",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__row": "Row",
-                "__column": "Column"
-            },
-            "default_value": "__row",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6882282e76e99",
-            "label": "Grid auto flow mobile",
-            "name": "grid_auto_flow_mobile",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__row": "Row",
-                "__column": "Column"
-            },
-            "default_value": "__row",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_689ce5d0bb07c",
-            "label": "Auto Columns",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6882282e77289",
-            "label": "Grid auto columns desktop",
-            "name": "grid_auto_columns_desktop",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__auto": "Auto",
-                "__1fr": "1fr",
-                "__min-content": "Min Content",
-                "__max-content": "Max Content",
-                "__custom": "Custom"
-            },
-            "default_value": "__1fr",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_6882282e7766d",
-            "label": "Grid auto columns desktop custom",
-            "name": "grid_auto_columns_desktop_custom",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6882282e77289",
-                        "operator": "==",
-                        "value": "__custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689d9c794d260",
-            "label": "Grid auto columns portrait",
-            "name": "grid_auto_columns_portrait",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__auto": "Auto",
-                "__1fr": "1fr",
-                "__min-content": "Min Content",
-                "__max-content": "Max Content",
-                "__custom": "Custom"
-            },
-            "default_value": "__1fr",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_689d9c824d261",
-            "label": "Grid auto columns portrait custom",
-            "name": "grid_auto_columns_portrait_custom",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_689d9c794d260",
-                        "operator": "==",
-                        "value": "__custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689ce3f6636e4",
-            "label": "Grid auto columns mobile",
-            "name": "grid_auto_columns_mobile",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__auto": "Auto",
-                "__1fr": "1fr",
-                "__custom": "Custom"
-            },
-            "default_value": "__1fr",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_689ce400636e5",
-            "label": "Grid auto columns mobile custom",
-            "name": "grid_auto_columns_mobile_custom",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_689ce3f6636e4",
-                        "operator": "==",
-                        "value": "__custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689ce6198afed",
-            "label": "Auto Rows",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6882282e77a58",
-            "label": "Grid auto rows desktop",
-            "name": "grid_auto_rows_desktop",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__auto": "Auto",
-                "__1fr": "1fr",
-                "__custom": "Custom",
-                "__min-content": "Min Content",
-                "__max-content": "Max Content"
-            },
-            "default_value": "__auto",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_6882282e77e3d",
-            "label": "Grid auto rows desktop custom",
-            "name": "grid_auto_rows_desktop_custom",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6882282e77a58",
-                        "operator": "==",
-                        "value": "__custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "min": 0,
-            "max": 1000,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689db0bd71354",
-            "label": "Grid auto rows portrait",
-            "name": "grid_auto_rows_portrait",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__auto": "Auto",
-                "__1fr": "1fr",
-                "__custom": "Custom",
-                "__min-content": "Min Content",
-                "__max-content": "Max Content"
-            },
-            "default_value": "__auto",
-            "return_format": "value",
-            "multiple": 0,
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": "",
-            "max": ""
-        },
-        {
-            "key": "field_689db0d171355",
-            "label": "Grid auto rows portrait custom",
-            "name": "grid_auto_rows_portrait_custom",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_689db0bd71354",
-                        "operator": "==",
-                        "value": "__custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "min": 0,
-            "max": 1000,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_689ce5a3428a5",
-            "label": "Grid auto rows mobile",
-            "name": "grid_auto_rows_mobile",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__auto": "Auto",
-                "__1fr": "1fr",
-                "__custom": "Custom",
-                "__min-content": "Min Content",
-                "__max-content": "Max Content"
-            },
-            "default_value": "__auto",
-            "return_format": "value",
-            "multiple": 0,
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": "",
-            "max": ""
-        },
-        {
-            "key": "field_689ce5ab428a6",
-            "label": "Grid auto rows mobile custom",
-            "name": "grid_auto_rows_mobile_custom",
-            "aria-label": "",
-            "type": "range",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_689ce5a3428a5",
-                        "operator": "==",
-                        "value": "__custom"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "default_value": "",
-            "min": 0,
-            "max": 1000,
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e78223",
-            "label": "Grid Container Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6882282e7860d",
-            "label": "Scroll snap type desktop",
-            "name": "scroll_snap_type_desktop",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__none": "None",
-                "__x": "X",
-                "__x mandatory": "X mandatory",
-                "__y": "Y",
-                "__y mandatory": "Y mandatory",
-                "__both mandatory": "Both mandatory",
-                "__block": "Block",
-                "__inline": "Inline",
-                "__both": "Both"
-            },
-            "default_value": "__none",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_68a0915404285",
-            "label": "Scroll snap type portrait",
-            "name": "scroll_snap_type_portrait",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__none": "None",
-                "__x": "X",
-                "__x mandatory": "X mandatory",
-                "__y": "Y",
-                "__y mandatory": "Y mandatory",
-                "__both mandatory": "Both mandatory",
-                "__block": "Block",
-                "__inline": "Inline",
-                "__both": "Both"
-            },
-            "default_value": "__none",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_68a0918204289",
-            "label": "Scroll snap type mobile",
-            "name": "scroll_snap_type_mobile",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__none": "None",
-                "__x": "X",
-                "__x mandatory": "X mandatory",
-                "__y": "Y",
-                "__y mandatory": "Y mandatory",
-                "__both mandatory": "Both mandatory",
-                "__block": "Block",
-                "__inline": "Inline",
-                "__both": "Both"
-            },
-            "default_value": "__none",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_6882282e78ddb",
-            "label": "Scroll snap align desktop",
-            "name": "scroll_snap_align_desktop",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__none": "None",
-                "__start": "Start",
-                "__end": "End",
-                "__start end": "Start End",
-                "__end start": "End Start"
-            },
-            "default_value": "__none",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_68a093ba80505",
-            "label": "Scroll snap align portrait",
-            "name": "scroll_snap_align_portrait",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__none": "None",
-                "__start": "Start",
-                "__end": "End",
-                "__start end": "Start End",
-                "__end start": "End Start"
-            },
-            "default_value": "__none",
-            "return_format": "value",
-            "multiple": 0,
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": "",
-            "max": ""
-        },
-        {
-            "key": "field_68a0918a0428a",
-            "label": "Scroll snap align mobile",
-            "name": "scroll_snap_align_mobile",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__none": "None",
-                "__start": "Start",
-                "__end": "End",
-                "__start end": "Start End",
-                "__end start": "End Start"
-            },
-            "default_value": "__none",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_6882282e789f5",
-            "label": "Container overflow type desktop",
-            "name": "container_overflow_type_desktop",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__hidden": "Hidden",
-                "__auto": "Auto",
-                "__scroll": "Scroll",
-                "__visible": "Visible"
-            },
-            "default_value": "__hidden",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_68a0916c04287",
-            "label": "Container overflow type portrait",
-            "name": "container_overflow_type_portrait",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__hidden": "Hidden",
-                "__auto": "Auto",
-                "__scroll": "Scroll",
-                "__visible": "Visible"
-            },
-            "default_value": "__hidden",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_68a091910428b",
-            "label": "Container overflow type mobile",
-            "name": "container_overflow_type_mobile",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "choices": {
-                "__hidden": "Hidden",
-                "__auto": "Auto",
-                "__scroll": "Scroll",
-                "__visible": "Visible"
-            },
-            "default_value": "__hidden",
-            "return_format": "value",
-            "multiple": 0,
-            "max": "",
-            "prepend": "",
-            "append": "",
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "min": ""
-        },
-        {
-            "key": "field_6882282e791c6",
-            "label": "Custom templates",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6882282e795ab",
-            "label": "Grid template columns custom desktop",
-            "name": "grid_template_columns_custom_desktop",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e79996",
-            "label": "Grid template rows custom desktop",
-            "name": "grid_template_rows_custom_desktop",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e79d79",
-            "label": "Grid template columns custom portrait",
-            "name": "grid_template_columns_custom_portrait",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e7a16a",
-            "label": "Grid template rows custom portrait",
-            "name": "grid_template_rows_custom_portrait",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e7a54e",
-            "label": "Grid template columns custom mobile",
-            "name": "grid_template_columns_custom_mobile",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6882282e7a938",
-            "label": "Grid template rows custom mobile",
-            "name": "grid_template_rows_custom_mobile",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68a07c25eb2d7",
-            "label": "Scroll Buttons",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "placement": "top",
-            "endpoint": 0,
-            "no_preference": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_68a07c2feb2d8",
-            "label": "Enable Scroll Buttons desktop",
-            "name": "enable_scroll_buttons_desktop",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1,
-            "style": ""
-        },
-        {
-            "key": "field_68a07c46eb2d9",
-            "label": "Enable Scroll Buttons portrait",
-            "name": "enable_scroll_buttons_portrait",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1,
-            "style": ""
-        },
-        {
-            "key": "field_68a07c4ceb2da",
-            "label": "Enable Scroll Buttons mobile",
-            "name": "enable_scroll_buttons_mobile",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1,
-            "style": ""
-        },
-        {
-            "key": "field_6882282e7ad1b",
-            "label": "Advanced grid settings end",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 3,
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "block",
-                "operator": "!=",
-                "value": "all"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": false,
-    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
-    "show_in_rest": 0,
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfml_field_group_mode": "localization",
-    "acfe_form": 0,
-    "acfe_display_title": "",
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1755354147
+	"key": "group_6882282e65bf2",
+	"title": "Component: Grid Layout Container v3",
+	"fields": [
+		{
+			"key": "field_6882282e724a3",
+			"label": "Desktop",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6882282e72836",
+			"label": "Grid columns desktop",
+			"name": "grid_columns_desktop",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"min": 1,
+			"max": 30,
+			"step": 1,
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e72c3b",
+			"label": "Column gap desktop",
+			"name": "column_gap_desktop",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e7301e",
+			"label": "Row gap desktop",
+			"name": "row_gap_desktop",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e73405",
+			"label": "Desktop end",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 1
+		},
+		{
+			"key": "field_6882282e737ea",
+			"label": "Portrait",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6882282e73bd6",
+			"label": "Grid columns portrait",
+			"name": "grid_columns_portrait",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"min": 1,
+			"max": 30,
+			"step": 1,
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e73fb7",
+			"label": "Column gap portrait",
+			"name": "column_gap_portrait",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e743a6",
+			"label": "Row gap portrait",
+			"name": "row_gap_portrait",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e74787",
+			"label": "Portrait end",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 1
+		},
+		{
+			"key": "field_6882282e74b71",
+			"label": "Mobile",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6882282e74f5e",
+			"label": "Grid columns mobile",
+			"name": "grid_columns_mobile",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"min": 1,
+			"max": 30,
+			"step": 1,
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e7534c",
+			"label": "Column gap mobile",
+			"name": "column_gap_mobile",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e75729",
+			"label": "Row gap mobile",
+			"name": "row_gap_mobile",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": 0,
+			"min": 0,
+			"max": 4,
+			"step": "0.125",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e75b16",
+			"label": "Mobile end",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 1
+		},
+		{
+			"key": "field_6882282e75efb",
+			"label": "Advanced grid settings",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6882282e762e5",
+			"label": "Auto Flow",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_6882282e7668c",
+			"label": "Grid auto flow desktop",
+			"name": "grid_auto_flow_desktop",
+			"aria-label": "",
+			"type": "radio",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"row": "Row",
+				"column": "Column"
+			},
+			"default_value": "row",
+			"return_format": "value",
+			"allow_null": 0,
+			"other_choice": 0,
+			"allow_in_bindings": 1,
+			"layout": "horizontal",
+			"save_other_choice": 0
+		},
+		{
+			"key": "field_6882282e76ac4",
+			"label": "Grid auto flow portrait",
+			"name": "grid_auto_flow_portrait",
+			"aria-label": "",
+			"type": "radio",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"row": "Row",
+				"column": "Column"
+			},
+			"default_value": "row",
+			"return_format": "value",
+			"allow_null": 0,
+			"other_choice": 0,
+			"allow_in_bindings": 1,
+			"layout": "horizontal",
+			"save_other_choice": 0
+		},
+		{
+			"key": "field_6882282e76e99",
+			"label": "Grid auto flow mobile",
+			"name": "grid_auto_flow_mobile",
+			"aria-label": "",
+			"type": "radio",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"row": "Row",
+				"column": "Column"
+			},
+			"default_value": "row",
+			"return_format": "value",
+			"allow_null": 0,
+			"other_choice": 0,
+			"allow_in_bindings": 1,
+			"layout": "horizontal",
+			"save_other_choice": 0
+		},
+		{
+			"key": "field_689ce5d0bb07c",
+			"label": "Auto Columns",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_6882282e77289",
+			"label": "Grid auto columns desktop",
+			"name": "grid_auto_columns_desktop",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"auto": "Auto",
+				"1fr": "1fr",
+				"min-content": "Min Content",
+				"max-content": "Max Content",
+				"custom": "Custom"
+			},
+			"default_value": "1fr",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_6882282e7766d",
+			"label": "Grid auto columns desktop custom",
+			"name": "grid_auto_columns_desktop_custom",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_6882282e77289",
+						"operator": "==",
+						"value": "__custom"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689d9c794d260",
+			"label": "Grid auto columns portrait",
+			"name": "grid_auto_columns_portrait",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"auto": "Auto",
+				"1fr": "1fr",
+				"min-content": "Min Content",
+				"max-content": "Max Content",
+				"custom": "Custom"
+			},
+			"default_value": "1fr",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_689d9c824d261",
+			"label": "Grid auto columns portrait custom",
+			"name": "grid_auto_columns_portrait_custom",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_689d9c794d260",
+						"operator": "==",
+						"value": "__custom"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689ce3f6636e4",
+			"label": "Grid auto columns mobile",
+			"name": "grid_auto_columns_mobile",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"auto": "Auto",
+				"1fr": "1fr",
+				"custom": "Custom"
+			},
+			"default_value": "1fr",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_689ce400636e5",
+			"label": "Grid auto columns mobile custom",
+			"name": "grid_auto_columns_mobile_custom",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_689ce3f6636e4",
+						"operator": "==",
+						"value": "__custom"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689ce6198afed",
+			"label": "Auto Rows",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_6882282e77a58",
+			"label": "Grid auto rows desktop",
+			"name": "grid_auto_rows_desktop",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"auto": "Auto",
+				"1fr": "1fr",
+				"custom": "Custom",
+				"min-content": "Min Content",
+				"max-content": "Max Content"
+			},
+			"default_value": "auto",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_6882282e77e3d",
+			"label": "Grid auto rows desktop custom",
+			"name": "grid_auto_rows_desktop_custom",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_6882282e77a58",
+						"operator": "==",
+						"value": "__custom"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"min": 0,
+			"max": 1000,
+			"step": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689db0bd71354",
+			"label": "Grid auto rows portrait",
+			"name": "grid_auto_rows_portrait",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"choices": {
+				"__auto": "Auto",
+				"__1fr": "1fr",
+				"__custom": "Custom",
+				"__min-content": "Min Content",
+				"__max-content": "Max Content"
+			},
+			"default_value": "__auto",
+			"return_format": "value",
+			"multiple": 0,
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": "",
+			"max": "",
+			"create_options": 0,
+			"save_options": 0
+		},
+		{
+			"key": "field_689db0d171355",
+			"label": "Grid auto rows portrait custom",
+			"name": "grid_auto_rows_portrait_custom",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_689db0bd71354",
+						"operator": "==",
+						"value": "__custom"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"min": 0,
+			"max": 1000,
+			"step": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_689ce5a3428a5",
+			"label": "Grid auto rows mobile",
+			"name": "grid_auto_rows_mobile",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"auto": "Auto",
+				"1fr": "1fr",
+				"custom": "Custom",
+				"min-content": "Min Content",
+				"max-content": "Max Content"
+			},
+			"default_value": "auto",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_689ce5ab428a6",
+			"label": "Grid auto rows mobile custom",
+			"name": "grid_auto_rows_mobile_custom",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_689ce5a3428a5",
+						"operator": "==",
+						"value": "__custom"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"min": 0,
+			"max": 1000,
+			"step": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e78223",
+			"label": "Grid Container Settings",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_6882282e7860d",
+			"label": "Scroll snap type desktop",
+			"name": "scroll_snap_type_desktop",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"none": "None",
+				"x": "X",
+				"x mandatory": "X mandatory",
+				"y": "Y",
+				"y mandatory": "Y mandatory",
+				"both mandatory": "Both mandatory",
+				"block": "Block",
+				"inline": "Inline",
+				"both": "Both"
+			},
+			"default_value": "none",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_68a0915404285",
+			"label": "Scroll snap type portrait",
+			"name": "scroll_snap_type_portrait",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"none": "None",
+				"x": "X",
+				"x mandatory": "X mandatory",
+				"y": "Y",
+				"y mandatory": "Y mandatory",
+				"both mandatory": "Both mandatory",
+				"block": "Block",
+				"inline": "Inline",
+				"both": "Both"
+			},
+			"default_value": "none",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_68a0918204289",
+			"label": "Scroll snap type mobile",
+			"name": "scroll_snap_type_mobile",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"none": "None",
+				"x": "X",
+				"x mandatory": "X mandatory",
+				"y": "Y",
+				"y mandatory": "Y mandatory",
+				"both mandatory": "Both mandatory",
+				"block": "Block",
+				"inline": "Inline",
+				"both": "Both"
+			},
+			"default_value": "none",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_6882282e78ddb",
+			"label": "Scroll snap align desktop",
+			"name": "scroll_snap_align_desktop",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"none": "None",
+				"start": "Start",
+				"end": "End",
+				"start end": "Start End",
+				"end start": "End Start"
+			},
+			"default_value": "none",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_68a093ba80505",
+			"label": "Scroll snap align portrait",
+			"name": "scroll_snap_align_portrait",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"none": "None",
+				"start": "Start",
+				"end": "End",
+				"start end": "Start End",
+				"end start": "End Start"
+			},
+			"default_value": "none",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_68a0918a0428a",
+			"label": "Scroll snap align mobile",
+			"name": "scroll_snap_align_mobile",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"none": "None",
+				"start": "Start",
+				"end": "End",
+				"start end": "Start End",
+				"end start": "End Start"
+			},
+			"default_value": "none",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_6882282e789f5",
+			"label": "Container overflow type desktop",
+			"name": "container_overflow_type_desktop",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"hidden": "Hidden",
+				"auto": "Auto",
+				"scroll": "Scroll",
+				"visible": "Visible"
+			},
+			"default_value": "hidden",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_68a0916c04287",
+			"label": "Container overflow type portrait",
+			"name": "container_overflow_type_portrait",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"hidden": "Hidden",
+				"auto": "Auto",
+				"scroll": "Scroll",
+				"visible": "Visible"
+			},
+			"default_value": "hidden",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_68a091910428b",
+			"label": "Container overflow type mobile",
+			"name": "container_overflow_type_mobile",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"hidden": "Hidden",
+				"auto": "Auto",
+				"scroll": "Scroll",
+				"visible": "Visible"
+			},
+			"default_value": "hidden",
+			"return_format": "value",
+			"multiple": 0,
+			"max": "",
+			"prepend": "",
+			"append": "",
+			"allow_null": 0,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
+		},
+		{
+			"key": "field_6882282e791c6",
+			"label": "Custom templates",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_6882282e795ab",
+			"label": "Grid template columns custom desktop",
+			"name": "grid_template_columns_custom_desktop",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e79996",
+			"label": "Grid template rows custom desktop",
+			"name": "grid_template_rows_custom_desktop",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e79d79",
+			"label": "Grid template columns custom portrait",
+			"name": "grid_template_columns_custom_portrait",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e7a16a",
+			"label": "Grid template rows custom portrait",
+			"name": "grid_template_rows_custom_portrait",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e7a54e",
+			"label": "Grid template columns custom mobile",
+			"name": "grid_template_columns_custom_mobile",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6882282e7a938",
+			"label": "Grid template rows custom mobile",
+			"name": "grid_template_rows_custom_mobile",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 2,
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_68a07c25eb2d7",
+			"label": "Scroll Buttons",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
+			"key": "field_68a07c2feb2d8",
+			"label": "Enable Scroll Buttons desktop",
+			"name": "enable_scroll_buttons_desktop",
+			"aria-label": "",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"message": "",
+			"default_value": 0,
+			"ui_on_text": "",
+			"ui_off_text": "",
+			"ui": 1,
+			"style": ""
+		},
+		{
+			"key": "field_68a07c46eb2d9",
+			"label": "Enable Scroll Buttons portrait",
+			"name": "enable_scroll_buttons_portrait",
+			"aria-label": "",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"message": "",
+			"default_value": 0,
+			"ui_on_text": "",
+			"ui_off_text": "",
+			"ui": 1,
+			"style": ""
+		},
+		{
+			"key": "field_68a07c4ceb2da",
+			"label": "Enable Scroll Buttons mobile",
+			"name": "enable_scroll_buttons_mobile",
+			"aria-label": "",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "33",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"message": "",
+			"default_value": 0,
+			"ui_on_text": "",
+			"ui_off_text": "",
+			"ui": 1,
+			"style": ""
+		},
+		{
+			"key": "field_6882282e7ad1b",
+			"label": "Advanced grid settings end",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 1
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "!=",
+				"value": "all"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": false,
+	"description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+	"show_in_rest": 0,
+	"display_title": "",
+	"acfe_autosync": ["json"],
+	"acfe_form": 0,
+	"acfe_display_title": "",
+	"acfe_meta": "",
+	"acfe_note": "",
+	"modified": 1762784898
 }

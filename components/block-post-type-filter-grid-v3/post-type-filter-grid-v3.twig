@@ -6,7 +6,14 @@
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview: is_preview }, with_context = false) %}
 {% set postType = fields.post_type|ru %}
 {% set postFieldConfig = fields.post_data %}
-
+{# <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<pre>
+		{{ fn('var_export', fields) }}
+	</pre> #}
 {% if fields.limit_posts_to_selected_categories %}
 	{% set limitPostsToSelectedCategories = 'true' %}
 {% else %}
