@@ -1,5 +1,5 @@
 import {createApp} from 'vue';
-import posttypefiltergridv2 from 'Assets/vue/blocks/post-type-filter-grid-v3.vue';
+import posttypefiltergridv2 from '@total_onion/onion-library/components/block-post-type-filter-grid-v3/post-type-filter-grid-v3.vue';
 
 export default function posttypefiltergridv2Js(options = {}) {
 	try {
