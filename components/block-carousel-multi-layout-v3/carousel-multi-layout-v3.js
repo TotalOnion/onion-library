@@ -1,5 +1,5 @@
 import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
-import {Navigation, Pagination, Autoplay} from 'swiper/modules';
+import {Navigation, Pagination, Autoplay, EffectFade} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css/bundle';
 // import 'swiper/css/navigation';
