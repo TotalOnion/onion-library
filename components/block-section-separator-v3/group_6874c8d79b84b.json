@@ -551,7 +551,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/section-separator-v3"
+                "value": "all"
             }
         ]
     ],
@@ -561,16 +561,16 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752484082
+    "modified": 1762794600
 }
