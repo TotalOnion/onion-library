@@ -1,0 +1,323 @@
+{
+    "key": "group_63e24e04a1e61",
+    "title": "Block: Back To Top Button v3",
+    "fields": [
+        {
+            "key": "field_63e24e0734d7c",
+            "label": "Enable Back To Top Button",
+            "name": "enable_btt_button",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_63e2505208af7",
+            "label": "Background Colour",
+            "name": "btt_background_colour",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63e24e0734d7c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "display": "default",
+            "button_label": "Select Color",
+            "color_picker": true,
+            "absolute": false,
+            "input": true,
+            "allow_null": true,
+            "theme_colors": false,
+            "colors": [],
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
+        },
+        {
+            "key": "field_63e3cd0cddfce",
+            "label": "Arrow Colour",
+            "name": "btt_arrow_colour",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63e24e0734d7c",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_651bfc5788b2f",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "display": "default",
+            "button_label": "Select Color",
+            "color_picker": true,
+            "absolute": false,
+            "input": true,
+            "allow_null": true,
+            "theme_colors": false,
+            "colors": [],
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
+        },
+        {
+            "key": "field_63e29a05da971",
+            "label": "Position",
+            "name": "btt_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63e24e0734d7c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "choices": {
+                "__absolute": "Absolute",
+                "__fixed": "Fixed"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_651bf7e10a797",
+            "label": "Button Border Radius",
+            "name": "btt_border_radius",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63e24e0734d7c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": "0px",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_651bfc5788b2f",
+            "label": "Enable Custom Image",
+            "name": "enable_custom_image",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63e24e0734d7c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
+            "key": "field_651c00fe13e1f",
+            "label": "Button Image",
+            "name": "btt_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651bfc5788b2f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium",
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "upload_folder": ""
+        },
+        {
+            "key": "field_65251a3817f08",
+            "label": "Image Size",
+            "name": "image_size",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651bfc5788b2f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "all"
+            ],
+            "default_value": 30,
+            "min": 0,
+            "max": 50,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1762954117
+}
