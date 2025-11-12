@@ -113,9 +113,8 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					modules: [
 						Navigation,
 						Pagination,
-						Autoplay
-						// Lazy,
-						// EffectFade,
+						Autoplay,
+						EffectFade
 						// EffectCoverflow,
 						// EffectCreative,
 						// FreeMode,
