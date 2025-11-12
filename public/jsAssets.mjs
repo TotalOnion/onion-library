@@ -27,6 +27,7 @@ const dynamicAssets = [
 	{ assetKey: "betterreviews-display-v3" },
 	{ assetKey: "accordion-v3" },
 	{ assetKey: "accent-image-v3" },
+	{ assetKey: "scrolling-banner-v3" },
 	{ assetKey: "site-copyright-notice-v3" },
 	{ assetKey: "post-type-filter-grid-v3" },
 ];
