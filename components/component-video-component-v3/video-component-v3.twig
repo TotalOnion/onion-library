@@ -61,16 +61,23 @@
 	{% set captionsEnabled = fields.enable_captions|default(false) %}
 	{% set captions = fields.captions %}
 	{% set videoId = block.videoIdPrefix ~ fields.video_trigger_id %}
+	{% set captionsFile = fields.captions.0.captions_file %}
+	{% set noAudioCaptions = fields.enable_no_audio_captions %}
+
 	<div data-videoid="{{videoId}}" data-videocontainerid="{{fields.video_trigger_id}}" data-desktopvideo="{{gt_video_mainsrc(videoDesktop['url'])}}" data-youtubedesktop="{{youtubeDesktopId}}" data-youtubemobile="{{youtubeMobileId}}" data-vimeo-desktop-url="{{vimeoDesktopUrl}}" data-vimeo-mobile-url="{{vimeoMobileUrl}}" data-vimeodesktopid="{{vimeoDesktopId}}" data-vimeomobileid="{{vimeoMobileId}}" data-mobilevideo="{{gt_video_mainsrc(videoMobile['url'])}}" class="{{blockClassName}}__video-container cblvc-video-container {{lockVideoAspectToImage}} {{videoPlayingZindexClass}} {{setVideoToCover}}" data-videotype="{{videoType}}" data-loop="{{loopVideo}}" data-modal="{{modal}}" data-controls="{{controls}}" data-autoplay="{{autoplayVideo}}" data-autoplay-mobile="{{autoplayVideoMobile}}" data-fullscreen="{{fullscreen}}" data-muted="{{muted}}" data-videoenabled="{{videoEnabled}}" data-pattern-dynamic="1">
 		<div class="{{blockClassName}}__video-inner-container cblvc-video-container__video-inner-container" data-pattern-type>
 			{% if videoType == 'upload' %}
 				<video class="{{blockClassName}}__video-player cblvc-video-container__video-player" {{muted ? 'muted' : ''}} playsinline width='{{videoDesktop.width}}' height='{{videoDesktop.height}}'>
 					<source src="" type="video/mp4">
-					{% if captionsEnabled == true and captions is not empty %}
+					{% if captionsEnabled == true and noAudioCaptions %}
+						<track src={{ asset('no-audio.vtt') }} srclang="en" label="english" kind="captions"/>
+
+					{% elseif captionsEnabled == true and not noAudioCaptions and captions is not empty %}
 						{% for caption in captions %}
-							<track src={{caption.captions_file.url}} srclang={{caption.language_code}} label="{{caption.caption_label}}" kind="captions"/>
+							<track src="{{ caption.captions_file.url }}" srclang="{{ caption.language_code }}" label="{{ caption.caption_label }}" kind="captions"/>
 						{% endfor %}
 					{% endif %}
+
 				</video>
 			{% endif %}
 			{% if videoType == 'youtube' %}

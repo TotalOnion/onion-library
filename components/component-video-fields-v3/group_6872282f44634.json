@@ -96,7 +96,9 @@
             "ui": 1,
             "ajax": 1,
             "placeholder": "",
-            "min": ""
+            "min": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6872282f51d38",
@@ -745,6 +747,46 @@
             "style": ""
         },
         {
+            "key": "field_691495ab897ff",
+            "label": "Enable \"No audio\" Captions",
+            "name": "enable_no_audio_captions",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6872282f51575",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6872282f51950",
+                        "operator": "==",
+                        "value": "__upload"
+                    },
+                    {
+                        "field": "field_6872282f56770",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        },
+        {
             "key": "field_6872282f56b4d",
             "label": "Captions",
             "name": "captions",
@@ -755,19 +797,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6872282f56770",
-                        "operator": "==",
+                        "field": "field_691495ab897ff",
+                        "operator": "!=",
                         "value": "1"
-                    },
-                    {
-                        "field": "field_6872282f51575",
-                        "operator": "==",
-                        "value": "1"
-                    },
-                    {
-                        "field": "field_6872282f51950",
-                        "operator": "==",
-                        "value": "__upload"
                     }
                 ]
             ],
@@ -776,7 +808,6 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 3,
             "acfe_repeater_stylised_button": 0,
             "layout": "table",
             "pagination": 0,
@@ -911,13 +942,13 @@
     "active": false,
     "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1754573386
+    "modified": 1762957218
 }
