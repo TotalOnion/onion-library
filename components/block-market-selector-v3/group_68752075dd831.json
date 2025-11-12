@@ -104,7 +104,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/market-selector-v3"
+                "value": "all"
             }
         ]
     ],
@@ -114,16 +114,16 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1752848810
+    "modified": 1762794584
 }

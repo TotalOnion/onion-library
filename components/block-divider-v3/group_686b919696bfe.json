@@ -866,7 +866,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/divider-v3"
+                "value": "all"
             }
         ]
     ],
@@ -876,7 +876,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
     "show_in_rest": 0,
     "display_title": "",
@@ -887,5 +887,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1761760329
+    "modified": 1762794521
 }

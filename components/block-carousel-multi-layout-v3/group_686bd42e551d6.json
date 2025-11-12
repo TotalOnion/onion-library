@@ -520,7 +520,10 @@
             "input": 1,
             "allow_null": 1,
             "theme_colors": 0,
-            "colors": []
+            "colors": [],
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
         },
         {
             "key": "field_686bd42e677fc",
@@ -550,7 +553,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/carousel-multi-layout-v3"
+                "value": "all"
             }
         ]
     ],
@@ -560,16 +563,16 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759787683
+    "modified": 1762794515
 }

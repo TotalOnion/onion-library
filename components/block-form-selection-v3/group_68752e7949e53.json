@@ -108,6 +108,9 @@
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_68778eff6c792",
@@ -137,10 +140,7 @@
                     "acfe_clone_modal_button": "",
                     "acfe_clone_modal_size": "large"
                 }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         },
         {
             "key": "field_68765a476889f",
@@ -269,8 +269,11 @@
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "1": "White text",
-                "2": "test"
+                "1": "Onion 1",
+                "2": "Onion 2",
+                "3": "Onion 3",
+                "4": "Onion 4",
+                "5": "Onion 5"
             },
             "default_value": 1,
             "return_format": "value",
@@ -323,7 +326,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/form-selection-v3"
+                "value": "all"
             }
         ]
     ],
@@ -333,16 +336,16 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
+    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
-    "acfml_field_group_mode": "localization",
     "acfe_form": 0,
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1753799657
+    "modified": 1762794525
 }
