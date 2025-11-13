@@ -92,7 +92,7 @@
 {% set mobileSlides = 'data-mobileslides="' ~ fields.carousel_number_of_slides_mobile ~ '"' %}
 {% set tabletSlides = 'data-tabletslides="' ~ fields.carousel_number_of_slides_tablet ~ '"' %}
 {% set desktopSlides = 'data-desktopslides="' ~ fields.carousel_number_of_slides_desktop ~ '"' %}
-{% set desktopFullSlides = 'data-desktopslidesfull="' ~ fields.number_of_slides_on_desktop_full ~ '"' %}
+{% set desktopFullSlides = 'data-desktopslidesfull="' ~ fields.number_of_slides_on_desktop_full|default(fields.carousel_number_of_slides_desktop) ~ '"' %}
 
 {% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.carousel_number_of_slides_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.carousel_number_of_slides_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.carousel_number_of_slides_tablet|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.carousel_number_of_slides_mobile|default(1))|round ~ 'vw, 100vw' %}
 
