@@ -13,8 +13,8 @@ export default function carouselmultilayoutv3Js(options = {}) {
 			const {Swiper} = values[0][0];
 
 			const dataAttributes = block.dataset;
-			const slidesDesktopFull = Number(dataAttributes.desktopslidesfull);
 			const slidesDesktop = Number(dataAttributes.desktopslides);
+			const slidesDesktopFull = Number(dataAttributes.desktopslidesfull) || slidesDesktop;
 			const slidesTablet = Number(dataAttributes.tabletslides);
 			const slidesMobile = Number(dataAttributes.mobileslides);
 			const slidesOffsetDesktopBefore = Number(
