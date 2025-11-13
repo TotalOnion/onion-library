@@ -212,6 +212,7 @@
 		.ingredient-image {
 			max-width: core-functions-v3.fluidSize(50);
 			aspect-ratio: 1;
+			object-fit: cover;
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				max-width: core-functions-v3.fluidSize(100);
@@ -263,6 +264,7 @@
 			.equipment-image {
 				max-width: core-functions-v3.fluidSize(50);
 				aspect-ratio: 1;
+				object-fit: cover;
 
 				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 					max-width: core-functions-v3.fluidSize(100);
