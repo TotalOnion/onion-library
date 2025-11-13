@@ -13,6 +13,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 			const {Swiper} = values[0][0];
 
 			const dataAttributes = block.dataset;
+			const slidesDesktopFull = Number(dataAttributes.desktopslidesfull);
 			const slidesDesktop = Number(dataAttributes.desktopslides);
 			const slidesTablet = Number(dataAttributes.tabletslides);
 			const slidesMobile = Number(dataAttributes.mobileslides);
@@ -44,6 +45,9 @@ export default function carouselmultilayoutv3Js(options = {}) {
 
 			const spaceBetweenSlidesDesktop = Number(
 				dataAttributes.desktopspacebetweenslides
+			);
+			const spaceBetweenSlidesDesktopFull = Number(
+				dataAttributes.desktopfullspacebetweenslides
 			);
 			const spaceBetweenSlidesMobile = Number(
 				dataAttributes.mobilespacebetweenslides
@@ -184,6 +188,11 @@ export default function carouselmultilayoutv3Js(options = {}) {
 								centerInsufficientSlidesDesktop,
 							slidesOffsetBefore: slidesOffsetDesktopBefore,
 							slidesOffsetAfter: slidesOffsetDesktopAfter,
+							loop: totalSlides > 1 ? loopSlides : false
+						},
+						1440: {
+							slidesPerView: slidesDesktopFull,
+							spaceBetween: spaceBetweenSlidesDesktopFull,
 							loop: totalSlides > 1 ? loopSlides : false
 						}
 					},

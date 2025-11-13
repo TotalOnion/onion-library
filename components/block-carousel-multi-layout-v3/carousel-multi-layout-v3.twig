@@ -92,11 +92,12 @@
 {% set mobileSlides = 'data-mobileslides="' ~ fields.carousel_number_of_slides_mobile ~ '"' %}
 {% set tabletSlides = 'data-tabletslides="' ~ fields.carousel_number_of_slides_tablet ~ '"' %}
 {% set desktopSlides = 'data-desktopslides="' ~ fields.carousel_number_of_slides_desktop ~ '"' %}
+{% set desktopFullSlides = 'data-desktopslidesfull="' ~ fields.number_of_slides_on_desktop_full ~ '"' %}
 
 {% set imageSizes = '(min-width: 1440px) ' ~ (100 / fields.carousel_number_of_slides_desktop|default(1))|round ~ 'vw, (min-width: 1024px) ' ~ (100 / fields.carousel_number_of_slides_desktop|default(1))|round ~ 'vw, (min-width: 768px) ' ~ (100 / fields.carousel_number_of_slides_tablet|default(1))|round ~ 'vw, (min-width: 300px) ' ~(100 / fields.carousel_number_of_slides_mobile|default(1))|round ~ 'vw, 100vw' %}
 
 
-{% set sectionDataAttributes = dataAttributeEntryPoint ~ centerInsufficientSlidesDesktop ~ centerInsufficientSlidesPortrait ~ centerInsufficientSlidesMobile ~ autoplay ~ freeMode ~ mouseWheel ~ transitionDelay ~ transitionSpeed ~ transitionStyle ~ fractionStyle ~ fractionString ~ mobileSlides ~ tabletSlides ~ desktopSlides %}
+{% set sectionDataAttributes = dataAttributeEntryPoint ~ centerInsufficientSlidesDesktop ~ centerInsufficientSlidesPortrait ~ centerInsufficientSlidesMobile ~ autoplay ~ freeMode ~ mouseWheel ~ transitionDelay ~ transitionSpeed ~ transitionStyle ~ fractionStyle ~ fractionString ~ mobileSlides ~ tabletSlides ~ desktopSlides ~ desktopFullSlides %}
 
 {{previewEntryPoint}}
 <style>
@@ -104,7 +105,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{ blockClassName }} lazy-fade {{block.id}} {{block.className}} {{classNameEntryPoint}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} " {{sectionDataAttributes}} data-mobileslidesoffsetbefore="{{carousel_slides_offset_before_mobile}}" data-mobileslidesoffsetafter="{{carousel_slides_offset_after_mobile}}" data-tabletslidesoffsetbefore="{{carousel_slides_offset_before_tablet}}" data-tabletslidesoffsetafter="{{carousel_slides_offset_after_tablet}}" data-desktopslidesoffsetbefore="{{carousel_slides_offset_before_desktop}}" data-desktopslidesoffsetafter="{{carousel_slides_offset_after_desktop}}" data-desktopspacebetweenslides="{{fields.carousel_space_between_slides_desktop}}" data-mobilespacebetweenslides="{{fields.carousel_space_between_slides_mobile}}" data-tabletspacebetweenslides="{{fields.carousel_space_between_slides_tablet}}" data-centeractiveslide="{{fields.carousel_center_active_slide}}" data-centeractiveslideportrait="{{fields.center_active_slide_portrait}}" data-centeractiveslidemobile="{{fields.center_active_slide_mobile}}" data-loopslides="{{fields.loop_slides}}" data-loopslidesportrait="{{fields.loop_slides_portrait}}" data-loopslidesmobile="{{fields.loop_slides_mobile}}" data-paginationstyle="{{carouselPaginationStyle}}" data-assetkey="{{ blockClassName }}">
+
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class=" {{ blockClassName }} lazy-fade {{block.id}} {{block.className}} {{classNameEntryPoint}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} " {{sectionDataAttributes}} data-mobileslidesoffsetbefore="{{carousel_slides_offset_before_mobile}}" data-mobileslidesoffsetafter="{{carousel_slides_offset_after_mobile}}" data-tabletslidesoffsetbefore="{{carousel_slides_offset_before_tablet}}" data-tabletslidesoffsetafter="{{carousel_slides_offset_after_tablet}}" data-desktopslidesoffsetbefore="{{carousel_slides_offset_before_desktop}}" data-desktopslidesoffsetafter="{{carousel_slides_offset_after_desktop}}" data-desktopfullspacebetweenslides="{{fields.space_between_slides_desktop_full}}" data-desktopspacebetweenslides="{{fields.carousel_space_between_slides_desktop}}" data-mobilespacebetweenslides="{{fields.carousel_space_between_slides_mobile}}" data-tabletspacebetweenslides="{{fields.carousel_space_between_slides_tablet}}" data-centeractiveslide="{{fields.carousel_center_active_slide}}" data-centeractiveslideportrait="{{fields.center_active_slide_portrait}}" data-centeractiveslidemobile="{{fields.center_active_slide_mobile}}" data-loopslides="{{fields.loop_slides}}" data-loopslidesportrait="{{fields.loop_slides_portrait}}" data-loopslidesmobile="{{fields.loop_slides_mobile}}" data-paginationstyle="{{carouselPaginationStyle}}" data-assetkey="{{ blockClassName }}">
 
 	{% set arrowData = fields %}
 	<div class="{{ blockClassName }}__inner-container">
