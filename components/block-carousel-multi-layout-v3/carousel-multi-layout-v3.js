@@ -14,7 +14,8 @@ export default function carouselmultilayoutv3Js(options = {}) {
 
 			const dataAttributes = block.dataset;
 			const slidesDesktop = Number(dataAttributes.desktopslides);
-			const slidesDesktopFull = Number(dataAttributes.desktopslidesfull) || slidesDesktop;
+			const slidesDesktopFull =
+				Number(dataAttributes.desktopslidesfull) || slidesDesktop;
 			const slidesTablet = Number(dataAttributes.tabletslides);
 			const slidesMobile = Number(dataAttributes.mobileslides);
 			const slidesOffsetDesktopBefore = Number(
@@ -46,9 +47,9 @@ export default function carouselmultilayoutv3Js(options = {}) {
 			const spaceBetweenSlidesDesktop = Number(
 				dataAttributes.desktopspacebetweenslides
 			);
-			const spaceBetweenSlidesDesktopFull = Number(
-				dataAttributes.desktopfullspacebetweenslides
-			);
+			const spaceBetweenSlidesDesktopFull =
+				Number(dataAttributes.desktopfullspacebetweenslides) ||
+				spaceBetweenSlidesDesktop;
 			const spaceBetweenSlidesMobile = Number(
 				dataAttributes.mobilespacebetweenslides
 			);
