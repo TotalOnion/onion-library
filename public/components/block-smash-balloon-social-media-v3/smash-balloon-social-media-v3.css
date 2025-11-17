@@ -1,0 +1,25 @@
+.smash-balloon-social-media-v3 {
+  position: relative;
+  max-width: 100vw;
+}
+.smash-balloon-social-media-v3__instagram {
+  width: 100%;
+  position: relative;
+  pointer-events: all;
+}
+.smash-balloon-social-media-v3__instagram .sbi-owl-stage,
+.smash-balloon-social-media-v3__instagram .sbi-owl-item {
+  min-width: calc(190 / var(--desktop-design-reference) * var(--screen-width-static));
+}
+.smash-balloon-social-media-v3[data-marquee] .sbi-owl-stage {
+  transition: none !important;
+  animation: sbiScroll 30s linear infinite;
+}
+@keyframes sbiScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

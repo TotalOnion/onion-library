@@ -1,0 +1,32 @@
+.form-selection-v3 {
+  pointer-events: all;
+}
+.form-selection-v3__container-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.form-selection-v3__inner {
+  overflow-y: scroll;
+  width: 100vw;
+  z-index: 9999;
+  height: 100%;
+}
+.form-selection-v3__modal-open--icon {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+.form-selection-v3__modal-close {
+  position: absolute;
+  top: calc(20 / var(--design-reference) * var(--screen-width));
+  right: calc(20 / var(--design-reference) * var(--screen-width));
+}

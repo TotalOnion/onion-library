@@ -1,6 +1,6 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/breakpoints';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 
 .back-to-top-button {
 	position: relative;

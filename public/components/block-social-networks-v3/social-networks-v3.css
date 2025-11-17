@@ -1,0 +1,74 @@
+.social-networks-v3 {
+  display: flex;
+  gap: 10px;
+}
+.social-networks-v3 .component-social-networks-v3 {
+  display: flex;
+  width: 100%;
+  justify-content: var(--alignment-mobile);
+}
+@media screen and (min-width: 768px) {
+  .social-networks-v3 .component-social-networks-v3 {
+    justify-content: var(--alignment-portrait);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .social-networks-v3 .component-social-networks-v3 {
+    justify-content: var(--alignment-desktop);
+  }
+}
+.social-networks-v3 .component-social-networks-v3__inner-container {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  gap: calc(var(--gap-mobile) / var(--design-reference) * var(--screen-width));
+  flex-direction: var(--direction-mobile);
+}
+@media screen and (min-width: 768px) {
+  .social-networks-v3 .component-social-networks-v3__inner-container {
+    gap: calc(var(--gap-portrait) / var(--design-reference) * var(--screen-width));
+    flex-direction: var(--direction-portrait);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .social-networks-v3 .component-social-networks-v3__inner-container {
+    gap: calc(var(--gap-desktop) / var(--design-reference) * var(--screen-width));
+    flex-direction: var(--direction-desktop);
+  }
+}
+.social-networks-v3 .component-social-networks-v3__image {
+  display: block;
+  width: calc(var(--width-mobile) / var(--design-reference) * var(--screen-width));
+  height: calc(var(--width-mobile) / var(--design-reference) * var(--screen-width));
+}
+@media screen and (min-width: 768px) {
+  .social-networks-v3 .component-social-networks-v3__image {
+    width: calc(var(--width-portrait) / var(--design-reference) * var(--screen-width));
+    height: calc(var(--width-portrait) / var(--design-reference) * var(--screen-width));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .social-networks-v3 .component-social-networks-v3__image {
+    width: calc(var(--width-desktop) / var(--design-reference) * var(--screen-width));
+    height: calc(var(--width-desktop) / var(--design-reference) * var(--screen-width));
+  }
+}
+.social-networks-v3 .component-social-networks-v3__link-container {
+  display: flex;
+  align-items: center;
+  gap: calc(15 / var(--design-reference) * var(--screen-width));
+}
+.social-networks-v3 .component-social-networks-v3__image {
+  height: auto;
+  width: calc(var(--width-mobile) / var(--design-reference) * var(--screen-width));
+}
+@media screen and (min-width: 768px) {
+  .social-networks-v3 .component-social-networks-v3__image {
+    width: calc(var(--width-portrait) / var(--design-reference) * var(--screen-width));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .social-networks-v3 .component-social-networks-v3__image {
+    width: calc(var(--width-desktop) / var(--design-reference) * var(--screen-width));
+  }
+}

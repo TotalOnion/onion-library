@@ -1,0 +1,14 @@
+.site-title-and-tagline-v3 {
+  display: grid;
+  grid-template: "main"/1fr;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+  text-align: center;
+}
+.site-title-and-tagline-v3__title {
+  font-weight: bold;
+}
+.site-title-and-tagline-v3__tagline {
+  font-weight: bold;
+}

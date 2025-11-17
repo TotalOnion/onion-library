@@ -1,6 +1,6 @@
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-mixins-v3/core-mixins-v3';
-@use 'NodeModules/@total_onion/onion-library/components/fields-core-functions-v3/core-functions-v3';
-@use 'NodeModules/@total_onion/onion-library/breakpoints';
+@use '../components/fields-core-mixins-v3/core-mixins-v3';
+@use '../components/fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
 .cocktail-recipe-v3 {
 	pointer-events: all;
 
@@ -17,7 +17,7 @@
 			font-weight: 500;
 			text-transform: uppercase;
 			text-box-edge: cap alphabetic;
-   			text-box-trim: trim-both;
+			text-box-trim: trim-both;
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				font-size: core-functions-v3.fontSize(160);
@@ -293,7 +293,7 @@
 			text-transform: uppercase;
 			padding-block: core-functions-v3.fluidSize(10);
 			text-box-edge: cap alphabetic;
-   			text-box-trim: trim-both;
+			text-box-trim: trim-both;
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				padding-block: core-functions-v3.fluidSize(40);

@@ -17,8 +17,10 @@ const dynamicEntryPointsScss = globSync(`./components/block-*/*-v3.scss`).map(
 const assetArrayJs = dynamicEntryPointsJs.map((entry) => {
 	return `./components/block-${entry}/${entry}.js`;
 });
-const assetArrayScss = dynamicEntryPointsJs.map((entry) => {
-	return `./components/block-${entry}/${entry}.scss`;
+
+const assetArrayScss = dynamicEntryPointsScss.map((entry) => {
+	let filename = entry.replace('.scss', '');
+	return `./components/block-${filename}/${filename}.scss`;
 });
 
 // Create the directory path for the target file
@@ -36,7 +38,12 @@ const dirPath = path.dirname(jsAssetsFilePath);
 fs.mkdirSync(dirPath, {recursive: true});
 
 const data = `
-const dynamicAssets = ${JSON.stringify([...assetArrayScss])};
+const dynamicAssets = ${JSON.stringify([
+	...assetArrayScss,
+	...assetArrayJs,
+	'./public/dynamicBlockScss-v3.scss',
+	'./public/publicBundle.scss'
+])};
 export default dynamicAssets;
 `;
 

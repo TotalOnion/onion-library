@@ -55,29 +55,28 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__h-xl-sizing": "H extra large",
-				"__h-l-sizing": "H large",
-				"__h-m-sizing": "H medium",
-				"__h-s-sizing": "H small",
-				"__h-xs-sizing": "H extra small",
-				"__h-xxs-sizing": "H xx smal",
-				"__h-xxxs-sizing": "H xxx small",
-				"__sh-xl-sizing": "SH extra large",
-				"__sh-l-sizing": "SH large",
-				"__sh-m-sizing": "SH medium",
-				"__sh-s-sizing": "SH small",
-				"__sh-xs-sizing": "SH x small",
-				"__sh-xxs-sizing": "SH xx small",
-				"__p-l-sizing": "P large",
-				"__p-sizing": "P",
-				"__p-s-sizing": "P small",
-				"__p-xs-sizing": "P extra small",
-				"__p-xxs-sizing": "P xx small",
-				"__p-xxxs-sizing": "P xxx small"
+				"h-xl-sizing": "H extra large",
+				"h-l-sizing": "H large",
+				"h-m-sizing": "H medium",
+				"h-s-sizing": "H small",
+				"h-xs-sizing": "H extra small",
+				"h-xxs-sizing": "H xx smal",
+				"h-xxxs-sizing": "H xxx small",
+				"sh-xl-sizing": "SH extra large",
+				"sh-l-sizing": "SH large",
+				"sh-m-sizing": "SH medium",
+				"sh-s-sizing": "SH small",
+				"sh-xs-sizing": "SH x small",
+				"sh-xxs-sizing": "SH xx small",
+				"p-l-sizing": "P large",
+				"p-sizing": "P",
+				"p-s-sizing": "P small",
+				"p-xs-sizing": "P extra small",
+				"p-xxs-sizing": "P xx small",
+				"p-xxxs-sizing": "P xxx small"
 			},
-			"default_value": "__p-sizing",
+			"default_value": "p-sizing",
 			"return_format": "value",
 			"multiple": 0,
 			"max": "",
@@ -87,8 +86,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -105,26 +107,28 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__h1": "H1",
-				"__h2": "H2",
-				"__h3": "H3",
-				"__h4": "H4",
-				"__h5": "H5",
-				"__h6": "H6",
-				"__p": "P"
+				"h1": "H1",
+				"h2": "H2",
+				"h3": "H3",
+				"h4": "H4",
+				"h5": "H5",
+				"h6": "H6",
+				"p": "P"
 			},
-			"default_value": "__p",
+			"default_value": "p",
 			"return_format": "value",
 			"multiple": 0,
 			"max": "",
 			"prepend": "",
 			"append": "",
 			"allow_null": 0,
+			"allow_in_bindings": 1,
 			"ui": 0,
 			"ajax": 0,
 			"placeholder": "",
+			"create_options": 0,
+			"save_options": 0,
 			"allow_custom": 0,
 			"search_placeholder": "",
 			"min": ""
@@ -232,7 +236,10 @@
 			"input": 1,
 			"allow_null": 1,
 			"theme_colors": 0,
-			"colors": []
+			"colors": [],
+			"custom_palette_source": "",
+			"palette_colors": "",
+			"show_color_wheel": true
 		},
 		{
 			"key": "field_687a4e2341f23",
@@ -388,7 +395,10 @@
 			"input": true,
 			"allow_null": true,
 			"theme_colors": false,
-			"colors": []
+			"colors": [],
+			"custom_palette_source": "",
+			"palette_colors": "",
+			"show_color_wheel": true
 		},
 		{
 			"key": "field_687a4e23432a6",
@@ -450,7 +460,9 @@
 			"placeholder": "",
 			"allow_custom": 0,
 			"search_placeholder": "",
-			"min": ""
+			"min": "",
+			"create_options": 0,
+			"save_options": 0
 		},
 		{
 			"key": "field_687a4e2343a79",
@@ -486,27 +498,26 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__h-xl-fs-desktop": "H extra large",
-				"__h-l-fs-desktop": "H large",
-				"__h-m-fs-desktop": "H medium",
-				"__h-s-fs-desktop": "H small",
-				"__h-xs-fs-desktop": "H extra small",
-				"__h-xxs-fs-desktop": "H xx smal",
-				"__h-xxxs-fs-desktop": "H xxx small",
-				"__sh-xl-fs-desktop": "SH extra large",
-				"__sh-l-fs-desktop": "SH large",
-				"__sh-m-fs-desktop": "SH medium",
-				"__sh-s-fs-desktop": "SH small",
-				"__sh-xs-fs-desktop": "SH x small",
-				"__sh-xxs-fs-desktop": "SH xx small",
-				"__p-l-fs-desktop": "P large",
-				"__p-fs-desktop": "P",
-				"__p-s-fs-desktop": "P small",
-				"__p-xs-fs-desktop": "P extra small",
-				"__p-xxs-fs-desktop": "P xx small",
-				"__p-xxxs-fs-desktop": "P xxx small"
+				"h-xl-fs-desktop": "H extra large",
+				"h-l-fs-desktop": "H large",
+				"h-m-fs-desktop": "H medium",
+				"h-s-fs-desktop": "H small",
+				"h-xs-fs-desktop": "H extra small",
+				"h-xxs-fs-desktop": "H xx smal",
+				"h-xxxs-fs-desktop": "H xxx small",
+				"sh-xl-fs-desktop": "SH extra large",
+				"sh-l-fs-desktop": "SH large",
+				"sh-m-fs-desktop": "SH medium",
+				"sh-s-fs-desktop": "SH small",
+				"sh-xs-fs-desktop": "SH x small",
+				"sh-xxs-fs-desktop": "SH xx small",
+				"p-l-fs-desktop": "P large",
+				"p-fs-desktop": "P",
+				"p-s-fs-desktop": "P small",
+				"p-xs-fs-desktop": "P extra small",
+				"p-xxs-fs-desktop": "P xx small",
+				"p-xxxs-fs-desktop": "P xxx small"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -518,8 +529,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -536,25 +550,27 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__var(--theme-primary-text-colour)": "Theme primary text",
-				"__var(--theme-secondary-text-colour)": "Theme secondary text",
-				"__var(--theme-tertiary-text-colour)": "Theme tertiary text"
+				"var(--theme-primary-text-colour)": "Theme primary text",
+				"var(--theme-secondary-text-colour)": "Theme secondary text",
+				"var(--theme-tertiary-text-colour)": "Theme tertiary text"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 0,
-			"ajax": 0,
+			"max": "",
 			"placeholder": "",
-			"allow_custom": 0,
-			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 0,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"allow_custom": 0,
+			"search_placeholder": "",
+			"min": ""
 		},
 		{
 			"key": "field_687a4e234424a",
@@ -570,12 +586,10 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
 			"choices": {
-				"__left": "Left",
-				"__center": "Center",
-				"__right": "Right"
+				"left": "Left",
+				"center": "Center",
+				"right": "Right"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -587,8 +601,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
-			"ajax": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -605,10 +622,9 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__uppercase": "Uppercase",
-				"__capitalize": "Capitalize"
+				"uppercase": "Uppercase",
+				"capitalize": "Capitalize"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -620,8 +636,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -638,11 +657,10 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__200": "Light",
-				"__default": "Default",
-				"__bold": "Bold"
+				"200": "Light",
+				"default": "Default",
+				"bold": "Bold"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -654,8 +672,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -672,12 +693,11 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__normal": "Normal",
-				"__italic": "Italic"
+				"normal": "Normal",
+				"italic": "Italic"
 			},
-			"default_value": "__normal",
+			"default_value": "normal",
 			"return_format": "value",
 			"multiple": 0,
 			"max": "",
@@ -687,8 +707,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -748,27 +771,26 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__h-xl-fs-portrait": "H extra large",
-				"__h-l-fs-portrait": "H large",
-				"__h-m-fs-portrait": "H medium",
-				"__h-s-fs-portrait": "H small",
-				"__h-xs-fs-portrait": "H extra small",
-				"__h-xxs-fs-portrait": "H xx smal",
-				"__h-xxxs-fs-portrait": "H xxx small",
-				"__sh-xl-fs-portrait": "SH extra large",
-				"__sh-l-fs-portrait": "SH large",
-				"__sh-m-fs-portrait": "SH medium",
-				"__sh-s-fs-portrait": "SH small",
-				"__sh-xs-fs-portrait": "SH x small",
-				"__sh-xxs-fs-portrait": "SH xx small",
-				"__p-l-fs-portrait": "P large",
-				"__p-fs-portrait": "P",
-				"__p-s-fs-portrait": "P small",
-				"__p-xs-fs-portrait": "P extra small",
-				"__p-xxs-fs-portrait": "P xx small",
-				"__p-xxxs-fs-portrait": "P xxx small"
+				"h-xl-fs-portrait": "H extra large",
+				"h-l-fs-portrait": "H large",
+				"h-m-fs-portrait": "H medium",
+				"h-s-fs-portrait": "H small",
+				"h-xs-fs-portrait": "H extra small",
+				"h-xxs-fs-portrait": "H xx smal",
+				"h-xxxs-fs-portrait": "H xxx small",
+				"sh-xl-fs-portrait": "SH extra large",
+				"sh-l-fs-portrait": "SH large",
+				"sh-m-fs-portrait": "SH medium",
+				"sh-s-fs-portrait": "SH small",
+				"sh-xs-fs-portrait": "SH x small",
+				"sh-xxs-fs-portrait": "SH xx small",
+				"p-l-fs-portrait": "P large",
+				"p-fs-portrait": "P",
+				"p-s-fs-portrait": "P small",
+				"p-xs-fs-portrait": "P extra small",
+				"p-xxs-fs-portrait": "P xx small",
+				"p-xxxs-fs-portrait": "P xxx small"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -780,8 +802,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -798,25 +823,27 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__var(--theme-primary-text-colour)": "Theme primary text colour",
-				"__var(--theme-secondary-text-colour)": "Theme secondary text colour",
-				"__var(--theme-tertiary-text-colour)": "Theme tertiary text"
+				"var(--theme-primary-text-colour)": "Theme primary text colour",
+				"var(--theme-secondary-text-colour)": "Theme secondary text colour",
+				"var(--theme-tertiary-text-colour)": "Theme tertiary text"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 1,
-			"ajax": 0,
-			"placeholder": "",
+			"max": "",
 			"allow_custom": 0,
+			"placeholder": "",
 			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"min": ""
 		},
 		{
 			"key": "field_687a4e2345da3",
@@ -832,25 +859,27 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__left": "Left",
-				"__center": "Center",
-				"__right": "Right"
+				"left": "Left",
+				"center": "Center",
+				"right": "Right"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 1,
-			"ajax": 0,
-			"placeholder": "",
+			"max": "",
 			"allow_custom": 0,
+			"placeholder": "",
 			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"min": ""
 		},
 		{
 			"key": "field_687a4e2346189",
@@ -866,24 +895,26 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__uppercase": "Uppercase",
-				"__capitalize": "Capitalize"
+				"uppercase": "Uppercase",
+				"capitalize": "Capitalize"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 1,
-			"ajax": 0,
-			"placeholder": "",
+			"max": "",
 			"allow_custom": 0,
+			"placeholder": "",
 			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"min": ""
 		},
 		{
 			"key": "field_687a4e234656f",
@@ -899,11 +930,10 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__200": "Light",
-				"__default": "Default",
-				"__bold": "Bold"
+				"200": "Light",
+				"default": "Default",
+				"bold": "Bold"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -915,8 +945,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -933,10 +966,9 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__normal": "Normal",
-				"__italic": "Italic"
+				"normal": "Normal",
+				"italic": "Italic"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -948,8 +980,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -1008,27 +1043,26 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__h-xl-fs-mobile": "H extra large",
-				"__h-l-fs-mobile": "H large",
-				"__h-m-fs-mobile": "H medium",
-				"__h-s-fs-mobile": "H small",
-				"__h-xs-fs-mobile": "H extra small",
-				"__h-xxs-fs-mobile": "H xx smal",
-				"__h-xxxs-fs-mobile": "H xxx small",
-				"__sh-xl-fs-mobile": "SH extra large",
-				"__sh-l-fs-mobile": "SH large",
-				"__sh-m-fs-mobile": "SH medium",
-				"__sh-s-fs-mobile": "SH small",
-				"__sh-xs-fs-mobile": "SH x small",
-				"__sh-xxs-fs-mobile": "SH xx small",
-				"__p-l-fs-mobile": "P large",
-				"__p-fs-mobile": "P",
-				"__p-s-fs-mobile": "P small",
-				"__p-xs-fs-mobile": "P extra small",
-				"__p-xxs-fs-mobile": "P xx small",
-				"__p-xxxs-fs-mobile": "P xxx small"
+				"h-xl-fs-mobile": "H extra large",
+				"h-l-fs-mobile": "H large",
+				"h-m-fs-mobile": "H medium",
+				"h-s-fs-mobile": "H small",
+				"h-xs-fs-mobile": "H extra small",
+				"h-xxs-fs-mobile": "H xx smal",
+				"h-xxxs-fs-mobile": "H xxx small",
+				"sh-xl-fs-mobile": "SH extra large",
+				"sh-l-fs-mobile": "SH large",
+				"sh-m-fs-mobile": "SH medium",
+				"sh-s-fs-mobile": "SH small",
+				"sh-xs-fs-mobile": "SH x small",
+				"sh-xxs-fs-mobile": "SH xx small",
+				"p-l-fs-mobile": "P large",
+				"p-fs-mobile": "P",
+				"p-s-fs-mobile": "P small",
+				"p-xs-fs-mobile": "P extra small",
+				"p-xxs-fs-mobile": "P xx small",
+				"p-xxxs-fs-mobile": "P xxx small"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -1040,8 +1074,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -1058,25 +1095,27 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__var(--theme-primary-text-colour)": "Theme primary text colour",
-				"__var(--theme-secondary-text-colour)": "Theme secondary text colour",
-				"__var(--theme-tertiary-text-colour)": "Theme tertiary text"
+				"var(--theme-primary-text-colour)": "Theme primary text colour",
+				"var(--theme-secondary-text-colour)": "Theme secondary text colour",
+				"var(--theme-tertiary-text-colour)": "Theme tertiary text"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 1,
-			"ajax": 0,
-			"placeholder": "",
+			"max": "",
 			"allow_custom": 0,
+			"placeholder": "",
 			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"min": ""
 		},
 		{
 			"key": "field_687a4e2347900",
@@ -1092,26 +1131,27 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
 			"choices": {
-				"__left": "Left",
-				"__center": "Center",
-				"__right": "Right"
+				"left": "Left",
+				"center": "Center",
+				"right": "Right"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 1,
-			"ajax": 0,
-			"placeholder": "",
+			"max": "",
 			"allow_custom": 0,
+			"placeholder": "",
 			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"min": ""
 		},
 		{
 			"key": "field_687a4e2347ce0",
@@ -1127,25 +1167,26 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["administrator"],
 			"choices": {
-				"__uppercase": "Uppercase",
-				"__capitalize": "Capitalize"
+				"uppercase": "Uppercase",
+				"capitalize": "Capitalize"
 			},
 			"default_value": false,
 			"return_format": "value",
 			"multiple": 0,
-			"allow_null": 1,
-			"ui": 1,
-			"ajax": 0,
-			"placeholder": "",
+			"max": "",
 			"allow_custom": 0,
+			"placeholder": "",
 			"search_placeholder": "",
 			"prepend": "",
 			"append": "",
-			"min": "",
-			"max": ""
+			"allow_null": 1,
+			"allow_in_bindings": 1,
+			"ui": 1,
+			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
+			"min": ""
 		},
 		{
 			"key": "field_687a4e23480ca",
@@ -1161,11 +1202,10 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__200": "Light",
-				"__default": "Default",
-				"__bold": "Bold"
+				"200": "Light",
+				"default": "Default",
+				"bold": "Bold"
 			},
 			"default_value": false,
 			"return_format": "value",
@@ -1177,8 +1217,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -1195,12 +1238,11 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"choices": {
-				"__normal": "Normal",
-				"__italic": "Italic"
+				"normal": "Normal",
+				"italic": "Italic"
 			},
-			"default_value": "__normal",
+			"default_value": "normal",
 			"return_format": "value",
 			"multiple": 0,
 			"max": "",
@@ -1210,8 +1252,11 @@
 			"prepend": "",
 			"append": "",
 			"allow_null": 1,
+			"allow_in_bindings": 1,
 			"ui": 1,
 			"ajax": 0,
+			"create_options": 0,
+			"save_options": 0,
 			"min": ""
 		},
 		{
@@ -1322,11 +1367,11 @@
 	"active": false,
 	"description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
 	"show_in_rest": 0,
+	"display_title": "",
 	"acfe_autosync": ["json"],
-	"acfml_field_group_mode": "localization",
 	"acfe_form": 0,
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1757608462
+	"modified": 1762876700
 }

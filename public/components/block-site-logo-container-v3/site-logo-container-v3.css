@@ -1,0 +1,18 @@
+.site-logo-container-v3__site-logo {
+  margin: auto;
+  pointer-events: all;
+  max-width: calc(var(--site-logo-max-width-mobile) / var(--design-reference) * var(--screen-width));
+}
+@media screen and (min-width: 768px) {
+  .site-logo-container-v3__site-logo {
+    max-width: calc(var(--site-logo-max-width-portrait) / var(--design-reference) * var(--screen-width));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-logo-container-v3__site-logo {
+    max-width: calc(var(--site-logo-max-width-desktop) / var(--design-reference) * var(--screen-width));
+  }
+}
+.site-logo-container-v3__site-logo-link {
+  display: flex;
+}

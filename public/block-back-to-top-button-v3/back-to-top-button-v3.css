@@ -1,0 +1,62 @@
+.back-to-top-button {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+  overflow: visible;
+  overflow: initial;
+}
+.back-to-top-button__arrow {
+  --arrow-colour: black;
+  position: absolute;
+  border-style: solid;
+  border-color: black;
+  border-color: var(--arrow-colour);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  transform: rotate(-135deg);
+  height: 20%;
+  width: 20%;
+}
+.back-to-top-button__button {
+  --bg-colour: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  height: calc(50 / var(--desktop-design-reference) * var(--screen-width-static));
+  width: calc(50 / var(--desktop-design-reference) * var(--screen-width-static));
+  border: none;
+  border-radius: 50px;
+  padding: calc(18 / var(--desktop-design-reference) * var(--screen-width-static));
+  background-color: white;
+  background-color: var(--bg-colour);
+  right: calc(10 / var(--design-reference) * var(--screen-width));
+  border-radius: var(--button-border-radius);
+}
+@media screen and (min-width: 768px) {
+  .back-to-top-button__button {
+    right: calc(30 / var(--design-reference) * var(--screen-width));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .back-to-top-button__button {
+    right: calc(60 / var(--design-reference) * var(--screen-width));
+  }
+}
+.back-to-top-button__button--fixed {
+  position: fixed;
+  bottom: calc(60 / var(--desktop-design-reference) * var(--screen-width-static));
+}
+.back-to-top-button__button--absolute {
+  position: absolute;
+  translate: 0 -50%;
+}
+.wp-admin .back-to-top-button__button {
+  position: absolute;
+  translate: 0 0;
+  bottom: 0;
+}
+.back-to-top-button__image {
+  width: calc(var(--image-size) / var(--desktop-design-reference) * var(--screen-width-static));
+}
