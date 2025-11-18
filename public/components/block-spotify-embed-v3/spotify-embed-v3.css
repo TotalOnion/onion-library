@@ -1,7 +1,0 @@
-.spotify-embed-v3 {
-  max-width: calc(1086 / var(--design-reference) * var(--screen-width));
-  margin: auto;
-}
-.spotify-embed-v3 iframe {
-  pointer-events: all;
-}

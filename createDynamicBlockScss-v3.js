@@ -13,7 +13,6 @@ fs.writeFileSync(scssFilePath, '// This file is auto-generated.\n');
 
 const dynamicEntryPoints = globSync(`./components/block-*/*-v3.scss`).map(
 	(path) => {
-		console.log('🚀 ~ path:', path);
 		const assetPath = path.replace('components/', '../components/');
 		return assetPath;
 	}
