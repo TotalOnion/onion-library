@@ -1,5 +1,5 @@
-@use '../components/fields-core-mixins-v3/core-mixins-v3';
-@use '../components/fields-core-functions-v3/core-functions-v3';
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
 .cocktail-recipe-v3 {
 	pointer-events: all;
