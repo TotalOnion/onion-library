@@ -210,13 +210,6 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					}
 				}
 			);
-			if (false) {
-				import(
-					'Assets/js/blocks/carousel-multi-layout-v3/carousel-multi-layout-v3-extra.js'
-				).then((result) => {
-					result.default();
-				});
-			}
 		});
 	} catch (error) {
 		console.error(error);
