@@ -157,11 +157,6 @@ export default function carouselmultilayoutv3Js(options = {}) {
           }
         }
       );
-      if (false) {
-        null.then((result) => {
-          result.default();
-        });
-      }
     });
   } catch (error) {
     console.error(error);
