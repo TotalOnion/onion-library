@@ -26,7 +26,10 @@ if (props.element?.cta_style_select) {
         ctaAnimationStyle = props.ctaStyles[ctaStyle - 1]?.cta_settings?.cta_animation_style;
     }
 }
-const iconImage = props.mappedIcons['cta_link_icon']['type'] == 'image/svg+xml' ? props.mappedIcons['cta_link_icon']['image'] : '<img src="' + props.mappedIcons['cta_link_icon']['image'] + '">';
+let iconImage = '';
+if (props.mappedIcons['cta_link_icon']) {
+    iconImage = props.mappedIcons['cta_link_icon']['type'] == 'image/svg+xml' ? props.mappedIcons['cta_link_icon']['image'] : '<img src="' + props.mappedIcons['cta_link_icon']['image'] + '">';
+}
 const enableCtaIcon = props.ctaStyles[ctaStyle - 1]?.cta_settings?.include_cta_icon;
 const gridLayoutString = gridLayoutElement(props);
 </script>
