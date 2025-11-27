@@ -63,6 +63,9 @@ export default function carouselmultilayoutv3Js(options = {}) {
 				Number(dataAttributes.centeractiveslideportrait) === 1;
 			const centerActiveSlideMobile =
 				Number(dataAttributes.centeractiveslidemobile) === 1;
+			const centerSlidesBounds = Number(dataAttributes.centerslidesbounds) === 1;
+			const centerSlidesBoundsPortrait = Number(dataAttributes.centerslidesboundsportrait) === 1;
+			const centerSlidesBoundsMobile = Number(dataAttributes.centerslidesboundsmobile) === 1;
 			const centerInsufficientSlidesDesktop =
 				Number(dataAttributes.centerinsufficientslidesdesktop) === 1;
 			const centerInsufficientSlidesPortrait =
@@ -162,6 +165,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 					watchOverflow: true,
 					centeredSlides: centerActiveSlideMobile,
 					centerInsufficientSlides: centerInsufficientSlidesMobile,
+					centeredSlidesBounds: centerSlidesBoundsMobile,
 					freeMode: {
 						enabled: carouselEnableFreeMode,
 						sticky: carouselEnableFreeMode
@@ -176,7 +180,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 							centeredSlides: centerActiveSlidePortrait,
 							centerInsufficientSlides:
 								centerInsufficientSlidesPortrait,
-
+							centeredSlidesBounds: centerSlidesBoundsPortrait,
 							slidesOffsetBefore: slidesOffsetTabletBefore,
 							slidesOffsetAfter: slidesOffsetTabletAfter,
 							loop: totalSlides > 1 ? loopSlidesPortrait : false
@@ -187,6 +191,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
 							centeredSlides: centerActiveSlide,
 							centerInsufficientSlides:
 								centerInsufficientSlidesDesktop,
+							centeredSlidesBounds: centerSlidesBounds,
 							slidesOffsetBefore: slidesOffsetDesktopBefore,
 							slidesOffsetAfter: slidesOffsetDesktopAfter,
 							loop: totalSlides > 1 ? loopSlides : false
