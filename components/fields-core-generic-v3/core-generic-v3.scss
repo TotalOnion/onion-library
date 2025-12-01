@@ -161,7 +161,8 @@
 	li {
 		// @include core-typography-mixins-v3.p();
 	}
-	ol {
+	ol,
+	ul {
 		padding: 0; //reset default padding
 		margin: 0; //reset default margin
 		// font-family: var(--secondary-font-family);
