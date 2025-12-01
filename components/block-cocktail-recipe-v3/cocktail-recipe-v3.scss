@@ -327,10 +327,14 @@
 
 			.instructions-text {
 				font-family: var(--tertiary-font-family);
-				font-size: core-functions-v3.fontSize(30);
+				font-size: core-functions-v3.fontSize(24);
 				font-weight: 300;
 				text-box-trim: trim-both;
 				text-box-edge: cap alphabetic;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					font-size: core-functions-v3.fontSize(30);
+				}
 			}
 		}
 	}
