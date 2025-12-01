@@ -22,6 +22,3 @@
 {% if fields.lottie_animations.enable_lottie_animations %}
 	{{ include('components/lottie-animations-v3.twig', { fields, block, blockClassName }, with_context = false) }}
 {% endif %}
-{% if fields.enable_gradient_overlay %}
-	{{ include('components/gradient-overlay-v3.twig', { fields, block, blockClassName, type : 'html' }, with_context = false) }}
-{% endif %}
