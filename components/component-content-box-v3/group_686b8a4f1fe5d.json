@@ -114,6 +114,52 @@
 					"acfe_layout_col": "auto",
 					"acfe_layout_allowed_col": false
 				},
+				"layout_690620751f544": {
+					"key": "layout_690620751f544",
+					"name": "wysiwyg_editor_classic_v3",
+					"label": "Wysiwyg Editor Classic v3",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_690620751f546",
+							"label": "Wysiwyg Editor fields",
+							"name": "wysiwyg_editor_fields",
+							"aria-label": "",
+							"type": "clone",
+							"instructions": "",
+							"required": 0,
+							"conditional_logic": 0,
+							"wrapper": {
+								"width": "",
+								"class": "",
+								"id": ""
+							},
+							"clone": ["group_690620a2575ec"],
+							"display": "seamless",
+							"layout": "block",
+							"prefix_label": 0,
+							"prefix_name": 0,
+							"acfe_seamless_style": 0,
+							"acfe_clone_modal": 0,
+							"acfe_clone_modal_close": 0,
+							"acfe_clone_modal_button": "",
+							"acfe_clone_modal_size": "large"
+						}
+					],
+					"min": "",
+					"max": "",
+					"acfe_flexible_render_template": false,
+					"acfe_flexible_render_style": false,
+					"acfe_flexible_render_script": false,
+					"acfe_flexible_thumbnail": false,
+					"acfe_flexible_settings": false,
+					"acfe_flexible_settings_size": "medium",
+					"acfe_layout_locations": [],
+					"acfe_flexible_modal_edit_size": false,
+					"acfe_flexible_category": false,
+					"acfe_layout_col": "auto",
+					"acfe_layout_allowed_col": false
+				},
 				"layout_63e1105ef3e28": {
 					"key": "layout_63e1105ef3e28",
 					"name": "accent_text_v3",

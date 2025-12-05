@@ -1,4 +1,5 @@
-{% set blockClassName = "back-to-top-button" %}
+{% set blockClassName = "back-to-top-button-v3" %}
+
 {% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, environment, is_preview, nav_menus }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
@@ -23,12 +24,12 @@
 </style>
 
 {% if enabled %}
-	<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="back-to-top-button {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="back-to-top-button">
-		<button aria-label="back to the top button" class="back-to-top-button__button back-to-top-button__button--{{position}}" style="--bg-colour: {{bgColour}}">
+	<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-assetkey="{{blockClassName}}">
+		<button aria-label="back to the top button" class="{{blockClassName}}__button {{blockClassName}}__button--{{position}}" style="--bg-colour: {{bgColour}}">
 			{% if fields.enable_custom_image %}
-				<img class="back-to-top-button__image" width="{{buttonImage.width}}" height="{{buttonImage.height}}" src="{{ buttonImage.src }}" alt="{{buttonImage.alt}}">
+				<img class="{{blockClassName}}__image" width="{{buttonImage.width}}" height="{{buttonImage.height}}" src="{{ buttonImage.src }}" alt="{{buttonImage.alt}}">
 			{% else %}
-				<span class="back-to-top-button__arrow" style="--arrow-colour: {{arrowColour}}"></span>
+				<span class="{{blockClassName}}__arrow" style="--arrow-colour: {{arrowColour}}"></span>
 			{% endif %}
 		</button>
 		{{htmlEntryPoint}}
