@@ -1,0 +1,10 @@
+{% if fields.enable_global_content_max_width %}
+	{{'max-width: var(--global-content-max-width); margin-inline: auto;'}}
+	{% if is_preview %}
+		{{'--screen-width-desktop: 840px;'}}
+		{{'--font-reference-desktop: 840px;'}}
+	{% else %}
+		{{'--screen-width-desktop: calc(var(--desktop-design-reference) * 1px);'}}
+		{{'--font-reference-desktop: calc(var(--desktop-design-reference) * 1px);'}}
+	{% endif %}
+{% endif %}
