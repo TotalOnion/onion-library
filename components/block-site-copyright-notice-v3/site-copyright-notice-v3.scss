@@ -1,2 +1,20 @@
+@use '../fields-core-mixins-v3/core-mixins-v3';
+@use '../fields-core-functions-v3/core-functions-v3';
+@use '../../breakpoints';
+
 .site-copyright-notice-v3 {
+	color: var(--site-copyright-notice-colour);
+	font-size: core-functions-v3.fontSize(
+		var(--site-copyright-font-size-mobile, 14px)
+	);
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		font-size: core-functions-v3.fontSize(
+			var(--site-copyright-font-size-portrait, 16px)
+		);
+	}
+	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+		font-size: core-functions-v3.fontSize(
+			var(--site-copyright-font-size-desktop, 18px)
+		);
+	}
 }
