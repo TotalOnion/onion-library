@@ -3,8 +3,7 @@ const glob = require('glob');
 const yargs = require('yargs');
 
 let projectName = 'Global Theme';
-const libraryPath =
-  './node_modules/@total_onion/onion-library'
+const libraryPath = './node_modules/@total_onion/onion-library';
 const projectJson = JSON.parse(fs.readFileSync('./package.json'));
 if (projectJson) {
 	projectName = projectJson.name;
@@ -154,7 +153,12 @@ if (
 	if (componentType === 'admin' || componentType === 'fields') {
 		fs.copyFileSync(
 			`${libraryPath}/components/${componentName}/${componentModuleName}.php`,
-			`./web/wp-content/themes/global-theme/inc/admin-extras/${componentModuleName}.php`
+			`./web/wp-content/themes/global-theme/inc/custom-extras/${componentModuleName}.php`
+		);
+	} else if (componentType === 'core') {
+		fs.copyFileSync(
+			`${libraryPath}/components/${componentName}/${componentModuleName}.php`,
+			`./web/wp-content/themes/global-theme/inc/project-setup/core-functions/${componentModuleName}.php`
 		);
 	} else {
 		fs.copyFileSync(
