@@ -1,31 +1,31 @@
 {% set menudata = {} %}
 {% if fields.acf_fc_layout == 'nav_menu_v3' %}
 	{% if fields.menu|ru == 'primary-menu' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.primary_menu }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.primary_menu }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'secondary-menu' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.secondary_menu }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.secondary_menu }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'tertiary-menu' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.tertiary_menu }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.tertiary_menu }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'legal-menu' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.legal_menu }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.legal_menu }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'social-menu' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.social_menu }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.social_menu }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'footer-navigation-menu' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.footer_navigation_menu }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.footer_navigation_menu }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'footer-navigation-menu-secondary' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.footer_navigation_menu_secondary }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.footer_navigation_menu_secondary }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'footer-navigation-menu-tertiary' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.footer_navigation_menu_tertiary }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.footer_navigation_menu_tertiary }) %}
 	{% endif %}
 	{% if fields.menu|ru == 'footer-navigation-menu-quaternary' %}
-		{% set menudata = menudata|merge({'menu' : nav_menus.footer_navigation_menu_quaternary }) %}
+		{% set menudata = menudata|merge({'menu' : options.nav_menus.footer_navigation_menu_quaternary }) %}
 	{% endif %}
 {% endif %}
 
@@ -35,7 +35,7 @@
 {% set alignmentMobile = '--alignment-mobile: ' ~ fields.alignment_mobile|ru ~ ';' %}
 {% set alignment = alignmentDesktop ~ alignmentPortrait ~ alignmentMobile %}
 
-<nav class="{{blockClassName}}__nav-menu {{blockClassName}}__nav-menu--{{menu.name|lower}}" style="{{alignment}}">
+<nav class="{{blockClassName}}__nav-menu-v3 {{blockClassName}}__nav-menu--{{menu.name|lower}}" style="{{alignment}}">
 
 	{% set direction = '--menu-direction: ' ~ fields.menu_direction|ru ~ ';' %}
 	{% set directionPortrait = '--menu-direction-portrait: ' ~ fields.menu_direction_portrait|ru ~ ';' %}
