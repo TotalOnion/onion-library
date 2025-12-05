@@ -1,0 +1,58 @@
+{
+    "key": "group_63c83de4f0a99",
+    "title": "Component: Enable Global Content Max Width",
+    "fields": [
+        {
+            "key": "field_63c83de5d114d",
+            "label": "Enable global content max width",
+            "name": "enable_global_content_max_width",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "user_roles": [
+                "administrator"
+            ],
+            "message": "This will restrict the block width to the global content max width setting",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "style": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1764943547
+}
