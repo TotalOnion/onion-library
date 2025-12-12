@@ -2,7 +2,7 @@
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../component-element-positioning-v3/element-positioning-v3';
 @use '../../breakpoints';
-@use '../../node_modules/swiper/swiper-bundle.min.css';
+@use 'NodeModules/swiper/swiper-bundle.min.css';
 
 .carousel-multi-layout-v3 {
 	display: grid;
