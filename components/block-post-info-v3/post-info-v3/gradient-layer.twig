@@ -1,0 +1,78 @@
+{% set blockClassName = "gradient-layer-v3" %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { field: field, block: block }, with_context = false) %}
+{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { field: field, block: block, blockClassName, blockClassName }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { field: field, block: block }, with_context = false) %}
+{% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { field: field, block: block, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { field, block, displaytype, is_preview }, with_context = false) %}
+{% set sectionStyles =  styleEntryPoint %}
+{% set renderDynamic = field.render_dynamic|default(0) %}
+
+{{previewEntryPoint}}
+<style>
+	.{{blockClassName}}.{{block.id}}{
+		{{sectionStyles}}
+	}
+</style>
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-jsload="false" data-renderdynamic="{{renderDynamic}}" data-pattern-gradient-overlay data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+
+	{% set enableOverlay = field.enable_gradient_overlay %}
+	{% set overlayType = field.overlay_type|ru|default('gradient') %}
+
+	{% if enableOverlay and overlayType == "gradient" %}
+		{% set gradientOriginMap = { top: '0deg', right: '90deg', bottom: '180deg', left: '270deg' } %}
+		{% set gradientSpread = '--gradient-spread:' ~ (field.gradient_overlay_spread|default(0)) ~ '%;' %}
+		{% set gradientAmount = '--gradient-amount:' ~ (field.gradient_overlay_amount|default(0)) ~ '%;' %}
+		{% set gradientOpacity = '--gradient-opacity:' ~ (field.gradient_overlay_opacity|default(0)) ~ ';' %}
+		{% set gradientColour = '--gradient-colour:' ~ (field.gradient_overlay_colour|ru|default('transparent')) ~ ';' %}
+		{% set gradientZIndex = '--gradient-zindex:' ~ (field.gradient_z_index|ru|default(4)) ~ ';' %}
+		{% set gradientGridArea = '--gradient-grid-area:' ~ (field.gradient_grid_area|ru|default('unset')) ~ ';' %}
+
+		{% set gradientTypeKey = field.gradient_overlay_origin|ru %}
+		{% set gradientOrigin = '--gradient-origin-before:' ~ gradientOriginMap[gradientTypeKey] ~ ';' %}
+		{% set enableAfter = "--enable-after: ;" %}
+		{% if gradientTypeKey == 'vertical' %}
+			{% set gradientOrigin = '--gradient-origin-before: 0deg;' %}
+			{% set gradientOriginAfter = '--gradient-origin-after: 180deg;' %}
+			{% set enableAfter = "--enable-after: '';" %}
+		{% endif %}
+		{% if gradientTypeKey == 'horizontal' %}
+			{% set gradientOrigin = '--gradient-origin-before: 90deg;' %}
+			{% set gradientOriginAfter = '--gradient-origin-after: 270deg;' %}
+			{% set enableAfter = "--enable-after: '';" %}
+		{% endif %}
+		{% set gradientStyleString = '' %}
+
+		{% set gradientStyleString = gradientSpread ~ gradientAmount ~ gradientOpacity ~ gradientColour ~ gradientOrigin ~ gradientZIndex ~ gradientGridArea ~ enableAfter ~ gradientOriginAfter %}
+
+		<style>
+			.{{blockClassName}}.{{block.id}}{
+				{{gradientStyleString}}
+			}
+		</style>
+
+		<div class="{{blockClassName}}__gradient-overlay-element"></div>
+
+	{% endif %}
+
+	{% if enableOverlay and overlayType == "blur" %}
+		{% if type == 'style' %}
+			{% set blurColour = '--blur-colour:' ~ (field.blur_overlay_colour|default('')) ~ ';' %}
+			{% set blurValue = '--blur-value:' ~ (field.blur_overlay_value|default(0)) ~ 'px' ~ ';' %}
+			{% set blurZIndex = '--blur-zindex:' ~ (field.blur_z_index|ru|default(5)) ~ ';' %}
+
+			{% set blurStyleString = blurColour ~ blurValue ~ blurZIndex %}
+
+			<style>
+				.{{blockClassName}}.{{block.id}}{
+					{{blurStyleString}}
+				}
+			</style>
+
+		{% endif %}
+
+		<div class="{{blockClassName}}__blur-overlay-element"></div>
+	{% endif %}
+
+
+	{{htmlEntryPoint}}
+</section>
