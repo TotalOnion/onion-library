@@ -3,6 +3,25 @@
 	"title": "Block: Cover Link v3",
 	"fields": [
 		{
+			"key": "field_6956c443b96a8",
+			"label": "Cover Link",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
 			"key": "field_6956c07662240",
 			"label": "Enable cover link",
 			"name": "enable_cover_link",
@@ -18,11 +37,11 @@
 			},
 			"message": "",
 			"default_value": 0,
-			"style": "",
 			"allow_in_bindings": 0,
-			"ui": 0,
 			"ui_on_text": "",
-			"ui_off_text": ""
+			"ui_off_text": "",
+			"ui": 1,
+			"style": ""
 		},
 		{
 			"key": "field_6956c05d6223f",
@@ -71,8 +90,7 @@
 	"display_title": "",
 	"acfe_autosync": ["json"],
 	"acfe_form": 0,
-	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1767293062
+	"modified": 1767294033
 }

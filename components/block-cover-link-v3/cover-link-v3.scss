@@ -1,2 +1,7 @@
 .cover-link-v3 {
+	&__link {
+		position: absolute;
+		inset: 0;
+		z-index: 10;
+	}
 }
