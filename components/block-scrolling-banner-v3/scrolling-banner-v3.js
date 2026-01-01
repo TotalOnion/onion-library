@@ -83,12 +83,12 @@ function scrollingbannerJs(block) {
 		wrapper.appendChild(newTickerContainer);
 
 		const animation1 = [
-			{ transform: 'translateX(0%)' },
-			{ transform: 'translateX(-100%)' }
+			{transform: 'translateX(0%)'},
+			{transform: 'translateX(-100%)'}
 		];
 		const animation2 = [
-			{ transform: 'translateX(100%)' },
-			{ transform: 'translateX(0%)' }
+			{transform: 'translateX(100%)'},
+			{transform: 'translateX(0%)'}
 		];
 
 		const time = 100000 / speed;

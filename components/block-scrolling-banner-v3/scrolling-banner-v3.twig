@@ -14,8 +14,8 @@
 </style>
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-	{% set bannerText1 = fields.scrolling_banner_text1 %}
-	{% set bannerText2 = fields.scrolling_banner_text2 %}
+	{% set bannerText1 = fields.scrolling_banner_text_1 %}
+	{% set bannerText2 = fields.scrolling_banner_text_2 %}
 	{% set enableScrolling = fields.enable_scrolling_banner %}
 	{% set bannerSpeed = fields.scrolling_banner_speed %}
 	{% set imageSeperator = fields.seperator_as_image %}
@@ -47,7 +47,5 @@
 			</div>
 		</div>
 	{% endif %}
-
-
 	{# {{htmlEntryPoint}} #}
 </section>

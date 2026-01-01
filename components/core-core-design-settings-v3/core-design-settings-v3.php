@@ -1,8 +1,11 @@
 <?php
 // @codingStandardsIgnoreStart
-function core_design_settings_v3()
+function core_design_settings_v3($options)
 {
-    $json_data = file_get_contents(get_template_directory() . '/inc/theme-data/' . CURRENT_THEME . '/design-settings-vars.json');
+    if (!is_array($options)) {
+        return [];
+    }
+    $json_data = file_get_contents(get_template_directory() . '/inc/theme-data/' . $options['current_theme_name'] . '/design-settings-vars.json');
     $design_settings_data = json_decode($json_data, true);
     $output = '';
     if ($design_settings_data) {
@@ -31,6 +34,7 @@ function core_design_settings_v3()
                 --landscape-design-reference:' . ($settings['landscape_design_reference'] ?? 1024) . ';
                 --portrait-design-reference:' . ($settings['portrait_design_reference'] ?? 1024) . ';
                 --mobile-design-reference:' . ($settings['mobile_design_reference'] ?? 1024) . ';
+                --global-content-max-width-setting:' . ($settings['global_max_width'] ?? 1024) . ';
                 }</style>';
         }
     }
