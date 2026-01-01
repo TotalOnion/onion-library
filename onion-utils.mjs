@@ -13,14 +13,13 @@ export function ttfb() {
 		const [pageNav] = entryList.getEntriesByType("navigation");
 		const time = pageNav.responseStart;
 		console.log(`TTFB: ${time} new`);
-		pushData(time);
+		pushTTFBData(time);
 	}).observe({ type: "navigation", buffered: true });
 }
 
-function pushData(time) {
+function pushTTFBData(time) {
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push({ ttfb: time });
-	console.log("ttfb sent");
 }
 
 /**
