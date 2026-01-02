@@ -111,15 +111,17 @@ function scrollingbannerJs(block) {
 		const anim2 = containers[1].animate(animation2, timing2);
 
 		initializedBanners.set(bannerElement, {anim1, anim2});
+		function pauseAnimations() {
+			containers[0].pause();
+			containers[1].pause();
+		}
+		function resumeAnimations() {
+			containers[0].play();
+			containers[1].play();
+		}
 		if (bannerElement.querySelector('a')) {
-			block.addEventListener('mouseover', () => {
-				anim1.pause();
-				anim2.pause();
-			});
-			block.addEventListener('mouseleave', () => {
-				anim1.play();
-				anim2.play();
-			});
+			block.addEventListener('mouseover', pauseAnimations);
+			block.addEventListener('mouseleave', resumeAnimations);
 		}
 	}
 
