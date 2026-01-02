@@ -23,7 +23,7 @@ function scrollingbannerJs(block) {
 
 	try {
 		if (!initializedBanners.has(bannerElement)) {
-			bannerInit(bannerElement);
+			bannerInit(bannerElement, initializedBanners, block);
 		}
 
 		const wrapper = bannerElement.querySelector(
@@ -32,115 +32,112 @@ function scrollingbannerJs(block) {
 
 		if (window.ResizeObserver) {
 			const resizeObserver = new ResizeObserver(() => {
-				resetBanner(bannerElement);
-				bannerInit(bannerElement);
+				resetBanner(bannerElement, initializedBanners);
+				bannerInit(bannerElement, initializedBanners, block);
 			});
 			resizeObserver.observe(wrapper);
 		} else {
 			window.addEventListener('resize', () => {
-				resetBanner(bannerElement);
-				bannerInit(bannerElement);
+				resetBanner(bannerElement, initializedBanners);
+				bannerInit(bannerElement, initializedBanners, block);
 			});
 		}
 	} catch (error) {
 		console.error(error);
 	}
-
-	function bannerInit(bannerElement) {
-		if (initializedBanners.has(bannerElement)) {
-			return;
-		}
-
-		const container = bannerElement.querySelector(
-			'.scrolling-banner-v3__container'
-		);
-		const wrapper = bannerElement.querySelector(
-			'.scrolling-banner-v3__wrapper'
-		);
-		const inner = bannerElement.querySelector(
-			'.scrolling-banner-v3__inner'
-		);
-		const speed = bannerElement.dataset.speed ?? 3;
-
-		const wrapperWidth = wrapper.clientWidth;
-		const innerContentWidth = inner.clientWidth;
-		const multiplier = Number(Math.round(wrapperWidth / innerContentWidth));
-
-		for (let index = 0; index < multiplier; index++) {
-			const newInner = inner.cloneNode(true);
-			newInner.classList.add('clone');
-			container.appendChild(newInner);
-		}
-
-		const containerHeight = inner.clientHeight;
-		wrapper.setAttribute('style', `min-height: ${containerHeight}px`);
-
-		const newTickerContainer = container.cloneNode(true);
-		newTickerContainer.classList.add('clone');
-		wrapper.appendChild(newTickerContainer);
-
-		const animation1 = [
-			{transform: 'translateX(0%)'},
-			{transform: 'translateX(-100%)'}
-		];
-		const animation2 = [
-			{transform: 'translateX(100%)'},
-			{transform: 'translateX(0%)'}
-		];
-
-		const bannerLength = Math.floor(
-			container.getBoundingClientRect().width
-		);
-		const singleBannerCycleTime = (bannerLength * 100) / speed;
-
-		let timing = {
-			duration: singleBannerCycleTime,
-			iterations: Infinity,
-			fill: 'both'
-		};
-		let timing2 = timing;
-		const containers = bannerElement.querySelectorAll(
-			'.scrolling-banner-v3__container'
-		);
-
-		containers[0].style.transform = 'translateX(0%)';
-		containers[1].style.transform = 'translateX(100%)';
-		containers[0].offsetWidth;
-
-		const anim1 = containers[0].animate(animation1, timing);
-		const anim2 = containers[1].animate(animation2, timing2);
-
-		initializedBanners.set(bannerElement, {anim1, anim2});
-		function pauseAnimations() {
-			containers[0].pause();
-			containers[1].pause();
-		}
-		function resumeAnimations() {
-			containers[0].play();
-			containers[1].play();
-		}
-		if (bannerElement.querySelector('a')) {
-			block.addEventListener('mouseover', pauseAnimations);
-			block.addEventListener('mouseleave', resumeAnimations);
-		}
+}
+function bannerInit(bannerElement, initializedBanners, block) {
+	if (initializedBanners.has(bannerElement)) {
+		return;
 	}
 
-	function resetBanner(bannerElement) {
-		const data = initializedBanners.get(bannerElement);
-		if (data) {
-			data.anim1?.cancel();
-			data.anim2?.cancel();
-			initializedBanners.delete(bannerElement);
-		}
+	const container = bannerElement.querySelector(
+		'.scrolling-banner-v3__container'
+	);
+	const wrapper = bannerElement.querySelector(
+		'.scrolling-banner-v3__wrapper'
+	);
+	const inner = bannerElement.querySelector('.scrolling-banner-v3__inner');
+	const speed = bannerElement.dataset.speed ?? 3;
 
-		bannerElement
-			.querySelectorAll(
-				'.scrolling-banner-v3__container.clone, .scrolling-banner-v3__inner.clone'
-			)
-			.forEach((el) => el.remove());
+	const wrapperWidth = wrapper.clientWidth;
+	const innerContentWidth = inner.clientWidth;
+	const multiplier = Number(Math.round(wrapperWidth / innerContentWidth));
 
-		bannerElement
-			.querySelector('.scrolling-banner-v3__wrapper')
-			.removeAttribute('style');
+	for (let index = 0; index < multiplier; index++) {
+		const newInner = inner.cloneNode(true);
+		newInner.classList.add('clone');
+		container.appendChild(newInner);
 	}
+
+	const containerHeight = inner.clientHeight;
+	wrapper.setAttribute('style', `min-height: ${containerHeight}px`);
+
+	const newTickerContainer = container.cloneNode(true);
+	newTickerContainer.classList.add('clone');
+	wrapper.appendChild(newTickerContainer);
+
+	const animation1 = [
+		{transform: 'translateX(0%)'},
+		{transform: 'translateX(-100%)'}
+	];
+	const animation2 = [
+		{transform: 'translateX(100%)'},
+		{transform: 'translateX(0%)'}
+	];
+
+	const bannerLength = Math.floor(container.getBoundingClientRect().width);
+	const singleBannerCycleTime = (bannerLength * 100) / speed;
+
+	let timing = {
+		duration: singleBannerCycleTime,
+		iterations: Infinity,
+		fill: 'both'
+	};
+	let timing2 = timing;
+	const containers = bannerElement.querySelectorAll(
+		'.scrolling-banner-v3__container'
+	);
+
+	containers[0].style.transform = 'translateX(0%)';
+	containers[1].style.transform = 'translateX(100%)';
+	containers[0].offsetWidth;
+
+	const anim1 = containers[0].animate(animation1, timing);
+	const anim2 = containers[1].animate(animation2, timing2);
+
+	initializedBanners.set(bannerElement, {anim1, anim2});
+	function pauseAnimations() {
+		anim1.pause();
+		anim2.pause();
+		console.log('playing');
+	}
+	function resumeAnimations() {
+		anim1.play();
+		anim2.play();
+		console.log('pausing');
+	}
+	if (bannerElement.querySelector('a')) {
+		block.addEventListener('mouseover', pauseAnimations);
+		block.addEventListener('mouseleave', resumeAnimations);
+	}
+}
+
+function resetBanner(bannerElement, initializedBanners) {
+	const data = initializedBanners.get(bannerElement);
+	if (data) {
+		data.anim1?.cancel();
+		data.anim2?.cancel();
+		initializedBanners.delete(bannerElement);
+	}
+
+	bannerElement
+		.querySelectorAll(
+			'.scrolling-banner-v3__container.clone, .scrolling-banner-v3__inner.clone'
+		)
+		.forEach((el) => el.remove());
+
+	bannerElement
+		.querySelector('.scrolling-banner-v3__wrapper')
+		.removeAttribute('style');
 }
