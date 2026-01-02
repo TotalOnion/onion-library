@@ -110,12 +110,10 @@ function bannerInit(bannerElement, initializedBanners, block) {
 	function pauseAnimations() {
 		anim1.pause();
 		anim2.pause();
-		console.log('playing');
 	}
 	function resumeAnimations() {
 		anim1.play();
 		anim2.play();
-		console.log('pausing');
 	}
 	if (bannerElement.querySelector('a')) {
 		block.addEventListener('mouseover', pauseAnimations);
