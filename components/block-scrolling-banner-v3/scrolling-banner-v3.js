@@ -7,42 +7,40 @@ export default function scrollingbannerv3Js(options = {}) {
 	}
 }
 
-const initializedBanners = new WeakMap(); // key = element, value = { animations } //cleaner way
 function scrollingbannerJs(block) {
 	if (!block) {
 		return;
 	}
 
-	const bannerElement = block.querySelector('.scrolling-banner-v3');
+	const bannerElement =
+		block.querySelector('.scrolling-banner-v3__banner-container') ??
+		block.querySelector('.scrolling-banner-v3');
+
 	if (!bannerElement) {
 		return;
 	}
+	const initializedBanners = new WeakMap();
 
 	try {
-		// only if it is not already done
 		if (!initializedBanners.has(bannerElement)) {
 			bannerInit(bannerElement);
 		}
 
-		// resize observer instead of resizeDebouncer because the later
-		// caused the issue mentionned in MLDB-7
 		const wrapper = bannerElement.querySelector(
 			'.scrolling-banner-v3__wrapper'
 		);
-		if (wrapper) {
-			if (window.ResizeObserver) {
-				const resizeObserver = new ResizeObserver(() => {
-					resetBanner(bannerElement);
-					bannerInit(bannerElement);
-				});
-				resizeObserver.observe(wrapper);
-			} else {
-				// Fallback simple
-				window.addEventListener('resize', () => {
-					resetBanner(bannerElement);
-					bannerInit(bannerElement);
-				});
-			}
+
+		if (window.ResizeObserver) {
+			const resizeObserver = new ResizeObserver(() => {
+				resetBanner(bannerElement);
+				bannerInit(bannerElement);
+			});
+			resizeObserver.observe(wrapper);
+		} else {
+			window.addEventListener('resize', () => {
+				resetBanner(bannerElement);
+				bannerInit(bannerElement);
+			});
 		}
 	} catch (error) {
 		console.error(error);
@@ -52,7 +50,6 @@ function scrollingbannerJs(block) {
 		if (initializedBanners.has(bannerElement)) {
 			return;
 		}
-		// console.log('bannerInit');
 
 		const container = bannerElement.querySelector(
 			'.scrolling-banner-v3__container'
@@ -91,10 +88,13 @@ function scrollingbannerJs(block) {
 			{transform: 'translateX(0%)'}
 		];
 
-		const time = 100000 / speed;
+		const bannerLength = Math.floor(
+			container.getBoundingClientRect().width
+		);
+		const singleBannerCycleTime = (bannerLength * 100) / speed;
 
 		let timing = {
-			duration: time,
+			duration: singleBannerCycleTime,
 			iterations: Infinity,
 			fill: 'both'
 		};
@@ -102,21 +102,26 @@ function scrollingbannerJs(block) {
 		const containers = bannerElement.querySelectorAll(
 			'.scrolling-banner-v3__container'
 		);
-		// Ensure initial positions are applied so content is visible immediately
+
 		containers[0].style.transform = 'translateX(0%)';
 		containers[1].style.transform = 'translateX(100%)';
-		// Force style application before animations start
-		void containers[0].offsetWidth;
+		containers[0].offsetWidth;
 
 		const anim1 = containers[0].animate(animation1, timing);
 		const anim2 = containers[1].animate(animation2, timing2);
 
-		// set as initialized and store animation for a possible cleanup
 		initializedBanners.set(bannerElement, {anim1, anim2});
+		block.addEventListener('mouseover', () => {
+			anim1.pause();
+			anim2.pause();
+		});
+		block.addEventListener('mouseleave', () => {
+			anim1.play();
+			anim2.play();
+		});
 	}
 
 	function resetBanner(bannerElement) {
-		// if already initialized, anims get reset
 		const data = initializedBanners.get(bannerElement);
 		if (data) {
 			data.anim1?.cancel();

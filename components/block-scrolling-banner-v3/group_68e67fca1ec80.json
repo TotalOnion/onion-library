@@ -47,10 +47,10 @@
 		},
 		{
 			"key": "field_62647331056f3",
-			"label": "Scrolling Banner Text 1",
-			"name": "scrolling_banner_text_1",
+			"label": "Scrolling Banner Texts",
+			"name": "scrolling_banner_texts",
 			"aria-label": "",
-			"type": "text",
+			"type": "repeater",
 			"instructions": "",
 			"required": 0,
 			"conditional_logic": 0,
@@ -59,59 +59,57 @@
 				"class": "",
 				"id": ""
 			},
-			"default_value": "Scrolling banner text 1",
-			"maxlength": "",
-			"allow_in_bindings": 1,
-			"placeholder": "",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_6956aaecccc4f",
-			"label": "Scrolling Banner Text 2",
-			"name": "scrolling_banner_text_2",
-			"aria-label": "",
-			"type": "text",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"default_value": "Scrolling banner text 2",
-			"maxlength": "",
-			"allow_in_bindings": 1,
-			"placeholder": "",
-			"prepend": "",
-			"append": ""
-		},
-		{
-			"key": "field_68e6801d43db8",
-			"label": "scrolling banner fields",
-			"name": "scrolling_banner_fields_1",
-			"aria-label": "",
-			"type": "clone",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"clone": ["group_626472bf26f5c"],
-			"display": "seamless",
-			"layout": "block",
-			"prefix_label": 0,
-			"prefix_name": 0,
-			"acfe_seamless_style": 0,
-			"acfe_clone_modal": 0,
-			"acfe_clone_modal_close": 0,
-			"acfe_clone_modal_button": "",
-			"acfe_clone_modal_size": "large"
+			"acfe_repeater_stylised_button": 1,
+			"layout": "table",
+			"pagination": 0,
+			"min": 0,
+			"max": 0,
+			"collapsed": "",
+			"button_label": "Add Row",
+			"rows_per_page": 20,
+			"sub_fields": [
+				{
+					"key": "field_6957b235612c0",
+					"label": "Scrolling banner text",
+					"name": "scrolling_banner_text",
+					"aria-label": "",
+					"type": "textarea",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"acfe_textarea_code": 0,
+					"maxlength": "",
+					"allow_in_bindings": 0,
+					"rows": 3,
+					"placeholder": "",
+					"new_lines": "",
+					"parent_repeater": "field_62647331056f3"
+				},
+				{
+					"key": "field_6957b50ba192a",
+					"label": "Text link",
+					"name": "text_link",
+					"aria-label": "",
+					"type": "link",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "array",
+					"allow_in_bindings": 0,
+					"parent_repeater": "field_62647331056f3"
+				}
+			]
 		},
 		{
 			"key": "field_62647361727b8",
@@ -127,12 +125,11 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 5,
-			"min": "",
-			"max": 10,
-			"step": "",
+			"min": 1,
+			"max": 25,
+			"allow_in_bindings": 1,
+			"step": 1,
 			"prepend": "",
 			"append": ""
 		},
@@ -500,5 +497,5 @@
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1767287567
+	"modified": 1767368506
 }
