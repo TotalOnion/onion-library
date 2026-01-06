@@ -63,9 +63,12 @@ export default function carouselmultilayoutv3Js(options = {}) {
 				Number(dataAttributes.centeractiveslideportrait) === 1;
 			const centerActiveSlideMobile =
 				Number(dataAttributes.centeractiveslidemobile) === 1;
-			const centerSlidesBounds = Number(dataAttributes.centerslidesbounds) === 1;
-			const centerSlidesBoundsPortrait = Number(dataAttributes.centerslidesboundsportrait) === 1;
-			const centerSlidesBoundsMobile = Number(dataAttributes.centerslidesboundsmobile) === 1;
+			const centerSlidesBounds =
+				Number(dataAttributes.centerslidesbounds) === 1;
+			const centerSlidesBoundsPortrait =
+				Number(dataAttributes.centerslidesboundsportrait) === 1;
+			const centerSlidesBoundsMobile =
+				Number(dataAttributes.centerslidesboundsmobile) === 1;
 			const centerInsufficientSlidesDesktop =
 				Number(dataAttributes.centerinsufficientslidesdesktop) === 1;
 			const centerInsufficientSlidesPortrait =
@@ -197,8 +200,14 @@ export default function carouselmultilayoutv3Js(options = {}) {
 							loop: totalSlides > 1 ? loopSlides : false
 						},
 						1440: {
+							centeredSlides: centerActiveSlide,
+							centerInsufficientSlides:
+								centerInsufficientSlidesDesktop,
+							centeredSlidesBounds: centerSlidesBounds,
 							slidesPerView: slidesDesktopFull,
 							spaceBetween: spaceBetweenSlidesDesktopFull,
+							slidesOffsetBefore: slidesOffsetDesktopBefore,
+							slidesOffsetAfter: slidesOffsetDesktopAfter,
 							loop: totalSlides > 1 ? loopSlides : false
 						}
 					},
