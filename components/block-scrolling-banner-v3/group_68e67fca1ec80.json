@@ -4,7 +4,7 @@
 	"fields": [
 		{
 			"key": "field_68e6822690986",
-			"label": "Banner Fields",
+			"label": "Banner Content",
 			"name": "",
 			"aria-label": "",
 			"type": "tab",
@@ -16,7 +16,6 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
 			"placement": "top",
 			"endpoint": 0,
 			"no_preference": 0,
@@ -112,6 +111,25 @@
 			]
 		},
 		{
+			"key": "field_69601f0538ee5",
+			"label": "Banner Settings",
+			"name": "",
+			"aria-label": "",
+			"type": "tab",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"placement": "top",
+			"endpoint": 0,
+			"no_preference": 0,
+			"selected": 0
+		},
+		{
 			"key": "field_62647361727b8",
 			"label": "Scrolling Banner Speed",
 			"name": "scrolling_banner_speed",
@@ -121,7 +139,7 @@
 			"required": 0,
 			"conditional_logic": 0,
 			"wrapper": {
-				"width": "",
+				"width": "50",
 				"class": "",
 				"id": ""
 			},
@@ -134,6 +152,37 @@
 			"append": ""
 		},
 		{
+			"key": "field_65661d79b8b14",
+			"label": "Text Colour",
+			"name": "text_colour",
+			"aria-label": "",
+			"type": "color_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "#FFFFFF",
+			"enable_opacity": 1,
+			"return_format": "string",
+			"display": "default",
+			"button_label": "Select Color",
+			"color_picker": 1,
+			"absolute": 0,
+			"input": 1,
+			"allow_null": 1,
+			"theme_colors": 0,
+			"colors": [],
+			"allow_in_bindings": 1,
+			"show_custom_palette": 0,
+			"show_color_wheel": 1,
+			"custom_palette_source": "",
+			"palette_colors": ""
+		},
+		{
 			"key": "field_656601518b51f",
 			"label": "Font Size Desktop",
 			"name": "font_size_desktop",
@@ -143,15 +192,14 @@
 			"required": 0,
 			"conditional_logic": 0,
 			"wrapper": {
-				"width": "",
+				"width": "33",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 32,
 			"min": "",
 			"max": 300,
+			"allow_in_bindings": 1,
 			"step": "",
 			"prepend": "",
 			"append": ""
@@ -166,15 +214,14 @@
 			"required": 0,
 			"conditional_logic": 0,
 			"wrapper": {
-				"width": "",
+				"width": "34",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 24,
 			"min": "",
 			"max": 300,
+			"allow_in_bindings": 1,
 			"step": "",
 			"prepend": "",
 			"append": ""
@@ -189,23 +236,22 @@
 			"required": 0,
 			"conditional_logic": 0,
 			"wrapper": {
-				"width": "",
+				"width": "33",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 16,
 			"min": "",
 			"max": 300,
+			"allow_in_bindings": 1,
 			"step": "",
 			"prepend": "",
 			"append": ""
 		},
 		{
 			"key": "field_656612fd660a7",
-			"label": "Seperator As Image?",
-			"name": "seperator_as_image",
+			"label": "Separator As Image?",
+			"name": "separator_as_image",
 			"aria-label": "",
 			"type": "true_false",
 			"instructions": "",
@@ -216,14 +262,80 @@
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"message": "",
 			"default_value": 0,
+			"allow_in_bindings": 1,
 			"ui_on_text": "",
 			"ui_off_text": "",
 			"ui": 1,
 			"style": ""
+		},
+		{
+			"key": "field_69601f602ec52",
+			"label": "Separator image",
+			"name": "separator_image",
+			"aria-label": "",
+			"type": "image",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_656612fd660a7",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"uploader": "",
+			"return_format": "id",
+			"library": "all",
+			"upload_folder": "",
+			"acfe_thumbnail": 0,
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": "",
+			"allow_in_bindings": 0,
+			"preview_size": "medium"
+		},
+		{
+			"key": "field_696021d920c68",
+			"label": "Separator image width",
+			"name": "separator_image_width",
+			"aria-label": "",
+			"type": "range",
+			"instructions": "in ems",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_656612fd660a7",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "1.5",
+			"min": "0.1",
+			"max": 10,
+			"allow_in_bindings": 0,
+			"step": "0.1",
+			"prepend": "",
+			"append": ""
 		},
 		{
 			"key": "field_656615b26dfc2",
@@ -252,37 +364,6 @@
 			"other_choice": 0,
 			"layout": "vertical",
 			"save_other_choice": 0
-		},
-		{
-			"key": "field_65661d79b8b14",
-			"label": "Text Colour",
-			"name": "text_colour",
-			"aria-label": "",
-			"type": "color_picker",
-			"instructions": "",
-			"required": 0,
-			"conditional_logic": 0,
-			"wrapper": {
-				"width": "",
-				"class": "",
-				"id": ""
-			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
-			"default_value": "#FFFFFF",
-			"enable_opacity": 1,
-			"return_format": "string",
-			"display": "default",
-			"button_label": "Select Color",
-			"color_picker": true,
-			"absolute": false,
-			"input": true,
-			"allow_null": true,
-			"theme_colors": false,
-			"colors": [],
-			"custom_palette_source": "",
-			"palette_colors": "",
-			"show_color_wheel": true
 		},
 		{
 			"key": "field_65b7ac3ef1fea",
@@ -315,17 +396,24 @@
 			"type": "range",
 			"instructions": "",
 			"required": 0,
-			"conditional_logic": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_65b7ac3ef1fea",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
 			"wrapper": {
 				"width": "",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 0,
 			"min": -40,
 			"max": 40,
+			"allow_in_bindings": 1,
 			"step": "",
 			"prepend": "",
 			"append": ""
@@ -338,17 +426,24 @@
 			"type": "range",
 			"instructions": "",
 			"required": 0,
-			"conditional_logic": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_65b7ac3ef1fea",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
 			"wrapper": {
 				"width": "",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 0,
 			"min": -40,
 			"max": 40,
+			"allow_in_bindings": 1,
 			"step": "",
 			"prepend": "",
 			"append": ""
@@ -361,17 +456,24 @@
 			"type": "range",
 			"instructions": "",
 			"required": 0,
-			"conditional_logic": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_65b7ac3ef1fea",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
 			"wrapper": {
 				"width": "",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": 0,
 			"min": 0,
 			"max": 20,
+			"allow_in_bindings": 1,
 			"step": "",
 			"prepend": "",
 			"append": ""
@@ -384,14 +486,20 @@
 			"type": "color_picker",
 			"instructions": "",
 			"required": 0,
-			"conditional_logic": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_65b7ac3ef1fea",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
 			"wrapper": {
 				"width": "",
 				"class": "",
 				"id": ""
 			},
-			"wpml_cf_preferences": 3,
-			"user_roles": ["all"],
 			"default_value": "rgba(255,255,255,0.5)",
 			"enable_opacity": 1,
 			"return_format": "string",
@@ -403,9 +511,11 @@
 			"allow_null": 1,
 			"theme_colors": 0,
 			"colors": [],
+			"allow_in_bindings": 1,
+			"show_custom_palette": 0,
+			"show_color_wheel": 1,
 			"custom_palette_source": "",
-			"palette_colors": "",
-			"show_color_wheel": true
+			"palette_colors": ""
 		},
 		{
 			"key": "field_68e67fca63368",
@@ -497,5 +607,5 @@
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1767368506
+	"modified": 1767907938
 }

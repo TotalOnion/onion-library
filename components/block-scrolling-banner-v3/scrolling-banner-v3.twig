@@ -15,13 +15,16 @@
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
 	{% set bannerSpeed = fields.scrolling_banner_speed %}
-	{% set imageSeperator = fields.seperator_as_image %}
+	{% set separatorAsImage = fields.separator_as_image %}
+	{% set separatorImage = get_image(fields.separator_image) %}
+	{% set separatorImageWidth = '--separator-image-width: ' ~ fields.separator_image_width ~ 'em;' %}
 	{% set positioning = '--position:' ~ fields.positioning|ru ~ ';' %}
 	{% set textSizeDesktop = '--text-size-desktop:' ~ fields.font_size_desktop ~ ';' %}
 	{% set textSizePortrait = '--text-size-portrait:' ~ fields.font_size_portrait ~ ';' %}
 	{% set textSizeMobile = '--text-size-mobile:' ~ fields.font_size_mobile ~ ';' %}
 	{% set textColour = '--banner-text-colour:' ~ fields.text_colour ~ ';' %}
-	{% set bannerTextStyles =  textSizeDesktop ~ textSizePortrait ~ textSizeMobile ~ positioning ~ textColour %}
+	{% set bannerTextStyles =  textSizeDesktop ~ textSizePortrait ~ textSizeMobile ~ positioning ~ textColour ~ separatorImageWidth %}
+
 
 	{% if fields.enable_text_shadow %}
 		{% set textShadowClassName = blockClassName ~ "--text-shadow" %}
@@ -40,7 +43,11 @@
 				<div class="{{blockClassName}}__container">
 					<div class="{{blockClassName}}__inner">
 						{% for item in fields.scrolling_banner_texts %}
-							<span class="{{blockClassName}}__separator"></span>
+							{% if separatorAsImage %}
+								<img class="{{blockClassName}}__separator {{blockClassName}}__separator--image" src="{{gt_image_mainsrc(separatorImage)}}">
+							{% else %}
+								<span class="{{blockClassName}}__separator"></span>
+							{% endif %}
 							{% set elementType = item.text_link ? 'a href="' ~ item.text_link.url ~ '"' : 'span' %}
 							<{{elementType}} class="{{blockClassName}}__text {{textShadowClassName}}">{{item.scrolling_banner_text}}</{{elementType}}>
 						{% endfor %}
@@ -50,3 +57,4 @@
 		</div>
 	{% endif %}
 </section>
+

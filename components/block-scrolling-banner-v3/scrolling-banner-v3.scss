@@ -48,10 +48,7 @@
 			align-items: center;
 			align-self: flex-start;
 			white-space: nowrap;
-			font-size: core-functions-v3.fontSize(
-				var(--text-size-mobile),
-				'mobile'
-			);
+			font-size: core-functions-v3.fontSize(var(--text-size-mobile));
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				font-size: core-functions-v3.fontSize(
@@ -94,6 +91,10 @@
 				place-self: center;
 				border-radius: 50%;
 			}
+		}
+		&__separator--image {
+			width: var(--separator-image-width, 1.5em);
+			height: auto;
 		}
 
 		&--text-shadow {

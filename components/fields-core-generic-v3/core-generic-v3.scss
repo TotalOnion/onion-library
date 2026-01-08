@@ -3,295 +3,297 @@
 @use '../../breakpoints';
 
 @mixin coreGenericV3() {
-	/* Box sizing rules */
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-
-	/* Remove default padding */
-	ul,
-	ol {
-		padding: 0;
-	}
-
-	/* Remove default margin */
-	body,
-	h1,
-	h2,
-	h3,
-	h4,
-	p,
-	ul,
-	ol,
-	li,
-	figure,
-	figcaption,
-	blockquote,
-	dl,
-	dd {
-		margin: 0;
-	}
-
-	/* Box sizing rules */
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-
-	//***** TYPOGRAPHY *****\\
-	body {
-		// @include core-typography-mixins-v3.fontSecondary();
-	}
-
-	// h1,
-	// h2,
-	// h3,
-	// h4,
-	// h5,
-	// h6 {
-	// 	margin: 0; //reset default margin
-	// 	font-weight: unset; //reset default font weight
-	// 	margin-top: unset;
-	// 	@include core-typography-mixins-v3.fontPrimary();
-	// }
-	.override-element-styles {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-size: 0;
+	@layer base-styles {
+		/* Box sizing rules */
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
 		}
-	}
 
-	.standard-content-box-wysiwyg-editor {
+		/* Remove default padding */
+		ul,
+		ol {
+			padding: 0;
+		}
+
+		/* Remove default margin */
+		body,
 		h1,
 		h2,
 		h3,
 		h4,
-		h5,
-		h6 {
-			margin-bottom: var(--heading-block-spacing);
+		p,
+		ul,
+		ol,
+		li,
+		figure,
+		figcaption,
+		blockquote,
+		dl,
+		dd {
+			margin: 0;
+		}
 
-			&:last-child {
-				margin-bottom: 0;
+		/* Box sizing rules */
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		//***** TYPOGRAPHY *****\\
+		body {
+			// @include core-typography-mixins-v3.fontSecondary();
+		}
+
+		// h1,
+		// h2,
+		// h3,
+		// h4,
+		// h5,
+		// h6 {
+		// 	margin: 0; //reset default margin
+		// 	font-weight: unset; //reset default font weight
+		// 	margin-top: unset;
+		// 	@include core-typography-mixins-v3.fontPrimary();
+		// }
+		.override-element-styles {
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-size: 0;
 			}
 		}
+
+		.standard-content-box-wysiwyg-editor {
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin-bottom: var(--heading-block-spacing);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			p {
+				margin-bottom: var(--paragraph-block-spacing);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
 		p {
-			margin-bottom: var(--paragraph-block-spacing);
+			margin: 0; //reset default margin
+			// @include core-typography-mixins-v3.p();
+		}
 
-			&:last-child {
-				margin-bottom: 0;
+		a {
+			text-decoration-skip-ink: auto;
+			color: var(--link-colour);
+			text-decoration: var(--link-decoration-style);
+			text-decoration-color: var(--link-decoration-colour);
+
+			strong,
+			b {
+				font-weight: var(--weight-bold);
+			}
+
+			&:hover {
+				cursor: pointer;
+				color: var(--link-colour-hover);
+				text-decoration: var(--link-decoration-style-hover);
+				text-decoration-color: var(--link-decoration-colour-hover);
 			}
 		}
-	}
 
-	p {
-		margin: 0; //reset default margin
-		// @include core-typography-mixins-v3.p();
-	}
-
-	a {
-		text-decoration-skip-ink: auto;
-		color: var(--link-colour);
-		text-decoration: var(--link-decoration-style);
-		text-decoration-color: var(--link-decoration-colour);
-
-		strong,
-		b {
-			font-weight: var(--weight-bold);
+		button {
+			&:focus {
+				// outline: none;
+				// appearance: none;
+			}
 		}
 
-		&:hover {
-			cursor: pointer;
-			color: var(--link-colour-hover);
-			text-decoration: var(--link-decoration-style-hover);
-			text-decoration-color: var(--link-decoration-colour-hover);
-		}
-	}
+		blockquote {
+			margin: 0; //reset default margin
+			quotes: '“' '”' '‘' '’';
+			font-weight: bold;
 
-	button {
-		&:focus {
-			// outline: none;
-			// appearance: none;
-		}
-	}
+			&::before {
+				content: open-quote;
+			}
 
-	blockquote {
-		margin: 0; //reset default margin
-		quotes: '“' '”' '‘' '’';
-		font-weight: bold;
-
-		&::before {
-			content: open-quote;
+			&::after {
+				content: close-quote;
+			}
 		}
 
-		&::after {
-			content: close-quote;
-		}
-	}
-
-	figure,
-	figcaption,
-	dl,
-	dd {
-		margin: 0;
-	}
-
-	q {
-		&::before {
-			content: open-quote;
+		figure,
+		figcaption,
+		dl,
+		dd {
+			margin: 0;
 		}
 
-		&::after {
-			content: close-quote;
-		}
-	}
+		q {
+			&::before {
+				content: open-quote;
+			}
 
-	ol {
-		list-style-type: decimal;
-	}
-	ul {
-		list-style-type: disc;
-	}
-	li {
-		// @include core-typography-mixins-v3.p();
-	}
-	ol,
-	ul {
-		padding: 0; //reset default padding
-		margin: 0; //reset default margin
-		// font-family: var(--secondary-font-family);
-		margin-bottom: var(--paragraph-block-spacing);
-		list-style-position: inside;
-		&:last-child {
-			margin-bottom: 0;
+			&::after {
+				content: close-quote;
+			}
+		}
+
+		ol {
+			list-style-type: decimal;
+		}
+		ul {
+			list-style-type: disc;
 		}
 		li {
-			margin-bottom: var(--list-item-block-spacing);
-			line-height: var(--list-item-line-height);
-			letter-spacing: var(--list-item-letter-spacing);
+			// @include core-typography-mixins-v3.p();
+		}
+		ol,
+		ul {
+			padding: 0; //reset default padding
+			margin: 0; //reset default margin
+			// font-family: var(--secondary-font-family);
+			margin-bottom: var(--paragraph-block-spacing);
+			list-style-position: inside;
 			&:last-child {
 				margin-bottom: 0;
 			}
-		}
-	}
-
-	html {
-		min-height: 100%;
-		// container-type: inline-size;
-		&.lock-position {
-			@include core-mixins-v3.lockPosition();
-		}
-	}
-
-	.lazy-fade {
-		opacity: 0;
-	}
-	.loaded:not(.cmpl-block-animations) {
-		opacity: 1;
-	}
-
-	.js-enabled-hide {
-		display: none;
-	}
-
-	body {
-		display: flex;
-		flex-direction: column;
-		scroll-behavior: smooth;
-		text-rendering: optimizeSpeed;
-		margin: 0; //reset default margin
-		padding: 0; //reset default padding
-		height: auto;
-		min-height: 100vh;
-		position: relative;
-		background: var(--body-background-colour);
-		--default-text-colour-mobile: var(--theme-primary-text-colour);
-		color: var(--default-text-colour-mobile);
-
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			--default-text-colour-desktop: var(--theme-primary-text-colour);
-			color: var(--default-text-colour-desktop);
-		}
-
-		&.lock-position {
-			@include core-mixins-v3.lockPosition();
-		}
-
-		&.hide-nav {
-			.site-header {
-				display: none;
+			li {
+				margin-bottom: var(--list-item-block-spacing);
+				line-height: var(--list-item-line-height);
+				letter-spacing: var(--list-item-letter-spacing);
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
-	}
 
-	.body-container-background-image,
-	.page-container-background-image {
-		&__picture {
-			height: 100%;
-			position: var(--body-background-image-position-type);
+		html {
+			min-height: 100%;
+			// container-type: inline-size;
+			&.lock-position {
+				@include core-mixins-v3.lockPosition();
+			}
+		}
+
+		.lazy-fade {
+			opacity: 0;
+		}
+		.loaded:not(.cmpl-block-animations) {
+			opacity: 1;
+		}
+
+		.js-enabled-hide {
+			display: none;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			scroll-behavior: smooth;
+			text-rendering: optimizeSpeed;
+			margin: 0; //reset default margin
+			padding: 0; //reset default padding
+			height: auto;
+			min-height: 100vh;
+			position: relative;
+			background: var(--body-background-colour);
+			--default-text-colour-mobile: var(--theme-primary-text-colour);
+			color: var(--default-text-colour-mobile);
+
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				--default-text-colour-desktop: var(--theme-primary-text-colour);
+				color: var(--default-text-colour-desktop);
+			}
+
+			&.lock-position {
+				@include core-mixins-v3.lockPosition();
+			}
+
+			&.hide-nav {
+				.site-header {
+					display: none;
+				}
+			}
+		}
+
+		.body-container-background-image,
+		.page-container-background-image {
+			&__picture {
+				height: 100%;
+				position: var(--body-background-image-position-type);
+				inset: 0;
+			}
+
+			&__image {
+				height: 100%;
+				object-fit: var(--body-background-image-fit);
+				object-position: var(--body-background-image-position);
+			}
+		}
+
+		.body-container-background-video {
+			position: fixed;
+			object-fit: cover;
 			inset: 0;
+			width: 100%;
 		}
 
-		&__image {
-			height: 100%;
-			object-fit: var(--body-background-image-fit);
-			object-position: var(--body-background-image-position);
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
 		}
-	}
 
-	.body-container-background-video {
-		position: fixed;
-		object-fit: cover;
-		inset: 0;
-		width: 100%;
-	}
+		main {
+			height: auto;
+			width: 100%;
+			max-width: var(--global-content-max-width-main);
+			margin-inline: auto;
+			background-image: var(--main-container-background-image);
+			background-repeat: repeat;
+		}
 
-	img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
+		header,
+		footer,
+		section {
+			width: 100%;
+			max-width: 100%;
+		}
+		section[data-assetkey] {
+			// container-type: inline-size;
+		}
+		.site-footer-block {
+			margin-top: auto;
+		}
+		.grecaptcha-badge {
+			z-index: 50;
+			bottom: 0 !important;
+		}
 
-	main {
-		height: auto;
-		width: 100%;
-		max-width: var(--global-content-max-width-main);
-		margin-inline: auto;
-		background-image: var(--main-container-background-image);
-		background-repeat: repeat;
-	}
-
-	header,
-	footer,
-	section {
-		width: 100%;
-		max-width: 100%;
-	}
-	section[data-assetkey] {
-		// container-type: inline-size;
-	}
-	.site-footer-block {
-		margin-top: auto;
-	}
-	.grecaptcha-badge {
-		z-index: 50;
-		bottom: 0 !important;
-	}
-
-	/* Remove all animations and transitions for people that prefer not to see them */
-	@media (prefers-reduced-motion: reduce) {
-		* {
-			animation-duration: 0.01ms !important;
-			animation-iteration-count: 1 !important;
-			transition-duration: 0.01ms !important;
-			scroll-behavior: auto !important;
-			transition: 0.01ms !important;
+		/* Remove all animations and transitions for people that prefer not to see them */
+		@media (prefers-reduced-motion: reduce) {
+			* {
+				animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+				scroll-behavior: auto !important;
+				transition: 0.01ms !important;
+			}
 		}
 	}
 }
