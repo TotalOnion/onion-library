@@ -62,6 +62,9 @@ function bannerInit(bannerElement, initializedBanners, block) {
 
 	const wrapperWidth = wrapper.clientWidth;
 	const innerContentWidth = inner.clientWidth;
+	if (innerContentWidth == 0) {
+		return;
+	}
 	const multiplier = Number(Math.round(wrapperWidth / innerContentWidth));
 
 	for (let index = 0; index < multiplier; index++) {
