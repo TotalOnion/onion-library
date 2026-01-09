@@ -107,6 +107,36 @@
 					"return_format": "array",
 					"allow_in_bindings": 0,
 					"parent_repeater": "field_62647331056f3"
+				},
+				{
+					"key": "field_6960fd9d394e7",
+					"label": "Single Separator Image",
+					"name": "single_separator_image",
+					"aria-label": "",
+					"type": "image",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"uploader": "",
+					"return_format": "id",
+					"library": "all",
+					"upload_folder": "",
+					"acfe_thumbnail": 0,
+					"min_width": "",
+					"min_height": "",
+					"min_size": "",
+					"max_width": "",
+					"max_height": "",
+					"max_size": "",
+					"mime_types": "",
+					"allow_in_bindings": 0,
+					"preview_size": "medium",
+					"parent_repeater": "field_62647331056f3"
 				}
 			]
 		},
@@ -607,5 +637,5 @@
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1767907938
+	"modified": 1767965204
 }

@@ -43,7 +43,10 @@
 				<div class="{{blockClassName}}__container">
 					<div class="{{blockClassName}}__inner">
 						{% for item in fields.scrolling_banner_texts %}
-							{% if separatorAsImage %}
+							{% if item.single_separator_image != null %}
+								{% set singleSeparatorImage = get_image(item.single_separator_image) %}
+								<img class="{{blockClassName}}__separator {{blockClassName}}__separator--image" src="{{gt_image_mainsrc(singleSeparatorImage)}}">
+							{% elseif separatorAsImage != null %}
 								<img class="{{blockClassName}}__separator {{blockClassName}}__separator--image" src="{{gt_image_mainsrc(separatorImage)}}">
 							{% else %}
 								<span class="{{blockClassName}}__separator"></span>
@@ -57,4 +60,3 @@
 		</div>
 	{% endif %}
 </section>
-
