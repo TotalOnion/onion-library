@@ -59,7 +59,7 @@
 				"id": ""
 			},
 			"acfe_repeater_stylised_button": 1,
-			"layout": "table",
+			"layout": "block",
 			"pagination": 0,
 			"min": 0,
 			"max": 0,
@@ -77,7 +77,7 @@
 					"required": 0,
 					"conditional_logic": 0,
 					"wrapper": {
-						"width": "",
+						"width": "40",
 						"class": "",
 						"id": ""
 					},
@@ -100,7 +100,7 @@
 					"required": 0,
 					"conditional_logic": 0,
 					"wrapper": {
-						"width": "",
+						"width": "20",
 						"class": "",
 						"id": ""
 					},
@@ -118,7 +118,7 @@
 					"required": 0,
 					"conditional_logic": 0,
 					"wrapper": {
-						"width": "",
+						"width": "20",
 						"class": "",
 						"id": ""
 					},
@@ -136,6 +136,29 @@
 					"mime_types": "",
 					"allow_in_bindings": 0,
 					"preview_size": "medium",
+					"parent_repeater": "field_62647331056f3"
+				},
+				{
+					"key": "field_69610723c5a0e",
+					"label": "Single Separator Image Width",
+					"name": "single_separator_image_width",
+					"aria-label": "",
+					"type": "range",
+					"instructions": "in ems",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "20",
+						"class": "",
+						"id": ""
+					},
+					"default_value": 1,
+					"min": "0.1",
+					"max": 10,
+					"allow_in_bindings": 0,
+					"step": "0.1",
+					"prepend": "",
+					"append": "",
 					"parent_repeater": "field_62647331056f3"
 				}
 			]
@@ -637,5 +660,5 @@
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1767965204
+	"modified": 1767966858
 }

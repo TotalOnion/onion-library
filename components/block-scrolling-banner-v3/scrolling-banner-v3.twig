@@ -45,7 +45,13 @@
 						{% for item in fields.scrolling_banner_texts %}
 							{% if item.single_separator_image != null %}
 								{% set singleSeparatorImage = get_image(item.single_separator_image) %}
-								<img class="{{blockClassName}}__separator {{blockClassName}}__separator--image" src="{{gt_image_mainsrc(singleSeparatorImage)}}">
+								{% set singleSeparatorImageWidth = '--separator-image-width: ' ~ item.single_separator_image_width ~ 'em;' %}
+								<style>
+									.{{blockClassName}}__separator--image-single-{{loop.index}}{
+										{{singleSeparatorImageWidth}}
+									}
+								</style>
+								<img class="{{blockClassName}}__separator {{blockClassName}}__separator--image {{blockClassName}}__separator--image-single-{{loop.index}}" src="{{gt_image_mainsrc(singleSeparatorImage)}}">
 							{% elseif separatorAsImage != null %}
 								<img class="{{blockClassName}}__separator {{blockClassName}}__separator--image" src="{{gt_image_mainsrc(separatorImage)}}">
 							{% else %}
