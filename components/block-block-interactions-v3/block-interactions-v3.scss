@@ -2,29 +2,31 @@
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
 
-.block-interactions-v3 {
-	&__block-close-button {
-		cursor: pointer;
-		border: unset;
-		background: unset;
-	}
-	&__popup-trigger {
-		appearance: none;
-		border: unset;
-		background-color: unset;
-		display: flex;
-		cursor: pointer;
-	}
-	svg {
-		width: core-functions-v3.fluidSize(30, 'mobile');
-		height: core-functions-v3.fluidSize(30, 'mobile');
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			width: core-functions-v3.fluidSize(30, 'portrait');
-			height: core-functions-v3.fluidSize(30, 'portrait');
+@layer base-styles {
+	.block-interactions-v3 {
+		&__block-close-button {
+			cursor: pointer;
+			border: unset;
+			background: unset;
 		}
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			width: core-functions-v3.fluidSize(30, 'desktop');
-			height: core-functions-v3.fluidSize(30, 'desktop');
+		&__popup-trigger {
+			appearance: none;
+			border: unset;
+			background-color: unset;
+			display: flex;
+			cursor: pointer;
+		}
+		svg {
+			width: core-functions-v3.fluidSize(30, 'mobile');
+			height: core-functions-v3.fluidSize(30, 'mobile');
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				width: core-functions-v3.fluidSize(30, 'portrait');
+				height: core-functions-v3.fluidSize(30, 'portrait');
+			}
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				width: core-functions-v3.fluidSize(30, 'desktop');
+				height: core-functions-v3.fluidSize(30, 'desktop');
+			}
 		}
 	}
 }

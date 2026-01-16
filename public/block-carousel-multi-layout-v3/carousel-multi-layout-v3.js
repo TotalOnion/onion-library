@@ -1,5 +1,6 @@
 import { getSwiperAssetsV2 } from "@total_onion/onion-utils/onion-utils.mjs";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css/bundle";
 export default function carouselmultilayoutv3Js(options = {}) {
   try {
     const { block } = options;
@@ -47,6 +48,9 @@ export default function carouselmultilayoutv3Js(options = {}) {
       const centerActiveSlide = Number(dataAttributes.centeractiveslide) === 1;
       const centerActiveSlidePortrait = Number(dataAttributes.centeractiveslideportrait) === 1;
       const centerActiveSlideMobile = Number(dataAttributes.centeractiveslidemobile) === 1;
+      const centerSlidesBounds = Number(dataAttributes.centerslidesbounds) === 1;
+      const centerSlidesBoundsPortrait = Number(dataAttributes.centerslidesboundsportrait) === 1;
+      const centerSlidesBoundsMobile = Number(dataAttributes.centerslidesboundsmobile) === 1;
       const centerInsufficientSlidesDesktop = Number(dataAttributes.centerinsufficientslidesdesktop) === 1;
       const centerInsufficientSlidesPortrait = Number(dataAttributes.centerinsufficientslidesportrait) === 1;
       const centerInsufficientSlidesMobile = Number(dataAttributes.centerinsufficientslidesmobile) === 1;
@@ -112,6 +116,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
           watchOverflow: true,
           centeredSlides: centerActiveSlideMobile,
           centerInsufficientSlides: centerInsufficientSlidesMobile,
+          centeredSlidesBounds: centerSlidesBoundsMobile,
           freeMode: {
             enabled: carouselEnableFreeMode,
             sticky: carouselEnableFreeMode
@@ -125,6 +130,7 @@ export default function carouselmultilayoutv3Js(options = {}) {
               slidesPerView: slidesTablet,
               centeredSlides: centerActiveSlidePortrait,
               centerInsufficientSlides: centerInsufficientSlidesPortrait,
+              centeredSlidesBounds: centerSlidesBoundsPortrait,
               slidesOffsetBefore: slidesOffsetTabletBefore,
               slidesOffsetAfter: slidesOffsetTabletAfter,
               loop: totalSlides > 1 ? loopSlidesPortrait : false
@@ -134,13 +140,19 @@ export default function carouselmultilayoutv3Js(options = {}) {
               spaceBetween: spaceBetweenSlidesDesktop,
               centeredSlides: centerActiveSlide,
               centerInsufficientSlides: centerInsufficientSlidesDesktop,
+              centeredSlidesBounds: centerSlidesBounds,
               slidesOffsetBefore: slidesOffsetDesktopBefore,
               slidesOffsetAfter: slidesOffsetDesktopAfter,
               loop: totalSlides > 1 ? loopSlides : false
             },
             1440: {
+              centeredSlides: centerActiveSlide,
+              centerInsufficientSlides: centerInsufficientSlidesDesktop,
+              centeredSlidesBounds: centerSlidesBounds,
               slidesPerView: slidesDesktopFull,
               spaceBetween: spaceBetweenSlidesDesktopFull,
+              slidesOffsetBefore: slidesOffsetDesktopBefore,
+              slidesOffsetAfter: slidesOffsetDesktopAfter,
               loop: totalSlides > 1 ? loopSlides : false
             }
           },

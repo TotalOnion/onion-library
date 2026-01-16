@@ -1,3 +1,18 @@
 .site-copyright-notice-v3 {
-	color: red;
+  color: black;
+  color: var(--site-copyright-notice-colour, black);
+  font-size: calc(14px / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
+  font-size: calc(var(--site-copyright-font-size-mobile, 14px) / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
+}
+@media screen and (min-width: 768px) {
+  .site-copyright-notice-v3 {
+    font-size: calc(16px / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
+    font-size: calc(var(--site-copyright-font-size-portrait, 16px) / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-copyright-notice-v3 {
+    font-size: calc(18px / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
+    font-size: calc(var(--site-copyright-font-size-desktop, 18px) / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
+  }
 }

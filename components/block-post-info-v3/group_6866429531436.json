@@ -602,11 +602,11 @@
 							},
 							"wpml_cf_preferences": 3,
 							"choices": {
-								"1": "CTA (magenta)",
-								"2": "Link style (grey)",
-								"3": "Link style (white)",
-								"4": "fgp 4 (unused)",
-								"5": "fgp 5 (unused)"
+								"1": "Onion 1",
+								"2": "Onion 2",
+								"3": "Onion 3",
+								"4": "Onion 4",
+								"5": "Onion 5"
 							},
 							"default_value": 1,
 							"return_format": "value",
@@ -1399,11 +1399,11 @@
 							},
 							"wpml_cf_preferences": 3,
 							"choices": {
-								"1": "CTA (magenta)",
-								"2": "Link style (grey)",
-								"3": "Link style (white)",
-								"4": "fgp 4 (unused)",
-								"5": "fgp 5 (unused)"
+								"1": "Onion 1",
+								"2": "Onion 2",
+								"3": "Onion 3",
+								"4": "Onion 4",
+								"5": "Onion 5"
 							},
 							"default_value": 1,
 							"return_format": "value",
@@ -2056,11 +2056,11 @@
 							"selected": 0
 						},
 						{
-							"key": "field_6866429550424",
-							"label": "Post tags fields",
-							"name": "post_tags_fields",
+							"key": "field_67090b7796ecc",
+							"label": "Cta style select",
+							"name": "cta_style_select",
 							"aria-label": "",
-							"type": "clone",
+							"type": "select",
 							"instructions": "",
 							"required": 0,
 							"conditional_logic": 0,
@@ -2069,17 +2069,88 @@
 								"class": "",
 								"id": ""
 							},
-							"wpml_cf_preferences": 3,
-							"clone": ["group_67090920e08e5"],
-							"display": "seamless",
-							"layout": "block",
-							"prefix_label": 0,
-							"prefix_name": 0,
-							"acfe_seamless_style": 0,
-							"acfe_clone_modal": 0,
-							"acfe_clone_modal_close": 0,
-							"acfe_clone_modal_button": "",
-							"acfe_clone_modal_size": "large"
+							"choices": {
+								"default": "Default",
+								"post-colour": "Post Colour",
+								"post-text-colour-style": "Post text colour style"
+							},
+							"default_value": "default",
+							"return_format": "value",
+							"multiple": 0,
+							"max": "",
+							"prepend": "",
+							"append": "",
+							"allow_null": 0,
+							"allow_in_bindings": 1,
+							"ui": 0,
+							"ajax": 0,
+							"placeholder": "",
+							"create_options": 0,
+							"save_options": 0,
+							"allow_custom": 0,
+							"search_placeholder": "",
+							"min": ""
+						},
+						{
+							"key": "field_67090c638b333",
+							"label": "Cta style",
+							"name": "cta_style",
+							"aria-label": "",
+							"type": "select",
+							"instructions": "",
+							"required": 0,
+							"conditional_logic": 0,
+							"wrapper": {
+								"width": "",
+								"class": "",
+								"id": ""
+							},
+							"choices": {
+								"1": "Onion 1",
+								"2": "Onion 2",
+								"3": "Onion 3",
+								"4": "Onion 4",
+								"5": "Onion 5"
+							},
+							"default_value": "__1",
+							"return_format": "value",
+							"multiple": 0,
+							"max": "",
+							"allow_custom": 0,
+							"placeholder": "",
+							"search_placeholder": "",
+							"prepend": "",
+							"append": "",
+							"allow_null": 1,
+							"allow_in_bindings": 1,
+							"ui": 1,
+							"ajax": 0,
+							"create_options": 0,
+							"save_options": 0,
+							"min": ""
+						},
+						{
+							"key": "field_696a5beb2d1d8",
+							"label": "Number of tags",
+							"name": "number_of_tags",
+							"aria-label": "",
+							"type": "number",
+							"instructions": "",
+							"required": 0,
+							"conditional_logic": 0,
+							"wrapper": {
+								"width": "",
+								"class": "",
+								"id": ""
+							},
+							"default_value": "",
+							"min": 1,
+							"max": 4,
+							"allow_in_bindings": 0,
+							"placeholder": "",
+							"step": "",
+							"prepend": "",
+							"append": ""
 						}
 					],
 					"min": "",
@@ -2756,7 +2827,9 @@
 				"acfe_flexible_search_enabled": false,
 				"acfe_flexible_search_text": "",
 				"acfe_flexible_search_not_found": ""
-			}
+			},
+			"acfe_flexible_layouts_settings": false,
+			"acfe_flexible_grid_container": false
 		},
 		{
 			"key": "field_689f3979772e6",
@@ -3032,7 +3105,8 @@
 	"display_title": "",
 	"acfe_autosync": ["json"],
 	"acfe_form": 0,
+	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1767281222
+	"modified": 1768586501
 }

@@ -2,192 +2,196 @@
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../component-content-box-settings-v3/content-box-settings-v3';
 @use '../../breakpoints';
-
-.accordion-v3 {
-	@include content-box-settings-v3.contentBoxSettingsV3();
-	width: 100%;
-	pointer-events: all;
-	display: flex;
-	flex-direction: column;
-	gap: core-functions-v3.fluidSize(var(--title-gap), 'mobile');
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-		gap: core-functions-v3.fluidSize(var(--title-gap), 'portrait');
-	}
-	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-		gap: core-functions-v3.fluidSize(var(--title-gap), 'desktop');
-	}
-
-	&-wrapper {
-		text-align: initial;
-		background: var(--background-color);
-	}
-
-	&-question-wrapper {
-		cursor: pointer;
-		place-items: flex-start;
-		button {
-			width: 100%;
-			align-items: center;
-			cursor: pointer;
-			background: unset;
-			padding: unset;
-			border: unset;
-		}
-	}
-
-	&__content-container {
-		padding: core-functions-v3.fluidSize(10, 'static')
-			core-functions-v3.fluidSize(50, 'static')
-			core-functions-v3.fluidSize(10, 'static') 0;
-	}
-
-	&-image-wrapper {
-		grid-area: icon;
-		position: absolute;
-		right: core-functions-v3.fluidSize(2, 'static');
-		width: core-functions-v3.fluidSize(var(--image-icon-size), 'mobile');
-
+@layer base-styles {
+	.accordion-v3 {
+		@include content-box-settings-v3.contentBoxSettingsV3();
+		width: 100%;
+		pointer-events: all;
+		display: flex;
+		flex-direction: column;
+		gap: core-functions-v3.fluidSize(var(--title-gap), 'mobile');
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			width: core-functions-v3.fluidSize(
-				var(--image-icon-size),
-				'portrait'
-			);
+			gap: core-functions-v3.fluidSize(var(--title-gap), 'portrait');
 		}
-
 		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+			gap: core-functions-v3.fluidSize(var(--title-gap), 'desktop');
+		}
+
+		&-wrapper {
+			text-align: initial;
+			background: var(--background-color);
+		}
+
+		&-question-wrapper {
+			cursor: pointer;
+			place-items: flex-start;
+			button {
+				width: 100%;
+				align-items: center;
+				cursor: pointer;
+				background: unset;
+				padding: unset;
+				border: unset;
+			}
+		}
+
+		&__content-container {
+			padding: core-functions-v3.fluidSize(10, 'static')
+				core-functions-v3.fluidSize(50, 'static')
+				core-functions-v3.fluidSize(10, 'static') 0;
+		}
+
+		&-image-wrapper {
+			grid-area: icon;
+			position: absolute;
+			right: core-functions-v3.fluidSize(2, 'static');
 			width: core-functions-v3.fluidSize(
 				var(--image-icon-size),
-				'desktop'
-			);
-		}
-
-		img {
-			width: 100%;
-		}
-	}
-
-	&-question {
-		text-align: left;
-		display: grid;
-		grid-template:
-			'question icon'
-			'answer ...' / auto min-content;
-		&--icon-left {
-			grid-template:
-				'icon question'
-				'... answer' / min-content auto;
-			column-gap: core-functions-v3.fluidSize(20, 'static');
-		}
-	}
-
-	&-answer-wrapper {
-		overflow: hidden;
-		height: 0;
-		grid-area: answer;
-
-		p {
-			padding-inline: core-functions-v3.fluidSize(
-				var(--text-padding-horizontal),
 				'mobile'
 			);
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-				padding-inline: core-functions-v3.fluidSize(
-					var(--text-padding-horizontal),
+				width: core-functions-v3.fluidSize(
+					var(--image-icon-size),
 					'portrait'
 				);
 			}
 
 			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				padding-inline: core-functions-v3.fluidSize(
-					var(--text-padding-horizontal),
+				width: core-functions-v3.fluidSize(
+					var(--image-icon-size),
 					'desktop'
 				);
 			}
-		}
-	}
 
-	&-answer {
-		font-size: core-functions-v3.fontSize(22, 'static');
-		grid-column: 1/-1;
-		padding-bottom: core-functions-v3.fluidSize(20, 'mobile');
-		padding-top: core-functions-v3.fluidSize(20, 'mobile');
-
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			padding-bottom: core-functions-v3.fluidSize(20, 'portrait');
-			padding-top: core-functions-v3.fluidSize(20, 'portrait');
+			img {
+				width: 100%;
+			}
 		}
 
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			padding-bottom: core-functions-v3.fluidSize(20, 'desktop');
-			padding-top: core-functions-v3.fluidSize(20, 'desktop');
+		&-question {
+			text-align: left;
+			display: grid;
+			grid-template:
+				'question icon'
+				'answer ...' / auto min-content;
+			&--icon-left {
+				grid-template:
+					'icon question'
+					'... answer' / min-content auto;
+				column-gap: core-functions-v3.fluidSize(20, 'static');
+			}
 		}
 
-		&:last-child {
-			padding-bottom: 0;
-		}
-	}
+		&-answer-wrapper {
+			overflow: hidden;
+			height: 0;
+			grid-area: answer;
 
-	&-icon {
-		grid-area: icon;
-		background: var(--icon-background-color);
-		display: flex;
-		align-items: center;
-		height: core-functions-v3.fluidSize(50, 'static');
-		width: core-functions-v3.fluidSize(50, 'static');
+			p {
+				padding-inline: core-functions-v3.fluidSize(
+					var(--text-padding-horizontal),
+					'mobile'
+				);
 
-		&.active {
-			.accordion-v3-animation {
-				&:before {
-					transform: rotate(90deg);
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					padding-inline: core-functions-v3.fluidSize(
+						var(--text-padding-horizontal),
+						'portrait'
+					);
 				}
 
-				&:after {
-					transform: rotate(180deg);
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					padding-inline: core-functions-v3.fluidSize(
+						var(--text-padding-horizontal),
+						'desktop'
+					);
 				}
 			}
 		}
-	}
 
-	.image-icon-active {
-		transform: rotate(var(--image-icon-rotation-deg));
-		transition: transform 0.3s ease;
-	}
+		&-answer {
+			font-size: core-functions-v3.fontSize(22, 'static');
+			grid-column: 1/-1;
+			padding-bottom: core-functions-v3.fluidSize(20, 'mobile');
+			padding-top: core-functions-v3.fluidSize(20, 'mobile');
 
-	:not(.image-icon-active, .lottie-animations *) {
-		transform: rotate(0deg);
-		transition: transform 0.3s ease;
-	}
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				padding-bottom: core-functions-v3.fluidSize(20, 'portrait');
+				padding-top: core-functions-v3.fluidSize(20, 'portrait');
+			}
 
-	&-animation {
-		height: core-functions-v3.fluidSize(20, 'static');
-		margin: auto;
-		position: relative;
-		transition: transform 0.3s ease;
-		width: core-functions-v3.fluidSize(20, 'static');
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				padding-bottom: core-functions-v3.fluidSize(20, 'desktop');
+				padding-top: core-functions-v3.fluidSize(20, 'desktop');
+			}
 
-		&:before,
-		&:after {
-			background-color: red;
-			content: '';
-			position: absolute;
-			transition: transform 0.25s ease-out;
+			&:last-child {
+				padding-bottom: 0;
+			}
 		}
 
-		&:before {
-			height: 100%;
-			left: 50%;
-			margin-left: -1px;
-			top: 0;
-			width: 2px;
+		&-icon {
+			grid-area: icon;
+			background: var(--icon-background-color);
+			display: flex;
+			align-items: center;
+			height: core-functions-v3.fluidSize(50, 'static');
+			width: core-functions-v3.fluidSize(50, 'static');
+
+			&.active {
+				.accordion-v3-animation {
+					&:before {
+						transform: rotate(90deg);
+					}
+
+					&:after {
+						transform: rotate(180deg);
+					}
+				}
+			}
 		}
 
-		&:after {
-			height: 2px;
-			left: 0;
-			margin-top: -1px;
-			top: 50%;
-			width: 100%;
+		.image-icon-active {
+			transform: rotate(var(--image-icon-rotation-deg));
+			transition: transform 0.3s ease;
+		}
+
+		:not(.image-icon-active, .lottie-animations *) {
+			transform: rotate(0deg);
+			transition: transform 0.3s ease;
+		}
+
+		&-animation {
+			height: core-functions-v3.fluidSize(20, 'static');
+			margin: auto;
+			position: relative;
+			transition: transform 0.3s ease;
+			width: core-functions-v3.fluidSize(20, 'static');
+
+			&:before,
+			&:after {
+				background-color: red;
+				content: '';
+				position: absolute;
+				transition: transform 0.25s ease-out;
+			}
+
+			&:before {
+				height: 100%;
+				left: 50%;
+				margin-left: -1px;
+				top: 0;
+				width: 2px;
+			}
+
+			&:after {
+				height: 2px;
+				left: 0;
+				margin-top: -1px;
+				top: 50%;
+				width: 100%;
+			}
 		}
 	}
 }

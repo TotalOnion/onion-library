@@ -1,5 +1,10 @@
 .scrolling-banner-v3 {
-  position: relative;
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
+}
+.scrolling-banner-v3__banner-container,
+.scrolling-banner-v3 > .scrolling-banner-v3 {
   overflow-x: hidden;
   color: var(--banner-text-colour);
   font-weight: var(--weight-extra-bold);
@@ -79,6 +84,11 @@
   justify-self: center;
   place-self: center;
   border-radius: 50%;
+}
+.scrolling-banner-v3__separator--image {
+  width: 1.5em;
+  width: var(--separator-image-width, 1.5em);
+  height: auto;
 }
 .scrolling-banner-v3--text-shadow {
   text-shadow: calc(var(--text-shadow-offset-x) / var(--desktop-design-reference) * var(--screen-width-static)) calc(var(--text-shadow-offset-y) / var(--desktop-design-reference) * var(--screen-width-static)) calc(var(--text-shadow-blur) / var(--desktop-design-reference) * var(--screen-width-static)) var(--text-shadow-colour);

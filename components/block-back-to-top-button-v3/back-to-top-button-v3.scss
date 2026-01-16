@@ -1,67 +1,68 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
+@layer base-styles {
+	.back-to-top-button {
+		position: relative;
+		width: 100%;
+		z-index: 50;
+		overflow: unset;
 
-.back-to-top-button {
-	position: relative;
-	width: 100%;
-	z-index: 50;
-	overflow: unset;
-
-	&__arrow {
-		--arrow-colour: black;
-		position: absolute;
-		border-style: solid;
-		border-color: var(--arrow-colour);
-		border-width: 0 2px 2px 0;
-		display: inline-block;
-		transform: rotate(-135deg);
-		height: 20%;
-		width: 20%;
-	}
-
-	&__button {
-		--bg-colour: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		cursor: pointer;
-		height: core-functions-v3.fluidSize(50, 'static');
-		width: core-functions-v3.fluidSize(50, 'static');
-		border: none;
-		border-radius: 50px;
-		padding: core-functions-v3.fluidSize(18, 'static');
-		background-color: var(--bg-colour);
-		right: core-functions-v3.fluidSize(10, 'mobile');
-		border-radius: var(--button-border-radius);
-
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			right: core-functions-v3.fluidSize(30, 'portrait');
+		&__arrow {
+			--arrow-colour: black;
+			position: absolute;
+			border-style: solid;
+			border-color: var(--arrow-colour);
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			transform: rotate(-135deg);
+			height: 20%;
+			width: 20%;
 		}
 
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			right: core-functions-v3.fluidSize(60, 'desktop');
-		}
-
-		&--fixed {
+		&__button {
+			--bg-colour: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			position: fixed;
-			bottom: core-functions-v3.fluidSize(60, 'static');
+			cursor: pointer;
+			height: core-functions-v3.fluidSize(50, 'static');
+			width: core-functions-v3.fluidSize(50, 'static');
+			border: none;
+			border-radius: 50px;
+			padding: core-functions-v3.fluidSize(18, 'static');
+			background-color: var(--bg-colour);
+			right: core-functions-v3.fluidSize(10, 'mobile');
+			border-radius: var(--button-border-radius);
+
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				right: core-functions-v3.fluidSize(30, 'portrait');
+			}
+
+			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+				right: core-functions-v3.fluidSize(60, 'desktop');
+			}
+
+			&--fixed {
+				position: fixed;
+				bottom: core-functions-v3.fluidSize(60, 'static');
+			}
+
+			&--absolute {
+				position: absolute;
+				translate: 0 -50%;
+			}
+
+			.wp-admin & {
+				position: absolute;
+				translate: 0 0;
+				bottom: 0;
+			}
 		}
 
-		&--absolute {
-			position: absolute;
-			translate: 0 -50%;
+		&__image {
+			width: core-functions-v3.fluidSize(var(--image-size), 'static');
 		}
-
-		.wp-admin & {
-			position: absolute;
-			translate: 0 0;
-			bottom: 0;
-		}
-	}
-
-	&__image {
-		width: core-functions-v3.fluidSize(var(--image-size), 'static');
 	}
 }
