@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Site Copyright Notice</title>
+		<link rel="stylesheet" href="../../public/publicBundle.css" />
+	</head>
+
+	<body>
+		<site-copyright-notice-v3
+			id=""
+			class="site-copyright-notice-v3 cmpl-block-settings cmpl-block-padding"
+			data-scopeid=""
+			data-sectionclass=""
+			data-copyright-text="@Total Onion"
+			data-cssload="true"
+			data-eager="false"
+			data-assetkey="site-copyright-notice-v3"
+		>
+		</site-copyright-notice-v3>
+	</body>
+
+	<script type="module">
+		import lazyloader from "../../onion-loader-local.js";
+		lazyloader.options.debugLogMessages = false;
+		lazyloader.lazyloaderInit();
+	</script>
+
+	<template id="site-copyright-notice-v3">
+		<div class="site-copyright-notice-v3__title"></div>
+	</template>
+</html>

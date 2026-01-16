@@ -1,4 +1,4 @@
-{% set contentContainerStyles =  include('components/content-box-settings-v3.twig', { fields, block, blockClassName }, with_context = false) %}
+{# {% set contentContainerStyles =  include('components/content-box-settings-v3.twig', { fields, block, blockClassName }, with_context = false) %}
 <style>
 	.{{blockClassName}}__inner-container.{{block.id}}{
 		{{contentContainerStyles}}
@@ -20,4 +20,4 @@
 		{% endif %}
 		{{ include(path ~ '/' ~ (item.acf_fc_layout|replace({ '_': '-' })) ~ '.twig', { fields: item, block, contentImageSizes, blockClassName, options, nav_menus, cta_styles}, with_context = false, ignore_missing = true) }}
 	{% endfor %}
-</div>
+</div> #}

@@ -32,6 +32,9 @@
 				<span class="{{blockClassName}}__arrow" style="--arrow-colour: {{arrowColour}}"></span>
 			{% endif %}
 		</button>
-		{{htmlEntryPoint}}
+		{% if fields.animations.enable_animations %}
+			{{ include('components/animations-style-v3.twig', { fields, block, blockClassName }, with_context = false) }}
+		{% endif %}
+
 	</section>
 {% endif %}

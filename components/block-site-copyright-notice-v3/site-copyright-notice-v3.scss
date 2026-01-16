@@ -3,7 +3,7 @@
 @use '../../breakpoints';
 
 .site-copyright-notice-v3 {
-	color: var(--site-copyright-notice-colour);
+	color: var(--site-copyright-notice-colour, black);
 	font-size: core-functions-v3.fontSize(
 		var(--site-copyright-font-size-mobile, 14px)
 	);

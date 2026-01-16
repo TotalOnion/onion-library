@@ -14,6 +14,8 @@
 {% set imageAspectRatioPortrait = '--image-aspect-ratio-portrait:' ~ field.image_aspect_ratio_portrait ~ ';' %}
 {% set imageAspectRatioMobile = '--image-aspect-ratio-mobile:' ~ field.image_aspect_ratio_mobile ~ ';' %}
 {% set imageFitStyle = '--image-fit-style:' ~ (field.image_fit_style|ru|default('contain')) ~ ';' %}
+{% set linkToAssociatedPost = field.link_to_associated_post %}
+
 {% set styleVars = imageWidthPercentDesktop ~ imageWidthPercentMobile ~ imageWidthPercentMobilePx ~ imageWidthPercentDesktopPx ~ imageAspectRatioDesktop ~ imageAspectRatioPortrait ~ imageAspectRatioMobile ~ imageFitStyle %}
 <style>
 	.{{blockClassName}}__post-image-container.{{block.id}}{
@@ -22,7 +24,8 @@
 		{{positionVars}}
 	}
 </style>
-<a aria-label="{{post.title}}" href="{{post.link}}" data-pattern-post-info="link" data-image-select="{{ imageSelect }}" class="{{blockClassName}}__post-image-container {{blockClassName}}__info-item {{blockClassName}}__info-item--{{postType}} {{blockClassName}}__post-image-container--{{imageSelect|replace({'_':'-'})}} {{block.id}}">
+<a aria-label="{{post.title}}" href="{{linkToAssociatedPost ? get_post(post.associated_post).link : post.link}}" data-pattern-post-info="link" data-image-select="{{ imageSelect }}" class="{{blockClassName}}__post-image-container {{blockClassName}}__info-item {{blockClassName}}__info-item--{{postType}} {{blockClassName}}__post-image-container--{{imageSelect|replace({'_':'-'})}} {{block.id}}">
+
 	{% set imageSizes = imageSizes|default('(min-width: 1440px) 50vw, (min-width: 768px) 50vw, (min-width: 500px) 50vw, 100vw') %}
 	{% set imageFields = [] %}
 	{% set imageFields = imageFields|merge({'enable_image' : true}) %}
@@ -33,7 +36,9 @@
 	{% elseif attribute(post, 'post_image') %}
 		{% set imageFields = imageFields|merge({'image' : attribute(post, 'post_image')}) %}
 	{% endif %}
-	{{ include('components/single-image.twig', {
+	{% set imageFields = imageFields|merge({'enable_image' : true}) %}
+	{% set imageFields = imageFields|merge({'desktop_image' : imageFields.image}) %}
+	{{ include('components/responsive-image-v3.twig', {
 		fields: imageFields,
 		block: block,
 		blockClassName: imageClassname,

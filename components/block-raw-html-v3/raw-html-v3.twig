@@ -10,5 +10,8 @@
 {{previewEntryPoint}}
 <section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" style="{{sectionStyles}}" data-assetkey="{{blockClassName}}">
 	{{fields.code}}
-	{{htmlEntryPoint}}
+	{% if fields.animations.enable_animations %}
+		{{ include('components/animations-style-v3.twig', { fields, block, blockClassName }, with_context = false) }}
+	{% endif %}
+
 </section>

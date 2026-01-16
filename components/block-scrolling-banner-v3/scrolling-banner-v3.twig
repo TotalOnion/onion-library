@@ -65,4 +65,8 @@
 			</div>
 		</div>
 	{% endif %}
+	{% if fields.animations.enable_animations %}
+		{{ include('components/animations-style-v3.twig', { fields, block, blockClassName }, with_context = false) }}
+	{% endif %}
+
 </section>

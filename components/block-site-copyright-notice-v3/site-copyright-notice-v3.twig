@@ -12,19 +12,19 @@
 {% set sectionStyles =  styleEntryPoint ~ siteCopyrightColour ~ siteCopyrightFontSizeDesktop ~ siteCopyrightFontSizePortrait ~ siteCopyrightFontSizeMobile %}
 
 <style>
-	.{{blockClassName}}.{{block.id}}{
+	.site-copyright-notice-v3.{{block.id}}{
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" data-pattern-site-copyright-notice data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="site-copyright-notice-v3 {{fields.section_class}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-jsload="false" data-blockid="{{block.id}}" data-pattern-site-copyright-notice data-assetkey="site-copyright-notice-v3">
 
 	{% if fields.enable_site_copyright_notice %}
 		<div
-			class="{{blockClassName}}__title">
+			class="site-copyright-notice-v3__title">
 			<!-- site-copyright-notice -->
 			{{options.site_copyright_notice_v3|default('@Total Onion')}}
 			<!-- end-site-copyright-notice -->
 		</div>
 	{% endif %}
-	{{htmlEntryPoint}}
+
 </section>

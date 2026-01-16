@@ -18,7 +18,6 @@
 	},
 	"homepage": "https://github.com/TotalOnion/onion-library#readme",
 	"dependencies": {
-		"@total_onion/onion-loader": "^1.0.10",
 		"@total_onion/onion-modalcontroller": "^1.0.5",
 		"@total_onion/onion-utils": "^1.0.10",
 		"@total_onion/onion-videocontroller": "^1.0.2",
