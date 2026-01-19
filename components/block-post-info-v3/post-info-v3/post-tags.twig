@@ -3,7 +3,9 @@
 {% set textEditorContainerClasses = include('components/text-editor-settings-container-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set textEditorElementClasses = include('components/text-editor-settings-element-classes-v3.twig', { fields: field, block, blockClassName, is_preview }, with_context = false) %}
 {% set elementType = field.element_type|ru %}
-{% set numberOfTags = field.number_of_tags %}
+{% if field.number_of_tags %}
+	{% set numberOfTags = field.number_of_tags %}
+{% endif %}
 
 <style>
 	.{{blockClassName}}__post-tags.{{block.id}}{
@@ -14,7 +16,7 @@
 <div class="{{blockClassName}}__post-tags {{blockClassName}}__info-item {{block.id}}">
 	<div class="{{blockClassName}}__cta cmpl-cta-style-{{field.cta_style}}">
 
-		{% for tag in post.tags | slice(0, numberOfTags) %}
+		{% for tag in post.tags|slice(0, numberOfTags) %}
 			{{ tag.name }}
 		{% endfor %}
 
