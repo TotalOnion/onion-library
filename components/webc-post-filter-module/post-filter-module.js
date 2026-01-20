@@ -171,7 +171,7 @@ export default function postfiltermoduleJs(options = {}) {
 						(post) => {
 							return (
 								this.filterState.activefilters.intersection(
-									post.categories
+									new Set(post.categories)
 								).size > 0
 							);
 						}
