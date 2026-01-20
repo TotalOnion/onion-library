@@ -2,43 +2,45 @@
 @use '../../breakpoints';
 
 @mixin coreRootVariablesV3() {
-	body {
-		//Font weights
-		--weight-thin: 100;
-		--weight-extra-light: 200;
-		--weight-light: 300;
-		--weight-medium: 400;
-		--weight-demi-bold: 500;
-		--weight-demi-bold-plus: 600;
-		--weight-bold: 700;
-		--weight-extra-bold: 800;
-		--weight-extra-bold-plus: 900;
-		--default-text-colour-mobile: var(--theme-primary-text-colour);
-		--default-text-colour-desktop: var(--theme-primary-text-colour);
-		// When you are in the WP preview - the screen width var now now needs to match the width of the WP editor preview box.
-		.wp-toolbar & {
-			--screen-width-mobile: 360px;
-			--font-reference-mobile: 360px;
-			--screen-width: 360px;
-			--font-reference: 360px;
-			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-				--screen-width-portrait: 768px;
-				--screen-width-landscape: 768px;
-				--screen-width-desktop: 768px;
-				--screen-width-static: 768px;
-				--screen-width: 768px;
-				--font-reference: 768px;
-			}
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				--screen-width-portrait: 840px;
-				--screen-width-landscape: 840px;
-				--screen-width-desktop: 840px;
-				--screen-width-static: 840px;
-				--screen-width: 840px;
-				--font-reference-portrait: 840px;
-				--font-reference-landscape: 840px;
-				--font-reference-desktop: 840px;
-				--font-reference: 840px;
+	@layer base-styles {
+		body {
+			//Font weights
+			--weight-thin: 100;
+			--weight-extra-light: 200;
+			--weight-light: 300;
+			--weight-medium: 400;
+			--weight-demi-bold: 500;
+			--weight-demi-bold-plus: 600;
+			--weight-bold: 700;
+			--weight-extra-bold: 800;
+			--weight-extra-bold-plus: 900;
+			--default-text-colour-mobile: var(--theme-primary-text-colour);
+			--default-text-colour-desktop: var(--theme-primary-text-colour);
+			// When you are in the WP preview - the screen width var now now needs to match the width of the WP editor preview box.
+			.wp-toolbar & {
+				--screen-width-mobile: 360px;
+				--font-reference-mobile: 360px;
+				--screen-width: 360px;
+				--font-reference: 360px;
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					--screen-width-portrait: 768px;
+					--screen-width-landscape: 768px;
+					--screen-width-desktop: 768px;
+					--screen-width-static: 768px;
+					--screen-width: 768px;
+					--font-reference: 768px;
+				}
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					--screen-width-portrait: 840px;
+					--screen-width-landscape: 840px;
+					--screen-width-desktop: 840px;
+					--screen-width-static: 840px;
+					--screen-width: 840px;
+					--font-reference-portrait: 840px;
+					--font-reference-landscape: 840px;
+					--font-reference-desktop: 840px;
+					--font-reference: 840px;
+				}
 			}
 		}
 	}

@@ -1,0 +1,8 @@
+ptfg-9000 {
+	display: block;
+	background-color: rebeccapurple;
+	--padding-block-multiplier-mobile-top: 1;
+	--padding-inline-multiplier-mobile-right: 1;
+	--padding-block-multiplier-mobile-bottom: 1;
+	--padding-inline-multiplier-mobile-left: 1;
+}

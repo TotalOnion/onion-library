@@ -1,7 +1,11 @@
-@use '../components/fields-core-critical-v3/core-critical-v3';
 @use '../components/fields-core-css-modules-v3/core-css-modules-v3';
 @use '../components/fields-core-root-variables-v3/core-root-variables-v3';
 @use '../components/fields-core-css-sizing-vars-v3/core-css-sizing-vars-v3';
 @use '../components/fields-core-typography-v3/core-typography-v3';
 @use '../components/fields-core-generic-v3/core-generic-v3';
-@use './dynamicBlockScss-v3.scss';
+
+@include core-root-variables-v3.coreRootVariablesV3();
+@include core-css-sizing-vars-v3.coreCssSizingVarsV3();
+@include core-typography-v3.coreTypographyV3();
+@include core-generic-v3.coreGenericV3();
+@include core-css-modules-v3.coreCssModulesV3();

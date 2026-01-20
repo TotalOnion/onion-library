@@ -52,7 +52,7 @@ function lazyloaderInit() {
 	options.debugLogMessages && console.log('Lazy Loader initialized!');
 	options.lazyBlocksToSearchFor = [];
 	assetArray.forEach((asset) => {
-		if (asset.assetKey.includes('-v3')) {
+		if (asset.assetKey.includes('-v3') || asset.assetKey.includes('-v4')) {
 			options.assetMap[asset.assetKey] = {
 				js: () =>
 					import(

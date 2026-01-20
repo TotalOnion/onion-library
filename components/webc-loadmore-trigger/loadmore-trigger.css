@@ -1,0 +1,20 @@
+post-grid-display-module-v4 {
+	--padding-block-multiplier-mobile-top: 1;
+	--padding-inline-multiplier-mobile-right: 1;
+	--padding-block-multiplier-mobile-bottom: 1;
+	--padding-inline-multiplier-mobile-left: 1;
+
+	display: grid;
+	background-color: hotpink;
+	.post-grid-display-module-v4__grid-container {
+		place-self: stretch;
+		display: grid;
+		padding: 10px;
+		gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	}
+	.post-grid-display-module-v4__post-image {
+		width: 100%;
+		height: auto;
+	}
+}

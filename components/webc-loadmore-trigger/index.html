@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../public/publicBundleBase.css" />
+		<link rel="stylesheet" href="./loadmore-trigger.css" />
+		<title>PTFG</title>
+		<style>
+			body {
+				background-color: #e7b8b8;
+			}
+			main {
+				max-width: 600px;
+				margin-inline: auto;
+				padding: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="main-container"></main>
+		<script async type="module">
+			const template = await fetch("./loadmore-trigger.html");
+			const html = await template.text();
+			document.querySelector(".main-container").innerHTML = html;
+			import blockjs from "./loadmore-trigger.js";
+			blockjs();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../public/publicBundleBase.css" />
+		<link rel="stylesheet" href="./ptfg-9000.css" />
+		<link
+			rel="stylesheet"
+			href="../webc-post-filter-module/post-filter-module.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../webc-post-grid-display-module/post-grid-display-module.css"
+		/>
+		<title>PTFG</title>
+	</head>
+	<body>
+		<ptfg-9000
+			class="ptfg-9000 ptfg-9000__main-container cmpl-block-padding"
+			data-dev="true"
+			data-assetkey="ptfg-9000"
+		>
+		</ptfg-9000>
+
+		<script type="module">
+			const postgriddisplay = await fetch(
+				"../webc-post-filter-module/post-filter-module.html"
+			);
+			const postgriddisplayhtml = await postgriddisplay.text();
+			document
+				.querySelector("ptfg-9000")
+				.insertAdjacentHTML("beforeend", postgriddisplayhtml);
+
+			const postfiltermoduletemplate = await fetch(
+				"../webc-post-grid-display-module/post-grid-display-module.html"
+			);
+			const postfiltermodulehtml = await postfiltermoduletemplate.text();
+			document
+				.querySelector("ptfg-9000")
+				.insertAdjacentHTML("beforeend", postfiltermodulehtml);
+
+			import blockfilterjs from "../webc-post-filter-module/post-filter-module.js";
+			blockfilterjs();
+			import blockgridjs from "../webc-post-grid-display-module/post-grid-display-module.js";
+			blockgridjs();
+			import blockptfgjs from "./ptfg-9000.js";
+			blockptfgjs();
+		</script>
+	</body>
+</html>

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const {globSync} = require('glob');
 
-const dynamicEntryPoints = globSync(`./components/block-*/*-v3.js`).map(
+const dynamicEntryPoints = globSync(`./components/block-*/*-v{3,4}.js`).map(
 	(filePath) => {
 		const assetKey = path.basename(filePath, '.js');
 		return assetKey;
