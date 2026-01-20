@@ -7,46 +7,34 @@ export default function postfiltermoduleJs(options = {}) {
 					super();
 					this.enableLogs = this.dataset.enablelogs;
 					this.filterState = {
-						allposts: new Set(),
-						filteredposts: new Set(),
+						allposts: [],
+						filteredposts: [],
 						activefilters: new Set(),
+						allcategories: [],
+						groupingcategories: [],
+						filtercategories: [],
 						setActiveFilters: function (newState) {
 							Object.assign(this.filterState, newState);
-							this.dispatchEvent(
-								new CustomEvent('activefilters-updated')
-							);
+							this.filterPosts.bind(this)();
 						},
 						setFilteredPosts: function (newState) {
 							Object.assign(this.filterState, newState);
 							this.dispatchEvent(
 								new CustomEvent('filteredposts-updated')
 							);
+							console.log('filter state: ', this.filterState);
 						}
 					};
 					this.filterCategoriesDisplay = this.querySelector(
 						'.post-filter-module__filter-categories-display'
 					);
 
-					if (this.dataset.enableclear) {
-						this.filterCategoriesDisplay.insertAdjacentHTML(
-							'beforeend',
-							`<button class="post-filter-module__clear-filters-button">Clear Filters</button>`
-						);
-						this.clearFiltersButton = this.querySelector(
-							'.post-filter-module__clear-filters-button'
-						);
-						this.clearFiltersButton.addEventListener(
-							'click',
-							this.clearFilters.bind(this)
-						);
-					}
-					this.setStateButton = this.querySelector(
-						'.post-filter-module__set-state-button'
+					this.clearFiltersButton = this.querySelector(
+						'.post-filter-module__clear-filters-button'
 					);
-
-					this.addEventListener(
-						'activefilters-updated',
-						this.filterPosts.bind(this)
+					this.clearFiltersButton.addEventListener(
+						'click',
+						this.clearFilters.bind(this)
 					);
 					this.devMode = this.dataset.dev;
 					this.devModeContent = this.dataset.devcontent;
@@ -59,18 +47,76 @@ export default function postfiltermoduleJs(options = {}) {
 					}
 					this.filterState.allposts =
 						data[`devContent${this.devModeContent}`];
-					this.filterState.categories = data[`devContentCategories`];
-					this.filterState.categories.forEach((category) => {
-						if (category.parentid) {
-							this.filterCategoriesDisplay.insertAdjacentHTML(
-								'beforeend',
-								`<button class="post-filter-module__category-button" data-categoryid="${category.id}">${category.name}</button>`
-							);
-						}
-					});
+
+					this.filterState.allcategories =
+						data[`devContentCategories`];
+
+					if (this.filterState.allcategories.length > 0) {
+						this.filterState.allcategories.forEach((category) => {
+							if (category.parentid != null) {
+								this.filterState.filtercategories.push(
+									category
+								);
+							} else {
+								this.filterState.groupingcategories.push(
+									category
+								);
+							}
+						});
+					}
+					if (this.filterState.groupingcategories.length > 0) {
+						this.filterState.groupingcategories.forEach(
+							(category) => {
+								const groupCategoryContainer =
+									document.createElement('div');
+								groupCategoryContainer.className =
+									'post-filter-module__grouping-category-container';
+								groupCategoryContainer.insertAdjacentHTML(
+									'beforeend',
+									`<button class="post-filter-module__grouping-category-button" data-categoryid="${category.id}">${category.name}</button>`
+								);
+								const filterCategoryContainer =
+									document.createElement('div');
+								filterCategoryContainer.className =
+									'post-filter-module__filter-category-container';
+								const groupedFilters =
+									this.filterState.filtercategories.filter(
+										(filtercat) => {
+											return (
+												filtercat.parentid ==
+												category.id
+											);
+										}
+									);
+								groupedFilters.forEach((filter) => {
+									filterCategoryContainer.insertAdjacentHTML(
+										'beforeend',
+										`<button class="post-filter-module__filter-category-button" data-categoryid="${filter.id}">${filter.name}</button>`
+									);
+								});
+								groupCategoryContainer.appendChild(
+									filterCategoryContainer
+								);
+								this.filterCategoriesDisplay.appendChild(
+									groupCategoryContainer
+								);
+							}
+						);
+					} else {
+						this.filterState.filtercategories.forEach(
+							(category) => {
+								if (category.parentid) {
+									this.filterCategoriesDisplay.insertAdjacentHTML(
+										'beforeend',
+										`<button class="post-filter-module__filter-category-button" data-categoryid="${category.id}">${category.name}</button>`
+									);
+								}
+							}
+						);
+					}
 
 					this.categorybuttons = this.querySelectorAll(
-						'.post-filter-module__category-button'
+						'.post-filter-module__filter-category-button'
 					);
 
 					this.categorybuttons.forEach((button) => {
@@ -83,6 +129,7 @@ export default function postfiltermoduleJs(options = {}) {
 								const newActiveFilters = new Set(
 									this.filterState.activefilters
 								);
+								button.classList.remove('active-cat');
 								newActiveFilters.delete(
 									Number(button.dataset.categoryid)
 								);
@@ -93,6 +140,7 @@ export default function postfiltermoduleJs(options = {}) {
 								const newActiveFilters = new Set(
 									this.filterState.activefilters
 								);
+								button.classList.add('active-cat');
 								newActiveFilters.add(
 									Number(button.dataset.categoryid)
 								);
@@ -105,7 +153,6 @@ export default function postfiltermoduleJs(options = {}) {
 					this.filterState.setFilteredPosts.bind(this)({
 						filteredposts: this.filterState.allposts
 					});
-
 					this.classList.add('loaded');
 				}
 
@@ -135,6 +182,9 @@ export default function postfiltermoduleJs(options = {}) {
 					});
 				}
 				clearFilters(event) {
+					this.categorybuttons.forEach((button) => {
+						button.classList.remove('active-cat');
+					});
 					this.filterState.setActiveFilters.bind(this)({
 						activefilters: new Set()
 					});

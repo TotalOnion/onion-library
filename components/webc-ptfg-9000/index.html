@@ -24,21 +24,21 @@
 		</ptfg-9000>
 
 		<script type="module">
-			const postgriddisplay = await fetch(
-				"../webc-post-filter-module/post-filter-module.html"
-			);
-			const postgriddisplayhtml = await postgriddisplay.text();
-			document
-				.querySelector("ptfg-9000")
-				.insertAdjacentHTML("beforeend", postgriddisplayhtml);
-
 			const postfiltermoduletemplate = await fetch(
-				"../webc-post-grid-display-module/post-grid-display-module.html"
+				"../webc-post-filter-module/post-filter-module.html"
 			);
 			const postfiltermodulehtml = await postfiltermoduletemplate.text();
 			document
 				.querySelector("ptfg-9000")
 				.insertAdjacentHTML("beforeend", postfiltermodulehtml);
+
+			const postgriddisplay = await fetch(
+				"../webc-post-grid-display-module/post-grid-display-module.html"
+			);
+			const postgriddisplayhtml = await postgriddisplay.text();
+			document
+				.querySelector("ptfg-9000")
+				.insertAdjacentHTML("beforeend", postgriddisplayhtml);
 
 			import blockfilterjs from "../webc-post-filter-module/post-filter-module.js";
 			blockfilterjs();
