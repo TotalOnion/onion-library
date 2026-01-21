@@ -22,7 +22,11 @@ export default function postfiltermoduleJs(options = {}) {
 							this.dispatchEvent(
 								new CustomEvent('filteredposts-updated')
 							);
-							console.log('filter state: ', this.filterState);
+							this.enableLogs &&
+								console.log(
+									'🚀 filter state: ',
+									this.filterState
+								);
 						}
 					};
 					this.filterCategoriesDisplay = this.querySelector(
@@ -50,8 +54,8 @@ export default function postfiltermoduleJs(options = {}) {
 						this.filterState.allcategories =
 							data[`devContentCategories`];
 					} else {
-						data = globalThis[this.dataset.objectid];
-						console.log('🚀 ~ connectedCallback ~ data:', data);
+						data = globalThis[this.dataset.dataobjectid];
+						this.enableLogs && console.log('🚀 dataobject: ', data);
 						this.filterState.allposts = data[`posts`];
 						this.filterState.allcategories = data[`categories`];
 					}
