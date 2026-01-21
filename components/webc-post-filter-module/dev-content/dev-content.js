@@ -1,12 +1,16 @@
 import ramsesImage from './ramses-tired.jpeg';
 import kaiImage from './kai.jpeg';
+import kaiSelfie from './kai-selfie.jpeg';
 import mrBusinessImage from './mr-business-doing-work.jpeg';
 import amberImage from './amber.jpg';
 import blueyImage from './bluey.jpg';
 import ramsesKittenImage from './ramses-kitten.jpeg';
 import luluMadImage from './lulu-mad.jpg';
+import luluSerious from './lulu-serious.jpg';
 import peteBath from './pete-bath.jpeg';
 import skyLivingLarge from './sky-field.jpeg';
+import skySecurity from './sky-field.jpeg';
+import skyLuxury from './sky-luxury.jpeg';
 import fatGigioSleepy from './fat-gigio-sleepy.png';
 import fatGigioKitten from './fat-gigio-kitten.png';
 import peteDinosaur from './pete-dinosaur.jpeg';
@@ -138,13 +142,49 @@ export const devContentPets = [
 			post_image_src: vanillePartyDress
 		},
 
-		categories: [14, 10, 5]
+		categories: [14, 10, 4]
 	},
 	{
 		name: 'Fat Gigio Kitten',
 		link: '#',
 		images: {
 			post_image_src: fatGigioKitten
+		},
+
+		categories: [12, 10, 5]
+	},
+	{
+		name: 'Sky Security Corps',
+		link: '#',
+		images: {
+			post_image_src: skySecurity
+		},
+
+		categories: [12, 10, 4]
+	},
+	{
+		name: 'Sky Luxury',
+		link: '#',
+		images: {
+			post_image_src: skyLuxury
+		},
+
+		categories: [12, 10, 4]
+	},
+	{
+		name: 'Kai Selfie',
+		link: '#',
+		images: {
+			post_image_src: kaiSelfie
+		},
+
+		categories: [12, 10, 5]
+	},
+	{
+		name: 'Lulu gets serious',
+		link: '#',
+		images: {
+			post_image_src: luluSerious
 		},
 
 		categories: [12, 10, 5]
