@@ -11,12 +11,12 @@ import fatGigioSleepy from './fat-gigio-sleepy.png';
 import fatGigioKitten from './fat-gigio-kitten.png';
 import peteDinosaur from './pete-dinosaur.jpeg';
 import peteWork from './pete-at-work.jpeg';
-import vanillePartyDress from './vanille-party-dress.jpeg';
-import vanillePuppyFace from './vanille-puppy-face.jpeg';
+import vanillePartyDress from './vanille-party.jpeg';
+import vanillePuppyFace from './vanille-puppy.jpeg';
 
 export const devContentPets = [
 	{
-		name: 'Tired Ramses',
+		name: 'Ramses Big Yawn',
 		link: '#',
 		images: {
 			post_image_src: ramsesImage
@@ -24,7 +24,7 @@ export const devContentPets = [
 		categories: [13, 3, 10]
 	},
 	{
-		name: 'Kai',
+		name: 'Kai sees a ghost',
 		link: '#',
 		images: {
 			post_image_src: kaiImage
@@ -33,7 +33,7 @@ export const devContentPets = [
 		categories: [12, 2, 10]
 	},
 	{
-		name: 'Mr Business',
+		name: 'Mr Business doing Business',
 		link: '#',
 		images: {
 			post_image_src: mrBusinessImage
@@ -42,7 +42,7 @@ export const devContentPets = [
 		categories: [13, 3, 9]
 	},
 	{
-		name: 'Amber',
+		name: 'Amber Posing',
 		link: '#',
 		images: {
 			post_image_src: amberImage
@@ -96,7 +96,7 @@ export const devContentPets = [
 		categories: [13, 10, 4]
 	},
 	{
-		name: 'Pete the Dinosaur',
+		name: 'Dinosaur Pete',
 		link: '#',
 		images: {
 			post_image_src: peteDinosaur
@@ -105,7 +105,7 @@ export const devContentPets = [
 		categories: [13, 10, 4]
 	},
 	{
-		name: 'Fat Gigio Sleepy',
+		name: 'Cutie Fat Gigio',
 		link: '#',
 		images: {
 			post_image_src: fatGigioSleepy
@@ -123,7 +123,7 @@ export const devContentPets = [
 		categories: [14, 10, 5]
 	},
 	{
-		name: 'Pete at Work',
+		name: 'Pete the Consultant',
 		link: '#',
 		images: {
 			post_image_src: peteWork
