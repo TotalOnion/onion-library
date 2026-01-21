@@ -8,6 +8,7 @@ import ramsesKittenImage from './ramses-kitten.jpeg';
 import luluMadImage from './lulu-mad.jpg';
 import luluSerious from './lulu-serious.jpg';
 import peteBath from './pete-bath.jpeg';
+import peteLawn from './pete-lawn.jpeg';
 import skyLivingLarge from './sky-field.jpeg';
 import skySecurity from './sky-field.jpeg';
 import skyLuxury from './sky-luxury.jpeg';
@@ -46,16 +47,16 @@ export const devContentPets = [
 		categories: [13, 3, 9]
 	},
 	{
-		name: 'Amber Posing',
+		name: 'Waking up Amber',
 		link: '#',
 		images: {
 			post_image_src: amberImage
 		},
 
-		categories: [13, 4, 10]
+		categories: [13, 5, 10]
 	},
 	{
-		name: 'Bluey',
+		name: 'Bluey on the move',
 		link: '#',
 		images: {
 			post_image_src: blueyImage
@@ -188,12 +189,21 @@ export const devContentPets = [
 		},
 
 		categories: [12, 10, 5]
+	},
+	{
+		name: 'Pete rules her lawn',
+		link: '#',
+		images: {
+			post_image_src: peteLawn
+		},
+
+		categories: [13, 10, 4]
 	}
 ];
 
 export const devContentCategories = [
 	{name: 'Mood', id: '6', parentid: '0'},
-	{name: 'Angry', id: '1', parentid: '6'},
+	{name: 'Happy', id: '1', parentid: '6'},
 	{name: 'Frightened', id: '2', parentid: '6'},
 	{name: 'Sleepy', id: '3', parentid: '6'},
 	{name: 'Active', id: '4', parentid: '6'},
