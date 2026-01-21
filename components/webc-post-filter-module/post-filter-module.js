@@ -29,10 +29,28 @@ export default function postfiltermoduleJs(options = {}) {
 								);
 						}
 					};
+
+					const postFilterContainer = document.createElement('div');
+					postFilterContainer.className =
+						'post-filter-module__filter-container';
+					this.appendChild(postFilterContainer);
+					this.postFilterContainer = this.querySelector(
+						'.post-filter-module__filter-container'
+					);
+
+					const postFilterCatsDisplay = document.createElement('div');
+					postFilterCatsDisplay.className =
+						'post-filter-module__filter-categories-display';
+					this.postFilterContainer.appendChild(postFilterCatsDisplay);
 					this.filterCategoriesDisplay = this.querySelector(
 						'.post-filter-module__filter-categories-display'
 					);
 
+					const clearFilters = document.createElement('button');
+					clearFilters.className =
+						'post-filter-module__clear-filters-button';
+					clearFilters.innerText = 'Clear Filters';
+					this.postFilterContainer.appendChild(clearFilters);
 					this.clearFiltersButton = this.querySelector(
 						'.post-filter-module__clear-filters-button'
 					);
@@ -40,6 +58,7 @@ export default function postfiltermoduleJs(options = {}) {
 						'click',
 						this.clearFilters.bind(this)
 					);
+
 					this.devMode = this.dataset.dev;
 					this.devModeContent = this.dataset.devcontent;
 				}
