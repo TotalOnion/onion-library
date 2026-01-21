@@ -1,6 +1,7 @@
 import ramsesImage from './ramses-tired.jpeg';
 import kaiImage from './kai.jpeg';
 import kaiSelfie from './kai-selfie.jpeg';
+import kaiLounging from './kai-lounging.jpeg';
 import mrBusinessImage from './mr-business-doing-work.jpeg';
 import amberImage from './amber.jpg';
 import blueyImage from './bluey.jpg';
@@ -10,7 +11,7 @@ import luluSerious from './lulu-serious.jpg';
 import peteBath from './pete-bath.jpeg';
 import peteLawn from './pete-lawn.jpeg';
 import skyLivingLarge from './sky-field.jpeg';
-import skySecurity from './sky-field.jpeg';
+import skySecurity from './sky-security.jpeg';
 import skyLuxury from './sky-luxury.jpeg';
 import fatGigioSleepy from './fat-gigio-sleepy.png';
 import fatGigioKitten from './fat-gigio-kitten.png';
@@ -195,6 +196,15 @@ export const devContentPets = [
 		link: '#',
 		images: {
 			post_image_src: peteLawn
+		},
+
+		categories: [13, 10, 4]
+	},
+	{
+		name: 'Kai takes it easy',
+		link: '#',
+		images: {
+			post_image_src: kaiLounging
 		},
 
 		categories: [13, 10, 4]
