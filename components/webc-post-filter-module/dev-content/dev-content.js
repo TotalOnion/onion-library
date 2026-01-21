@@ -1,68 +1,169 @@
-export const devContentDogz = [
+import ramsesImage from './ramses-tired.jpeg';
+import kaiImage from './kai.jpeg';
+import mrBusinessImage from './mr-business-doing-work.jpeg';
+import amberImage from './amber.jpg';
+import blueyImage from './bluey.jpg';
+import ramsesKittenImage from './ramses-kitten.jpeg';
+import luluMadImage from './lulu-mad.jpg';
+import peteBath from './pete-bath.jpeg';
+import skyLivingLarge from './sky-field.jpeg';
+import fatGigioSleepy from './fat-gigio-sleepy.png';
+import fatGigioKitten from './fat-gigio-kitten.png';
+import peteDinosaur from './pete-dinosaur.jpeg';
+import peteWork from './pete-at-work.jpeg';
+import vanillePartyDress from './vanille-party-dress.jpeg';
+import vanillePuppyFace from './vanille-puppy-face.jpeg';
+
+export const devContentPets = [
 	{
-		postname: 'Puppy-1',
-		'post-link': '#',
-		'image-src': 'https://place-puppy.com/puppy/y:100/x:100',
-		categories: [1, 5]
+		name: 'Tired Ramses',
+		link: '#',
+		images: {
+			post_image_src: ramsesImage
+		},
+		categories: [13, 3, 10]
 	},
 	{
-		postname: 'Puppy-2',
-		'post-link': '#',
-		'image-src': 'https://place-puppy.com/puppy/y:100/x:100',
+		name: 'Kai',
+		link: '#',
+		images: {
+			post_image_src: kaiImage
+		},
 
-		categories: new Set([2])
+		categories: [12, 2, 10]
 	},
 	{
-		postname: 'Puppy-3',
-		'post-link': '#',
-		'image-src': 'https://place-puppy.com/puppy/y:100/x:100',
+		name: 'Mr Business',
+		link: '#',
+		images: {
+			post_image_src: mrBusinessImage
+		},
 
-		categories: new Set([1, 3])
+		categories: [13, 3, 9]
 	},
 	{
-		postname: 'Puppy-4',
-		'post-link': '#',
-		'image-src': 'https://place-puppy.com/puppy/y:100/x:100',
+		name: 'Amber',
+		link: '#',
+		images: {
+			post_image_src: amberImage
+		},
 
-		categories: new Set([4])
-	}
-];
-
-export const devContentCatz = [
-	{
-		postname: 'Catz-1',
-		'post-link': '#',
-		'image-src': 'https://placekittens.com/g/200/300',
-		categories: [1, 5]
+		categories: [13, 4, 10]
 	},
 	{
-		postname: 'Catz-2',
-		'post-link': '#',
-		'image-src': 'https://placekittens.com/g/200/300',
+		name: 'Bluey',
+		link: '#',
+		images: {
+			post_image_src: blueyImage
+		},
 
-		categories: [2]
+		categories: [2, 13, 8]
 	},
 	{
-		postname: 'Catz-3',
-		'post-link': '#',
-		'image-src': 'https://placekittens.com/g/200/300',
+		name: 'Kitten Ramses',
+		link: '#',
+		images: {
+			post_image_src: ramsesKittenImage
+		},
 
-		categories: [1, 3]
+		categories: [12, 2, 10]
 	},
 	{
-		postname: 'Catz-4',
-		'post-link': '#',
-		'image-src': 'https://placekittens.com/g/200/300',
+		name: 'Mad Face Lulu',
+		link: '#',
+		images: {
+			post_image_src: luluMadImage
+		},
 
-		categories: [4]
+		categories: [14, 10, 5]
+	},
+	{
+		name: 'Pete having a Bath',
+		link: '#',
+		images: {
+			post_image_src: peteBath
+		},
+
+		categories: [13, 10, 5]
+	},
+	{
+		name: 'Sky living large',
+		link: '#',
+		images: {
+			post_image_src: skyLivingLarge
+		},
+
+		categories: [13, 10, 4]
+	},
+	{
+		name: 'Pete the Dinosaur',
+		link: '#',
+		images: {
+			post_image_src: peteDinosaur
+		},
+
+		categories: [13, 10, 4]
+	},
+	{
+		name: 'Fat Gigio Sleepy',
+		link: '#',
+		images: {
+			post_image_src: fatGigioSleepy
+		},
+
+		categories: [13, 10, 5]
+	},
+	{
+		name: 'Puppy eyes Vanille',
+		link: '#',
+		images: {
+			post_image_src: vanillePuppyFace
+		},
+
+		categories: [14, 10, 5]
+	},
+	{
+		name: 'Pete at Work',
+		link: '#',
+		images: {
+			post_image_src: peteWork
+		},
+
+		categories: [12, 10, 4]
+	},
+	{
+		name: 'Party Dress Vanille',
+		link: '#',
+		images: {
+			post_image_src: vanillePartyDress
+		},
+
+		categories: [14, 10, 5]
+	},
+	{
+		name: 'Fat Gigio Kitten',
+		link: '#',
+		images: {
+			post_image_src: fatGigioKitten
+		},
+
+		categories: [12, 10, 5]
 	}
 ];
 
 export const devContentCategories = [
-	{name: 'grumpy', id: '1', parentid: '6'},
-	{name: 'fluffy', id: '2', parentid: '6'},
-	{name: 'happy', id: '3', parentid: '6'},
-	{name: 'sleepy', id: '4', parentid: '6'},
-	{name: 'sweet', id: '5', parentid: '6'},
-	{name: 'hounds', id: '6', parentid: null}
+	{name: 'Mood', id: '6', parentid: '0'},
+	{name: 'Angry', id: '1', parentid: '6'},
+	{name: 'Frightened', id: '2', parentid: '6'},
+	{name: 'Sleepy', id: '3', parentid: '6'},
+	{name: 'Active', id: '4', parentid: '6'},
+	{name: 'Chilled', id: '5', parentid: '6'},
+	{name: 'Limbs', id: '7', parentid: '0'},
+	{name: 'Two', id: '8', parentid: '7'},
+	{name: 'Three', id: '9', parentid: '7'},
+	{name: 'Four', id: '10', parentid: '7'},
+	{name: 'Age', id: '11', parentid: '0'},
+	{name: 'Baby', id: '12', parentid: '11'},
+	{name: 'Adult', id: '13', parentid: '11'},
+	{name: 'Vintage', id: '14', parentid: '11'}
 ];

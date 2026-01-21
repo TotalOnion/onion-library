@@ -1,9 +1,4 @@
 post-grid-display-module {
-	--padding-block-multiplier-mobile-top: 1;
-	--padding-inline-multiplier-mobile-right: 1;
-	--padding-block-multiplier-mobile-bottom: 1;
-	--padding-inline-multiplier-mobile-left: 1;
-
 	display: grid;
 	background-color: hotpink;
 	.post-grid-display-module__grid-container {
@@ -15,6 +10,7 @@ post-grid-display-module {
 	}
 	.post-grid-display-module__post-image {
 		width: 100%;
-		height: auto;
+		height: 100%;
+		object-fit: cover;
 	}
 }

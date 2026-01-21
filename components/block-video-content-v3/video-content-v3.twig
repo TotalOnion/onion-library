@@ -72,9 +72,9 @@
 		{% set muted = fields.muted %}
 		{% set lockVideoAspectToImage = fields.lock_video_aspect_to_image ? 'lock-video-aspect-to-image' : '' %}
 		{% set setVideoToCover = fields.set_video_to_cover ? 'set-video-to-cover' : '' %}
+		{% set videoId = block.videoIdPrefix ~ fields.video_trigger_id %}
 		{% set captionsEnabled = fields.enable_captions|default(false) %}
 		{% set captions = fields.captions %}
-		{% set videoId = block.videoIdPrefix ~ fields.video_trigger_id %}
 		{% set captionsFile = fields.captions.0.captions_file %}
 		{% set noAudioCaptions = fields.enable_no_audio_captions %}
 

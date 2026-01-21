@@ -1,4 +1,4 @@
-export default function posttypefiltergridJs(options = {}) {
+export default function ptfg9000js(options = {}) {
 	try {
 		const {block} = options;
 
@@ -17,6 +17,8 @@ export default function posttypefiltergridJs(options = {}) {
 						this.filterModule.addEventListener(
 							'filteredposts-updated',
 							() => {
+								console.log('Filters updated!');
+
 								this.displayModule.dataset.posts =
 									JSON.stringify(
 										this.filterModule.filterState

@@ -42,18 +42,23 @@ export default function postfiltermoduleJs(options = {}) {
 				async connectedCallback() {
 					console.log('Filter Module element added to page.');
 					let data;
-					if (this.devMode) {
+					if (this.devMode == 'true') {
 						data = await import('./dev-content/dev-content.js');
-					}
-					this.filterState.allposts =
-						data[`devContent${this.devModeContent}`];
+						this.filterState.allposts =
+							data[`devContent${this.devModeContent}`];
 
-					this.filterState.allcategories =
-						data[`devContentCategories`];
+						this.filterState.allcategories =
+							data[`devContentCategories`];
+					} else {
+						data = globalThis[this.dataset.objectid];
+						console.log('🚀 ~ connectedCallback ~ data:', data);
+						this.filterState.allposts = data[`posts`];
+						this.filterState.allcategories = data[`categories`];
+					}
 
 					if (this.filterState.allcategories.length > 0) {
 						this.filterState.allcategories.forEach((category) => {
-							if (category.parentid != null) {
+							if (category.parentid != '0') {
 								this.filterState.filtercategories.push(
 									category
 								);

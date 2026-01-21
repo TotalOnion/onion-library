@@ -20,8 +20,13 @@ export default function postFilterDisplayJS(options = {}) {
 					this.gridContainer.innerHTML = '';
 					if (newValue) {
 						const posts = JSON.parse(newValue);
+
 						posts.forEach((post) => {
-							const postContent = `<div class="post-grid-display-module__post-container"><h2>${post.postname}</h2><img class="post-grid-display-module__post-image" src="${post['image-src']}" alt="${post.postname}"></div>`;
+							console.log(
+								'🚀 ~ attributeChangedCallback ~ post:',
+								post
+							);
+							const postContent = `<div class="post-grid-display-module__post-container"><h2>${post.name}</h2><img class="post-grid-display-module__post-image" src="${post?.images?.post_image_src}" alt="${post.name}"></div>`;
 							this.gridContainer.insertAdjacentHTML(
 								'beforeend',
 								postContent
