@@ -12,7 +12,7 @@ import peteBath from './pete-bath.webp';
 import peteLawn from './pete-lawn.webp';
 import skyLivingLarge from './sky-field.webp';
 import skySecurity from './sky-security.webp';
-import skyLuxury from './sky-luxury.webp';
+import skyLuxury from './sky-luxury-2.webp';
 import fatGigioSleepy from './fat-gigio-sleepy.webp';
 import fatGigioKitten from './fat-gigio-kitten.webp';
 import peteDinosaur from './pete-dinosaur.webp';
