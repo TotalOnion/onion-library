@@ -15,7 +15,9 @@
 		<div class="{{ blockClassName }}__inner">
 			<div class="{{ blockClassName }}__wrapper">
 				{% if fields.title %}
-					{{ fields.title }}
+					<div class="{{ blockClassName }}__title-container">
+						{{ fields.title }}
+					</div>
 				{% endif %}
 				<!-- inline-form -->
 				{{function('do_shortcode', '[cdbform id=' ~ fields.form ~ ']')}}
