@@ -1,7 +1,5 @@
 export default function ptfg9000js(options = {}) {
 	try {
-		const {block} = options;
-
 		customElements.define(
 			'ptfg-9000',
 			class extends HTMLElement {

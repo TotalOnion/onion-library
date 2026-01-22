@@ -3,6 +3,7 @@ import kaiImage from './kai.webp';
 import kaiSelfie from './kai-selfie.webp';
 import kaiLounging from './kai-lounging.webp';
 import mrBusinessImage from './mr-business-doing-work.webp';
+import mrBusinessOnTop from './mr-business-on-top.webp';
 import amberImage from './amber.webp';
 import blueyImage from './bluey.webp';
 import ramsesKittenImage from './ramses-kitten.webp';
@@ -15,6 +16,7 @@ import skySecurity from './sky-security.webp';
 import skyLuxury from './sky-luxury-2.webp';
 import fatGigioSleepy from './fat-gigio-sleepy.webp';
 import fatGigioKitten from './fat-gigio-kitten.webp';
+import fatGigioBasket from './fat-gigio-basket-life.webp';
 import peteDinosaur from './pete-dinosaur.webp';
 import peteWork from './pete-at-work.webp';
 import vanillePartyDress from './vanille-party.webp';
@@ -23,7 +25,7 @@ import vanillePuppyFace from './vanille-puppy.webp';
 export const devContentPets = [
 	{
 		name: 'Ramses Big Yawn',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: ramsesImage
 		},
@@ -31,7 +33,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Kai sees a ghost',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: kaiImage
 		},
@@ -40,7 +42,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Mr Business doing Business',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: mrBusinessImage
 		},
@@ -49,7 +51,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Waking up Amber',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: amberImage
 		},
@@ -57,17 +59,8 @@ export const devContentPets = [
 		categories: [13, 5, 10]
 	},
 	{
-		name: 'Bluey on the move',
-		link: '#',
-		images: {
-			post_image_src: blueyImage
-		},
-
-		categories: [2, 13, 8]
-	},
-	{
 		name: 'Kitten Ramses',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: ramsesKittenImage
 		},
@@ -76,7 +69,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Mad Face Lulu',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: luluMadImage
 		},
@@ -85,7 +78,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Pete having a Bath',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: peteBath
 		},
@@ -94,7 +87,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Sky living large',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: skyLivingLarge
 		},
@@ -103,7 +96,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Dinosaur Pete',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: peteDinosaur
 		},
@@ -111,17 +104,8 @@ export const devContentPets = [
 		categories: [13, 10, 4]
 	},
 	{
-		name: 'Cutie Fat Gigio',
-		link: '#',
-		images: {
-			post_image_src: fatGigioSleepy
-		},
-
-		categories: [13, 10, 5]
-	},
-	{
 		name: 'Puppy eyes Vanille',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanillePuppyFace
 		},
@@ -129,8 +113,17 @@ export const devContentPets = [
 		categories: [14, 10, 5]
 	},
 	{
+		name: 'Cutie Fat Gigio',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: fatGigioSleepy
+		},
+
+		categories: [13, 10, 5]
+	},
+	{
 		name: 'Pete the Consultant',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: peteWork
 		},
@@ -138,8 +131,17 @@ export const devContentPets = [
 		categories: [12, 10, 4]
 	},
 	{
+		name: 'Bluey on the move',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: blueyImage
+		},
+
+		categories: [2, 13, 8]
+	},
+	{
 		name: 'Party Dress Vanille',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanillePartyDress
 		},
@@ -148,7 +150,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Fat Gigio Kitten',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: fatGigioKitten
 		},
@@ -157,7 +159,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Sky Security Corps',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: skySecurity
 		},
@@ -165,17 +167,8 @@ export const devContentPets = [
 		categories: [12, 10, 4]
 	},
 	{
-		name: 'Sky Luxury',
-		link: '#',
-		images: {
-			post_image_src: skyLuxury
-		},
-
-		categories: [12, 10, 4]
-	},
-	{
 		name: 'Kai Selfie',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: kaiSelfie
 		},
@@ -184,7 +177,7 @@ export const devContentPets = [
 	},
 	{
 		name: 'Lulu gets serious',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: luluSerious
 		},
@@ -192,8 +185,17 @@ export const devContentPets = [
 		categories: [12, 10, 5]
 	},
 	{
+		name: 'Sky Luxury',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: skyLuxury
+		},
+
+		categories: [12, 10, 4]
+	},
+	{
 		name: 'Pete rules her lawn',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: peteLawn
 		},
@@ -202,12 +204,30 @@ export const devContentPets = [
 	},
 	{
 		name: 'Kai takes it easy',
-		link: '#',
+		link: 'https://totalonion.com',
 		images: {
 			post_image_src: kaiLounging
 		},
 
 		categories: [13, 10, 4]
+	},
+	{
+		name: 'Fat Gigio Basket Life',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: fatGigioBasket
+		},
+
+		categories: [13, 10, 5, 1]
+	},
+	{
+		name: 'Mr Business On Top',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: fatGigioBasket
+		},
+
+		categories: [13, 10, 5, 1]
 	}
 ];
 
@@ -215,7 +235,7 @@ export const devContentCategories = [
 	{name: 'Mood', id: '6', parentid: '0'},
 	{name: 'Happy', id: '1', parentid: '6'},
 	{name: 'Frightened', id: '2', parentid: '6'},
-	{name: 'Sleepy', id: '3', parentid: '6'},
+	{name: 'Thoughtful', id: '3', parentid: '6'},
 	{name: 'Active', id: '4', parentid: '6'},
 	{name: 'Chilled', id: '5', parentid: '6'},
 	{name: 'Limbs', id: '7', parentid: '0'},

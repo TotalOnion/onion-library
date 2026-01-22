@@ -1,4 +1,4 @@
-{# {% set videoEnabled = fields.enable_video %}
+{% set videoEnabled = fields.enable_video %}
 {% set renderDynamic = fields.child_pattern_settings.render_dynamic|default(0) %}
 {% set videoPlayingZindexClass = fields.video_playing_high_z_index ? 'video-playing--high-z-index' : '' %}
 {% if videoEnabled %}
@@ -87,4 +87,4 @@
 			{% endif %}
 		</div>
 	</div>
-{% endif %} #}
+{% endif %}
