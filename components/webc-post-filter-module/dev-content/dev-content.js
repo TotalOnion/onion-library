@@ -14,6 +14,8 @@ import peteLawn from './pete-lawn.webp';
 import skyLivingLarge from './sky-field.webp';
 import skySecurity from './sky-security.webp';
 import skyLuxury from './sky-luxury-2.webp';
+import skyPuppyGood from './sky-puppy-good-dog.webp';
+import skyPuppyPose from './sky-puppy-pose.webp';
 import fatGigioSleepy from './fat-gigio-sleepy.webp';
 import fatGigioKitten from './fat-gigio-kitten.webp';
 import fatGigioBasket from './fat-gigio-basket-life.webp';
@@ -62,6 +64,15 @@ export const devContentPets = [
 		},
 
 		categories: [13, 5, 10, 1]
+	},
+	{
+		name: 'Sky Puppy Pose',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: skyPuppyPose
+		},
+
+		categories: [12, 10, 4, 1]
 	},
 	{
 		name: 'Kitten Ramses',
@@ -152,6 +163,15 @@ export const devContentPets = [
 		},
 
 		categories: [14, 10, 4, 1]
+	},
+	{
+		name: 'Sky Puppy Good Dog',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: skyPuppyGood
+		},
+
+		categories: [12, 10, 4, 1]
 	},
 	{
 		name: 'Fat Gigio Kitten',

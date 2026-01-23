@@ -17,6 +17,10 @@ const peteLawn = '../webc-post-filter-module/dev-content/pete-lawn.webp';
 const skyLivingLarge = '../webc-post-filter-module/dev-content/sky-field.webp';
 const skySecurity = '../webc-post-filter-module/dev-content/sky-security.webp';
 const skyLuxury = '../webc-post-filter-module/dev-content/sky-luxury-2.webp';
+const skyPuppyGood =
+	'../webc-post-filter-module/dev-content/sky-puppy-good-dog.webp';
+const skyPuppyPose =
+	'../webc-post-filter-module/dev-content/sky-puppy-pose.webp';
 const fatGigioSleepy =
 	'../webc-post-filter-module/dev-content/fat-gigio-sleepy.webp';
 const fatGigioKitten =
@@ -73,6 +77,15 @@ export const devContentPets = [
 		},
 
 		categories: [13, 5, 10, 1]
+	},
+	{
+		name: 'Sky Puppy Pose',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: skyPuppyPose
+		},
+
+		categories: [12, 10, 4, 1]
 	},
 	{
 		name: 'Kitten Ramses',
@@ -163,6 +176,15 @@ export const devContentPets = [
 		},
 
 		categories: [14, 10, 4, 1]
+	},
+	{
+		name: 'Sky Puppy Good Dog',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: skyPuppyGood
+		},
+
+		categories: [12, 10, 4, 1]
 	},
 	{
 		name: 'Fat Gigio Kitten',
