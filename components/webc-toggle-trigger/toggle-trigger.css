@@ -1,7 +1,10 @@
 toggle-trigger {
 	display: block;
-	appearance: none;
-	border: gold;
-	color: white;
-	background-color: black;
+	.toggle-trigger__button {
+		display: block;
+		appearance: none;
+		color: var(--theme-primary-text-colour, white);
+		border: 1px solid transparent;
+		background-color: var(--theme-primary-background-colour, black);
+	}
 }

@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../../public/publicBundleBase.css" />
 		<link rel="stylesheet" href="./ptfg-9000.css" />
+		<link rel="stylesheet" href="../webc-toggle-trigger/toggle-trigger.css" />
 		<link
 			rel="stylesheet"
 			href="../webc-post-filter-module/post-filter-module.css"
@@ -20,29 +21,74 @@
 			class="ptfg-9000 ptfg-9000__main-container cmpl-block-padding"
 			data-assetkey="ptfg-9000"
 		>
+			<post-filter-module
+				id="filter-module"
+				data-dataobjectid=""
+				data-dev="true"
+				data-devdatalocation="local"
+				class="post-filter-module__filter"
+			>	<toggle-trigger
+				id="toggle-trigger"
+				data-toggletext="Toggle Text"
+				data-toggletarget="#filter-module"
+				data-toggleclass="active"
+				class="toggle-trigger"
+			>
+			</post-filter-module>
+			<toggle-trigger
+				id="toggle-trigger"
+				data-toggletext="Toggle Text"
+				data-toggletarget="#filter-module"
+				data-toggleclass="active"
+				class="toggle-trigger"
+			>
+			</toggle-trigger>
+			<post-grid-display-module
+				id="display-module"
+				data-posts=""
+				class="post-grid-display-module cmpl-block-padding cmpl-block-settings"
+			>
+			</post-grid-display-module>
 		</ptfg-9000>
 
 		<script type="module">
-			const postfiltermoduletemplate = await fetch(
-				"../webc-post-filter-module/post-filter-module.html"
-			);
-			const postfiltermodulehtml = await postfiltermoduletemplate.text();
-			document
-				.querySelector("ptfg-9000")
-				.insertAdjacentHTML("beforeend", postfiltermodulehtml);
+			// Post filter module
+			// const postfiltermoduletemplate = await fetch(
+			// 	"../webc-post-filter-module/post-filter-module.html"
+			// );
+			// const postfiltermodulehtml = await postfiltermoduletemplate.text();
+			// document
+			// 	.querySelector("ptfg-9000")
+			// 	.insertAdjacentHTML("beforeend", postfiltermodulehtml);
 
-			const postgriddisplay = await fetch(
-				"../webc-post-grid-display-module/post-grid-display-module.html"
-			);
-			const postgriddisplayhtml = await postgriddisplay.text();
-			document
-				.querySelector("ptfg-9000")
-				.insertAdjacentHTML("beforeend", postgriddisplayhtml);
+			//toggle trigger
+			// const toggletrigger = await fetch(
+			// 	"../webc-toggle-trigger/toggle-trigger.html"
+			// );
+			// const toggletriggerhtml = await toggletrigger.text();
+			// document
+			// 	.querySelector("ptfg-9000")
+			// 	.insertAdjacentHTML("beforeend", toggletriggerhtml);
 
+			//post grid display
+			// const postgriddisplay = await fetch(
+			// 	"../webc-post-grid-display-module/post-grid-display-module.html"
+			// );
+			// const postgriddisplayhtml = await postgriddisplay.text();
+			// document
+			// 	.querySelector("ptfg-9000")
+			// 	.insertAdjacentHTML("beforeend", postgriddisplayhtml);
+
+			//Run Component JS
 			import blockfilterjs from "../webc-post-filter-module/post-filter-module.js";
 			blockfilterjs();
+
+			import toggletriggerjs from "../webc-toggle-trigger/toggle-trigger.js";
+			toggletriggerjs();
+
 			import blockgridjs from "../webc-post-grid-display-module/post-grid-display-module.js";
 			blockgridjs();
+
 			import blockptfgjs from "./ptfg-9000.js";
 			blockptfgjs();
 		</script>

@@ -1,26 +1,35 @@
-import ramsesImage from './ramses-tired.webp';
-import kaiImage from './kai.webp';
-import kaiSelfie from './kai-selfie.webp';
-import kaiLounging from './kai-lounging.webp';
-import mrBusinessImage from './mr-business-doing-work.webp';
-import mrBusinessOnTop from './mr-business-on-top.webp';
-import amberImage from './amber.webp';
-import blueyImage from './bluey.webp';
-import ramsesKittenImage from './ramses-kitten.webp';
-import luluMadImage from './lulu-mad.webp';
-import luluSerious from './lulu-serious.webp';
-import peteBath from './pete-bath.webp';
-import peteLawn from './pete-lawn.webp';
-import skyLivingLarge from './sky-field.webp';
-import skySecurity from './sky-security.webp';
-import skyLuxury from './sky-luxury-2.webp';
-import fatGigioSleepy from './fat-gigio-sleepy.webp';
-import fatGigioKitten from './fat-gigio-kitten.webp';
-import fatGigioBasket from './fat-gigio-basket-life.webp';
-import peteDinosaur from './pete-dinosaur.webp';
-import peteWork from './pete-at-work.webp';
-import vanillePartyDress from './vanille-party.webp';
-import vanillePuppyFace from './vanille-puppy.webp';
+const ramsesImage = '../webc-post-filter-module/dev-content/ramses-tired.webp';
+const kaiImage = '../webc-post-filter-module/dev-content/kai.webp';
+const kaiSelfie = '../webc-post-filter-module/dev-content/kai-selfie.webp';
+const kaiLounging = '../webc-post-filter-module/dev-content/kai-lounging.webp';
+const mrBusinessImage =
+	'../webc-post-filter-module/dev-content/mr-business-doing-work.webp';
+const mrBusinessOnTop =
+	'../webc-post-filter-module/dev-content/mr-business-on-top.webp';
+const amberImage = '../webc-post-filter-module/dev-content/amber.webp';
+const blueyImage = '../webc-post-filter-module/dev-content/bluey.webp';
+const ramsesKittenImage =
+	'../webc-post-filter-module/dev-content/ramses-kitten.webp';
+const luluMadImage = '../webc-post-filter-module/dev-content/lulu-mad.webp';
+const luluSerious = '../webc-post-filter-module/dev-content/lulu-serious.webp';
+const peteBath = '../webc-post-filter-module/dev-content/pete-bath.webp';
+const peteLawn = '../webc-post-filter-module/dev-content/pete-lawn.webp';
+const skyLivingLarge = '../webc-post-filter-module/dev-content/sky-field.webp';
+const skySecurity = '../webc-post-filter-module/dev-content/sky-security.webp';
+const skyLuxury = '../webc-post-filter-module/dev-content/sky-luxury-2.webp';
+const fatGigioSleepy =
+	'../webc-post-filter-module/dev-content/fat-gigio-sleepy.webp';
+const fatGigioKitten =
+	'../webc-post-filter-module/dev-content/fat-gigio-kitten.webp';
+const fatGigioBasket =
+	'../webc-post-filter-module/dev-content/fat-gigio-basket-life.webp';
+const peteDinosaur =
+	'../webc-post-filter-module/dev-content/pete-dinosaur.webp';
+const peteWork = '../webc-post-filter-module/dev-content/pete-at-work.webp';
+const vanillePartyDress =
+	'../webc-post-filter-module/dev-content/vanille-party.webp';
+const vanillePuppyFace =
+	'../webc-post-filter-module/dev-content/vanille-puppy.webp';
 
 export const devContentPets = [
 	{
