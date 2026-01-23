@@ -11,17 +11,25 @@ export default function toggletriggerJs(options = {}) {
 						this.toggleButton.className = 'toggle-trigger__button';
 						this.appendChild(this.toggleButton);
 						this.toggleButton.innerText = this.dataset.toggletext;
+						this.toggleClass = this.dataset.toggleclass;
 						this.toggleTarget = document.querySelector(
 							this.dataset.toggletarget
 						);
-						this.toggleClass = this.dataset.toggleclass;
+						this.toggleButton.addEventListener('click', () => {
+							this.toggleTarget.classList.toggle(
+								this.toggleClass
+							);
+						});
+
 						document.body.addEventListener('click', (e) => {
 							if (
 								(this.toggleTarget.classList.contains(
 									this.toggleClass
 								) &&
 									!this.toggleTarget.contains(e.target)) ||
-								e.target == this.querySelector('button')
+								e.target.classList.contains(
+									'toggle-trigger__button'
+								)
 							) {
 								this.toggleTarget.classList.toggle(
 									this.toggleClass
