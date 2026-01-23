@@ -34,7 +34,7 @@ export const devContentPets = [
 		images: {
 			post_image_src: ramsesImage
 		},
-		categories: [13, 3, 10]
+		categories: [13, 3, 10, 5]
 	},
 	{
 		name: 'Kai sees a ghost',
@@ -43,7 +43,7 @@ export const devContentPets = [
 			post_image_src: kaiImage
 		},
 
-		categories: [12, 2, 10]
+		categories: [12, 2, 10, 4]
 	},
 	{
 		name: 'Mr Business doing Business',
@@ -52,7 +52,7 @@ export const devContentPets = [
 			post_image_src: mrBusinessImage
 		},
 
-		categories: [13, 3, 9]
+		categories: [13, 3, 9, 4]
 	},
 	{
 		name: 'Waking up Amber',
@@ -61,7 +61,7 @@ export const devContentPets = [
 			post_image_src: amberImage
 		},
 
-		categories: [13, 5, 10]
+		categories: [13, 5, 10, 1]
 	},
 	{
 		name: 'Kitten Ramses',
@@ -70,7 +70,7 @@ export const devContentPets = [
 			post_image_src: ramsesKittenImage
 		},
 
-		categories: [12, 2, 10]
+		categories: [12, 2, 10, 4]
 	},
 	{
 		name: 'Mad Face Lulu',
@@ -79,7 +79,7 @@ export const devContentPets = [
 			post_image_src: luluMadImage
 		},
 
-		categories: [14, 10, 5]
+		categories: [14, 10, 5, 1]
 	},
 	{
 		name: 'Pete having a Bath',
@@ -88,7 +88,7 @@ export const devContentPets = [
 			post_image_src: peteBath
 		},
 
-		categories: [13, 10, 5]
+		categories: [13, 10, 5, 1]
 	},
 	{
 		name: 'Sky living large',
@@ -97,7 +97,7 @@ export const devContentPets = [
 			post_image_src: skyLivingLarge
 		},
 
-		categories: [13, 10, 4]
+		categories: [13, 10, 4, 1]
 	},
 	{
 		name: 'Dinosaur Pete',
@@ -106,7 +106,7 @@ export const devContentPets = [
 			post_image_src: peteDinosaur
 		},
 
-		categories: [13, 10, 4]
+		categories: [13, 10, 4, 1]
 	},
 	{
 		name: 'Puppy eyes Vanille',
@@ -115,7 +115,7 @@ export const devContentPets = [
 			post_image_src: vanillePuppyFace
 		},
 
-		categories: [14, 10, 5]
+		categories: [14, 10, 5, 3]
 	},
 	{
 		name: 'Cutie Fat Gigio',
@@ -124,7 +124,7 @@ export const devContentPets = [
 			post_image_src: fatGigioSleepy
 		},
 
-		categories: [13, 10, 5]
+		categories: [13, 10, 5, 1]
 	},
 	{
 		name: 'Pete the Consultant',
@@ -133,7 +133,7 @@ export const devContentPets = [
 			post_image_src: peteWork
 		},
 
-		categories: [12, 10, 4]
+		categories: [13, 10, 4, 3]
 	},
 	{
 		name: 'Bluey on the move',
@@ -151,7 +151,7 @@ export const devContentPets = [
 			post_image_src: vanillePartyDress
 		},
 
-		categories: [14, 10, 4]
+		categories: [14, 10, 4, 1]
 	},
 	{
 		name: 'Fat Gigio Kitten',
@@ -160,7 +160,7 @@ export const devContentPets = [
 			post_image_src: fatGigioKitten
 		},
 
-		categories: [12, 10, 5]
+		categories: [12, 10, 5, 1]
 	},
 	{
 		name: 'Sky Security Corps',
@@ -169,7 +169,7 @@ export const devContentPets = [
 			post_image_src: skySecurity
 		},
 
-		categories: [12, 10, 4]
+		categories: [12, 10, 4, 1]
 	},
 	{
 		name: 'Kai Selfie',
@@ -178,7 +178,7 @@ export const devContentPets = [
 			post_image_src: kaiSelfie
 		},
 
-		categories: [12, 10, 5]
+		categories: [12, 10, 5, 3]
 	},
 	{
 		name: 'Lulu gets serious',
@@ -187,16 +187,16 @@ export const devContentPets = [
 			post_image_src: luluSerious
 		},
 
-		categories: [12, 10, 5]
+		categories: [14, 10, 5, 3]
 	},
 	{
-		name: 'Sky Luxury',
+		name: 'Sky Luxury suite',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: skyLuxury
 		},
 
-		categories: [12, 10, 4]
+		categories: [12, 10, 5, 1]
 	},
 	{
 		name: 'Pete rules her lawn',
@@ -205,7 +205,7 @@ export const devContentPets = [
 			post_image_src: peteLawn
 		},
 
-		categories: [13, 10, 4]
+		categories: [13, 10, 4, 1]
 	},
 	{
 		name: 'Kai takes it easy',
@@ -214,7 +214,7 @@ export const devContentPets = [
 			post_image_src: kaiLounging
 		},
 
-		categories: [13, 10, 4]
+		categories: [13, 10, 5, 1]
 	},
 	{
 		name: 'Vanille having a nap',
@@ -223,7 +223,7 @@ export const devContentPets = [
 			post_image_src: vanilleNap
 		},
 
-		categories: [14, 10, 5]
+		categories: [14, 10, 5, 1]
 	},
 	{
 		name: 'Fat Gigio Basket Life',
@@ -241,7 +241,7 @@ export const devContentPets = [
 			post_image_src: mrBusinessOnTop
 		},
 
-		categories: [13, 10, 5, 1]
+		categories: [13, 9, 5, 1]
 	},
 	{
 		name: 'Peanut is watching you',
@@ -250,7 +250,7 @@ export const devContentPets = [
 			post_image_src: peanutEye
 		},
 
-		categories: [13, 10, 5]
+		categories: [13, 10, 5, 3]
 	},
 	{
 		name: 'Max on the Mat',
@@ -259,7 +259,7 @@ export const devContentPets = [
 			post_image_src: maxOnMat
 		},
 
-		categories: [13, 10, 5]
+		categories: [13, 10, 5, 1]
 	},
 	{
 		name: 'Martha on the Mat',
@@ -268,16 +268,16 @@ export const devContentPets = [
 			post_image_src: marthaOnMat
 		},
 
-		categories: [13, 10, 5]
+		categories: [13, 9, 5, 1]
 	},
 	{
-		name: 'Vanille likes Bass',
+		name: 'Vanille only likes Bass',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanilleBass
 		},
 
-		categories: [14, 10, 5]
+		categories: [14, 10, 4, 1]
 	}
 ];
 
