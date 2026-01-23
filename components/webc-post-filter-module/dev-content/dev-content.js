@@ -20,7 +20,12 @@ import fatGigioBasket from './fat-gigio-basket-life.webp';
 import peteDinosaur from './pete-dinosaur.webp';
 import peteWork from './pete-at-work.webp';
 import vanillePartyDress from './vanille-party.webp';
-import vanillePuppyFace from './vanille-puppy.webp';
+import vanillePuppyFace from './vanille-puppy-eyes.webp';
+import peanutEye from './peanut-keeping-an-eye.webp';
+import maxOnMat from './max-on-the-mat.webp';
+import marthaOnMat from './martha-on-the-mat.webp';
+import vanilleBass from './vanille-bass.webp';
+import vanilleNap from './vanille-asleep.webp';
 
 export const devContentPets = [
 	{
@@ -212,6 +217,15 @@ export const devContentPets = [
 		categories: [13, 10, 4]
 	},
 	{
+		name: 'Vanille having a nap',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: vanilleNap
+		},
+
+		categories: [14, 10, 5]
+	},
+	{
 		name: 'Fat Gigio Basket Life',
 		link: 'https://totalonion.com',
 		images: {
@@ -228,6 +242,42 @@ export const devContentPets = [
 		},
 
 		categories: [13, 10, 5, 1]
+	},
+	{
+		name: 'Peanut is watching you',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: peanutEye
+		},
+
+		categories: [13, 10, 5]
+	},
+	{
+		name: 'Max on the Mat',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: maxOnMat
+		},
+
+		categories: [13, 10, 5]
+	},
+	{
+		name: 'Martha on the Mat',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: marthaOnMat
+		},
+
+		categories: [13, 10, 5]
+	},
+	{
+		name: 'Vanille likes Bass',
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: vanilleBass
+		},
+
+		categories: [14, 10, 5]
 	}
 ];
 
