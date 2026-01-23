@@ -291,7 +291,7 @@ export const devContentPets = [
 		categories: [13, 9, 5, 1]
 	},
 	{
-		name: 'Vanille only likes Bass',
+		name: 'Vanille prefers the Bass woofer',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanilleBass
