@@ -93,7 +93,7 @@ export const devContentPets = [
 		categories: [14, 10, 5, 1]
 	},
 	{
-		name: 'Pete having a Bath',
+		name: 'Pete having a Bath/Drink',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: peteBath
