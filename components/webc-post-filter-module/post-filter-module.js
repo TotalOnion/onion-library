@@ -31,6 +31,10 @@ export default function postfiltermoduleJs(options = {}) {
 							}
 						};
 
+						this.loadMoreTriggers = document.querySelectorAll(
+							`.${this.loadmoretriggerclass}`
+						);
+
 						const postFilterContainer =
 							document.createElement('div');
 						postFilterContainer.className =
@@ -54,7 +58,8 @@ export default function postfiltermoduleJs(options = {}) {
 						const clearFilters = document.createElement('button');
 						clearFilters.className =
 							'post-filter-module__clear-filters-button';
-						clearFilters.innerText = 'Clear Filters';
+						clearFilters.innerText =
+							this.dataset.clearfilterstext || 'Clear Filters';
 						this.postFilterContainer.appendChild(clearFilters);
 						this.clearFiltersButton = this.querySelector(
 							'.post-filter-module__clear-filters-button'
@@ -76,10 +81,6 @@ export default function postfiltermoduleJs(options = {}) {
 						) {
 							const devdatalocation =
 								this.dataset.devdatalocation;
-							console.log(
-								'🚀 ~ connectedCallback ~ devdatalocation:',
-								devdatalocation
-							);
 							data = await import(
 								`./dev-content/dev-content${devdatalocation}.js`
 							);
@@ -164,7 +165,6 @@ export default function postfiltermoduleJs(options = {}) {
 						this.categorybuttons = this.querySelectorAll(
 							'.post-filter-module__filter-category-button'
 						);
-
 						this.categorybuttons.forEach((button) => {
 							button.addEventListener('click', () => {
 								if (
@@ -202,6 +202,42 @@ export default function postfiltermoduleJs(options = {}) {
 						});
 						this.filterState.setFilteredPosts.bind(this)({
 							filteredposts: this.filterState.allposts
+						});
+						const groupingButtons = this.querySelectorAll(
+							'.post-filter-module__grouping-category-button'
+						);
+						const categoryContainers = this.querySelectorAll(
+							'.post-filter-module__filter-category-container'
+						);
+						groupingButtons.forEach((button) => {
+							button.addEventListener('click', () => {
+								const container =
+									button.parentElement.querySelector(
+										'.post-filter-module__filter-category-container'
+									);
+								if (button.classList.contains('active')) {
+									button.classList.remove('active');
+									container.classList.remove('active');
+									container.style.height = '0px';
+								} else {
+									groupingButtons.forEach((btn) => {
+										btn.classList.remove('active');
+									});
+									categoryContainers.forEach(
+										(categoryContainer) => {
+											categoryContainer.style.height =
+												'0px';
+											categoryContainer.classList.remove(
+												'active'
+											);
+										}
+									);
+									container.style.height =
+										container.scrollHeight + 'px';
+									button.classList.add('active');
+									container.classList.add('active');
+								}
+							});
 						});
 						this.classList.add('loaded');
 					}

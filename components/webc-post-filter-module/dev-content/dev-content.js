@@ -120,7 +120,7 @@ export const devContentPets = [
 		categories: [13, 10, 4, 1]
 	},
 	{
-		name: 'Puppy eyes Vanille',
+		name: 'Is it dinner time? Vanille',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanillePuppyFace
@@ -189,7 +189,7 @@ export const devContentPets = [
 			post_image_src: skySecurity
 		},
 
-		categories: [12, 10, 4, 1]
+		categories: [13, 10, 4, 3]
 	},
 	{
 		name: 'Kai Selfie',
@@ -216,7 +216,7 @@ export const devContentPets = [
 			post_image_src: skyLuxury
 		},
 
-		categories: [12, 10, 5, 1]
+		categories: [13, 10, 5, 1]
 	},
 	{
 		name: 'Pete rules her lawn',
@@ -237,13 +237,13 @@ export const devContentPets = [
 		categories: [13, 10, 5, 1]
 	},
 	{
-		name: 'Vanille having a nap',
+		name: 'Vanille hard day',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanilleNap
 		},
 
-		categories: [14, 10, 5, 1]
+		categories: [14, 10, 5]
 	},
 	{
 		name: 'Fat Gigio Basket Life',
@@ -291,7 +291,7 @@ export const devContentPets = [
 		categories: [13, 9, 5, 1]
 	},
 	{
-		name: 'Vanille prefers the Bass woofer',
+		name: 'Vanille likes woofers',
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanilleBass

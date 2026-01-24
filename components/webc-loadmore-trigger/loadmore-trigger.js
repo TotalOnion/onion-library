@@ -9,9 +9,13 @@ export default function loadmoreTriggerJs(options = {}) {
 						super();
 						this.enableLogs = this.dataset.enablelogs;
 						this.toggleButton = document.createElement('button');
-						this.toggleButton.className = 'loadmore-trigger';
+						this.toggleButton.className =
+							'loadmore-trigger__button';
 						this.appendChild(this.toggleButton);
-						this.toggleButton.innerText = this.dataset.toggletext;
+						this.toggleButton.innerText = this.dataset.buttontext;
+						this.toggleButton.addEventListener('click', () => {
+							this.dispatchEvent(new CustomEvent('loadmore'));
+						});
 					}
 					connectedCallback() {
 						console.log('Display module added to page.');
