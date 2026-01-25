@@ -4,9 +4,11 @@
 
 @mixin responsiveImage() {
 	&__picture {
+		margin: auto;
 		width: var(--image-width-mobile, 100%);
 		grid-area: var(--image-grid-area, main);
 		position: var(--image-position, relative);
+		translate: var(--image-offset-horiz) var(--image-offset-vert);
 		inset: 0;
 		min-height: 0;
 		display: flex;
@@ -22,10 +24,9 @@
 	}
 
 	&__image {
-		object-fit: var(--image-fit-style, cover);
 		position: relative;
+		object-fit: var(--image-fit-style, cover);
 		object-position: var(--image-object-position-align);
-		translate: var(--image-offset-horiz) var(--image-offset-vert);
 		opacity: var(--image-opacity, 1);
 		aspect-ratio: var(
 			--image-aspect-ratio-mobile,
