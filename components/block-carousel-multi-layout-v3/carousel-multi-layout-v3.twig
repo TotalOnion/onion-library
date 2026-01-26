@@ -99,9 +99,11 @@
 {% set sectionDataAttributes = dataAttributeEntryPoint ~ centerInsufficientSlidesDesktop ~ centerInsufficientSlidesPortrait ~ centerInsufficientSlidesMobile ~ autoplay ~ freeMode ~ mouseWheel ~ transitionDelay ~ transitionSpeed ~ transitionStyle ~ fractionStyle ~ fractionString ~ mobileSlides ~ tabletSlides ~ desktopSlides ~ desktopFullSlides %}
 
 {{previewEntryPoint}}
+
 <style>
 	.{{blockClassName}}.{{block.id}}{
 		{{sectionStyles}}
+		{{positionVars}}
 	}
 </style>
 
@@ -121,10 +123,11 @@
 				{% endfor %}
 			</div>
 		</div>
+
 		{% set positionVars = include('components/element-positioning-v3.twig', { fields, block, blockClassName, is_preview}, with_context = false) %}
 
 		{% if fields.carousel_pagination %}
-			<div class="swiper-pagination" style="{{positionVars}}"></div>
+			<div class="swiper-pagination"></div>
 		{% endif %}
 		{% if fields.enable_carousel_nav_arrows and fields.enable_custom_arrows == false %}
 			<div class="{{ blockClassName }}__button-prev swiper-button-prev"></div>
