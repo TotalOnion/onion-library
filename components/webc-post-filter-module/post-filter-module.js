@@ -270,6 +270,14 @@ export default function postfiltermoduleJs(options = {}) {
 									numberPosts
 								)
 							});
+							if (
+								this.filterState.allposts.length ==
+								this.filterState.filteredposts.length
+							) {
+								this.loadMoreTriggers.forEach((trigger) => {
+									trigger.classList.add('hide');
+								});
+							}
 							return;
 						}
 
