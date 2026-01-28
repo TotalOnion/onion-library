@@ -14,6 +14,9 @@ export default function postfiltermoduleJs(options = {}) {
 							allcategories: [],
 							groupingcategories: [],
 							filtercategories: [],
+							postsperpagedesktop: 8,
+							postsperpagemobile: 6,
+							pagenumber: 1,
 							setActiveFilters: function (newState) {
 								Object.assign(this.filterState, newState);
 								this.filterPosts.bind(this)();
@@ -31,9 +34,21 @@ export default function postfiltermoduleJs(options = {}) {
 							}
 						};
 
+						this.filterState.postsperpagedesktop =
+							this.dataset.postsperpagedesktop || 8;
+						this.filterState.postsperpagedesktop =
+							this.dataset.postsperpagedesktop || 6;
+
 						this.loadMoreTriggers = document.querySelectorAll(
-							`.${this.loadmoretriggerclass}`
+							`.${this.dataset.loadmoretriggerclass}`
 						);
+						this.loadMoreTriggers.forEach((trigger) => {
+							trigger.addEventListener('loadmore', () => {
+								this.filterState.pagenumber =
+									this.filterState.pagenumber + 1;
+								this.filterPosts();
+							});
+						});
 
 						const postFilterContainer =
 							document.createElement('div');
@@ -200,9 +215,6 @@ export default function postfiltermoduleJs(options = {}) {
 								}
 							});
 						});
-						this.filterState.setFilteredPosts.bind(this)({
-							filteredposts: this.filterState.allposts
-						});
 						const groupingButtons = this.querySelectorAll(
 							'.post-filter-module__grouping-category-button'
 						);
@@ -239,6 +251,8 @@ export default function postfiltermoduleJs(options = {}) {
 								}
 							});
 						});
+						this.filterPosts();
+
 						this.classList.add('loaded');
 					}
 
@@ -247,8 +261,14 @@ export default function postfiltermoduleJs(options = {}) {
 					}
 					filterPosts(event) {
 						if (this.filterState.activefilters.size === 0) {
+							const numberPosts =
+								Number(this.filterState.postsperpagedesktop) *
+								Number(this.filterState.pagenumber);
 							this.filterState.setFilteredPosts.bind(this)({
-								filteredposts: this.filterState.allposts
+								filteredposts: this.filterState.allposts.slice(
+									0,
+									numberPosts
+								)
 							});
 							return;
 						}
