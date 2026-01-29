@@ -1,6 +1,12 @@
 ptfg-9000 {
-	display: block;
-	background-color: rebeccapurple;
+	display: grid;
+	grid-template:
+		'filter ..'
+		'textinput toggleclass'
+		'display display'
+		'loadmore loadmore' / 1fr 1fr;
+	background-color: black;
+
 	--padding-block-multiplier-mobile-top: 1;
 	--padding-inline-multiplier-mobile-right: 1;
 	--padding-block-multiplier-mobile-bottom: 1;

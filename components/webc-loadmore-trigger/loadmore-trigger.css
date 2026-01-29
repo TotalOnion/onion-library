@@ -1,2 +1,20 @@
 loadmore-trigger {
+	grid-area: loadmore;
+	display: grid;
+	width: 100%;
+	place-items: center;
+	.loadmore-trigger__button {
+		background-color: black;
+		padding: 20px;
+		color: var(--theme-primary-text-colour, white);
+		width: max-content;
+	}
+	.loadmore-trigger__button:hover {
+		cursor: pointer;
+		background-color: greenyellow;
+	}
+}
+loadmore-trigger.hide {
+	opacity: 0.3;
+	pointer-events: none;
 }

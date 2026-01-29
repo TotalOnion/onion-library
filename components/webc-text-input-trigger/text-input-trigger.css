@@ -1,0 +1,6 @@
+text-input-trigger {
+	grid-area: textinput;
+	display: grid;
+	width: 100%;
+	place-items: center;
+}

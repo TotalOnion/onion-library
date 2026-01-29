@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="../../public/publicBundleBase.css" />
 		<link rel="stylesheet" href="./ptfg-9000.css" />
 		<link rel="stylesheet" href="../webc-toggle-trigger/toggle-trigger.css" />
+		<link rel="stylesheet" href="../webc-text-input-trigger/text-input-trigger.css" />
+		<link rel="stylesheet" href="../webc-loadmore-trigger/loadmore-trigger.css" />
 		<link
 			rel="stylesheet"
 			href="../webc-post-filter-module/post-filter-module.css"
@@ -27,64 +29,42 @@
 				data-dev="true"
 				data-devdatalocation="local"
 				class="post-filter-module__filter"
-			>	<toggle-trigger
-				id="toggle-trigger"
-				data-toggletext="Toggle Text"
-				data-toggletarget="#filter-module"
-				data-toggleclass="active"
-				class="toggle-trigger"
-			>
+				data-postsperpagedesktop="8"
+				data-postsperpagemobile="6"
+				data-loadmoretriggerclass="loadmore-trigger"
+				data-textinputclass="text-input-trigger"
+			>	
+				<toggle-trigger
+					id="toggle-trigger"
+					data-toggletext="Toggle Text"
+					data-toggletarget="#filter-module"
+					data-toggleclass="active"
+					class="toggle-trigger"
+				>
 			</post-filter-module>
-			<toggle-trigger
-				id="toggle-trigger"
-				data-toggletext="Toggle Text"
-				data-toggletarget="#filter-module"
-				data-toggleclass="active"
-				class="toggle-trigger"
-			>
-			</toggle-trigger>
+			<text-input-trigger id="text-input-trigger" class="text-input-trigger"></text-input-trigger>
+			<toggle-trigger id="toggle-trigger" data-toggletext="Filter" data-toggletarget="#filter-module" data-toggleclass="active" class="toggle-trigger"></toggle-trigger>
 			<post-grid-display-module
 				id="display-module"
 				data-posts=""
 				class="post-grid-display-module cmpl-block-padding cmpl-block-settings"
-			>
-			</post-grid-display-module>
+			></post-grid-display-module>
+			<loadmore-trigger id="loadmore-trigger" data-buttontext="Load More" class="loadmore-trigger"></loadmore-trigger>
 		</ptfg-9000>
 
 		<script type="module">
-			// Post filter module
-			// const postfiltermoduletemplate = await fetch(
-			// 	"../webc-post-filter-module/post-filter-module.html"
-			// );
-			// const postfiltermodulehtml = await postfiltermoduletemplate.text();
-			// document
-			// 	.querySelector("ptfg-9000")
-			// 	.insertAdjacentHTML("beforeend", postfiltermodulehtml);
-
-			//toggle trigger
-			// const toggletrigger = await fetch(
-			// 	"../webc-toggle-trigger/toggle-trigger.html"
-			// );
-			// const toggletriggerhtml = await toggletrigger.text();
-			// document
-			// 	.querySelector("ptfg-9000")
-			// 	.insertAdjacentHTML("beforeend", toggletriggerhtml);
-
-			//post grid display
-			// const postgriddisplay = await fetch(
-			// 	"../webc-post-grid-display-module/post-grid-display-module.html"
-			// );
-			// const postgriddisplayhtml = await postgriddisplay.text();
-			// document
-			// 	.querySelector("ptfg-9000")
-			// 	.insertAdjacentHTML("beforeend", postgriddisplayhtml);
-
 			//Run Component JS
 			import blockfilterjs from "../webc-post-filter-module/post-filter-module.js";
 			blockfilterjs();
 
 			import toggletriggerjs from "../webc-toggle-trigger/toggle-trigger.js";
 			toggletriggerjs();
+
+			import textInputTrigger from "../webc-text-input-trigger/text-input-trigger.js";
+			textInputTrigger();
+
+			import loadmoreTrigger from "../webc-loadmore-trigger/loadmore-trigger.js";
+			loadmoreTrigger();
 
 			import blockgridjs from "../webc-post-grid-display-module/post-grid-display-module.js";
 			blockgridjs();
@@ -94,3 +74,34 @@
 		</script>
 	</body>
 </html>
+
+
+<!--
+<script type="module">
+	// Post filter module
+	const postfiltermoduletemplate = await fetch(
+		"../webc-post-filter-module/post-filter-module.html"
+	);
+	const postfiltermodulehtml = await postfiltermoduletemplate.text();
+	document
+		.querySelector("ptfg-9000")
+		.insertAdjacentHTML("beforeend", postfiltermodulehtml);
+		// toggle trigger
+	const toggletrigger = await fetch(
+		"../webc-toggle-trigger/toggle-trigger.html"
+	);
+	const toggletriggerhtml = await toggletrigger.text();
+	document
+		.querySelector("ptfg-9000")
+		.insertAdjacentHTML("beforeend", toggletriggerhtml);
+
+	// post grid display
+	const postgriddisplay = await fetch(
+		"../webc-post-grid-display-module/post-grid-display-module.html"
+	);
+	const postgriddisplayhtml = await postgriddisplay.text();
+	document
+		.querySelector("ptfg-9000")
+		.insertAdjacentHTML("beforeend", postgriddisplayhtml);
+
+</script> -->

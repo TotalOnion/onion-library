@@ -4,10 +4,12 @@ export default function postfiltermoduleJs(options = {}) {
 			customElements.define(
 				'post-filter-module',
 				class extends HTMLElement {
+					static observedAttributes = ['data-devcontent'];
 					constructor() {
 						super();
-						this.enableLogs = this.dataset.enablelogs;
+						this.enableLogs = true;
 						this.filterState = {
+							enableLogs: false,
 							allposts: [],
 							filteredposts: [],
 							activefilters: new Set(),
@@ -50,6 +52,40 @@ export default function postfiltermoduleJs(options = {}) {
 							});
 						});
 
+						this.textSearchTriggers = document.querySelectorAll(
+							`.${this.dataset.textinputclass}`
+						);
+
+						this.textSearchTriggers.forEach((trigger) => {
+							trigger.addEventListener('textinput', (e) => {
+								const inputText =
+									e.target.querySelector('input')?.value;
+
+								console.log(
+									'🚀 ~ constructor ~ inputEl:',
+									inputText
+								);
+								this.filterPosts();
+								const searchPosts =
+									this.filterState.filteredposts.filter(
+										(post) => {
+											if (
+												post.name
+													?.toLowerCase()
+													.includes(
+														inputText.toLowerCase()
+													)
+											) {
+												return post;
+											}
+										}
+									);
+
+								this.filterState.setFilteredPosts.bind(this)({
+									filteredposts: searchPosts
+								});
+							});
+						});
 						const postFilterContainer =
 							document.createElement('div');
 						postFilterContainer.className =
@@ -84,31 +120,26 @@ export default function postfiltermoduleJs(options = {}) {
 							this.clearFilters.bind(this)
 						);
 
-						this.devMode = this.dataset.dev;
 						this.devModeContent = this.dataset.devcontent;
 					}
 					async connectedCallback() {
 						console.log('Filter Module element added to page.');
 						let data;
 						if (
-							this.devMode == 'true' ||
-							this.classList.contains('dev-petz') //Easter Egg :D
+							this.dataset.dev === 'true' ||
+							this.dataset.devcontent === 'dev-petz' ||
+							this.classList.contains('dev-pets') //Easter Egg :D
 						) {
-							const devdatalocation =
-								this.dataset.devdatalocation;
-							data = await import(
-								`./dev-content/dev-content${devdatalocation}.js`
-							);
-							this.filterState.allposts = data[`devContentPets`];
-
-							this.filterState.allcategories =
-								data[`devContentCategories`];
+							await this.getDevContent();
 						} else {
 							data = globalThis[this.dataset.dataobjectid];
 							this.enableLogs &&
 								console.log('🚀 dataobject: ', data);
-							this.filterState.allposts = data[`posts`];
-							this.filterState.allcategories = data[`categories`];
+							if (data) {
+								this.filterState.allposts = data[`posts`];
+								this.filterState.allcategories =
+									data[`categories`];
+							}
 						}
 
 						if (this.filterState.allcategories.length > 0) {
@@ -251,15 +282,31 @@ export default function postfiltermoduleJs(options = {}) {
 								}
 							});
 						});
-						this.filterPosts();
 
+						this.filterPosts();
 						this.classList.add('loaded');
 					}
 
 					attributeChangedCallback(name, oldValue, newValue) {
-						// console.log(`Attribute ${name} has changed.`);
+						console.log(`Attribute ${name} has changed.`);
+						if (newValue) {
+							this.getDevContent();
+						}
+					}
+					async getDevContent() {
+						this.enableLogs && console.log('Getting dev content..');
+						const data = await import(
+							`./dev-content/dev-content${this.dataset.devdatalocation}.js`
+						);
+						this.filterState.allposts = data[`devContentPets`];
+						this.filterState.allcategories =
+							data[`devContentCategories`];
+						this.filterPosts();
 					}
 					filterPosts(event) {
+						if (this.filterState.allposts.length == 0) {
+							return;
+						}
 						if (this.filterState.activefilters.size === 0) {
 							const numberPosts =
 								Number(this.filterState.postsperpagedesktop) *
@@ -270,9 +317,10 @@ export default function postfiltermoduleJs(options = {}) {
 									numberPosts
 								)
 							});
+
 							if (
-								this.filterState.allposts.length ==
-								this.filterState.filteredposts.length
+								this.filterState.filteredposts.length >=
+								this.filterState.allposts.length
 							) {
 								this.loadMoreTriggers.forEach((trigger) => {
 									trigger.classList.add('hide');

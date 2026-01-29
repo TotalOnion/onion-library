@@ -1,5 +1,8 @@
 toggle-trigger {
-	display: block;
+	grid-area: toggleclass;
+	display: grid;
+	width: 100%;
+	place-items: center;
 	.toggle-trigger__button {
 		display: block;
 		appearance: none;
