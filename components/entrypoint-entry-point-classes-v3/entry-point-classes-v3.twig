@@ -1,0 +1,12 @@
+{% if fields.animations.enable_animations %}
+	{% set animationClass = 'cmpl-block-animations ' %}
+{% endif %}
+{% if fields.enable_block_padding %}
+	{% set blockPaddingClass = 'cmpl-block-padding ' %}
+{% endif %}
+{% if fields.block_overflow is defined or fields.block_background_colour %}
+	{% set blockSettingsClass = 'cmpl-block-settings ' %}
+{% endif %}
+{% set classString = blockPaddingClass ~ blockSettingsClass ~ animationClass %}
+
+{{classString}}

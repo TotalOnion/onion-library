@@ -1,6 +1,6 @@
 {% set blockClassName = "standard-content-v3" %}
 {% set displaytype = 'grid' %}
-{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields, block }, with_context = false) %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes-v3.twig', { fields, block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields, block, blockClassName, options, cta_styles, environment,  is_preview, nav_menus, imageSizes }, with_context = false) %}
 {% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields, block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
@@ -13,7 +13,8 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{ block.anchor ? 'id=' ~ block.anchor : '' }} class="{{blockClassName}} {{fields.section_class}} {{classNameEntryPoint}} {{ block.id }} lazy-fade" {{dataAttributeEntryPoint}} data-assetkey="{{blockClassName}}">
+<section {{ block.anchor ? 'id=' ~ block.anchor : '' }} class="{{blockClassName}} {{ block.id }} lazy-fade {{fields.section_class}} {{classNameEntryPoint}}" {{dataAttributeEntryPoint}} data-assetkey="{{blockClassName}}">
+
 	{% set contentContainerStyles =  include('components/content-box-settings-v3.twig', { fields, block, blockClassName }, with_context = false) %}
 	<style>
 		.{{blockClassName}}__inner-container.{{block.id}}{
