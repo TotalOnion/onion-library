@@ -1,7 +1,13 @@
 {% set typographicStyle = '' %}
-{% set typographicStyleDesktop = fields.font_size_desktop|ru %}
-{% set typographicStylePortrait = fields.font_size_portrait|ru %}
-{% set typographicStyleMobile = fields.font_size_mobile|ru %}
+{% if typographicStyleDesktop %}
+	{% set typographicStyleDesktop = ' ' ~ fields.font_size_desktop|ru %}
+{% endif %}
+{% if typographicStylePortrait %}
+	{% set typographicStylePortrait = ' ' ~ fields.font_size_portrait|ru %}
+{% endif %}
+{% if typographicStyleMobile %}
+	{% set typographicStyleMobile = ' ' ~ fields.font_size_mobile|ru %}
+{% endif %}
 {% set typographicStyle = fields.typographic_style|ru %}
-{% set styleClasses = typographicStyle  ~ ' ' ~ typographicStyleDesktop  ~ ' ' ~ typographicStylePortrait  ~ ' ' ~ typographicStyleMobile  ~ ' ' ~ textShadowClass %}
+{% set styleClasses = typographicStyle ~ typographicStyleDesktop  ~ typographicStylePortrait  ~ typographicStyleMobile %}
 {{styleClasses}}

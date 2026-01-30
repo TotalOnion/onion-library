@@ -1,9 +1,9 @@
 {% if fields.enable_wysiwyg_decoration %}
-	{% set wysiwygDecorationStyle = blockClassName ~ '__' ~ fields.wysiwyg_decoration_style|ru %}
+	{% set wysiwygDecorationStyle = ' ' ~ blockClassName ~ '__' ~ fields.wysiwyg_decoration_style|ru %}
 {% endif %}
 {% if fields.enable_text_shadow %}
-	{% set textShadowClass = blockClassName ~ "--text-shadow" %}
+	{% set textShadowClass = ' ' ~ blockClassName ~ "--text-shadow" %}
 {% endif %}
-{% set styleClasses = wysiwygDecorationStyle  ~ ' ' ~ textShadowClass ~ ' ' ~ 'cmpl-text-editor-settings' %}
+{% set styleClasses = 'cmpl-text-editor-settings' ~ wysiwygDecorationStyle  ~  textShadowClass %}
 
 {{styleClasses}}
