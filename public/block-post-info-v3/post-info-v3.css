@@ -1104,6 +1104,18 @@
   rotate: 0deg;
   rotate: var(--element-rotation-mobile, 0deg);
 }
+@media screen and (min-width: 768px) {
+  .post-info-v3__post-image-container--image-accent img,
+  .post-info-v3__post-image-container--image-accent svg {
+    align-self: var(--portrait-vertical-placement, var(--desktop-vertical-placement));
+    justify-self: var(--portrait-horizontal-placement, var(--desktop-horizontal-placement));
+    place-self: var(--portrait-vertical-placement, var(--desktop-vertical-placement)) var(--portrait-horizontal-placement, var(--desktop-horizontal-placement));
+    translate: 0 0;
+    translate: var(--element-horizontal-offset-portrait, var(--element-horizontal-offset-desktop, 0)) var(--element-vertical-offset-portrait, var(--element-vertical-offset-desktop, 0));
+    rotate: 0deg;
+    rotate: var(--element-rotation-portrait, var(--element-rotation-desktop, 0deg));
+  }
+}
 @media screen and (min-width: 1024px) {
   .post-info-v3__post-image-container--image-accent img,
   .post-info-v3__post-image-container--image-accent svg {
