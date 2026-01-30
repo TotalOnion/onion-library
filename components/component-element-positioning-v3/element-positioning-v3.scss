@@ -9,7 +9,28 @@
 	translate: var(--element-horizontal-offset-mobile, 0)
 		var(--element-vertical-offset-mobile, 0);
 	rotate: var(--element-rotation-mobile, 0deg);
-
+	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		place-self: var(
+				--portrait-vertical-placement,
+				var(--desktop-vertical-placement)
+			)
+			var(
+				--portrait-horizontal-placement,
+				var(--desktop-horizontal-placement)
+			);
+		translate: var(
+				--element-horizontal-offset-portrait,
+				var(--element-horizontal-offset-desktop, 0)
+			)
+			var(
+				--element-vertical-offset-portrait,
+				var(--element-vertical-offset-desktop, 0)
+			);
+		rotate: var(
+			--element-rotation-portrait,
+			var(--element-rotation-desktop, 0deg)
+		);
+	}
 	@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 		place-self: var(--desktop-vertical-placement)
 			var(--desktop-horizontal-placement);
