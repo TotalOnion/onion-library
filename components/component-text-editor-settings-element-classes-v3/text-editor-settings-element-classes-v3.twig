@@ -9,5 +9,5 @@
 	{% set typographicStyleMobile = ' ' ~ fields.font_size_mobile|ru %}
 {% endif %}
 {% set typographicStyle = fields.typographic_style|ru %}
-{% set styleClasses = typographicStyle ~ typographicStyleDesktop  ~ typographicStylePortrait  ~ typographicStyleMobile %}
+{% set styleClasses = typographicStyle ~ typographicStyleDesktop ~ typographicStylePortrait ~ typographicStyleMobile %}
 {{styleClasses}}

@@ -8,7 +8,7 @@
 	}
 </style>
 {% if fields.wysiwyg_editor %}
-	<div class="{{blockClassName}}__content-container {{textEditorContainerClasses}} standard-content-box-wysiwyg-editor cmpl-text-editor-settings {{block.id}}">
+	<div class="{{blockClassName}}__content-container standard-content-box-wysiwyg-editor cmpl-text-editor-settings {{block.id}} {{textEditorContainerClasses}}">
 		{% if fields.wysiwyg_editor is not empty %}
 			<{{elementType}} class="{{textEditorElementClasses}}">
 				{{fields.wysiwyg_editor|striptags('<br>, <a>, <em>, <i>, <span>, <strong>')|raw}}
