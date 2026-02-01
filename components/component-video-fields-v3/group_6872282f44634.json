@@ -730,6 +730,36 @@
 			"append": ""
 		},
 		{
+			"key": "field_697f475be2f63",
+			"label": "Data Layer Push",
+			"name": "data_layer_push",
+			"aria-label": "",
+			"type": "true_false",
+			"instructions": "coming soon...",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_6872282f51575",
+						"operator": "==",
+						"value": "1"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"message": "",
+			"default_value": 0,
+			"style": "",
+			"allow_in_bindings": 0,
+			"ui_on_text": "",
+			"ui_off_text": "",
+			"ui": 1
+		},
+		{
 			"key": "field_6872282f56770",
 			"label": "Enable Captions",
 			"name": "enable_captions",
@@ -979,5 +1009,5 @@
 	"acfe_display_title": "",
 	"acfe_meta": "",
 	"acfe_note": "",
-	"modified": 1763477405
+	"modified": 1769949066
 }
