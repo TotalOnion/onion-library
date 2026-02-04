@@ -1,0 +1,36 @@
+post-carousel-display-module {
+	grid-area: display;
+	display: grid;
+	.post-carousel-display-module__grid-container {
+		display: flex;
+		overflow: scroll;
+		flex-wrap: nowrap;
+		width: 100%;
+	}
+	.post-carousel-display-module__post-container {
+		display: grid;
+		place-items: stretch;
+		grid-template-rows: max-content;
+		min-width: 300px;
+		.post-carousel-display-module__post-title {
+			color: white;
+			grid-row: 2;
+			text-box-edge: unset;
+			line-height: 120%;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 36px;
+			.font-secondary {
+				display: block;
+			}
+		}
+		.post-carousel-display-module__post-image {
+			grid-row: 1;
+			width: 100%;
+			height: auto;
+			place-self: stretch;
+			object-fit: cover;
+			aspect-ratio: 9 / 11;
+		}
+	}
+}

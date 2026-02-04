@@ -9,6 +9,7 @@ export default function ptfg9000js(options = {}) {
 						this.data = this.dataset;
 						this.filterModule =
 							this.querySelector('#filter-module');
+
 						this.displayModule =
 							this.querySelector('#display-module');
 					}
@@ -26,6 +27,7 @@ export default function ptfg9000js(options = {}) {
 								}
 							);
 						}
+
 						this.classList.add('loaded');
 					}
 					attributeChangedCallback(name, oldValue, newValue) {

@@ -14,7 +14,7 @@
 		/>
 		<link
 			rel="stylesheet"
-			href="../webc-post-grid-display-module/post-grid-display-module.css"
+			href="../webc-post-carousel-display-module/post-carousel-display-module.css"
 		/>
 		<title>PTFG</title>
 	</head>
@@ -44,11 +44,12 @@
 			</post-filter-module>
 			<text-input-trigger id="text-input-trigger" class="text-input-trigger"></text-input-trigger>
 			<toggle-trigger id="toggle-trigger" data-toggletext="Filter" data-toggletarget="#filter-module" data-toggleclass="active" class="toggle-trigger"></toggle-trigger>
-			<post-grid-display-module
-				id="display-module"
-				data-posts=""
-				class="post-grid-display-module cmpl-block-padding cmpl-block-settings"
-			></post-grid-display-module>
+			<post-carousel-display-module
+	id="display-module"
+	data-posts=""
+	class="post-carousel-display-module cmpl-block-padding cmpl-block-settings"
+>
+			</post-carousel-display-module>
 			<loadmore-trigger id="loadmore-trigger" data-buttontext="Load More" class="loadmore-trigger"></loadmore-trigger>
 		</ptfg-9000>
 
@@ -66,8 +67,8 @@
 			import loadmoreTrigger from "../webc-loadmore-trigger/loadmore-trigger.js";
 			loadmoreTrigger();
 
-			import blockgridjs from "../webc-post-grid-display-module/post-grid-display-module.js";
-			blockgridjs();
+			import blockcarouseljs from "../webc-post-carousel-display-module/post-carousel-display-module.js";
+			blockcarouseljs();
 
 			import blockptfgjs from "./ptfg-9000.js";
 			blockptfgjs();
