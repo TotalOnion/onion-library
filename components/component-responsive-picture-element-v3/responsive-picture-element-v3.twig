@@ -1,0 +1,35 @@
+{% set desktopImage = get_image(fields.image_desktop|default(fields.desktop_image)) %}
+{% set tabletImage = get_image(fields.image_portrait|default(fields.tablet_image))|default(desktopImage) %}
+
+{% set mobileImage = get_image(fields.image_mobile|default(fields.mobile_image)) %}
+
+
+{% set isSVG = desktopImage.post_mime_type == 'image/svg+xml' %}
+{% set customAspectRatioDesktop = selectedAspectRatioDesktop %}
+{% set aspectRatioParamDesktop = {"aspect_ratio": customAspectRatioDesktop} %}
+{% set mainImageSrc = isSVG ? desktopImage.src : gt_image_mainsrc(desktopImage, aspectRatioParamDesktop) %}
+{% set desktopSrcset = isSVG ? desktopImage.src : gt_image_srcset(desktopImage, aspectRatioParamDesktop) %}
+
+{% set isSVG = tabletImage.post_mime_type == 'image/svg+xml' %}
+{% set customAspectRatioTablet = selectedAspectRatioTablet|default(tabletImage.width ~ '/' ~ tabletImage.height)|replace({'/' : 'x', ':' : 'x'}) %}
+
+{% set aspectRatioParamTablet = {"aspect_ratio": customAspectRatioTablet} %}
+{% set tabletSrcset = isSVG ? tabletImage.src : gt_image_srcset(tabletImage, aspectRatioParamTablet) %}
+
+{% set isSVG = mobileImage.post_mime_type == 'image/svg+xml' %}
+{% set customAspectRatioMobile = selectedAspectRatioMobile|default(mobileImage.width ~ '/' ~ mobileImage.height)|replace({'/' : 'x', ':' : 'x'}) %}
+{% set aspectRatioParamMobile = {"aspect_ratio": customAspectRatioMobile} %}
+{% set mobileSrcset = isSVG ? mobileImage.src : gt_image_srcset(mobileImage, aspectRatioParamMobile) %}
+
+<picture class="single-responsive-image-v3__picture {{picture_id|default(block.id)}}" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" data-assetkey="responsive-image" data-enableparallax="{{ parallaxEnabled }}">
+	{% if desktopImage %}
+		<source data-type="srcSetDesktop" data-pattern-suffix="{{suffix}}" media="(min-width: 1024px)" class="single-responsive-image-v3__source single-responsive-image-v3--desktop" width="{{ desktopImage.width }}" height="{{ desktopImage.height }}" srcset="{{desktopSrcset}}"/>
+	{% endif %}
+	{% if tabletImage %}
+		<source data-type="srcSetTablet" data-pattern-suffix="{{suffix}}" media="(min-width: 768px)" width="{{ tabletImage.width }}" height="{{ tabletImage.height }}" class="single-responsive-image-v3__source single-responsive-image-v3--tablet" srcset="{{ tabletSrcset }}"/>
+	{% endif %}
+	{% if mobileImage %}
+		<source data-type="srcSetMobile" data-pattern-suffix="{{suffix}}" class="single-responsive-image-v3__source single-responsive-image-v3__source--mobile" width="{{ mobileImage.width }}" height="{{ mobileImage.height }}" srcset="{{ mobileSrcset }}"/>
+	{% endif %}
+	<img data-type="srcGeneral" data-elementname="main-image" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" {{ enableEagerLoading }} sizes="{{ sizes }}" class="single-responsive-image-v3__image" src="{{mainImageSrc}}" alt="{{ desktopImage.alt }}" {{ parallaxDepth }} {{ parallaxOffsetY }}/>
+</picture>

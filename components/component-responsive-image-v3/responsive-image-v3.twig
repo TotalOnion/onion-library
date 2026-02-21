@@ -1,17 +1,18 @@
 {% if fields.enable_image|default(fields.image_enabled) %}
-	{% set renderDynamic = fields.child_patterns.render_dynamic|default(0) %}
-	{% set suffix = fields.child_patterns.suffix %}
-
-	{% set desktopType = fields.desktop_image_aspect_ratio|ru|default('original') %}
-	{% set tabletType = fields.tablet_image_aspect_ratio|ru|default('original') %}
-	{% set mobileType = fields.mobile_image_aspect_ratio|ru|default('original') %}
 
 	{% set desktopImage = get_image(fields.desktop_image) %}
 	{% set tabletImage = get_image(fields.tablet_image)|default(desktopImage) %}
 	{% set mobileImage = get_image(fields.mobile_image) %}
 
+	{% set renderDynamic = fields.child_patterns.render_dynamic|default(0) %}
+	{% set suffix = fields.child_patterns.suffix %}
+
+	{% set selectedAspectRatioDesktop = fields.desktop_custom_aspect_ratio|default(desktopImage.width ~ '/' ~ desktopImage.height)|replace({'/' : 'x', ':' : 'x'}) %}
+	{% set selectedAspectRatioTablet = fields.tablet_custom_aspect_ratio|default(desktopImage.width ~ '/' ~ desktopImage.height)|replace({'/' : 'x', ':' : 'x'}) %}
+	{% set selectedAspectRatioMobile = fields.mobile_custom_aspect_ratio|default(desktopImage.width ~ '/' ~ desktopImage.height)|replace({'/' : 'x', ':' : 'x'}) %}
+
 	{% set imageSizes = fields.custom_image_sizes %}
-	{% set sizes = imageSizes|default('(min-width: 1440px) 100vw, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 500px) 100vw, 250px') %}
+	{% set sizes = imageSizes|default('auto, (min-width: 1440px) 100vw, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 500px) 100vw, 250px') %}
 
 	{% set imageFitStyle = '--image-fit-style:' ~ (fields.image_fit_style|ru|default('cover')) ~ ';' %}
 	{% set imageObjectPositionAlign = '--image-object-position-align:' ~ (fields.image_object_position_align|ru) ~ ';' %}
@@ -23,9 +24,6 @@
 	{% set imagePosition = '--image-position:' ~ fields.image_position|ru ~ ';' %}
 	{% set imageGridArea = '--image-grid-area:' ~ fields.image_grid_area|ru|default('main') ~ ';' %}
 	{% set imageBorderRadius = '--image-border-radius:' ~ fields.image_border_radius ~ ';' %}
-	{% set imageAspectRatioDesktop = '--image-aspect-ratio-desktop:' ~ fields.image_aspect_ratio_desktop ~ ';' %}
-	{% set imageAspectRatioPortrait = '--image-aspect-ratio-portrait:' ~ fields.image_aspect_ratio_portrait ~ ';' %}
-	{% set imageAspectRatioMobile = '--image-aspect-ratio-mobile:' ~ fields.image_aspect_ratio_mobile ~ ';' %}
 	{% set imageOffsetVert = '--image-offset-vert:' ~ fields.image_offset_vertical ~ '%;' %}
 	{% set imageOffsetHoriz = '--image-offset-horiz:' ~ fields.image_offset_horizontal ~ '%;' %}
 	{% set enableImageBorder = fields.enable_image_border %}
@@ -41,98 +39,33 @@
 	{% set pictureStylesString = imageFitStyle ~ imageObjectPositionAlign ~ imageWidth ~ imageWidthMobile ~ imageWidthPortrait ~ imageOpacity ~ imageAspectRatioDesktop ~ imageAspectRatioPortrait ~ imageAspectRatioMobile ~ imageOffsetVert ~ imageOffsetHoriz ~ imageBorderRadius ~ imagePosition ~ imageGridArea ~ imageMinHeightMobile ~ imageMinHeightDesktop ~ subtractHeaderHeight ~ imageZIndex %}
 	{% set enableEagerLoading = fields.enable_eager_image_loading ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"' %}
 
-	{% set selectedAspectRatioDesktop = fields.desktop_image_aspect_ratio|ru %}
-	{% set selectedAspectRatioTablet = fields.tablet_image_aspect_ratio|ru %}
-	{% set selectedAspectRatioMobile = fields.mobile_image_aspect_ratio|ru %}
-
-	{% if selectedAspectRatioDesktop == 'original' %}
-		{% set isSVG = desktopImage.post_mime_type == 'image/svg+xml' %}
-		{% set selectedAspectRatioDesktop = null %}
-		{% set mainImageSrc = isSVG ? desktopImage.src : gt_image_mainsrc(desktopImage) %}
-		{% set desktopSrcset = isSVG ? desktopImage.src : gt_image_srcset(desktopImage) %}
-	{% elseif selectedAspectRatioDesktop == 'custom_aspect_ratio' %}
-		{% set isSVG = desktopImage.post_mime_type == 'image/svg+xml' %}
-		{% set customAspectRatio = fields.desktop_custom_aspect_ratio %}
-		{% set mainImageSrc = isSVG ? desktopImage.src : gt_image_mainsrc(desktopImage, {"aspect_ratio": customAspectRatio|replace({'/' : 'x', ':' : 'x'})}) %}
-		{% set desktopSrcset = isSVG ? desktopImage.src : gt_image_srcset(desktopImage, {"aspect_ratio": customAspectRatio|replace({'/' : 'x', ':' : 'x'})}) %}
-	{% else %}
-		{% set isSVG = desktopImage.post_mime_type == 'image/svg+xml' %}
-		{% set mainImageSrc = isSVG ? desktopImage.src : gt_image_mainsrc(desktopImage, {"aspect_ratio" : selectedAspectRatioDesktop}) %}
-		{% set desktopSrcset = isSVG ? desktopImage.src : gt_image_srcset(desktopImage, {"aspect_ratio" : selectedAspectRatioDesktop}) %}
-	{% endif %}
-
-	{% if selectedAspectRatioTablet == 'original' %}
-		{% set isSVG = tabletImage.post_mime_type == 'image/svg+xml' %}
-		{% set selectedAspectRatioTablet = null %}
-		{% set tabletSrcset =  isSVG ? tabletImage.src : gt_image_srcset(tabletImage)%}
-	{% elseif selectedAspectRatioTablet == 'custom_aspect_ratio' %}
-		{% set isSVG = tabletImage.post_mime_type == 'image/svg+xml' %}
-		{% set customAspectRatio = fields.tablet_custom_aspect_ratio %}
-		{% set mainImageSrc = isSVG ? tabletImage.src : gt_image_mainsrc(tabletImage, {"aspect_ratio": customAspectRatio|replace({'/' : 'x', ':' : 'x'})}) %}
-		{% set tabletSrcset = isSVG ? tabletImage.src : gt_image_srcset(tabletImage, {"aspect_ratio": customAspectRatio|replace({'/' : 'x', ':' : 'x'})}) %}
-	{% else %}
-		{% set isSVG = tabletImage.post_mime_type == 'image/svg+xml' %}
-		{% set tabletSrcset =  isSVG ? tabletImage.src : gt_image_srcset(tabletImage, {"aspect_ratio" : selectedAspectRatioTablet})%}
-	{% endif %}
-
-	{% if selectedAspectRatioMobile == 'original' %}
-		{% set isSVG = mobileImage.post_mime_type == 'image/svg+xml' %}
-		{% set selectedAspectRatioMobile = null %}
-		{% set mobileSrcset =  isSVG ? mobileImage.src : gt_image_srcset(mobileImage) %}
-	{% elseif selectedAspectRatioMobile == 'custom_aspect_ratio' %}
-		{% set isSVG = mobileImage.post_mime_type == 'image/svg+xml' %}
-		{% set customAspectRatio = fields.mobile_custom_aspect_ratio %}
-		{% set mainImageSrc = isSVG ? mobileImage.src : gt_image_mainsrc(mobileImage, {"aspect_ratio": customAspectRatio|replace({'/' : 'x', ':' : 'x'})}) %}
-		{% set mobileSrcset = isSVG ? mobileImage.src : gt_image_srcset(mobileImage, {"aspect_ratio": customAspectRatio|replace({'/' : 'x', ':' : 'x'})}) %}
-	{% else %}
-		{% set isSVG = mobileImage.post_mime_type == 'image/svg+xml' %}
-		{% set mobileSrcset =  isSVG ? mobileImage.src : gt_image_srcset(mobileImage, {"aspect_ratio" : selectedAspectRatioMobile})%}
-	{% endif %}
 	{% set parallaxEnabled = fields.parallax_enabled %}
 	{% if parallaxEnabled %}
 		{% set parallaxDepth = 'data-depth=' ~ fields.parallax_depth ~ " " %}
 		{% set parallaxOffsetY = 'data-y-offset=' ~ fields.parallax_offset_y ~ " " %}
 	{% endif %}
+	{% set picture_id = block.id %}
 
 	<style>
-		.{{blockClassName|default('cbl-image')}}__picture.{{block.id}}{
+		.single-responsive-image-v3__picture.{{picture_id|default(block.id)}}{
 			{{pictureStylesString}}
 			{{imageBorderString}}
-			{% if selectedAspectRatioDesktop == 'custom_aspect_ratio' %}
-				--image-aspect-ratio-desktop: {{fields.desktop_custom_aspect_ratio}}
-				;
-			{% elseif selectedAspectRatioDesktop %}
-				--image-aspect-ratio-desktop: {{selectedAspectRatioDesktop|replace({'x': '/'})}}
-				;
-			{% endif %}
-
-			{% if selectedAspectRatioTablet == 'custom_aspect_ratio' %}
-				--image-aspect-ratio-portrait: {{fields.tablet_custom_aspect_ratio}}
-				;
-			{% elseif selectedAspectRatioTablet %}
-				--image-aspect-ratio-portrait: {{selectedAspectRatioTablet|replace({'x': '/'})}}
-				;
-			{% endif %}
-
-			{% if selectedAspectRatioMobile == 'custom_aspect_ratio' %}
-				--image-aspect-ratio-mobile: {{fields.mobile_custom_aspect_ratio}}
-				;
-			{% elseif selectedAspectRatioMobile %}
-				--image-aspect-ratio-mobile: {{selectedAspectRatioMobile|replace({'x': '/'})}}
-				;
-			{% endif %}
+			--image-aspect-ratio-desktop: {{selectedAspectRatioDesktop|replace({'x': '/'})}}
+			;
+			--image-aspect-ratio-portrait: {{selectedAspectRatioTablet|replace({'x': '/'})}}
+			;
+			--image-aspect-ratio-mobile: {{selectedAspectRatioMobile|replace({'x': '/'})}}
+			;
 		}
 	</style>
-	<picture class="{{ blockClassName|default('cbl-image') }}__picture {{block.id}}" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" data-assetkey="responsive-image" data-enableparallax="{{ parallaxEnabled }}">
-		{% if desktopImage %}
-			<source data-type="srcSetDesktop" data-pattern-suffix="{{suffix}}" media="(min-width: 1024px)" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}--desktop" width="{{ desktopImage.width }}" height="{{ desktopImage.height }}" sizes="{{ sizes }}" srcset="{{desktopSrcset}}"/>
-		{% endif %}
-		{% if tabletImage %}
-			<source data-type="srcSetTablet" data-pattern-suffix="{{suffix}}" media="(min-width: 768px)" width="{{ tabletImage.width }}" height="{{ tabletImage.height }}" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}--tablet" sizes="{{ sizes }}" srcset="{{ tabletSrcset }}"/>
-		{% endif %}
-		{% if mobileImage %}
-			<source data-type="srcSetMobile" data-pattern-suffix="{{suffix}}" class="{{ blockClassName|default('cbl-image') }}__source {{ blockClassName|default('cbl-image') }}__source--mobile" width="{{ mobileImage.width }}" height="{{ mobileImage.height }}" sizes="{{ sizes }}" srcset="{{ mobileSrcset }}"/>
-		{% endif %}
-		<img data-type="srcGeneral" data-elementname="main-image" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" {{ enableEagerLoading }} class="{{ blockClassName|default('cbl-image') }}__image" src="{{mainImageSrc}}" alt="{{ desktopImage.alt }}" {{ parallaxDepth }} {{ parallaxOffsetY }}/>
-	</picture>
+
+	<!--pattern-replace-var:selectedAspectRatioDesktop={{selectedAspectRatioDesktop}}-->
+	<!--pattern-replace-var:selectedAspectRatioTablet={{selectedAspectRatioTablet}}-->
+	<!--pattern-replace-var:selectedAspectRatioMobile={{selectedAspectRatioMobile}}-->
+	<!--pattern-replace-var:sizes={{sizes}}-->
+	<!--pattern-replace-var:picture_id={{picture_id}}-->
+
+	<!--pattern-include-start:components/responsive-picture-element-v3-->
+{{ include('components/responsive-picture-element-v3.twig') }}
+	<!--pattern-include-end:components/responsive-picture-element-v3-->
 {% endif %}

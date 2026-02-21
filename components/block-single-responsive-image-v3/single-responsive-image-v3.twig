@@ -11,12 +11,9 @@
 		{{sectionStyles}}
 	}
 </style>
-<section
-	{{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{fields.section_class}} {{classNameEntryPoint}} lazy-fade {{block.id}}" data-jsload="false" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-	<!--pattern-replace-start:component/responsive-image -->
 	{{ include('components/responsive-image-v3.twig', { fields, block, blockClassName }, with_context = false) }}
-	<!--pattern-replace-end:component/responsive-image -->
 
 	{% if fields.animations.enable_animations %}
 		{{ include('components/animations-style-v3.twig', { fields, block, blockClassName }, with_context = false) }}

@@ -1,0 +1,69 @@
+{% set product = post %}
+{% set buyNowOptionSelect = product.meta('buy_now_option_select') %}
+{% if buyNowOptionSelect|ru == 'link' %}
+	{% set productDirectLink = product.meta('direct_link') %}
+	{% set directLinkTarget = '_blank' %}
+	<a href="{{productDirectLink.url}}" class="{{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}}" target="{{directLinkTarget}}" title="{{productDirectLink.title}}">{{productDirectLink.title}}</a>
+{% endif %}
+{% if buyNowOptionSelect|ru == 'ctb' %}
+	{% if cta.cta_buy_now_text is not empty %}
+		{% set productCtbPimid = product.meta('click_to_buy_pim_id') %}
+		<a href="#" class="{{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}}" data-ctbuy data-ctbuy-variant="{{productCtbPimid}}" data-ctbuy-country="" data-ctbuy-lang="" data-ctbuy-default-view="" data-ctbuy-customquerystring="" data-ctbuy-direct-link="" title="{{cta.cta_buy_now_text}}">{{cta.cta_buy_now_text}}</a>
+	{% endif %}
+{% endif %}
+{% if buyNowOptionSelect|ru == "ctb-pricespider" %}
+	{% set enablePricespider = attribute(market_settings['e-shop_settings'], 'enable_pricespider') %}
+	{% set productCtbPriceSpicerSku = product.meta('pricespider_sku_id') %}
+	{% if enablePricespider and productCtbPriceSpicerSku is not empty %}
+		<a class="ps-widget {{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}}" ps-sku="{{productCtbPriceSpicerSku}}"></a>
+	{% endif %}
+{% endif %}
+{% if buyNowOptionSelect|ru == 'wtb' %}
+	{% if cta.cta_buy_now_text is not empty %}
+		{% set productPimDebrainId = product.meta('debrain_pim_id') %}
+		<a href="#" class="dloc-link {{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}}" data-action="where-to-buy" data-filter="{{productPimDebrainId}}">{{cta.cta_buy_now_text}}</a>
+	{% endif %}
+{% endif %}
+{% if buyNowOptionSelect|ru == 'wtb-v2' %}
+	{% set productDebrainSkuId = product.meta('debrain_sku_id') %}
+	{% if productDebrainSkuId is not empty %}
+		<wtb-button sku={{productDebrainSkuId}} class="{{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}}">{{cta.cta_buy_now_text}}</wtb-button>
+	{% endif %}
+{% endif %}
+{% if buyNowOptionSelect|ru == 'mikmak' %}
+	{% set productEANs = product.meta('mikmak_ean_ids') %}
+	{% set relatedProducts = product.meta('related_products') %}
+	{% set drawer_widget_id = attribute(market_settings['e-shop_settings'], 'mikmak_ctb_drawer_widget_id') %}
+
+	{% set relatedProductEANs = '' %}
+	{% for post in relatedProducts %}
+		{% set relatedProduct = get_post(post) %}
+		{% set relatedProductEANs = relatedProductEANs ~ ',' ~ relatedProduct.meta('mikmak_ean_ids')|trim(',') %}
+	{% endfor %}
+	{% set relatedProductEANs = relatedProductEANs|trim(',') %}
+
+	{% if productEANs is not empty and drawer_widget_id is not empty %}
+		{% set totalProductEANs = productEANs ~ (relatedProductEANs is not empty ? ',' ~ relatedProductEANs : '') %}
+		<a href="#" data-mm-wtbid="{{drawer_widget_id}}" data-mm-ids="{{totalProductEANs}}" class="{{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}} mikmak-buy-now">{{cta.cta_buy_now_text}}</a>
+	{% endif %}
+{% endif %}
+{% if buyNowOptionSelect|ru == 'reservebar' %}
+	{% if cta.cta_buy_now_text is not empty %}
+		{% set reserveBarLiquidId = product.meta('reserve_bar_liquid_grouping_id') %}
+		<a href="#" class="{{blockClassName|default('default-class')}}__cta cmpl-cta-style-{{cta.cta_style|ru}} reservebar-popup-trigger" reservebar-liquid-id="{{reserveBarLiquidId}}">{{cta.cta_buy_now_text}}</a>
+	{% endif %}
+{% endif %}
+{% if buyNowOptionSelect|ru == 'shopify' %}
+	{% if product.shopify_id is not empty %}
+
+
+		<div class="shopify-wrapper shopify-integration has-shop shop-shopify" data-extraclasses="{{style_classes}}" data-pim="{{product.shopify_id}}" data-label="{{product.meta.buy_now_button_text|default("Add to cart")}}" data-cask-name="{{product.cask_name}}" data-vol="{{product.volume}}"></div>
+	{% endif %}
+	{% if product.shopify_id_engraved is not empty %}
+
+		<div class="shopify-wrapper shopify-integration has-shop shop-shopify engraved" data-extraclasses="{{style_classes}}" data-pim="{{product.shopify_id_engraved}}" data-label="{{product.buy_now_button_text_alt|default(" buy engraved")}}" data-cask-name="{{product.cask_name}}" data-vol="{{product.volume}}"></div>
+
+
+	{% endif %}
+
+{% endif %}
