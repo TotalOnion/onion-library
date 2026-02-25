@@ -83,9 +83,10 @@
                     },
                     "wpml_cf_preferences": 3,
                     "choices": [
-                        "sour cream",
-                        "coca cola",
-                        "arrroow"
+                        "Chivas Regal 18",
+                        "Lillet Blanc",
+                        "Yuzu Dry Curacao",
+                        "Verjus"
                     ],
                     "default_value": "placeholder1",
                     "return_format": "value",
@@ -290,10 +291,7 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 3,
-                    "choices": [
-                        "glass",
-                        "shaker"
-                    ],
+                    "choices": [],
                     "default_value": "placeholder1",
                     "return_format": "value",
                     "multiple": 0,
@@ -415,7 +413,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 0,
+                    "wpml_cf_preferences": 2,
                     "default_value": "",
                     "maxlength": "",
                     "allow_in_bindings": 0,
@@ -479,7 +477,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -500,7 +498,6 @@
                 "acfe_bidirectional_enabled": "0"
             },
             "allow_null": 0,
-            "allow_in_bindings": 0,
             "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": [],
@@ -517,7 +514,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -534,19 +531,16 @@
             "prepend": "",
             "append": "",
             "allow_null": 0,
-            "allow_in_bindings": 0,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
-            "create_options": 0,
-            "save_options": 0,
             "allow_custom": 0,
             "search_placeholder": "",
             "min": ""
         },
         {
             "key": "field_6952b66d4a602",
-            "label": "Time to make (minutes)",
+            "label": "Time to make (Minutes)",
             "name": "time_to_make",
             "aria-label": "",
             "type": "range",
@@ -554,7 +548,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -562,10 +556,107 @@
             "default_value": "",
             "min": 0,
             "max": 30,
-            "allow_in_bindings": 0,
             "step": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_695e8f508dfba",
+            "label": "Time to make (Units)",
+            "name": "time_to_make_units",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_698dc876365a3",
+            "label": "Recomendation",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "placement": "top",
+            "endpoint": 0,
+            "no_preference": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_698dc88c365a4",
+            "label": "Bartender’s recommentation Title",
+            "name": "bartender_recommentation_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_698dc8ad365a5",
+            "label": "Bartender’s recommentation",
+            "name": "bartender_recommentation",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "acfe_wysiwyg_auto_init": 0,
+            "acfe_wysiwyg_height": 300,
+            "acfe_wysiwyg_max_height": "",
+            "acfe_wysiwyg_valid_elements": "",
+            "acfe_wysiwyg_custom_style": "",
+            "acfe_wysiwyg_disable_wp_style": 0,
+            "acfe_wysiwyg_autoresize": 0,
+            "acfe_wysiwyg_disable_resize": 0,
+            "acfe_wysiwyg_remove_path": 0,
+            "acfe_wysiwyg_menubar": 0,
+            "acfe_wysiwyg_transparent": 0,
+            "acfe_wysiwyg_merge_toolbar": 0,
+            "acfe_wysiwyg_custom_toolbar": 0,
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "acfe_wysiwyg_min_height": 300,
+            "acfe_wysiwyg_toolbar_buttons": []
         }
     ],
     "location": [
@@ -586,7 +677,6 @@
     "active": true,
     "description": "Library version - Do not modify in this project as any changes will be overwritten by future updates.",
     "show_in_rest": 0,
-    "display_title": "",
     "acfe_autosync": [
         "json"
     ],
@@ -595,5 +685,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1767372238
+    "modified": 1771865819
 }
