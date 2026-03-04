@@ -82,12 +82,7 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 3,
-                    "choices": [
-                        "Chivas Regal 18",
-                        "Lillet Blanc",
-                        "Yuzu Dry Curacao",
-                        "Verjus"
-                    ],
+                    "choices": [],
                     "default_value": "placeholder1",
                     "return_format": "value",
                     "multiple": 0,
@@ -477,7 +472,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -498,6 +493,7 @@
                 "acfe_bidirectional_enabled": "0"
             },
             "allow_null": 0,
+            "allow_in_bindings": 0,
             "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": [],
@@ -514,15 +510,15 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "wpml_cf_preferences": 3,
             "choices": {
-                "beginner": "Beginner",
-                "Intermediate": "Intermediate",
-                "expert": "Expert"
+                "easy": "Easy",
+                "intermediate": "Intermediate",
+                "advanced": "Advanced"
             },
             "default_value": "Intermediate",
             "return_format": "value",
@@ -540,7 +536,7 @@
         },
         {
             "key": "field_6952b66d4a602",
-            "label": "Time to make (Minutes)",
+            "label": "Time to make (minutes)",
             "name": "time_to_make",
             "aria-label": "",
             "type": "range",
@@ -548,7 +544,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -556,6 +552,7 @@
             "default_value": "",
             "min": 0,
             "max": 30,
+            "allow_in_bindings": 0,
             "step": "",
             "prepend": "",
             "append": ""
@@ -570,7 +567,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -685,5 +682,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1771865819
+    "modified": 1772622306
 }
