@@ -28,6 +28,7 @@ import maxOnMat from './max-on-the-mat.webp';
 import marthaOnMat from './martha-on-the-mat.webp';
 import vanilleBass from './vanille-bass.webp';
 import vanilleNap from './vanille-asleep.webp';
+import mephyMice from './mephy-dreams-of-mice.webp';
 
 export const devContentPets = [
 	{
@@ -295,6 +296,15 @@ export const devContentPets = [
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: vanilleBass
+		},
+
+		categories: [14, 10, 4, 1]
+	},
+	{
+		name: `Mephy <span class='font-secondary'>Dreams of Mice</span>`,
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: mephyMice
 		},
 
 		categories: [14, 10, 4, 1]

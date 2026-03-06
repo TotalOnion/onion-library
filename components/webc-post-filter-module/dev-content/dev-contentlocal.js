@@ -41,6 +41,7 @@ const marthaOnMat =
 	'../webc-post-filter-module/dev-content/martha-on-the-mat.webp';
 const vanilleBass = '../webc-post-filter-module/dev-content/vanille-bass.webp';
 const vanilleNap = '../webc-post-filter-module/dev-content/vanille-asleep.webp';
+const mephyMice = './mephy-dreams-of-mice.webp';
 
 export const devContentPets = [
 	{
@@ -311,6 +312,15 @@ export const devContentPets = [
 		},
 
 		categories: [14, 10, 4, 1]
+	},
+	{
+		name: `Mephy <span class='font-secondary'>Dreams of Mice</span>`,
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: mephyMice
+		},
+
+		categories: [14, 10, 3]
 	}
 ];
 
