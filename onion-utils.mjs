@@ -629,8 +629,6 @@ const api = {
 	eventListenerDebouncer,
 	footerIntersection,
 	getPosition,
-	getGsap,
-	getJquery,
 	inCriticalCssConfig,
 	injectYouTubeIframeScript,
 	isEmailValid,
