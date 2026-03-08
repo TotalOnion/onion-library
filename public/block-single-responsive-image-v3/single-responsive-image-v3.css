@@ -2,6 +2,7 @@
   margin: auto;
   width: 100%;
   width: var(--image-width-mobile, 100%);
+  height: 100%;
   grid-area: main;
   grid-area: var(--image-grid-area, main);
   position: relative;

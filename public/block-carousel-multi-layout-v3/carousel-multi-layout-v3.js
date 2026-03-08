@@ -1,4 +1,3 @@
-import { getSwiperAssetsV2 } from "@total_onion/onion-utils/onion-utils.mjs";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css/bundle";
 export default function carouselmultilayoutv3Js(options = {}) {
@@ -173,4 +172,14 @@ export default function carouselmultilayoutv3Js(options = {}) {
   } catch (error) {
     console.error(error);
   }
+}
+function getSwiperAssetsV2(options = { css: "bundle" }) {
+  const getSwiperJs = () => import(
+    /* webpackChunkName: 'swiper' */
+    "swiper"
+  );
+  const promisedJs = Promise.all([getSwiperJs()]).then((values) => {
+    return values;
+  });
+  return promisedJs;
 }

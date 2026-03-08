@@ -17,8 +17,6 @@ const dynamicAssets = [
 	{ assetKey: "responsive-table-v3" },
 	{ assetKey: "raw-html-v3" },
 	{ assetKey: "product-info-v3" },
-	{ assetKey: "post-type-filter-grid-v4" },
-	{ assetKey: "post-type-filter-grid-v3" },
 	{ assetKey: "post-info-v3" },
 	{ assetKey: "nav-menu-container-v3" },
 	{ assetKey: "modal-form-v3" },
