@@ -6,6 +6,7 @@
 	&__picture {
 		margin: auto;
 		width: var(--image-width-mobile, 100%);
+		height: 100%;
 		grid-area: var(--image-grid-area, main);
 		position: var(--image-position, relative);
 		translate: var(--image-offset-horiz) var(--image-offset-vert);

@@ -1,4 +1,3 @@
-import {getSwiperAssetsV2} from '@total_onion/onion-utils/onion-utils.mjs';
 import {Navigation, Pagination, Autoplay, EffectFade} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css/bundle';
@@ -228,4 +227,17 @@ export default function carouselmultilayoutv3Js(options = {}) {
 	} catch (error) {
 		console.error(error);
 	}
+}
+
+/**
+ * Dynamically retrieves the swiper css and js and returns a resolved promise when they have both been successfully fetched.
+ * @returns {promise}
+ */
+function getSwiperAssetsV2(options = {css: 'bundle'}) {
+	const getSwiperJs = () => import(/* webpackChunkName: 'swiper' */ 'swiper');
+
+	const promisedJs = Promise.all([getSwiperJs()]).then((values) => {
+		return values;
+	});
+	return promisedJs;
 }

@@ -241,55 +241,6 @@ export function footerIntersection(entries, element) {
 }
 
 /**
- * Dynamically retrieves the swiper css and js and returns a resolved promise when they have both been successfully fetched.
- * @returns {promise}
- */
-export function getSwiperAssetsV2(options = { css: "bundle" }) {
-	const getSwiperJs = () => import(/* webpackChunkName: 'swiper' */ "swiper");
-
-	const promisedJs = Promise.all([getSwiperJs()]).then((values) => {
-		return values;
-	});
-	return promisedJs;
-}
-
-/**
- * Dynamically retrieves the jQuery and returns a resolved promise when it has been successfully fetched.
- * @returns {promise}
- */
-export function getJquery() {
-	if (!window.jQuery) {
-		const importCode = () =>
-			import(/* webpackChunkName: 'jquery' */ "jquery/dist/jquery.min.js");
-		return importCode();
-	}
-	return Promise.resolve();
-}
-
-/**
- * Dynamically retrieves GSAP and the scrolltrigger plugin and returns a resolved promise when they have both been successfully fetched.
- * @returns {promise}
- */
-export function getGsap() {
-	const gsapCore = () =>
-		import("gsap/dist/gsap.min.js").then((gsapObj) => {
-			const { gsap } = gsapObj;
-			return gsap;
-		});
-
-	const gsapPlugin = () =>
-		import("gsap/dist/ScrollTrigger.min.js").then((scrollObj) => {
-			const ScrollTrigger = scrollObj;
-			return ScrollTrigger;
-		});
-
-	const prom = Promise.all([gsapCore(), gsapPlugin()]).then((values) => {
-		return values;
-	});
-	return prom;
-}
-
-/**
  * Returns true if the device is a tablet device.
  * @param {*} userAgent Pass the value of navigator.userAgent.
  * @returns {boolean}
