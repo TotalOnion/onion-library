@@ -1,6 +1,6 @@
 {
 	"name": "@total_onion/onion-library",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"description": "Component library",
 	"main": "index.js",
 	"scripts": {
@@ -23,6 +23,7 @@
 		"lottie-web": "^5.13.0"
 	},
 	"devDependencies": {
+		"postcss-preset-env": "^11.2.0",
 		"autoprefixer": "^10.4.21",
 		"baseline-browser-mapping": "^2.9.15",
 		"compressing": "^2.0.0",
