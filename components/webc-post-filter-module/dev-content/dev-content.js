@@ -1,4 +1,5 @@
 import ramsesImage from './ramses-tired.webp';
+import ramsesSchoolDay from './ramses-school-day.webp';
 import kaiImage from './kai.webp';
 import kaiSelfie from './kai-selfie.webp';
 import kaiLounging from './kai-lounging.webp';
@@ -308,6 +309,14 @@ export const devContentPets = [
 		},
 
 		categories: [14, 10, 4, 1]
+	}
+	{
+		name: `Ramses <span class='font-secondary'>School Day</span>`,
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: ramsesSchoolDay
+		},
+categories: [13, 3, 10, 5]
 	}
 ];
 

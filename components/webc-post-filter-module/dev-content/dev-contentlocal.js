@@ -1,4 +1,6 @@
 const ramsesImage = '../webc-post-filter-module/dev-content/ramses-tired.webp';
+const ramsesSchoolDay =
+	'../webc-post-filter-module/dev-content/ramses-school-day.webp';
 const kaiImage = '../webc-post-filter-module/dev-content/kai.webp';
 const kaiSelfie = '../webc-post-filter-module/dev-content/kai-selfie.webp';
 const kaiLounging = '../webc-post-filter-module/dev-content/kai-lounging.webp';
@@ -321,6 +323,15 @@ export const devContentPets = [
 		},
 
 		categories: [14, 10, 3]
+	},
+	{
+		name: `Ramses <span class='font-secondary'>School Day</span>`,
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: ramsesSchoolDay
+		},
+
+		categories: [13, 3, 10, 5]
 	}
 ];
 
