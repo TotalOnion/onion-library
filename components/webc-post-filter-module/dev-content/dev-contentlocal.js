@@ -44,6 +44,7 @@ const marthaOnMat =
 const vanilleBass = '../webc-post-filter-module/dev-content/vanille-bass.webp';
 const vanilleNap = '../webc-post-filter-module/dev-content/vanille-asleep.webp';
 const mephyMice = './mephy-dreams-of-mice.webp';
+const remyGardenContemplation = './remy-garden-contemplation.webp';
 
 export const devContentPets = [
 	{
@@ -331,6 +332,14 @@ export const devContentPets = [
 			post_image_src: ramsesSchoolDay
 		},
 
+		categories: [13, 3, 10, 5]
+	},
+	{
+		name: `Remy <span class='font-secondary'>Garden Contemplation</span>`,
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: remyGardenContemplation
+		},
 		categories: [13, 3, 10, 5]
 	}
 ];

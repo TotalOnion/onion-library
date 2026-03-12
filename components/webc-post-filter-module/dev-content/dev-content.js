@@ -30,6 +30,7 @@ import marthaOnMat from './martha-on-the-mat.webp';
 import vanilleBass from './vanille-bass.webp';
 import vanilleNap from './vanille-asleep.webp';
 import mephyMice from './mephy-dreams-of-mice.webp';
+import remyGardenContemplation from './remy-garden-contemplation.webp';
 
 export const devContentPets = [
 	{
@@ -309,14 +310,22 @@ export const devContentPets = [
 		},
 
 		categories: [14, 10, 4, 1]
-	}
+	},
 	{
 		name: `Ramses <span class='font-secondary'>School Day</span>`,
 		link: 'https://totalonion.com',
 		images: {
 			post_image_src: ramsesSchoolDay
 		},
-categories: [13, 3, 10, 5]
+		categories: [13, 3, 10, 5]
+	},
+	{
+		name: `Remy <span class='font-secondary'>Garden Contemplation</span>`,
+		link: 'https://totalonion.com',
+		images: {
+			post_image_src: remyGardenContemplation
+		},
+		categories: [13, 3, 10, 5]
 	}
 ];
 
