@@ -3,9 +3,7 @@ const fs = require('fs');
 const {globSync} = require('glob');
 const yargs = require('yargs');
 const {exec} = require('child_process');
-const swiperTemplates = require('./new-block-templates/template-swiper');
-const vueTemplates = require('./new-block-templates/template-vue');
-const acfTemplate = require('./new-block-templates/template-acf');
+const acfTemplate = require('./new-block-templates/template-block-json');
 const defaultTemplates = require('./new-block-templates/template-default');
 
 const themePath =
@@ -132,8 +130,14 @@ fs.writeFileSync(
 	`${themePath}/views/blocks/${newBlockName}.twig`,
 	templateData
 );
+
+// Create block directory inside acf-blocks if it doesn't exist
+if (!fs.existsSync(`${themePath}/inc/acf-blocks/${newBlockName}`)) {
+	fs.mkdirSync(`${themePath}/inc/acf-blocks/${newBlockName}`);
+}
+
 fs.writeFileSync(
-	`${themePath}/inc/acf-blocks/${newBlockName}.php`,
+	`${themePath}/inc/acf-blocks/${newBlockName}/block.json`,
 	acfTemplate(newBlockName, projectName)
 );
 // fs.writeFileSync(
