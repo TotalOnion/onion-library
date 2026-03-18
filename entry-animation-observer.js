@@ -4,12 +4,11 @@ export const triggerOptions = {
 	scrollMargin: '0px',
 	threshold: 1
 };
-export function triggerEntryAnimation(element) {
+export function triggerEntryAnimation(element, triggerOptions) {
 	const intersectionCallback = (entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				let elem = entry.target;
-
 				elem.classList.add('trigger-animation');
 			}
 		});
