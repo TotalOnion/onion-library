@@ -5,10 +5,7 @@
 }
 .gradient-layer-v3__gradient-overlay-element {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: var(--gradient-zindex);
   grid-area: var(--gradient-grid-area);
 }
@@ -17,10 +14,7 @@
   content: "";
   pointer-events: none;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   opacity: var(--gradient-opacity);
 }
 .gradient-layer-v3__gradient-overlay-element::before {
@@ -44,9 +38,6 @@
   background: var(--blur-colour);
   backdrop-filter: blur(var(--blur-value));
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: var(--blur-zindex);
 }

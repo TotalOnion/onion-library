@@ -24,8 +24,6 @@
 }
 .section-separator-v3__secondary-image {
   position: absolute;
-  align-self: center;
-  justify-self: var(--horizontal-position);
   place-self: center var(--horizontal-position);
   translate: var(--horizontal-offset) var(--vertical-offset);
   top: 0;

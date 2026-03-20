@@ -8,8 +8,7 @@
   padding-bottom: calc(50 / var(--design-reference) * var(--screen-width));
 }
 .cocktail-recipe-v3__ingredients-container .ingredients-title {
-  padding-top: calc(10 / var(--design-reference) * var(--screen-width));
-  padding-bottom: calc(10 / var(--design-reference) * var(--screen-width));
+  padding-block: calc(10 / var(--design-reference) * var(--screen-width));
   font-family: var(--primary-font-family);
   font-size: calc(80 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
   font-weight: 500;
@@ -26,8 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: calc(15 / var(--design-reference) * var(--screen-width));
-  padding-bottom: calc(15 / var(--design-reference) * var(--screen-width));
+  padding-block: calc(15 / var(--design-reference) * var(--screen-width));
   border-bottom: 1px solid rgba(250, 248, 236, 0.3019607843);
 }
 .cocktail-recipe-v3__servings .servings-title {
@@ -180,14 +178,12 @@
   font-family: var(--secondary-font-family);
   font-size: calc(26 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
   font-weight: 500;
-  padding-top: calc(20 / var(--design-reference) * var(--screen-width));
-  padding-bottom: calc(20 / var(--design-reference) * var(--screen-width));
+  padding-block: calc(20 / var(--design-reference) * var(--screen-width));
   border-bottom: 1px solid rgba(250, 248, 236, 0.3019607843);
 }
 @media screen and (min-width: 768px) {
   .cocktail-recipe-v3__equipment-container .equipments-title {
-    padding-top: calc(10 / var(--design-reference) * var(--screen-width));
-    padding-bottom: calc(10 / var(--design-reference) * var(--screen-width));
+    padding-block: calc(10 / var(--design-reference) * var(--screen-width));
   }
 }
 .cocktail-recipe-v3__equipment-container .equipments-wrapper {
@@ -226,15 +222,13 @@
   font-size: calc(70 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
   font-weight: 500;
   text-transform: uppercase;
-  padding-top: calc(10 / var(--design-reference) * var(--screen-width));
-  padding-bottom: calc(10 / var(--design-reference) * var(--screen-width));
+  padding-block: calc(10 / var(--design-reference) * var(--screen-width));
   text-box-edge: cap alphabetic;
   text-box-trim: trim-both;
 }
 @media screen and (min-width: 768px) {
   .cocktail-recipe-v3__instructions-container .instructions-title {
-    padding-top: calc(40 / var(--design-reference) * var(--screen-width));
-    padding-bottom: calc(40 / var(--design-reference) * var(--screen-width));
+    padding-block: calc(40 / var(--design-reference) * var(--screen-width));
     font-size: calc(160 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
   }
 }
@@ -242,8 +236,7 @@
   display: flex;
   align-items: flex-start;
   gap: calc(20 / var(--design-reference) * var(--screen-width));
-  padding-top: calc(30 / var(--design-reference) * var(--screen-width));
-  padding-bottom: calc(30 / var(--design-reference) * var(--screen-width));
+  padding-block: calc(30 / var(--design-reference) * var(--screen-width));
   border-top: 1px solid rgba(250, 248, 236, 0.3019607843);
 }
 @media screen and (min-width: 768px) {
@@ -254,8 +247,7 @@
 .cocktail-recipe-v3__instructions-container .instructions-wrapper .instructions-number {
   font-family: var(--secondary-font-family);
   font-size: calc(30 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
-  padding-left: calc(10 / var(--design-reference) * var(--screen-width));
-  padding-right: calc(10 / var(--design-reference) * var(--screen-width));
+  padding-inline: calc(10 / var(--design-reference) * var(--screen-width));
   font-weight: 500;
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;

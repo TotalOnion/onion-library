@@ -69,8 +69,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   text-transform: uppercase;
-  align-items: flex-start;
-  justify-items: flex-start;
   place-items: flex-start;
   grid-gap: calc(10 / var(--design-reference) * var(--screen-width));
   gap: calc(10 / var(--design-reference) * var(--screen-width));
@@ -93,7 +91,6 @@
 }
 .market-selector-v3 a.market-selector-v3__market-link,
 .market-selector-v3 a.market-selector-v3__market-link--active {
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: #2d2926;
   font-weight: 400;

@@ -2,14 +2,10 @@
 .group-container-v3 {
   display: grid;
   grid-template: "main"/1fr;
-  align-items: center;
-  justify-items: center;
   place-items: center;
 }
 .group-container-v3__grid-container {
   grid-area: main;
-  align-self: stretch;
-  justify-self: stretch;
   place-self: stretch;
 }
 .group-container-v3__grid-container.flex-layout-container {
@@ -87,16 +83,12 @@
   .group-container-v3__grid-container.grid-layout-container.scroll-btns-desktop::scroll-button(left) {
     content: "\25c4";
     position: absolute;
-    align-self: center;
-    justify-self: flex-start;
     place-self: center flex-start;
     z-index: 50;
   }
   .group-container-v3__grid-container.grid-layout-container.scroll-btns-desktop::scroll-button(right) {
     content: "\25ba";
     position: absolute;
-    align-self: center;
-    justify-self: flex-end;
     place-self: center flex-end;
     z-index: 50;
   }
@@ -127,16 +119,12 @@
   .group-container-v3__grid-container.grid-layout-container.scroll-btns-portrait::scroll-button(left) {
     content: "\25c4";
     position: absolute;
-    align-self: center;
-    justify-self: flex-start;
     place-self: center flex-start;
     z-index: 50;
   }
   .group-container-v3__grid-container.grid-layout-container.scroll-btns-portrait::scroll-button(right) {
     content: "\25ba";
     position: absolute;
-    align-self: center;
-    justify-self: flex-end;
     place-self: center flex-end;
     z-index: 50;
   }
@@ -167,16 +155,12 @@
   .group-container-v3__grid-container.grid-layout-container.scroll-btns-mobile::scroll-button(left) {
     content: "\25c4";
     position: absolute;
-    align-self: center;
-    justify-self: flex-start;
     place-self: center flex-start;
     z-index: 50;
   }
   .group-container-v3__grid-container.grid-layout-container.scroll-btns-mobile::scroll-button(right) {
     content: "\25ba";
     position: absolute;
-    align-self: center;
-    justify-self: flex-end;
     place-self: center flex-end;
     z-index: 50;
   }
@@ -265,8 +249,6 @@
   z-index: var(--element-z-index, 5);
   grid-row: var(--grid-row-start-mobile)/span var(--grid-row-span-mobile);
   grid-column: var(--grid-column-start-mobile)/span var(--grid-column-span-mobile);
-  align-self: var(--grid-vertical-placement-mobile);
-  justify-self: var(--grid-horizontal-placement-mobile);
   place-self: var(--grid-vertical-placement-mobile) var(--grid-horizontal-placement-mobile);
 }
 .group-container-v3__block-container.grid-layout-container:has(> .subgrid-layout-mobile) {
@@ -280,8 +262,6 @@
   .group-container-v3__block-container.grid-layout-container {
     grid-row: var(--grid-row-start-portrait)/span var(--grid-row-span-portrait);
     grid-column: var(--grid-column-start-portrait)/span var(--grid-column-span-portrait);
-    align-self: var(--grid-vertical-placement-portrait);
-    justify-self: var(--grid-horizontal-placement-portrait);
     place-self: var(--grid-vertical-placement-portrait) var(--grid-horizontal-placement-portrait);
   }
   .group-container-v3__block-container.grid-layout-container:has(> .subgrid-layout-portrait) {
@@ -296,8 +276,6 @@
   .group-container-v3__block-container.grid-layout-container {
     grid-row: var(--grid-row-start)/span var(--grid-row-span);
     grid-column: var(--grid-column-start)/span var(--grid-column-span);
-    align-self: var(--grid-vertical-placement-desktop);
-    justify-self: var(--grid-horizontal-placement-desktop);
     place-self: var(--grid-vertical-placement-desktop) var(--grid-horizontal-placement-desktop);
   }
   .group-container-v3__block-container.grid-layout-container:has(> .subgrid-layout-desktop) {

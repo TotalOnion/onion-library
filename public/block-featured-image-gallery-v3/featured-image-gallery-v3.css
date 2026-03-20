@@ -13,8 +13,6 @@
 .featured-image-gallery-v3__featured-image-container {
   perspective: 1000px;
   grid-area: featured;
-  align-self: stretch;
-  justify-self: stretch;
   place-self: stretch;
   aspect-ratio: 1;
 }
@@ -41,8 +39,6 @@
 }
 .featured-image-gallery-v3__featured-image-back {
   display: grid;
-  align-items: center;
-  justify-items: center;
   place-items: center;
   background-color: var(--bally-blue-dark);
   transform: rotateY(180deg);
@@ -67,8 +63,6 @@
 }
 .featured-image-gallery-v3__other-images {
   grid-area: other;
-  align-self: stretch;
-  justify-self: stretch;
   place-self: stretch;
   display: grid;
   aspect-ratio: 1;

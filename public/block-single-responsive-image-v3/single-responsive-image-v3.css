@@ -8,10 +8,7 @@
   position: relative;
   position: var(--image-position, relative);
   translate: var(--image-offset-horiz) var(--image-offset-vert);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   min-height: 0;
   display: flex;
   z-index: var(--image-z-index);

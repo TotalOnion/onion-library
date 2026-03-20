@@ -17,8 +17,6 @@
 }
 .standard-content-v3__inner-container {
   grid-area: main;
-  align-self: var(--content-box-vert-align-mobile);
-  justify-self: var(--content-box-horiz-align-mobile);
   place-self: var(--content-box-vert-align-mobile) var(--content-box-horiz-align-mobile);
   z-index: 5;
   z-index: var(--content-z-index, 5);
@@ -44,8 +42,6 @@
 @media screen and (min-width: 768px) {
   .standard-content-v3__inner-container {
     justify-content: var(--content-items-alignment-portrait);
-    align-self: var(--content-box-vert-align-portrait);
-    justify-self: var(--content-box-horiz-align-portrait);
     place-self: var(--content-box-vert-align-portrait) var(--content-box-horiz-align-portrait);
     padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult-portrait));
     margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-right-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-left-margin-portrait));
@@ -57,8 +53,6 @@
     column-gap: var(--content-items-micro-gap-desktop, calc(var(--content-items-gap-desktop) * var(--global-inline-spacing)));
     justify-content: var(--content-items-alignment);
     max-width: var(--cb-max-width);
-    align-self: var(--content-box-vert-align);
-    justify-self: var(--content-box-horiz-align);
     place-self: var(--content-box-vert-align) var(--content-box-horiz-align);
     padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult));
     margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin)) calc(var(--global-inline-spacing) * var(--content-box-right-margin)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin)) calc(var(--global-inline-spacing) * var(--content-box-left-margin));
@@ -70,8 +64,7 @@
 .standard-content-v3__content-box,
 .standard-content-v3__content-container {
   max-width: var(--wysiwyg-max-width-mobile);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   display: grid;
   word-break: normal;
   width: 100%;
@@ -428,27 +421,19 @@
   align-items: center;
   color: var(--accent-text-colour-mobile);
   text-align: center;
-  align-self: center;
-  align-self: var(--alignment, center);
-  justify-self: center;
-  justify-self: var(--alignment, center);
-  align-self: center;
-  justify-self: center;
   place-self: center;
   place-self: var(--alignment, center);
   font-family: var(--secondary-font-family);
   letter-spacing: 0.8em;
   text-transform: uppercase;
   gap: calc(10 / var(--design-reference) * var(--screen-width));
-  margin-left: calc(5 / var(--design-reference) * var(--screen-width));
-  margin-right: calc(5 / var(--design-reference) * var(--screen-width));
+  margin-inline: calc(5 / var(--design-reference) * var(--screen-width));
   font-size: calc(10 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
 }
 @media screen and (min-width: 768px) {
   .standard-content-v3__accent-text {
     font-size: calc(10 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
-    margin-left: calc(5 / var(--design-reference) * var(--screen-width));
-    margin-right: calc(5 / var(--design-reference) * var(--screen-width));
+    margin-inline: calc(5 / var(--design-reference) * var(--screen-width));
     gap: calc(20 / var(--design-reference) * var(--screen-width));
   }
 }
@@ -456,8 +441,7 @@
   .standard-content-v3__accent-text {
     color: var(--accent-text-colour);
     font-size: calc(10 / var(--design-reference) * var(--font-reference) * var(--font-size-multiplier));
-    margin-left: calc(5 / var(--design-reference) * var(--screen-width));
-    margin-right: calc(5 / var(--design-reference) * var(--screen-width));
+    margin-inline: calc(5 / var(--design-reference) * var(--screen-width));
     gap: calc(20 / var(--design-reference) * var(--screen-width));
   }
 }
@@ -493,20 +477,12 @@
 }
 .standard-content-v3__video-play-button {
   grid-area: unset;
-  align-self: center;
-  align-self: var(--playbutton-vertical-alignment, center);
-  justify-self: center;
-  justify-self: var(--playbutton-horizontal-alignment, center);
-  align-self: center;
-  justify-self: center;
   place-self: center center;
   place-self: var(--playbutton-vertical-alignment, center) var(--playbutton-horizontal-alignment, center);
 }
 .standard-content-v3__content-image {
   width: 100%;
   height: auto;
-  align-self: var(--image-position-horizontal);
-  justify-self: var(--image-position-vertical);
   place-self: var(--image-position-horizontal) var(--image-position-vertical);
   translate: var(--image-position-offset-horizontal) var(--image-position-offset-vertical);
   rotate: var(--image-rotation);

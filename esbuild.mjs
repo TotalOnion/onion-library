@@ -36,7 +36,7 @@ await esbuild.build({
 			async transform(source) {
 				const { css } = await postcss([
 					autoprefixer,
-					postcssPresetEnv({ stage: 0 }),
+					postcssPresetEnv({ stage: 3 }),
 				]).process(source);
 				return css;
 			},
@@ -53,7 +53,7 @@ await esbuild.build({
 			async transform(source) {
 				const { css } = await postcss([
 					autoprefixer,
-					postcssPresetEnv({ stage: 0, from: "css" }),
+					postcssPresetEnv({ stage: 3, from: "css" }),
 				]).process(source);
 				return css;
 			},
@@ -70,7 +70,7 @@ await esbuild.build({
 			async transform(source) {
 				const { css } = await postcss([
 					autoprefixer,
-					postcssPresetEnv({ stage: 0 }),
+					postcssPresetEnv({ stage: 3 }),
 				]).process(source);
 				return css;
 			},

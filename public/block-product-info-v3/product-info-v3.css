@@ -6,8 +6,6 @@
 }
 .product-info-v3__inner-container {
   grid-area: main;
-  align-self: var(--content-box-vert-align-mobile);
-  justify-self: var(--content-box-horiz-align-mobile);
   place-self: var(--content-box-vert-align-mobile) var(--content-box-horiz-align-mobile);
   z-index: 5;
   z-index: var(--content-z-index, 5);
@@ -33,8 +31,6 @@
 @media screen and (min-width: 768px) {
   .product-info-v3__inner-container {
     justify-content: var(--content-items-alignment-portrait);
-    align-self: var(--content-box-vert-align-portrait);
-    justify-self: var(--content-box-horiz-align-portrait);
     place-self: var(--content-box-vert-align-portrait) var(--content-box-horiz-align-portrait);
     padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult-portrait)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult-portrait));
     margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-right-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin-portrait)) calc(var(--global-inline-spacing) * var(--content-box-left-margin-portrait));
@@ -46,8 +42,6 @@
     column-gap: var(--content-items-micro-gap-desktop, calc(var(--content-items-gap-desktop) * var(--global-inline-spacing)));
     justify-content: var(--content-items-alignment);
     max-width: var(--cb-max-width);
-    align-self: var(--content-box-vert-align);
-    justify-self: var(--content-box-horiz-align);
     place-self: var(--content-box-vert-align) var(--content-box-horiz-align);
     padding: calc(var(--global-inline-spacing) * var(--content-box-top-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-right-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-bottom-padding-mult)) calc(var(--global-inline-spacing) * var(--content-box-left-padding-mult));
     margin: calc(var(--global-inline-spacing) * var(--content-box-top-margin)) calc(var(--global-inline-spacing) * var(--content-box-right-margin)) calc(var(--global-inline-spacing) * var(--content-box-bottom-margin)) calc(var(--global-inline-spacing) * var(--content-box-left-margin));
@@ -59,8 +53,7 @@
 .product-info-v3__content-box,
 .product-info-v3__content-container {
   max-width: var(--wysiwyg-max-width-mobile);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   display: grid;
   word-break: normal;
   width: 100%;
@@ -348,16 +341,12 @@
   .product-info-v3.scroll-btns-desktop::scroll-button(left) {
     content: "\25c4";
     position: absolute;
-    align-self: center;
-    justify-self: flex-start;
     place-self: center flex-start;
     z-index: 50;
   }
   .product-info-v3.scroll-btns-desktop::scroll-button(right) {
     content: "\25ba";
     position: absolute;
-    align-self: center;
-    justify-self: flex-end;
     place-self: center flex-end;
     z-index: 50;
   }
@@ -388,16 +377,12 @@
   .product-info-v3.scroll-btns-portrait::scroll-button(left) {
     content: "\25c4";
     position: absolute;
-    align-self: center;
-    justify-self: flex-start;
     place-self: center flex-start;
     z-index: 50;
   }
   .product-info-v3.scroll-btns-portrait::scroll-button(right) {
     content: "\25ba";
     position: absolute;
-    align-self: center;
-    justify-self: flex-end;
     place-self: center flex-end;
     z-index: 50;
   }
@@ -428,16 +413,12 @@
   .product-info-v3.scroll-btns-mobile::scroll-button(left) {
     content: "\25c4";
     position: absolute;
-    align-self: center;
-    justify-self: flex-start;
     place-self: center flex-start;
     z-index: 50;
   }
   .product-info-v3.scroll-btns-mobile::scroll-button(right) {
     content: "\25ba";
     position: absolute;
-    align-self: center;
-    justify-self: flex-end;
     place-self: center flex-end;
     z-index: 50;
   }
@@ -519,10 +500,7 @@
 .product-info-v3__post-cover-link {
   grid-area: unset;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 99;
@@ -545,8 +523,6 @@
   z-index: var(--element-z-index, 5);
   grid-row: var(--grid-row-start-mobile)/span var(--grid-row-span-mobile);
   grid-column: var(--grid-column-start-mobile)/span var(--grid-column-span-mobile);
-  align-self: var(--grid-vertical-placement-mobile);
-  justify-self: var(--grid-horizontal-placement-mobile);
   place-self: var(--grid-vertical-placement-mobile) var(--grid-horizontal-placement-mobile);
 }
 .product-info-v3__info-item:has(> .subgrid-layout-mobile) {
@@ -560,8 +536,6 @@
   .product-info-v3__info-item {
     grid-row: var(--grid-row-start-portrait)/span var(--grid-row-span-portrait);
     grid-column: var(--grid-column-start-portrait)/span var(--grid-column-span-portrait);
-    align-self: var(--grid-vertical-placement-portrait);
-    justify-self: var(--grid-horizontal-placement-portrait);
     place-self: var(--grid-vertical-placement-portrait) var(--grid-horizontal-placement-portrait);
   }
   .product-info-v3__info-item:has(> .subgrid-layout-portrait) {
@@ -576,8 +550,6 @@
   .product-info-v3__info-item {
     grid-row: var(--grid-row-start)/span var(--grid-row-span);
     grid-column: var(--grid-column-start)/span var(--grid-column-span);
-    align-self: var(--grid-vertical-placement-desktop);
-    justify-self: var(--grid-horizontal-placement-desktop);
     place-self: var(--grid-vertical-placement-desktop) var(--grid-horizontal-placement-desktop);
   }
   .product-info-v3__info-item:has(> .subgrid-layout-desktop) {
@@ -601,8 +573,6 @@
   z-index: var(--element-z-index, 5);
   grid-row: var(--grid-row-start-mobile)/span var(--grid-row-span-mobile);
   grid-column: var(--grid-column-start-mobile)/span var(--grid-column-span-mobile);
-  align-self: var(--grid-vertical-placement-mobile);
-  justify-self: var(--grid-horizontal-placement-mobile);
   place-self: var(--grid-vertical-placement-mobile) var(--grid-horizontal-placement-mobile);
 }
 .product-info-v3__cta-selection-container:has(> .subgrid-layout-mobile) {
@@ -616,8 +586,6 @@
   .product-info-v3__cta-selection-container {
     grid-row: var(--grid-row-start-portrait)/span var(--grid-row-span-portrait);
     grid-column: var(--grid-column-start-portrait)/span var(--grid-column-span-portrait);
-    align-self: var(--grid-vertical-placement-portrait);
-    justify-self: var(--grid-horizontal-placement-portrait);
     place-self: var(--grid-vertical-placement-portrait) var(--grid-horizontal-placement-portrait);
   }
   .product-info-v3__cta-selection-container:has(> .subgrid-layout-portrait) {
@@ -632,8 +600,6 @@
   .product-info-v3__cta-selection-container {
     grid-row: var(--grid-row-start)/span var(--grid-row-span);
     grid-column: var(--grid-column-start)/span var(--grid-column-span);
-    align-self: var(--grid-vertical-placement-desktop);
-    justify-self: var(--grid-horizontal-placement-desktop);
     place-self: var(--grid-vertical-placement-desktop) var(--grid-horizontal-placement-desktop);
   }
   .product-info-v3__cta-selection-container:has(> .subgrid-layout-desktop) {
@@ -649,27 +615,21 @@
 }
 .product-info-v3__cta-style-post-colour,
 .product-info-v3__cta-style-post-text-colour-style {
-  padding-top: calc(10 / var(--design-reference) * var(--screen-width));
-  padding-bottom: calc(10 / var(--design-reference) * var(--screen-width));
-  padding-left: calc(20 / var(--design-reference) * var(--screen-width));
-  padding-right: calc(20 / var(--design-reference) * var(--screen-width));
+  padding-block: calc(10 / var(--design-reference) * var(--screen-width));
+  padding-inline: calc(20 / var(--design-reference) * var(--screen-width));
 }
 @media screen and (min-width: 768px) {
   .product-info-v3__cta-style-post-colour,
   .product-info-v3__cta-style-post-text-colour-style {
-    padding-top: calc(10 / var(--design-reference) * var(--screen-width));
-    padding-bottom: calc(10 / var(--design-reference) * var(--screen-width));
-    padding-left: calc(20 / var(--design-reference) * var(--screen-width));
-    padding-right: calc(20 / var(--design-reference) * var(--screen-width));
+    padding-block: calc(10 / var(--design-reference) * var(--screen-width));
+    padding-inline: calc(20 / var(--design-reference) * var(--screen-width));
   }
 }
 @media screen and (min-width: 1024px) {
   .product-info-v3__cta-style-post-colour,
   .product-info-v3__cta-style-post-text-colour-style {
-    padding-top: calc(10 / var(--design-reference) * var(--screen-width));
-    padding-bottom: calc(10 / var(--design-reference) * var(--screen-width));
-    padding-left: calc(20 / var(--design-reference) * var(--screen-width));
-    padding-right: calc(20 / var(--design-reference) * var(--screen-width));
+    padding-block: calc(10 / var(--design-reference) * var(--screen-width));
+    padding-inline: calc(20 / var(--design-reference) * var(--screen-width));
   }
 }
 .product-info-v3__cta-style-post-colour {
@@ -691,10 +651,7 @@
 }
 .product-info-v3__gradient-overlay__gradient-overlay-element {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: var(--gradient-zindex);
   grid-area: var(--gradient-grid-area);
 }
@@ -703,10 +660,7 @@
   content: "";
   pointer-events: none;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   opacity: var(--gradient-opacity);
 }
 .product-info-v3__gradient-overlay__gradient-overlay-element::before {
@@ -730,10 +684,7 @@
   background: var(--blur-colour);
   backdrop-filter: blur(var(--blur-value));
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: var(--blur-zindex);
 }
 .product-info-v3__post-tags {
@@ -745,8 +696,6 @@
   z-index: var(--element-z-index, 5);
   grid-row: var(--grid-row-start-mobile)/span var(--grid-row-span-mobile);
   grid-column: var(--grid-column-start-mobile)/span var(--grid-column-span-mobile);
-  align-self: var(--grid-vertical-placement-mobile);
-  justify-self: var(--grid-horizontal-placement-mobile);
   place-self: var(--grid-vertical-placement-mobile) var(--grid-horizontal-placement-mobile);
 }
 .product-info-v3__post-tags:has(> .subgrid-layout-mobile) {
@@ -760,8 +709,6 @@
   .product-info-v3__post-tags {
     grid-row: var(--grid-row-start-portrait)/span var(--grid-row-span-portrait);
     grid-column: var(--grid-column-start-portrait)/span var(--grid-column-span-portrait);
-    align-self: var(--grid-vertical-placement-portrait);
-    justify-self: var(--grid-horizontal-placement-portrait);
     place-self: var(--grid-vertical-placement-portrait) var(--grid-horizontal-placement-portrait);
   }
   .product-info-v3__post-tags:has(> .subgrid-layout-portrait) {
@@ -776,8 +723,6 @@
   .product-info-v3__post-tags {
     grid-row: var(--grid-row-start)/span var(--grid-row-span);
     grid-column: var(--grid-column-start)/span var(--grid-column-span);
-    align-self: var(--grid-vertical-placement-desktop);
-    justify-self: var(--grid-horizontal-placement-desktop);
     place-self: var(--grid-vertical-placement-desktop) var(--grid-horizontal-placement-desktop);
   }
   .product-info-v3__post-tags:has(> .subgrid-layout-desktop) {
@@ -802,8 +747,6 @@
   position: relative;
   position: var(--element-position, relative);
   z-index: var(--element-z-index);
-  align-self: var(--mobile-vertical-placement);
-  justify-self: var(--mobile-horizontal-placement);
   place-self: var(--mobile-vertical-placement) var(--mobile-horizontal-placement);
   translate: 0 0;
   translate: var(--element-horizontal-offset-mobile, 0) var(--element-vertical-offset-mobile, 0);
@@ -813,8 +756,6 @@
 @media screen and (min-width: 768px) {
   .product-info-v3__post-image-container--image-accent img,
   .product-info-v3__post-image-container--image-accent svg {
-    align-self: var(--portrait-vertical-placement, var(--desktop-vertical-placement));
-    justify-self: var(--portrait-horizontal-placement, var(--desktop-horizontal-placement));
     place-self: var(--portrait-vertical-placement, var(--desktop-vertical-placement)) var(--portrait-horizontal-placement, var(--desktop-horizontal-placement));
     translate: 0 0;
     translate: var(--element-horizontal-offset-portrait, var(--element-horizontal-offset-desktop, 0)) var(--element-vertical-offset-portrait, var(--element-vertical-offset-desktop, 0));
@@ -825,8 +766,6 @@
 @media screen and (min-width: 1024px) {
   .product-info-v3__post-image-container--image-accent img,
   .product-info-v3__post-image-container--image-accent svg {
-    align-self: var(--desktop-vertical-placement);
-    justify-self: var(--desktop-horizontal-placement);
     place-self: var(--desktop-vertical-placement) var(--desktop-horizontal-placement);
     translate: 0 0;
     translate: var(--element-horizontal-offset-desktop, 0) var(--element-vertical-offset-desktop, 0);
@@ -837,8 +776,7 @@
 .product-info-v3__post__image {
   display: flex;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   grid-area: main;
   height: auto;
   aspect-ratio: var(--image-aspect-ratio-mobile, var(--image-aspect-ratio-desktop));
@@ -847,8 +785,6 @@
   z-index: var(--element-z-index, 5);
   grid-row: var(--grid-row-start-mobile)/span var(--grid-row-span-mobile);
   grid-column: var(--grid-column-start-mobile)/span var(--grid-column-span-mobile);
-  align-self: var(--grid-vertical-placement-mobile);
-  justify-self: var(--grid-horizontal-placement-mobile);
   place-self: var(--grid-vertical-placement-mobile) var(--grid-horizontal-placement-mobile);
 }
 .product-info-v3__post__image:has(> .subgrid-layout-mobile) {
@@ -862,8 +798,6 @@
   .product-info-v3__post__image {
     grid-row: var(--grid-row-start-portrait)/span var(--grid-row-span-portrait);
     grid-column: var(--grid-column-start-portrait)/span var(--grid-column-span-portrait);
-    align-self: var(--grid-vertical-placement-portrait);
-    justify-self: var(--grid-horizontal-placement-portrait);
     place-self: var(--grid-vertical-placement-portrait) var(--grid-horizontal-placement-portrait);
   }
   .product-info-v3__post__image:has(> .subgrid-layout-portrait) {
@@ -878,8 +812,6 @@
   .product-info-v3__post__image {
     grid-row: var(--grid-row-start)/span var(--grid-row-span);
     grid-column: var(--grid-column-start)/span var(--grid-column-span);
-    align-self: var(--grid-vertical-placement-desktop);
-    justify-self: var(--grid-horizontal-placement-desktop);
     place-self: var(--grid-vertical-placement-desktop) var(--grid-horizontal-placement-desktop);
   }
   .product-info-v3__post__image:has(> .subgrid-layout-desktop) {
@@ -918,10 +850,7 @@
   width: var(--global-image-width);
   display: flex;
   position: var(--global-image-position);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
 .product-info-v3__global-image__image {
   -o-object-fit: var(--global-image-fit-style);
@@ -960,8 +889,6 @@
   z-index: var(--element-z-index, 5);
   grid-row: var(--grid-row-start-mobile)/span var(--grid-row-span-mobile);
   grid-column: var(--grid-column-start-mobile)/span var(--grid-column-span-mobile);
-  align-self: var(--grid-vertical-placement-mobile);
-  justify-self: var(--grid-horizontal-placement-mobile);
   place-self: var(--grid-vertical-placement-mobile) var(--grid-horizontal-placement-mobile);
 }
 .product-info-v3__post-text-alternative-style:has(> .subgrid-layout-mobile) {
@@ -975,8 +902,6 @@
   .product-info-v3__post-text-alternative-style {
     grid-row: var(--grid-row-start-portrait)/span var(--grid-row-span-portrait);
     grid-column: var(--grid-column-start-portrait)/span var(--grid-column-span-portrait);
-    align-self: var(--grid-vertical-placement-portrait);
-    justify-self: var(--grid-horizontal-placement-portrait);
     place-self: var(--grid-vertical-placement-portrait) var(--grid-horizontal-placement-portrait);
   }
   .product-info-v3__post-text-alternative-style:has(> .subgrid-layout-portrait) {
@@ -991,8 +916,6 @@
   .product-info-v3__post-text-alternative-style {
     grid-row: var(--grid-row-start)/span var(--grid-row-span);
     grid-column: var(--grid-column-start)/span var(--grid-column-span);
-    align-self: var(--grid-vertical-placement-desktop);
-    justify-self: var(--grid-horizontal-placement-desktop);
     place-self: var(--grid-vertical-placement-desktop) var(--grid-horizontal-placement-desktop);
   }
   .product-info-v3__post-text-alternative-style:has(> .subgrid-layout-desktop) {

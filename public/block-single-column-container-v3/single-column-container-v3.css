@@ -1,8 +1,6 @@
 .single-column-container-v3 {
   display: grid;
   grid-template: "main"/1fr;
-  align-items: center;
-  justify-items: center;
   place-items: center;
   position: relative;
 }
