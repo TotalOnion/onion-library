@@ -216,7 +216,10 @@ const copyCoreComponent = (componentName) => {
 
 		switch (fileType) {
 			case 'php':
-				copyFile(`${sourceDir}/${file}`, `./inc/custom-extras/${file}`);
+				copyFile(
+					`${sourceDir}/${file}`,
+					`./project-setup/core-functions/${file}`
+				);
 				break;
 			case 'js':
 				copyFile(
