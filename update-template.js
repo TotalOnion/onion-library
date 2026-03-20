@@ -215,7 +215,7 @@ const copyCoreComponent = (componentName) => {
 
 		switch (fileType) {
 			case 'php':
-				copyFile(`${sourceDir}/${file}`, `./inc/admin-extras/${file}`);
+				copyFile(`${sourceDir}/${file}`, `./inc/custom-extras/${file}`);
 				break;
 			// case 'js':
 			// 	copyFile(
@@ -256,7 +256,7 @@ const copyFieldsComponent = (componentName) => {
 
 		switch (fileType) {
 			case 'php':
-				copyFile(`${sourceDir}/${file}`, `./inc/admin-extras/${file}`);
+				copyFile(`${sourceDir}/${file}`, `./inc/custom-extras/${file}`);
 				break;
 			// case 'js':
 			// 	copyFile(
@@ -311,7 +311,7 @@ const copyComponentComponent = (componentName) => {
 
 		switch (fileType) {
 			case 'php':
-				copyFile(`${sourceDir}/${file}`, `./inc/admin-extras/${file}`);
+				copyFile(`${sourceDir}/${file}`, `./inc/custom-extras/${file}`);
 				break;
 			// case 'js':
 			// 	copyFile(
@@ -410,7 +410,7 @@ const copyAdminComponent = (componentName) => {
 
 		switch (fileType) {
 			case 'php':
-				copyFile(`${sourceDir}/${file}`, `./inc/admin-extras/${file}`);
+				copyFile(`${sourceDir}/${file}`, `./inc/custom-extras/${file}`);
 				break;
 		}
 	});
