@@ -150,7 +150,11 @@ if (
 		`${libraryPath}/components/${componentName}/${componentModuleName}.php`
 	)
 ) {
-	if (componentType === 'admin' || componentType === 'fields') {
+	if (
+		componentType === 'admin' ||
+		componentType === 'fields' ||
+		componentType === 'core'
+	) {
 		fs.copyFileSync(
 			`${libraryPath}/components/${componentName}/${componentModuleName}.php`,
 			`./web/wp-content/themes/global-theme/inc/custom-extras/${componentModuleName}.php`
@@ -168,16 +172,6 @@ if (
 	}
 }
 
-if (
-	fs.existsSync(
-		`${libraryPath}/components/${componentName}/${componentModuleName}.vue`
-	)
-) {
-	fs.copyFileSync(
-		`${libraryPath}/components/${componentName}/${componentModuleName}.vue`,
-		`./web/wp-content/themes/global-theme/views/blocks/${componentModuleName}.vue`
-	);
-}
 if (
 	fs.existsSync(
 		`${libraryPath}/components/${componentName}/${componentModuleName}.cy.js`
