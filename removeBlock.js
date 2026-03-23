@@ -27,6 +27,15 @@ function deleteBlockFiles(blockName) {
 			console.error(err);
 		}
 	});
+	// Remove the inline SCSS file if it exists
+	fs.unlink(
+		`${themePath}/assets/scss/blocks/${blockName}-inline.scss`,
+		(err) => {
+			if (err && err.code !== 'ENOENT') {
+				console.error(err);
+			}
+		}
+	);
 	if (fs.existsSync(`${themePath}/assets/scss/blocks/${blockName}`)) {
 		fs.rmSync(`${themePath}/assets/scss/blocks/${blockName}`, {
 			recursive: true
