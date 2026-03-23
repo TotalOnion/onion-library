@@ -16,7 +16,7 @@
 	{{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
 	<!--pattern-replace-start:component/video-component-v3 -->
-	{{include('components/video-component-v3',{ fields, block, blockClassName }, with_context = false)}}
+	{{include('components/video-component-v3.twig',{ fields, block, blockClassName }, with_context = false)}}
 	<!--pattern-replace-end:component/video-component-v3 -->
 
 	{% if fields.animations.enable_animations %}
