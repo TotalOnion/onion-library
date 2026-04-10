@@ -73,39 +73,11 @@ if (dynamicEntryPoints.indexOf(newBlockName) !== -1) {
 	);
 }
 
-const imageTemplate = `
-{{ include("components/responsive-image.twig", {fields : fields, block : block, blockClassName: blockClassName}, with_context = false) }}
-`;
-
-const contentContainerTemplate = `
-<div class="${newBlockName}__content-container">
-	<h1 class="${newBlockName}__title">${newBlockName} title!</h1>
-</div>
-`;
-
 const templateData = `
 {% set blockClassName = "${newBlockName}" %}
-{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
-{% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
-{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
-{% set styleEntryPoint = include('entry-points/entry-point-style.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
-{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 
-{% set sectionStyles =  styleEntryPoint %}
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{block.id}} lazy-fade" data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
 
-{{previewEntryPoint}}
-<style>
-	.{{blockClassName}}.{{block.id}}{
-		{{sectionStyles}}
-	}
-</style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{classNameEntryPoint}} {{block.id}} lazy-fade" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-assetkey="{{blockClassName}}">
-	${swiper ? swiperTemplates.templatetwig(newBlockName) : ''}${
-	image ? imageTemplate : ''
-}
-	${content ? contentContainerTemplate : ''}
-	${vue ? vueTemplates.templatetwig(newBlockName) : ''}
-	{{htmlEntryPoint}}
 </section>`;
 
 let jsData;
@@ -140,16 +112,6 @@ fs.writeFileSync(
 	`${themePath}/inc/acf-blocks/${newBlockName}/block.json`,
 	acfTemplate(newBlockName, projectName)
 );
-// fs.writeFileSync(
-// 	`./cypress/e2e/components/${newBlockName}.cy.js`,
-// 	cypressJs(newBlockName)
-// );
-if (vue) {
-	fs.writeFileSync(
-		`${themePath}/assets/vue/blocks/${newBlockName}.vue`,
-		vueTemplates.templatevuefile(newBlockName)
-	);
-}
 
 console.log(
 	`👑 👑 👑 Hurrah! You made a new block called ${newBlockName} 👑 👑 👑`

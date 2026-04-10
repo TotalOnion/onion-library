@@ -7,17 +7,22 @@ module.exports = function (newBlockName, projectName) {
 	return `{
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "${namespace}/${newBlockName}",
+	"name": "acf/${newBlockName}",
 	"title": "${blockTitle}",
-	"category": "common",
-	"icon": "smiley",
+	"category": "project-blocks",
 	"description": "${blockTitle} block",
-	"keywords": ["content", "text"],
+	"keywords": ["content"],
 	"version": "1.0.0",
 	"textdomain": "${namespace}",
+	"acf": {
+		"mode": "preview",
+		"renderCallback": "core_block_render_post_object_v3",
+		"blockVersion": 3
+	},
 	"supports": {
+		"align": false,
 		"anchor": true,
-		"align": false
+		"jsx": true
 	},
 	"example": {
 		"attributes": {
@@ -26,10 +31,6 @@ module.exports = function (newBlockName, projectName) {
 				"is_example": true
 			}
 		}
-	},
-	"acf": {
-		"mode": "preview",
-		"renderCallback": "core_block_render_post_object_v3"
 	}
 }`;
 };
