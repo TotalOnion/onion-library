@@ -1,9 +1,9 @@
 {% set blockClassName = "accent-image-v3" %}
-{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes-v3.twig', { fields: fields, block: block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
-{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute-v3.twig', { fields: fields, block: block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
-{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set sectionStyles =  styleEntryPoint %}
 {{previewEntryPoint}}
 <style>
@@ -45,7 +45,7 @@
 			{% if image.animations.enable_animations %}
 				{{include('components/animations-style-v3.twig', { fields: image, suffix }, with_context = false)}}
 			{% endif %}
-			<style>
+			<style accentimagestyle>
 				.loaded .{{block.id}}-{{loop.index}}.{{blockClassName}}__accent-image {
 					{{include('components/animations-v3.twig', { fields: image, block: block, blockClassName: blockClassName, suffix }, with_context = false)}}
 					animation: var(--animation-name) var(--animation-duration) var(--animation-delay) var(--animation-easing) var(--animation-repeat) var(--animation-fill-mode) var(--animation-direction);
@@ -109,6 +109,9 @@
 					}
 				}
 			</style>
+
+			<!--pattern-replace-var:accentImageSrc={{accentImage.src}}-->
+
 			<{{accentImageContainerElement}}
 				{{accentImageCtaType == 'link' ? 'href="' ~ image.accent_image_link.url ~ '" ' ~ 'target="' ~ image.accent_image_link.target ~ '" ' : ''}}
 				class="{{block.id}}-{{ loop.index }} {{blockClassName}}__accent-image">

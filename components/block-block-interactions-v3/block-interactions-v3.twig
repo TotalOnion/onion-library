@@ -1,9 +1,9 @@
 {% set blockClassName = "block-interactions-v3" %}
-{% set classNameEntryPoint = include('entry-points/entry-point-classes.twig', { fields: fields, block: block }, with_context = false) %}
+{% set classNameEntryPoint = include('entry-points/entry-point-classes-v3.twig', { fields: fields, block: block }, with_context = false) %}
 {% set htmlEntryPoint = include('entry-points/entry-point-html-v3.twig', { fields: fields, block: block, blockClassName, blockClassName }, with_context = false) %}
-{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute.twig', { fields: fields, block: block }, with_context = false) %}
+{% set dataAttributeEntryPoint = include('entry-points/entry-point-data-attribute-v3.twig', { fields: fields, block: block }, with_context = false) %}
 {% set styleEntryPoint = include('entry-points/entry-point-style-v3.twig', { fields: fields, block: block, is_preview }, with_context = false) %}
-{% set previewEntryPoint = include('entry-points/entry-point-preview-info.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
+{% set previewEntryPoint = include('entry-points/entry-point-preview-info-v3.twig', { fields, block, displaytype, is_preview }, with_context = false) %}
 {% set sectionStyles =  styleEntryPoint %}
 {{previewEntryPoint}}
 <style>
@@ -11,7 +11,7 @@
 		{{sectionStyles}}
 	}
 </style>
-<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{block.className}} {{loop ? block.className.index ~ '-' ~ loop.index : ''}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
+<section {{block.anchor ? "id=" ~ block.anchor : ''}} class="{{blockClassName}} {{classNameEntryPoint}} lazy-fade {{block.id}}" {{dataAttributeEntryPoint}} data-blockid="{{block.id}}" data-parentblockid="{{block.videoIdPrefix}}" data-assetkey="{{blockClassName}}">
 	{% set blockInteractionsEnabled = fields.enable_block_interactions %}
 	{% set enableInteractionsButton = fields.enable_interactions_button %}
 	{% set interactionsButtonType = fields.interactions_button_type %}
@@ -19,15 +19,13 @@
 	{% set animationDuration = fields.animation_duration|ru %}
 
 	{% if blockInteractionsEnabled %}
-		{% for item in fields.modal_popup_triggers %}
-			{% if item.cta_style|ru matches '/^\\d+$/' %}
-				{% set ctaData = attribute(cta_styles['theme_cta_styles'], item.cta_style|ru - 1) %}
-				{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
-				{% set enableCtaIcon = ctaData.cta_settings.include_cta_icon %}
-				{% set ctaAnimationStyle = ctaData.cta_settings.cta_animation_style %}
+		{% for item in fields.interaction_triggers %}
+			{% if item.acf_fc_layout == 'video_trigger' %}
+				<button class="{{item.button_class}}" data-triggerid="{{ block.videoIdPrefix ~ item.video_trigger_id }}">
+					<span class="cmpl-cta-span">{{ item.button_text }}</span>
+				</button>
 			{% endif %}
-			
-			{% for item in fields.modal_popup_triggers %}
+			{% if item.acf_fc_layout == 'modal_popup_trigger' %}
 				{% if item.cta_style|ru matches '/^\\d+$/' %}
 					{% set ctaData = attribute(cta_styles['theme_cta_styles'], item.cta_style|ru - 1) %}
 					{% set enableCtaAnimation = ctaData.cta_settings.enable_cta_animation %}
@@ -39,11 +37,10 @@
 						{% if item.modal_popup_trigger_text %}
 							<span class="{{blockClassName}}__popup-trigger-text">{{ item.modal_popup_trigger_text }}</span>
 						{% endif %}
-						<span class="{{blockClassName}}__popup-trigger-icon">
-						{# <img src="{{ get_image(options.theme_cta_icons[item.trigger_icon_type|ru]).src }}"> #}
-						<img src="{{ options.cta_icons[item.trigger_icon_type|ru].src }}" alt="modal trigger icon">
-						
-						
+						<span
+							class="{{blockClassName}}__popup-trigger-icon">
+							{# <img src="{{ get_image(options.theme_cta_icons[item.trigger_icon_type|ru]).src }}"> #}
+							<img src="{{ options.cta_icons[item.trigger_icon_type|ru].src }}" alt="modal trigger icon">
 						</span>
 					</button>
 				{% else %}
@@ -51,22 +48,8 @@
 						<span class="cmpl-cta-span">{{ item.modal_popup_trigger_text }}</span>
 					</button>
 				{% endif %}
-			{% endfor %}
-		{% endfor %}
-
-		{% if enableInteractionsButton %}
-			{% if (interactionsButtonType|ru == 'close-block') %}
-				{% set closeButtonIcon = get_image(fields.upload_close_icon) %}
-				{% set closeButtonCookie = fields.enable_closed_cookie %}
-				<button class="block-interactions-v3__block-close-button" data-animationname="{{animationName}}" data-animationduration="{{animationDuration}}" data-store-cookie="{{closeButtonCookie ? 'true' : 'false' }}">
-					{% set iconType = options.theme_cta_icons.cta_close_icon %}
-					{% set iconImage = get_image(iconType) %}
-					{% set isSVG = iconImage.post_mime_type == 'image/svg+xml' %}
-					{{ isSVG ? get_raw_svg(iconImage.id) : '<img class="" src="' ~ iconImage.src ~ '" alt="close button">'}}
-				</button>
 			{% endif %}
-		{% endif %}
-
+		{% endfor %}
 	{% endif %}
 	{{htmlEntryPoint}}
 </section>
