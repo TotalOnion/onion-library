@@ -1,0 +1,15 @@
+<responsive-image class="responsive-image-v3" data-assetkey="responsive-image" data-enableparallax="{{ parallaxEnabled }}">
+
+	<picture class="responsive-image-v3__picture {{picture_id|default(block.id)}}" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" data-assetkey="responsive-image" data-enableparallax="{{ parallaxEnabled }}">
+
+			<source data-type="srcSetDesktop" data-pattern-suffix="{{suffix}}" media="(min-width: 1024px)" class="responsive-image-v3__source responsive-image-v3--desktop" width="{{ desktopImage.width }}" height="{{ desktopImage.height }}" srcset="{{desktopSrcset}}"/>
+
+
+			<source data-type="srcSetTablet" data-pattern-suffix="{{suffix}}" media="(min-width: 768px)" width="{{ tabletImage.width }}" height="{{ tabletImage.height }}" class="responsive-image-v3__source responsive-image-v3--tablet" srcset="{{ tabletSrcset }}"/>
+
+			<source data-type="srcSetMobile" data-pattern-suffix="{{suffix}}" class="responsive-image-v3__source responsive-image-v3__source--mobile" width="{{ mobileImage.width }}" height="{{ mobileImage.height }}" srcset="{{ mobileSrcset }}"/>
+
+		<img data-type="srcGeneral" data-elementname="main-image" data-pattern-suffix="{{suffix}}" data-pattern-dynamic="{{renderDynamic}}" {{ enableEagerLoading }} sizes="{{ sizes }}" class="responsive-image-v3__image" src="{{mainImageSrc}}" alt="{{ desktopImage.alt }}" {{ parallaxDepth }} {{ parallaxOffsetY }}/>
+	</picture>
+
+</responsive-image>

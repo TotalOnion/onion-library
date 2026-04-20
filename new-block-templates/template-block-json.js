@@ -11,6 +11,7 @@ module.exports = function (newBlockName, projectName) {
 	"title": "${blockTitle}",
 	"category": "project-blocks",
 	"description": "${blockTitle} block",
+	"icon": "green-brick",
 	"keywords": ["content"],
 	"version": "1.0.0",
 	"textdomain": "${namespace}",

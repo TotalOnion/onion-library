@@ -1,0 +1,25 @@
+<my-paragraph>
+    <span slot="my-text">Let's have some different text!</span>
+    <slot name="my-text">My default text</slot>
+
+</my-paragraph>
+
+<script>
+    class MyParagraph extends HTMLElement {
+        constructor() {
+            super();
+            const shadow = this.attachShadow({ mode: 'open' });
+            shadow.innerHTML = `
+                <style>
+                    p {
+                        color: blue;
+                        font-size: 18px;
+                    }
+                </style>
+                <p><slot name="my-text">My default text</slot></p>
+            `;
+        }
+    }
+
+    customElements.define('my-paragraph', MyParagraph);
+</script>
