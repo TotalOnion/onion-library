@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const {globSync} = require('glob');
 const yargs = require('yargs');
-const compressing = require('compressing');
 const templateOptions = yargs.argv._;
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
@@ -11,10 +10,6 @@ const srcPathJs = `${themePath}/assets/js/blocks`;
 const srcPathScss = `${themePath}/assets/scss/blocks`;
 const srcPathTwig = `${themePath}/views/blocks`;
 const srcPathBlockJson = `${themePath}/inc/acf-blocks`;
-// exported-blocks lives at the project root, relative to cwd (the theme dir)
-const destPath =
-	process.env.EXPORTED_BLOCKS_PATH ||
-	path.resolve(process.cwd(), '../../../../exported-blocks');
 const newName = templateOptions[1];
 
 const exisitingBlockNames = [
@@ -49,13 +44,6 @@ if (blockName === newName) {
 }
 
 if (exisitingBlockNames.includes(blockName)) {
-	const dir = `${destPath}/${newName}`;
-	if (fs.existsSync(dir)) {
-		console.log('Removing previous duplication...');
-		fs.rmSync(dir, {recursive: true, force: true});
-		console.log('removed');
-	}
-	fs.mkdirSync(dir);
 	if (fs.existsSync(`${srcPathJs}/${blockName}.js`)) {
 		const contents = fs.readFileSync(
 			`${srcPathJs}/${blockName}.js`,
@@ -71,7 +59,7 @@ if (exisitingBlockNames.includes(blockName)) {
 				`${newName.toLowerCase().replaceAll(/( |-)/g, '')}`
 			)
 			.replaceAll(`blocks/${blockName}`, `blocks/${newName}`);
-		fs.writeFileSync(`${dir}/${newName}.js`, replaced, 'utf-8');
+		fs.writeFileSync(`${srcPathJs}/${newName}.js`, replaced, 'utf-8');
 		console.log(`👑👑\x1b[32m Successfully duplicated the js file! 👑👑`);
 	}
 	if (fs.existsSync(`${srcPathScss}/${blockName}.scss`)) {
@@ -80,19 +68,31 @@ if (exisitingBlockNames.includes(blockName)) {
 			'utf-8'
 		);
 		const replaced = contents.replaceAll(`${blockName}`, `${newName}`);
-		fs.writeFileSync(`${dir}/${newName}.scss`, replaced, 'utf-8');
+		fs.writeFileSync(`${srcPathScss}/${newName}.scss`, replaced, 'utf-8');
 		console.log(`👑👑\x1b[32m Successfully duplicated the scss file! 👑👑`);
+	}
+	if (fs.existsSync(`${srcPathScss}/${blockName}-inline.scss`)) {
+		const contents = fs.readFileSync(
+			`${srcPathScss}/${blockName}-inline.scss`,
+			'utf-8'
+		);
+		const replaced = contents.replaceAll(`${blockName}`, `${newName}`);
+		fs.writeFileSync(
+			`${srcPathScss}/${newName}-inline.scss`,
+			replaced,
+			'utf-8'
+		);
+		console.log(
+			`👑👑\x1b[32m Successfully duplicated the inline scss file! 👑👑`
+		);
 	}
 	if (fs.existsSync(`${srcPathTwig}/${blockName}.twig`)) {
 		const contents = fs.readFileSync(
 			`${srcPathTwig}/${blockName}.twig`,
 			'utf-8'
 		);
-		const regEx = RegExp(String.raw`(\"${blockName}) `, 'gi');
-		const replaced = contents.replaceAll(regEx, `"${newName} `);
-		const regEx2 = RegExp(String.raw`([\"|\']${blockName}[\"|\'])`, 'gi');
-		const replaced2 = replaced.replaceAll(regEx2, `"${newName}"`);
-		fs.writeFileSync(`${dir}/${newName}.twig`, replaced2, 'utf-8');
+		const replaced = contents.replaceAll(blockName, newName);
+		fs.writeFileSync(`${srcPathTwig}/${newName}.twig`, replaced, 'utf-8');
 		console.log(`👑👑\x1b[32m Successfully duplicated the twig file! 👑👑`);
 	}
 	if (fs.existsSync(`${srcPathBlockJson}/${blockName}/block.json`)) {
@@ -109,8 +109,9 @@ if (exisitingBlockNames.includes(blockName)) {
 		if (data.description) {
 			data.description = data.description.replaceAll(blockName, newName);
 		}
+		fs.mkdirSync(`${srcPathBlockJson}/${newName}`, {recursive: true});
 		fs.writeFileSync(
-			`${dir}/block.json`,
+			`${srcPathBlockJson}/${newName}/block.json`,
 			JSON.stringify(data, null, '\t'),
 			'utf-8'
 		);
@@ -118,11 +119,5 @@ if (exisitingBlockNames.includes(blockName)) {
 			`👑👑\x1b[32m Successfully duplicated the block.json file! 👑👑`
 		);
 	}
-	compressing.zip
-		.compressDir(`${dir}`, `${dir}.zip`)
-		.then(() => {
-			fs.rmSync(`${destPath}/${newName}`, {recursive: true});
-			console.log(`\x1b[32m 🎉 Zip created at ${dir}.zip \x1b[0m`);
-		})
-		.catch((err) => console.error(err));
+	console.log(`\x1b[32m 🎉 Block '${newName}' created successfully! \x1b[0m`);
 }
