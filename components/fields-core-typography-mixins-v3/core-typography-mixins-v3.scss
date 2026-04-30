@@ -800,7 +800,7 @@
 	);
 }
 @mixin p-s {
-	line-height: var(--paragraph-line-height);
+	line-height: var(--paragraph-small-line-height);
 	letter-spacing: var(--paragraph-letter-spacing);
 	font-family: var(--paragraph-font-family);
 
@@ -854,9 +854,9 @@
 	);
 }
 @mixin p-xs {
-	line-height: var(--paragraph-line-height);
+	line-height: var(--paragraph-extra-small-line-height);
 	letter-spacing: var(--paragraph-letter-spacing);
-	font-family: var(--paragraph-font-family);
+	font-family: var(--paragraph-extra-small-line-height);
 
 	strong,
 	b {
@@ -865,7 +865,7 @@
 
 	&:has(.font-tertiary) {
 		line-height: calc(
-			var(--paragraph-line-height) *
+			var(--paragraph-extra-small-line-height) *
 				var(--global-line-height-multiplier-tertiary)
 		);
 	}
@@ -908,7 +908,7 @@
 	);
 }
 @mixin p-xs {
-	line-height: var(--paragraph-line-height);
+	line-height: var(--paragraph-extra-small-line-height);
 	letter-spacing: var(--paragraph-letter-spacing);
 	font-family: var(--paragraph-font-family);
 
@@ -919,7 +919,7 @@
 
 	&:has(.font-tertiary) {
 		line-height: calc(
-			var(--paragraph-line-height) *
+			var(--paragraph-extra-small-line-height) *
 				var(--global-line-height-multiplier-tertiary)
 		);
 	}
@@ -962,7 +962,7 @@
 	);
 }
 @mixin p-xxs {
-	line-height: var(--paragraph-line-height);
+	line-height: var(--paragraph-extra-extra-small-line-height);
 	letter-spacing: var(--paragraph-letter-spacing);
 	font-family: var(--paragraph-font-family);
 
