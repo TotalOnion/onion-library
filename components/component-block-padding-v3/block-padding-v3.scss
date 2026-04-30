@@ -3,60 +3,60 @@
 @use '../../breakpoints';
 
 @mixin blockPadding() {
-	@layer base-styles {
+	@layer components {
 		.cmpl-block-padding {
 			padding: calc(
 					var(--global-inline-spacing) *
-						var(--padding-block-multiplier-mobile-top)
+						var(--padding-block-multiplier-mobile-top, 0)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--padding-inline-multiplier-mobile-right)
+						var(--padding-inline-multiplier-mobile-right, 0)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--padding-block-multiplier-mobile-bottom)
+						var(--padding-block-multiplier-mobile-bottom, 0)
 				)
 				calc(
 					var(--global-inline-spacing) *
-						var(--padding-inline-multiplier-mobile-left)
+						var(--padding-inline-multiplier-mobile-left, 0)
 				);
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
 				padding: calc(
 						var(--global-inline-spacing) *
-							var(--padding-block-multiplier-portrait-top)
+							var(--padding-block-multiplier-portrait-top, 0)
 					)
 					calc(
 						var(--global-inline-spacing) *
-							var(--padding-inline-multiplier-portrait-right)
+							var(--padding-inline-multiplier-portrait-right, 0)
 					)
 					calc(
 						var(--global-inline-spacing) *
-							var(--padding-block-multiplier-portrait-bottom)
+							var(--padding-block-multiplier-portrait-bottom, 0)
 					)
 					calc(
 						var(--global-inline-spacing) *
-							var(--padding-inline-multiplier-portrait-left)
+							var(--padding-inline-multiplier-portrait-left, 0)
 					);
 			}
 
 			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
 				padding: calc(
 						var(--global-inline-spacing) *
-							var(--padding-block-multiplier-desktop-top)
+							var(--padding-block-multiplier-desktop-top, 0)
 					)
 					calc(
 						var(--global-inline-spacing) *
-							var(--padding-inline-multiplier-desktop-right)
+							var(--padding-inline-multiplier-desktop-right, 0)
 					)
 					calc(
 						var(--global-inline-spacing) *
-							var(--padding-block-multiplier-desktop-bottom)
+							var(--padding-block-multiplier-desktop-bottom, 0)
 					)
 					calc(
 						var(--global-inline-spacing) *
-							var(--padding-inline-multiplier-desktop-left)
+							var(--padding-inline-multiplier-desktop-left, 0)
 					);
 			}
 		}
