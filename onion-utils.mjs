@@ -114,6 +114,64 @@ export function checkDevice() {
 	try {
 		const deviceAgent = navigator.userAgent.toLowerCase();
 		const htmlElement = document.querySelector("html");
+
+		if (!htmlElement) return;
+
+		const platformRaw = navigator.platform?.toLowerCase() || "";
+		const isDesktop =
+			deviceAgent.includes("windows") ||
+			deviceAgent.includes("macintosh") ||
+			platformRaw.includes("win") ||
+			platformRaw.includes("mac");
+
+		function browserCheck() {
+			if (navigator.userAgent.search("MSIE") >= 0) {
+				htmlElement.classList.add("ie");
+			} else if (navigator.userAgent.search("Edge") >= 0) {
+				htmlElement.classList.add("edge-legacy");
+			} else if (navigator.userAgent.search("Chrome") >= 0) {
+				htmlElement.classList.add("chrome");
+			} else if (navigator.userAgent.search("Firefox") >= 0) {
+				htmlElement.classList.add("firefox");
+			} else if (
+				navigator.userAgent.search("Safari") >= 0 &&
+				navigator.userAgent.search("Chrome") < 0
+			) {
+				htmlElement.classList.add("safari");
+			} else if (navigator.userAgent.search("Opera") >= 0) {
+				htmlElement.classList.add("opera");
+			}
+		}
+
+		if (isDesktop) {
+			// add platform classes (e.g. macintel, win32)
+			if (navigator.platform) {
+				let platform = navigator.platform.toLowerCase();
+				let platformArray = [platform];
+
+				if (platform.includes("-")) {
+					platformArray = platform.split("-");
+				}
+
+				if (platform.includes(" ")) {
+					platformArray = platform.split(" ");
+				}
+
+				htmlElement.classList.add(...platformArray);
+			}
+
+			if (deviceAgent.match(/(windows)/)) {
+				htmlElement.classList.add("windows");
+			}
+
+			if (deviceAgent.match(/(macintosh)/)) {
+				htmlElement.classList.add("mac");
+			}
+
+			browserCheck();
+			return;
+		}
+
 		if (
 			"ontouchstart" in globalThis &&
 			window.screen.width * window.devicePixelRatio >= 2048 &&
@@ -121,52 +179,40 @@ export function checkDevice() {
 		) {
 			htmlElement.classList.add("highResTabletPortrait");
 		}
+
 		if ("ontouchstart" in globalThis) {
 			htmlElement.classList.add("touch");
 		}
+
 		if (navigator.connection) {
 			htmlElement.classList.add(navigator.connection.effectiveType);
 		}
+
 		if (navigator.platform) {
 			let platform = navigator.platform.toLowerCase();
 			let platformArray = [platform];
-			if (platform.search("-")) {
+
+			if (platform.includes("-")) {
 				platformArray = platform.split("-");
 			}
-			if (platform.search(" ")) {
+
+			if (platform.includes(" ")) {
 				platformArray = platform.split(" ");
 			}
+
 			htmlElement.classList.add(...platformArray);
 		}
+
 		if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
 			htmlElement.classList.add("ios");
 			htmlElement.classList.add("mobile");
 		}
-		if (deviceAgent.match(/(windows)/)) {
-			htmlElement.classList.add("windows");
-		}
-		if (deviceAgent.match(/(macintosh)/)) {
-			htmlElement.classList.add("mac");
-		}
+
 		if (deviceAgent.match(/(android)/)) {
 			htmlElement.classList.add("android");
 		}
-		if (navigator.userAgent.search("MSIE") >= 0) {
-			htmlElement.classList.add("ie");
-		} else if (navigator.userAgent.search("Edge") >= 0) {
-			htmlElement.classList.add("edge-legacy");
-		} else if (navigator.userAgent.search("Chrome") >= 0) {
-			htmlElement.classList.add("chrome");
-		} else if (navigator.userAgent.search("Firefox") >= 0) {
-			htmlElement.classList.add("firefox");
-		} else if (
-			navigator.userAgent.search("Safari") >= 0 &&
-			navigator.userAgent.search("Chrome") < 0
-		) {
-			htmlElement.classList.add("safari");
-		} else if (navigator.userAgent.search("Opera") >= 0) {
-			htmlElement.classList.add("opera");
-		}
+
+		browserCheck();
 	} catch (error) {
 		console.error(error);
 	}
