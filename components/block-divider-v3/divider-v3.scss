@@ -2,94 +2,102 @@
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
 
-.divider-v3 {
-	display: grid;
-	@include core-mixins-v3.responsiveShowHide(grid);
+@layer base-styles {
+	.divider-v3 {
+		display: grid;
+		@include core-mixins-v3.responsiveShowHide(grid);
 
-	&.vertical {
-		height: 100%;
-		.divider-v3__line {
+		&.vertical {
 			height: 100%;
+			.divider-v3__line {
+				height: 100%;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					height: 100%;
+				}
+
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					height: 100%;
+				}
+			}
+		}
+
+		&.horizontal {
+			.divider-v3__line {
+				width: 100%;
+
+				@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+					width: 100%;
+				}
+
+				@include core-mixins-v3.device(breakpoints.$tabLandscape) {
+					width: 100%;
+				}
+			}
+		}
+
+		&__line {
+			background-color: var(--divider-v3-background-colour);
+			background-image: var(--divider-v3-background-image);
+			background-repeat: var(--divider-v3-background-repeat);
+			background-position: var(--divider-v3-background-position-x)
+				var(--divider-v3-background-position-y);
+			width: core-functions-v3.fluidSize(
+				var(--divider-v3-width),
+				'mobile'
+			);
+			height: core-functions-v3.fluidSize(
+				var(--divider-v3-height),
+				'mobile'
+			);
+			place-self: var(--divider-v3-vertical-position)
+				var(--divider-v3-horizontal-position);
+			max-width: core-functions-v3.fluidSize(
+				var(--divider-v3-max-width-mobile),
+				'mobile'
+			);
+			max-height: core-functions-v3.fluidSize(
+				var(--divider-v3-max-height-mobile),
+				'mobile'
+			);
 
 			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-				height: 100%;
+				height: core-functions-v3.fluidSize(
+					var(--divider-v3-height),
+					'portrait'
+				);
+				width: core-functions-v3.fluidSize(
+					var(--divider-v3-width),
+					'portrait'
+				);
+				max-width: core-functions-v3.fluidSize(
+					var(--divider-v3-max-width-portrait),
+					'portrait'
+				);
+				max-height: core-functions-v3.fluidSize(
+					var(--divider-v3-max-height-portrait),
+					'portrait'
+				);
 			}
 
 			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				height: 100%;
+				height: core-functions-v3.fluidSize(
+					var(--divider-v3-height),
+					'desktop'
+				);
+				width: core-functions-v3.fluidSize(
+					var(--divider-v3-width),
+					'desktop'
+				);
+				max-width: core-functions-v3.fluidSize(
+					var(--divider-v3-max-width-desktop),
+					'desktop'
+				);
+				max-height: core-functions-v3.fluidSize(
+					var(--divider-v3-max-height-desktop),
+					'desktop'
+				);
 			}
-		}
-	}
-
-	&.horizontal {
-		.divider-v3__line {
-			width: 100%;
-
-			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-				width: 100%;
-			}
-
-			@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-				width: 100%;
-			}
-		}
-	}
-
-	&__line {
-		background-color: var(--divider-v3-background-colour);
-		background-image: var(--divider-v3-background-image);
-		background-repeat: var(--divider-v3-background-repeat);
-		background-position: var(--divider-v3-background-position-x)
-			var(--divider-v3-background-position-y);
-		width: core-functions-v3.fluidSize(var(--divider-v3-width), 'mobile');
-		height: core-functions-v3.fluidSize(var(--divider-v3-height), 'mobile');
-		place-self: var(--divider-v3-vertical-position)
-			var(--divider-v3-horizontal-position);
-		max-width: core-functions-v3.fluidSize(
-			var(--divider-v3-max-width-mobile),
-			'mobile'
-		);
-		max-height: core-functions-v3.fluidSize(
-			var(--divider-v3-max-height-mobile),
-			'mobile'
-		);
-
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			height: core-functions-v3.fluidSize(
-				var(--divider-v3-height),
-				'portrait'
-			);
-			width: core-functions-v3.fluidSize(
-				var(--divider-v3-width),
-				'portrait'
-			);
-			max-width: core-functions-v3.fluidSize(
-				var(--divider-v3-max-width-portrait),
-				'portrait'
-			);
-			max-height: core-functions-v3.fluidSize(
-				var(--divider-v3-max-height-portrait),
-				'portrait'
-			);
-		}
-
-		@include core-mixins-v3.device(breakpoints.$tabLandscape) {
-			height: core-functions-v3.fluidSize(
-				var(--divider-v3-height),
-				'desktop'
-			);
-			width: core-functions-v3.fluidSize(
-				var(--divider-v3-width),
-				'desktop'
-			);
-			max-width: core-functions-v3.fluidSize(
-				var(--divider-v3-max-width-desktop),
-				'desktop'
-			);
-			max-height: core-functions-v3.fluidSize(
-				var(--divider-v3-max-height-desktop),
-				'desktop'
-			);
 		}
 	}
 }
