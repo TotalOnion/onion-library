@@ -1,92 +1,93 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
-
-.featured-image-gallery-v3 {
-	display: grid;
-	grid-template:
-		'featured'
-		'other' / 1fr;
-	gap: core-functions-v3.fluidSize(10);
-	@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-		grid-template: 'featured other' / 1fr 1fr;
-		grid-gap: core-functions-v3.fluidSize(20);
-	}
-	&__featured-image-container {
-		perspective: 1000px;
-		grid-area: featured;
-		place-self: stretch;
-		aspect-ratio: 1;
-		&.changing-image
-			.featured-image-gallery-v3__featured-image-inner-container {
-			transform: rotateY(180deg);
-		}
-	}
-	&__featured-image-inner-container {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: transform 0.8s;
-		transform-style: preserve-3d;
-	}
-	&__featured-image-front,
-	&__featured-image-back {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		backface-visibility: hidden;
-	}
-	&__featured-image-front {
-		background-color: var(--bally-blue-dark);
-	}
-	&__featured-image-back {
+@layer base-styles {
+	.featured-image-gallery-v3 {
 		display: grid;
-		place-items: center;
-		background-color: var(--bally-blue-dark);
-		transform: rotateY(180deg);
-		padding: core-functions-v3.fluidSize(20);
+		grid-template:
+			'featured'
+			'other' / 1fr;
+		gap: core-functions-v3.fluidSize(10);
 		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			padding: core-functions-v3.fluidSize(120);
+			grid-template: 'featured other' / 1fr 1fr;
+			grid-gap: core-functions-v3.fluidSize(20);
 		}
-	}
-	&__featured-image {
-		grid-area: featured;
-		object-fit: cover;
-		aspect-ratio: 1;
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+		&__featured-image-container {
+			perspective: 1000px;
+			grid-area: featured;
+			place-self: stretch;
+			aspect-ratio: 1;
+			&.changing-image
+				.featured-image-gallery-v3__featured-image-inner-container {
+				transform: rotateY(180deg);
+			}
+		}
+		&__featured-image-inner-container {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+		&__featured-image-front,
+		&__featured-image-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+		&__featured-image-front {
+			background-color: var(--bally-blue-dark);
+		}
+		&__featured-image-back {
+			display: grid;
+			place-items: center;
+			background-color: var(--bally-blue-dark);
+			transform: rotateY(180deg);
+			padding: core-functions-v3.fluidSize(20);
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				padding: core-functions-v3.fluidSize(120);
+			}
+		}
+		&__featured-image {
+			grid-area: featured;
+			object-fit: cover;
+			aspect-ratio: 1;
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&__other-images {
+			grid-area: other;
+			place-self: stretch;
+			display: grid;
+			aspect-ratio: 1;
+			grid-gap: core-functions-v3.fluidSize(8);
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			@include core-mixins-v3.device(breakpoints.$tabPortrait) {
+				grid-gap: core-functions-v3.fluidSize(10);
+			}
+		}
+		&__image-wrapper {
+			display: flex;
+			overflow: hidden;
+			box-shadow: 0px 0px 8px transparent;
+			transition: box-shadow 0.2s;
+			cursor: pointer;
+			&:hover,
+			&--active {
+				box-shadow: 0px 0px 0px core-functions-v3.fluidSize(2) white;
+			}
+		}
+		&__image {
+			object-fit: cover;
+			aspect-ratio: 1;
 			width: 100%;
 			height: auto;
+			transition: transform 0.5s ease-out;
 		}
-	}
-	&__other-images {
-		grid-area: other;
-		place-self: stretch;
-		display: grid;
-		aspect-ratio: 1;
-		grid-gap: core-functions-v3.fluidSize(8);
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		@include core-mixins-v3.device(breakpoints.$tabPortrait) {
-			grid-gap: core-functions-v3.fluidSize(10);
-		}
-	}
-	&__image-wrapper {
-		display: flex;
-		overflow: hidden;
-		box-shadow: 0px 0px 8px transparent;
-		transition: box-shadow 0.2s;
-		cursor: pointer;
-		&:hover,
-		&--active {
-			box-shadow: 0px 0px 0px core-functions-v3.fluidSize(2) white;
-		}
-	}
-	&__image {
-		object-fit: cover;
-		aspect-ratio: 1;
-		width: 100%;
-		height: auto;
-		transition: transform 0.5s ease-out;
 	}
 }

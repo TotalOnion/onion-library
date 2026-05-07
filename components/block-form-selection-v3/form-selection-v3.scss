@@ -1,37 +1,38 @@
 @use '../fields-core-mixins-v3/core-mixins-v3';
 @use '../fields-core-functions-v3/core-functions-v3';
 @use '../../breakpoints';
+@layer base-styles {
+	.form-selection-v3 {
+		pointer-events: all;
 
-.form-selection-v3 {
-	pointer-events: all;
-
-	&__container-modal {
-		display: none;
-		position: fixed;
-		inset: 0;
-		z-index: 9998;
-		background-color: rgba(0, 0, 0, 0.4);
-	}
-
-	&__inner {
-		overflow-y: scroll;
-		width: 100vw;
-		z-index: 9999;
-		height: 100%;
-	}
-
-	&__modal-open {
-		&--icon {
-			cursor: pointer;
-			appearance: none;
-			border: none;
-			background: transparent;
+		&__container-modal {
+			display: none;
+			position: fixed;
+			inset: 0;
+			z-index: 9998;
+			background-color: rgba(0, 0, 0, 0.4);
 		}
-	}
 
-	&__modal-close {
-		position: absolute;
-		top: core-functions-v3.fluidSize(20);
-		right: core-functions-v3.fluidSize(20);
+		&__inner {
+			overflow-y: scroll;
+			width: 100vw;
+			z-index: 9999;
+			height: 100%;
+		}
+
+		&__modal-open {
+			&--icon {
+				cursor: pointer;
+				appearance: none;
+				border: none;
+				background: transparent;
+			}
+		}
+
+		&__modal-close {
+			position: absolute;
+			top: core-functions-v3.fluidSize(20);
+			right: core-functions-v3.fluidSize(20);
+		}
 	}
 }

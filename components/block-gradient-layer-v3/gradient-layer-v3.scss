@@ -1,6 +1,8 @@
 @use '../component-gradient-overlay-v3/gradient-overlay-v3';
-.gradient-layer-v3 {
-	display: grid;
-	grid-template: 'main' / 1fr;
-	@include gradient-overlay-v3.gradientOverlay();
+@layer base-styles {
+	.gradient-layer-v3 {
+		display: grid;
+		grid-template: 'main' / 1fr;
+		@include gradient-overlay-v3.gradientOverlay();
+	}
 }

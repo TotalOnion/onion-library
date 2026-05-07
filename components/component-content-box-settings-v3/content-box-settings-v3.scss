@@ -162,13 +162,6 @@
 		@include core-mixins-v3.defaultTextAlign();
 		@include core-mixins-v3.responsiveShowHide();
 		p,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		a,
 		li,
 		div {
 			@include core-mixins-v3.defaultFontWeight();
