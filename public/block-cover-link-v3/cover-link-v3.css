@@ -1,6 +1,8 @@
-.cover-link-v3__link {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  pointer-events: all;
+@layer base-styles {
+  .cover-link-v3__link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: all;
+  }
 }
