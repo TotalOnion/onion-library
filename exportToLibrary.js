@@ -4,7 +4,7 @@ const fse = require('fs-extra');
 const {globSync} = require('glob');
 const yargs = require('yargs');
 const path = require('path');
-const templateOptions = yargs.argv._;
+const templateOptions = yargs(process.argv.slice(2)).argv._;
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 

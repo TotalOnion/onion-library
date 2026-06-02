@@ -28,7 +28,7 @@ if (projectJson) {
 	}
 }
 
-const templateOptions = yargs.argv._;
+const templateOptions = yargs(process.argv.slice(2)).argv._;
 let swiper = false;
 let image = false;
 let content = false;
