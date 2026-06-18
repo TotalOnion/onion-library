@@ -1,7 +1,6 @@
 export default function cocktailrecipev3Js(options = {}) {
 	try {
 		const {block} = options;
-
 		const valueEl = block.querySelector('[data-servings-value]');
 		const decBtn = block.querySelector('[data-servings-dec]');
 		const incBtn = block.querySelector('[data-servings-inc]');
@@ -41,6 +40,10 @@ export default function cocktailrecipev3Js(options = {}) {
 					.replace(/\.?0+$/, '');
 			if (unit === 'ml')
 				return (Math.round(num * 10) / 10)
+					.toString()
+					.replace(/\.0$/, '');
+			if (unit === 'cl')
+				return (Math.round(num * 100) / 100)
 					.toString()
 					.replace(/\.0$/, '');
 			return (Math.round(num * 100) / 100)
