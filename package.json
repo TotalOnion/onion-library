@@ -1,6 +1,6 @@
 {
 	"name": "@total_onion/onion-library",
-	"version": "3.2.0",
+	"version": "3.2.1",
 	"description": "Component library",
 	"type": "module",
 	"main": "./index.js",
@@ -18,14 +18,6 @@
 		"./onion-modalcontroller": "./onion-modalcontroller/onion-modalcontroller.js",
 		"./onion-modalcontroller.js": "./onion-modalcontroller/onion-modalcontroller.js"
 	},
-	"files": [
-		"index.js",
-		"onion-utils.mjs",
-		"onion-loader.js",
-		"entry-animation-observer.js",
-		"onion-videocontroller",
-		"onion-modalcontroller"
-	],
 	"scripts": {
 		"build": "node build-library.js",
 		"test": ""
