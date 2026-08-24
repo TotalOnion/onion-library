@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const { promisify } = require('util');
+import fs from 'node:fs';
+import path from 'node:path';
+import { promisify } from 'node:util';
 
 // Import the function to be tested
-const updateComponent = require('../update-component');
+import updateComponent from '../update-component.js';
 
 // Promisify the fs functions used in the copyBlockComponent function
 const readdirPromisified = promisify(fs.readdir);

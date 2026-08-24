@@ -1,10 +1,10 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const yargs = require('yargs');
-const {exec} = require('child_process');
-const acfTemplate = require('./new-block-templates/template-block-json');
-const defaultTemplates = require('./new-block-templates/template-default');
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import yargs from 'yargs/yargs';
+import {exec} from 'node:child_process';
+import acfTemplate from './new-block-templates/template-block-json.js';
+import defaultTemplates from './new-block-templates/template-default.js';
 
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
@@ -65,12 +65,14 @@ const newBlockName = process.argv[2]?.toLowerCase();
 const blockType = process.argv[3];
 
 if (!newBlockName) {
-	return console.log('Did you forget to give the new block a name?');
+	console.log('Did you forget to give the new block a name?');
+	process.exit(1);
 }
 if (dynamicEntryPoints.indexOf(newBlockName) !== -1) {
-	return console.log(
+	console.log(
 		`Alas! There is already a block called ${newBlockName} :( You'll have to try something else..`
 	);
+	process.exit(1);
 }
 
 const templateData = `
@@ -81,10 +83,8 @@ const templateData = `
 </section>`;
 
 let jsData;
-if (swiper) {
-	jsData = swiperTemplates.templatejs(newBlockName);
-} else if (vue) {
-	jsData = vueTemplates.templatejs(newBlockName);
+if (swiper || vue || image || content) {
+	jsData = defaultTemplates.defaultjs(newBlockName);
 } else {
 	jsData = defaultTemplates.defaultjs(newBlockName);
 }

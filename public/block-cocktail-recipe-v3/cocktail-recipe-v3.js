@@ -33,6 +33,8 @@ export default function cocktailrecipev3Js(options = {}) {
         return (Math.round(num * 100) / 100).toFixed(2).replace(/\.?0+$/, "");
       if (unit === "ml")
         return (Math.round(num * 10) / 10).toString().replace(/\.0$/, "");
+      if (unit === "cl")
+        return (Math.round(num * 100) / 100).toString().replace(/\.0$/, "");
       return (Math.round(num * 100) / 100).toString().replace(/\.?0+$/, "");
     };
     const convert = (value, fromUnit, toUnit) => {

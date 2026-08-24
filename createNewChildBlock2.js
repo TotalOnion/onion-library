@@ -1,15 +1,17 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const {exec} = require('child_process');
-const acfTemplate = require('./new-block-templates/template-acf-pattern');
-const acfTemplateScss = require('@total_onion/onion-library/new-block-templates/template-scss-blank');
-const acfTemplateJs = require('@total_onion/onion-library/new-block-templates/template-js-blank');
-const yaml = require('js-yaml');
-const axios = require('axios');
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import {exec} from 'node:child_process';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import yaml from 'js-yaml';
+import axios from 'axios';
+import acfTemplate from './new-block-templates/template-acf-pattern.js';
+import acfTemplateScss from './new-block-templates/template-scss-blank.js';
+import acfTemplateJs from './new-block-templates/template-js-blank.js';
 
-const themePath =
-	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const themePath = process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 
 const yamlData = yaml.load(fs.readFileSync('../../../../.lando.yml', 'utf8'));
 const siteName = yamlData.config.site;
@@ -17,11 +19,11 @@ const parentURL = process.env.DESIGN_MULTIDEV
 	? `${process.env.DESIGN_MULTIDEV}/wp-admin/admin-ajax.php`
 	: `http://${siteName}.lndo.site/wp-admin/admin-ajax.php`;
 
-const srcPathJs = `${__dirname}/components`;
-const srcPathScss = `${__dirname}/components`;
+const srcPathJs = path.join(__dirname, 'components');
+const srcPathScss = path.join(__dirname, 'components');
 
 let projectName = 'Global Theme';
-const projectJson = JSON.parse(fs.readFileSync('./package.json'));
+const projectJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 if (projectJson) {
 	projectName = projectJson.name;
 	if (projectName.slice(0, 3) === 'the') {
@@ -40,8 +42,8 @@ if (projectJson) {
 }
 
 const dynamicEntryPoints = globSync(`${themePath}/assets/js/blocks/*.js`).map(
-	(path) => {
-		const assetKey = path
+	(filePath) => {
+		const assetKey = filePath
 			.replace('assets/js/blocks/', '')
 			.replace('.js', '');
 		return assetKey;
@@ -51,10 +53,12 @@ const newBlockName = process.argv[2]?.toLowerCase();
 const patternID = process.argv[3];
 
 if (!newBlockName) {
-	return console.log('Did you forget to give the new block a name?');
+	console.log('Did you forget to give the new block a name?');
+	process.exit(1);
 }
 if (!patternID) {
-	return console.log('Did you forget to supply the pattern ID?');
+	console.log('Did you forget to supply the pattern ID?');
+	process.exit(1);
 }
 
 fs.writeFileSync(
@@ -64,16 +68,10 @@ fs.writeFileSync(
 
 const blockName = 'group-container-v3';
 
-const fullPath = `${srcPathJs}/block-${blockName}/${blockName}.js`;
+const fullPath = path.join(srcPathJs, `block-${blockName}`, `${blockName}.js`);
 
-const jsdir = `Assets/js/blocks/`;
-// if (!fs.existsSync(jsdir)) {
-// 	fs.mkdirSync(jsdir, 0o744);
-// }
-const scssdir = `Assets/scss/blocks/`;
-// if (!fs.existsSync(scssdir)) {
-// 	fs.mkdirSync(scssdir, 0o744);
-// }
+const jsdir = 'Assets/js/blocks/';
+const scssdir = 'Assets/scss/blocks/';
 
 if (!fs.existsSync(`${jsdir}/${newBlockName}.js`)) {
 	fs.writeFileSync(
@@ -91,7 +89,7 @@ if (!fs.existsSync(`${scssdir}/${newBlockName}.scss`)) {
 	console.log(`👑👑\x1b[32m Successfully created the scss file! 👑👑`);
 }
 
-let data = new FormData();
+const data = new FormData();
 data.append('action', 'get_pattern_block');
 data.append('postID', patternID);
 

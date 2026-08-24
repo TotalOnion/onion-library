@@ -1,4 +1,4 @@
-const glob = require('glob');
+import * as glob from 'glob';
 const libraryPath =
   './node_modules/@total_onion/onion-library'
 

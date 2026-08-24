@@ -1,16 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {exec} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
+import * as glob from 'glob';
+
+const libraryPath = './node_modules/@total_onion/onion-library';
+
 const getComponentsList = () => {
-	const path = require('path');
-	const glob = require('glob');
-	const fs = require('fs');
-	const libraryPath = './node_modules/@total_onion/onion-library';
-
 	let finalList = [];
-
-	// printMemoryUsage('Before checking components list');
 
 	if (fs.existsSync('./project-components-list.json')) {
 		const componentsList = glob.sync(`${libraryPath}/components/*`);
-
 		const listJson = fs.readFileSync('./project-components-list.json');
 		const componentsListObject = JSON.parse(listJson);
 
@@ -27,27 +27,18 @@ const getComponentsList = () => {
 				finalList.push(component);
 			}
 		});
-
-		// Free up memory
 	} else {
 		finalList = glob
 			.sync(`${libraryPath}/components/*`)
-			.map((componentPath) => {
-				return path.basename(componentPath);
-			});
+			.map((componentPath) => path.basename(componentPath));
 	}
-
-	// printMemoryUsage('After checking components list');
 
 	return finalList;
 };
 
 const updateAllComponents = () => {
-	const {exec} = require('child_process');
 	const componentsList = getComponentsList();
 	console.log('updating all Onions');
-
-	// printMemoryUsage('Before updating components');
 
 	if (
 		componentsList.includes('admin-core-generic') ||
@@ -60,7 +51,6 @@ const updateAllComponents = () => {
 		process.exit();
 	}
 
-	// Limit the number of parallel updates
 	const maxConcurrentUpdates = 2;
 	let currentIndex = 0;
 
@@ -85,13 +75,11 @@ const updateAllComponents = () => {
 					console.log(`stdout: ${stdout}`);
 				}
 
-				// Recursively update the next component
 				updateNextComponent();
 			}
 		);
 	};
 
-	// Start the initial batch of updates
 	for (
 		let i = 0;
 		i < Math.min(maxConcurrentUpdates, componentsList.length);
@@ -99,37 +87,10 @@ const updateAllComponents = () => {
 	) {
 		updateNextComponent();
 	}
-
-	// printMemoryUsage('After updating components');
 };
 
-const printMemoryUsage = (label) => {
-	console.log(console.time(label));
-	const memoryUsage = process.memoryUsage();
-	console.log(`\nMemory Usage - ${label}`);
-	console.log(`RSS: ${Math.round(memoryUsage.rss / 1024 / 1024)} MB`);
-	console.log(
-		`Heap Total: ${Math.round(memoryUsage.heapTotal / 1024 / 1024)} MB`
-	);
-	console.log(
-		`Heap Used: ${Math.round(memoryUsage.heapUsed / 1024 / 1024)} MB`
-	);
-	console.log(
-		`External: ${Math.round(memoryUsage.external / 1024 / 1024)} MB`
-	);
-	console.log(
-		`Array Buffers: ${Math.round(
-			memoryUsage.arrayBuffers / 1024 / 1024
-		)} MB\n`
-	);
-};
+export {getComponentsList, updateAllComponents};
 
-module.exports = {
-	getComponentsList,
-	updateAllComponents
-};
-
-// It calls the function only if executed through the command line
-if (require.main === module) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	updateAllComponents();
 }

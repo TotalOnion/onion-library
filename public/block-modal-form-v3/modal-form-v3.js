@@ -5,7 +5,9 @@ export default function modalformv3Js(options = {}) {
         ".cdb_form_field input, .cdb_form_field select, .cdb_form_gdpr_information input, .cdb_form_privacypolicy_information input"
       );
       inputs.forEach((input) => {
-        const wrapper = input.closest(".cdb_form_field, .cdb_form_gdpr_information, .cdb_form_privacypolicy_information");
+        const wrapper = input.closest(
+          ".cdb_form_field, .cdb_form_gdpr_information, .cdb_form_privacypolicy_information"
+        );
         if (!wrapper) return;
         wrapper.classList.remove("invalid");
         if (!input.hasAttribute("required")) return;
@@ -31,9 +33,11 @@ export default function modalformv3Js(options = {}) {
       });
     };
     const { block } = options;
-    const submit = block.querySelector(
-      ".cdb-submit"
-    );
+    const submit = block.querySelector(".cdb-submit");
+    if (!submit) {
+      console.error("could not find submit button");
+      return;
+    }
     submit.classList.add("cmpl-cta-style-11", "cmpl-cta-animation-style-1");
     submit.addEventListener("click", (e) => {
       validateFormFields(block);

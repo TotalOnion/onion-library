@@ -1,6 +1,6 @@
-const fs = require('fs');
-const glob = require('glob');
-const yargs = require('yargs');
+import fs from 'node:fs';
+import * as glob from 'glob';
+import yargs from 'yargs/yargs';
 
 let projectName = 'Global Theme';
 const libraryPath = './node_modules/@total_onion/onion-library';

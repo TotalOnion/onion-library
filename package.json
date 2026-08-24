@@ -2,7 +2,30 @@
 	"name": "@total_onion/onion-library",
 	"version": "3.1.0",
 	"description": "Component library",
-	"main": "index.js",
+	"type": "module",
+	"main": "./index.js",
+	"module": "./index.js",
+	"exports": {
+		".": "./index.js",
+		"./onion-utils": "./onion-utils.mjs",
+		"./onion-utils.mjs": "./onion-utils.mjs",
+		"./onion-loader": "./onion-loader.js",
+		"./onion-loader.js": "./onion-loader.js",
+		"./entry-animation-observer": "./entry-animation-observer.js",
+		"./entry-animation-observer.js": "./entry-animation-observer.js",
+		"./onion-videocontroller": "./onion-videocontroller/onion-videocontroller.js",
+		"./onion-videocontroller.js": "./onion-videocontroller/onion-videocontroller.js",
+		"./onion-modalcontroller": "./onion-modalcontroller/onion-modalcontroller.js",
+		"./onion-modalcontroller.js": "./onion-modalcontroller/onion-modalcontroller.js"
+	},
+	"files": [
+		"index.js",
+		"onion-utils.mjs",
+		"onion-loader.js",
+		"entry-animation-observer.js",
+		"onion-videocontroller",
+		"onion-modalcontroller"
+	],
 	"scripts": {
 		"build": "node build-library.js",
 		"test": ""
@@ -18,8 +41,7 @@
 	},
 	"homepage": "https://github.com/TotalOnion/onion-library#readme",
 	"dependencies": {
-		"lottie-web": "^5.13.0",
-		"swiper": "^14.1.0"
+		"@vimeo/player": "^2.26.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.27",
@@ -36,6 +58,8 @@
 		"postcss-preset-env": "^11.2.0",
 		"prettier": "^2.6.2",
 		"url-loader": "^4.1.1",
-		"yargs": "^17.4.1"
+		"yargs": "^17.4.1",
+		"lottie-web": "^5.13.0",
+		"swiper": "^14.1.0"
 	}
 }

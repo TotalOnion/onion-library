@@ -1,7 +1,7 @@
-require('dotenv').config();
-const fs = require('fs');
-const readline = require('readline');
-const {globSync} = require('glob');
+import 'dotenv/config';
+import fs from 'node:fs';
+import readline from 'node:readline';
+import {globSync} from 'glob';
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 

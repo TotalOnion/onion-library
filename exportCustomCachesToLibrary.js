@@ -1,22 +1,25 @@
-require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
-const { globSync } = require('glob');
+import 'dotenv/config';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {globSync} from 'glob';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const themePath = process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 const srcPathCustomCaches = `${themePath}/inc/custom-caches`;
 
 const bColors = {
-	HEADER: '\033[95m',
-	OKBLUE: '\033[94m',
-	OKGREEN: '\033[92m',
-	WARNING: '\033[93m',
-	FAIL: '\033[91m',
-	ENDC: '\033[0m',
-	BOLD: '\033[1m',
-	UNDERLINE: '\033[4m',
-	ORANGE: '\033[93m',
-	MAGENTA: '\033[95m',
-	CYAN: '\033[96m'
+	HEADER: '\u001b[95m',
+	OKBLUE: '\u001b[94m',
+	OKGREEN: '\u001b[92m',
+	WARNING: '\u001b[93m',
+	FAIL: '\u001b[91m',
+	ENDC: '\u001b[0m',
+	BOLD: '\u001b[1m',
+	UNDERLINE: '\u001b[4m',
+	ORANGE: '\u001b[93m',
+	MAGENTA: '\u001b[95m',
+	CYAN: '\u001b[96m'
 };
 
 const icons = {

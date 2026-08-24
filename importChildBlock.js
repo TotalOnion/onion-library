@@ -1,8 +1,8 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const yargs = require('yargs');
-const compressing = require('compressing');
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import yargs from 'yargs/yargs';
+import compressing from 'compressing';
 const templateOptions = yargs(process.argv.slice(2)).argv._;
 const blockName = templateOptions[0];
 const exportedFolder = '../../../../exported-blocks';
@@ -64,11 +64,11 @@ const decompressDone = () => {
 
 if (!blockName) {
 	console.log('Aborting because of bad name!');
-	return;
+	process.exit(1);
 }
 if (!fs.existsSync(`${exportedFolder}/${blockName}.zip`)) {
 	console.log('Aborting as could not find the zip file');
-	return;
+	process.exit(1);
 }
 compressing.zip
 	.uncompress(`${exportedFolder}/${blockName}.zip`, `${exportedFolder}/`)

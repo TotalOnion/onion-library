@@ -1,9 +1,9 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const path = require('path');
-const themePath =
-	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import path from 'node:path';
+
+const themePath = process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 
 // Create the directory path for the target file
 const scssModulePath = path.join(themePath, 'assets/scss/modules');
@@ -20,8 +20,8 @@ fs.writeFileSync(
 
 const dynamicEntryPoints = globSync(
 	`${themePath}/assets/scss/blocks/*.scss`
-).map((path) => {
-	const assetPath = path.replace(
+).map((filePath) => {
+	const assetPath = filePath.replace(
 		'assets/scss/blocks/',
 		'Assets/scss/blocks/'
 	);

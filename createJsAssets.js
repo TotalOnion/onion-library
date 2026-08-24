@@ -1,7 +1,7 @@
-require('dotenv').config();
-const fs = require( 'fs' );
-const path = require( 'path' );
-const { globSync } = require( 'glob' );
+import 'dotenv/config';
+import fs from 'node:fs';
+import path from 'node:path';
+import {globSync} from 'glob';
 const themePath = process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
 
 const dynamicEntryPoints = globSync(`${themePath}/assets/js/blocks/*.js`)

@@ -1,4 +1,4 @@
-module.exports = function (newBlockName, projectName) {
+export default function templateJsBlank(newBlockName) {
 	return `export default function ${newBlockName.replaceAll(
 			'-',
 			''
@@ -9,4 +9,4 @@ module.exports = function (newBlockName, projectName) {
 		console.error(error);
 	}
 }`;
-};
+}

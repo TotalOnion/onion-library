@@ -88,24 +88,24 @@ export function inCriticalCssConfig(assetKey) {
 	return true;
 }
 
-/**
- * Dynamically loads the css for the block if it has not already been included in critical css or the css property is set to false.
- * @param {string} assetKey The assetkey string of the block.
- * @param {object} options The options object which will at the very least contain the css property set to true.
- * @returns {promise}
- */
-export function loadCss(assetKey, options = { css: true }) {
-	const promise = new Promise((resolve) => {
-		if (options.css === true && !inCriticalCssConfig(assetKey)) {
-			import(
-				/* webpackChunkName: "[request]" */ `Assets/scss/blocks/${assetKey}.scss`
-			).then(() => resolve(true));
-		} else {
-			return resolve(true);
-		}
-	});
-	return promise;
-}
+// /**
+//  * Dynamically loads the css for the block if it has not already been included in critical css or the css property is set to false.
+//  * @param {string} assetKey The assetkey string of the block.
+//  * @param {object} options The options object which will at the very least contain the css property set to true.
+//  * @returns {promise}
+//  */
+// export function loadCss(assetKey, options = { css: true }) {
+// 	const promise = new Promise((resolve) => {
+// 		if (options.css === true && !inCriticalCssConfig(assetKey)) {
+// 			import(
+// 				/* webpackChunkName: "[request]" */ `Assets/scss/blocks/${assetKey}.scss`
+// 			).then(() => resolve(true));
+// 		} else {
+// 			return resolve(true);
+// 		}
+// 	});
+// 	return promise;
+// }
 
 /**
  * Checks for browser, device and OS and then adds the relevant classes to the html tag.
@@ -680,7 +680,6 @@ const api = {
 	isEmailValid,
 	isInViewport,
 	isTablet,
-	loadCss,
 	mobileCheck,
 	resizeDebouncer,
 	supportsWebp,

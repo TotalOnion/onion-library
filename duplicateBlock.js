@@ -1,8 +1,8 @@
-require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
-const {globSync} = require('glob');
-const yargs = require('yargs');
+import 'dotenv/config';
+import fs from 'node:fs';
+import path from 'node:path';
+import {globSync} from 'glob';
+import yargs from 'yargs/yargs';
 const templateOptions = yargs(process.argv.slice(2)).argv._;
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
@@ -27,20 +27,20 @@ if (!blockName) {
 	console.log(
 		"\x1b[33m 🤔🤔 Hmmm...You dont't seem to have chosen a block to duplicate. 🤔🤔 \x1b[0m"
 	);
-	return;
+	process.exit(1);
 }
 if (!newName) {
 	console.log(
 		'\x1b[33m 🤓🤓 Nearly there! Unfortunately you forgot to choose a new name for your duplicate block. 🤓🤓 \x1b[0m'
 	);
-	return;
+	process.exit(1);
 }
 
 if (blockName === newName) {
 	console.log(
 		'\x1b[33m Oh no! 😱😱😱 Your new block name cannot be the same as the original block name! \x1b[0m'
 	);
-	return;
+	process.exit(1);
 }
 
 if (exisitingBlockNames.includes(blockName)) {

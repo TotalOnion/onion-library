@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const {globSync} = require('glob');
+import fs from 'node:fs';
+import path from 'node:path';
+import {globSync} from 'glob';
 
 const dynamicEntryPointsJs = globSync(`./components/block-*/*-v3.js`).map(
 	(filePath) => {

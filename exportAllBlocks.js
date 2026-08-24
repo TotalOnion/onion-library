@@ -1,9 +1,12 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const yargs = require('yargs');
-const path = require('path');
-const compressing = require('compressing');
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import yargs from 'yargs/yargs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import compressing from 'compressing';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const templateOptions = yargs(process.argv.slice(2)).argv._;
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
@@ -24,7 +27,7 @@ try {
 	blocks = JSON.parse(fs.readFileSync(component_list_file, 'utf8'));
 } catch (e) {
 	console.error('Component list file error : ' + e);
-	return;
+	process.exit(1);
 }
 
 const dynamicEntryPointsJs = globSync(`${themePath}/assets/js/blocks/*.js`).map(

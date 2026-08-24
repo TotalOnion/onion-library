@@ -1,8 +1,8 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const yargs = require('yargs');
-const compressing = require('compressing');
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import yargs from 'yargs/yargs';
+import compressing from 'compressing';
 const templateOptions = yargs(process.argv.slice(2)).argv._;
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';

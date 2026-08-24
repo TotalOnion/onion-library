@@ -1,7 +1,9 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+
 const themePath =
 	process.env.THEME_PATH || 'web/wp-content/themes/global-theme';
-const fs = require('fs');
-const path = require('path');
 const libraryPath = './node_modules/@total_onion/onion-library';
 
 // Get extension of filename
@@ -516,7 +518,7 @@ const updateComponent = () => {
 	);
 };
 
-module.exports = {
+export {
 	getExtension,
 	getFileType,
 	checkFolder,
@@ -531,7 +533,6 @@ module.exports = {
 	updateComponent
 };
 
-// It calls the function only if executed through the command line
-if (require.main === module) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
 	updateComponent();
 }

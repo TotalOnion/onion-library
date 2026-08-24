@@ -1,4 +1,4 @@
-module.exports = function (newBlockName, projectName) {
+export default function (newBlockName, projectName) {
 	const blockTitle =
 		newBlockName.charAt(0).toUpperCase() +
 		newBlockName.slice(1).replaceAll('-', ' ');

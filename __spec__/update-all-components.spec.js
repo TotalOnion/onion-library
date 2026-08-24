@@ -1,8 +1,8 @@
 'use strict';
 
-const glob = require('glob');
+import * as glob from 'glob';
 const fs = jest.mock('fs');
-const updateAllComponents = require('../update-all-components');
+import updateAllComponents from '../update-all-components.js';
 
 describe('getComponentsList', () => {
 	afterEach(() => {

@@ -1,11 +1,11 @@
 'use strict';
 
-// const glob = require('glob');
-const fs = require('fs');
+// import * as glob from 'glob';
+import fs from 'node:fs';
 // const fse = require("fs-extra");
 
-// const path = require('path');
-const updateComponent = require('../update-component');
+// import path from 'node:path';
+import updateComponent from '../update-component.js';
 
 jest.mock('fs');
 

@@ -1,7 +1,7 @@
-require('dotenv').config();
-const fs = require('fs');
-const {globSync} = require('glob');
-const path = require('path');
+import 'dotenv/config';
+import fs from 'node:fs';
+import {globSync} from 'glob';
+import path from 'node:path';
 
 const scssModulePath = path.join('./public');
 const scssFilePath = path.join(scssModulePath, 'dynamicBlockScss-v3.scss');
