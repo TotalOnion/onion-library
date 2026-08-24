@@ -52,27 +52,35 @@ function lazyloaderInit() {
 	options.debugLogMessages && console.log('Lazy Loader initialized!');
 	options.lazyBlocksToSearchFor = [];
 	assetArray.forEach((asset) => {
-		if (
-			options.filePrefix === 'nodemodules' &&
-			asset.assetKey.includes('-v3')
-		) {
+		// if (
+		// 	asset.assetKey.includes('-v3') &&
+		// 	!asset.assetKey.includes('sub-block')
+		// ) {
+		// 	options.assetMap[asset.assetKey] = {
+		// 		js: () =>
+		// 			import(
+		// 				`Assets/blocks/${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
+		// 			),
+		// 		// import(
+		// 		// 	`NodeModules/@total_onion/onion-library/components/block-${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
+		// 		// ),
+		// 		css: options.ignoreCss === true
+		// 	};
+		// }
+		if (asset.assetKey.includes('-v3')) {
 			options.assetMap[asset.assetKey] = {
 				js: () =>
 					import(
-						`NodeModules/@total_onion/onion-library/components/block-${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
+						`Assets/sub-blocks/${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
 					),
-				css: options.ignoreCss === true
+				css: options.ignoreCss === false
 			};
-		} else {
 		}
-		if (
-			options.filePrefix === 'nodemodules' &&
-			!asset.assetKey.includes('-v3')
-		) {
+		if (!asset.assetKey.includes('-v3')) {
 			options.assetMap[asset.assetKey] = {
 				js: () =>
 					import(
-						`Assets/js/blocks/${asset.assetKey}${options.fileSuffixJs}`
+						`Assets/blocks/${asset.assetKey}/${asset.assetKey}${options.fileSuffixJs}`
 					),
 				css: options.ignoreCss === false
 			};
@@ -236,7 +244,7 @@ export function loadCss(assetKey) {
 				assetKey.includes('-v3')
 			) {
 				import(
-					/* webpackChunkName: "[request]" */ `NodeModules/@total_onion/onion-library/components/block-${assetKey}/${assetKey}${options.fileSuffixCss}`
+					/* webpackChunkName: "[request]" */ `Assets/sub-blocks/${assetKey}/${assetKey}${options.fileSuffixCss}`
 				).then(() => resolve(true));
 			} else if (
 				options.css === true &&
@@ -244,7 +252,7 @@ export function loadCss(assetKey) {
 				!assetKey.includes('-v3')
 			) {
 				import(
-					/* webpackChunkName: "[request]" */ `Assets/scss/blocks/${assetKey}${options.fileSuffixCss}`
+					/* webpackChunkName: "[request]" */ `Assets/blocks/${assetKey}/${assetKey}${options.fileSuffixCss}`
 				).then(() => resolve(true));
 			} else {
 				return resolve(true);
