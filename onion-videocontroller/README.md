@@ -6,13 +6,13 @@ Given that the videocontroller builds a dictionary of all the video containers a
 
 ## Install via npm or yarn with:
 
-`npm install @pernod-ricard-global-cms/onion-videocontroller`
+`npm install @total_onion/onion-videocontroller`
 or
-`yarn add @pernod-ricard-global-cms/onion-videocontroller`
+`yarn add @total_onion/onion-videocontroller`
 
 ## Import the module in your js file with:
 
-`import onion-videocontroller from '@pernod-ricard-global-cms/onion-videocontroller';`
+`import onion-videocontroller from '@total_onion/onion-videocontroller';`
 
 Instantiate the class in your js file and pass a reference to an html element that is a parent of the video container.
 In a typical cbl block js file this would be the block element, so it might look something like this.
@@ -59,13 +59,13 @@ eg:
 
 You can choose to do all the styling yourself in which case there is nothing left to import. However, there are some basic styles exported as mixins which are very easy to override and can get you to a workable result very quickly. You can import them directly from the package folder into your scss file and then include the mixin in the scope of your parent block class.
 
-`@use 'NodeModules/@pernod-ricard-global-cms/onion-videocontroller/vc-styles';`
+`@use 'NodeModules/@total_onion/onion-videocontroller/vc-styles';`
 
 `.parent-block-class { @include vc-styles.basic(); }`
 
 There is also a mixin for adding default styling to the pop up modal which can be very handy. You can import that in a similar way, only this time it should be scoped to the html. The modal will be added and removed from the body tag, but overflow will need to added to the html in order to prevent scrolling. This is all build in to the modal styles
 
-`@use 'NodeModules/@pernod-ricard-global-cms/onion-videocontroller/vc-styles';`
+`@use 'NodeModules/@total_onion/onion-videocontroller/vc-styles';`
 
 `html { @include vc-styles.modal(); }`
 
